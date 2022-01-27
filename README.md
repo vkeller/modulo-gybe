@@ -1,2 +1,2 @@
-# edunum-gybe
-Repo pour les séquences pédagogiques de l'éducation numérique de Vincent Keller
+# modulo-gybe
+Repo pour les séquences pédagogiques de l'éducation numérique (MODULO) de Vincent Keller
