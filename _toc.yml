@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: bienvenue
+root: index
 parts:
   - caption: 1ère année
 #    maxdepth: 2
