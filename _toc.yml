@@ -2,7 +2,24 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
+root: bienvenue
+parts:
+  - caption: 1ère année
+#    maxdepth: 2
+    chapters:
+    - file: 1M/algo/index
+    - file: 1M/prog/index
+      sections:
+      - file: 1M/prog/intro1/index
+      - file: 1M/prog/intro2/index
+
+  - caption: 2ème année
+    chapters:
+    - file: 2M/algo/index
+    - file: 2M/prog/index
+
+#chapters:
+#- file: markdown
+#- file: notebook
+
+
