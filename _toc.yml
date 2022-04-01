@@ -10,7 +10,7 @@ parts:
     - file: 1M/algo/index
     - file: 1M/prog/index
       sections:
-      - file: 1M/prog/intro1/index
+      - file: 1M/prog/intro1/intro1
       - file: 1M/prog/intro2/index
 
   - caption: 2ème année
