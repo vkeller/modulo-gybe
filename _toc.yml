@@ -8,10 +8,14 @@ parts:
 #    maxdepth: 2
     chapters:
     - file: 1M/algo/index
+    - file: 1M/installation/installation
     - file: 1M/prog/index
       sections:
-      - file: 1M/prog/intro1/index
-      - file: 1M/prog/intro2/index
+      - file: 1M/prog/intro1/intro1
+      - file: 1M/prog/intro2/intro2
+      - file: 1M/prog/dessinsanimes/dessins
+      - file: 1M/prog/boucles/boucles1
+      - file: 1M/prog/boucles/boucles2
 
   - caption: 2ème année
     chapters:
