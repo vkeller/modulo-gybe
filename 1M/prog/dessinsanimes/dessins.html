@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction 2 &#8212; Education Numérique Ecole de maturité</title>
+    <title>Les boucles : dessins animés &#8212; Education Numérique Ecole de maturité</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,6 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Boucles" href="../boucles/boucles1.html" />
+    <link rel="prev" title="Introduction : les fonctions" href="../intro2/intro2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -99,7 +101,7 @@
   1ère année
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../algo/index.html">
    Algorithmique
@@ -110,28 +112,28 @@
    Environnement de développement
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
    Programmation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../intro1/intro1.html">
      Introduction : La tortue
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="intro2.html">
+    <a class="reference internal" href="../intro2/intro2.html">
      Introduction : les fonctions
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../dessinsanimes/dessins.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Les boucles : dessins animés
     </a>
    </li>
@@ -200,9 +202,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/1M/prog/intro2/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/1M/prog/dessinsanimes/dessins.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -220,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/intro2/index.html&body=Your%20issue%20content%20here."><button
+            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/dessinsanimes/dessins.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -241,6 +243,49 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-dessin-anime">
+   Définition : dessin animé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histoire-de-l-animation-et-des-films">
+   Histoire de l’animation et des films
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-pour-les-dessins-animes">
+   Python pour les dessins animés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notre-dessin-anime">
+   Notre dessin animé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-avance-en-utilisant-une-boucle">
+   Exercice 3 (avancé en utilisant une boucle)
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -248,19 +293,132 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction 2</h1>
+                <h1>Les boucles : dessins animés</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-dessin-anime">
+   Définition : dessin animé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histoire-de-l-animation-et-des-films">
+   Histoire de l’animation et des films
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-pour-les-dessins-animes">
+   Python pour les dessins animés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notre-dessin-anime">
+   Notre dessin animé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-avance-en-utilisant-une-boucle">
+   Exercice 3 (avancé en utilisant une boucle)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="introduction-2">
-<h1>Introduction 2<a class="headerlink" href="#introduction-2" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="les-boucles-dessins-animes">
+<h1>Les boucles : dessins animés<a class="headerlink" href="#les-boucles-dessins-animes" title="Permalink to this headline">¶</a></h1>
+<p><strong>Objectifs</strong> Utiliser la tortue pour créer un dessin animé.</p>
+<div class="section" id="definition-dessin-anime">
+<h2>Définition : dessin animé<a class="headerlink" href="#definition-dessin-anime" title="Permalink to this headline">¶</a></h2>
+<p>Film réalisé à partir d’une série de dessins qui décomposent les mouvements des personnages et qui, projetés, donnent l’impression d’un mouvement continu.</p>
+</div>
+<div class="section" id="histoire-de-l-animation-et-des-films">
+<h2>Histoire de l’animation et des films<a class="headerlink" href="#histoire-de-l-animation-et-des-films" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Première photographie : 1827 «Point de vue du Gras» Nicéphore Nièpce, héliographie («écriture par le soleil») prise depuis le premier étage de son atelier.</p></li>
+<li><p>Premier film («kinétographe») 1895 : «La sortie de l’usine Lumières à Lyon», les Frères Lumières</p></li>
+<li><p>Format argentique «standard» : 35 millimètres. 24 images par seconde. Sons synchronisés.</p></li>
+<li><p>Premiers dessins animés : 1892, «Pantomimes lumineuses» d’Emile Reynaud.</p></li>
+<li><p>Premiers dessins animés informatisés : 1980. Animation vectorielle, images de synthèse, animation 2D, animation 3D.</p></li>
+</ul>
+</div>
+<div class="section" id="python-pour-les-dessins-animes">
+<h2>Python pour les dessins animés<a class="headerlink" href="#python-pour-les-dessins-animes" title="Permalink to this headline">¶</a></h2>
+<p>Nous allons procéder en deux étapes :</p>
+<ol class="simple">
+<li><p>définition du dessin animé (CE QUE NOUS VOULONS COMME RESULTAT)</p></li>
+<li><p>construction des sous-éléments de l’animation</p></li>
+</ol>
+</div>
+<div class="section" id="notre-dessin-anime">
+<h2>Notre dessin animé<a class="headerlink" href="#notre-dessin-anime" title="Permalink to this headline">¶</a></h2>
+<p>Notre dessin animé sera simple. Voici l’algorithme :</p>
+<ol class="simple">
+<li><p>on dessine un carré de 80 pixels de côté,</p></li>
+<li><p>on attend un moment</p></li>
+<li><p>on l’efface,</p></li>
+<li><p>on déplace la tortue à droite de 2 pixels</p></li>
+<li><p>on dessine un carré de 80 pixels de côté</p></li>
+<li><p>et on recommence…</p></li>
+</ol>
+<p>l’impression sera que le carré glisse vers la droite.</p>
+</div>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">¶</a></h2>
+<p>Construction des sous-éléments du dessin animé.</p>
+<p>Définissez deux fonctions :</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">carre()</span></code> qui dessine un carré de 80 pixels de côté</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attendEtAvance()</span></code> qui attend 0.5 secondes et avance de 2 pixels</p></li>
+</ol>
+<p>Quelques fonctions utiles pour la fonction attendreEtAvancer() :</p>
+<p><code class="docutils literal notranslate"><span class="pre">t.penup()</span></code> : pour lever le crayon
+<code class="docutils literal notranslate"><span class="pre">t.pendown()</span></code> : pour abaisser le crayon
+<code class="docutils literal notranslate"><span class="pre">t.clear()</span></code> : pour effacer ce qui a été dessiné</p>
+<p>Une fonction importante pour «dormir» une seconde :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">¶</a></h2>
+<p>Ecrivez un programme qui anime le carré en faisant appel aux diverses fonctions crées plus haut</p>
+<p><strong>Remarque:</strong> on peut accélérer la tortue avec la <strong>méthode</strong> (qui est une fonction appliquée à un objet) <code class="docutils literal notranslate"><span class="pre">t.speed(vitesse)</span></code> où l’argument <code class="docutils literal notranslate"><span class="pre">vitesse</span></code> est un chiffre très élevé (par exemple 500).</p>
+</div>
+<div class="section" id="exercice-3-avance-en-utilisant-une-boucle">
+<h2>Exercice 3 (avancé en utilisant une boucle)<a class="headerlink" href="#exercice-3-avance-en-utilisant-une-boucle" title="Permalink to this headline">¶</a></h2>
+<p>Une boucle ce n’est rien d’autre qu’une itération de plusieurs opérations. On la déclare de la façon suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
+   <span class="n">operation</span> <span class="mi">1</span>
+   <span class="n">operation</span> <span class="mi">2</span>
+   <span class="n">etc</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>est une boucle qui fera les opérations indentées à droite 10 fois.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -276,7 +434,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1M/prog/intro2"
+            path: "./1M/prog/dessinsanimes"
         },
         predefinedOutput: true
     }
@@ -287,7 +445,21 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../intro2/intro2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction : les fonctions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../boucles/boucles1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Boucles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

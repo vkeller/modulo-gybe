@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programmation &#8212; Education Numérique Ecole de maturité</title>
+    <title>Environnement de développement &#8212; Education Numérique Ecole de maturité</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction : La tortue" href="intro1/intro1.html" />
-    <link rel="prev" title="Environnement de développement" href="../installation/installation.html" />
+    <link rel="next" title="Programmation" href="../prog/index.html" />
+    <link rel="prev" title="Algorithmique" href="../algo/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,38 +107,38 @@
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../installation/installation.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Environnement de développement
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../prog/index.html">
    Programmation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="intro1/intro1.html">
+    <a class="reference internal" href="../prog/intro1/intro1.html">
      Introduction : La tortue
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="intro2/intro2.html">
+    <a class="reference internal" href="../prog/intro2/intro2.html">
      Introduction : les fonctions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="dessinsanimes/dessins.html">
+    <a class="reference internal" href="../prog/dessinsanimes/dessins.html">
      Les boucles : dessins animés
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="boucles/boucles1.html">
+    <a class="reference internal" href="../prog/boucles/boucles1.html">
      Boucles
     </a>
    </li>
@@ -202,9 +202,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/1M/prog/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/1M/installation/installation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -222,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/index.html&body=Your%20issue%20content%20here."><button
+            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/installation/installation.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -243,6 +243,41 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#langage-de-programmation">
+   Langage de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choix-du-langage-de-programmation">
+   Choix du langage de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-d-un-ide">
+   Installation d’un IDE
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thonny">
+     Thonny
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-lab">
+     jupyter-lab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -250,20 +285,89 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Programmation</h1>
+                <h1>Environnement de développement</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#langage-de-programmation">
+   Langage de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choix-du-langage-de-programmation">
+   Choix du langage de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-d-un-ide">
+   Installation d’un IDE
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thonny">
+     Thonny
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-lab">
+     jupyter-lab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programmation">
-<h1>Programmation<a class="headerlink" href="#programmation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="tex2jax_ignore mathjax_ignore section" id="environnement-de-developpement">
+<h1>Environnement de développement<a class="headerlink" href="#environnement-de-developpement" title="Permalink to this headline">¶</a></h1>
+<p>Un <strong>environnement de développement</strong> (<em>Integrated Development Environment</em> en anglais) est un ensemble logiciel permettant de :</p>
+<ol class="simple">
+<li><p>programmer dans un ou plusieurs languages de programmation</p></li>
+<li><p>compiler et exécuter un code source</p></li>
+<li><p>débugguer un code source</p></li>
+</ol>
+<div class="section" id="langage-de-programmation">
+<h2>Langage de programmation<a class="headerlink" href="#langage-de-programmation" title="Permalink to this headline">¶</a></h2>
+<p>Un langage de programmation est un language de haut niveau permettant d’interagir avec l’ordinateur qui lui ne comprend que 0 et 1. Une bonne définition est la suivante (<a class="reference external" href="https://www.techno-science.net">https://www.techno-science.net</a>):</p>
+<blockquote>
+<div><p>Un langage de programmation est un langage informatique, permettant à un être humain d’écrire un code source qui sera analysé par une machine, généralement un ordinateur. Le code source subit ensuite une transformation ou une évaluation dans une forme exploitable par la machine, ce qui permet d’obtenir un programme. Les langages permettent souvent de faire abstraction des mécanismes de bas niveau de la machine, de sorte que le code source représentant une solution puisse être écrit et compris par un être humain.</p>
+</div></blockquote>
+<p>Il existe des milliers de langages de programmation. Il existe un site web qui en répertorie près de 1500 : <a class="reference external" href="https://99-bottles-of-beer.net">https://99-bottles-of-beer.net</a></p>
+</div>
+<div class="section" id="choix-du-langage-de-programmation">
+<h2>Choix du langage de programmation<a class="headerlink" href="#choix-du-langage-de-programmation" title="Permalink to this headline">¶</a></h2>
+<p>Ce cours sera basé sur <a class="reference external" href="https://www.python.org">Python 3</a>.</p>
+</div>
+<div class="section" id="installation-d-un-ide">
+<h2>Installation d’un IDE<a class="headerlink" href="#installation-d-un-ide" title="Permalink to this headline">¶</a></h2>
+<p>Il en existe des dizaines, deux seront utilisé :</p>
+<ol class="simple">
+<li><p>Thonny : en environnement de développement pour débutants</p></li>
+<li><p>jupyter-lab : un module spécifique de Python qui permet d’écrire des programmes dans un navigateur</p></li>
+</ol>
+<div class="section" id="thonny">
+<h3>Thonny<a class="headerlink" href="#thonny" title="Permalink to this headline">¶</a></h3>
+<p>Thonny est un environnement de développement en sources ouvertes (<em>open source software</em> en anglais) et gratuit.</p>
+<p><a class="reference external" href="https://thonny.org/">Télécharger Thonny sur le site</a> pour la version de son système d’exploitation (MacOS, Windows ou Linux) et suivre les instructions de l’installateur</p>
+</div>
+<div class="section" id="jupyter-lab">
+<h3>jupyter-lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this headline">¶</a></h3>
+<p>L’installation de Jupyter-lab est un peu plus ardue que celle de Thonny. Il requiert l’installation préalable de Pyhton sur la machine hote.</p>
+<p><a class="reference external" href="https://jupyter.org/install">Télécharger l’environnement jupyter</a> et suivre les instructions.</p>
+</div>
 </div>
 </div>
 
@@ -280,7 +384,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1M/prog"
+            path: "./1M/installation"
         },
         predefinedOutput: true
     }
@@ -292,17 +396,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../installation/installation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../algo/index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Environnement de développement</p>
+            <p class="prev-next-title">Algorithmique</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="intro1/intro1.html" title="next page">
+    <a class='right-next' id="next-link" href="../prog/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction : La tortue</p>
+        <p class="prev-next-title">Programmation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
