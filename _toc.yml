@@ -12,14 +12,11 @@ parts:
     - file: 1M/prog/index
       sections:
       - file: 1M/prog/intro1/intro1
-<<<<<<< HEAD
       - file: 1M/prog/intro2/intro2
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
-=======
       - file: 1M/prog/intro2/index
->>>>>>> f7dc21986aee46c0faa4636a318345e5410c9a60
 
   - caption: 2ème année
     chapters:
