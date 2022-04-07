@@ -16,7 +16,7 @@ parts:
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
-      - file: 1M/prog/intro2/index
+      - file: 1M/prog/hacking/hacking-romain
 
   - caption: 2ème année
     chapters:
