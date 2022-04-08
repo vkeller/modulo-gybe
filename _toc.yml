@@ -16,6 +16,11 @@ parts:
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
+      - file: 1M/prog/tableaux/Tableaux
+      - file: 1M/prog/files/LesFiles
+      - file: 1M/prog/arbres/LesArbres
+      - file: 1M/prog/dictionnaires/Dictionnaires2
+      - file: 1M/prog/motdepasse/MotsDePasse
       - file: 1M/prog/hacking/hacking-romain
 
   - caption: 2ème année
