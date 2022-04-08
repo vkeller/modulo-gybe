@@ -1,0 +1,2764 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le système de fichiers &#8212; Education Numérique Ecole de maturité</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Bienvenue
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro2/intro2.html">
+     Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dessinsanimes/dessins.html">
+     Les boucles : dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles1.html">
+     Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles2.html">
+     Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tableaux/Tableaux.html">
+     Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../files/LesFiles.html">
+     Piles et files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../arbres/LesArbres.html">
+     Arbres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dictionnaires/Dictionnaires2.html">
+     Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../motdepasse/MotsDePasse.html">
+     Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../hacking/hacking-romain.html">
+     Coder et décoder comme les Romains
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/1M/prog/fichiers/SystemeDeFichiers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://vkeller.github.io/modulo-gybe/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/fichiers/SystemeDeFichiers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fichier-informatique">
+   Fichier informatique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dossiers">
+   Dossiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-en-arbre">
+   Structure en arbre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-deplacer">
+   Se déplacer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-dossier">
+   Créer des dossier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dossiers-speciaux">
+   Dossiers spéciaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#afficher-le-contenu-d-un-fichier">
+   Afficher le contenu d’un fichier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices">
+   Exercices
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Le système de fichiers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fichier-informatique">
+   Fichier informatique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dossiers">
+   Dossiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-en-arbre">
+   Structure en arbre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-deplacer">
+   Se déplacer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-dossier">
+   Créer des dossier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dossiers-speciaux">
+   Dossiers spéciaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#afficher-le-contenu-d-un-fichier">
+   Afficher le contenu d’un fichier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices">
+   Exercices
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="le-systeme-de-fichiers">
+<h1>Le système de fichiers<a class="headerlink" href="#le-systeme-de-fichiers" title="Permalink to this headline">¶</a></h1>
+<p>On appelle <strong>système de fichier</strong> l’organisation hierarchique des fichiers au sein d’un <strong>système d’exploitation</strong>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baobab_and_elephant%2C_Tanzania.jpg/640px-Baobab_and_elephant%2C_Tanzania.jpg" /></p>
+<p>Télécharger: <a class="reference download internal" download="" href="../../../_downloads/64ba076650de00b5fe8d0b8fb991717c/dossier-a-cracker.zip"><code class="xref download docutils literal notranslate"><span class="pre">dosser-a-cracker.zip</span></code></a></p>
+<div class="section" id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Comprendre le système de fichiers UNIX (MacOS X)</p></li>
+<li><p>Se déplacer dans un système de fichiers</p></li>
+<li><p>Créer et supprimer des dossiers</p></li>
+</ul>
+</div>
+<div class="section" id="fichier-informatique">
+<h2>Fichier informatique<a class="headerlink" href="#fichier-informatique" title="Permalink to this headline">¶</a></h2>
+<p>Un fichier informatique est un ensemble de données numériques réunies sous un même nom, enregistrées sur un support de stockage permanent. On peut distinguer différents types de fichies tel que:</p>
+<ul class="simple">
+<li><p>programmes</p></li>
+<li><p>textes</p></li>
+<li><p>images</p></li>
+</ul>
+</div>
+<div class="section" id="dossiers">
+<h2>Dossiers<a class="headerlink" href="#dossiers" title="Permalink to this headline">¶</a></h2>
+<p>Dans un ordinateur on a vite des milliers de fichiers. Nous utilisons des dossiers pour les organiser.
+Un <strong>dossier</strong> est un contenant de fichiers et de sous-dossiers.</p>
+</div>
+<div class="section" id="structure-en-arbre">
+<h2>Structure en arbre<a class="headerlink" href="#structure-en-arbre" title="Permalink to this headline">¶</a></h2>
+<p>Les ordinateurs organisent les dossiers et fichiers sous forme d’<strong>arbre</strong>, où</p>
+<ul class="simple">
+<li><p>un dossier est un <strong>noeud</strong></p></li>
+<li><p>un fichier est une <strong>feuille</strong></p></li>
+</ul>
+<p>On appelle cette structure une <strong>arborescence</strong>.<br />
+La <strong>racine</strong> de cet arbre est désigné par le symbole <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<p><img alt="" src="https://pixees.fr/informatiquelycee/n_site/img/nsi_prem_base_linux_2.png" /></p>
+<p>Vous pouvez retrouver cette arborescence dans l’<strong>interface graphique</strong> de votre système d’exploitation.<br />
+Voici une fenêtre du <strong>gestionnaire des fichiers</strong>.</p>
+<p><img alt="" src="https://osxdaily.com/wp-content/uploads/2010/02/mac-os-x-finder-column-view.JPG" /></p>
+<p>Chaque colonne représente un niveau dans la structure hiérarchique du système des fichiers.</p>
+</div>
+<div class="section" id="se-deplacer">
+<h2>Se déplacer<a class="headerlink" href="#se-deplacer" title="Permalink to this headline">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (print working directory) affiche le chemin du répertoire où nous nous trouvons.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/vkeller/GYBE/modulo-gybe/1M/prog/fichiers&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory) change de répertoire. Si vous l’utilisez sans argument vous changez vers votre dossier personnel (home).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/vkeller
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">dossier</span></code> permet de se déplacer vers un autre dossier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Downloads</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;Downloads&#39;
+/home/vkeller
+</pre></div>
+</div>
+</div>
+</div>
+<p>Et on peut encore aller vers un sous-dossier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dossier</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">cracker</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;dossier-a-cracker&#39;
+/home/vkeller
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> (list) affiche le contenu du dossier actuel. Sur certains systèmes les dossiers sont affichés dans une autre couleur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 11_E.pdf
+ 1637860609664-certificate849701438248580600.pdf
+ 200515_CP_Processus_Ecole_COVID19_VF.pdf
+ 200610_04_05_Covid-19_Bulletin_rens85.pdf
+&#39;20200510 Motion aide à la presse_v3.doc&#39;
+ 2020.11.26.20239368v1.full.pdf
+ 2020_initiative_consti_proportionnelle_executifs-1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">24H..3.11.2021.png</span>
+ 24Heures-Autoroutes-03.02.2020.pdf
+ 24Heures-Interview-04.05.2020.pdf
+ 24Heures-Ravenel-13.01.2020.pdf
+&#39;2 couturières et rétroactifs.docx&#39;
+ 401749.pdf
+ 68142.pdf
+ 8duj25us.iso
+&#39;Accord Coordination Régionale Interreg.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">acquaria</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">AD.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Adobe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">aircrack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL-Couverture</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alexandra</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alfio</span>/
+ allkeys.asc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Amendements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Android</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ANDROID-STUDIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">AndroidStudioProjects</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Archives</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">assemblage.png</span>
+&#39;astolfi ch1.pdf&#39;
+ astolfi_chapitre1_redresse.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Audiobooks</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BACKUP-LENOVO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Backup-Samsung</span>/
+ ballade-des-dames.pdf
+ basic.ics
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bellatrix</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Benchmarks</span>/
+ BENVENTISTE-MEMOIRE-DE-L-EAU.pdf
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;Bibliothèque calibre&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">bicgstab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BITCOIN</span>/
+ blabla.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Borel</span>/
+ Brochure_projet_de_budget_2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BROTHER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Brother-driver</span>/
+ b.txt
+&#39;Bulletin de paie_202001.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bureau</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CADMOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CAFFE</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Capture du 2020-04-05 17-07-52.png&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartesPostales</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartonRouge</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC18.03.2021</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CCD</span>/
+&#39;CCO_20210909_Preavis_5-2021_Fete de la nature_VF.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC-Preavis19</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CECILIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CERN</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CEWE</span>/
+ <span class=" -Color -Color-Cyan">Chantage.mp3</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">chateaux-de-valere-et-tourbillon.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHVote</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CISCO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">code_bug</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoeurDeVille</span>/
+ commissions.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">computer-science.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">conjugateGradientUM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CONSEILCOMMUNAL</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Consignes et recommandations.png&#39;</span>
+&#39;convention-programme Interreg VI France-Suisse.docx&#39;
+ Converged.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoordinatorCSE</span>/
+ corrections-website.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Couleur-Domaterra-TD105F-vert-deau.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoursFortran</span>/
+ cours.Master1.diff.finie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">covid-GCVD.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CP2K</span>/
+ Cracker_un_mot_de_passe_old.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CRECHE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Crevette</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CROQCINELLE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">crypto</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CSE</span>/
+ ctpet-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Cuxac</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CV</span>/
+ dame-du-temps-jadis.odt
+ dame-du-temps-jadis.pdf
+ dasilva.txt
+&quot;Demande d&#39;autorisation de filmer pour les stagiaires.pdf&quot;
+ device4.c
+ <span class=" -Color -Color-Bold -Color-Bold-Red">discord-0.0.13.deb</span>
+ DiscoursFourmiRouge-21.01.2022.odt
+ DiscoursFourmiRouge-21.01.2022.pdf
+&#39;Divers 20_PET_4_dépôt.pdf.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dlang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Documents</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Dropbox</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">drop.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">DUAL_PHYSICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dvbern-tax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dwhelper</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-DOWNLOAD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-HERSCH-MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-mars</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-BUGNON</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-GYMNASE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum-vince</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUROAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ElectionsRenens</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eLohnausweisSSK</span>/
+ EMPD-210.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants1.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants3.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Enregistrements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EPFL-CertificatSalaire</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Green">EPFL.pcf</span>*
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eratosthene</span>/
+ errormsg.out
+ error.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ethiersteinman</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eulalia</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EVOTING-LaPoste</span>/
+ Exam-PHSY743.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Red">exam_project_shw2d.zip</span>
+ Failed.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D-Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FeteDesVoisins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FFTW</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Films</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FILMS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Flash</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FlashInformatique</span>/
+ flyer_formations_rectoverso.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">fontconfig</span>/
+ Formulaire_de_dépôt_d_amendements_7_LPrPCi_Keller.doc
+&#39;Formulaire dynamique infos dons 2.pdf&#39;
+&#39;Formulaire dynamique infos dons.pdf&#39;
+&#39;Formulaire dynamique infos dons Vincent Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FREEFEM</span>/
+ friedmann.c
+ FR-Marta.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FS</span>/
+ fu5BmNBsSWOyk0f13e4v_Lorem.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GADGET-2</span>/
+ gafam.odt
+ gafam.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GALAXY</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gallet</span>/
+ gare-au-gorille.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GASPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GBS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd21.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd23.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd2.jpeg</span>
+ GCVD-Interventions-GroupeEP.odt
+ GCVD-Interventions-GroupeEP.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Geekbench-5.0.4-Linux</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Geekbench-5.0.4-Linux.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gilles-Software</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">git-eclipse</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-TOKENS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Goekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GOOGLE-DRIVE</span>/
+&#39;GPU computing 1(1).pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gross</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gwenol</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYBE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYROKINETICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hacking-romain-v2_files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HeatEquation</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP-cigares</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">hepl-miro.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPC500</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCCH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hpcgam</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCGAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">HPCGAM.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HUGUES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IANOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">i-gPgsXK6.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Images</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Image-To-XLSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">img</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">img.zip</span>
+&#39;Informations générales sur les élèves.numbers&#39;
+&#39;Informations générales sur les élèves.xls&#39;
+&#39;Informations importantes séances Salle Plénière_v1.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">initiative_TU.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">intel</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">INTEL-AI-WORKSHOP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IntelProprio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Intel-Workshop</span>/
+ interpell_robots_j_sansonnens_fevrier.2017.docx
+ inter.txt
+ InterventionsPOP.odt
+ InterventionsPOP.pdf
+ intro1.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISC13</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISS-TestBed</span>/
+ jeu_ppc.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KALI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan-parallel</span>/
+ Keller_21223_signe.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kilian</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KNL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LACROSSE-WS3650</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Lausanne-Signal</span>/
+ LettreCandidatureElections2022VincentKeller.odt
+ LettreCandidatureElections2022VincentKeller.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Leysin</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LHC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Liberang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">libmpimon</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIBREOFFICE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Libreoffice-templates</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Life</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIFE</span>/
+ Liste_comm_nommees_N°8_03.12.20.pdf
+&#39;Liste des commissions à organiser N° 10 - 16.12.21.doc&#39;
+&#39;Liste des objets et des commissions à nommer N°14 - 03.03.2022.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 8 - 03.12.20-1.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 14 - 01.04.21.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à organiser N16 - 31.03.2022.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIVRE-PHOTOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LJMD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMDE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">LUC.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MACOSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MAGDA</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Magda Croqucinelle 2020-04-14 at 20.59.50.mp4&#39;</span>
+ mail-le-resto-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MATLAB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">matrix-market-suite</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">mdlgb.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Med</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Merdier</span>/
+ METS-2021-2022-INT-sans-page-5-et-6.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">michoud.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Migros</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MIMICAv5</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MITgcm</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Modèles</span>/
+ Module03_ExoA_VincentKeller.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO-GIT</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons-08-10-2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">motion-files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">moyensDOinfVD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mpimon-module</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MSINT-Enregistrement</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mu_code</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Musique</span>/
+&#39;Names&amp;ProjectTitles_17Dec_HorairesPassage.xls&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NASA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NATAF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NBody</span>/
+ ndm-pres-2013.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NStCR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NuitDesMusées</span>/
+ numeriser_dvd_handbrake_JT.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.1_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.2_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">nvvp_workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OCTOPUS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">office.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Old-PDF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDrive</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDriveSources</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">onedrive-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenFOAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenMP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ownCloud</span>/
+ p1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">p1.png</span>
+ pahud.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">paie</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PaolaMalsot</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PAPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Papier-Vince-Vicky</span>/
+&#39;Parallel and high-performance computing 2020 Students list.ods&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pasquarello</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PCPT-2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDF</span>/
+&#39;PDF de la candidature Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PENELOPE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PERFMON</span>/
+ PIIS0140673620311806.pdf
+ pika.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PinardEtiquettes</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">pingpong</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pixum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PlaceMarche2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLANNER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pleiades</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLUMED</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PMB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Podcasts</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POPC++</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POP-CE-2022</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">pop-logo.jpg</span>
+ PortraitCourrierVK.docx
+ PortraitCourrierVK.odt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">poste.jpg</span>
+&#39;PostFinance - E-finance - Paiements.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POWERDEVS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PRAFO</span>/
+ prises_de_position.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PROJECTS-PHPC-2020</span>/
+ prv-e7ddfda7-585b-4c6d-b655-521247139344.pdf
+ PS-02.2020.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Public</span>/
+ pubring.gpg
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">python</span>/
+ Q-CE-VK2.pdf
+ Q-CE-VK.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">R</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Railway_network_Brazil.svg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ralf</span>/
+ RapportDesAffairesExterieures2021.pdf
+ RapportVerificateursComptes2017_v3.doc
+ RapportVerificateursComptes2018.doc
+&#39;R-CE Texte adopté par CE.docx.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Red">rechnung.zip</span>
+ Release.key
+&#39;Rentrée 2020 MAGDA.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">res.png</span>
+ resultat.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Revue-du-GCVD-2019.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">RStudio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Salins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamiGoekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamRecipe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Saxer</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">scangearmp-source-1.30-1.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">S-CE-VK.png</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SCITAS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-code-mpi</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-hpcusers</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SeanceEcoute</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Signature</span>/
+&#39;SIHF-Calendar NL Regular Season Lausanne HC Lausanne HC (2018).ics&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIMONE-LECTURE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">skype-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SLURM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">software</span>/
+ sortie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">soulier.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SOURCES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">spack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SPH</span>/
+ standalone.xul
+&#39;Statistiques 2007 - 20212 et 2012 - 2017 EP.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SweetHome3D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TAU</span>/
+&#39;taux à Renens, consel du 7.10.21-2.docx&#39;
+ TE1_Exercice1_Corrigé.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEAMVIEWER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tech-report</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Téléchargements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">temporary</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TensorFlow</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERATEC13-talk</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERPSICHORE</span>/
+ test.dat
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEST-HACKS</span>/
+ test.pdf
+ test.py
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">test-train.jpg</span>
+&#39;Texte adopté 21_LEG_134.pdf - Divers Texte adopté par CE - ExMot INI Paccaud - 21_LEG_134 - publié.pdf.pdf&#39;
+ thawte_Primary_Root_CA.pem
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">THIMIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">thumbnail.jpg</span>
+ _toc.yml.vk
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TOR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TORRENT-DOWNLOADS</span>/
+ tp.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TP-Gratuits</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg.jpeg</span>
+ tpg.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Trains</span>/
+ tsr1.vlc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TSVV</span>/
+ TU-8.2.2022.pdf
+ TU-VK-01.02.2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">UNIL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">unnamed.png</span>
+ Untitled1.ipynb
+ Untitled2.ipynb
+ Untitled3.ipynb
+ Untitled.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">URI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ursula</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">V4L-DVB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vache_herens.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vaud-cybersecurite-gimp.xcf</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vaudtax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2010</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2011</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2013</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2014</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2015</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2015-1.2.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2016-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2017</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2017-1.2.2-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2018</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2018-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2019</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2019-1.1.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2019.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2020</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2020-1.0.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2020.tar.gz</span>
+ VDGC20220320-A8.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">video.mp4</span>
+ video.mp4.idx2
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vidéos</span>/
+ Vierge.docx
+ Vierge.pages
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Vincent Keller.jpg&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VIRTUALBOX</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;VirtualBox VMs&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Cyan">VirtualBoxVMs</span>@
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VISIT</span>/
+&#39;V. KELLER.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Webcam_Pictures</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;WhatsApp Video 2020-03-27 at 20.51.13.mp4&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">wifi.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">WPA-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Xlh8DywTR16gOUvqnF7C_P1060367V2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">XMR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zetta</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">zoom_amd64.deb</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96.2_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero_linux-x86_64</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">dossier</span></code> affiche le contenu du dossier indiqué.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">confidentiel</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ls: impossible d&#39;accéder à &#39;confidentiel&#39;: Aucun fichier ou dossier de ce type
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span></code> pour afficher le contenue de <code class="docutils literal notranslate"><span class="pre">business</span></code>.</p>
+</div>
+<div class="section" id="creer-des-dossier">
+<h2>Créer des dossier<a class="headerlink" href="#creer-des-dossier" title="Permalink to this headline">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (make directory) créé un nouveau dossier. Ici on va créer un nouveau dossier appelé <code class="docutils literal notranslate"><span class="pre">informatique</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">informatique</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Avec la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> nous pouvons vérifier que le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été créé.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 11_E.pdf
+ 1637860609664-certificate849701438248580600.pdf
+ 200515_CP_Processus_Ecole_COVID19_VF.pdf
+ 200610_04_05_Covid-19_Bulletin_rens85.pdf
+&#39;20200510 Motion aide à la presse_v3.doc&#39;
+ 2020.11.26.20239368v1.full.pdf
+ 2020_initiative_consti_proportionnelle_executifs-1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">24H..3.11.2021.png</span>
+ 24Heures-Autoroutes-03.02.2020.pdf
+ 24Heures-Interview-04.05.2020.pdf
+ 24Heures-Ravenel-13.01.2020.pdf
+&#39;2 couturières et rétroactifs.docx&#39;
+ 401749.pdf
+ 68142.pdf
+ 8duj25us.iso
+&#39;Accord Coordination Régionale Interreg.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">acquaria</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">AD.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Adobe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">aircrack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL-Couverture</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alexandra</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alfio</span>/
+ allkeys.asc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Amendements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Android</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ANDROID-STUDIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">AndroidStudioProjects</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Archives</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">assemblage.png</span>
+&#39;astolfi ch1.pdf&#39;
+ astolfi_chapitre1_redresse.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Audiobooks</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BACKUP-LENOVO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Backup-Samsung</span>/
+ ballade-des-dames.pdf
+ basic.ics
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bellatrix</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Benchmarks</span>/
+ BENVENTISTE-MEMOIRE-DE-L-EAU.pdf
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;Bibliothèque calibre&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">bicgstab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BITCOIN</span>/
+ blabla.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Borel</span>/
+ Brochure_projet_de_budget_2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BROTHER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Brother-driver</span>/
+ b.txt
+&#39;Bulletin de paie_202001.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bureau</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CADMOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CAFFE</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Capture du 2020-04-05 17-07-52.png&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartesPostales</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartonRouge</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC18.03.2021</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CCD</span>/
+&#39;CCO_20210909_Preavis_5-2021_Fete de la nature_VF.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC-Preavis19</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CECILIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CERN</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CEWE</span>/
+ <span class=" -Color -Color-Cyan">Chantage.mp3</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">chateaux-de-valere-et-tourbillon.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHVote</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CISCO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">code_bug</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoeurDeVille</span>/
+ commissions.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">computer-science.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">conjugateGradientUM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CONSEILCOMMUNAL</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Consignes et recommandations.png&#39;</span>
+&#39;convention-programme Interreg VI France-Suisse.docx&#39;
+ Converged.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoordinatorCSE</span>/
+ corrections-website.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Couleur-Domaterra-TD105F-vert-deau.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoursFortran</span>/
+ cours.Master1.diff.finie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">covid-GCVD.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CP2K</span>/
+ Cracker_un_mot_de_passe_old.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CRECHE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Crevette</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CROQCINELLE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">crypto</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CSE</span>/
+ ctpet-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Cuxac</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CV</span>/
+ dame-du-temps-jadis.odt
+ dame-du-temps-jadis.pdf
+ dasilva.txt
+&quot;Demande d&#39;autorisation de filmer pour les stagiaires.pdf&quot;
+ device4.c
+ <span class=" -Color -Color-Bold -Color-Bold-Red">discord-0.0.13.deb</span>
+ DiscoursFourmiRouge-21.01.2022.odt
+ DiscoursFourmiRouge-21.01.2022.pdf
+&#39;Divers 20_PET_4_dépôt.pdf.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dlang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Documents</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Dropbox</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">drop.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">DUAL_PHYSICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dvbern-tax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dwhelper</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-DOWNLOAD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-HERSCH-MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-mars</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-BUGNON</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-GYMNASE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum-vince</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUROAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ElectionsRenens</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eLohnausweisSSK</span>/
+ EMPD-210.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants1.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants3.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Enregistrements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EPFL-CertificatSalaire</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Green">EPFL.pcf</span>*
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eratosthene</span>/
+ errormsg.out
+ error.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ethiersteinman</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eulalia</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EVOTING-LaPoste</span>/
+ Exam-PHSY743.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Red">exam_project_shw2d.zip</span>
+ Failed.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D-Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FeteDesVoisins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FFTW</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Films</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FILMS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Flash</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FlashInformatique</span>/
+ flyer_formations_rectoverso.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">fontconfig</span>/
+ Formulaire_de_dépôt_d_amendements_7_LPrPCi_Keller.doc
+&#39;Formulaire dynamique infos dons 2.pdf&#39;
+&#39;Formulaire dynamique infos dons.pdf&#39;
+&#39;Formulaire dynamique infos dons Vincent Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FREEFEM</span>/
+ friedmann.c
+ FR-Marta.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FS</span>/
+ fu5BmNBsSWOyk0f13e4v_Lorem.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GADGET-2</span>/
+ gafam.odt
+ gafam.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GALAXY</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gallet</span>/
+ gare-au-gorille.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GASPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GBS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd21.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd23.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd2.jpeg</span>
+ GCVD-Interventions-GroupeEP.odt
+ GCVD-Interventions-GroupeEP.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Geekbench-5.0.4-Linux</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Geekbench-5.0.4-Linux.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gilles-Software</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">git-eclipse</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-TOKENS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Goekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GOOGLE-DRIVE</span>/
+&#39;GPU computing 1(1).pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gross</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gwenol</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYBE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYROKINETICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hacking-romain-v2_files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HeatEquation</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP-cigares</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">hepl-miro.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPC500</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCCH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hpcgam</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCGAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">HPCGAM.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HUGUES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IANOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">i-gPgsXK6.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Images</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Image-To-XLSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">img</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">img.zip</span>
+&#39;Informations générales sur les élèves.numbers&#39;
+&#39;Informations générales sur les élèves.xls&#39;
+&#39;Informations importantes séances Salle Plénière_v1.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">informatique</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">initiative_TU.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">intel</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">INTEL-AI-WORKSHOP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IntelProprio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Intel-Workshop</span>/
+ interpell_robots_j_sansonnens_fevrier.2017.docx
+ inter.txt
+ InterventionsPOP.odt
+ InterventionsPOP.pdf
+ intro1.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISC13</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISS-TestBed</span>/
+ jeu_ppc.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KALI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan-parallel</span>/
+ Keller_21223_signe.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kilian</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KNL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LACROSSE-WS3650</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Lausanne-Signal</span>/
+ LettreCandidatureElections2022VincentKeller.odt
+ LettreCandidatureElections2022VincentKeller.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Leysin</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LHC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Liberang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">libmpimon</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIBREOFFICE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Libreoffice-templates</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Life</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIFE</span>/
+ Liste_comm_nommees_N°8_03.12.20.pdf
+&#39;Liste des commissions à organiser N° 10 - 16.12.21.doc&#39;
+&#39;Liste des objets et des commissions à nommer N°14 - 03.03.2022.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 8 - 03.12.20-1.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 14 - 01.04.21.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à organiser N16 - 31.03.2022.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIVRE-PHOTOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LJMD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMDE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">LUC.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MACOSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MAGDA</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Magda Croqucinelle 2020-04-14 at 20.59.50.mp4&#39;</span>
+ mail-le-resto-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MATLAB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">matrix-market-suite</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">mdlgb.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Med</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Merdier</span>/
+ METS-2021-2022-INT-sans-page-5-et-6.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">michoud.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Migros</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MIMICAv5</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MITgcm</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Modèles</span>/
+ Module03_ExoA_VincentKeller.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO-GIT</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons-08-10-2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">motion-files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">moyensDOinfVD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mpimon-module</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MSINT-Enregistrement</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mu_code</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Musique</span>/
+&#39;Names&amp;ProjectTitles_17Dec_HorairesPassage.xls&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NASA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NATAF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NBody</span>/
+ ndm-pres-2013.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NStCR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NuitDesMusées</span>/
+ numeriser_dvd_handbrake_JT.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.1_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.2_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">nvvp_workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OCTOPUS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">office.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Old-PDF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDrive</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDriveSources</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">onedrive-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenFOAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenMP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ownCloud</span>/
+ p1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">p1.png</span>
+ pahud.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">paie</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PaolaMalsot</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PAPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Papier-Vince-Vicky</span>/
+&#39;Parallel and high-performance computing 2020 Students list.ods&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pasquarello</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PCPT-2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDF</span>/
+&#39;PDF de la candidature Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PENELOPE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PERFMON</span>/
+ PIIS0140673620311806.pdf
+ pika.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PinardEtiquettes</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">pingpong</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pixum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PlaceMarche2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLANNER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pleiades</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLUMED</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PMB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Podcasts</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POPC++</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POP-CE-2022</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">pop-logo.jpg</span>
+ PortraitCourrierVK.docx
+ PortraitCourrierVK.odt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">poste.jpg</span>
+&#39;PostFinance - E-finance - Paiements.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POWERDEVS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PRAFO</span>/
+ prises_de_position.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PROJECTS-PHPC-2020</span>/
+ prv-e7ddfda7-585b-4c6d-b655-521247139344.pdf
+ PS-02.2020.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Public</span>/
+ pubring.gpg
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">python</span>/
+ Q-CE-VK2.pdf
+ Q-CE-VK.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">R</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Railway_network_Brazil.svg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ralf</span>/
+ RapportDesAffairesExterieures2021.pdf
+ RapportVerificateursComptes2017_v3.doc
+ RapportVerificateursComptes2018.doc
+&#39;R-CE Texte adopté par CE.docx.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Red">rechnung.zip</span>
+ Release.key
+&#39;Rentrée 2020 MAGDA.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">res.png</span>
+ resultat.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Revue-du-GCVD-2019.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">RStudio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Salins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamiGoekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamRecipe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Saxer</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">scangearmp-source-1.30-1.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">S-CE-VK.png</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SCITAS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-code-mpi</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-hpcusers</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SeanceEcoute</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Signature</span>/
+&#39;SIHF-Calendar NL Regular Season Lausanne HC Lausanne HC (2018).ics&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIMONE-LECTURE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">skype-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SLURM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">software</span>/
+ sortie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">soulier.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SOURCES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">spack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SPH</span>/
+ standalone.xul
+&#39;Statistiques 2007 - 20212 et 2012 - 2017 EP.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SweetHome3D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TAU</span>/
+&#39;taux à Renens, consel du 7.10.21-2.docx&#39;
+ TE1_Exercice1_Corrigé.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEAMVIEWER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tech-report</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Téléchargements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">temporary</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TensorFlow</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERATEC13-talk</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERPSICHORE</span>/
+ test.dat
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEST-HACKS</span>/
+ test.pdf
+ test.py
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">test-train.jpg</span>
+&#39;Texte adopté 21_LEG_134.pdf - Divers Texte adopté par CE - ExMot INI Paccaud - 21_LEG_134 - publié.pdf.pdf&#39;
+ thawte_Primary_Root_CA.pem
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">THIMIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">thumbnail.jpg</span>
+ _toc.yml.vk
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TOR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TORRENT-DOWNLOADS</span>/
+ tp.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TP-Gratuits</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg.jpeg</span>
+ tpg.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Trains</span>/
+ tsr1.vlc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TSVV</span>/
+ TU-8.2.2022.pdf
+ TU-VK-01.02.2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">UNIL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">unnamed.png</span>
+ Untitled1.ipynb
+ Untitled2.ipynb
+ Untitled3.ipynb
+ Untitled.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">URI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ursula</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">V4L-DVB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vache_herens.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vaud-cybersecurite-gimp.xcf</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vaudtax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2010</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2011</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2013</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2014</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2015</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2015-1.2.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2016-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2017</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2017-1.2.2-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2018</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2018-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2019</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2019-1.1.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2019.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2020</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2020-1.0.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2020.tar.gz</span>
+ VDGC20220320-A8.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">video.mp4</span>
+ video.mp4.idx2
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vidéos</span>/
+ Vierge.docx
+ Vierge.pages
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Vincent Keller.jpg&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VIRTUALBOX</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;VirtualBox VMs&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Cyan">VirtualBoxVMs</span>@
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VISIT</span>/
+&#39;V. KELLER.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Webcam_Pictures</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;WhatsApp Video 2020-03-27 at 20.51.13.mp4&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">wifi.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">WPA-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Xlh8DywTR16gOUvqnF7C_P1060367V2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">XMR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zetta</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">zoom_amd64.deb</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96.2_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero_linux-x86_64</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> (remove directory) supprime un dossier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmdir</span> <span class="n">informatique</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été supprimé.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 11_E.pdf
+ 1637860609664-certificate849701438248580600.pdf
+ 200515_CP_Processus_Ecole_COVID19_VF.pdf
+ 200610_04_05_Covid-19_Bulletin_rens85.pdf
+&#39;20200510 Motion aide à la presse_v3.doc&#39;
+ 2020.11.26.20239368v1.full.pdf
+ 2020_initiative_consti_proportionnelle_executifs-1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">24H..3.11.2021.png</span>
+ 24Heures-Autoroutes-03.02.2020.pdf
+ 24Heures-Interview-04.05.2020.pdf
+ 24Heures-Ravenel-13.01.2020.pdf
+&#39;2 couturières et rétroactifs.docx&#39;
+ 401749.pdf
+ 68142.pdf
+ 8duj25us.iso
+&#39;Accord Coordination Régionale Interreg.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">acquaria</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">AD.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Adobe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">aircrack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL-Couverture</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alexandra</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alfio</span>/
+ allkeys.asc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Amendements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Android</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ANDROID-STUDIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">AndroidStudioProjects</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Archives</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">assemblage.png</span>
+&#39;astolfi ch1.pdf&#39;
+ astolfi_chapitre1_redresse.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Audiobooks</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BACKUP-LENOVO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Backup-Samsung</span>/
+ ballade-des-dames.pdf
+ basic.ics
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bellatrix</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Benchmarks</span>/
+ BENVENTISTE-MEMOIRE-DE-L-EAU.pdf
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;Bibliothèque calibre&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">bicgstab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BITCOIN</span>/
+ blabla.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Borel</span>/
+ Brochure_projet_de_budget_2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BROTHER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Brother-driver</span>/
+ b.txt
+&#39;Bulletin de paie_202001.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bureau</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CADMOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CAFFE</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Capture du 2020-04-05 17-07-52.png&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartesPostales</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartonRouge</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC18.03.2021</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CCD</span>/
+&#39;CCO_20210909_Preavis_5-2021_Fete de la nature_VF.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC-Preavis19</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CECILIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CERN</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CEWE</span>/
+ <span class=" -Color -Color-Cyan">Chantage.mp3</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">chateaux-de-valere-et-tourbillon.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHVote</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CISCO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">code_bug</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoeurDeVille</span>/
+ commissions.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">computer-science.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">conjugateGradientUM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CONSEILCOMMUNAL</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Consignes et recommandations.png&#39;</span>
+&#39;convention-programme Interreg VI France-Suisse.docx&#39;
+ Converged.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoordinatorCSE</span>/
+ corrections-website.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Couleur-Domaterra-TD105F-vert-deau.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoursFortran</span>/
+ cours.Master1.diff.finie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">covid-GCVD.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CP2K</span>/
+ Cracker_un_mot_de_passe_old.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CRECHE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Crevette</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CROQCINELLE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">crypto</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CSE</span>/
+ ctpet-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Cuxac</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CV</span>/
+ dame-du-temps-jadis.odt
+ dame-du-temps-jadis.pdf
+ dasilva.txt
+&quot;Demande d&#39;autorisation de filmer pour les stagiaires.pdf&quot;
+ device4.c
+ <span class=" -Color -Color-Bold -Color-Bold-Red">discord-0.0.13.deb</span>
+ DiscoursFourmiRouge-21.01.2022.odt
+ DiscoursFourmiRouge-21.01.2022.pdf
+&#39;Divers 20_PET_4_dépôt.pdf.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dlang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Documents</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Dropbox</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">drop.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">DUAL_PHYSICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dvbern-tax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dwhelper</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-DOWNLOAD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-HERSCH-MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-mars</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-BUGNON</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-GYMNASE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum-vince</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUROAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ElectionsRenens</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eLohnausweisSSK</span>/
+ EMPD-210.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants1.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants3.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Enregistrements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EPFL-CertificatSalaire</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Green">EPFL.pcf</span>*
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eratosthene</span>/
+ errormsg.out
+ error.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ethiersteinman</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eulalia</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EVOTING-LaPoste</span>/
+ Exam-PHSY743.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Red">exam_project_shw2d.zip</span>
+ Failed.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D-Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FeteDesVoisins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FFTW</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Films</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FILMS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Flash</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FlashInformatique</span>/
+ flyer_formations_rectoverso.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">fontconfig</span>/
+ Formulaire_de_dépôt_d_amendements_7_LPrPCi_Keller.doc
+&#39;Formulaire dynamique infos dons 2.pdf&#39;
+&#39;Formulaire dynamique infos dons.pdf&#39;
+&#39;Formulaire dynamique infos dons Vincent Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FREEFEM</span>/
+ friedmann.c
+ FR-Marta.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FS</span>/
+ fu5BmNBsSWOyk0f13e4v_Lorem.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GADGET-2</span>/
+ gafam.odt
+ gafam.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GALAXY</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gallet</span>/
+ gare-au-gorille.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GASPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GBS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd21.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd23.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd2.jpeg</span>
+ GCVD-Interventions-GroupeEP.odt
+ GCVD-Interventions-GroupeEP.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Geekbench-5.0.4-Linux</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Geekbench-5.0.4-Linux.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gilles-Software</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">git-eclipse</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-TOKENS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Goekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GOOGLE-DRIVE</span>/
+&#39;GPU computing 1(1).pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gross</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gwenol</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYBE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYROKINETICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hacking-romain-v2_files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HeatEquation</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP-cigares</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">hepl-miro.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPC500</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCCH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hpcgam</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCGAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">HPCGAM.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HUGUES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IANOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">i-gPgsXK6.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Images</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Image-To-XLSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">img</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">img.zip</span>
+&#39;Informations générales sur les élèves.numbers&#39;
+&#39;Informations générales sur les élèves.xls&#39;
+&#39;Informations importantes séances Salle Plénière_v1.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">initiative_TU.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">intel</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">INTEL-AI-WORKSHOP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IntelProprio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Intel-Workshop</span>/
+ interpell_robots_j_sansonnens_fevrier.2017.docx
+ inter.txt
+ InterventionsPOP.odt
+ InterventionsPOP.pdf
+ intro1.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISC13</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISS-TestBed</span>/
+ jeu_ppc.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KALI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan-parallel</span>/
+ Keller_21223_signe.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kilian</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KNL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LACROSSE-WS3650</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Lausanne-Signal</span>/
+ LettreCandidatureElections2022VincentKeller.odt
+ LettreCandidatureElections2022VincentKeller.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Leysin</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LHC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Liberang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">libmpimon</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIBREOFFICE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Libreoffice-templates</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Life</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIFE</span>/
+ Liste_comm_nommees_N°8_03.12.20.pdf
+&#39;Liste des commissions à organiser N° 10 - 16.12.21.doc&#39;
+&#39;Liste des objets et des commissions à nommer N°14 - 03.03.2022.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 8 - 03.12.20-1.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 14 - 01.04.21.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à organiser N16 - 31.03.2022.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIVRE-PHOTOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LJMD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMDE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">LUC.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MACOSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MAGDA</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Magda Croqucinelle 2020-04-14 at 20.59.50.mp4&#39;</span>
+ mail-le-resto-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MATLAB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">matrix-market-suite</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">mdlgb.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Med</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Merdier</span>/
+ METS-2021-2022-INT-sans-page-5-et-6.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">michoud.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Migros</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MIMICAv5</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MITgcm</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Modèles</span>/
+ Module03_ExoA_VincentKeller.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO-GIT</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons-08-10-2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">motion-files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">moyensDOinfVD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mpimon-module</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MSINT-Enregistrement</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mu_code</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Musique</span>/
+&#39;Names&amp;ProjectTitles_17Dec_HorairesPassage.xls&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NASA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NATAF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NBody</span>/
+ ndm-pres-2013.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NStCR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NuitDesMusées</span>/
+ numeriser_dvd_handbrake_JT.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.1_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.2_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">nvvp_workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OCTOPUS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">office.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Old-PDF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDrive</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDriveSources</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">onedrive-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenFOAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenMP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ownCloud</span>/
+ p1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">p1.png</span>
+ pahud.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">paie</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PaolaMalsot</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PAPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Papier-Vince-Vicky</span>/
+&#39;Parallel and high-performance computing 2020 Students list.ods&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pasquarello</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PCPT-2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDF</span>/
+&#39;PDF de la candidature Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PENELOPE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PERFMON</span>/
+ PIIS0140673620311806.pdf
+ pika.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PinardEtiquettes</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">pingpong</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pixum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PlaceMarche2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLANNER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pleiades</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLUMED</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PMB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Podcasts</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POPC++</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POP-CE-2022</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">pop-logo.jpg</span>
+ PortraitCourrierVK.docx
+ PortraitCourrierVK.odt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">poste.jpg</span>
+&#39;PostFinance - E-finance - Paiements.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POWERDEVS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PRAFO</span>/
+ prises_de_position.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PROJECTS-PHPC-2020</span>/
+ prv-e7ddfda7-585b-4c6d-b655-521247139344.pdf
+ PS-02.2020.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Public</span>/
+ pubring.gpg
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">python</span>/
+ Q-CE-VK2.pdf
+ Q-CE-VK.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">R</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Railway_network_Brazil.svg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ralf</span>/
+ RapportDesAffairesExterieures2021.pdf
+ RapportVerificateursComptes2017_v3.doc
+ RapportVerificateursComptes2018.doc
+&#39;R-CE Texte adopté par CE.docx.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Red">rechnung.zip</span>
+ Release.key
+&#39;Rentrée 2020 MAGDA.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">res.png</span>
+ resultat.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Revue-du-GCVD-2019.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">RStudio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Salins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamiGoekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamRecipe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Saxer</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">scangearmp-source-1.30-1.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">S-CE-VK.png</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SCITAS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-code-mpi</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-hpcusers</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SeanceEcoute</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Signature</span>/
+&#39;SIHF-Calendar NL Regular Season Lausanne HC Lausanne HC (2018).ics&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIMONE-LECTURE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">skype-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SLURM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">software</span>/
+ sortie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">soulier.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SOURCES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">spack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SPH</span>/
+ standalone.xul
+&#39;Statistiques 2007 - 20212 et 2012 - 2017 EP.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SweetHome3D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TAU</span>/
+&#39;taux à Renens, consel du 7.10.21-2.docx&#39;
+ TE1_Exercice1_Corrigé.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEAMVIEWER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tech-report</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Téléchargements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">temporary</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TensorFlow</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERATEC13-talk</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERPSICHORE</span>/
+ test.dat
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEST-HACKS</span>/
+ test.pdf
+ test.py
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">test-train.jpg</span>
+&#39;Texte adopté 21_LEG_134.pdf - Divers Texte adopté par CE - ExMot INI Paccaud - 21_LEG_134 - publié.pdf.pdf&#39;
+ thawte_Primary_Root_CA.pem
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">THIMIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">thumbnail.jpg</span>
+ _toc.yml.vk
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TOR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TORRENT-DOWNLOADS</span>/
+ tp.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TP-Gratuits</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg.jpeg</span>
+ tpg.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Trains</span>/
+ tsr1.vlc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TSVV</span>/
+ TU-8.2.2022.pdf
+ TU-VK-01.02.2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">UNIL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">unnamed.png</span>
+ Untitled1.ipynb
+ Untitled2.ipynb
+ Untitled3.ipynb
+ Untitled.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">URI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ursula</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">V4L-DVB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vache_herens.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vaud-cybersecurite-gimp.xcf</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vaudtax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2010</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2011</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2013</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2014</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2015</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2015-1.2.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2016-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2017</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2017-1.2.2-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2018</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2018-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2019</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2019-1.1.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2019.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2020</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2020-1.0.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2020.tar.gz</span>
+ VDGC20220320-A8.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">video.mp4</span>
+ video.mp4.idx2
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vidéos</span>/
+ Vierge.docx
+ Vierge.pages
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Vincent Keller.jpg&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VIRTUALBOX</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;VirtualBox VMs&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Cyan">VirtualBoxVMs</span>@
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VISIT</span>/
+&#39;V. KELLER.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Webcam_Pictures</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;WhatsApp Video 2020-03-27 at 20.51.13.mp4&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">wifi.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">WPA-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Xlh8DywTR16gOUvqnF7C_P1060367V2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">XMR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zetta</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">zoom_amd64.deb</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96.2_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero_linux-x86_64</span>/
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dossiers-speciaux">
+<h2>Dossiers spéciaux<a class="headerlink" href="#dossiers-speciaux" title="Permalink to this headline">¶</a></h2>
+<p>Des symboles spéciaux sont utilisées pour designer des dossiers spéciaux:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> racine (root)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> dossier actuel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">..</span></code> dossier parent</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~</span></code> (alt+n) dossier personnel (home)</p></li>
+</ul>
+<p>Avec <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/</span></code> vous pouvez afficher le contenue de la racine du système des fichiers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">bin</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">home</span>/            <span class=" -Color -Color-Bold -Color-Bold-Blue">lib64</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">opt</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">sbin</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">boot</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img</span>@      <span class=" -Color -Color-Bold -Color-Bold-Blue">lost+found</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">proc</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">srv</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">var</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">dev</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img.old</span>@  <span class=" -Color -Color-Bold -Color-Bold-Blue">media</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">root</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">sys</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Blue">etc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">lib</span>/             <span class=" -Color -Color-Bold -Color-Bold-Blue">mnt</span>/         <span class=" -Color -Color-Bold -Color-Bold-Blue">run</span>/   <span class=" -Color -Color-Black -Color-Black-BGGreen">tmp</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz.old</span>@
+</pre></div>
+</div>
+</div>
+</div>
+<p>Avec <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/bin</span></code> vous pouvez afficher le dossier bin (=binary) qui contient le code pour les commande UNIX. Vous y trouvez les commandes <code class="docutils literal notranslate"><span class="pre">pwd</span></code> et <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">bash</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">hostname</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">plymouth</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">brltty</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">ip</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ps</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">journalctl</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">pwd</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">btrfsck</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">kbd_mode</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">rbash</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-find-root</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">keyctl</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">readlink</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-image</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">kill</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">red</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-map-logical</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">kmod</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">rm</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-select-super</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">less</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">rmdir</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">btrfstune</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">lessecho</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">rnano</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">bunzip2</span>*             <span class=" -Color -Color-Bold -Color-Bold-Cyan">lessfile</span>@       <span class=" -Color -Color-Bold -Color-Bold-Green">run-parts</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">busybox</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">lesskey</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">sed</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzcat</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">lesspipe</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">setfacl</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzcmp</span>@               <span class=" -Color -Color-Bold -Color-Bold-Green">ln</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">setfont</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzdiff</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">loadkeys</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">setupcon</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzegrep</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">login</span>*          <span class=" -Color -Color-Bold -Color-Bold-Cyan">sh</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzexe</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">loginctl</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">sleep</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzfgrep</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">lowntfs-3g</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">ss</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzgrep</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">ls</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">stty</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzip2</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">lsblk</span>*          <span class=" -Color -Color-White -Color-White-BGRed">su</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzip2recover</span>*        <span class=" -Color -Color-Bold -Color-Bold-Cyan">lsmod</span>@          <span class=" -Color -Color-Bold -Color-Bold-Green">sync</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzless</span>@              <span class=" -Color -Color-Bold -Color-Bold-Green">mkdir</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemctl</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">bzmore</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">mkfs.btrfs</span>*     <span class=" -Color -Color-Bold -Color-Bold-Cyan">systemd</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">cat</span>*                 <span class=" -Color -Color-Bold -Color-Bold-Green">mknod</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-ask-password</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">chacl</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">mktemp</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-escape</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">chgrp</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">more</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-hwdb</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">chmod</span>*               <span class=" -Color -Color-White -Color-White-BGRed">mount</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-inhibit</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">chown</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">mountpoint</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-machine-id-setup</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">chvt</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">mt</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-notify</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">cp</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">mt-gnu</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-sysusers</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">cpio</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">mv</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-tmpfiles</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">dash</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">nano</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-tty-ask-password-agent</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">date</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">nc</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">tar</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">dd</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">nc.openbsd</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">tempfile</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">df</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Cyan">netcat</span>@         <span class=" -Color -Color-Bold -Color-Bold-Green">touch</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">dir</span>*                 <span class=" -Color -Color-Bold -Color-Bold-Green">netstat</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">true</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">dmesg</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">networkctl</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">udevadm</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">dnsdomainname</span>@       <span class=" -Color -Color-Bold -Color-Bold-Cyan">nisdomainname</span>@  <span class=" -Color -Color-Bold -Color-Bold-Green">ulockmgr_server</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">domainname</span>@          <span class=" -Color -Color-White -Color-White-BGRed">ntfs-3g</span>*        <span class=" -Color -Color-White -Color-White-BGRed">umount</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">dumpkeys</span>*            <span class=" -Color -Color-Bold -Color-Bold-Green">ntfs-3g.probe</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">uname</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">echo</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscat</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">uncompress</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">ed</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscluster</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">unicode_start</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">efibootdump</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscmp</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">vdir</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">efibootmgr</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsfallocate</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">wdctl</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">egrep</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsfix</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">which</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">false</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsinfo</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">ypdomainname</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">fgconsole</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsls</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">zcat</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">fgrep</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsmove</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">zcmp</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">findmnt</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsrecover</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">zdiff</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">fsck.btrfs</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfssecaudit</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">zegrep</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">fuser</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfstruncate</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">zfgrep</span>*
+<span class=" -Color -Color-White -Color-White-BGRed">fusermount</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsusermap</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">zforce</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">getfacl</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ntfswipe</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">zgrep</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">grep</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">openvt</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">zless</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">gunzip</span>*              <span class=" -Color -Color-Bold -Color-Bold-Cyan">pidof</span>@          <span class=" -Color -Color-Bold -Color-Bold-Green">zmore</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">gzexe</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ping</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">znew</span>*
+<span class=" -Color -Color-Bold -Color-Bold-Green">gzip</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">ping4</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Green">hciconfig</span>*           <span class=" -Color -Color-Bold -Color-Bold-Cyan">ping6</span>@
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">.</span></code> desinge le dossier actuel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 11_E.pdf
+ 1637860609664-certificate849701438248580600.pdf
+ 200515_CP_Processus_Ecole_COVID19_VF.pdf
+ 200610_04_05_Covid-19_Bulletin_rens85.pdf
+&#39;20200510 Motion aide à la presse_v3.doc&#39;
+ 2020.11.26.20239368v1.full.pdf
+ 2020_initiative_consti_proportionnelle_executifs-1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">24H..3.11.2021.png</span>
+ 24Heures-Autoroutes-03.02.2020.pdf
+ 24Heures-Interview-04.05.2020.pdf
+ 24Heures-Ravenel-13.01.2020.pdf
+&#39;2 couturières et rétroactifs.docx&#39;
+ 401749.pdf
+ 68142.pdf
+ 8duj25us.iso
+&#39;Accord Coordination Régionale Interreg.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">acquaria</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">AD.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Adobe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">aircrack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ALBUM-CHANTAL-Couverture</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alexandra</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Alfio</span>/
+ allkeys.asc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Amendements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Android</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ANDROID-STUDIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">AndroidStudioProjects</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Archives</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">assemblage.png</span>
+&#39;astolfi ch1.pdf&#39;
+ astolfi_chapitre1_redresse.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Audiobooks</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BACKUP-LENOVO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Backup-Samsung</span>/
+ ballade-des-dames.pdf
+ basic.ics
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bellatrix</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Benchmarks</span>/
+ BENVENTISTE-MEMOIRE-DE-L-EAU.pdf
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;Bibliothèque calibre&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">bicgstab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BITCOIN</span>/
+ blabla.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Borel</span>/
+ Brochure_projet_de_budget_2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">BROTHER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Brother-driver</span>/
+ b.txt
+&#39;Bulletin de paie_202001.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Bureau</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CADMOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CAFFE</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Capture du 2020-04-05 17-07-52.png&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartesPostales</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CartonRouge</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC18.03.2021</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CCD</span>/
+&#39;CCO_20210909_Preavis_5-2021_Fete de la nature_VF.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CC-Preavis19</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CECILIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CERN</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CEWE</span>/
+ <span class=" -Color -Color-Cyan">Chantage.mp3</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHANTAL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">chateaux-de-valere-et-tourbillon.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CHVote</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CISCO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">code_bug</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoeurDeVille</span>/
+ commissions.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">computer-science.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">conjugateGradientUM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CONSEILCOMMUNAL</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Consignes et recommandations.png&#39;</span>
+&#39;convention-programme Interreg VI France-Suisse.docx&#39;
+ Converged.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoordinatorCSE</span>/
+ corrections-website.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Couleur-Domaterra-TD105F-vert-deau.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CoursFortran</span>/
+ cours.Master1.diff.finie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">covid-GCVD.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CP2K</span>/
+ Cracker_un_mot_de_passe_old.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CRECHE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Crevette</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CROQCINELLE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">crypto</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CSE</span>/
+ ctpet-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Cuxac</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">CV</span>/
+ dame-du-temps-jadis.odt
+ dame-du-temps-jadis.pdf
+ dasilva.txt
+&quot;Demande d&#39;autorisation de filmer pour les stagiaires.pdf&quot;
+ device4.c
+ <span class=" -Color -Color-Bold -Color-Bold-Red">discord-0.0.13.deb</span>
+ DiscoursFourmiRouge-21.01.2022.odt
+ DiscoursFourmiRouge-21.01.2022.pdf
+&#39;Divers 20_PET_4_dépôt.pdf.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dlang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Documents</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Dropbox</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">drop.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">DUAL_PHYSICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dvbern-tax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">dwhelper</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-DOWNLOAD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ECLIPSE-HERSCH-MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-mars</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eclipse-workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-BUGNON</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUNUM-GYMNASE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">edunum-vince</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EDUROAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ElectionsRenens</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">eLohnausweisSSK</span>/
+ EMPD-210.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants1.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">enfants3.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Enregistrements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EPFL-CertificatSalaire</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Green">EPFL.pcf</span>*
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eratosthene</span>/
+ errormsg.out
+ error.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ethiersteinman</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Eulalia</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">EVOTING-LaPoste</span>/
+ Exam-PHSY743.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Red">exam_project_shw2d.zip</span>
+ Failed.out
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FEM1D-Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FeteDesVoisins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FFTW</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Films</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FILMS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Flash</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FlashInformatique</span>/
+ flyer_formations_rectoverso.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">fontconfig</span>/
+ Formulaire_de_dépôt_d_amendements_7_LPrPCi_Keller.doc
+&#39;Formulaire dynamique infos dons 2.pdf&#39;
+&#39;Formulaire dynamique infos dons.pdf&#39;
+&#39;Formulaire dynamique infos dons Vincent Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FREEFEM</span>/
+ friedmann.c
+ FR-Marta.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FS</span>/
+ fu5BmNBsSWOyk0f13e4v_Lorem.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">FutureGenerationProcessorsMons2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GADGET-2</span>/
+ gafam.odt
+ gafam.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GALAXY</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gallet</span>/
+ gare-au-gorille.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GASPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GBS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd21.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd23.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd2.jpeg</span>
+ GCVD-Interventions-GroupeEP.odt
+ GCVD-Interventions-GroupeEP.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">gcvd.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Geekbench-5.0.4-Linux</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Geekbench-5.0.4-Linux.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gilles-Software</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">git-eclipse</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GIT-TOKENS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Goekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GOOGLE-DRIVE</span>/
+&#39;GPU computing 1(1).pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gross</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Gwenol</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYBE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">GYROKINETICS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hacking-romain-v2_files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HeatEquation</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HEP-cigares</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">hepl-miro.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Hersch2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPC500</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCCH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">hpcgam</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HPCGAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">HPCGAM.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">HUGUES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IANOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">i-gPgsXK6.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Images</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Image-To-XLSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">img</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">img.zip</span>
+&#39;Informations générales sur les élèves.numbers&#39;
+&#39;Informations générales sur les élèves.xls&#39;
+&#39;Informations importantes séances Salle Plénière_v1.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">initiative_TU.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">intel</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">INTEL-AI-WORKSHOP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">IntelProprio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Intel-Workshop</span>/
+ interpell_robots_j_sansonnens_fevrier.2017.docx
+ inter.txt
+ InterventionsPOP.odt
+ InterventionsPOP.pdf
+ intro1.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISC13</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ISS-TestBed</span>/
+ jeu_ppc.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KALI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kaplan-parallel</span>/
+ Keller_21223_signe.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">keyboard.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Kilian</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">KNL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LACROSSE-WS3650</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Lausanne-Signal</span>/
+ LettreCandidatureElections2022VincentKeller.odt
+ LettreCandidatureElections2022VincentKeller.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Leysin</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LHC</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Liberang</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">libmpimon</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIBREOFFICE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Libreoffice-templates</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Life</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIFE</span>/
+ Liste_comm_nommees_N°8_03.12.20.pdf
+&#39;Liste des commissions à organiser N° 10 - 16.12.21.doc&#39;
+&#39;Liste des objets et des commissions à nommer N°14 - 03.03.2022.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à nommer N° 8 - 03.12.20-1.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 14 - 01.04.21.doc&#39;
+&#39;Liste des objets et des commissions à organiser N° 15 - 17.03.22.doc&#39;
+&#39;Liste des objets et des commissions à organiser N16 - 31.03.2022.doc&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LIVRE-PHOTOS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LJMD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMDE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">LMH</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">LUC.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MACOSX</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MAGDA</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Magda Croqucinelle 2020-04-14 at 20.59.50.mp4&#39;</span>
+ mail-le-resto-txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Matlab</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MATLAB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">matrix-market-suite</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">mdlgb.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Med</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Merdier</span>/
+ METS-2021-2022-INT-sans-page-5-et-6.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">michoud.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Migros</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MIMICAv5</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MITgcm</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Modèles</span>/
+ Module03_ExoA_VincentKeller.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MODULO-GIT</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mons-08-10-2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">motion-files</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">moyensDOinfVD</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mpimon-module</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">MSINT-Enregistrement</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">mu_code</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Mum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Musique</span>/
+&#39;Names&amp;ProjectTitles_17Dec_HorairesPassage.xls&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NASA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NATAF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NBody</span>/
+ ndm-pres-2013.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NStCR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NuitDesMusées</span>/
+ numeriser_dvd_handbrake_JT.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.1_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">NVIDIA_CUDA-10.2_Samples</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">nvvp_workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OCTOPUS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">office.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Old-PDF</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDrive</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OneDriveSources</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">onedrive-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenFOAM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">OpenMP</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">ownCloud</span>/
+ p1.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">p1.png</span>
+ pahud.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">paie</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PaolaMalsot</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PAPI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Papier-Vince-Vicky</span>/
+&#39;Parallel and high-performance computing 2020 Students list.ods&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pasquarello</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PCPT-2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDF</span>/
+&#39;PDF de la candidature Keller.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PDM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PENELOPE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PERFMON</span>/
+ PIIS0140673620311806.pdf
+ pika.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PinardEtiquettes</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">pingpong</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pixum</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PlaceMarche2</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLANNER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Pleiades</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PLUMED</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PMB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Podcasts</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POPC++</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POP-CE-2022</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">pop-logo.jpg</span>
+ PortraitCourrierVK.docx
+ PortraitCourrierVK.odt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">poste.jpg</span>
+&#39;PostFinance - E-finance - Paiements.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">POWERDEVS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PRAFO</span>/
+ prises_de_position.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">PROJECTS-PHPC-2020</span>/
+ prv-e7ddfda7-585b-4c6d-b655-521247139344.pdf
+ PS-02.2020.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Public</span>/
+ pubring.gpg
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">python</span>/
+ Q-CE-VK2.pdf
+ Q-CE-VK.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">R</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Railway_network_Brazil.svg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ralf</span>/
+ RapportDesAffairesExterieures2021.pdf
+ RapportVerificateursComptes2017_v3.doc
+ RapportVerificateursComptes2018.doc
+&#39;R-CE Texte adopté par CE.docx.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Red">rechnung.zip</span>
+ Release.key
+&#39;Rentrée 2020 MAGDA.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">res.png</span>
+ resultat.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Revue-du-GCVD-2019.mp4</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">RStudio</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Salins</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamiGoekce</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SamRecipe</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Saxer</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">scangearmp-source-1.30-1.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">S-CE-VK.png</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SCITAS</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-code-mpi</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">scitas-hpcusers</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SeanceEcoute</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Signature</span>/
+&#39;SIHF-Calendar NL Regular Season Lausanne HC Lausanne HC (2018).ics&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SIMONE-LECTURE</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">skype-src</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SLURM</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">software</span>/
+ sortie.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">soulier.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SOURCES</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">spack</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SPH</span>/
+ standalone.xul
+&#39;Statistiques 2007 - 20212 et 2012 - 2017 EP.docx&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">SweetHome3D</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TAU</span>/
+&#39;taux à Renens, consel du 7.10.21-2.docx&#39;
+ TE1_Exercice1_Corrigé.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEAMVIEWER</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tech-report</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Téléchargements</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">temporary</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TensorFlow</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERATEC13-talk</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TERPSICHORE</span>/
+ test.dat
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TEST-HACKS</span>/
+ test.pdf
+ test.py
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Tests</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">test-train.jpg</span>
+&#39;Texte adopté 21_LEG_134.pdf - Divers Texte adopté par CE - ExMot INI Paccaud - 21_LEG_134 - publié.pdf.pdf&#39;
+ thawte_Primary_Root_CA.pem
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">THIMIO</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">thumbnail.jpg</span>
+ _toc.yml.vk
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TOR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TORRENT-DOWNLOADS</span>/
+ tp.docx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TP-Gratuits</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">TPGratuits-t.jpeg.jpeg</span>
+ tpg.txt
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Trains</span>/
+ tsr1.vlc
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">TSVV</span>/
+ TU-8.2.2022.pdf
+ TU-VK-01.02.2022.pdf
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">UNIL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">unnamed.png</span>
+ Untitled1.ipynb
+ Untitled2.ipynb
+ Untitled3.ipynb
+ Untitled.ipynb
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">URI</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Ursula</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">V4L-DVB</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vache_herens.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">vaud-cybersecurite-gimp.xcf</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vaudtax</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2010</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2011</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2012</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2013</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2014</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2015</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2015-1.2.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2016</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2016-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2017</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2017-1.2.2-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2018</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2018-1.0.1-production</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2019</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2019-1.1.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2019.tar.gz</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax2020</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VaudTax_2020-1.0.1-production-64bit</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">VaudTax_2020.tar.gz</span>
+ VDGC20220320-A8.xlsx
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vicky</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">video.mp4</span>
+ video.mp4.idx2
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Vidéos</span>/
+ Vierge.docx
+ Vierge.pages
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;Vincent Keller.jpg&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VIRTUALBOX</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;VirtualBox VMs&#39;</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Cyan">VirtualBoxVMs</span>@
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">VISIT</span>/
+&#39;V. KELLER.pdf&#39;
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Webcam_Pictures</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">&#39;WhatsApp Video 2020-03-27 at 20.51.13.mp4&#39;</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">wifi.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">workspace</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">WPA-EPFL</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Magenta">Xlh8DywTR16gOUvqnF7C_P1060367V2.jpg</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">XMR</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zetta</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">zoom_amd64.deb</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero</span>/
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96.2_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Red">Zotero-5.0.96_linux-x86_64.tar.bz2</span>
+ <span class=" -Color -Color-Bold -Color-Bold-Blue">Zotero_linux-x86_64</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">..</span></code> désigne le dossier parent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">..</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">vkeller</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p>Avec la commande <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> on peut retourner au dossier parent</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">vkeller</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">~</span></code> (alt+n) désigne le dossier personnel (home). Vous pouvez l’utiliser en combinaison pour des commandes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">~</span></code> lister le contenu du dossier personnel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> aller vers le dossier personnel</p></li>
+</ul>
+</div>
+<div class="section" id="afficher-le-contenu-d-un-fichier">
+<h2>Afficher le contenu d’un fichier<a class="headerlink" href="#afficher-le-contenu-d-un-fichier" title="Permalink to this headline">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cat</span></code> suivie du nom d’un fichier affiche son contenu. On va</p>
+<ul class="simple">
+<li><p>aller dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-à-cracker</span></code></p></li>
+<li><p>lister son contenu</p></li>
+<li><p>afficher le contenu du fichier <code class="docutils literal notranslate"><span class="pre">README.txt</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dossier</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">cracker</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;dossier-a-cracker&#39;
+/home
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">vkeller</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">README</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cat: README.txt: Aucun fichier ou dossier de ce type
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercices">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">¶</a></h2>
+<p>Pour cet exercice, n’utilisez pas l’interface graphique de votre ordinateur, mais seulement les commandes <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p>
+<p><strong>Afficher le contenu d’un fichier</strong><br />
+Un fichier appelé <code class="docutils literal notranslate"><span class="pre">ctf.txt</span></code> se trouve dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel/business/Avril</span></code>. Quel est son contenu ?</p>
+<p><strong>Créer un dossier</strong><br />
+Créez un dossier <code class="docutils literal notranslate"><span class="pre">math</span></code> dans le répertoire <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel</span></code>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/prog/fichiers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Vincent Keller<br/>
+    
+        &copy; droits d'auteur 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

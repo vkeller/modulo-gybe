@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/home/vkeller/.local/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 1085, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 552, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 846, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 748, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+mdp = input('Créez un mot de passe: ')
+n = 6
+while len(mdp) < n:
+    print('Nombre minimum de caractères:', n)
+    mdp = input('Créez un autre mot de passe: ')
+print('OK:', mdp)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-1-af53d547fc2c>[0m in [0;36m<module>[0;34m()[0m
+[0;32m----> 1[0;31m [0mmdp[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m'Créez un mot de passe: '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mn[0m [0;34m=[0m [0;36m6[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mwhile[0m [0mlen[0m[0;34m([0m[0mmdp[0m[0;34m)[0m [0;34m<[0m [0mn[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mprint[0m[0;34m([0m[0;34m'Nombre minimum de caractères:'[0m[0;34m,[0m [0mn[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mmdp[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m'Créez un autre mot de passe: '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    697[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    698[0m             raise StdinNotImplementedError(
+[0;32m--> 699[0;31m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    700[0m             )
+[1;32m    701[0m         return self._input_request(str(prompt),
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+

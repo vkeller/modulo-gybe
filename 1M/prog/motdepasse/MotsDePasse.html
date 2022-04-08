@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les mots de passe &#8212; Education Numérique Ecole de maturité</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Coder et décoder comme les Romains" href="../hacking/hacking-romain.html" />
+    <link rel="prev" title="Dictionnaires" href="../dictionnaires/Dictionnaires2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Bienvenue
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Programmation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro2/intro2.html">
+     Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dessinsanimes/dessins.html">
+     Les boucles : dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles1.html">
+     Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles2.html">
+     Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tableaux/Tableaux.html">
+     Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../files/LesFiles.html">
+     Piles et files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../arbres/LesArbres.html">
+     Arbres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dictionnaires/Dictionnaires2.html">
+     Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../hacking/hacking-romain.html">
+     Coder et décoder comme les Romains
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/1M/prog/motdepasse/MotsDePasse.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://vkeller.github.io/modulo-gybe/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/motdepasse/MotsDePasse.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectif">
+   Objectif
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#un-bon-mot-de-passe">
+   Un bon mot de passe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longueur-de-mot">
+   Longueur de mot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteres-speciaux">
+   Caractères spéciaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charger-une-liste">
+   Charger une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceder-aux-elements-d-une-liste">
+   Accéder aux éléments d’une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verifier-si-un-mot-est-dans-la-liste">
+   Vérifier si un mot est dans la liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tester-plusieurs-mots-de-passes">
+   Tester plusieurs mots de passes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zip-protege">
+   ZIP protégé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attaquer-en-force-brute">
+   Attaquer en force brute
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#craquer-le-fichier">
+   Craquer le fichier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#catch-the-flag">
+   Catch the flag
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ai-je-ete-pirate">
+   Ai-je été piraté ?
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Les mots de passe</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectif">
+   Objectif
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#un-bon-mot-de-passe">
+   Un bon mot de passe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longueur-de-mot">
+   Longueur de mot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteres-speciaux">
+   Caractères spéciaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charger-une-liste">
+   Charger une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceder-aux-elements-d-une-liste">
+   Accéder aux éléments d’une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verifier-si-un-mot-est-dans-la-liste">
+   Vérifier si un mot est dans la liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tester-plusieurs-mots-de-passes">
+   Tester plusieurs mots de passes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zip-protege">
+   ZIP protégé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attaquer-en-force-brute">
+   Attaquer en force brute
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#craquer-le-fichier">
+   Craquer le fichier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#catch-the-flag">
+   Catch the flag
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ai-je-ete-pirate">
+   Ai-je été piraté ?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="les-mots-de-passe">
+<h1>Les mots de passe<a class="headerlink" href="#les-mots-de-passe" title="Permalink to this headline">¶</a></h1>
+<p>Internet est un monde <strong>ouvert</strong> où tout est accessible. Il est donc très important de protéger ses données <strong>sensibles</strong> (tout ce qui touche à votre vie privée).</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/480px-Anonymous_emblem.svg.png" /></p>
+<p>Le mouvement hacktiviste <strong>Anonymous</strong>, se manifeste notamment sur Internet, agit de manière anonyme, généralement pour défendre la liberté d’expression.</p>
+<p>Télécharger: <code class="xref download docutils literal notranslate"><span class="pre">dosser-a-cracker.zip</span></code></p>
+<div class="section" id="objectif">
+<h2>Objectif<a class="headerlink" href="#objectif" title="Permalink to this headline">¶</a></h2>
+<p>Comprendre l’importance d’un bon mot de passe.<br />
+Il sert à protéger nos données privées dans les réseaux sociaux, sur notre téléphone portable, etc.</p>
+<p>Pourquoi ?</p>
+<ul class="simple">
+<li><p>le nom d’utilisateur peut être public</p></li>
+<li><p>le mot de passe <strong>DOIT</strong> être secret.</p></li>
+</ul>
+</div>
+<div class="section" id="un-bon-mot-de-passe">
+<h2>Un bon mot de passe<a class="headerlink" href="#un-bon-mot-de-passe" title="Permalink to this headline">¶</a></h2>
+<p>Il doit être difficile à trouver pour un être humain, mais surtout pour un ordinateur. Un <strong>bon mot de passe</strong> doit :</p>
+<ol class="simple">
+<li><p><strong>éviter les mots courants</strong> (nom, prénom, etc..)</p></li>
+<li><p><strong>être long</strong></p></li>
+<li><p><strong>éviter des répétitions</strong></p></li>
+<li><p>contenir des caractères <strong>variés</strong> (lettres, accents, chiffres, caractères spéciaux)</p></li>
+</ol>
+<p>Malheureusement, beaucoup de personnes ont encore des mots de passe trop simple</p>
+</div>
+<div class="section" id="longueur-de-mot">
+<h2>Longueur de mot<a class="headerlink" href="#longueur-de-mot" title="Permalink to this headline">¶</a></h2>
+<p>Avec la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> nous pouvons tester la longuer d’un mot de passe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un mot de passe: &#39;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">mdp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nombre minimum de caractères:&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un autre mot de passe: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;OK:&#39;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-1-af53d547fc2c&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un mot de passe: &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">mdp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nombre minimum de caractères:&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un autre mot de passe: &#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">697</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">699</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Augmentez la longueur à 10 et refaites un test.</p>
+</div>
+<div class="section" id="caracteres-speciaux">
+<h2>Caractères spéciaux<a class="headerlink" href="#caracteres-speciaux" title="Permalink to this headline">¶</a></h2>
+<p>Pour tester si un mot de passe contient un caractère spécial, nous définissons une chaîne qui contient tous les caractères spéciaux possibles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">special</span> <span class="o">=</span> <span class="s1">&#39;+&quot;*ç%&amp;/()=?,.-;:_$&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">in</span></code> permet de tester si un caractère est parmi les caractères spéciaux.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;$&#39;</span> <span class="ow">in</span> <span class="n">special</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour tester si un mot contient des caractères spéciaux, nous devons tester chaque lettre dans une boucle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;el$a&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">special</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>e False
+l False
+$ True
+a False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une autre méthode est d’utiliser l’intersection des deux ensembles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mdp</span> <span class="o">=</span> <span class="s1">&#39;el$a.car+ier&#39;</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">mdp</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">special</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;$&#39;, &#39;+&#39;, &#39;.&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dans la boucle suivante, nous vérifions si le mot de passe contient au minimum un caractère spécial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un mot de passe: &#39;</span><span class="p">)</span>
+<span class="n">special</span> <span class="o">=</span> <span class="s1">&#39;+&quot;*ç%&amp;/()=?,.-;:_$&#39;</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">mdp</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">special</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ne contient pas de caractère spécial&#39;</span><span class="p">)</span>
+    <span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Créez un autre mot de passe: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;OK:&#39;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Créez un mot de passe:  tina
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ne contient pas de caractère spécial
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Créez un autre mot de passe:  tina$+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OK: tina$+
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Ajoutez les accolades <code class="docutils literal notranslate"><span class="pre">[]</span></code>, les crochets <code class="docutils literal notranslate"><span class="pre">{}</span></code> et les chevrons <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> aux caractères spéciaux et refaites un test.</p>
+</div>
+<div class="section" id="charger-une-liste">
+<h2>Charger une liste<a class="headerlink" href="#charger-une-liste" title="Permalink to this headline">¶</a></h2>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">passwords.txt</span></code> contient les <strong>20’000 mots de passes</strong> les plus utilisés sur l’Internet francophone. Nous allons l’utiliser pour vérifier la qualité d’un mot de passe.</p>
+<p>Déplaçons nous dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dossier</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">cracker</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’instruction Python suivante permet de stocker dans la <strong>liste</strong> <code class="docutils literal notranslate"><span class="pre">passwords</span></code> les 20’000 mots de passes du fichier <code class="docutils literal notranslate"><span class="pre">passwords.txt</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">passwords</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;passwords.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Avec la fonction <code class="docutils literal notranslate"><span class="pre">type</span></code> derminez le type de la variable <strong>passwords</strong> et avec la fonction <code class="docutils literal notranslate"><span class="pre">len</span></code> sa longueur.</p>
+</div>
+<div class="section" id="acceder-aux-elements-d-une-liste">
+<h2>Accéder aux éléments d’une liste<a class="headerlink" href="#acceder-aux-elements-d-une-liste" title="Permalink to this headline">¶</a></h2>
+<p>L’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[m:n]</span></code> permet d’accéder à des sous ensembles</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[m:n]</span></code> de m jusqu’à (n-1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[:n]</span></code> du début jusqu’à (n-1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[m:]</span></code> de m jusqu’à la fin</p></li>
+</ul>
+<p>Un <strong>index negatif</strong> compte depuis la fin</p>
+<p><strong>Exercice</strong><br />
+Avec les opérateurs de tranche affichez</p>
+<ul class="simple">
+<li><p>les 5 premiers mots de passe</p></li>
+<li><p>le 1000ème mot de passe</p></li>
+<li><p>les mots de passes entre 10’000 et 10’005</p></li>
+<li><p>l’avant-dernier mot de passe</p></li>
+</ul>
+</div>
+<div class="section" id="verifier-si-un-mot-est-dans-la-liste">
+<h2>Vérifier si un mot est dans la liste<a class="headerlink" href="#verifier-si-un-mot-est-dans-la-liste" title="Permalink to this headline">¶</a></h2>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">in</span></code> permet de verifier si un mot est dans une liste.</p>
+<p>Est-ce que le mot de passe <code class="docutils literal notranslate"><span class="pre">'iloveyou'</span></code> est dans la liste <code class="docutils literal notranslate"><span class="pre">passwords</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;iloveyou&#39;</span> <span class="ow">in</span> <span class="n">passwords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Est-ce que le mode de passe <code class="docutils literal notranslate"><span class="pre">'tiamo'</span></code> est dans la liste <code class="docutils literal notranslate"><span class="pre">passwords</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;tiamo&#39;</span> <span class="ow">in</span> <span class="n">passwords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong></p>
+<ul class="simple">
+<li><p>Vérifiez que le mot de passe <code class="docutils literal notranslate"><span class="pre">cristiano7</span></code> est dans la liste.</p></li>
+<li><p>Et le mot de passe <code class="docutils literal notranslate"><span class="pre">cristiano8</span></code> ?</p></li>
+</ul>
+</div>
+<div class="section" id="tester-plusieurs-mots-de-passes">
+<h2>Tester plusieurs mots de passes<a class="headerlink" href="#tester-plusieurs-mots-de-passes" title="Permalink to this headline">¶</a></h2>
+<p>Avec une boucle, on peut tester n’importe quel mot de passe contre la liste <code class="docutils literal notranslate"><span class="pre">passwords</span></code>.</p>
+<p>Testez vos mots de passe!<br />
+Pour quitter la boucle, appuyez tout simplement sur <strong>Retour</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Entrez un mot de passe&#39;</span><span class="p">)</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span> <span class="ow">in</span> <span class="n">passwords</span><span class="p">)</span>
+    <span class="n">mot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Entrez un mot de passe:&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez un mot de passe Vincent
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez un mot de passe: raphael
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez un mot de passe: Raphael
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez un mot de passe: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="zip-protege">
+<h2>ZIP protégé<a class="headerlink" href="#zip-protege" title="Permalink to this headline">¶</a></h2>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">confidentiel/mails_FBI.zip</span></code> a été protégé par un mot de passe. Si vous tentez d’extraire l’archive, vous devez fournir un mot de passe.</p>
+<p>Ces 4 lignes vont tester le mot de passe <code class="docutils literal notranslate"><span class="pre">'jetaime'</span></code> sur l’archive. Cela va créer une erreur de type :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Bad</span> <span class="n">password</span> <span class="k">for</span> <span class="n">file</span> <span class="s1">&#39;original/mails_FBI.txt&#39;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+<span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;confidentiel/mails_FBI.zip&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+   <span class="n">mdp</span> <span class="o">=</span> <span class="s1">&#39;jetaime&#39;</span>
+    
+   <span class="n">file</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">pwd</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mdp</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="attaquer-en-force-brute">
+<h2>Attaquer en force brute<a class="headerlink" href="#attaquer-en-force-brute" title="Permalink to this headline">¶</a></h2>
+<p>A partir de maintenant, on dispose de tous les outils pour attaquer en force brute l’archive <code class="docutils literal notranslate"><span class="pre">mails_FBI.zip</span></code>.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">check_ret(mdp,</span> <span class="pre">archive)</span></code> va tester un mot de passe <code class="docutils literal notranslate"><span class="pre">mdp</span></code> sur l’archive protégée <code class="docutils literal notranslate"><span class="pre">archive</span></code> et retourner la valeur <code class="docutils literal notranslate"><span class="pre">0</span></code> si le mot de passe est le bon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="k">def</span> <span class="nf">check_ret</span><span class="p">(</span><span class="n">mdp</span><span class="p">,</span> <span class="n">archive</span><span class="p">):</span>
+    <span class="n">rc</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;unzip&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span><span class="s1">&#39;-q&#39;</span><span class="p">,</span> <span class="s1">&#39;-P&#39;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">,</span><span class="n">archive</span><span class="p">])</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+    <span class="n">rc</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">returncode</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">rc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il est maintenant possible de tester tous les mots de passe de la liste sur une archive protégée par un mot de passe. Le fichier se trouve au chemin <code class="docutils literal notranslate"><span class="pre">confidentiel/mails_FBI.zip</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mdp</span> <span class="ow">in</span> <span class="n">passwords</span><span class="p">:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">check_ret</span><span class="p">(</span><span class="n">mdp</span><span class="p">,</span><span class="s1">&#39;confidentiel/mails_FBI.zip&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ret</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Le mot de passe est :&#39;</span><span class="p">,</span><span class="n">mdp</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’algorithme est le suivant :</p>
+<p>Pour tous les mots de passes <code class="docutils literal notranslate"><span class="pre">mdp</span></code> de la liste <code class="docutils literal notranslate"><span class="pre">passwords</span></code> :</p>
+<ul class="simple">
+<li><p>Tester si le mot de passe est correct</p></li>
+<li><p><strong>si</strong> le mot de passe est correct</p></li>
+<li><p><strong>alors</strong> le mot de passe a été trouvé, sortir de la boucle</p></li>
+<li><p><strong>sinon</strong> aller au mot de passe suivant</p></li>
+</ul>
+</div>
+<div class="section" id="craquer-le-fichier">
+<h2>Craquer le fichier<a class="headerlink" href="#craquer-le-fichier" title="Permalink to this headline">¶</a></h2>
+<p>A l’aide de la fonction vue plus haut, extrayez l’archive avec le mot de passe que vous avez trouvé. Dans le Finder, déplacez-vous dans le dossier <code class="docutils literal notranslate"><span class="pre">/dossier-a-cracker/confidentiel</span></code> et double-cliquez sur l’archive <code class="docutils literal notranslate"><span class="pre">mails_FBI.zip</span></code></p>
+<p>On peut aussi extraire l’archive avec une fonction Python.</p>
+<p>Remplacez la valeur de la variable <code class="docutils literal notranslate"><span class="pre">mdp</span> <span class="pre">=</span> <span class="pre">'x'</span></code> par le mot de passe que vous venez de trouver.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+<span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;confidentiel/mails_FBI.zip&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+   <span class="n">mdp</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span> 
+   <span class="n">file</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">pwd</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">mdp</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="catch-the-flag">
+<h2>Catch the flag<a class="headerlink" href="#catch-the-flag" title="Permalink to this headline">¶</a></h2>
+<p>Dans le monde du hacking, il y a un jeu qui est souvent utilisé par les entreprises pour tester leur infrastructure. Ce jeu de guerre cybernétique, appelé <a class="reference external" href="https://fr.wikipedia.org/wiki/Test_d%27intrusion">catch the flag</a> (capture du drapeau) dans lequel deux équipes s’affrontent: l’une pour protéger le drapeau, l’autre pour le capturer.</p>
+<p>Un autre fichier archive ZIP a été caché dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker</span></code> et protégé par un mot de passe.</p>
+<p><strong>Exercice</strong><br />
+Retrouvez le fichier avec les commandes <code class="docutils literal notranslate"><span class="pre">ls</span></code> et <code class="docutils literal notranslate"><span class="pre">cd</span></code> et utilisez les fonctions décrites plus haut pour le décrypter</p>
+</div>
+<div class="section" id="ai-je-ete-pirate">
+<h2>Ai-je été piraté ?<a class="headerlink" href="#ai-je-ete-pirate" title="Permalink to this headline">¶</a></h2>
+<p>Nous avons utilisé la <strong>force brute</strong> pour tester <strong>un seul mot de passe</strong> contre une liste définie. Les crackers du monde entier utilisent des dictionnaires bien plus grands contre des adresses mails, des comptes, etc.. que vous avez laissé ça et là au gré de vos interactions avec Internet. Ces listes sont ensuite vendues et utilisées à mauvais escient.</p>
+<p>Il existe un site web qui vérifie si votre adresse mail a été piratée : <a class="reference external" href="https://haveibeenpwned.com">Ai-je été piraté ?</a></p>
+<p><strong>Exercice</strong><br />
+Testez vos adresses mails pour voir si elles ont été piratés.<br />
+Si elles le sont, changez votre mot de passe.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/prog/motdepasse"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../dictionnaires/Dictionnaires2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Dictionnaires</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../hacking/hacking-romain.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Coder et décoder comme les Romains</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Vincent Keller<br/>
+    
+        &copy; droits d'auteur 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
