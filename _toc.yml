@@ -17,6 +17,7 @@ parts:
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
+      - file: 1M/prog/types/Types
       - file: 1M/prog/tableaux/Tableaux
       - file: 1M/prog/files/LesFiles
       - file: 1M/prog/arbres/LesArbres
