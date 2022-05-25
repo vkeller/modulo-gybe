@@ -13,6 +13,7 @@ parts:
       sections:
       - file: 1M/prog/intro1/intro1
       - file: 1M/prog/intro2/intro2
+      - file: 1M/prog/conditions/Introduction
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
@@ -22,6 +23,7 @@ parts:
       - file: 1M/prog/dictionnaires/Dictionnaires2
       - file: 1M/prog/motdepasse/MotsDePasse
       - file: 1M/prog/hacking/hacking-romain
+      - file: 1M/prog/fichiers/SystemeDeFichiers
 
   - caption: 2ème année
     chapters:
