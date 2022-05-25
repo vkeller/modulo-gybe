@@ -121,8 +121,18 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="1M/prog/intro1/intro1.html">
+     Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="1M/prog/intro2/intro2.html">
      Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1M/prog/conditions/Introduction.html">
+     Les tests conditionnels
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,6 +178,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="1M/prog/hacking/hacking-romain.html">
      Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1M/prog/fichiers/SystemeDeFichiers.html">
+     Le système de fichiers
     </a>
    </li>
   </ul>
@@ -271,6 +286,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-du-site-modulo-gybe-sur-githubpages">
+   Création du site modulo-gybe (sur githubpages)
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -283,6 +311,19 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-du-site-modulo-gybe-sur-githubpages">
+   Création du site modulo-gybe (sur githubpages)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -292,6 +333,20 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="modulo-gybe">
 <h1>modulo-gybe<a class="headerlink" href="#modulo-gybe" title="Permalink to this headline">¶</a></h1>
 <p>Repo pour les séquences pédagogiques de l’éducation numérique (MODULO) de Vincent Keller</p>
+<div class="section" id="creation-du-site-modulo-gybe-sur-githubpages">
+<h2>Création du site modulo-gybe (sur githubpages)<a class="headerlink" href="#creation-du-site-modulo-gybe-sur-githubpages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>mettre à jour le repo avec les modifs</p></li>
+<li><p>mettre à jour la table des matières (_toc.yml)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;blabla&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+<li><p>construire le jupyter book localement (cela prend du temps) : <code class="docutils literal notranslate"><span class="pre">jupyter-book</span>&#160; <span class="pre">build</span> <span class="pre">.</span></code> depuis la racine</p></li>
+<li><p>vérifier localement qu’il est correct <code class="docutils literal notranslate"><span class="pre">firefox</span> <span class="pre">_build/html/index.html</span></code></p></li>
+<li><p>uploader le résultat sur ghpages: <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p></li>
+<li><p>attendre 5 minutes et vérifier le résultat</p></li>
+<li><p>détruire le répertoire complet <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-Rf</span> <span class="pre">_build</span></code></p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

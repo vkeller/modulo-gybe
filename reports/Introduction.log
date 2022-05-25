@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "/home/vkeller/.local/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 1085, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 552, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 846, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/vkeller/.local/lib/python3.7/site-packages/nbclient/client.py", line 748, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def quizz_info():
+    r = input("Qui est le meilleur prof: \n 1 : M. Keller \n 2: un autre ... \n Votre réponse:")
+    if r == '1':
+        print("Bonne réponse")
+    else:
+        print("Mauvaise réponse")
+
+def quizz_philo():
+    r = input("quizz philo")
+    
+
+print("Quizz simple")
+print("Jouons ? C'est parti...")
+reponse = ''
+while reponse != 'q':
+    reponse = input("Choisissez votre question: \n 1: informatique \n 2: philo \n Votre réponse ('q' pour quitter):")
+    if (reponse == '1'):
+        quizz_info()
+    elif (reponse == '2'):
+        quizz_philo()
+    elif (reponse == 'q'):
+        print("Vous avez décidé de quitter")
+    else:
+        print(reponse,"invalide. Tapez 1 ou 2 ou q pour quitter")
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-1-5e4bd7b5e2f5>[0m in [0;36m<module>[0;34m()[0m
+[1;32m     14[0m [0mreponse[0m [0;34m=[0m [0;34m''[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     15[0m [0;32mwhile[0m [0mreponse[0m [0;34m!=[0m [0;34m'q'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 16[0;31m     [0mreponse[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m"Choisissez votre question: \n 1: informatique \n 2: philo \n Votre réponse ('q' pour quitter):"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     17[0m     [0;32mif[0m [0;34m([0m[0mreponse[0m [0;34m==[0m [0;34m'1'[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     18[0m         [0mquizz_info[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3/dist-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    697[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    698[0m             raise StdinNotImplementedError(
+[0;32m--> 699[0;31m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    700[0m             )
+[1;32m    701[0m         return self._input_request(str(prompt),
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+
