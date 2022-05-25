@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Les boucles : dessins animés &#8212; Education Numérique Ecole de maturité</title>
+    <title>Notions de types &#8212; Education Numérique Ecole de maturité</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Boucles" href="../boucles/boucles1.html" />
-    <link rel="prev" title="Les tests conditionnels" href="../conditions/Introduction.html" />
+    <link rel="next" title="Tableaux" href="../tableaux/Tableaux.html" />
+    <link rel="prev" title="Dessiner des spirales" href="../boucles/boucles2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -137,8 +137,8 @@
      Les tests conditionnels
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dessinsanimes/dessins.html">
      Les boucles : dessins animés
     </a>
    </li>
@@ -152,9 +152,9 @@
      Dessiner des spirales
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../types/Types.html">
-     Types de variables et communication avec l’ordinateur
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Notions de types
     </a>
    </li>
    <li class="toctree-l2">
@@ -252,7 +252,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/1M/prog/dessinsanimes/dessins.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/1M/prog/types/Types.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -272,7 +272,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/dessinsanimes/dessins.html&body=Your%20issue%20content%20here."><button
+            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/types/Types.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -299,29 +299,26 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-dessin-anime">
-   Définition : dessin animé
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histoire-de-l-animation-et-des-films">
-   Histoire de l’animation et des films
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-pour-les-dessins-animes">
-   Python pour les dessins animés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notre-dessin-anime">
-   Notre dessin animé
+  <a class="reference internal nav-link" href="#communiquer-avec-l-ordinateur">
+   Communiquer avec l’ordinateur
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+   Exercice 1
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reponse">
+     Réponse
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2">
@@ -329,8 +326,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-avance-en-utilisant-une-boucle">
-   Exercice 3 (avancé en utilisant une boucle)
+  <a class="reference internal nav-link" href="#passer-d-un-type-a-l-autre-le-casting">
+   Passer d’un type à l’autre : le casting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
   </a>
  </li>
 </ul>
@@ -343,7 +355,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Les boucles : dessins animés</h1>
+                <h1>Notions de types</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -354,29 +366,26 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-dessin-anime">
-   Définition : dessin animé
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histoire-de-l-animation-et-des-films">
-   Histoire de l’animation et des films
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-pour-les-dessins-animes">
-   Python pour les dessins animés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notre-dessin-anime">
-   Notre dessin animé
+  <a class="reference internal nav-link" href="#communiquer-avec-l-ordinateur">
+   Communiquer avec l’ordinateur
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+   Exercice 1
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reponse">
+     Réponse
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2">
@@ -384,8 +393,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-avance-en-utilisant-une-boucle">
-   Exercice 3 (avancé en utilisant une boucle)
+  <a class="reference internal nav-link" href="#passer-d-un-type-a-l-autre-le-casting">
+   Passer d’un type à l’autre : le casting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
   </a>
  </li>
 </ul>
@@ -397,77 +421,107 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="les-boucles-dessins-animes">
-<h1>Les boucles : dessins animés<a class="headerlink" href="#les-boucles-dessins-animes" title="Permalink to this headline">¶</a></h1>
-<p><strong>Objectifs</strong> Utiliser la tortue pour créer un dessin animé.</p>
-<div class="section" id="definition-dessin-anime">
-<h2>Définition : dessin animé<a class="headerlink" href="#definition-dessin-anime" title="Permalink to this headline">¶</a></h2>
-<p>Film réalisé à partir d’une série de dessins qui décomposent les mouvements des personnages et qui, projetés, donnent l’impression d’un mouvement continu.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="notions-de-types">
+<h1>Notions de types<a class="headerlink" href="#notions-de-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Jusqu’à présent, nous avons écrit des programmes que l’on exécutait. Pour modifier la valeur d’une variable, nous la changions dans le programme, et nous exécutions à nouveau le programme.
+Exemple 1</p>
+<p>Concaténer de la variable a qui vaut “Bonjour” par la variable b qui vaut ” Caroline” et affichage du résultat dans la variable c:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; Caroline&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="histoire-de-l-animation-et-des-films">
-<h2>Histoire de l’animation et des films<a class="headerlink" href="#histoire-de-l-animation-et-des-films" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Première photographie : 1827 «Point de vue du Gras» Nicéphore Nièpce, héliographie («écriture par le soleil») prise depuis le premier étage de son atelier.</p></li>
-<li><p>Premier film («kinétographe») 1895 : «La sortie de l’usine Lumières à Lyon», les Frères Lumières</p></li>
-<li><p>Format argentique «standard» : 35 millimètres. 24 images par seconde. Sons synchronisés.</p></li>
-<li><p>Premiers dessins animés : 1892, «Pantomimes lumineuses» d’Emile Reynaud.</p></li>
-<li><p>Premiers dessins animés informatisés : 1980. Animation vectorielle, images de synthèse, animation 2D, animation 3D.</p></li>
-</ul>
+<p>Pour modifier ce programme avec b = ” Jean”, il fallait modifier le programme :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; Jean&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="python-pour-les-dessins-animes">
-<h2>Python pour les dessins animés<a class="headerlink" href="#python-pour-les-dessins-animes" title="Permalink to this headline">¶</a></h2>
-<p>Nous allons procéder en deux étapes :</p>
-<ol class="simple">
-<li><p>définition du dessin animé (CE QUE NOUS VOULONS COMME RESULTAT)</p></li>
-<li><p>construction des sous-éléments de l’animation</p></li>
-</ol>
+<p>Ce n’est pas très interactif !</p>
+<p>Mais l’ordinateur sait nous parler avec la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
 </div>
-<div class="section" id="notre-dessin-anime">
-<h2>Notre dessin animé<a class="headerlink" href="#notre-dessin-anime" title="Permalink to this headline">¶</a></h2>
-<p>Notre dessin animé sera simple. Voici l’algorithme :</p>
-<ol class="simple">
-<li><p>on dessine un carré de 80 pixels de côté,</p></li>
-<li><p>on attend un moment</p></li>
-<li><p>on l’efface,</p></li>
-<li><p>on déplace la tortue à droite de 2 pixels</p></li>
-<li><p>on dessine un carré de 80 pixels de côté</p></li>
-<li><p>et on recommence…</p></li>
-</ol>
-<p>l’impression sera que le carré glisse vers la droite.</p>
+<div class="section" id="communiquer-avec-l-ordinateur">
+<h2>Communiquer avec l’ordinateur<a class="headerlink" href="#communiquer-avec-l-ordinateur" title="Permalink to this headline">¶</a></h2>
+<p>Pour communiquer avec l’ordinateur, on utilise la fonction input() . Cette fonction place la valeur entrée par l’utilisateur du programme (vous !) dans une variable de type chaîne de caractères:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Déjà plus interactif ! Mais pas très causant. On peut donc placer un texte avant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre prénom &quot;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ici on travaille avec des variable de type chaînes de caractères (des STRINGS) comme “Bonjour” entre guillemets.</p>
+<p>Il est possible de simplifier le programme puisque la variable c ne sert à rien :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre prénom &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">¶</a></h2>
-<p>Construction des sous-éléments du dessin animé.</p>
-<p>Définissez deux fonctions :</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">carre()</span></code> qui dessine un carré de 80 pixels de côté</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attendEtAvance()</span></code> qui attend 0.5 secondes et avance de 2 pixels</p></li>
-</ol>
-<p>Quelques fonctions utiles pour la fonction attendreEtAvancer() :</p>
-<p><code class="docutils literal notranslate"><span class="pre">t.penup()</span></code> : pour lever le crayon
-<code class="docutils literal notranslate"><span class="pre">t.pendown()</span></code> : pour abaisser le crayon
-<code class="docutils literal notranslate"><span class="pre">t.clear()</span></code> : pour effacer ce qui a été dessiné</p>
-<p>Une fonction importante pour «dormir» une seconde :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">¶</a></h2>
+<p>Est-ce que le programme suivant fonctionne (calcule votre âge dans 10 ans) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre âge &quot;</span><span class="p">)</span>
+<span class="n">age10</span> <span class="o">=</span> <span class="n">age</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En 2032 vous aurez &quot;</span><span class="o">+</span><span class="n">age10</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="section" id="reponse">
+<h3>Réponse<a class="headerlink" href="#reponse" title="Permalink to this headline">¶</a></h3>
+<p>On essaie de concaténer un nombre (age10) avec une chaîne de caractères (“En 2032 vous aurez”)</p>
+<p>On peut vérifier le type de donnée dans thonny avec l’onglet Inspecteur d’objets  ou avec la fonction type() dans la console</p>
 </div>
 </div>
 <div class="section" id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">¶</a></h2>
-<p>Ecrivez un programme qui anime le carré en faisant appel aux diverses fonctions crées plus haut</p>
-<p><strong>Remarque:</strong> on peut accélérer la tortue avec la <strong>méthode</strong> (qui est une fonction appliquée à un objet) <code class="docutils literal notranslate"><span class="pre">t.speed(vitesse)</span></code> où l’argument <code class="docutils literal notranslate"><span class="pre">vitesse</span></code> est un chiffre très élevé (par exemple 500).</p>
-</div>
-<div class="section" id="exercice-3-avance-en-utilisant-une-boucle">
-<h2>Exercice 3 (avancé en utilisant une boucle)<a class="headerlink" href="#exercice-3-avance-en-utilisant-une-boucle" title="Permalink to this headline">¶</a></h2>
-<p>Une boucle ce n’est rien d’autre qu’une itération de plusieurs opérations. On la déclare de la façon suivante :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
-   <span class="n">operation</span> <span class="mi">1</span>
-   <span class="n">operation</span> <span class="mi">2</span>
-   <span class="n">etc</span><span class="o">..</span>
+<p>Quel est le type de :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">1.234</span>
+<span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">e</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">]</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
 </pre></div>
 </div>
-<p>est une boucle qui fera les opérations indentées à droite 10 fois.</p>
+</div>
+<div class="section" id="passer-d-un-type-a-l-autre-le-casting">
+<h2>Passer d’un type à l’autre : le casting<a class="headerlink" href="#passer-d-un-type-a-l-autre-le-casting" title="Permalink to this headline">¶</a></h2>
+<p>Python interdit de manipuler des données de type différentes.
+Passer d’un type à l’autre : Casting</p>
+<p>Il est possible de manipuler des données d’un type vers un autre. C’est le casting :</p>
+<ul class="simple">
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">str()</span></code> transforme n’importe quelle variable en type chaîne de caractères (string)</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> transforme n’importe quelle variable en type entier (int)</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">float()</span></code> transforme n’importe quelle variable en type à virgule flottante (float)</p></li>
+</ul>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">¶</a></h2>
+<p>Transformer le code de l’âge pour qu’il fonctionne :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre âge &quot;</span><span class="p">)</span>
+<span class="n">age10</span> <span class="o">=</span> <span class="n">age</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En 2032 vous aurez &quot;</span><span class="o">+</span><span class="n">age10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">¶</a></h2>
+<p>Programmez une calculette qui multiplie deux nombres entrés par l’utilisateur avec la fonction input()</p>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">¶</a></h2>
+<p>Est-ce que votre calculette fonctionne avec des chiffres à virgule (float) ? Que faut-il modifier au programme pour qu’il accepte les nombres à virgule ?</p>
 </div>
 </div>
 
@@ -484,7 +538,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1M/prog/dessinsanimes"
+            path: "./1M/prog/types"
         },
         predefinedOutput: true
     }
@@ -496,17 +550,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../conditions/Introduction.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../boucles/boucles2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Les tests conditionnels</p>
+            <p class="prev-next-title">Dessiner des spirales</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../boucles/boucles1.html" title="next page">
+    <a class='right-next' id="next-link" href="../tableaux/Tableaux.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Boucles</p>
+        <p class="prev-next-title">Tableaux</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
