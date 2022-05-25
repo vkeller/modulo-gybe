@@ -11,3 +11,4 @@ Repo pour les séquences pédagogiques de l'éducation numérique (MODULO) de Vi
 - vérifier localement qu'il est correct `firefox _build/html/index.html`
 - uploader le résultat sur ghpages: `ghp-import -n -p -f _build/html`
 - attendre 5 minutes et vérifier le résultat
+- détruire le répertoire complet `rm -Rf _build`
