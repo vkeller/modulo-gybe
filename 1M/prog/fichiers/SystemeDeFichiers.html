@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le système de fichiers &#8212; Education Numérique Ecole de maturité</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +19,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Algorithmique" href="../../../2M/algo/index.html" />
+    <link rel="next" title="Architecture" href="../../architecture/index.html" />
     <link rel="prev" title="Coder et décoder comme les Romains" href="../hacking/hacking-romain.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -60,7 +60,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -69,9 +83,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -86,30 +101,36 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../index.html">
-   Bienvenue
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   1ère année
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../algo/index.html">
-   Algorithmique
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../installation/installation.html">
-   Environnement de développement
+  <a class="reference internal" href="../../representation/index.html">
+   Représentation des données
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -194,6 +215,16 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -214,90 +245,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/1M/prog/fichiers/SystemeDeFichiers.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
-                    class="fab fa-github"></i>dépôt</button></a>
-        <a class="issues-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/fichiers/SystemeDeFichiers.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-        title="Mode plein écran"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/fichiers/SystemeDeFichiers.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/prog/fichiers/SystemeDeFichiers.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectifs">
    Objectifs
@@ -345,12 +466,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Le système de fichiers</h1>
@@ -359,7 +479,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Contenu </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -414,16 +534,17 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="le-systeme-de-fichiers">
-<h1>Le système de fichiers<a class="headerlink" href="#le-systeme-de-fichiers" title="Permalink to this headline">¶</a></h1>
+<h1>Le système de fichiers<a class="headerlink" href="#le-systeme-de-fichiers" title="Permalink to this headline">#</a></h1>
 <p>On appelle <strong>système de fichier</strong> l’organisation hierarchique des fichiers au sein d’un <strong>système d’exploitation</strong>.</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baobab_and_elephant%2C_Tanzania.jpg/640px-Baobab_and_elephant%2C_Tanzania.jpg" /></p>
 <p>Télécharger: <a class="reference download internal" download="" href="../../../_downloads/64ba076650de00b5fe8d0b8fb991717c/dossier-a-cracker.zip"><code class="xref download docutils literal notranslate"><span class="pre">dosser-a-cracker.zip</span></code></a></p>
 <div class="section" id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">¶</a></h2>
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Comprendre le système de fichiers UNIX (MacOS X)</p></li>
 <li><p>Se déplacer dans un système de fichiers</p></li>
@@ -431,7 +552,7 @@
 </ul>
 </div>
 <div class="section" id="fichier-informatique">
-<h2>Fichier informatique<a class="headerlink" href="#fichier-informatique" title="Permalink to this headline">¶</a></h2>
+<h2>Fichier informatique<a class="headerlink" href="#fichier-informatique" title="Permalink to this headline">#</a></h2>
 <p>Un fichier informatique est un ensemble de données numériques réunies sous un même nom, enregistrées sur un support de stockage permanent. On peut distinguer différents types de fichies tel que:</p>
 <ul class="simple">
 <li><p>programmes</p></li>
@@ -440,12 +561,12 @@
 </ul>
 </div>
 <div class="section" id="dossiers">
-<h2>Dossiers<a class="headerlink" href="#dossiers" title="Permalink to this headline">¶</a></h2>
+<h2>Dossiers<a class="headerlink" href="#dossiers" title="Permalink to this headline">#</a></h2>
 <p>Dans un ordinateur on a vite des milliers de fichiers. Nous utilisons des dossiers pour les organiser.
 Un <strong>dossier</strong> est un contenant de fichiers et de sous-dossiers.</p>
 </div>
 <div class="section" id="structure-en-arbre">
-<h2>Structure en arbre<a class="headerlink" href="#structure-en-arbre" title="Permalink to this headline">¶</a></h2>
+<h2>Structure en arbre<a class="headerlink" href="#structure-en-arbre" title="Permalink to this headline">#</a></h2>
 <p>Les ordinateurs organisent les dossiers et fichiers sous forme d’<strong>arbre</strong>, où</p>
 <ul class="simple">
 <li><p>un dossier est un <strong>noeud</strong></p></li>
@@ -460,7 +581,7 @@ Voici une fenêtre du <strong>gestionnaire des fichiers</strong>.</p>
 <p>Chaque colonne représente un niveau dans la structure hiérarchique du système des fichiers.</p>
 </div>
 <div class="section" id="se-deplacer">
-<h2>Se déplacer<a class="headerlink" href="#se-deplacer" title="Permalink to this headline">¶</a></h2>
+<h2>Se déplacer<a class="headerlink" href="#se-deplacer" title="Permalink to this headline">#</a></h2>
 <p>La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (print working directory) affiche le chemin du répertoire où nous nous trouvons.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -523,10 +644,10 @@ Voici une fenêtre du <strong>gestionnaire des fichiers</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">bin</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">home</span>/            <span class=" -Color -Color-Bold -Color-Bold-Blue">lib64</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">opt</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">sbin</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
-<span class=" -Color -Color-Bold -Color-Bold-Blue">boot</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img</span>@      <span class=" -Color -Color-Bold -Color-Bold-Blue">lost+found</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">proc</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">srv</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">var</span>/
-<span class=" -Color -Color-Bold -Color-Bold-Blue">dev</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img.old</span>@  <span class=" -Color -Color-Bold -Color-Bold-Blue">media</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">root</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">sys</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Blue">etc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">lib</span>/             <span class=" -Color -Color-Bold -Color-Bold-Blue">mnt</span>/         <span class=" -Color -Color-Bold -Color-Bold-Blue">run</span>/   <span class=" -Color -Color-Black -Color-Black-BGGreen">tmp</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz.old</span>@
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">bin</span>@   <span class=" -Color -Color-Bold -Color-Bold-Blue">home</span>/            <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib32</span>@       <span class=" -Color -Color-Bold -Color-Bold-Blue">media</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">root</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">sys</span>/        <span class=" -Color -Color-Bold -Color-Bold-Blue">var</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">boot</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img</span>@      <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib64</span>@       <span class=" -Color -Color-Bold -Color-Bold-Blue">mnt</span>/    <span class=" -Color -Color-Bold -Color-Bold-Blue">run</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">timeshift</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Blue">dev</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img.old</span>@  <span class=" -Color -Color-Bold -Color-Bold-Cyan">libx32</span>@      <span class=" -Color -Color-Bold -Color-Bold-Blue">opt</span>/    <span class=" -Color -Color-Bold -Color-Bold-Cyan">sbin</span>@  <span class=" -Color -Color-Black -Color-Black-BGGreen">tmp</span>/        <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz.old</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Blue">etc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib</span>@             <span class=" -Color -Color-Bold -Color-Bold-Blue">lost+found</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">proc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">srv</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
 </pre></div>
 </div>
 </div>
@@ -548,7 +669,7 @@ Voici une fenêtre du <strong>gestionnaire des fichiers</strong>.</p>
 Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span></code> pour afficher le contenue de <code class="docutils literal notranslate"><span class="pre">business</span></code>.</p>
 </div>
 <div class="section" id="creer-des-dossier">
-<h2>Créer des dossier<a class="headerlink" href="#creer-des-dossier" title="Permalink to this headline">¶</a></h2>
+<h2>Créer des dossier<a class="headerlink" href="#creer-des-dossier" title="Permalink to this headline">#</a></h2>
 <p>La commande <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (make directory) créé un nouveau dossier. Ici on va créer un nouveau dossier appelé <code class="docutils literal notranslate"><span class="pre">informatique</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,7 +690,7 @@ Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span><
 <p>Le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été supprimé.</p>
 </div>
 <div class="section" id="dossiers-speciaux">
-<h2>Dossiers spéciaux<a class="headerlink" href="#dossiers-speciaux" title="Permalink to this headline">¶</a></h2>
+<h2>Dossiers spéciaux<a class="headerlink" href="#dossiers-speciaux" title="Permalink to this headline">#</a></h2>
 <p>Des symboles spéciaux sont utilisées pour designer des dossiers spéciaux:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> racine (root)</p></li>
@@ -585,10 +706,10 @@ Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span><
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">bin</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">home</span>/            <span class=" -Color -Color-Bold -Color-Bold-Blue">lib64</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">opt</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">sbin</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
-<span class=" -Color -Color-Bold -Color-Bold-Blue">boot</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img</span>@      <span class=" -Color -Color-Bold -Color-Bold-Blue">lost+found</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">proc</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">srv</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">var</span>/
-<span class=" -Color -Color-Bold -Color-Bold-Blue">dev</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img.old</span>@  <span class=" -Color -Color-Bold -Color-Bold-Blue">media</span>/       <span class=" -Color -Color-Bold -Color-Bold-Blue">root</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">sys</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Blue">etc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">lib</span>/             <span class=" -Color -Color-Bold -Color-Bold-Blue">mnt</span>/         <span class=" -Color -Color-Bold -Color-Bold-Blue">run</span>/   <span class=" -Color -Color-Black -Color-Black-BGGreen">tmp</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz.old</span>@
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">bin</span>@   <span class=" -Color -Color-Bold -Color-Bold-Blue">home</span>/            <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib32</span>@       <span class=" -Color -Color-Bold -Color-Bold-Blue">media</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">root</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">sys</span>/        <span class=" -Color -Color-Bold -Color-Bold-Blue">var</span>/
+<span class=" -Color -Color-Bold -Color-Bold-Blue">boot</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img</span>@      <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib64</span>@       <span class=" -Color -Color-Bold -Color-Bold-Blue">mnt</span>/    <span class=" -Color -Color-Bold -Color-Bold-Blue">run</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">timeshift</span>/  <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Blue">dev</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">initrd.img.old</span>@  <span class=" -Color -Color-Bold -Color-Bold-Cyan">libx32</span>@      <span class=" -Color -Color-Bold -Color-Bold-Blue">opt</span>/    <span class=" -Color -Color-Bold -Color-Bold-Cyan">sbin</span>@  <span class=" -Color -Color-Black -Color-Black-BGGreen">tmp</span>/        <span class=" -Color -Color-Bold -Color-Bold-Cyan">vmlinuz.old</span>@
+<span class=" -Color -Color-Bold -Color-Bold-Blue">etc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Cyan">lib</span>@             <span class=" -Color -Color-Bold -Color-Bold-Blue">lost+found</span>/  <span class=" -Color -Color-Bold -Color-Bold-Blue">proc</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">srv</span>/   <span class=" -Color -Color-Bold -Color-Bold-Blue">usr</span>/
 </pre></div>
 </div>
 </div>
@@ -601,63 +722,7 @@ Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span><
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">bash</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">hostname</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">plymouth</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">brltty</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">ip</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ps</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">journalctl</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">pwd</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">btrfsck</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">kbd_mode</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">rbash</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-find-root</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">keyctl</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">readlink</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-image</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">kill</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">red</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-map-logical</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">kmod</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">rm</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfs-select-super</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">less</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">rmdir</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">btrfstune</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">lessecho</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">rnano</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">bunzip2</span>*             <span class=" -Color -Color-Bold -Color-Bold-Cyan">lessfile</span>@       <span class=" -Color -Color-Bold -Color-Bold-Green">run-parts</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">busybox</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">lesskey</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">sed</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzcat</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">lesspipe</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">setfacl</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzcmp</span>@               <span class=" -Color -Color-Bold -Color-Bold-Green">ln</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">setfont</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzdiff</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">loadkeys</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">setupcon</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzegrep</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">login</span>*          <span class=" -Color -Color-Bold -Color-Bold-Cyan">sh</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzexe</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">loginctl</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">sleep</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzfgrep</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">lowntfs-3g</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">ss</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzgrep</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">ls</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">stty</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzip2</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">lsblk</span>*          <span class=" -Color -Color-White -Color-White-BGRed">su</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzip2recover</span>*        <span class=" -Color -Color-Bold -Color-Bold-Cyan">lsmod</span>@          <span class=" -Color -Color-Bold -Color-Bold-Green">sync</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">bzless</span>@              <span class=" -Color -Color-Bold -Color-Bold-Green">mkdir</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemctl</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">bzmore</span>*              <span class=" -Color -Color-Bold -Color-Bold-Green">mkfs.btrfs</span>*     <span class=" -Color -Color-Bold -Color-Bold-Cyan">systemd</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">cat</span>*                 <span class=" -Color -Color-Bold -Color-Bold-Green">mknod</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-ask-password</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">chacl</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">mktemp</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-escape</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">chgrp</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">more</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-hwdb</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">chmod</span>*               <span class=" -Color -Color-White -Color-White-BGRed">mount</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-inhibit</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">chown</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">mountpoint</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-machine-id-setup</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">chvt</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">mt</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-notify</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">cp</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">mt-gnu</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-sysusers</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">cpio</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">mv</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-tmpfiles</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">dash</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">nano</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">systemd-tty-ask-password-agent</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">date</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">nc</span>@             <span class=" -Color -Color-Bold -Color-Bold-Green">tar</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">dd</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">nc.openbsd</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">tempfile</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">df</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Cyan">netcat</span>@         <span class=" -Color -Color-Bold -Color-Bold-Green">touch</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">dir</span>*                 <span class=" -Color -Color-Bold -Color-Bold-Green">netstat</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">true</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">dmesg</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">networkctl</span>*     <span class=" -Color -Color-Bold -Color-Bold-Green">udevadm</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">dnsdomainname</span>@       <span class=" -Color -Color-Bold -Color-Bold-Cyan">nisdomainname</span>@  <span class=" -Color -Color-Bold -Color-Bold-Green">ulockmgr_server</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">domainname</span>@          <span class=" -Color -Color-White -Color-White-BGRed">ntfs-3g</span>*        <span class=" -Color -Color-White -Color-White-BGRed">umount</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">dumpkeys</span>*            <span class=" -Color -Color-Bold -Color-Bold-Green">ntfs-3g.probe</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">uname</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">echo</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscat</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">uncompress</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">ed</span>*                  <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscluster</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">unicode_start</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">efibootdump</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">ntfscmp</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">vdir</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">efibootmgr</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsfallocate</span>*  <span class=" -Color -Color-Bold -Color-Bold-Green">wdctl</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">egrep</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsfix</span>*        <span class=" -Color -Color-Bold -Color-Bold-Green">which</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">false</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsinfo</span>*       <span class=" -Color -Color-Bold -Color-Bold-Cyan">ypdomainname</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">fgconsole</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsls</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">zcat</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">fgrep</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsmove</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">zcmp</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">findmnt</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsrecover</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">zdiff</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">fsck.btrfs</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfssecaudit</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">zegrep</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">fuser</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ntfstruncate</span>*   <span class=" -Color -Color-Bold -Color-Bold-Green">zfgrep</span>*
-<span class=" -Color -Color-White -Color-White-BGRed">fusermount</span>*          <span class=" -Color -Color-Bold -Color-Bold-Green">ntfsusermap</span>*    <span class=" -Color -Color-Bold -Color-Bold-Green">zforce</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">getfacl</span>*             <span class=" -Color -Color-Bold -Color-Bold-Green">ntfswipe</span>*       <span class=" -Color -Color-Bold -Color-Bold-Green">zgrep</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">grep</span>*                <span class=" -Color -Color-Bold -Color-Bold-Green">openvt</span>*         <span class=" -Color -Color-Bold -Color-Bold-Green">zless</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">gunzip</span>*              <span class=" -Color -Color-Bold -Color-Bold-Cyan">pidof</span>@          <span class=" -Color -Color-Bold -Color-Bold-Green">zmore</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">gzexe</span>*               <span class=" -Color -Color-Bold -Color-Bold-Green">ping</span>*           <span class=" -Color -Color-Bold -Color-Bold-Green">znew</span>*
-<span class=" -Color -Color-Bold -Color-Bold-Green">gzip</span>*                <span class=" -Color -Color-Bold -Color-Bold-Cyan">ping4</span>@
-<span class=" -Color -Color-Bold -Color-Bold-Green">hciconfig</span>*           <span class=" -Color -Color-Bold -Color-Bold-Cyan">ping6</span>@
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">/bin</span>@
 </pre></div>
 </div>
 </div>
@@ -696,7 +761,7 @@ Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span><
 </ul>
 </div>
 <div class="section" id="afficher-le-contenu-d-un-fichier">
-<h2>Afficher le contenu d’un fichier<a class="headerlink" href="#afficher-le-contenu-d-un-fichier" title="Permalink to this headline">¶</a></h2>
+<h2>Afficher le contenu d’un fichier<a class="headerlink" href="#afficher-le-contenu-d-un-fichier" title="Permalink to this headline">#</a></h2>
 <p>La commande <code class="docutils literal notranslate"><span class="pre">cat</span></code> suivie du nom d’un fichier affiche son contenu. On va</p>
 <ul class="simple">
 <li><p>aller dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-à-cracker</span></code></p></li>
@@ -754,7 +819,7 @@ Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span><
 </div>
 </div>
 <div class="section" id="exercices">
-<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">¶</a></h2>
+<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h2>
 <p>Pour cet exercice, n’utilisez pas l’interface graphique de votre ordinateur, mais seulement les commandes <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p>
 <p><strong>Afficher le contenu d’un fichier</strong><br />
 Un fichier appelé <code class="docutils literal notranslate"><span class="pre">ctf.txt</span></code> se trouve dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel/business/Avril</span></code>. Quel est son contenu ?</p>
@@ -785,9 +850,11 @@ Créez un dossier <code class="docutils literal notranslate"><span class="pre">m
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../hacking/hacking-romain.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -795,32 +862,36 @@ Créez un dossier <code class="docutils literal notranslate"><span class="pre">m
             <p class="prev-next-title">Coder et décoder comme les Romains</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../../2M/algo/index.html" title="next page">
+    <a class='right-next' id="next-link" href="../../architecture/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Algorithmique</p>
+        <p class="prev-next-title">Architecture</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      Par Vincent Keller<br/>
-    
-        &copy; droits d'auteur 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

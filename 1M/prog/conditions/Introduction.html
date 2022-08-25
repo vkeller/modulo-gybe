@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les tests conditionnels &#8212; Education Numérique Ecole de maturité</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,36 +19,35 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -60,7 +60,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -69,9 +83,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -86,30 +101,36 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../index.html">
-   Bienvenue
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   1ère année
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../algo/index.html">
-   Algorithmique
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../installation/installation.html">
-   Environnement de développement
+  <a class="reference internal" href="../../representation/index.html">
+   Représentation des données
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -194,6 +215,16 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -214,90 +245,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/1M/prog/conditions/Introduction.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
-                    class="fab fa-github"></i>dépôt</button></a>
-        <a class="issues-button"
-            href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/conditions/Introduction.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-        title="Mode plein écran"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/conditions/Introduction.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/prog/conditions/Introduction.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instruction-conditionnelle">
    Instruction conditionnelle
@@ -327,12 +448,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Les tests conditionnels</h1>
@@ -341,7 +461,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Contenu </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -378,14 +498,15 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="les-tests-conditionnels">
-<h1>Les tests conditionnels<a class="headerlink" href="#les-tests-conditionnels" title="Permalink to this headline">¶</a></h1>
+<h1>Les tests conditionnels<a class="headerlink" href="#les-tests-conditionnels" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://commons.wikimedia.org"><img alt="Test image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/If-Then-Else-diagram.svg/492px-If-Then-Else-diagram.svg.png" /></a></p>
 <div class="section" id="instruction-conditionnelle">
-<h2>Instruction conditionnelle<a class="headerlink" href="#instruction-conditionnelle" title="Permalink to this headline">¶</a></h2>
+<h2>Instruction conditionnelle<a class="headerlink" href="#instruction-conditionnelle" title="Permalink to this headline">#</a></h2>
 <p>la structure est la suivante : SI … ALORS … SINON</p>
 <p>En python :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
@@ -422,11 +543,11 @@
 </div>
 <p>Il est possible d’imbriquer plusieurs tests</p>
 <div class="section" id="exercice-1-math-physique-et-biol-chimie">
-<h3>Exercice 1 (math-physique et biol-chimie)<a class="headerlink" href="#exercice-1-math-physique-et-biol-chimie" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 1 (math-physique et biol-chimie)<a class="headerlink" href="#exercice-1-math-physique-et-biol-chimie" title="Permalink to this headline">#</a></h3>
 <p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
 </div>
 <div class="section" id="exercice-1-autres-os">
-<h3>Exercice 1 (autres OS)<a class="headerlink" href="#exercice-1-autres-os" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 1 (autres OS)<a class="headerlink" href="#exercice-1-autres-os" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Ajoutez une question de type philosophie: “La grande question sur la vie, l’univers et le reste” dont la réponse est : A vous de trouver</p></li>
 <li><p>Ajoutez une nouvelle catégorie de question de type psychologie en implémentant une nouvelle fonction quizz_psycho() sur le même modèle que les 2 autres.</p></li>
@@ -468,19 +589,30 @@ Jouons ? C&#39;est parti...
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-1-5e4bd7b5e2f5&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 15&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">reponse</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">while</span> <span class="n">reponse</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisissez votre question: </span><span class="se">\n</span><span class="s2"> 1: informatique </span><span class="se">\n</span><span class="s2"> 2: philo </span><span class="se">\n</span><span class="s2"> Votre réponse (&#39;q&#39; pour quitter):&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">quizz_info</span><span class="p">()</span>
 
-<span class="nn">/usr/lib/python3/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">697</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">698</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">699</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="nn">File ~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -489,11 +621,11 @@ Jouons ? C&#39;est parti...
 </div>
 </div>
 <div class="section" id="exercice-2-math-physique-et-biol-chimie">
-<h3>Exercice 2 (math-physique et biol-chimie)<a class="headerlink" href="#exercice-2-math-physique-et-biol-chimie" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 2 (math-physique et biol-chimie)<a class="headerlink" href="#exercice-2-math-physique-et-biol-chimie" title="Permalink to this headline">#</a></h3>
 <p>Ecrire un programme qui vérifie qu’un nombre est divisible par 3 et par 7</p>
 </div>
 <div class="section" id="exercice-3-la-piscine-tire-du-concours-castor-informatique">
-<h3>Exercice 3 La Piscine (tiré du concours Castor Informatique)<a class="headerlink" href="#exercice-3-la-piscine-tire-du-concours-castor-informatique" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 3 La Piscine (tiré du concours Castor Informatique)<a class="headerlink" href="#exercice-3-la-piscine-tire-du-concours-castor-informatique" title="Permalink to this headline">#</a></h3>
 <p><img alt="castor piscine" src="../../../_images/piscine.jpg" /></p>
 <p>Analysons les conditions d’entrée:</p>
 <ul class="simple">
@@ -553,9 +685,11 @@ Exercice</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../intro2/intro2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -571,24 +705,28 @@ Exercice</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      Par Vincent Keller<br/>
-    
-        &copy; droits d'auteur 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
