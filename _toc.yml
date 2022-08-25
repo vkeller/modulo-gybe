@@ -7,8 +7,9 @@ parts:
   - caption: 1ère année
 #    maxdepth: 2
     chapters:
-    - file: 1M/algo/index
     - file: 1M/installation/installation
+    - file: 1M/representation/index
+    - file: 1M/algo/index
     - file: 1M/prog/index
       sections:
       - file: 1M/prog/intro1/intro1
@@ -25,6 +26,8 @@ parts:
       - file: 1M/prog/motdepasse/MotsDePasse
       - file: 1M/prog/hacking/hacking-romain
       - file: 1M/prog/fichiers/SystemeDeFichiers
+    - file: 1M/architecture/index
+    - file: 1M/esdn/index
 
   - caption: 2ème année
     chapters:
@@ -34,5 +37,4 @@ parts:
 #chapters:
 #- file: markdown
 #- file: notebook
-
 
