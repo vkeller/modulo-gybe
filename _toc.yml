@@ -9,6 +9,9 @@ parts:
     chapters:
     - file: 1M/installation/installation
     - file: 1M/representation/index
+      sections:
+      - file: 1M/representation/cours/Cours1
+      - file: 1M/representation/tp/index      
     - file: 1M/algo/index
     - file: 1M/prog/index
       sections:
