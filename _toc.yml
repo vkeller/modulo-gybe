@@ -13,6 +13,7 @@ parts:
       - file: 1M/representation/cours/Cours1
       - file: 1M/representation/cours/Cours2
       - file: 1M/representation/tp/tp1
+      - file: 1M/representation/tp/tp2
     - file: 1M/algo/index
     - file: 1M/prog/index
       sections:
