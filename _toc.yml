@@ -12,6 +12,7 @@ parts:
       sections:
       - file: 1M/representation/cours/Cours1
       - file: 1M/representation/cours/Cours2
+      - file: 1M/representation/cours/Cours3
       - file: 1M/representation/tp/tp1
       - file: 1M/representation/tp/tp2
     - file: 1M/algo/index
@@ -38,6 +39,10 @@ parts:
     chapters:
     - file: 2M/algo/index
     - file: 2M/prog/index
+#    chapters:
+#    - file: biblio.md
+
+
 
 #chapters:
 #- file: markdown
