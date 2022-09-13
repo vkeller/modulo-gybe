@@ -504,13 +504,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-signal-analogique">
-   Définition : signal analogique
+  <a class="reference internal nav-link" href="#definition-signal">
+   Définition : signal
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paradoxe-de-l-archer">
-   Paradoxe de l’archer
+  <a class="reference internal nav-link" href="#le-monde-tel-qu-il-est-vu-par-un-ordinateur">
+   Le monde tel qu’il est vu par un ordinateur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-numerisation">
+   Définition : numérisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#echantillonnage">
+   1. Echantillonnage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantification">
+   2. Quantification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encodage">
+   3. Encodage
   </a>
  </li>
 </ul>
@@ -585,13 +605,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-signal-analogique">
-   Définition : signal analogique
+  <a class="reference internal nav-link" href="#definition-signal">
+   Définition : signal
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paradoxe-de-l-archer">
-   Paradoxe de l’archer
+  <a class="reference internal nav-link" href="#le-monde-tel-qu-il-est-vu-par-un-ordinateur">
+   Le monde tel qu’il est vu par un ordinateur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-numerisation">
+   Définition : numérisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#echantillonnage">
+   1. Echantillonnage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantification">
+   2. Quantification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encodage">
+   3. Encodage
   </a>
  </li>
 </ul>
@@ -662,14 +702,36 @@ title="Print to PDF"
 <p>Dans la suite de ce cours, <strong>nous considérerons que les signaux du monde réel que nous voulons numériser sont continus</strong>.</p>
 <p>Il ne fait pas le moindre doute que la représentation numérique de n’importe quel signal est <strong>discret</strong>.</p>
 </div>
-<div class="section" id="definition-signal-analogique">
-<h2>Définition : signal analogique<a class="headerlink" href="#definition-signal-analogique" title="Permalink to this headline">#</a></h2>
+<div class="section" id="definition-signal">
+<h2>Définition : signal<a class="headerlink" href="#definition-signal" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>signal</strong> est un phénomène physique (par exemple : une tension électrique, un courant électrique, un champ électromagnétique, une onde sonore ou une onde lumineuse, une température, etc..) qui transmet une information</p>
 <p>Un <strong>signal analogique</strong> est un signal <strong>continu dans le temps</strong></p>
 <p><img alt="analogique" src="../../../_images/analogique.png" /></p>
 </div>
-<div class="section" id="paradoxe-de-l-archer">
-<h2>Paradoxe de l’archer<a class="headerlink" href="#paradoxe-de-l-archer" title="Permalink to this headline">#</a></h2>
-<p>Lorsqu’un archer tire une flèche, on peut</p>
+<div class="section" id="le-monde-tel-qu-il-est-vu-par-un-ordinateur">
+<h2>Le monde tel qu’il est vu par un ordinateur<a class="headerlink" href="#le-monde-tel-qu-il-est-vu-par-un-ordinateur" title="Permalink to this headline">#</a></h2>
+<p>Un ordinateur ne comprend que des <strong>valeurs discrètes</strong>.</p>
+<p>Par exemple, lorsqu’on veut prévoir la météo, on construit un sous-ensemble du monde physique en appliquant une grille (en Suisse : 1.1 x 1.1 km2) dans lequel on applique un modèle</p>
+<p><img alt="cosmo" src="../../../_images/cosmo.png" /></p>
+</div>
+<div class="section" id="definition-numerisation">
+<h2>Définition : numérisation<a class="headerlink" href="#definition-numerisation" title="Permalink to this headline">#</a></h2>
+<p>Le <strong>processus</strong> qui passe d’un signal continu à un signal discret s’appelle <strong>numérisation</strong>. La numérisation consiste en 3 étapes:</p>
+<ol class="simple">
+<li><p><strong>Echantillonnage</strong> : C’est l’étape qui passe du monde continu au monde discret : des valeurs du signal continu sont enregistrés à intervalles réguliers</p></li>
+<li><p><strong>Quantification</strong> : Lorsqu’on a l’ensemble des valeurs discrètes, il s’agit de les arrondir à des valeurs prises dans un ensemble fini</p></li>
+<li><p><strong>Encodage</strong> : Finalement chacune de ces valeurs est reliée à un code numérique</p></li>
+</ol>
+</div>
+<div class="section" id="echantillonnage">
+<h2>1. Echantillonnage<a class="headerlink" href="#echantillonnage" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="quantification">
+<h2>2. Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="encodage">
+<h2>3. Encodage<a class="headerlink" href="#encodage" title="Permalink to this headline">#</a></h2>
+<p><img alt="bits" src="../../../_images/bits.jpg" /></p>
 </div>
 </div>
 
