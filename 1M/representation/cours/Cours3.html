@@ -499,11 +499,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#disclaimer-2-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
-   DISCLAIMER 2 : l’espace et le temps : des grandeurs discrètes ou continues ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-signal">
    Définition : signal
   </a>
@@ -531,6 +526,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#encodage">
    3. Encodage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
+   DISCLAIMER : l’espace et le temps : des grandeurs discrètes ou continues ?
   </a>
  </li>
 </ul>
@@ -600,11 +600,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#disclaimer-2-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
-   DISCLAIMER 2 : l’espace et le temps : des grandeurs discrètes ou continues ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-signal">
    Définition : signal
   </a>
@@ -634,6 +629,11 @@ title="Print to PDF"
    3. Encodage
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
+   DISCLAIMER : l’espace et le temps : des grandeurs discrètes ou continues ?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -652,7 +652,7 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>Comprendre le concept de discrétisation</p></li>
 <li><p>Comprendre les étapes de la numérisation</p></li>
-<li><p>Appliquer sur un exemple concret</p></li>
+<li><p>Appliquer sur un exemple concret durant un TP</p></li>
 </ol>
 </div>
 <div class="section" id="definition-physique-ou-la-science-physique">
@@ -694,18 +694,12 @@ title="Print to PDF"
 <h2>Le monde tel que nous le comprenons (ou essayons de le comprendre)<a class="headerlink" href="#le-monde-tel-que-nous-le-comprenons-ou-essayons-de-le-comprendre" title="Permalink to this headline">#</a></h2>
 <p>Appliquer un modèle physique, donc mathématique, sur un monde réel perçu a de tout temps été source de débats et une passion des êtres humains.</p>
 <p><img alt="Stonehenge" src="../../../_images/stonehenge.jpg" /></p>
-<p>Depuis le calendrier de Stonehenge de la préhistoire au grand accélérateur de hadrons du CERN (LHC) du XXIème siècle, des théories ont émergé, ont été confirmées ou infirmées et ont permis de continuer à construire une représentation plus juste du Monde.</p>
+<p>Depuis le calendrier de Stonehenge de la préhistoire au grand accélérateur de hadrons du CERN (LHC) du XXIème siècle, des théories ont émergé, ont été confirmées ou infirmées et ont permis de continuer à construire une représentation du monde. Un modèle qui permet de prédire des phénomènes observés</p>
 <p><img alt="LHC" src="../../../_images/CERN.jpg" /></p>
 </div>
 <div class="section" id="definition-grandeur-continue-et-discrete">
 <h2>Définition : grandeur continue et discrète<a class="headerlink" href="#definition-grandeur-continue-et-discrete" title="Permalink to this headline">#</a></h2>
 <p>Une grandeur (ou variable) <strong>continue</strong> est une grandeur qui peut prendre une <strong>infinité</strong> de valeurs, une grandeur <strong>dicrète</strong> a une quantité <strong>finie</strong> de valeurs possibles</p>
-</div>
-<div class="section" id="disclaimer-2-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
-<h2>DISCLAIMER 2 : l’espace et le temps : des grandeurs discrètes ou continues ?<a class="headerlink" href="#disclaimer-2-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues" title="Permalink to this headline">#</a></h2>
-<p>Cette question est toujours ouverte aujourd’hui. La physique Newtonienne (dite <em>classique</em>) considère que ces deux grandeurs sont continues, la physique d’Einstein (dite <em>relativiste</em>) considère que les deux grandeurs sont liées, la physique quantique considère qu’elles sont discrètes. D’autres enfin, dans des tentatives de réponses qui relève plus de la philosophie métaphysique : l’espace et le temps ne sont peut-être finalement que des manifestations d’un concept plus profond et encore inconnu.</p>
-<p>Dans la suite de ce cours, <strong>nous considérerons que les signaux du monde réel que nous voulons numériser sont continus</strong>.</p>
-<p>Il ne fait pas le moindre doute que la représentation numérique de n’importe quel signal est <strong>discret</strong>.</p>
 </div>
 <div class="section" id="definition-signal">
 <h2>Définition : signal<a class="headerlink" href="#definition-signal" title="Permalink to this headline">#</a></h2>
@@ -727,20 +721,33 @@ title="Print to PDF"
 <li><p><strong>Quantification</strong> : Lorsqu’on a l’ensemble des valeurs discrètes, il s’agit de les arrondir à des valeurs prises dans un ensemble fini</p></li>
 <li><p><strong>Encodage</strong> : Finalement chacune de ces valeurs est reliée à un code numérique</p></li>
 </ol>
+<p>Pratiquement, l’appareil électronique qui transforme un signal continu en un signal numérisé s’appelle un <strong>convertisseur analogique vers le numérique</strong> (de lânglais <em>Analog-to-digital converter</em>). Il en existe pour le son (entre un micro et l’enregistrement numérique), pour l’image (après une caméra vidéo numérique) et pour la plupart des autres signaux numérisables (courant, température, etc..)</p>
 </div>
 <div class="section" id="echantillonnage">
 <h2>1. Echantillonnage<a class="headerlink" href="#echantillonnage" title="Permalink to this headline">#</a></h2>
-<p>A définir : fréquence d’échantillonnage, théorème de l’échantillonnage (théorème de Shannon)</p>
+<p>L’échantillonnage (en anglais <em>sampling</em>) est la première étape de la numérisation. Elle consiste à enregistrer la valeur instantanée d’une grandeur physique continue à intervalle régulier. La fréquence d’enregistrement de ces valeurs s’appelle <strong>fréquence d’échantillonnage</strong>.</p>
+<p>Si la fréquence d’échantillonnage est trop petite, alors le signal numérique enregistré ne sera pas une bonne approximation du signal continu. C’est le principe de <strong>sous-échantillonnage</strong></p>
+<p><img alt="sous-echantillonnage" src="../../../_images/sous.png" /></p>
+<p>Au contraire, si la fréquence d’échantillonnage est trop grande, alors l’approximation résultante sera de meilleure qualité (on dit qu’il permet d’augmenter le rapport <strong>signal-bruit</strong> (en anglais <em>signal-to-noise ratio</em>, c’est-à-dire le rapport entre la quantité d’information du signal et ce qui ne l’est pas (que l’on appelle <strong>bruit</strong>)</p>
+<p><img alt="SNR" src="../../../_images/snr.png" /></p>
+<p>On peut montrer qu’une <strong>fréquence d’échantillonnage adéquate</strong> se situe autour du double de la valeur de la fréquence mesurée (Théorème de Shannon que nous ne verrons pas dans ce cours)</p>
 <p><img alt="echantillonnage" src="../../../_images/echantillonnage.png" /></p>
 </div>
 <div class="section" id="quantification">
 <h2>2. Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">#</a></h2>
-<p>Après avoir échantillonné le signal, il faut mesurer la valeur de chaque échantillon et lui attribuer une valeur entière. C’est l’étape de quantification.</p>
+<p>Après avoir échantillonné le signal, il faut attribuer à la valeur de chaque échantillon une valeur binaire. A chaque <strong>plage de valeurs mesurées</strong> correspond une valeur binaire. Ainsi un convertisseur analogique-digital codé sur 3 bits possèdera 8 niveaux de quantification :</p>
 <p><img alt="quantif" src="../../../_images/quantification.png" /></p>
 </div>
 <div class="section" id="encodage">
 <h2>3. Encodage<a class="headerlink" href="#encodage" title="Permalink to this headline">#</a></h2>
+<p>Finalement l’encodage du signal quantifié se fait en fonction du format de fichier final et spécifique à l’application. Le format de fichier <strong>MP3</strong> en est un.</p>
 <p><img alt="bits" src="../../../_images/bits.jpg" /></p>
+</div>
+<div class="section" id="disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
+<h2>DISCLAIMER : l’espace et le temps : des grandeurs discrètes ou continues ?<a class="headerlink" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues" title="Permalink to this headline">#</a></h2>
+<p>Cette question est toujours ouverte aujourd’hui. La physique Newtonienne (dite <em>classique</em>) considère que ces deux grandeurs sont continues, la physique d’Einstein (dite <em>relativiste</em>) considère que les deux grandeurs sont liées, la physique quantique considère qu’elles sont discrètes. D’autres enfin, dans des tentatives de réponses qui relève plus de la philosophie métaphysique : l’espace et le temps ne sont peut-être finalement que des manifestations d’un concept plus profond et encore inconnu.</p>
+<p>Dans la suite de ce cours, <strong>nous considérerons que les signaux du monde réel que nous voulons numériser sont continus</strong>.</p>
+<p>Il ne fait pas le moindre doute que la représentation numérique de n’importe quel signal est <strong>discret</strong>.</p>
 </div>
 </div>
 
