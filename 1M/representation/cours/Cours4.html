@@ -483,7 +483,49 @@ title="Print to PDF"
      Base 2 (binaire)
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-16-hexadecimal">
+     Base 16 (hexadécimal)
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-conversion-binaire-decimal-hexadecimal">
+   Exercice 1 : Conversion binaire - décimal - héxadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-algebriques-en-binaire">
+   Opérations algébriques en binaire
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition">
+     Addition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#soustraction">
+     Soustraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division">
+     Division
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-operations">
+   Exercice 2 : opérations
+  </a>
  </li>
 </ul>
 
@@ -529,7 +571,49 @@ title="Print to PDF"
      Base 2 (binaire)
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-16-hexadecimal">
+     Base 16 (hexadécimal)
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-conversion-binaire-decimal-hexadecimal">
+   Exercice 1 : Conversion binaire - décimal - héxadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-algebriques-en-binaire">
+   Opérations algébriques en binaire
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition">
+     Addition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#soustraction">
+     Soustraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division">
+     Division
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-operations">
+   Exercice 2 : opérations
+  </a>
  </li>
 </ul>
 
@@ -680,8 +764,188 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(10101101\)</span> lu de droite à gauche se calcule en base 10 : <span class="math notranslate nohighlight">\(1*2^{0} + 0*2^{1} + 1*2^{2} + 1*2^{3} + 0*2^{4} + 1*2^{5} + 0*2^{6} + 1*2^{7} = 1 + 0 + 4 + 8 + 0 + 32 + 0 + 128 = 173\)</span></p>
+<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(10101101\)</span> lu de droite à gauche se calcule en base 10 : <span class="math notranslate nohighlight">\(1_{2}*2_{10}^{0} + 0_{2}*2_{10}^{1} + 1_{2}*2_{10}^{2} + 1_{2}*2_{10}^{3} + 0_{2}*2_{10}^{4} + 1_{2}*2_{10}^{5} + 0_{2}*2_{10}^{6} + 1_{2}*2_{10}^{7} = 1_{10} + 0_{10} + 4_{10} + 8_{10} + 0_{10} + 32_{10} + 0_{10} + 128_{10} = 173_{10}\)</span></p>
 </div>
+<div class="section" id="base-16-hexadecimal">
+<h3>Base 16 (hexadécimal)<a class="headerlink" href="#base-16-hexadecimal" title="Permalink to this headline">#</a></h3>
+<p>En héxadécimal, il existe 16 symboles pour écrires les nombres entiers : <span class="math notranslate nohighlight">\([0,1,2,3,4,5,6,7,8,9, A, B, C, D, E, F]\)</span>. Puisque <span class="math notranslate nohighlight">\(16_{10} = 2_{10}^{4}\)</span> il faut <strong>quatre</strong> bits pour convertir un nombre héxadécimal en binaire.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur décimale</p></th>
+<th class="head"><p>Valeur binaire</p></th>
+<th class="head"><p>valeur héxadécimale</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0000_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0001_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0010_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(3_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0011_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(4_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0100_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0101_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(6_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0110_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(7_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0111_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(7_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(8_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1000_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(9_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1001_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(9_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1010_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(A_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(11_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1011_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(12_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1100_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(C_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(13_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1101_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(D_{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(14_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1110_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(15_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1111_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F_{16}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="exercice-1-conversion-binaire-decimal-hexadecimal">
+<h2>Exercice 1 : Conversion binaire - décimal - héxadécimal<a class="headerlink" href="#exercice-1-conversion-binaire-decimal-hexadecimal" title="Permalink to this headline">#</a></h2>
+<p>Complétez le tableau suivant. Lorsque le nombre de bits n’est pas divisible par 4 en binaire, ajoutez des <span class="math notranslate nohighlight">\(0\)</span> sur les bits de poid le plus fort (à gauche) pour complèter au multiple.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Valeur binaire</p></th>
+<th class="text-align:center head"><p>Valeur décimale</p></th>
+<th class="text-align:center head"><p>valeur héxadécimale</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(11010101_{2}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(1984_{10}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(BEEF_{16}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(51966_{10}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operations-algebriques-en-binaire">
+<h2>Opérations algébriques en binaire<a class="headerlink" href="#operations-algebriques-en-binaire" title="Permalink to this headline">#</a></h2>
+<p>Les 4 opérations de base en algèbre sont :</p>
+<ul class="simple">
+<li><p>l’addition (signe <span class="math notranslate nohighlight">\(+\)</span>)</p></li>
+<li><p>la soustration (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
+<li><p>la multiplication (signe <span class="math notranslate nohighlight">\(*\)</span>)</p></li>
+<li><p>la division (signe <span class="math notranslate nohighlight">\(/\)</span>)</p></li>
+</ul>
+<div class="section" id="addition">
+<h3>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">#</a></h3>
+<p>Tout comme l’addition décimale, l’addition en binaire se fait en colonne et en utilisant les retenues (binaires !).</p>
+<p>En binaire : <span class="math notranslate nohighlight">\(01_{2} + 01_{2} = 10_{2}\)</span>. Si la retenue requiert un bit de poid plus fort (à gauche), alors il faut en ajouter un.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} + 0011_{2}\)</span></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p></p></th>
+<th class="text-align:right head"><p>1</p></th>
+<th class="text-align:right head"><p></p></th>
+<th class="text-align:right head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>—</p></td>
+<td class="text-align:right"><p>—</p></td>
+<td class="text-align:right"><p>—</p></td>
+<td class="text-align:right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="soustraction">
+<h3>Soustraction<a class="headerlink" href="#soustraction" title="Permalink to this headline">#</a></h3>
+<p>Dans la soustraction binaire, on procède comme en décimal. Lorsque la quantité à soustraire est supérieure à la quantité dont on soustrait, on emprunte 1 au voisin de gauche.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(0_{2} - 0_{2} = 0_{2}\)</span>, <span class="math notranslate nohighlight">\(1_{2} - 0_{2}  = 1_{2}\)</span>, <span class="math notranslate nohighlight">\(1_{2} - 1_{2} = 0_{2}\)</span> et <span class="math notranslate nohighlight">\(10_{2} - 1_{2} = 1_{2}\)</span></p>
+</div>
+<div class="section" id="multiplication">
+<h3>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">#</a></h3>
+<p>La multiplication en binaire peut rapidement devenir complexe et dépasse le cadre de ce cours. Nous nous concentrons sur la multiplication par 2 puiqu’elle ne requiert qu’un déplacement (<em>shift</em> en anglais) à droite en direction du bit de poid le plus fort.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(1011_{2}\)</span> multiplié par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(10110_{2}\)</span></p>
+</div>
+<div class="section" id="division">
+<h3>Division<a class="headerlink" href="#division" title="Permalink to this headline">#</a></h3>
+<p>Tout comme la multiplication, la division binaire peut devenir complet et dépasse le cadre de ce cours. Nous nous concentrons sur la division par 2 qui ne requiert qu’un déplacement (<em>shift</em> en anglais) à gauche en direction du bit de poids le plus faible. Attention, cela ne fonctionne qu’avec les nombres pair.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(0100_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(0010_{2}\)</span></p>
+</div>
+</div>
+<div class="section" id="exercice-2-operations">
+<h2>Exercice 2 : opérations<a class="headerlink" href="#exercice-2-operations" title="Permalink to this headline">#</a></h2>
+<p>Résolvez les calculs binaires suivants :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(11010101_{2}\)</span> + <span class="math notranslate nohighlight">\(00001111_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(01101010_{2}\)</span> - <span class="math notranslate nohighlight">\(00011010_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(11010010_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(01011110_{2}\)</span> multiplié par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
+</ul>
 </div>
 </div>
 
