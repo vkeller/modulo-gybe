@@ -527,6 +527,37 @@ title="Print to PDF"
    Exercice 2 : opérations
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#au-dela-des-entiers-our-aller-plus-loin">
+   Au-delà des entiers (our aller plus loin)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">
+     De
+     <span class="math notranslate nohighlight">
+      \(\mathbb{N}\)
+     </span>
+     vers
+     <span class="math notranslate nohighlight">
+      \(\mathbb{Z}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">
+     De
+     <span class="math notranslate nohighlight">
+      \(\mathbb{N}\)
+     </span>
+     vers
+     <span class="math notranslate nohighlight">
+      \(\mathbb{Q}\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -614,6 +645,37 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercice-2-operations">
    Exercice 2 : opérations
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#au-dela-des-entiers-our-aller-plus-loin">
+   Au-delà des entiers (our aller plus loin)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">
+     De
+     <span class="math notranslate nohighlight">
+      \(\mathbb{N}\)
+     </span>
+     vers
+     <span class="math notranslate nohighlight">
+      \(\mathbb{Z}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">
+     De
+     <span class="math notranslate nohighlight">
+      \(\mathbb{N}\)
+     </span>
+     vers
+     <span class="math notranslate nohighlight">
+      \(\mathbb{Q}\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -717,7 +779,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="base-2-binaire">
 <h3>Base 2 (binaire)<a class="headerlink" href="#base-2-binaire" title="Permalink to this headline">#</a></h3>
-<p>En décimal, il existe 10 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1,2,3,4,5,6,7,8,9]\)</span>. Ainsi :</p>
+<p>En décimal, il existe 2 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>position</p></th>
@@ -765,6 +827,8 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Ainsi, le nombre <span class="math notranslate nohighlight">\(10101101\)</span> lu de droite à gauche se calcule en base 10 : <span class="math notranslate nohighlight">\(1_{2}*2_{10}^{0} + 0_{2}*2_{10}^{1} + 1_{2}*2_{10}^{2} + 1_{2}*2_{10}^{3} + 0_{2}*2_{10}^{4} + 1_{2}*2_{10}^{5} + 0_{2}*2_{10}^{6} + 1_{2}*2_{10}^{7} = 1_{10} + 0_{10} + 4_{10} + 8_{10} + 0_{10} + 32_{10} + 0_{10} + 128_{10} = 173_{10}\)</span></p>
+<p>Le bit <strong>le plus à droite</strong> s’appelle <strong>bit de poids faible</strong></p>
+<p>Le bit <strong>le plus à gauche</strong> s’appelle <strong>bit de poids fort</strong></p>
 </div>
 <div class="section" id="base-16-hexadecimal">
 <h3>Base 16 (hexadécimal)<a class="headerlink" href="#base-16-hexadecimal" title="Permalink to this headline">#</a></h3>
@@ -847,7 +911,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="exercice-1-conversion-binaire-decimal-hexadecimal">
 <h2>Exercice 1 : Conversion binaire - décimal - héxadécimal<a class="headerlink" href="#exercice-1-conversion-binaire-decimal-hexadecimal" title="Permalink to this headline">#</a></h2>
-<p>Complétez le tableau suivant. Lorsque le nombre de bits n’est pas divisible par 4 en binaire, ajoutez des <span class="math notranslate nohighlight">\(0\)</span> sur les bits de poid le plus fort (à gauche) pour complèter au multiple.</p>
+<p>Complétez le tableau suivant. Lorsque le nombre de bits n’est pas divisible par 4 en binaire, ajoutez des <span class="math notranslate nohighlight">\(0\)</span> sur les bits de poids le plus fort (à gauche) pour complèter au multiple.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Valeur binaire</p></th>
@@ -946,6 +1010,31 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(11010010_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(01011110_{2}\)</span> multiplié par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
 </ul>
+</div>
+<div class="section" id="au-dela-des-entiers-our-aller-plus-loin">
+<h2>Au-delà des entiers (our aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-our-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<div class="section" id="de-mathbb-n-vers-mathbb-z">
+<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-z" title="Permalink to this headline">#</a></h3>
+<p>Que vaut le résultat de l’opération suivante ?</p>
+<p><span class="math notranslate nohighlight">\(00001000_{2} - 00010000_{2}\)</span></p>
+<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Il en existe plusieurs, mais le plus intuitif est de choisir un bit (généralement celui de poids le plus fort) et de définir si il représente le signe <span class="math notranslate nohighlight">\(+\)</span> ou le signe <span class="math notranslate nohighlight">\(-\)</span>. Ce faisant, il ne reste plus que <span class="math notranslate nohighlight">\(n-1\)</span> bits pour coder les entiers relatifs, donc une puissance de deux en moins. Sur un Octet, on code ainsi toujours 255 entiers relatifs qui vont de <span class="math notranslate nohighlight">\(-127_{10}\)</span> à <span class="math notranslate nohighlight">\(127_{10}\)</span> puisqu’il ne reste que <span class="math notranslate nohighlight">\(7\)</span> bits.</p>
+<p>Si <span class="math notranslate nohighlight">\(0\)</span> représente le signe <span class="math notranslate nohighlight">\(+\)</span> et <span class="math notranslate nohighlight">\(1\)</span> le signe <span class="math notranslate nohighlight">\(-\)</span> alors :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(00001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(9_{10}\)</span> alors que <span class="math notranslate nohighlight">\(10001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(-9_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(00000000_{2}\)</span> et <span class="math notranslate nohighlight">\(10000000_{2}\)</span> représentent tous les deux <span class="math notranslate nohighlight">\(0_{10}\)</span>. Et c’est un problème !</p></li>
+</ul>
+</div>
+<div class="section" id="de-mathbb-n-vers-mathbb-q">
+<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-q" title="Permalink to this headline">#</a></h3>
+<p>Que vaut le résultat de l’opération suivante ?</p>
+<p><span class="math notranslate nohighlight">\(00000101 / 00000010\)</span></p>
+<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être rationnel. Le résultat de l’opération est <span class="math notranslate nohighlight">\(2.5_{10}\)</span> et c’est un nombre rationnel (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>). Il s’agit de trouver une <strong>représentation pour les nombres rationnels</strong> (ou nombres <strong>à virgule</strong>). Il en existe deux:</p>
+<ol class="simple">
+<li><p>La représentation à virgule <strong>fixe</strong></p></li>
+<li><p>La représentation à virgule <strong>flottante</strong></p></li>
+</ol>
+<p>Ces représentations vont au-delà du cadre de ce cours et seront abordé en 2ème année de l’école de maturité.</p>
+</div>
 </div>
 </div>
 
