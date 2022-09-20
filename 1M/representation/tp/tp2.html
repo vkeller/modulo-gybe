@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Algorithmique" href="../../algo/index.html" />
@@ -482,13 +484,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-analogique-numerique-et-numerique-analogique">
+   Conversion analogique -&gt; numérique et numérique -&gt; analogique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-logiciel-audacity">
+   Le logiciel Audacity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prise-en-main-du-logiciel-audacity-dirige">
    Prise en main du logiciel Audacity (dirigé)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observer-l-echantillonnage-d-un-signal-sinusoidal">
-     Observer l’échantillonnage d’un signal sinusoïdal
+    <a class="reference internal nav-link" href="#observer-l-echantillonnage-d-un-signal-sinusoidal-genere">
+     Observer l’échantillonnage d’un signal sinusoïdal généré
     </a>
    </li>
   </ul>
@@ -553,13 +565,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-analogique-numerique-et-numerique-analogique">
+   Conversion analogique -&gt; numérique et numérique -&gt; analogique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-logiciel-audacity">
+   Le logiciel Audacity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prise-en-main-du-logiciel-audacity-dirige">
    Prise en main du logiciel Audacity (dirigé)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observer-l-echantillonnage-d-un-signal-sinusoidal">
-     Observer l’échantillonnage d’un signal sinusoïdal
+    <a class="reference internal nav-link" href="#observer-l-echantillonnage-d-un-signal-sinusoidal-genere">
+     Observer l’échantillonnage d’un signal sinusoïdal généré
     </a>
    </li>
   </ul>
@@ -596,7 +618,8 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>appliquer la représentation de l’information numérique au son</p></li>
 <li><p>comprendre les étapes de la numérisation d’un son</p></li>
-<li><p>appliquer ces étapes dans le logiciel Andacity</p></li>
+<li><p>appliquer ces étapes avec le logiciel Andacity</p></li>
+<li><p>éditer, modifier, filtrer des sons</p></li>
 </ol>
 </div>
 <div class="section" id="introduction">
@@ -628,7 +651,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="definition-representation-analogique">
 <h2>Définition : représentation analogique<a class="headerlink" href="#definition-representation-analogique" title="Permalink to this headline">#</a></h2>
-<p>Selon le Petit Robert: <em>qui représente une information par un rapport proportionnel et continu entre l’information initiale et sa représentation (opposé à numérique).</em>. A <em>numérique</em> on peut aussi parler de <em>dicret</em></p>
+<p>Selon le Petit Robert: <em>qui représente une information par un rapport proportionnel et continu entre l’information initiale et sa représentation (opposé à numérique).</em>. A <em>numérique</em> on peut aussi parler de <em>discret</em></p>
 <p>Ainsi, un signal continu à temps continu est un signal analogique.</p>
 <p>Un <strong>son</strong> est un signal analogique</p>
 </div>
@@ -636,8 +659,29 @@ title="Print to PDF"
 <h2>Finitude des ordinateurs<a class="headerlink" href="#finitude-des-ordinateurs" title="Permalink to this headline">#</a></h2>
 <p>Un ordinateur ne comprend que des <code class="docutils literal notranslate"><span class="pre">1</span></code> et des <code class="docutils literal notranslate"><span class="pre">0</span></code> sur un nombre fixe d’octets (aujourd’hui, un <strong>mot-mémoire</strong> est codé sur <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bits</span></code> ou <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">octets</span></code>. Cela signifie qu’un ordinateur stocke uniquement des signaux <strong>discrets</strong></p>
 </div>
+<div class="section" id="conversion-analogique-numerique-et-numerique-analogique">
+<h2>Conversion analogique -&gt; numérique et numérique -&gt; analogique<a class="headerlink" href="#conversion-analogique-numerique-et-numerique-analogique" title="Permalink to this headline">#</a></h2>
+<p>La chaîne de conversion peut être représentée par le shéma suivant ;</p>
+<p><img alt="dac" src="../../../_images/dac.png" /></p>
+<p>source : <a class="reference external" href="http://www.insyte.website/pedagogie/sequencePeda/interagirAvecEnvironnement/cours/ConversionAnalogiqueNumerique.pdf">A Perez-Mas</a></p>
+<p>Ce TP se déroule dans le cadre du traitement numérique de l’information.</p>
+</div>
+<div class="section" id="le-logiciel-audacity">
+<h2>Le logiciel Audacity<a class="headerlink" href="#le-logiciel-audacity" title="Permalink to this headline">#</a></h2>
+<p>Pour ce TP, nous allons utiliser le logiciel open source (à sources ouvertes) <strong>Audacity</strong>. Audacity peut se télécharger et s’installer gratuitement sur toutes les plateformes (MacOS, Linux, Windows).</p>
+<p>Audacity est capable de :</p>
+<ul class="simple">
+<li><p>enregistrer des sons numériquement</p></li>
+<li><p>éditer des sons numériques dans les principaux formats son (mp3, wav, aiff, flac, ac3 et ogg)</p></li>
+<li><p>améliorer, modifier, retoucher des sons avec une bibliothèque d’outils</p></li>
+<li><p>utiliser la plupart des filtres numériques professionnels (réduction de bruit, suppression de fréquences, etc..)</p></li>
+</ul>
+<p>Voici <a class="reference external" href="https://jhroy.ca/audio/Guide%20Audacity.pdf">un manuel en français du logiciel</a></p>
+<p><em>Si vous désirez l’installer chez vous</em> : vous pouvez télécharger Audacity sur <a class="reference external" href="https://www.audacityteam.org/">le site officiel</a>.</p>
+</div>
 <div class="section" id="prise-en-main-du-logiciel-audacity-dirige">
 <h2>Prise en main du logiciel Audacity (dirigé)<a class="headerlink" href="#prise-en-main-du-logiciel-audacity-dirige" title="Permalink to this headline">#</a></h2>
+<p>Afin de mener à bien ce TP, vous devez brancher un casque audio sur votre ordinateur. Celui-ci vous est fourni par l’enseignant.</p>
 <ol class="simple">
 <li><p>Ouvrir le logiciel Audacity</p></li>
 <li><p>Comprendre les différents outils à disposition :</p>
@@ -647,12 +691,14 @@ title="Print to PDF"
 <li><p>Zoom sur la piste, zoom sur une sélection</p></li>
 <li><p>Outil sur les pistes (Mixer, rééchantillonner)</p></li>
 <li><p>Génération de sons : Tonalités carrée, sinusoïdales, en dents-de-scie</p></li>
-<li><p>Outils d’effets et de greffons</p></li>
+<li><p>Outils d’effets et greffons</p></li>
 </ul>
 </li>
 </ol>
-<div class="section" id="observer-l-echantillonnage-d-un-signal-sinusoidal">
-<h3>Observer l’échantillonnage d’un signal sinusoïdal<a class="headerlink" href="#observer-l-echantillonnage-d-un-signal-sinusoidal" title="Permalink to this headline">#</a></h3>
+<div class="section" id="observer-l-echantillonnage-d-un-signal-sinusoidal-genere">
+<h3>Observer l’échantillonnage d’un signal sinusoïdal généré<a class="headerlink" href="#observer-l-echantillonnage-d-un-signal-sinusoidal-genere" title="Permalink to this headline">#</a></h3>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">sinus</span></code> en mathématique est une fonction définie par <span class="math notranslate nohighlight">\(f(x) = sin(x)\)</span>. C’est une fonction périodique qui peut être utilisée pour représenter un son pur. Sa représentation graphique est la suivante :</p>
+<p><img alt="sin" src="../../../_images/sinus.png" /></p>
 <ol class="simple">
 <li><p>Générer une tonalité (Générer -&gt; Tonalité -&gt; Sinusoïde -&gt; Fréquence 440 Hz, Amplitude 0.8, durée 1 seconde</p></li>
 <li><p>Zoomer sur une partie du signal avec les combinaisons de touches CTRL+1 (zoom avant), CTRL+2 (normal) et CTRL+3 (zoom arrière)</p></li>
@@ -690,6 +736,7 @@ title="Print to PDF"
 <h2>Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">#</a></h2>
 <p>Après avoir échantillonné le signal, il faut attribuer à la valeur de chaque échantillon une valeur binaire. A chaque <strong>plage de valeurs mesurées</strong> correspond une valeur binaire. Ainsi un convertisseur analogique-digital codé sur 3 bits possèdera 8 niveaux de quantification :</p>
 <p><img alt="quantif" src="../../../_images/quantification.png" /></p>
+<p>Le quantum est le <strong>minimum de conversion représenté par la variation du bit de poid le plus faible</strong>.</p>
 </div>
 </div>
 
