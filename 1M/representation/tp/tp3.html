@@ -517,6 +517,11 @@ title="Print to PDF"
    Définition : compression de donnée
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-huffman">
+   Algorithme de Huffman
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -583,6 +588,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-compression-de-donnee">
    Définition : compression de donnée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-huffman">
+   Algorithme de Huffman
   </a>
  </li>
 </ul>
@@ -683,18 +693,22 @@ title="Print to PDF"
 <p>La <strong>compression de données</strong> est l’opération informatique <span class="math notranslate nohighlight">\(C()\)</span> qui consiste à faire passer une suite de bits <span class="math notranslate nohighlight">\(b_1\)</span> en en suite de bits <span class="math notranslate nohighlight">\(b_2\)</span> :</p>
 <div class="math notranslate nohighlight">
 \[
-b_2 &lt;- C(b_1)
+b_2 \leftarrow C(b_1)
 \]</div>
 <p>L’opération inverse <span class="math notranslate nohighlight">\(C^{-1}()\)</span> est appelée <strong>décompression de données</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
-b_1 &lt;- C^{-1}(b_2) = C(C^{-1}(b_1))
+b_1 \leftarrow C^{-1}(b_2) = C^{-1}C(b_1))
 \]</div>
 <p>Il existe deux types de compressions de données :</p>
 <ol class="simple">
 <li><p>La <strong>compression sans perte d’information</strong> qui permet de retrouver, après décompression, l’entier de la suite de bits non-compressée</p></li>
 <li><p>La <strong>compression avec perte d’information</strong> qui ne permet pas de retrouver, après décompression, la suite de bits non-compressée</p></li>
 </ol>
+</div>
+<div class="section" id="algorithme-de-huffman">
+<h2>Algorithme de Huffman<a class="headerlink" href="#algorithme-de-huffman" title="Permalink to this headline">#</a></h2>
+<p>Parmis les types de compression de donnée sans perte d’information, on trouve <strong>l’algorithme de Huffman</strong>. Il repose sur un modèle statistique.</p>
 </div>
 </div>
 
