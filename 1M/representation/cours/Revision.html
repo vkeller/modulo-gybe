@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="TP 1 : les images matricielles" href="../tp/tp1.html" />
-    <link rel="prev" title="Cours 5 : représentation numérique : une synthèse" href="Cours5.html" />
+    <link rel="prev" title="Cours 4 : Opérations en binaire et en hexadécimal" href="Cours4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -153,11 +153,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Cours4.html">
      Cours 4 : Opérations en binaire et en hexadécimal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.html">
-     Cours 5 : représentation numérique : une synthèse
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -530,12 +525,24 @@ title="Print to PDF"
      Le codage ASCII
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-2">
+     Exercice 2
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#les-images-matricielles">
    Les images matricielles
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-3">
+     Exercice 3
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-son">
@@ -543,11 +550,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#echantillonnage">
-     Echantillonnage
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalites">
+   Généralités
+  </a>
  </li>
 </ul>
 
@@ -630,12 +642,24 @@ title="Print to PDF"
      Le codage ASCII
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-2">
+     Exercice 2
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#les-images-matricielles">
    Les images matricielles
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-3">
+     Exercice 3
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-son">
@@ -643,11 +667,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#echantillonnage">
-     Echantillonnage
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalites">
+   Généralités
+  </a>
  </li>
 </ul>
 
@@ -845,6 +874,14 @@ title="Print to PDF"
 <p>La table de conversion décimal (colonne violette) - hexadécimal (colonne rouge) - caractère (colonne turquoise) se décline ainsi :</p>
 <p><img alt="ASCIITable" src="https://vkeller.github.io/modulo-gybe/_images/ASCII.png" /></p>
 </div>
+<div class="section" id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Quelle est la valeur en ASCII de la suite <span class="math notranslate nohighlight">\(71_{10}, 121_{10}, 109_{10}, 110_{10}, 97_{10}, 115_{10}, 101_{10}\)</span> ?</p></li>
+<li><p>Quelle est la valeur en ASCII de la suite <span class="math notranslate nohighlight">\(1000101_2, 1100101_2, 1100001_2, 1110101_2, 1101100_2, 1101001_2, 1100101_2, 1110101_2\)</span> ?</p></li>
+<li><p>Quelle est la valeur en ASCII de la suite <span class="math notranslate nohighlight">\(62_{16}, 69_{16}, 6E_{16}, 61_{16}, 69_{16}, 72_{16}, 65_{16}\)</span> ?</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="les-images-matricielles">
 <h2>Les images matricielles<a class="headerlink" href="#les-images-matricielles" title="Permalink to this headline">#</a></h2>
@@ -899,6 +936,15 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>La valeur décimale (par exemple <span class="math notranslate nohighlight">\(255\)</span>) peut se convertir en hexadécimal avec ce qui a été vu plus haut</p>
+<div class="section" id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Quel est le nombre maximum de niveaux de gris peut-on coder avec le système RGB ?</p></li>
+<li><p>Sans utiliser de logiciel externe, quelle est la couleur composante dominante de la couleur <span class="math notranslate nohighlight">\((100_{10},240_{10},10_{10})\)</span> ?</p></li>
+<li><p>Quelle est la valeur en décimal de la couleur <span class="math notranslate nohighlight">\((8F_{16}, 0F_{16}, 22_{16})\)</span> et quelle est la couleur composante dominante ?</p></li>
+<li><p>Quelle est la valeur en décimal de la couleur <span class="math notranslate nohighlight">\((10001111_2, 00001111_2, 00100010_2)\)</span></p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="le-son">
 <h2>Le son<a class="headerlink" href="#le-son" title="Permalink to this headline">#</a></h2>
@@ -908,9 +954,18 @@ title="Print to PDF"
 <li><p>Quantification</p></li>
 <li><p>Encodage</p></li>
 </ol>
-<div class="section" id="echantillonnage">
-<h3>Echantillonnage<a class="headerlink" href="#echantillonnage" title="Permalink to this headline">#</a></h3>
+<div class="section" id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Quelle est la plage de fréquences par l’oreille humaine ?</p></li>
+<li><p>Si la fréquence maximum audible est de <span class="math notranslate nohighlight">\(20\)</span> KHz, quelle est la fréquence d’échantillonnage idéale ?</p></li>
+<li><p>Que se passe-t-il si la fréquence d’échantillonnage est trop basse, quelles sont les fréquences qui ne sont pas codées ?</p></li>
+</ol>
 </div>
+</div>
+<div class="section" id="generalites">
+<h2>Généralités<a class="headerlink" href="#generalites" title="Permalink to this headline">#</a></h2>
+<p>Afin qu’un <strong>système d’exploitation</strong> reconnaisse une suite de bits, qu’il puisse discriminer entre un caractère, un entier, une image ou un son, il faut ajouter au fichier un <strong>en-tête</strong> et qui contient des méta-données sur le format du fichier.</p>
 </div>
 </div>
 
@@ -941,11 +996,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Cours5.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Cours4.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Cours 5 : représentation numérique : une synthèse</p>
+            <p class="prev-next-title">Cours 4 : Opérations en binaire et en hexadécimal</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../tp/tp1.html" title="next page">
