@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Algorithmique" href="../../algo/index.html" />
@@ -472,8 +474,47 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taille-d-un-fichier">
-   Taille d’un fichier
+  <a class="reference internal nav-link" href="#definition-taille-d-un-fichier">
+   Définition : Taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suffixes-pour-les-grandes-valeurs">
+     Suffixes pour les grandes valeurs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimation-de-la-taille-d-un-fichier">
+   Estimation de la taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-texte-ascii">
+     Fichier texte ASCII
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-image-ppm-et-pgm">
+     Fichier image PPM et PGM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-son">
+     Fichier son
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-compression-de-donnee">
+   Définition : compression de donnée
   </a>
  </li>
 </ul>
@@ -501,8 +542,47 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taille-d-un-fichier">
-   Taille d’un fichier
+  <a class="reference internal nav-link" href="#definition-taille-d-un-fichier">
+   Définition : Taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suffixes-pour-les-grandes-valeurs">
+     Suffixes pour les grandes valeurs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimation-de-la-taille-d-un-fichier">
+   Estimation de la taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-texte-ascii">
+     Fichier texte ASCII
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-image-ppm-et-pgm">
+     Fichier image PPM et PGM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-son">
+     Fichier son
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-compression-de-donnee">
+   Définition : compression de donnée
   </a>
  </li>
 </ul>
@@ -524,9 +604,97 @@ title="Print to PDF"
 <li><p>Comprendre le processus de compression avec et sans perte</p></li>
 </ol>
 </div>
-<div class="section" id="taille-d-un-fichier">
-<h2>Taille d’un fichier<a class="headerlink" href="#taille-d-un-fichier" title="Permalink to this headline">#</a></h2>
-<p>La taille d’un fichier se mesure en <strong>octets</strong>.</p>
+<div class="section" id="definition-taille-d-un-fichier">
+<h2>Définition : Taille d’un fichier<a class="headerlink" href="#definition-taille-d-un-fichier" title="Permalink to this headline">#</a></h2>
+<p>La taille d’un fichier mesure la quantité de données du fichier. Elle se mesure en <strong>octets</strong> (à laquelle on peut ajouter un suffixe). Alternativement, elle donne une idée de la quantité de stockage requise pour le stocker.</p>
+<div class="section" id="suffixes-pour-les-grandes-valeurs">
+<h3>Suffixes pour les grandes valeurs<a class="headerlink" href="#suffixes-pour-les-grandes-valeurs" title="Permalink to this headline">#</a></h3>
+<p>Dans le <a class="reference external" href="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf/fcf090b2-04e6-88cc-1149-c3e029ad8232">Système international d’unités</a>, il est d’usage d’utiliser des préfixes que l’on ajoute avant l’unité.</p>
+<p>Ainsi :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Nom</p></th>
+<th class="text-align:center head"><p>Symbole (fr/en)</p></th>
+<th class="text-align:center head"><p>Valeur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Kilooctet</p></td>
+<td class="text-align:center"><p>ko (kB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{3}\)</span> octets = 8 kb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>mégaoctet</p></td>
+<td class="text-align:center"><p>Mo (MB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{6}\)</span> octets = 8 Mb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>gigaoctet</p></td>
+<td class="text-align:center"><p>Go (GB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{9}\)</span> octets = 8 Gb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>téraoctet</p></td>
+<td class="text-align:center"><p>To (TB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{12}\)</span> octets = 8 Tb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>pétaoctet</p></td>
+<td class="text-align:center"><p>Po (PB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{15}\)</span> octets = 8 Pb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>exaoctet</p></td>
+<td class="text-align:center"><p>Eo (EB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{18}\)</span> octets = 8 Eb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>zettaoctet</p></td>
+<td class="text-align:center"><p>Zo (ZB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{21}\)</span> octets = 8 Zb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>yottaoctet</p></td>
+<td class="text-align:center"><p>Yo (YB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{24}\)</span> octets = 8 Yb</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attention : lorsqu’on parle de capacité, on préférera le terme français “octet” plutôt que byte qui est phonétiquement trop proche de bit</strong></p>
+</div>
+</div>
+<div class="section" id="estimation-de-la-taille-d-un-fichier">
+<h2>Estimation de la taille d’un fichier<a class="headerlink" href="#estimation-de-la-taille-d-un-fichier" title="Permalink to this headline">#</a></h2>
+<div class="section" id="fichier-texte-ascii">
+<h3>Fichier texte ASCII<a class="headerlink" href="#fichier-texte-ascii" title="Permalink to this headline">#</a></h3>
+<p>On sait que chaque caractère ASCII est codé sur 7 bits. Mais un ordinateur <strong>ne travaille qu’avec des octets</strong>. Ainsi, en comptant le nombre de caractères d’un fichier, on peut estimer sa taille.</p>
+<p><em>Terminal</em> : dans un terminal, on peut utilisé la fonciton <code class="docutils literal notranslate"><span class="pre">wc</span></code> qui donne le nombre exact de caractères d’un fichier. Par exemple : <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-c</span> <span class="pre">&lt;</span> <span class="pre">AuClairDeLaLune.txt</span></code></p>
+</div>
+<div class="section" id="fichier-image-ppm-et-pgm">
+<h3>Fichier image PPM et PGM<a class="headerlink" href="#fichier-image-ppm-et-pgm" title="Permalink to this headline">#</a></h3>
+<p>Sur un fichier en niveaux de gris (PGM) et en couleurs (PGM), la taille du fichier peut être estimée avec la taille de l’image ainsi que le mode de codage des couleurs (<span class="math notranslate nohighlight">\([0,1]\)</span> pour <span class="math notranslate nohighlight">\(P1\)</span> donc 1 octet, <span class="math notranslate nohighlight">\([0,...,255]\)</span> pour <span class="math notranslate nohighlight">\(P2\)</span> donc 1 octet, <span class="math notranslate nohighlight">\([0,...,255;0,...,255;0,...,255]\)</span> pour <span class="math notranslate nohighlight">\(P3\)</span> donc 3 octets,</p>
+</div>
+<div class="section" id="fichier-son">
+<h3>Fichier son<a class="headerlink" href="#fichier-son" title="Permalink to this headline">#</a></h3>
+<p>Un fichier son non-compressé aura une taille multiple par la fréquence d’échantillonnage, la durée du morceau ainsi et le nombre de bits de la quantification.</p>
+</div>
+</div>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Téléchargez les fichiers texte, image et son sur votre ordinateur. Pour chacun d’eux,</p></li>
+</ol>
+</div>
+<div class="section" id="definition-compression-de-donnee">
+<h2>Définition : compression de donnée<a class="headerlink" href="#definition-compression-de-donnee" title="Permalink to this headline">#</a></h2>
+<p>La <strong>compression de données</strong> est l’opération informatique <span class="math notranslate nohighlight">\(C()\)</span> qui consiste à faire passer une suite de bits <span class="math notranslate nohighlight">\(b_1\)</span> en en suite de bits <span class="math notranslate nohighlight">\(b_2\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+b_2 &lt;- C(b_1)
+\]</div>
+<p>L’opération inverse <span class="math notranslate nohighlight">\(C^{-1}()\)</span> est appelée <strong>décompression de données</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+b_1 &lt;- C^{-1}(b_2) = C(C^{-1}(b_1))
+\]</div>
+<p>Il existe deux types de compressions de données :</p>
+<ol class="simple">
+<li><p>La <strong>compression sans perte d’information</strong> qui permet de retrouver, après décompression, l’entier de la suite de bits non-compressée</p></li>
+<li><p>La <strong>compression avec perte d’information</strong> qui ne permet pas de retrouver, après décompression, la suite de bits non-compressée</p></li>
+</ol>
 </div>
 </div>
 
