@@ -14,6 +14,8 @@ parts:
       - file: 1M/representation/cours/Cours2
       - file: 1M/representation/cours/Cours3
       - file: 1M/representation/cours/Cours4
+#      - file: 1M/representation/cours/Cours5
+      - file: 1M/representation/cours/Revision
       - file: 1M/representation/tp/tp1
       - file: 1M/representation/tp/tp2
     - file: 1M/algo/index
