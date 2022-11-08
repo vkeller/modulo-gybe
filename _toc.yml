@@ -24,6 +24,7 @@ parts:
       - file: 1M/algo/cours/Cours1
       - file: 1M/algo/cours/Cours2
       - file: 1M/algo/cours/Cours3
+      - file: 1M/algo/cours/Cours4
     - file: 1M/prog/index
       sections:
       - file: 1M/prog/intro1/intro1
