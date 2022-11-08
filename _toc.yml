@@ -27,6 +27,7 @@ parts:
       sections:
       - file: 1M/prog/intro1/intro1
       - file: 1M/prog/intro2/intro2
+      - file: 1M/prog/algos/syracuse/Syracuse
       - file: 1M/prog/conditions/Introduction
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/boucles/boucles1
