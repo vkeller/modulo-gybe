@@ -49,9 +49,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Programmation" href="../../prog/index.html" />
+    <link rel="next" title="Cours 3 : La machine de Turing" href="Cours3.html" />
     <link rel="prev" title="Cours 1 : Introduction à l’algorithmique" href="Cours1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -195,6 +197,16 @@ const thebe_selector_output = ".output, .cell_output"
      Cours 2 : Des algorigrammes aux algorithmes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours3.html">
+     Cours 3 : La machine de Turing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours4.html">
+     Cours 4 : Complexité dans les algorithmes
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -215,6 +227,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../prog/intro2/intro2.html">
      Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/algos/syracuse/Syracuse.html">
+     Conjecture de Syracuse
     </a>
    </li>
    <li class="toctree-l2">
@@ -536,6 +553,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-un-peu-de-maths">
+   Exercice 5 (un peu de maths)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conjecture-de-syracuse">
    Conjecture de Syracuse
   </a>
@@ -609,6 +631,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-algorithme-recursif">
    Définition : algorithme récursif
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-un-peu-de-maths">
+   Exercice 5 (un peu de maths)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -687,6 +714,16 @@ title="Print to PDF"
 <h2>Définition : algorithme récursif<a class="headerlink" href="#definition-algorithme-recursif" title="Permalink to this headline">#</a></h2>
 <p>Un <strong>algorithme récursif</strong> est un algorithme qui fait appel à lui-même. En d’autres termes, l’algorithme résoud un problème en calculant des problèmes plus petits du même problème.</p>
 </div>
+<div class="section" id="exercice-5-un-peu-de-maths">
+<h2>Exercice 5 (un peu de maths)<a class="headerlink" href="#exercice-5-un-peu-de-maths" title="Permalink to this headline">#</a></h2>
+<p>Dessinez l’algorigramme qui calcule la <strong>suite de Fibonacci</strong> définie par :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(Fib_0 = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Fib_1 = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Fib_n = F_{n-1} + Fib_{n-2}\)</span></p></li>
+</ol>
+<p><img alt="fibo" src="../../../_images/fibo.png" /></p>
+</div>
 <div class="section" id="conjecture-de-syracuse">
 <h2>Conjecture de Syracuse<a class="headerlink" href="#conjecture-de-syracuse" title="Permalink to this headline">#</a></h2>
 <p>En mathématiques, une <strong>conjecture</strong> est un énoncé dont il n’existe pas de <strong>démonstration</strong>. Celle de Syracuse a fait beaucoup parler d’elle tant elle est <strong>simplissime</strong> dans sa formulation mais que personne n’a pu la démontrer depuis sa formulation en 1928.</p>
@@ -736,10 +773,10 @@ title="Print to PDF"
             <p class="prev-next-title">Cours 1 : Introduction à l’algorithmique</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../prog/index.html" title="next page">
+    <a class='right-next' id="next-link" href="Cours3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Programmation</p>
+        <p class="prev-next-title">Cours 3 : La machine de Turing</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
