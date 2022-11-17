@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Programmation" href="../../prog/index.html" />
+    <link rel="next" title="Cours 6 : Algorithmes évolutionnistes" href="Cours6.html" />
     <link rel="prev" title="Cours 4 : Complexité dans les algorithmes" href="Cours4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Cours3.html">
-     Cours 3 : La machine de Turing
+     Cours 3 : Les jeux de Nim
     </a>
    </li>
    <li class="toctree-l2">
@@ -208,6 +208,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Cours 5 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours6.html">
+     Cours 6 : Algorithmes évolutionnistes
     </a>
    </li>
   </ul>
@@ -512,6 +517,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#algorithmes-de-recherche">
    Algorithmes de recherche
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-sequentielle">
+     Recherche séquentielle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-dichotomique">
+     Recherche dichotomique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithmes-de-tri">
+   Algorithmes de tri
+  </a>
  </li>
 </ul>
 
@@ -541,6 +563,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#algorithmes-de-recherche">
    Algorithmes de recherche
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-sequentielle">
+     Recherche séquentielle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-dichotomique">
+     Recherche dichotomique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithmes-de-tri">
+   Algorithmes de tri
+  </a>
  </li>
 </ul>
 
@@ -560,7 +599,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>connaître quelques classes d’algorithmes classiques:</p>
 <ul>
-<li><p>algorithmes de tri</p></li>
+<li><p>algorithmes de recherche</p></li>
 <li><p>algorithmes de recherche</p></li>
 </ul>
 </li>
@@ -568,6 +607,25 @@ title="Print to PDF"
 </div>
 <div class="section" id="algorithmes-de-recherche">
 <h2>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>algorithme de recherche</strong> consiste à trouver une <strong>cible</strong> parmi une liste d’éléments. Par exemple : la liste est : <code class="docutils literal notranslate"><span class="pre">[1,4,67,34,109,69,23]</span></code> et la cible <code class="docutils literal notranslate"><span class="pre">69</span></code>.</p>
+<p>Les algorithmes de recherche peuvent se classer en deux catégories:</p>
+<ol class="simple">
+<li><p>Recherche dans des problèmes classiques</p></li>
+<li><p>Recherche dans des problèmes complexes</p></li>
+</ol>
+<p>S’agissant des <strong>problèmes complexes</strong>, les solutions dépassent le cadre de ce cours</p>
+<div class="section" id="recherche-sequentielle">
+<h3>Recherche séquentielle<a class="headerlink" href="#recherche-sequentielle" title="Permalink to this headline">#</a></h3>
+<p>La recherche linéaire consiste à parcourir chaque élément de la liste et le comparer à la cible.</p>
+</div>
+<div class="section" id="recherche-dichotomique">
+<h3>Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Permalink to this headline">#</a></h3>
+<p>La recherche dichotomique consiste à rechercher la cible dans la liste <strong>triée</strong> en divisant la liste par deux et en comparant la cible avec les deux éléments bornes des sous-listes. Si la cible est égale, l’algorithme s’arrête, sinon la recherche continue sur les moitiés de sous-listes.</p>
+</div>
+</div>
+<div class="section" id="algorithmes-de-tri">
+<h2>Algorithmes de tri<a class="headerlink" href="#algorithmes-de-tri" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>algorithme de tri</strong> permet d’organiser une liste d’éléments selon une relation d’ordre déterminée. Par exemple, on aimerait trier la liste <code class="docutils literal notranslate"><span class="pre">[1,4,67,34,109,69,23]</span></code> du plus petit élément au plus grand : <code class="docutils literal notranslate"><span class="pre">[1,4,23,34,67,69,109]</span></code></p>
 </div>
 </div>
 
@@ -605,10 +663,10 @@ title="Print to PDF"
             <p class="prev-next-title">Cours 4 : Complexité dans les algorithmes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../prog/index.html" title="next page">
+    <a class='right-next' id="next-link" href="Cours6.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Programmation</p>
+        <p class="prev-next-title">Cours 6 : Algorithmes évolutionnistes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
