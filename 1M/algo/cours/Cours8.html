@@ -632,6 +632,29 @@ title="Print to PDF"
 <li><p>SINON elle n’est pas bisextile</p></li>
 </ul>
 <p><img alt="bisextile" src="../../../_images/bisextile.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
+        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="etape-1-determiner-la-balise-du-siecle">
 <h2>Etape 1 : Déterminer la balise du siècle<a class="headerlink" href="#etape-1-determiner-la-balise-du-siecle" title="Permalink to this headline">#</a></h2>
