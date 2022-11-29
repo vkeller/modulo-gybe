@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours 7 : Des algorigrammes à leur programmation &#8212; Education Numérique Ecole de maturité</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Programmation" href="../../prog/index.html" />
+    <link rel="prev" title="Cours 6 : Algorithmes évolutionnistes" href="Cours6.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../representation/index.html">
+   Représentation des données
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours1.html">
+     Cours 1 binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours2.html">
+     Cours 2  codage de caractères
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours3.html">
+     Cours 3 : Du monde physique au monde numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours4.html">
+     Cours 4 : Opérations en binaire et en hexadécimal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Revision.html">
+     Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp1.html">
+     TP 1 : les images matricielles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp2.html">
+     TP 2 : Le son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp3.html">
+     TP 3 : Compression de fichiers et types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Algorithmique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours1.html">
+     Cours 1 : Introduction à l’algorithmique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours2.html">
+     Cours 2 : Des algorigrammes aux algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours3.html">
+     Cours 3 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours4.html">
+     Cours 4 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours5.html">
+     Cours 5 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Cours6.html">
+     Cours 6 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Cours 7 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../prog/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro1/intro1.html">
+     Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro2/intro2.html">
+     Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/algos/syracuse/Syracuse.html">
+     Conjecture de Syracuse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/conditions/Introduction.html">
+     Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/dessinsanimes/dessins.html">
+     Les boucles : dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/boucles1.html">
+     Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/boucles2.html">
+     Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/types/Types.html">
+     Notions de types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/tableaux/Tableaux.html">
+     Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/files/LesFiles.html">
+     Piles et files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/arbres/LesArbres.html">
+     Arbres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/dictionnaires/Dictionnaires2.html">
+     Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/motdepasse/MotsDePasse.html">
+     Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/hacking/hacking-romain.html">
+     Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/fichiers/SystemeDeFichiers.html">
+     Le système de fichiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/Cours7.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/algo/cours/Cours7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-structures-de-controle-conditions">
+   Les structures de contrôle (CONDITIONS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-structures-repetitives-boucles">
+   Les structures répétitives (BOUCLES)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-nombre-de-repetitions-est-connnu-for">
+     Le nombre de répétitions est connnu :
+     <strong>
+      FOR
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordre-decroissant-dans-la-sequence-range">
+       Ordre décroissant dans la séquence
+       <strong>
+        range()
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-nombre-de-repetitions-n-est-pas-connu-while">
+     Le nombre de répétitions n’est pas connu :
+     <strong>
+      WHILE
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repeter-jusqu-a">
+     Répéter … jusqu’à …
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tant-que-faire-fin-tant-que">
+     tant que … faire … fin tant que
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attention-boucles-infinies">
+     ATTENTION : Boucles infinies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Cours 7 : Des algorigrammes à leur programmation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-structures-de-controle-conditions">
+   Les structures de contrôle (CONDITIONS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-structures-repetitives-boucles">
+   Les structures répétitives (BOUCLES)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-nombre-de-repetitions-est-connnu-for">
+     Le nombre de répétitions est connnu :
+     <strong>
+      FOR
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordre-decroissant-dans-la-sequence-range">
+       Ordre décroissant dans la séquence
+       <strong>
+        range()
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-nombre-de-repetitions-n-est-pas-connu-while">
+     Le nombre de répétitions n’est pas connu :
+     <strong>
+      WHILE
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repeter-jusqu-a">
+     Répéter … jusqu’à …
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tant-que-faire-fin-tant-que">
+     tant que … faire … fin tant que
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attention-boucles-infinies">
+     ATTENTION : Boucles infinies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="python" src="../../../_images/python3.jpg" /></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="cours-7-des-algorigrammes-a-leur-programmation">
+<h1>Cours 7 : Des algorigrammes à leur programmation<a class="headerlink" href="#cours-7-des-algorigrammes-a-leur-programmation" title="Permalink to this headline">#</a></h1>
+<div class="section" id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Être capable de programmer un algorigramme simple en Python 3</p></li>
+</ul>
+</div>
+<div class="section" id="les-structures-de-controle-conditions">
+<h2>Les structures de contrôle (CONDITIONS)<a class="headerlink" href="#les-structures-de-controle-conditions" title="Permalink to this headline">#</a></h2>
+<p><img alt="condition" src="../../../_images/condition.jpg" /></p>
+<p>En Python, une structure de contrôle, une condition s’écrit à l’aide des mots-clefs <code class="docutils literal notranslate"><span class="pre">if</span></code>,<code class="docutils literal notranslate"><span class="pre">else</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous êtes mineur&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous êtes majeur&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vous êtes majeur
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-structures-repetitives-boucles">
+<h2>Les structures répétitives (BOUCLES)<a class="headerlink" href="#les-structures-repetitives-boucles" title="Permalink to this headline">#</a></h2>
+<p>Une <strong>boucle</strong> en programmation est une <strong>structure de contrôle</strong> permettant de répéter une ou plusieurs instructions sur la base d’une <strong>condition booléenne</strong></p>
+<div class="section" id="le-nombre-de-repetitions-est-connnu-for">
+<h3>Le nombre de répétitions est connnu : <strong>FOR</strong><a class="headerlink" href="#le-nombre-de-repetitions-est-connnu-for" title="Permalink to this headline">#</a></h3>
+<p><img alt="boucle_for" src="../../../_images/boucle_for.jpg" /></p>
+<p>Une telle boucle se déclare en Python en utilisant le mot-clef <code class="docutils literal notranslate"><span class="pre">for</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="p">[</span><span class="n">sequence</span><span class="p">]:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>La <code class="docutils literal notranslate"><span class="pre">sequence</span></code> représente une suite d’index. Elle se déclare en Python à l’aide du mot-clef <code class="docutils literal notranslate"><span class="pre">range()</span></code> qui est une fonction qui retourne la séquence.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BorneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">BorneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">BorneInf</span><span class="p">,</span><span class="n">BorneSup</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ordre-decroissant-dans-la-sequence-range">
+<h4>Ordre décroissant dans la séquence <strong>range()</strong><a class="headerlink" href="#ordre-decroissant-dans-la-sequence-range" title="Permalink to this headline">#</a></h4>
+<p>Il est évident qu’une boucle dont le nombre de répétitions est connue peut se faire dans l’ordre décroissant.</p>
+<p><img alt="forDecroissant" src="../../../_images/boucle_for_decroissant.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BorneInf</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">BorneSup</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">BorneInf</span><span class="p">,</span><span class="n">BorneSup</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-nombre-de-repetitions-n-est-pas-connu-while">
+<h3>Le nombre de répétitions n’est pas connu : <strong>WHILE</strong><a class="headerlink" href="#le-nombre-de-repetitions-n-est-pas-connu-while" title="Permalink to this headline">#</a></h3>
+<p>Il existe deux cas différents lorsque le nombre de répétitions n’est pas connu :</p>
+<ol class="simple">
+<li><p>répéter un ensemble d’instructions tant que la condition est vraie</p></li>
+<li><p>tant qu’une condition est vraie, alors on répète un ensemble d’instructions</p></li>
+</ol>
+<p>Les deux sont très proches. La petite différence est que la seconde <strong>s’exécute au moins une fois</strong></p>
+</div>
+<div class="section" id="repeter-jusqu-a">
+<h3>Répéter … jusqu’à …<a class="headerlink" href="#repeter-jusqu-a" title="Permalink to this headline">#</a></h3>
+<p><img alt="while" src="../../../_images/while.jpg" /></p>
+<p>en Python, une boucle de répétition tant que s’écrit avec le mot-clef <code class="docutils literal notranslate"><span class="pre">while</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tant-que-faire-fin-tant-que">
+<h3>tant que … faire … fin tant que<a class="headerlink" href="#tant-que-faire-fin-tant-que" title="Permalink to this headline">#</a></h3>
+<p>En Python 3, il n’existe pas de construction formelle de ce type de boucle (ce qui est le cas dans d’autres langages). Il est par contre relativement aisé de la simuler aussi avec une boucle while.</p>
+<p><img alt="while2" src="../../../_images/while2.jpg" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attention-boucles-infinies">
+<h3>ATTENTION : Boucles infinies<a class="headerlink" href="#attention-boucles-infinies" title="Permalink to this headline">#</a></h3>
+<p>Il est tout à fait possible d’écrire une boucle infinie. Cela signifie que le programme n’en sortira jamais et ne se terminera jamais.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+    <span class="n">etc</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>Le seul moyen de quitter une boucle infinie est de <strong>combiner une boucle while avec une condition de sortie à l’intérieur de la boucle</strong> à l’aide du mot-clef <code class="docutils literal notranslate"><span class="pre">break</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">break</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/algo/cours"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Cours6.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Cours 6 : Algorithmes évolutionnistes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../prog/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Programmation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
