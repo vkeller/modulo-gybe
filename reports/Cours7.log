@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "/home/vkeller/.local/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/vkeller/.local/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import time
+
+eteint = "éteint"
+allume = "allumé"
+
+feu_vert = eteint
+feu_orange = eteint
+feu_rouge = eteint
+n = 0
+# La boucle va se répéter 3 fois.
+while (n<3) :
+    feu_vert = allume
+    feu_orange = eteint
+    feu_rouge = eteint
+    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
+    time.sleep(4)
+    feu_vert = eteint
+    feu_orange = allume
+    feu_rouge = eteint
+    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
+    time.sleep(1)
+    feu_vert = eteint
+    feu_orange = eteint
+    feu_rouge = allume
+    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
+    time.sleep(4)
+    n+=1
+
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
+Input [0;32mIn [7][0m, in [0;36m<cell line: 11>[0;34m()[0m
+[1;32m     24[0m feu_rouge [38;5;241m=[39m allume
+[1;32m     25[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mLe feu vert est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_vert[38;5;241m+[39m[38;5;124m"[39m[38;5;124m, le feu orange est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_orange[38;5;241m+[39m[38;5;124m"[39m[38;5;124m le feu rouge est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_rouge)
+[0;32m---> 26[0m [43mtime[49m[38;5;241;43m.[39;49m[43msleep[49m[43m([49m[38;5;241;43m4[39;49m[43m)[49m
+[1;32m     27[0m n[38;5;241m+[39m[38;5;241m=[39m[38;5;241m1[39m
+
+[0;31mKeyboardInterrupt[0m: 
+KeyboardInterrupt: 
+

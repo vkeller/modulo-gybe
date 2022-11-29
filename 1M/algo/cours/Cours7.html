@@ -593,6 +593,28 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algorithme-1-le-four">
+     Algorithme 1 : le four
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Algorithme 2 : le feu de signalisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Algorithme 3 : la piscine
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -687,6 +709,28 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#algorithme-3-la-piscine">
+     Algorithme 3 : la piscine
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algorithme-1-le-four">
+     Algorithme 1 : le four
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Algorithme 2 : le feu de signalisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
      Algorithme 3 : la piscine
     </a>
    </li>
@@ -937,10 +981,145 @@ title="Print to PDF"
 <li><p>Feu vert éteint, feu orange allumé, feu rouge éteint : <strong>5 secondes</strong></p></li>
 <li><p>Feu vert éteint, feu orange éteint, feu rouge allumé : <strong>20 secondes</strong></p></li>
 </ol>
+<p>Pour le code Python, il est possible d’utiliser la fonction <code class="docutils literal notranslate"><span class="pre">sleep(seconds)</span></code> du module <code class="docutils literal notranslate"><span class="pre">time</span></code>. Par exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="algorithme-3-la-piscine">
 <h3>Algorithme 3 : la piscine<a class="headerlink" href="#algorithme-3-la-piscine" title="Permalink to this headline">#</a></h3>
 <p><img alt="piscine" src="https://vkeller.github.io/modulo-gybe/_images/piscine.jpg" /></p>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<div class="section" id="algorithme-1-le-four">
+<h3>Algorithme 1 : le four<a class="headerlink" href="#algorithme-1-le-four" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thermostat</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">thermostat</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; minutes, le four est à &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; °C&quot;</span><span class="p">)</span>
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Après 0 minutes, le four est à 0 °C
+Après 1 minutes, le four est à 10 °C
+Après 2 minutes, le four est à 20 °C
+Après 3 minutes, le four est à 30 °C
+Après 4 minutes, le four est à 40 °C
+Après 5 minutes, le four est à 50 °C
+Après 6 minutes, le four est à 60 °C
+Après 7 minutes, le four est à 70 °C
+Après 8 minutes, le four est à 80 °C
+Après 9 minutes, le four est à 90 °C
+Après 10 minutes, le four est à 100 °C
+Après 11 minutes, le four est à 110 °C
+Après 12 minutes, le four est à 120 °C
+Après 13 minutes, le four est à 130 °C
+Après 14 minutes, le four est à 140 °C
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Algorithme 2 : le feu de signalisation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">eteint</span> <span class="o">=</span> <span class="s2">&quot;éteint&quot;</span>
+<span class="n">allume</span> <span class="o">=</span> <span class="s2">&quot;allumé&quot;</span>
+
+<span class="n">feu_vert</span> <span class="o">=</span> <span class="n">eteint</span>
+<span class="n">feu_orange</span> <span class="o">=</span> <span class="n">eteint</span>
+<span class="n">feu_rouge</span> <span class="o">=</span> <span class="n">eteint</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># La boucle va se répéter 3 fois.</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">feu_vert</span> <span class="o">=</span> <span class="n">allume</span>
+    <span class="n">feu_orange</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="n">feu_rouge</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le feu vert est &quot;</span><span class="o">+</span><span class="n">feu_vert</span><span class="o">+</span><span class="s2">&quot;, le feu orange est &quot;</span><span class="o">+</span><span class="n">feu_orange</span><span class="o">+</span><span class="s2">&quot; le feu rouge est &quot;</span><span class="o">+</span><span class="n">feu_rouge</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">feu_vert</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="n">feu_orange</span> <span class="o">=</span> <span class="n">allume</span>
+    <span class="n">feu_rouge</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le feu vert est &quot;</span><span class="o">+</span><span class="n">feu_vert</span><span class="o">+</span><span class="s2">&quot;, le feu orange est &quot;</span><span class="o">+</span><span class="n">feu_orange</span><span class="o">+</span><span class="s2">&quot; le feu rouge est &quot;</span><span class="o">+</span><span class="n">feu_rouge</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">feu_vert</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="n">feu_orange</span> <span class="o">=</span> <span class="n">eteint</span>
+    <span class="n">feu_rouge</span> <span class="o">=</span> <span class="n">allume</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le feu vert est &quot;</span><span class="o">+</span><span class="n">feu_vert</span><span class="o">+</span><span class="s2">&quot;, le feu orange est &quot;</span><span class="o">+</span><span class="n">feu_orange</span><span class="o">+</span><span class="s2">&quot; le feu rouge est &quot;</span><span class="o">+</span><span class="n">feu_rouge</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Algorithme 3 : la piscine<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_personne1</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">age_personne2</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">age_personne1</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La personne agée de &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age_personne1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; entre dans la piscine&quot;</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">age_personne2</span> <span class="o">&gt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La personne agée de &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age_personne1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; entre dans la piscine&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La personne 2 n&#39;entre pas dans la piscine&quot;</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">age_personne1</span>
+    <span class="n">age_personne1</span> <span class="o">=</span> <span class="n">age_personne2</span>
+    <span class="n">age_personne2</span> <span class="o">=</span> <span class="n">age</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La personne agée de 6 entre dans la piscine
+La personne agée de 12 entre dans la piscine
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
