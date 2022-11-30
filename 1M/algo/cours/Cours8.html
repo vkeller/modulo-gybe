@@ -543,6 +543,28 @@ title="Print to PDF"
    Etape 1 : Déterminer la balise du siècle
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etape-2-calculer-le-jour-cle-de-l-annee">
+   Etape 2 : Calculer le jour-clé de l’année
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">
+   Etape 3 : Choisir un jour-pivot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemples">
+   Exemples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#janvier-1967">
+     18 janvier 1967
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -586,6 +608,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#etape-1-determiner-la-balise-du-siecle">
    Etape 1 : Déterminer la balise du siècle
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etape-2-calculer-le-jour-cle-de-l-annee">
+   Etape 2 : Calculer le jour-clé de l’année
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">
+   Etape 3 : Choisir un jour-pivot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemples">
+   Exemples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#janvier-1967">
+     18 janvier 1967
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -658,6 +702,148 @@ title="Print to PDF"
 </div>
 <div class="section" id="etape-1-determiner-la-balise-du-siecle">
 <h2>Etape 1 : Déterminer la balise du siècle<a class="headerlink" href="#etape-1-determiner-la-balise-du-siecle" title="Permalink to this headline">#</a></h2>
+<p>Le cycle des dates et des jours de semaine du calendrier grégorien se reproduit à l’identique tous les 4 siècles</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Siècles</p></th>
+<th class="text-align:center head"><p>1600<br>2000<br>2400<br>…<br></p></th>
+<th class="text-align:center head"><p>1700<br>2100<br>2500<br>…<br></p></th>
+<th class="text-align:center head"><p>1800<br>2200<br>2600<br>…<br></p></th>
+<th class="text-align:center head"><p>1900<br>2300<br>2700<br>…<br></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Balise du siècle</strong></p></td>
+<td class="text-align:center"><p><strong>2</strong></p></td>
+<td class="text-align:center"><p><strong>0</strong></p></td>
+<td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p><strong>3</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="etape-2-calculer-le-jour-cle-de-l-annee">
+<h2>Etape 2 : Calculer le jour-clé de l’année<a class="headerlink" href="#etape-2-calculer-le-jour-cle-de-l-annee" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>l’année est donnée par ses deux derniers chiffres</p></li>
+<li><p>le calcul se fait selon l’algorithme décrit par l’algorigramme suivant</p></li>
+</ul>
+<p><img alt="doomsday" src="../../../_images/doomsday_2.png" /></p>
+<p>Le chiffre obtenu à la fin de l’algorithme est un jour de semaine</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Chiffre</p></th>
+<th class="text-align:left head"><p>Jour</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>Dimanche</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>Lundi</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>2</p></td>
+<td class="text-align:left"><p>Mardi</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>3</p></td>
+<td class="text-align:left"><p>Mercredi</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>4</p></td>
+<td class="text-align:left"><p>Jeudi</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>5</p></td>
+<td class="text-align:left"><p>Vendredi</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>6</p></td>
+<td class="text-align:left"><p>Samedi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="etape-3-choisir-un-jour-pivot">
+<h2>Etape 3 : Choisir un jour-pivot<a class="headerlink" href="#etape-3-choisir-un-jour-pivot" title="Permalink to this headline">#</a></h2>
+<p>Une fois le jour-clé déterminé, on choisit un jour proche de celui recherché selon le tableau suivant. Il permettra de calculer facilement le jour de la semaine correspondant à la date recherchée.</p>
+<p><em>Remarque</em> Si le jour-clé est un mardi, toutes les dates du tableau pour l’année considérée sont aussi un mardi.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p>Janvier</p></th>
+<th class="text-align:center head"><p>Février</p></th>
+<th class="text-align:center head"><p>Mars</p></th>
+<th class="text-align:center head"><p>Avril</p></th>
+<th class="text-align:center head"><p>Mai</p></th>
+<th class="text-align:center head"><p>Juin</p></th>
+<th class="text-align:center head"><p>Juillet</p></th>
+<th class="text-align:center head"><p>Août</p></th>
+<th class="text-align:center head"><p>Septembre</p></th>
+<th class="text-align:center head"><p>Octobre</p></th>
+<th class="text-align:center head"><p>Novembre</p></th>
+<th class="text-align:center head"><p>Décembre</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Ordinaire</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>28</strong></p></td>
+<td class="text-align:center"><p><strong>14</strong></p></td>
+<td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p><strong>9</strong></p></td>
+<td class="text-align:center"><p><strong>6</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>8</strong></p></td>
+<td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>7</strong></p></td>
+<td class="text-align:center"><p><strong>12</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Bisextile</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>29</strong></p></td>
+<td class="text-align:center"><p><strong>14</strong></p></td>
+<td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p><strong>9</strong></p></td>
+<td class="text-align:center"><p><strong>6</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>8</strong></p></td>
+<td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>7</strong></p></td>
+<td class="text-align:center"><p><strong>12</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
+<div class="section" id="janvier-1967">
+<h3>18 janvier 1967<a class="headerlink" href="#janvier-1967" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Etape 1</strong></p>
+<ul>
+<li><p>1900 correspond à la balise du siècle <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Etape 2</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">67</span></code> est impair, donc <code class="docutils literal notranslate"><span class="pre">67</span> <span class="pre">+</span> <span class="pre">11</span> <span class="pre">=</span> <span class="pre">78</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">78</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">39</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">39</span></code> est impair donc <code class="docutils literal notranslate"><span class="pre">39</span> <span class="pre">+</span> <span class="pre">11</span> <span class="pre">=</span> <span class="pre">50</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">6</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(6+3)</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">9</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> le jour-clé de l’année est un mardi</p></li>
+</ul>
+</li>
+<li><p><strong>Etape 3</strong></p>
+<ul>
+<li><p>1967 est une année ordinaire</p></li>
+<li><p>le 10 janvier (jour-pivot) est un mardi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">+</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">17</span></code> est aussi un mardi. Le <code class="docutils literal notranslate"><span class="pre">18</span></code> est donc un mercredi</p></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
