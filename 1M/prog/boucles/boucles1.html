@@ -225,6 +225,11 @@ const thebe_selector_output = ".output, .cell_output"
      Cours 8 : algorithme du jugement dernier (Doomsday algorithm)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours9.html">
+     Cours 9 : L’horologe de la gare de St-Gallen
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -543,6 +548,21 @@ title="Print to PDF"
    Exercice 2
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -587,6 +607,21 @@ title="Print to PDF"
    Exercice 2
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -597,7 +632,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="boucles">
+  <p><img alt="rollercoaster" src="../../../_images/grandhuit.jpg" /></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="boucles">
 <h1>Boucles<a class="headerlink" href="#boucles" title="Permalink to this headline">#</a></h1>
 <p><strong>Objectif</strong> Introduction du concept de boucles dans un programme</p>
 <div class="section" id="definition">
@@ -668,7 +704,15 @@ title="Print to PDF"
 </div>
 <div class="section" id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez deux fonctions <code class="docutils literal notranslate"><span class="pre">triangle()</span></code> qui dessine un triangle équilatéral de côté 100 et <code class="docutils literal notranslate"><span class="pre">carre()</span></code> qui dessine un carré de côté 100</p>
+<ul class="simple">
+<li><p>Ecrivez les fonctions</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">triangle()</span></code> qui dessine un triangle équilatéral de côté 100</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">carre()</span></code> qui dessine un carré de côté 100 et</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pentagone()</span></code> qui dessine un pentagone de côté 100</p></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="section" id="observation">
 <h2>Observation<a class="headerlink" href="#observation" title="Permalink to this headline">#</a></h2>
@@ -676,12 +720,33 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Triangle : 3 fois avancer et tourner de 120° (3 x 90° = 360°)</p></li>
 <li><p>Carré : 4 fois avancer et tourner de 90° (4 x 90° = 360°)</p></li>
+<li><p>Pentagone : 5 fois avancer et tourner de 72° (5 x 72° = 360°)</p></li>
 </ul>
 <p>Est-il possible de généraliser la fonction pour dessiner n’importe quel polygone de côté 100 avec une boucle ?</p>
 </div>
 <div class="section" id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">polygone</span></code> qui prend en paramètre le nombre de côté du polygone et qui le génère</p>
+<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">polygone(nombre)</span></code> qui prend en paramètre le nombre de côté du polygone <code class="docutils literal notranslate"><span class="pre">nombre</span></code> et qui le génère.</p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<p>Utilisez votre fonction <code class="docutils literal notranslate"><span class="pre">polygone(nombre</span></code> pour dessiner les polygones de 3 (triangle) à 12 (dodécagone) côtés.</p>
+<p><em>Truc :</em> Cela s’écrit en deux lignes avec une boucle. <strong>Il est possible d’utiliser la valeur de l’itérateur dans l’appel à la fonction</strong></p>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
+<p>Modifiez votre fonction <code class="docutils literal notranslate"><span class="pre">polygone(nombre)</span></code> pour qu’elle intègre la longueur du côté du polygone. Ceci afin de pouvoir dessiner un polygone de taille et de nombre de côté quelconque.</p>
+<p>La <strong>signature</strong> de votre fonction devient :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polygone</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">longueur</span><span class="p">)</span> <span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
+<p>Quelle est la forme géométrique de l’appel à la fonction :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">polygone</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
