@@ -17,45 +17,32 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import time
-
-eteint = "éteint"
-allume = "allumé"
-
-feu_vert = eteint
-feu_orange = eteint
-feu_rouge = eteint
-n = 0
-# La boucle va se répéter 3 fois.
-while (n<3) :
-    feu_vert = allume
-    feu_orange = eteint
-    feu_rouge = eteint
-    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
-    time.sleep(4)
-    feu_vert = eteint
-    feu_orange = allume
-    feu_rouge = eteint
-    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
-    time.sleep(1)
-    feu_vert = eteint
-    feu_orange = eteint
-    feu_rouge = allume
-    print("Le feu vert est "+feu_vert+", le feu orange est "+feu_orange+" le feu rouge est "+feu_rouge)
-    time.sleep(4)
-    n+=1
-
-
+nom = input('Bonjour, Quel est votre nom :')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
-Input [0;32mIn [7][0m, in [0;36m<cell line: 11>[0;34m()[0m
-[1;32m     24[0m feu_rouge [38;5;241m=[39m allume
-[1;32m     25[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mLe feu vert est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_vert[38;5;241m+[39m[38;5;124m"[39m[38;5;124m, le feu orange est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_orange[38;5;241m+[39m[38;5;124m"[39m[38;5;124m le feu rouge est [39m[38;5;124m"[39m[38;5;241m+[39mfeu_rouge)
-[0;32m---> 26[0m [43mtime[49m[38;5;241;43m.[39;49m[43msleep[49m[43m([49m[38;5;241;43m4[39;49m[43m)[49m
-[1;32m     27[0m n[38;5;241m+[39m[38;5;241m=[39m[38;5;241m1[39m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+Input [0;32mIn [1][0m, in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m----> 1[0m nom [38;5;241m=[39m [38;5;28;43minput[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mBonjour, Quel est votre nom :[39;49m[38;5;124;43m'[39;49m[43m)[49m
 
-[0;31mKeyboardInterrupt[0m: 
-KeyboardInterrupt: 
+File [0;32m~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
+[1;32m   1167[0m [38;5;124;03m"""Forward raw_input to frontends[39;00m
+[1;32m   1168[0m 
+[1;32m   1169[0m [38;5;124;03mRaises[39;00m
+[1;32m   1170[0m [38;5;124;03m------[39;00m
+[1;32m   1171[0m [38;5;124;03mStdinNotImplementedError if active frontend doesn't support stdin.[39;00m
+[1;32m   1172[0m [38;5;124;03m"""[39;00m
+[1;32m   1173[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[0;32m-> 1174[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(
+[1;32m   1175[0m         [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[1;32m   1176[0m     )
+[1;32m   1177[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[1;32m   1178[0m     [38;5;28mstr[39m(prompt),
+[1;32m   1179[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[1;32m   1180[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[1;32m   1181[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m   1182[0m )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
 

@@ -779,6 +779,53 @@ title="Print to PDF"
 <h2>Les entrées sorties<a class="headerlink" href="#les-entrees-sorties" title="Permalink to this headline">#</a></h2>
 <p><img alt="io" src="../../../_images/io.png" /></p>
 <p>En python, une <strong>entrée</strong> se fait en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> alors qu’une <strong>sortie</strong> avec la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Bonjour, Quel est votre nom :&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Bonjour, Quel est votre nom :&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre nom est : &quot;</span><span class="o">+</span><span class="n">nom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Votre nom est : Vincent
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="les-structures-de-controle-conditions">
 <h2>Les structures de contrôle (CONDITIONS)<a class="headerlink" href="#les-structures-de-controle-conditions" title="Permalink to this headline">#</a></h2>
@@ -1088,30 +1135,14 @@ Après 14 minutes, le four est à 140 °C
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
+Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
+Le feu vert est allumé, le feu orange est éteint le feu rouge est éteint
+Le feu vert est éteint, le feu orange est allumé le feu rouge est éteint
+Le feu vert est éteint, le feu orange est éteint le feu rouge est allumé
 </pre></div>
 </div>
 </div>
