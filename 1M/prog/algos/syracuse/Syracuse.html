@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conjecture de Syracuse &#8212; Education Numérique Ecole de maturité</title>
+    <title>Suite de Syracuse et conjecture de Collatz &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -197,7 +197,37 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../algo/cours/Cours3.html">
-     Cours 3 : La machine de Turing
+     Cours 3 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours4.html">
+     Cours 4 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours5.html">
+     Cours 5 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours6.html">
+     Cours 6 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours7.html">
+     Cours 7 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours8.html">
+     Cours 8 : algorithme du jugement dernier (Doomsday algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../algo/cours/Cours9.html">
+     Cours 9 : L’horologe de la gare de St-Gallen
     </a>
    </li>
   </ul>
@@ -224,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Conjecture de Syracuse
+     Suite de Syracuse et conjecture de Collatz
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,23 +501,110 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-la-suite-de-syracuse">
+   Algorithme de la suite de Syracuse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-conjecture">
+   Définition : Conjecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjecture-de-collatz">
+   Conjecture de Collatz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conjecture de Syracuse</h1>
+                <h1>Suite de Syracuse et conjecture de Collatz</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-la-suite-de-syracuse">
+   Algorithme de la suite de Syracuse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-conjecture">
+   Définition : Conjecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjecture-de-collatz">
+   Conjecture de Collatz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -495,20 +612,44 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="conjecture-de-syracuse">
-<h1>Conjecture de Syracuse<a class="headerlink" href="#conjecture-de-syracuse" title="Permalink to this headline">#</a></h1>
-<p>Programmer la conjecture de Syracuse en Python.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="suite-de-syracuse-et-conjecture-de-collatz">
+<h1>Suite de Syracuse et conjecture de Collatz<a class="headerlink" href="#suite-de-syracuse-et-conjecture-de-collatz" title="Permalink to this headline">#</a></h1>
+<p>Programmer la suite de Syracuse en Python.</p>
 <ul class="simple">
 <li><p>avec un programme standard</p></li>
-<li><p>avec un programme récursif</p></li>
+<li><p>(si temps) avec un programme récursif</p></li>
 </ul>
-<p>Rappel :</p>
+<div class="section" id="algorithme-de-la-suite-de-syracuse">
+<h2>Algorithme de la suite de Syracuse<a class="headerlink" href="#algorithme-de-la-suite-de-syracuse" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>ENTREE : n</p></li>
 <li><p>SI n est PAIR, alors n = n / 2</p></li>
 <li><p>SINON n = 3 * n + 1</p></li>
 <li><p>La suite se termine lorsqu’on a atteint n == 1 et boucle sur la suite (1,4,2,1,4,2,…)</p></li>
 </ol>
+</div>
+<div class="section" id="definition-conjecture">
+<h2>Définition : Conjecture<a class="headerlink" href="#definition-conjecture" title="Permalink to this headline">#</a></h2>
+<p>En mathématique, une <strong>conjecture</strong> est une assertion dont on ne connaît pas encore de démonstration mathématique</p>
+</div>
+<div class="section" id="conjecture-de-collatz">
+<h2>Conjecture de Collatz<a class="headerlink" href="#conjecture-de-collatz" title="Permalink to this headline">#</a></h2>
+<p>La <strong>conjecture de Collatz</strong> (né le 6.07.1910 en Allemagne et mort le 26.09.1990 en Bulgarie. Conjecture énoncée en 1937) est l’une des conjectures les plus célèbres puisqu’en dépit de sa simplicité, elle défie les mathématiciens depuis de très nombreuses années. Elle dit que la <strong>suite de Syracuse</strong> (ou problème <code class="docutils literal notranslate"><span class="pre">3x</span> <span class="pre">+</span> <span class="pre">1</span></code>), lorsqu’elle atteint <code class="docutils literal notranslate"><span class="pre">1</span></code> se répète indéfiniment sur la suite <code class="docutils literal notranslate"><span class="pre">1,4,2,1,4,2,...</span></code></p>
+</div>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<p>Programmez la suite de Syracuse en Python 3</p>
+<p>Testez la <strong>Conjecture de Collatz</strong> pour les nombres entiers de <code class="docutils literal notranslate"><span class="pre">2</span></code> à <code class="docutils literal notranslate"><span class="pre">1000</span></code></p>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Pour chaque entier <code class="docutils literal notranslate"><span class="pre">n</span></code> donné, calculez l’entier le plus élevé du <strong>vol</strong> (le nombre d’étapes de la suite de Syracuse avant d’arriver sur <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<p>Pour chaque entier <code class="docutils literal notranslate"><span class="pre">n</span></code>, donnez la longueur du vol.</p>
+<p>Donnez la valeur du plus long vol pour les nombres entre <code class="docutils literal notranslate"><span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
