@@ -254,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../algos/syracuse/Syracuse.html">
-     Conjecture de Syracuse
+     Conjecture de Collatz
     </a>
    </li>
    <li class="toctree-l2">
@@ -553,6 +553,23 @@ title="Print to PDF"
    Exercice 5 (a step forward)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-tres-difficile">
+   Exercice 6 (Très difficile)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-6-1">
+     Exercice 6.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-6-2">
+     Exercice 6.2
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -602,6 +619,23 @@ title="Print to PDF"
    Exercice 5 (a step forward)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-tres-difficile">
+   Exercice 6 (Très difficile)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-6-1">
+     Exercice 6.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-6-2">
+     Exercice 6.2
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -615,7 +649,11 @@ title="Print to PDF"
   <p><img alt="escargot" src="../../../_images/escargot.jpg" /></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="dessiner-des-spirales">
 <h1>Dessiner des spirales<a class="headerlink" href="#dessiner-des-spirales" title="Permalink to this headline">#</a></h1>
-<p><strong>Objectif :</strong> approfondir le concept de fonction et de boucles</p>
+<p><strong>Objectif :</strong></p>
+<ul class="simple">
+<li><p>approfondir le concept de fonction et de boucles</p></li>
+<li><p>introduire et tester la récursivité</p></li>
+</ul>
 <div class="section" id="definition-dune-spirales">
 <h2>Définition d’une spirales<a class="headerlink" href="#definition-dune-spirales" title="Permalink to this headline">#</a></h2>
 <p>Une spirale est un objet formé de segments dont la longueur augmente à chaque itération</p>
@@ -630,29 +668,43 @@ title="Print to PDF"
 </div>
 <div class="section" id="exercice-3">
 <h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
-<p>Réécrivez votre fonction spirale() avec une boucle jusqu’à 20</p>
+<p>Réécrivez votre fonction spirale() avec un paramètre (le nombre de segments)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">spirale</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez une fonction spirale(ns,angle) avec deux paramètres : le nombre de segments et l’angle.</p>
+<p>Ecrivez une fonction spirale(nbr,angle) avec deux paramètres : le nombre de segments et l’angle.</p>
 </div>
 <div class="section" id="exercice-5-a-step-forward">
 <h2>Exercice 5 (a step forward)<a class="headerlink" href="#exercice-5-a-step-forward" title="Permalink to this headline">#</a></h2>
 <p>Est-il possible d’améliorer la courbure de la spirale et donc d’affiner le segment en arc de cercle ?</p>
 <p><strong>Indications :</strong></p>
-<p>Il s’agit de réfléchir au dessin de l’arc de spirale (avec une boucle)</p>
-<p>La fonction origine() suivante permet de faire revenir la tortue à l’origine :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">origine</span><span class="p">():</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<p>On peut utiliser la fonction <code class="docutils literal notranslate"><span class="pre">circle()</span></code> qui prend en paramètre deux nombres :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">rayon</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="exercice-6-tres-difficile">
+<h2>Exercice 6 (Très difficile)<a class="headerlink" href="#exercice-6-tres-difficile" title="Permalink to this headline">#</a></h2>
+<p>La suite de Fibonacci (Leonardo Fibonacci, né en 1170 à Pise en Italie et mort dans cette même ville en 1250) est une suite définie par la relation suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">fib</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
 </div>
-<p>La tortue possède en outre une fonction <code class="docutils literal notranslate"><span class="pre">t.goto(x,y)</span></code> qui permet à la tortue de se déplacer au point de coordonnée <code class="docutils literal notranslate"><span class="pre">(x,y)</span></code> relatif à l’origine <code class="docutils literal notranslate"><span class="pre">(0,0)</span></code> lorsque la tortue est créer</p>
+<p>on appelle ce type de relation : une <strong>suite récursive</strong></p>
+<p>Les premiers éléments de la suite de Fibonacci sont : <code class="docutils literal notranslate"><span class="pre">1,1,2,3,5,8,13,...</span></code></p>
+<p>En <strong>informatique</strong>, cela se défini par une fonction <strong>qui s’appelle elle-même</strong></p>
+<div class="section" id="exercice-6-1">
+<h3>Exercice 6.1<a class="headerlink" href="#exercice-6-1" title="Permalink to this headline">#</a></h3>
+<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">fib(n):</span></code> récursive qui produit la suite de Fibonacci</p>
+</div>
+<div class="section" id="exercice-6-2">
+<h3>Exercice 6.2<a class="headerlink" href="#exercice-6-2" title="Permalink to this headline">#</a></h3>
+<p>Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code> pour dessiner une spirale de Fibonacci (le rayon est constitué de la suite de Fibonacci)</p>
+</div>
 </div>
 </div>
 
