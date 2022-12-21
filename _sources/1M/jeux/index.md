@@ -1,3 +1,3 @@
-# Quizz de logique et jeux informatiques
+# Jeux informatiques et logiques
 
 
