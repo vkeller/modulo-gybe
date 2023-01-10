@@ -528,12 +528,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques :
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple-introductif">
+   Exemple introductif
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple-introductif-2">
+   Exemple introductif 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-par-selection">
+   Tri par sélection
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -545,6 +589,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques :
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple-introductif">
+   Exemple introductif
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple-introductif-2">
+   Exemple introductif 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-par-selection">
+   Tri par sélection
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -555,6 +632,44 @@ title="Print to PDF"
   <p><img alt="sort" src="../../../_images/tri.jpg" /></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="cours-5-2-algorithmes-classiques-tri">
 <h1>Cours 5.2 Algorithmes classiques (Tri)<a class="headerlink" href="#cours-5-2-algorithmes-classiques-tri" title="Permalink to this headline">#</a></h1>
+<div class="section" id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques :<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>comprendre ce qu’est le tri en algorithmique</p></li>
+<li><p>connaître quelques algorithmes de tri classiques</p></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>L’une des classes d’algorithmes les plus courants sont ceux qui permettent de trier des objets. On utilise généralement un ordre <strong>numérique</strong> (du plus petit au plus grand) ou <strong>lexicographique</strong> (de la lettre A à la lettre Z)</p>
+<p>Les deux principales caractéristiques qui permettent de distinguer les différents algorithmes de tri sont <strong>la complexité temporelle</strong> (<em>combien de temps faut-il pour trier une liste ?</em>) et la <strong>complexité spatiale</strong> (<em>combien de mémoire ai-je besoin pour trier une liste ?</em>)</p>
+</div>
+<div class="section" id="exemple-introductif">
+<h2>Exemple introductif<a class="headerlink" href="#exemple-introductif" title="Permalink to this headline">#</a></h2>
+<p>Voici une liste de nombres entier qu’il faut trier du plus petit au plus grand :</p>
+<p><code class="docutils literal notranslate"><span class="pre">[23,45,14,9,245,56,81,11,6]</span></code></p>
+<p>Décrivez votre méthode (votre algorithme) à l’aide d’un algorigramme</p>
+</div>
+<div class="section" id="exemple-introductif-2">
+<h2>Exemple introductif 2<a class="headerlink" href="#exemple-introductif-2" title="Permalink to this headline">#</a></h2>
+<p>Voici une liste de mot qu’il s’agit de trier comme un dictionnaire:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zoologie</span>
+<span class="n">alphabet</span>
+<span class="n">romain</span>
+<span class="n">fusain</span>
+<span class="n">wagon</span>
+<span class="n">locomotive</span>
+<span class="n">largeur</span>
+<span class="n">romantique</span>
+<span class="n">fusée</span>
+</pre></div>
+</div>
+<p>Décrivez votre méthode (votre algorithme) à l’aide d’un algorigramme</p>
+</div>
+<div class="section" id="tri-par-selection">
+<h2>Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permalink to this headline">#</a></h2>
+<p>C’est la méthode la plus naïve. On parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> élément, on cible <strong>le plus grand</strong> que l’on place en dernière position. Puis on parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n-1</span></code> éléments, on cible <strong>le plus grand restant</strong> que l’on place en avant-dernière position et ainsi de suite.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
