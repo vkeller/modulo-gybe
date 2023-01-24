@@ -607,6 +607,11 @@ title="Print to PDF"
    Classification des algorithmes de tri
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-differents-algorithmes-de-tri-sur-des-situations-differentes">
+   Comparaison des différents algorithmes de tri sur des situations différentes
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -681,6 +686,11 @@ title="Print to PDF"
    Classification des algorithmes de tri
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-differents-algorithmes-de-tri-sur-des-situations-differentes">
+   Comparaison des différents algorithmes de tri sur des situations différentes
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -734,17 +744,77 @@ title="Print to PDF"
 <h2>Tri par sélection (Selection Sort)<a class="headerlink" href="#tri-par-selection-selection-sort" title="Permalink to this headline">#</a></h2>
 <p>C’est la méthode la plus naïve. On parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> élément, on cible <strong>le plus grand</strong> que l’on place en dernière position. Puis on parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n-1</span></code> éléments, on cible <strong>le plus grand restant</strong> que l’on place en avant-dernière position et ainsi de suite.</p>
 <p>C’est un algorithme lent</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;92BfuxHn2XE&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/92BfuxHn2XE"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 <div class="section" id="tri-a-bulles-bubble-sort">
 <h2>Tri à bulles (Bubble Sort)<a class="headerlink" href="#tri-a-bulles-bubble-sort" title="Permalink to this headline">#</a></h2>
 <p>Le tri à bulles consiste à parcourir la liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments et de comparer chaque élément consécutif et à les permuter s’ils ne sont pas triés correctement.</p>
 <p>C’est un algorithme lent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;Cq7SMsQBEUw&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/Cq7SMsQBEUw"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 <div class="section" id="tri-par-insertion-insertion-sort">
 <h2>Tri par insertion (Insertion Sort)<a class="headerlink" href="#tri-par-insertion-insertion-sort" title="Permalink to this headline">#</a></h2>
 <p>C’est la méthode de tri utilisée généralement pour classer ses cartes à jouer.</p>
 <p>Le tri par insertion considère chaque élément du tableau de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments et l’insère à la bonne place dans les éléments déjà triés. Ainsi, au moment de l’insertion, on considère que tous les éléments plus petits sont correctement triés.</p>
 <p>C’est un algorithme lent</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;8oJS1BMKE64&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/8oJS1BMKE64"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 <div class="section" id="tri-rapide-quick-sort">
 <h2>Tri rapide (Quick Sort)<a class="headerlink" href="#tri-rapide-quick-sort" title="Permalink to this headline">#</a></h2>
@@ -757,6 +827,26 @@ title="Print to PDF"
 <li><p>le pivot est déplacé à la fin des éléments déplacés.</p></li>
 </ul>
 <p>C’est un algorithme rapide (et qui peut être exécuté en parallèle)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;8hEyhs3OV1w&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/8hEyhs3OV1w"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 <div class="section" id="tri-fusion-merge-sort">
 <h2>Tri Fusion (Merge Sort)<a class="headerlink" href="#tri-fusion-merge-sort" title="Permalink to this headline">#</a></h2>
@@ -769,6 +859,26 @@ title="Print to PDF"
 <li><p>Fusionner les deux tableaux triés en un seul tableau trié.</p></li>
 </ol>
 <p>C’est un algorithme rapide</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ZRPoEKHXTJg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/ZRPoEKHXTJg"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 <div class="section" id="comparaison-des-complexites-temporelles-des-methodes-de-tri">
 <h2>Comparaison des complexités temporelles des méthodes de tri<a class="headerlink" href="#comparaison-des-complexites-temporelles-des-methodes-de-tri" title="Permalink to this headline">#</a></h2>
@@ -819,6 +929,29 @@ title="Print to PDF"
 <li><p><strong>stabilité</strong> : est-ce que l’ordre d’entrée est respecté à la sortie de l’algorithme ?</p></li>
 </ul>
 <p>Il existe d’autres caractéristiques qui n’entrent pas dans le cadre de ce cours d’introduction.</p>
+</div>
+<div class="section" id="comparaison-des-differents-algorithmes-de-tri-sur-des-situations-differentes">
+<h2>Comparaison des différents algorithmes de tri sur des situations différentes<a class="headerlink" href="#comparaison-des-differents-algorithmes-de-tri-sur-des-situations-differentes" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ZZuD6iUe3Pc&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/ZZuD6iUe3Pc"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 </div>
 
