@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Cours 6 : Algorithmes évolutionnistes" href="Cours6.html" />
@@ -571,8 +573,38 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tri-par-selection">
-   Tri par sélection
+  <a class="reference internal nav-link" href="#tri-par-selection-selection-sort">
+   Tri par sélection (Selection Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-a-bulles-bubble-sort">
+   Tri à bulles (Bubble Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-par-insertion-insertion-sort">
+   Tri par insertion (Insertion Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-rapide-quick-sort">
+   Tri rapide (Quick Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-fusion-merge-sort">
+   Tri Fusion (Merge Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-complexites-temporelles-des-methodes-de-tri">
+   Comparaison des complexités temporelles des méthodes de tri
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classification-des-algorithmes-de-tri">
+   Classification des algorithmes de tri
   </a>
  </li>
 </ul>
@@ -615,8 +647,38 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tri-par-selection">
-   Tri par sélection
+  <a class="reference internal nav-link" href="#tri-par-selection-selection-sort">
+   Tri par sélection (Selection Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-a-bulles-bubble-sort">
+   Tri à bulles (Bubble Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-par-insertion-insertion-sort">
+   Tri par insertion (Insertion Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-rapide-quick-sort">
+   Tri rapide (Quick Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-fusion-merge-sort">
+   Tri Fusion (Merge Sort)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-complexites-temporelles-des-methodes-de-tri">
+   Comparaison des complexités temporelles des méthodes de tri
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classification-des-algorithmes-de-tri">
+   Classification des algorithmes de tri
   </a>
  </li>
 </ul>
@@ -661,14 +723,102 @@ title="Print to PDF"
 <span class="n">locomotive</span>
 <span class="n">largeur</span>
 <span class="n">romantique</span>
+<span class="n">Rome</span>
+<span class="n">Antique</span>
 <span class="n">fusée</span>
 </pre></div>
 </div>
 <p>Décrivez votre méthode (votre algorithme) à l’aide d’un algorigramme</p>
 </div>
-<div class="section" id="tri-par-selection">
-<h2>Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permalink to this headline">#</a></h2>
+<div class="section" id="tri-par-selection-selection-sort">
+<h2>Tri par sélection (Selection Sort)<a class="headerlink" href="#tri-par-selection-selection-sort" title="Permalink to this headline">#</a></h2>
 <p>C’est la méthode la plus naïve. On parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> élément, on cible <strong>le plus grand</strong> que l’on place en dernière position. Puis on parcourt la liste de <code class="docutils literal notranslate"><span class="pre">n-1</span></code> éléments, on cible <strong>le plus grand restant</strong> que l’on place en avant-dernière position et ainsi de suite.</p>
+<p>C’est un algorithme lent</p>
+</div>
+<div class="section" id="tri-a-bulles-bubble-sort">
+<h2>Tri à bulles (Bubble Sort)<a class="headerlink" href="#tri-a-bulles-bubble-sort" title="Permalink to this headline">#</a></h2>
+<p>Le tri à bulles consiste à parcourir la liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments et de comparer chaque élément consécutif et à les permuter s’ils ne sont pas triés correctement.</p>
+<p>C’est un algorithme lent.</p>
+</div>
+<div class="section" id="tri-par-insertion-insertion-sort">
+<h2>Tri par insertion (Insertion Sort)<a class="headerlink" href="#tri-par-insertion-insertion-sort" title="Permalink to this headline">#</a></h2>
+<p>C’est la méthode de tri utilisée généralement pour classer ses cartes à jouer.</p>
+<p>Le tri par insertion considère chaque élément du tableau de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments et l’insère à la bonne place dans les éléments déjà triés. Ainsi, au moment de l’insertion, on considère que tous les éléments plus petits sont correctement triés.</p>
+<p>C’est un algorithme lent</p>
+</div>
+<div class="section" id="tri-rapide-quick-sort">
+<h2>Tri rapide (Quick Sort)<a class="headerlink" href="#tri-rapide-quick-sort" title="Permalink to this headline">#</a></h2>
+<p>La méthode consiste à placer un élément du tableau (<strong>le pivot</strong>) à sa place définitive, en permutant tous les éléments de telle sorte que tous ceux qui sont inférieurs au pivot soient à sa gauche et que tous ceux qui sont supérieurs au pivot soient à sa droite. Le pivot est choisi <strong>aléatoirement</strong> (au hasard)</p>
+<p>Cette opération s’appelle <strong>partitionnement</strong>. Pour chacun des sous-tableaux, on définit un nouveau pivot et on répète l’opération de partitionnement. Ce processus est répété récursivement, jusqu’à ce que l’ensemble des éléments soit trié.</p>
+<p>Concrètement, pour partitionner un sous-tableau :</p>
+<ul class="simple">
+<li><p>le pivot est placé à la fin (arbitrairement), en l’échangeant avec le dernier élément du sous-tableau ;</p></li>
+<li><p>tous les éléments inférieurs au pivot sont placés en début du sous-tableau ;</p></li>
+<li><p>le pivot est déplacé à la fin des éléments déplacés.</p></li>
+</ul>
+<p>C’est un algorithme rapide (et qui peut être exécuté en parallèle)</p>
+</div>
+<div class="section" id="tri-fusion-merge-sort">
+<h2>Tri Fusion (Merge Sort)<a class="headerlink" href="#tri-fusion-merge-sort" title="Permalink to this headline">#</a></h2>
+<p>C’est un tri dichotomique. On peut le décrire par :</p>
+<p>L’algorithme est naturellement décrit de façon récursive.</p>
+<ol class="simple">
+<li><p>Si le tableau n’a qu’un élément, il est déjà trié.</p></li>
+<li><p>Sinon, séparer le tableau en deux parties à peu près égales.</p></li>
+<li><p>Trier récursivement les deux parties avec l’algorithme du tri fusion.</p></li>
+<li><p>Fusionner les deux tableaux triés en un seul tableau trié.</p></li>
+</ol>
+<p>C’est un algorithme rapide</p>
+</div>
+<div class="section" id="comparaison-des-complexites-temporelles-des-methodes-de-tri">
+<h2>Comparaison des complexités temporelles des méthodes de tri<a class="headerlink" href="#comparaison-des-complexites-temporelles-des-methodes-de-tri" title="Permalink to this headline">#</a></h2>
+<p>Dans le tableau suivant, sont listées les complexités computationnelles des différentes méthodes de tri. Il s’agit là du nombre d’opérations nécessaires pour effectuer un tri dans le cas optimal, le cas moyen et le pire des cas.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Méthode de tri</p></th>
+<th class="text-align:center head"><p>Cas optimal</p></th>
+<th class="text-align:center head"><p>Cas moyen</p></th>
+<th class="text-align:left head"><p>Pire des cas</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Tri par sélection</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Tri par insertion</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Tri à bulle</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Tri Fusion</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n~log(n)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n~log(n)\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(n~log(n)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Tri Rapide</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n~log(n)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(n~log(n)\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(n^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classification-des-algorithmes-de-tri">
+<h2>Classification des algorithmes de tri<a class="headerlink" href="#classification-des-algorithmes-de-tri" title="Permalink to this headline">#</a></h2>
+<p>Suivant le problème à résoudre, il s’agit de choisir un algorithme de tri. Ce choix est basé sur les différentes caractéristiques des algorithmes de tri et des besoins du problème (ou de son résultat)</p>
+<ul class="simple">
+<li><p><strong>complexité temporelle</strong></p></li>
+<li><p><strong>complexité spatiale</strong></p></li>
+<li><p><strong>stabilité</strong> : est-ce que l’ordre d’entrée est respecté à la sortie de l’algorithme ?</p></li>
+</ul>
+<p>Il existe d’autres caractéristiques qui n’entrent pas dans le cadre de ce cours d’introduction.</p>
 </div>
 </div>
 
