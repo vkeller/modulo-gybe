@@ -1,6 +1,6 @@
 # ------------------------------------------------------
 # Petit script de test pour un réseau neuronal simple
-# de classification du MINST dataset
+# de classification du MINST dataset des chiffres manuscrits
 # Lib utilisée : https://scikit-learn.org/stable/
 # ------------------------------------------------------
 
@@ -8,17 +8,33 @@ from sklearn import datasets
 import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPClassifier
 import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 # Load des images
 digits = datasets.load_digits()
 
 #print(digits.images[0])
-
 x = digits.images.reshape((len(digits.images), -1))
 y = digits.target
 
-# Création du réseau neuronal à une seule couche à 15 neurones
-mlp = MLPClassifier(hidden_layer_sizes=(15,))
+# Mise à l'échelle des données
+# Création d'un scaler
+scaler = StandardScaler()
+
+# Création du réseau neuronal à une seule couche à 10 neurones
+#mlp = MLPClassifier(hidden_layer_sizes=(15,))
+#mlp = MLPClassifier(verbose=True,solver='sgd', alpha=1e-5,hidden_layer_sizes=(8,3), random_state=1, max_iter=1000)
+mlp = MLPClassifier(
+    hidden_layer_sizes=(20,),
+    max_iter=100,
+    alpha=1e-4,
+    solver="lbfgs",
+    verbose=10,
+    random_state=1,
+    learning_rate_init=0.2,
+)
+
+
 
 # Définition des datasets d'entraînement et de test
 x_train = x[:1000]
@@ -38,7 +54,7 @@ mlp.fit(x_train, y_train)
 #plt.axis('off')
 #plt.show()
 
-# 
+# Prédiction en fonction du réseau entraîné
 mlp.predict(x_test[:10])
 
 print(y_test[:10])
