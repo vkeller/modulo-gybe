@@ -54,6 +54,12 @@ parts:
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
+    - file: 1M/machine-learning/index
+      sections:
+      - file: 1M/machine-learning/cours/IntroML
+      - file: 1M/machine-learning/cours/Automates
+      - file: 1M/machine-learning/cours/RNN
+      - file: 1M/machine-learning/cours/JeudelavieTP
  
 
   - caption: 2ème année
