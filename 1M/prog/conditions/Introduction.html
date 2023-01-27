@@ -592,6 +592,30 @@ title="Print to PDF"
      Exercice 1
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+   Plusieurs conditions dans un test :
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   et opérateurs logiques
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     and
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     or
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice-2">
      Exercice 2
@@ -638,6 +662,30 @@ title="Print to PDF"
      Exercice 1
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+   Plusieurs conditions dans un test :
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   et opérateurs logiques
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     and
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     or
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice-2">
      Exercice 2
@@ -708,6 +756,31 @@ title="Print to PDF"
 <div class="section" id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h3>
 <p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
+</div>
+</div>
+<div class="section" id="plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+<h2>Plusieurs conditions dans un test : <code class="docutils literal notranslate"><span class="pre">elif</span></code> et opérateurs logiques <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’il y a plusieurs conditions à remplir pour un test conditionnel, alors on peut utiliser les mot-clefs <code class="docutils literal notranslate"><span class="pre">elif</span></code> ou les opérateurs logiques <code class="docutils literal notranslate"><span class="pre">or</span></code> et <code class="docutils literal notranslate"><span class="pre">and</span></code></p>
+<p>La clause <code class="docutils literal notranslate"><span class="pre">elif</span></code> teste une nouvelle condition si la première (if) est fausse. Si cette condition est fausse, alors Python pousuit sur <code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+<span class="k">elif</span> <span class="n">condition</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+<span class="k">else</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+</pre></div>
+</div>
+<p>S’agissant des opérateurs logiques :</p>
+<p>Si un test requiert que deux tests soient vrais en même temps, on utilise <code class="docutils literal notranslate"><span class="pre">and</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="ow">and</span> <span class="n">condition2</span> <span class="p">:</span>
+    <span class="n">instruction</span>
+</pre></div>
+</div>
+<p>Si un test requiert que qu’un des deux tests soient vrais, alors on utilise <code class="docutils literal notranslate"><span class="pre">or</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="ow">or</span> <span class="n">condition2</span> <span class="p">:</span>
+    <span class="n">instruction</span>
+
+</pre></div>
 </div>
 <div class="section" id="exercice-2">
 <h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h3>
