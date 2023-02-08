@@ -44,6 +44,7 @@ parts:
       - file: 1M/prog/types/Types
       - file: 1M/prog/tableaux/Tableaux
       - file: 1M/prog/files/LesFiles
+      - file: 1M/prog/piles/LesPiles
       - file: 1M/prog/arbres/LesArbres
       - file: 1M/prog/dictionnaires/Dictionnaires2
       - file: 1M/prog/motdepasse/MotsDePasse

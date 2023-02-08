@@ -25,13 +25,13 @@ scaler = StandardScaler()
 #mlp = MLPClassifier(hidden_layer_sizes=(15,))
 #mlp = MLPClassifier(verbose=True,solver='sgd', alpha=1e-5,hidden_layer_sizes=(8,3), random_state=1, max_iter=1000)
 mlp = MLPClassifier(
-    hidden_layer_sizes=(20,),
-    max_iter=100,
+    hidden_layer_sizes=(10,),
+    max_iter=500,
     alpha=1e-4,
     solver="lbfgs",
     verbose=10,
     random_state=1,
-    learning_rate_init=0.2,
+    learning_rate_init=0.6,
 )
 
 
