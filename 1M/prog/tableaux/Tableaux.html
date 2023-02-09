@@ -1010,10 +1010,10 @@ title="Print to PDF"
 <h2>Affichage de l’horaire des trains en gare<a class="headerlink" href="#affichage-de-l-horaire-des-trains-en-gare" title="Permalink to this headline">#</a></h2>
 <p>Un horaire CFF est un tableau en 2 dimensions. Chaque ligne de ce tableau représente un train. Chaque train a les caractéristiques suivantes :</p>
 <ul class="simple">
-<li><p>type</p></li>
-<li><p>heure de départ</p></li>
-<li><p>gare de destination</p></li>
-<li><p>voie</p></li>
+<li><p>un type (un RER, un Interregio, un Intercity, etc..)</p></li>
+<li><p>une heure de départ</p></li>
+<li><p>la gare de destination</p></li>
+<li><p>une voie d’arrivée</p></li>
 </ul>
 <p>Un train est donc une <strong>liste 1D</strong></p>
 <p>L’horaire affiché est donc une <strong>liste de listes 1D</strong>, à savoir un <strong>tableau en deux dimensions</strong>.</p>
@@ -1023,10 +1023,10 @@ title="Print to PDF"
 <p>L’<strong>horaire</strong> est constitué d’une <strong>liste de listes 1D</strong>.</p>
 <p>Chaque <code class="docutils literal notranslate"><span class="pre">train</span></code> est une <strong>liste 1D</strong> qui possède autant d’éléments qu’il y a de caractéristiques dans l’horaire, séparées par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code> :</p>
 <ul class="simple">
-<li><p>son type</p></li>
-<li><p>l’heure de départ</p></li>
-<li><p>sa destination</p></li>
-<li><p>la voie sur laquelle il va arriver</p></li>
+<li><p>type (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p>heure de départ (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p>destination (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p>la voie sur laquelle il va arriver (<code class="docutils literal notranslate"><span class="pre">int</span></code>)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1040,7 +1040,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h3>
-<p>Définissez la liste <code class="docutils literal notranslate"><span class="pre">train4</span></code> selon l’horaire affiché par l’image</p>
+<p>Définissez la liste <code class="docutils literal notranslate"><span class="pre">train4</span></code> selon l’horaire affiché par l’image : c’est un S1 à destination de Lausanne qui arrive sur la voie 4 à 8h57</p>
 </div>
 <div class="section" id="id1">
 <h3>Création de l’horaire<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
@@ -1168,7 +1168,7 @@ title="Print to PDF"
 <span class="c1"># Ajout de ce train à l&#39;horaire</span>
 <span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
 <span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1176,6 +1176,8 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
 </pre></div>
 </div>
 </div>
@@ -1185,7 +1187,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train6</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;8h57&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">horaire</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">train6</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1193,6 +1195,9 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
+[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
 </pre></div>
 </div>
 </div>
@@ -1212,7 +1217,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppression du train numéro 5</span>
 <span class="n">horaire</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
 <span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1220,6 +1225,8 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
 </pre></div>
 </div>
 </div>
@@ -1229,7 +1236,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppression du dernier train</span>
 <span class="n">horaire</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 <span class="c1"># affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1237,6 +1244,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
 </pre></div>
 </div>
 </div>
@@ -1246,7 +1254,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Effacement de tous les trains. Nous sommes en fin de service</span>
 <span class="n">horaire</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
 </div>
