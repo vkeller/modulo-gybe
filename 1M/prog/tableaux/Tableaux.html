@@ -618,6 +618,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modification-d-un-element-de-la-liste">
+     Modification d’un élément de la liste
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#enlever-des-elements-d-une-liste">
      Enlever des éléments d’une liste
     </a>
@@ -679,6 +684,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modification-des-informations">
+     Modification des informations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#suppression-de-train">
      Suppression de train
     </a>
@@ -691,8 +701,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-affichage-dee-quais">
-   Exercice 6 (Affichage dee quais)
+  <a class="reference internal nav-link" href="#exercice-6-affichage-des-quais">
+   Exercice 6 (Affichage des quais)
   </a>
  </li>
 </ul>
@@ -745,6 +755,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modification-d-un-element-de-la-liste">
+     Modification d’un élément de la liste
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#enlever-des-elements-d-une-liste">
      Enlever des éléments d’une liste
     </a>
@@ -806,6 +821,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modification-des-informations">
+     Modification des informations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#suppression-de-train">
      Suppression de train
     </a>
@@ -818,8 +838,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-affichage-dee-quais">
-   Exercice 6 (Affichage dee quais)
+  <a class="reference internal nav-link" href="#exercice-6-affichage-des-quais">
+   Exercice 6 (Affichage des quais)
   </a>
  </li>
 </ul>
@@ -951,6 +971,25 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<div class="section" id="modification-d-un-element-de-la-liste">
+<h3>Modification d’un élément de la liste<a class="headerlink" href="#modification-d-un-element-de-la-liste" title="Permalink to this headline">#</a></h3>
+<p>On peut modifier un élément en y accédant à l’aide de l’indice <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Modification de 3.14 en 6.28</span>
+<span class="n">uneListe</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">6.18</span>
+<span class="c1"># Affichage de la liste</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 0.618, 6.18, &#39;salut&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="enlever-des-elements-d-une-liste">
 <h3>Enlever des éléments d’une liste<a class="headerlink" href="#enlever-des-elements-d-une-liste" title="Permalink to this headline">#</a></h3>
 <p>On peut enlever des éléments avec les méthodes suivantes :</p>
@@ -969,7 +1008,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 3.14, &#39;salut&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 6.18, &#39;salut&#39;]
 </pre></div>
 </div>
 </div>
@@ -984,7 +1023,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 3.14]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 6.18]
 </pre></div>
 </div>
 </div>
@@ -1202,6 +1241,32 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<div class="section" id="modification-des-informations">
+<h3>Modification des informations<a class="headerlink" href="#modification-des-informations" title="Permalink to this headline">#</a></h3>
+<p>En cet hiver difficile, la ligne de contact souffre. Le train S4 pour Palézieux aura 30 minutes de retard. Il faut modifier l’entrée et ajouter l’information</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Modification de l&#39;horaire du S4</span>
+<span class="n">horaire</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;8h55 + 30min&#39;</span>
+<span class="c1">## Ajout de l&#39;information</span>
+<span class="n">horaire</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Problème sur la ligne de contact&#39;</span><span class="p">)</span>
+<span class="c1">## Affichage de l&#39;horaire</span>
+<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
+[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
+[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
+[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="suppression-de-train">
 <h3>Suppression de train<a class="headerlink" href="#suppression-de-train" title="Permalink to this headline">#</a></h3>
 <p>A mesure que le temps passe, les trains entrent en gare, prennent des voyageurs et en laissent descendre d’autres, puis repartent verts leurs destinations. Il faut donc les supprimer de l’horaire</p>
@@ -1225,7 +1290,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
 [&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
 </pre></div>
 </div>
@@ -1244,7 +1309,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
 </pre></div>
 </div>
 </div>
@@ -1294,11 +1359,11 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>Ajoutez à l’horaire le régional S1 pour Bussigny qui part à 9h01 sur voie 1</p></li>
 <li><p>Il est 8h50, le régional S22 pour Bussigny et Vufflens-la-Ville est parti. Supprimez-le de l’horaire</p></li>
-<li><p>Un dérangement sur la ligne de contact entre Vevey et Lausanne provoque un retard de 20 minutes. Ajoutez cette information pour le RE de 8h58 pour Annemasse</p></li>
+<li><p>Un problème sur la ligne entre Vevey et Lausanne provoque un retard de 20 minutes. Ajoutez cette information pour le RE de 8h58 pour Annemasse</p></li>
 </ol>
 </div>
-<div class="section" id="exercice-6-affichage-dee-quais">
-<h2>Exercice 6 (Affichage dee quais)<a class="headerlink" href="#exercice-6-affichage-dee-quais" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercice-6-affichage-des-quais">
+<h2>Exercice 6 (Affichage des quais)<a class="headerlink" href="#exercice-6-affichage-des-quais" title="Permalink to this headline">#</a></h2>
 <p>Chaque quai possède un <strong>afficheur de quai</strong>. Cet afficheur de quai utilise les mêmes informations que l’horaire complet. En utilisant un test conditionnel, affichez uniquement les trains qui partent du quai 4.</p>
 </div>
 </div>
