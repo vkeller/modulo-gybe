@@ -32,6 +32,7 @@ parts:
       - file: 1M/algo/cours/Cours7
       - file: 1M/algo/cours/Cours8
       - file: 1M/algo/cours/Cours9
+      - file: 1M/algo/cours/Cours10
     - file: 1M/prog/index
       sections:
       - file: 1M/prog/intro1/intro1
@@ -52,6 +53,8 @@ parts:
       - file: 1M/prog/fichiers/SystemeDeFichiers
     - file: 1M/architecture/index
     - file: 1M/esdn/index
+      sections:
+      - file: 1M/esdn/cours/Cours1
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
