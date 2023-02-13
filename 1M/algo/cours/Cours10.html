@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cours 10 : Introduction à la cryptographie &#8212; Education Numérique Ecole de maturité</title>
+    <title>Cours 10 : Introduction à la cryptologie &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -242,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Cours 10 : Introduction à la cryptographie
+     Cours 10 : Introduction à la cryptologie
     </a>
    </li>
   </ul>
@@ -615,6 +615,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-cryptanalyse-c-est-quoi">
+   La cryptanalyse c’est quoi ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quelques-reperes-historiques">
    Quelques repères historiques
   </a>
@@ -646,6 +651,26 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-de-la-cryptographie">
+   Caractéristiques de la cryptographie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptographie-symetrique">
+   Cryptographie symétrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptographie-assymetrique">
+   Cryptographie assymétrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptanalyse">
+   Cryptanalyse
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -655,7 +680,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Cours 10 : Introduction à la cryptographie</h1>
+                <h1>Cours 10 : Introduction à la cryptologie</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -676,6 +701,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-cryptanalyse-c-est-quoi">
+   La cryptanalyse c’est quoi ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quelques-reperes-historiques">
    Quelques repères historiques
   </a>
@@ -707,6 +737,26 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-de-la-cryptographie">
+   Caractéristiques de la cryptographie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptographie-symetrique">
+   Cryptographie symétrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptographie-assymetrique">
+   Cryptographie assymétrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cryptanalyse">
+   Cryptanalyse
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -718,12 +768,18 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="colossus" src="../../../_images/colossus.jpg" /></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="cours-10-introduction-a-la-cryptographie">
-<h1>Cours 10 : Introduction à la cryptographie<a class="headerlink" href="#cours-10-introduction-a-la-cryptographie" title="Permalink to this headline">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="cours-10-introduction-a-la-cryptologie">
+<h1>Cours 10 : Introduction à la cryptologie<a class="headerlink" href="#cours-10-introduction-a-la-cryptologie" title="Permalink to this headline">#</a></h1>
 <div class="section" id="objectifs">
 <h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>connaître le contexte historique de la cryptographie</p></li>
+<li><p>connaître le contexte historique et l’émergence de l’informatique</p></li>
+<li><p>connaître les deux axes de la cryptologie:</p>
+<ol class="simple">
+<li><p>la cryptographie</p></li>
+<li><p>la cryptanalyse</p></li>
+</ol>
+</li>
 <li><p>comprendre les deux types de cryptographie:</p>
 <ul>
 <li><p>symétrique</p></li>
@@ -731,7 +787,9 @@ title="Print to PDF"
 </ul>
 </li>
 <li><p>appliquer les concepts sur un exercice de cryptographie symétrique</p></li>
+<li><p>déduire les enjeux sociaux de la cryptologie</p></li>
 </ul>
+<p><strong>Durée : 2 périodes</strong></p>
 </div>
 <div class="section" id="la-cryptographie-c-est-quoi">
 <h2>La cryptographie c’est quoi ?<a class="headerlink" href="#la-cryptographie-c-est-quoi" title="Permalink to this headline">#</a></h2>
@@ -750,6 +808,10 @@ title="Print to PDF"
 <li><p>un <strong>texte chiffré</strong> (ou <strong>texte caché</strong>)</p></li>
 <li><p>un <strong>secret</strong> qui permet de passer de l’un à l’autre</p></li>
 </ul>
+</div>
+<div class="section" id="la-cryptanalyse-c-est-quoi">
+<h2>La cryptanalyse c’est quoi ?<a class="headerlink" href="#la-cryptanalyse-c-est-quoi" title="Permalink to this headline">#</a></h2>
+<p>La <strong>cryptanalyse</strong> est l’ensemble des techniques, méthodes et algorithmes qui permettent de retrouver le texte clair à partir du texte chiffré sans connaissance du <strong>secret</strong></p>
 </div>
 <div class="section" id="quelques-reperes-historiques">
 <h2>Quelques repères historiques<a class="headerlink" href="#quelques-reperes-historiques" title="Permalink to this headline">#</a></h2>
@@ -804,6 +866,30 @@ title="Print to PDF"
 <li><p><strong>1980</strong> arrivée des <strong>fonctions de hachage</strong> (comme MD5) qui associent à n’importe quel texte une suite de données de taille arbitraire et dont la propriété principale est qu’elle n’est pas réversible. Ces fonctions de hachages permettent notamment de vérifier l’intégrité d’un message (à savoir qu’il  n’a pas été modifié durant sa transmission), ou de vérifier la validité d’un mot de passe.</p></li>
 </ul>
 </div>
+</div>
+<div class="section" id="caracteristiques-de-la-cryptographie">
+<h2>Caractéristiques de la cryptographie<a class="headerlink" href="#caracteristiques-de-la-cryptographie" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Confidentialité : garantir qu’un message n’est pas accessible par un tiers</p></li>
+<li><p>Intégrité : garantir que le contenu n’a pas été modifié</p></li>
+<li><p>Authentification : garantir l’identité à l’origine d’un message</p></li>
+</ol>
+</div>
+<div class="section" id="cryptographie-symetrique">
+<h2>Cryptographie symétrique<a class="headerlink" href="#cryptographie-symetrique" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="cryptographie-assymetrique">
+<h2>Cryptographie assymétrique<a class="headerlink" href="#cryptographie-assymetrique" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="cryptanalyse">
+<h2>Cryptanalyse<a class="headerlink" href="#cryptanalyse" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Force brute</p></li>
+<li><p>Analyse fréquentielle</p></li>
+<li><p>Indice de coïncidence</p></li>
+<li><p>Attaque par mot probable</p></li>
+<li><p>Attaque par dictionnaire</p></li>
+</ol>
 </div>
 </div>
 
