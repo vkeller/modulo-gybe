@@ -49,6 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Programmation" href="../../prog/index.html" />
@@ -356,7 +358,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../esdn/cours/Cours1.html">
-     Le mouvement Cyherpunk
+     Le mouvement Cypherpunk
     </a>
    </li>
   </ul>
@@ -660,15 +662,98 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#cryptographie-symetrique">
    Cryptographie symétrique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Définition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-clef-secrete">
+     La clef secrète
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-de-kerckhoffs">
+     Principe de Kerckhoffs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principaux-algorithmes-symetriques-modernes">
+     Principaux algorithmes symétriques modernes
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cryptographie-assymetrique">
-   Cryptographie assymétrique
+  <a class="reference internal nav-link" href="#cryptographie-asymetrique">
+   Cryptographie asymétrique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-analogie-du-coffre-fort">
+     L’analogie du coffre-fort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-de-base-comment-cela-peut-fonctionner">
+     Principe de base : comment cela peut fonctionner ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chiffrement-et-dechiffrement">
+     Chiffrement et déchiffrement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilisations-majeures">
+     Utilisations majeures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-algorithmes-asymetriques">
+     Exemples d’algorithmes asymétriques
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-mots-de-passe-fonction-de-hachage-cryptographique">
+   Les mots de passe : fonction de hachage cryptographique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-algorithmes-de-hachage">
+     Exemples d’algorithmes de hachage
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cryptanalyse">
    Cryptanalyse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#force-brute">
+     Force brute
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attaque-par-dictionnaire">
+     Attaque par dictionnaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-frequentielle">
+     Analyse fréquentielle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references-pour-aller-plus-loin">
+   Références pour aller plus loin
   </a>
  </li>
 </ul>
@@ -746,15 +831,98 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#cryptographie-symetrique">
    Cryptographie symétrique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Définition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-clef-secrete">
+     La clef secrète
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-de-kerckhoffs">
+     Principe de Kerckhoffs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principaux-algorithmes-symetriques-modernes">
+     Principaux algorithmes symétriques modernes
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cryptographie-assymetrique">
-   Cryptographie assymétrique
+  <a class="reference internal nav-link" href="#cryptographie-asymetrique">
+   Cryptographie asymétrique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-analogie-du-coffre-fort">
+     L’analogie du coffre-fort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-de-base-comment-cela-peut-fonctionner">
+     Principe de base : comment cela peut fonctionner ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chiffrement-et-dechiffrement">
+     Chiffrement et déchiffrement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilisations-majeures">
+     Utilisations majeures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-algorithmes-asymetriques">
+     Exemples d’algorithmes asymétriques
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-mots-de-passe-fonction-de-hachage-cryptographique">
+   Les mots de passe : fonction de hachage cryptographique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-algorithmes-de-hachage">
+     Exemples d’algorithmes de hachage
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cryptanalyse">
    Cryptanalyse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#force-brute">
+     Force brute
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attaque-par-dictionnaire">
+     Attaque par dictionnaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-frequentielle">
+     Analyse fréquentielle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references-pour-aller-plus-loin">
+   Références pour aller plus loin
   </a>
  </li>
 </ul>
@@ -879,19 +1047,123 @@ title="Print to PDF"
 </div>
 <div class="section" id="cryptographie-symetrique">
 <h2>Cryptographie symétrique<a class="headerlink" href="#cryptographie-symetrique" title="Permalink to this headline">#</a></h2>
+<div class="section" id="definition">
+<h3>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h3>
+<p>La cryptographie <strong>symétrique</strong> (ou cryptographie <strong>à clef secrète</strong>) permet de <strong>chiffrer</strong> et de <strong>déchiffrer</strong> un message avec le <strong>même secret</strong>.</p>
 </div>
-<div class="section" id="cryptographie-assymetrique">
-<h2>Cryptographie assymétrique<a class="headerlink" href="#cryptographie-assymetrique" title="Permalink to this headline">#</a></h2>
+<div class="section" id="la-clef-secrete">
+<h3>La clef secrète<a class="headerlink" href="#la-clef-secrete" title="Permalink to this headline">#</a></h3>
+<p>La <strong>clef secrète</strong> est l’élément principal de la cryptographie symétrique. Il s’agit d’une donnée qui est traitée par un algorithme et qui ne doit être connue que par l’émetteur et le destinataire d’un message.</p>
+</div>
+<div class="section" id="principe-de-kerckhoffs">
+<h3>Principe de Kerckhoffs<a class="headerlink" href="#principe-de-kerckhoffs" title="Permalink to this headline">#</a></h3>
+<p><img alt="Kerckhoffs" src="../../../_images/Kerckhoffs.jpg" /></p>
+<p>Auguste Kirckhoffs est un cryptologue militaire des Pays-Bas. En 1883, il publie un livre intitulé <em>la cryptographie militaire</em> qui fait toujours référence aujourd’hui. Ce livre traite des caractéristiques que devrait avoir un système sûr de niveau militaire. Dans le chapitre II (page 8 de la traduction, voir Références), il cite ainsi les 6 caractéristiques :</p>
+<ol class="simple">
+<li><p>Le système doit être matériellement, sinon mathématiquement indéchiffrable</p></li>
+<li><p>Il faut qu’il n’exige pas le secret, et qu’il puisse sans inconvénient tomber dans les mains de l’ennemi</p></li>
+<li><p>La clef doit pouvoir en être communiquée et retenue sans le secours de notes écrites, et être échangée ou modifiée au gré des correspondants</p></li>
+<li><p>Il faut qu’il soit applicable à la correspondance télégraphique</p></li>
+<li><p>Il faut qu’il soit portatif, et que son maniement ou son fonctionnement n’exige pas le concours de plusieurs personnes</p></li>
+<li><p>Enfin, il est nécessaire, vu les circonstances qui en commande l’application, que le système soit d’un usage facile, ne demandant ni tension de l’esprit, ni la connaissance d’une longue série de règles à observer</p></li>
+</ol>
+<p>L’algorithme qui régit la cryptographie symétrique doit respecter l’ensemble des caractéristiques du principe de Kirckhoffs.</p>
+</div>
+<div class="section" id="principaux-algorithmes-symetriques-modernes">
+<h3>Principaux algorithmes symétriques modernes<a class="headerlink" href="#principaux-algorithmes-symetriques-modernes" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>AES (Advanced Encryption Standard)</p></li>
+<li><p>DES (Data Encryption Standard) démontré depuis les années 1990 cassable.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="cryptographie-asymetrique">
+<h2>Cryptographie asymétrique<a class="headerlink" href="#cryptographie-asymetrique" title="Permalink to this headline">#</a></h2>
+<p><img alt="asymetrique" src="../../../_images/asymetrique.png" /></p>
+<p>La cryptographie <strong>asymétrique</strong> permet de chiffrer et de déchiffrer un message avec <strong>deux clefs distinctes</strong>.</p>
+<ul class="simple">
+<li><p>La première : la clef publique permet le <strong>chiffrement</strong></p></li>
+<li><p>La seconde : la clef privée qui permet le <strong>déchiffrement</strong></p></li>
+</ul>
+<p>Les deux clefs sont créées par le destinataire.</p>
+<div class="section" id="l-analogie-du-coffre-fort">
+<h3>L’analogie du coffre-fort<a class="headerlink" href="#l-analogie-du-coffre-fort" title="Permalink to this headline">#</a></h3>
+<p>Cette analogie, bien que simpliste, permet de comprendre le concept de cryptographie asymétrique.</p>
+<ul class="simple">
+<li><p>Alice a choisi un coffre-fort dont elle seule possède la clef</p></li>
+<li><p>Alice envoie le coffre-fort ouvert à Bob</p></li>
+<li><p>Bob le reçoit et y place son message</p></li>
+<li><p>Bob ferme le coffre-fort</p></li>
+<li><p>Bonb envoie le coffre-fort fermé à Alice</p></li>
+<li><p>Alice le reçoit et ouvre son coffre-fort pour lire le message</p></li>
+</ul>
+</div>
+<div class="section" id="principe-de-base-comment-cela-peut-fonctionner">
+<h3>Principe de base : comment cela peut fonctionner ?<a class="headerlink" href="#principe-de-base-comment-cela-peut-fonctionner" title="Permalink to this headline">#</a></h3>
+<p>La cryptographie asymétrique fonctionne sur le principe mathématique des <strong>fonctions à sens unique</strong> et des <strong>trappes secrètes</strong>. Les premières sont des fonctions telles qu’une fois appliquées, il est très <em>difficile</em> de retrouver le point de départ (le message clair). Les secondes permettent à ceux qui ont conçu la fonction à sens unique de déchiffrer le message grâce à un élément qu’il possède (la clef privée).</p>
+<p>L’une des principales fonctions à sens unique utilisée dans les algorithmes asymétriques est celle de la <strong>factorisation d’un nombre entier</strong> : étant donné deux nombres premiers (très grands) <span class="math notranslate nohighlight">\(p\)</span> et <span class="math notranslate nohighlight">\(q\)</span>, il est extrêmement facile de calculer <span class="math notranslate nohighlight">\(z = p \cdot q\)</span>. Connaissant <span class="math notranslate nohighlight">\(z\)</span>, il est extrêmement difficile de retrouver <span class="math notranslate nohighlight">\(p\)</span> et <span class="math notranslate nohighlight">\(q\)</span>. Le célèbre <strong>algorithme RSA</strong> est construit sur cette fonction.</p>
+</div>
+<div class="section" id="chiffrement-et-dechiffrement">
+<h3>Chiffrement et déchiffrement<a class="headerlink" href="#chiffrement-et-dechiffrement" title="Permalink to this headline">#</a></h3>
+<p>Le système de clefs publique et privée permet de coder des chiffres. Mais il est relativement facile de créer un système de conversion de lettres en chiffres et qui permet de chiffrer n’importe quel caractère.</p>
+</div>
+<div class="section" id="utilisations-majeures">
+<h3>Utilisations majeures<a class="headerlink" href="#utilisations-majeures" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>La <strong>confidentialité</strong> des messages reçus. L’expéditeur est certain que seul le récepteur du message peut le déchiffrer avec sa clef publique</p></li>
+<li><p>Dans l’autre sens, on peut utiliser la clef privée pour chiffrer un message. Le récepteur peut utiliser la clef publique pour vérifier l’autenticité du message. Il s’agit de <strong>l’authentification</strong></p></li>
+</ol>
+</div>
+<div class="section" id="exemples-d-algorithmes-asymetriques">
+<h3>Exemples d’algorithmes asymétriques<a class="headerlink" href="#exemples-d-algorithmes-asymetriques" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>RSA (Rivest, Shamir et Adelman du nom de leurs concepteurs)</p></li>
+<li><p>DSA (Digital Signature Algorithm)</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="les-mots-de-passe-fonction-de-hachage-cryptographique">
+<h2>Les mots de passe : fonction de hachage cryptographique<a class="headerlink" href="#les-mots-de-passe-fonction-de-hachage-cryptographique" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on utilise un <strong>mot de passe</strong>, celui-ci est par définition secret. Même si le système sur lequel on se connecte (par exemple <a class="reference external" href="https://www.outlook.com">eduvaud.ch</a> ) peut être de très grande confiance, il ne doit jamais stocker l’ensemble de ces mots de passe dans un fichier. C’est un point de faiblesse majeur si ce fichier est divulgué.</p>
+<p>Pour éviter ce problème, on recourt aux <strong>fonctions de hachage cryptographique</strong>. Une telle fonction associe à une donnée de taille arbitraire (par exemple un mot de passe), une <em>image</em> (une suite de caractères ou de bits) de taille fixe et dont la propriété essentielle est qu’il est pratiquement impossible à inverser; c’est-à-dire de retrouver la donnée initiale en fonction de l’image. La fonction de hachage possède les caractéristiques suivantes :</p>
+<ul class="simple">
+<li><p>elle est déterministe (la même donnée initiale donnera toujours la même image),</p></li>
+<li><p>l’image se calcule facilement,</p></li>
+<li><p>il est impossible de retrouver la donnée à partir de l’image et</p></li>
+<li><p>il est impossible de trouver deux messages différents ayant la même image</p></li>
+</ul>
+<div class="section" id="exemples-d-algorithmes-de-hachage">
+<h3>Exemples d’algorithmes de hachage<a class="headerlink" href="#exemples-d-algorithmes-de-hachage" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>MD5</p></li>
+<li><p>Md5sum</p></li>
+<li><p>SHA</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="cryptanalyse">
 <h2>Cryptanalyse<a class="headerlink" href="#cryptanalyse" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Force brute</p></li>
-<li><p>Analyse fréquentielle</p></li>
-<li><p>Indice de coïncidence</p></li>
-<li><p>Attaque par mot probable</p></li>
-<li><p>Attaque par dictionnaire</p></li>
-</ol>
+<p>La cryptanalyse est la science du <strong>cassage de secret</strong>. Il s’agit de l’ensemble des méthodes et techniques qui consistent à retrouver un texte clair à partir du texte chiffré. Les principales méthodes de cassage sont les suivantes :</p>
+<div class="section" id="force-brute">
+<h3>Force brute<a class="headerlink" href="#force-brute" title="Permalink to this headline">#</a></h3>
+<p>La <strong>force brute</strong> consiste à tester l’ensemble des combinaisons, une à une. C’est l’attaque la plus simple en terme algorithmique, mais la plus coûteuse en terme de complexité.</p>
+</div>
+<div class="section" id="attaque-par-dictionnaire">
+<h3>Attaque par dictionnaire<a class="headerlink" href="#attaque-par-dictionnaire" title="Permalink to this headline">#</a></h3>
+<p>L’attaque <strong>par dictionnaire</strong> consiste à tester la validité d’une clef sur la base d’un dictionnaire, c’est-à-dire d’un ensemble de clefs potentielles.</p>
+<p>Le logiciel à sources ouvertes <a class="reference external" href="https://github.com/openwall/john">John The Ripper</a> est un logiciel de cassage de mots de passes qui utilise l’attaque par dictionnaire.</p>
+</div>
+<div class="section" id="analyse-frequentielle">
+<h3>Analyse fréquentielle<a class="headerlink" href="#analyse-frequentielle" title="Permalink to this headline">#</a></h3>
+<p>L’attaque par analyse fréquentielle examine la fréquence d’apparition de lettres employées dans un texte chiffré et à la comparer avec les fréquences d’apparition des lettres dans une langue donnée.</p>
+</div>
+</div>
+<div class="section" id="references-pour-aller-plus-loin">
+<h2>Références pour aller plus loin<a class="headerlink" href="#references-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Auguste Kerckhoffs (1835-1903). « La cryptographie militaire », Journal des sciences militaires, vol. IX, p. 5-38, janvier 1883. Une version est disponible sur la <a class="reference external" href="https://books.google.ch/books?hl=fr&amp;lr=&amp;id=VbQBAAAAYAAJ&amp;oi=fnd&amp;pg=PA1&amp;dq=Kerckhoffs+Cryptographie+militaire+1883&amp;ots=per75JvmC0&amp;sig=omV5TQ8WIfxiZujqnxkY9O27QYw#v=onepage&amp;q&amp;f=false">bibliothèque de Google</a></p></li>
+<li><p>Jean-Philippe Javet, cours de mathématiques pour le gymnase de Morges, <a class="reference external" href="http://www.gymomath.ch/javmath/polycopie/OC%20Crypto.pdf">chapitre sur la cryptographie</a></p></li>
+</ul>
 </div>
 </div>
 
