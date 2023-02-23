@@ -727,6 +727,11 @@ title="Print to PDF"
    Exercice 7 (Annonce vocale)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-annonce-vocale-complete-avec-jingle">
+   Exercice 8 : Annonce vocale complète (avec jingle)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -867,6 +872,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-7-annonce-vocale">
    Exercice 7 (Annonce vocale)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-annonce-vocale-complete-avec-jingle">
+   Exercice 8 : Annonce vocale complète (avec jingle)
   </a>
  </li>
 </ul>
@@ -1407,6 +1417,38 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Annoncez les trains arrivant sur voie 4</p>
+</div>
+<div class="section" id="exercice-8-annonce-vocale-complete-avec-jingle">
+<h2>Exercice 8 : Annonce vocale complète (avec jingle)<a class="headerlink" href="#exercice-8-annonce-vocale-complete-avec-jingle" title="Permalink to this headline">#</a></h2>
+<p>Il est finalement possible de faire jouer le jingle des CFF avant l’annonce en important le module <code class="docutils literal notranslate"><span class="pre">playsound</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">playsound</span>
+</pre></div>
+</div>
+<p>puis de donner le chemin (le <em>path</em>) du fichier <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> à jouer :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">playsound</span><span class="o">.</span><span class="n">playsound</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pour faire cela, il vous faut télécharger sur votre ordinateur, <strong>au même emplacement que votre programme python</strong> les fichiers MP3 des jingles : <span class="xref myst">version romande</span>, <span class="xref myst">version tessinoise</span> et la <span class="xref myst">version suisse-allemande</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">playsound</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
+<span class="n">playsound</span><span class="o">.</span><span class="n">playsound</span><span class="p">(</span><span class="s1">&#39;sons/bahn_cff_f.mp3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">annonce1</span> <span class="o">=</span> <span class="s1">&#39;say &#39;</span><span class="o">+</span><span class="s1">&#39;Arrivée, sur voie &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">train1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;, du train &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;, à destination de &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;. Départ &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">system</span><span class="p">(</span><span class="n">annonce1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sh: 1: say: not found
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32512
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
