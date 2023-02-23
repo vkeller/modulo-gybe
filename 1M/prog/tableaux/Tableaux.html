@@ -240,6 +240,11 @@ const thebe_selector_output = ".output, .cell_output"
      Cours 9 : L’horologe de la gare de St-Gallen
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours10.html">
+     Cours 10 : Introduction à la cryptologie
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -339,17 +344,29 @@ const thebe_selector_output = ".output, .cell_output"
    Architecture
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../esdn/index.html">
    Enjeux sociaux
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/Cours1.html">
+     Le mouvement Cypherpunk
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../jeux/index.html">
    Jeux informatiques et logiques
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -365,8 +382,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../machine-learning/index.html">
    Intelligence artificielle
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -705,6 +722,11 @@ title="Print to PDF"
    Exercice 6 (Affichage des quais)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-annonce-vocale">
+   Exercice 7 (Annonce vocale)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -840,6 +862,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-6-affichage-des-quais">
    Exercice 6 (Affichage des quais)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-annonce-vocale">
+   Exercice 7 (Annonce vocale)
   </a>
  </li>
 </ul>
@@ -1365,6 +1392,20 @@ title="Print to PDF"
 <div class="section" id="exercice-6-affichage-des-quais">
 <h2>Exercice 6 (Affichage des quais)<a class="headerlink" href="#exercice-6-affichage-des-quais" title="Permalink to this headline">#</a></h2>
 <p>Chaque quai possède un <strong>afficheur de quai</strong>. Cet afficheur de quai utilise les mêmes informations que l’horaire complet. En utilisant un test conditionnel, affichez uniquement les trains qui partent du quai 4.</p>
+</div>
+<div class="section" id="exercice-7-annonce-vocale">
+<h2>Exercice 7 (Annonce vocale)<a class="headerlink" href="#exercice-7-annonce-vocale" title="Permalink to this headline">#</a></h2>
+<p>Il est possible de <em>faire parler</em> votre ordinateur. En important le module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
+</pre></div>
+</div>
+<p>et en appelant la fonction <code class="docutils literal notranslate"><span class="pre">system(string)</span></code> où <code class="docutils literal notranslate"><span class="pre">string</span></code> est une chaîne de caractère qui commence par <code class="docutils literal notranslate"><span class="pre">say</span></code>, vous pouvez simuler les annonces en gare. Par exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
+<span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">annonce1</span> <span class="o">=</span> <span class="s1">&#39;say &#39;</span><span class="o">+</span><span class="s1">&#39;Arrivée sur voie &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">train1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; du train &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39; à destination de &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;. Départ &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">annonce</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
