@@ -1428,23 +1428,38 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">playsound</span><span class="o">.</span><span class="n">playsound</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Pour faire cela, il vous faut télécharger sur votre ordinateur, <strong>au même emplacement que votre programme python</strong> les fichiers MP3 des jingles : <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_cff_f.mp3">version romande</a>, <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_ffs_i.mp3">version tessinoise</a> et la <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_sbb_d.mp3">version suisse-allemande</a></p>
+<p>Pour faire cela, il vous faut télécharger sur votre ordinateur, <strong>au même emplacement que votre programme python</strong> les fichiers MP3 des jingles : <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_cff_f.mp3">version romande</a>, <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_ffs_i.mp3">version tessinoise</a> et la <a class="reference external" href="https://github.com/vkeller/modulo-gybe/blob/main/1M/prog/tableaux/sons/bahn_sbb_d.mp3">version suisse-allemande</a>. <strong>Attention à leur donner le bon nom !!!</strong></p>
+<p><strong>Conseil</strong> Afin de jouer le jingle <strong>puis</strong> l’annonce, il faut placer un petit retard. Ceci est fait avec la fonction <code class="docutils literal notranslate"><span class="pre">time.sleep(2.4)</span></code> qui fait <em>dormir le programme</em> pendant le jeu du jingle. Cette fonction provient du module <code class="docutils literal notranslate"><span class="pre">sleep</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">playsound</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
-<span class="n">playsound</span><span class="o">.</span><span class="n">playsound</span><span class="p">(</span><span class="s1">&#39;sons/bahn_cff_f.mp3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;bahn_cff_f.mp3&#39;</span><span class="p">)</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">annonce1</span> <span class="o">=</span> <span class="s1">&#39;say &#39;</span><span class="o">+</span><span class="s1">&#39;Arrivée, sur voie &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">train1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;, du train &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;, à destination de &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;. Départ &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">system</span><span class="p">(</span><span class="n">annonce1</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">annonce1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sh: 1: say: not found
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pygame 2.1.2 (SDL 2.0.16, Python 3.9.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32512
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">error</span><span class="g g-Whitespace">                                     </span>Traceback (most recent call last)
+<span class="nn">Input In [24],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">time</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;bahn_cff_f.mp3&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+
+<span class="ne">error</span>: No file &#39;bahn_cff_f.mp3&#39; found in working directory &#39;/home/vkeller/modulo-gybe/1M/prog/tableaux&#39;.
 </pre></div>
 </div>
 </div>
