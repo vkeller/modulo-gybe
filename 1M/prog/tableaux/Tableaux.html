@@ -1436,11 +1436,11 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">pygame</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;bahn_cff_f.mp3&#39;</span><span class="p">)</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;sons/bahn_cff_f.mp3&#39;</span><span class="p">)</span>
 <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">annonce1</span> <span class="o">=</span> <span class="s1">&#39;say &#39;</span><span class="o">+</span><span class="s1">&#39;Arrivée, sur voie &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">train1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;, du train &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;, à destination de &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;. Départ &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">annonce1</span> <span class="o">=</span> <span class="s1">&#39;say &#39;</span><span class="o">+</span><span class="s1">&#39;Voie &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">train1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;, arrivée du train &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;, à destination de &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;. Départ &#39;</span><span class="o">+</span><span class="n">train1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">annonce1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1450,16 +1450,10 @@ title="Print to PDF"
 Hello from the pygame community. https://www.pygame.org/contribute.html
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">error</span><span class="g g-Whitespace">                                     </span>Traceback (most recent call last)
-<span class="nn">Input In [24],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">time</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;bahn_cff_f.mp3&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
-
-<span class="ne">error</span>: No file &#39;bahn_cff_f.mp3&#39; found in working directory &#39;/home/vkeller/modulo-gybe/1M/prog/tableaux&#39;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sh: 1: say: not found
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32512
 </pre></div>
 </div>
 </div>
