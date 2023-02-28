@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Coder et décoder comme les Romains" href="../hacking/hacking-romain.html" />
+    <link rel="next" title="TP CRYP02 : Coder et décoder comme les Romains" href="../hacking/hacking-romain.html" />
     <link rel="prev" title="Les mots de passe" href="../motdepasse/MotsDePasse.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -334,7 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../hacking/hacking-romain.html">
-     Coder et décoder comme les Romains
+     TP CRYP02 : Coder et décoder comme les Romains
     </a>
    </li>
    <li class="toctree-l2">
@@ -676,6 +676,11 @@ title="Print to PDF"
    Exercice 8 : Décrypter un très long texte chiffré
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-envoyer-un-message-crypte">
+   Exercice 9 : Envoyer un message crypté
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -760,6 +765,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-8-decrypter-un-tres-long-texte-chiffre">
    Exercice 8 : Décrypter un très long texte chiffré
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-envoyer-un-message-crypte">
+   Exercice 9 : Envoyer un message crypté
   </a>
  </li>
 </ul>
@@ -1051,7 +1061,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>76
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>58
 </pre></div>
 </div>
 </div>
@@ -1071,18 +1081,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Cyphered] 9   : Autlyeer hoodnihisu csanerweevg  is,e bbr!  tuaeynotr oo  bf
-  [ANALYSED 9]   : Arise, you have nothing to lose but your barbed wire fences!
-[Cyphered] 27   : Iyf  opurtilvaawcsy  wiisl lo uhtalvaew epdr,i voancly
-  [ANALYSED 27]   : If privacy is outlawed, only outlaws will have privacy
-[Cyphered] 55   : S bhyiootwui  omane i psaet rpseorns ownh ow hios  heaist hneort heixncge etdoi nhgildye ,d ualnld  oIr’ laln  sehxohwi
-  [ANALYSED 55]   : Show me a person who has nothing to hide, and I’ll show you a person who is either exceedingly dull or an exhibitionist
-[Cyphered] 6   : O eyaei pncntssc ctojeeht hjeosu e tiu  eso woesie tfba vtsxii
-  [ANALYSED 6]   : One of the best ways to achieve justice is to expose injustice
-[Cyphered] 30   : Iy s iftanuemgtm  u atro oeff . ug tteIhut or wuerag-onhhottat c tkaoec rcr ei;sd seI   tiaotm s t thsrey
-  [ANALYSED 30]   : I am a future-hacker ; I am trying to get root access to the future. I want to ride its system of thought
-[Cyphered] 5   : G  minmsreoledsde
-  [ANALYSED 5]   : Girls need modems
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Cyphered] 5   : A,  ioe  ernr hnn  ybdeciyaoglboa  esovt ouurwfseuehtstrbie!
+  [ANALYSED 5]   : Arise, you have nothing to lose but your barbed wire fences!
+[Cyphered] 20   : Ielfd  ,hp arovinevl aypc ryoi uvitaslc ayowust lwaiwl
+  [ANALYSED 20]   : If privacy is outlawed, only outlaws will have privacy
+[Cyphered] 32   : S ruhtslooolw n  h omiwredh  eoaa, n  i paseen xrdehs iioItbn’hi letwlrih  oosen hxihocsawets e ydnoiount ghali ynp ged
+  [ANALYSED 32]   : Show me a person who has nothing to hide, and I’ll show you a person who is either exceedingly dull or an exhibitionist
+[Cyphered] 20   : O icntseeo   toaofc  hetixhepevo esb eej suitsn tjwiuacsyets i
+  [ANALYSED 20]   : One of the best ways to achieve justice is to expose injustice
+[Cyphered] 40   : Iti  daremo  oiatt  sfa ucstcyuesrstese- mht aooc fkt ehtreh  o;fu ugIth utarme .t rIy iwnagn tt ot og er
+  [ANALYSED 40]   : I am a future-hacker ; I am trying to get root access to the future. I want to ride its system of thought
+[Cyphered] 6   : Gnoiedreeldms s m
+  [ANALYSED 6]   : Girls need modems
 </pre></div>
 </div>
 </div>
@@ -1105,6 +1115,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="exercice-9-envoyer-un-message-crypte">
+<h2>Exercice 9 : Envoyer un message crypté<a class="headerlink" href="#exercice-9-envoyer-un-message-crypte" title="Permalink to this headline">#</a></h2>
+<p>Envoyez un email contenant un message chiffré à un ou une camarade de classe présent dans la salle sans lui dévoiler la clef et demandez-lui de le déchiffrer.</p>
 </div>
 </div>
 
@@ -1145,7 +1159,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="../hacking/hacking-romain.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Coder et décoder comme les Romains</p>
+        <p class="prev-next-title">TP CRYP02 : Coder et décoder comme les Romains</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
