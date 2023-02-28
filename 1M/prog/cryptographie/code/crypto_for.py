@@ -28,40 +28,46 @@ dataset_f = [phrase_f_1,phrase_f_2,phrase_f_3,phrase_f_4,phrase_f_5,phrase_f_6,p
 # Argument 1 : le texte clair
 # Argument 2 : la clef de chiffrage
 # Retour     : le texte chiffré
-def chiffre(texte_clair,saut):
+def chiffre(texte_clair,clef):
     texte_chiffre = ''
+    # la variable pos contient l'index (la position) dans le texte clair
     pos = 0
+    # la variable dec contient l'incrément négatif lorsque la longueur du texte clair est atteinte
     dec = 0
+    # la variable pos_c contient l'index (la position) dans le texte chiffré
     pos_c = 0
+    # la variable l contient la longueur du texte clair
     l = len(texte_clair)
-#    while pos != l:
     for pos in range(l):
         if (pos_c > l-1):
             dec += 1
             pos_c = dec
         texte_chiffre += texte_clair[pos_c]
-        pos_c = pos_c + saut
-#        pos += 1
+        pos_c = pos_c + clef
     return texte_chiffre    
 
 # Fonction permettant de déchiffrer un texte crypté
 # Argument 1 : le texte crypté
 # Argument 2 : la clef de chiffrage
 # Retour     : le texte déchiffré
-def dechiffre(texte_chiffre,saut):
+def dechiffre(texte_chiffre,clef):
+    # la variable l contient la longueur du texte chiffré
     l = len(texte_chiffre)
+    # la variable pos continent l'index (la position) dans le texte chiffré
     pos = 0
+    # la varibale pos_c contient l'index (la position) dans le texte clair
     pos_c = 0
+    # la variable dec contient la valeur de l'incrément positif
     dec = 0
+    # la variable ret est une liste de longueur l qui est vide et que l'on va remplir avec les lettre du texte chiffré
     ret = ['' for _ in range(l)]
-#    while pos != l:
     for pos in range(l):
         if (pos_c > l-1):
             dec += 1
             pos_c = dec
         ret[pos_c] = texte_chiffre[pos]
-        pos_c = pos_c + saut
-#        pos += 1
+        pos_c = pos_c + clef
+    # on retourne une chaîne de caractères (''.join(ret) retourne la transformation de la liste en chaîne de caractères)
     return ''.join(ret)
 
 # Fonction permettant de retourner la langue d'un texte donné en paramètre
@@ -99,14 +105,14 @@ texte_dechiffre = ''
 
 # Création des phrases chiffrées aléatoirement
 # Et déchiffrement SANS élagage
-for phrase in dataset_a:
-    longueur = len(phrase)
-    clef = random.randint(3,int(longueur/2))
-    texte_chiffre = chiffre(phrase,clef)
-    print('[Cyphered] '+str(clef)+"   : "+texte_chiffre)
-    for clef in range(1,longueur):
-        texte_dechiffre = dechiffre(texte_chiffre,clef)
-        print('  [ANALYSED '+str(clef)+']   : '+texte_dechiffre)
+#for phrase in dataset_a:
+#    longueur = len(phrase)
+#    clef = random.randint(3,int(longueur/2))
+#    texte_chiffre = chiffre(phrase,clef)
+#    print('[Cyphered] '+str(clef)+"   : "+texte_chiffre)
+#    for clef in range(1,longueur):
+#        texte_dechiffre = dechiffre(texte_chiffre,clef)
+#        print('  [ANALYSED '+str(clef)+']   : '+texte_dechiffre)
 
 
 
@@ -162,4 +168,5 @@ for phrase in dataset_a:
 #    texte_dechiffre = dechiffre(texte_chiffre,s)
 #    print('[D] '+str(s)+"   : "+texte_dechiffre)
 
-
+# Longue phrase (clef = 652)
+# La cryptographie, la science de l écriture de codes et de chiffrements pour une communication sécurisée, est l un des éléments principaux ayant rendu possible l’invention des crypto-monnaies et des blockchains modernes. Les techniques cryptographiques utilisées aujourd hui sont cependant le fruit d une longue histoire de développement. Depuis l Antiquité, la cryptographie permet de transmettre des informations de manière sécurisée. Voici l’histoire fascinante de la cryptographie qui a conduit aux méthodes avancées et sophistiquées utilisées pour le cryptage numérique moderne.   Les racines anciennes de la cryptographie  On sait que les techniques cryptographiques primitives existaient dans l Antiquité et, à un certain degré, la plupart des civilisations anciennes semblent avoir eu recours à la cryptographie. Le remplacement de symbole, la forme la plus élémentaire de cryptographie, apparaît à la fois dans les écrits égyptiens antiques et mésopotamiens. Le plus ancien exemple connu de ce type de cryptographie a été trouvé dans la tombe d un noble égyptien nommé Khnumhotep II, qui vivait il y a environ 3 900 ans.  Le remplacement de symboles dans l’inscription de Knhumhotep n’a pas pour objectif de dissimuler des informations, mais de renforcer leur attrait linguistique. Le premier exemple connu de cryptographie utilisée pour protéger des informations confidentielles date de 3 500 ans environ. Un scribe mésopotamien recourait à la cryptographie pour dissimuler une formule de glaçure de poterie, utilisée sur des tablettes d argile.
