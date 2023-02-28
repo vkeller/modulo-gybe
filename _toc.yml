@@ -49,6 +49,7 @@ parts:
       - file: 1M/prog/arbres/LesArbres
       - file: 1M/prog/dictionnaires/Dictionnaires2
       - file: 1M/prog/motdepasse/MotsDePasse
+      - file: 1M/prog/cryptographie/Cryptographie
       - file: 1M/prog/hacking/hacking-romain
       - file: 1M/prog/fichiers/SystemeDeFichiers
     - file: 1M/architecture/index

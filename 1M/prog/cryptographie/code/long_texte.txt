@@ -1,0 +1,37 @@
+La cryptographie, la science de l'écriture de codes et de chiffrements pour une communication sécurisée, est l'un des éléments principaux ayant rendu possible l’invention des crypto-monnaies et des blockchains modernes. Les techniques cryptographiques utilisées aujourd'hui sont cependant le fruit d'une longue histoire de développement. Depuis l'Antiquité, la cryptographie permet de transmettre des informations de manière sécurisée. Voici l’histoire fascinante de la cryptographie qui a conduit aux méthodes avancées et sophistiquées utilisées pour le cryptage numérique moderne.
+
+
+Les racines anciennes de la cryptographie
+
+On sait que les techniques cryptographiques primitives existaient dans l'Antiquité et, à un certain degré, la plupart des civilisations anciennes semblent avoir eu recours à la cryptographie. Le remplacement de symbole, la forme la plus élémentaire de cryptographie, apparaît à la fois dans les écrits égyptiens antiques et mésopotamiens. Le plus ancien exemple connu de ce type de cryptographie a été trouvé dans la tombe d'un noble égyptien nommé Khnumhotep II, qui vivait il y a environ 3 900 ans.
+
+Le remplacement de symboles dans l’inscription de Knhumhotep n’a pas pour objectif de dissimuler des informations, mais de renforcer leur attrait linguistique. Le premier exemple connu de cryptographie utilisée pour protéger des informations confidentielles date de 3 500 ans environ. Un scribe mésopotamien recourait à la cryptographie pour dissimuler une formule de glaçure de poterie, utilisée sur des tablettes d'argile.
+
+Par la suite, la cryptographie a largement été utilisée pour protéger des informations militaires importantes, c’est une utilisation encore répandue à ce jour. Dans la cité grecque de Sparte, les messages étaient cryptés en étant rédigés sur un parchemin posé sur un cylindre d'une taille particulière, rendant le message indéchiffrable jusqu'à ce qu'il soit enroulé autour d'un cylindre similaire par le destinataire. De même, on sait que des espions de l’Inde antique utilisaient des messages codés dès le IIe siècle av JC..
+
+La cryptographie la plus avancée du monde antique a peut-être été crée par les Romains. Un exemple marquant de la cryptographie romaine, connu sous le nom de chiffrement par décalage, consistait à changer les lettres du message que l’on voulait crypter en les remplaçant par des lettres décalées d’un certain nombre de places dans l’ordre de l’alphabet latin. Le destinataire pouvait décoder avec succès le message, par ailleurs illisible, s’il connaissait le système et le décalage à effectuer.
+
+
+Évolution au Moyen Âge et à la Renaissance
+
+Au cours du Moyen Âge, la cryptographie est devenue de plus en plus importante, mais les codes de substitution, dont le chiffrement par décalage est un exemple, subsitèrent en tant que norme. La cryptanalyse, la science par laquelle les messages et les codes sont déchiffrés, a commencé à rattraper la science encore relativement primitive de la cryptographie. Al-Kindi, un mathématicien arabe réputé, mis au point une technique connue sous le nom d’analyse de fréquence vers 800 après J.-C. qui rendait les algorithmes de substitution vulnérables au déchiffrement. Pour la première fois, les personnes qui tentaient de déchiffrer des messages codés eurent accès à une méthode systématique, ce qui rendit nécessaire la progression de la cryptographie pour qu’elle reste efficace.
+
+En 1465, Leone Alberti développa le poly alphabétique, considéré comme la solution contre la technique d'analyse de fréquence d'Al-Kindi. Dans un chiffre polyalphabétique, un message est codé en utilisant deux alphabets distincts. L'un est l'alphabet dans lequel le message original est écrit, tandis que le second est un alphabet entièrement différent dans lequel le message apparaît après avoir été codé. Combinés aux chiffrements de substitution traditionnels, les chiffrements polyalphabétiques ont considérablement augmenté la sécurité des informations codées. À moins qu'un lecteur ne connaisse l'alphabet dans lequel le message avait été écrit à l'origine, la technique d'analyse de fréquence était inutile.
+
+De nouvelles méthodes de codage de l’information ont également été mises au point à la Renaissance, notamment une méthode populaire de codage binaire, inventée par le célèbre intellectuel Sir Francis Bacon en 1623.
+
+
+Les progrès des siècles plus récents
+
+La science de la cryptographie a continué à progresser progressivement au cours des siècles. Une avancée majeure en matière de cryptographie a été décrite, bien que peut-être jamais construite, par Thomas Jefferson dans les années 1790. Son invention, connue sous le nom de roue de chiffrement, consiste en 36 anneaux de lettres sur des roues mobiles qui peuvent être utilisés pour réaliser un codage complexe. Ce concept était tellement avancé qu'il servit de base à la cryptographie militaire américaine jusqu'à la fin de la Seconde Guerre mondiale.
+
+La Seconde Guerre mondiale mit également en valeur le parfait exemple de la cryptographie analogique, connue sous le nom de machine Enigma. Comme le chiffrement de roue, cet appareil, utilisé par les puissances de l'Axe, utilisait des roues rotatives pour coder un message, ce qui rendait la lecture pratiquement impossible sans une autre machine Enigma. Les premières technologies informatiques ont finalement été utilisées pour aider à casser le cryptage Enigma, et le déchiffrement réussi des messages Enigma est toujours considéré comme un élément essentiel de la victoire finale des Alliés.
+
+
+La cryptographie à l'ère de l'informatique
+
+Avec l'essor de l’informatique, la cryptographie est devenue beaucoup plus avancée qu'elle ne l'était à l'époque analogique. Le cryptage mathématique sur 128 bits, beaucoup plus puissant que tout cryptage antique ou médiéval, est désormais la norme pour de nombreux périphériques et systèmes informatiques sensibles. À partir de 1990, des informaticiens ont mit au point une toute nouvelle forme de cryptographie, appelée cryptographie quantique, dans l'espoir de rehausser le niveau de protection offert par le cryptage moderne.
+
+Plus récemment, des techniques cryptographiques ont également été utilisées pour rendre les crypto-monnaies possibles. Les crypto-monnaies utilisent plusieurs techniques cryptographiques avancées, notamment les fonctions de hachage, la cryptographie à clé publique et les signatures numériques. Ces techniques sont principalement utilisées pour assurer la sécurité des données stockées sur les blockchains et pour authentifier les transactions. Une forme de cryptographie spécialisée, appelée algorithme de signature numérique à courbe elliptique (ECDSA), sous-tend Bitcoin et d'autres systèmes de crypto-monnaie afin de renforcer la sécurité et de garantir que les fonds ne peuvent être utilisés que par leurs propriétaires véritables.
+
+La cryptographie a parcouru un long chemin au cours des 4 000 dernières années et cela ne devrait pas s'arrêter de si tôt. Tant que les données sensibles nécessitent une protection, la cryptographie continuera de progresser. Bien que les systèmes cryptographiques utilisés dans les blockchains de crypto-monnaies représentent aujourd'hui l'une des formes les plus avancées de cette science, ils font également partie d'une histoire qui remonte à travers les âges et constitue une grande partie de l'histoire de l’homme.
