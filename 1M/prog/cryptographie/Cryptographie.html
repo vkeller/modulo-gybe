@@ -788,11 +788,18 @@ title="Print to PDF"
 <div class="section" id="objectifs">
 <h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>implémenter les algorithmes vus au cours :</p>
+<li><p>Modéliser une scytale</p></li>
+<li><p>Implémenter le fonctionnement de la scytale:</p>
 <ul>
-<li><p>Scytale (Baton de Plutarque)</p></li>
+<li><p>chiffrer un texte clair avec connaissance de la clef</p></li>
+<li><p>déchiffrer un texte crypté avec connaissance de la clef</p></li>
+</ul>
+</li>
+<li><p>Déchiffrer un texte crypté sans connaissance de la clef</p>
+<ul>
 <li><p>attaque par force brute</p></li>
-<li><p>élagage des solutions</p></li>
+<li><p>reconnaissance de la langue</p></li>
+<li><p>élagage des solutions peu probables</p></li>
 </ul>
 </li>
 </ul>
@@ -911,12 +918,8 @@ title="Print to PDF"
     <span class="n">pos_c</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="c1"># la variable l contient la longueur du texte clair</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte_clair</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">pos_c</span> <span class="o">&gt;</span> <span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">dec</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">pos_c</span> <span class="o">=</span> <span class="n">dec</span>
-        <span class="n">texte_chiffre</span> <span class="o">+=</span> <span class="n">texte_clair</span><span class="p">[</span><span class="n">pos_c</span><span class="p">]</span>
-        <span class="n">pos_c</span> <span class="o">=</span> <span class="n">pos_c</span> <span class="o">+</span> <span class="n">clef</span>
+    <span class="c1"># A REMPLIR ICI</span>
+
     <span class="k">return</span> <span class="n">texte_chiffre</span>  
 </pre></div>
 </div>
@@ -944,12 +947,9 @@ title="Print to PDF"
     <span class="n">dec</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="c1"># la variable ret est une liste de longueur l qui est vide et que l&#39;on va remplir avec les lettre du texte chiffré</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span>
-    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">pos_c</span> <span class="o">&gt;</span> <span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">dec</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">pos_c</span> <span class="o">=</span> <span class="n">dec</span>
-        <span class="n">ret</span><span class="p">[</span><span class="n">pos_c</span><span class="p">]</span> <span class="o">=</span> <span class="n">texte_chiffre</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
-        <span class="n">pos_c</span> <span class="o">=</span> <span class="n">pos_c</span> <span class="o">+</span> <span class="n">clef</span>
+
+    <span class="c1">## A REMPLIR ICI</span>
+    
     <span class="c1"># on retourne une chaîne de caractères (&#39;&#39;.join(ret) retourne la transformation de la liste en chaîne de caractères)</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
 </pre></div>
@@ -983,8 +983,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>L’idée ensuite est d’analyser l’ensemble de la chaîne de caractère passée en paramètre <code class="docutils literal notranslate"><span class="pre">texte</span></code> et de compter les occurences de chacun des mots-clefs en français <code class="docutils literal notranslate"><span class="pre">nbr_f</span></code>, puis en anglais <code class="docutils literal notranslate"><span class="pre">nbr_a</span></code>. La méthode <code class="docutils literal notranslate"><span class="pre">texte.find(sousChaine)</span></code> permet de retourner l’index (la position) de la première sous-chaîne de caractères <code class="docutils literal notranslate"><span class="pre">sousChaine</span></code> à rechercher dans la chaîne <code class="docutils literal notranslate"><span class="pre">texte</span></code>. Si <code class="docutils literal notranslate"><span class="pre">find</span></code> ne trouve pas, alors il renvoie la valeur <code class="docutils literal notranslate"><span class="pre">-1</span></code> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">texte</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">mot_clefs_f</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span>
+<p>L’idée ensuite est d’analyser l’ensemble de la chaîne de caractère passée en paramètre <code class="docutils literal notranslate"><span class="pre">texte</span></code> et de compter les occurences de chacun des mots-clefs en français <code class="docutils literal notranslate"><span class="pre">nbr_f</span></code>, puis en anglais <code class="docutils literal notranslate"><span class="pre">nbr_a</span></code>. La méthode <code class="docutils literal notranslate"><span class="pre">texte.startwith(sousChaine,i)</span></code> permet de retourner <code class="docutils literal notranslate"><span class="pre">True</span></code> si la sous-chaîne de caractères <code class="docutils literal notranslate"><span class="pre">sousChaine</span></code> à rechercher dans la chaîne <code class="docutils literal notranslate"><span class="pre">texte</span></code> à l’index <code class="docutils literal notranslate"><span class="pre">i</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">texte</span><span class="o">.</span><span class="n">startwith</span><span class="p">(</span><span class="n">mot_clefs_f</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">position</span><span class="p">)</span> <span class="p">:</span>
     <span class="c1"># on incrémente le nombre d&#39;occurences françaises de 1</span>
     <span class="n">nbr_f</span> <span class="o">=</span> <span class="n">nbr_f</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
@@ -1023,21 +1023,23 @@ title="Print to PDF"
     <span class="n">nbr_f</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">nbr_a</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">mot_clef</span> <span class="ow">in</span> <span class="n">mots_clefs_f</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">texte</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">mot_clef</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">nbr_f</span> <span class="o">+=</span> <span class="mi">1</span>
-
+        <span class="c1">## A REMPLIR ICI</span>
+        
     <span class="k">for</span> <span class="n">mot_clef</span> <span class="ow">in</span> <span class="n">mots_clefs_a</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">texte</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">mot_clef</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">nbr_a</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1">## A REMPLIR ICI</span>
 
     <span class="k">if</span> <span class="n">nbr_f</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nbr_a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">retour</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NULL&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">elif</span> <span class="n">nbr_f</span> <span class="o">&gt;</span> <span class="n">nbr_a</span><span class="p">:</span>
-        <span class="n">retour</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FRA &#39;</span><span class="p">,</span><span class="n">nbr_f</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">retour</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ENG &#39;</span><span class="p">,</span><span class="n">nbr_a</span><span class="p">]</span>
-
+        <span class="c1">## A REMPLIR ICI</span>
+        
     <span class="k">return</span> <span class="n">retour</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">mot_clef</span> <span class="ow">in</span> <span class="n">mots_clefs_a</span><span class="p">:</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
 </pre></div>
 </div>
 </div>
@@ -1066,7 +1068,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
 </pre></div>
 </div>
 </div>
@@ -1086,18 +1088,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Cyphered] 9   : Autlyeer hoodnihisu csanerweevg  is,e bbr!  tuaeynotr oo  bf
-  [ANALYSED 9]   : Arise, you have nothing to lose but your barbed wire fences!
-[Cyphered] 26   : Ilcfyy  poruitvlaacwys  iwsi lolu thlaavwee dp,r iovna
-  [ANALYSED 26]   : If privacy is outlawed, only outlaws will have privacy
-[Cyphered] 45   : S nhIgo’lwly l m desu hlaol w p oeyrro suao nna   ewpxhehori sbhoiants i wonhnooit shitisn ge ittoh ehri deex,c eaenddi
-  [ANALYSED 45]   : Show me a person who has nothing to hide, and I’ll show you a person who is either exceedingly dull or an exhibitionist
-[Cyphered] 6   : O eyaei pncntssc ctojeeht hjeosu e tiu  eso woesie tfba vtsxii
-  [ANALYSED 6]   : One of the best ways to achieve justice is to expose injustice
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Cyphered] 24   : Atwroii rsleeo ,sf eey nobcuue tsh !ayvoeu rn obtahribnegd  
+  [ANALYSED 24]   : Arise, you have nothing to lose but your barbed wire fences!
+[Cyphered] 12   : Iso rf nwi olivpuylart lcilo yvauhawtacelvydae ,w i sp
+  [ANALYSED 12]   : If privacy is outlawed, only outlaws will have privacy
+[Cyphered] 31   : Sgpyh e otrdwosu  olmhnlei   dwoaehr ,o p  aeainrns sd eo exnIih ’tiwlhbhleio rt s ihheoaoxnswci  esnyetoodtuih niagn l
+  [ANALYSED 31]   : Show me a person who has nothing to hide, and I’ll show you a person who is either exceedingly dull or an exhibitionist
+[Cyphered] 27   : Oinnejevu eso tfji uctsehtei cbee sits  wtaoy se xtpoo saec hi
+  [ANALYSED 27]   : One of the best ways to achieve justice is to expose injustice
 [Cyphered] 21   : I;rti  outaIorsm te  a .sama y  cIsftc turewetysamuisn rn toegt f- ot ht otaot hc hrokgeiuee dgrtfeh  u t
   [ANALYSED 21]   : I am a future-hacker ; I am trying to get root access to the future. I want to ride its system of thought
-[Cyphered] 6   : Gnoiedreeldms s m
-  [ANALYSED 6]   : Girls need modems
+[Cyphered] 8   : Gesidr lmso dneem
+  [ANALYSED 8]   : Girls need modems
 </pre></div>
 </div>
 </div>
