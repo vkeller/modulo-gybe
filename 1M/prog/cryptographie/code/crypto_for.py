@@ -24,6 +24,8 @@ phrase_f_7 = "Si vous surveillez tout le monde, vous ne surveillez personne"
 dataset_a = [phrase_a_1,phrase_a_2,phrase_a_3,phrase_a_4,phrase_a_5,phrase_a_6]
 dataset_f = [phrase_f_1,phrase_f_2,phrase_f_3,phrase_f_4,phrase_f_5,phrase_f_6,phrase_f_7]
 
+bonjour = 'BONJOUR'
+
 # Fonction permettant de chiffrer un texte en clair
 # Argument 1 : le texte clair
 # Argument 2 : la clef de chiffrage
@@ -177,3 +179,5 @@ for phrase in dataset_f:
 
 # Longue phrase (clef = 652)
 # La cryptographie, la science de l écriture de codes et de chiffrements pour une communication sécurisée, est l un des éléments principaux ayant rendu possible l’invention des crypto-monnaies et des blockchains modernes. Les techniques cryptographiques utilisées aujourd hui sont cependant le fruit d une longue histoire de développement. Depuis l Antiquité, la cryptographie permet de transmettre des informations de manière sécurisée. Voici l’histoire fascinante de la cryptographie qui a conduit aux méthodes avancées et sophistiquées utilisées pour le cryptage numérique moderne.   Les racines anciennes de la cryptographie  On sait que les techniques cryptographiques primitives existaient dans l Antiquité et, à un certain degré, la plupart des civilisations anciennes semblent avoir eu recours à la cryptographie. Le remplacement de symbole, la forme la plus élémentaire de cryptographie, apparaît à la fois dans les écrits égyptiens antiques et mésopotamiens. Le plus ancien exemple connu de ce type de cryptographie a été trouvé dans la tombe d un noble égyptien nommé Khnumhotep II, qui vivait il y a environ 3 900 ans.  Le remplacement de symboles dans l’inscription de Knhumhotep n’a pas pour objectif de dissimuler des informations, mais de renforcer leur attrait linguistique. Le premier exemple connu de cryptographie utilisée pour protéger des informations confidentielles date de 3 500 ans environ. Un scribe mésopotamien recourait à la cryptographie pour dissimuler une formule de glaçure de poterie, utilisée sur des tablettes d argile.
+
+print(chiffre(bonjour,2))
