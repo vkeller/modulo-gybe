@@ -330,8 +330,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/cryptographie/Cryptographie.html">
+     TP CRYP01 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../prog/hacking/hacking-romain.html">
-     Coder et décoder comme les Romains
+     TP CRYP02 : Coder et décoder comme les Romains
     </a>
    </li>
    <li class="toctree-l2">
@@ -1003,7 +1008,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><strong>IXème siècle</strong> : le savant arabe Al-Kindi décrit pour la première fois la technique de <strong>l’analyse de fréquence</strong> comme méthode de cassage</p></li>
 <li><p><strong>1467</strong> : le savant Italien Leon Battista Alberti expose pour la première fois le chiffrement polyalphabétique : chaque lettre du texte clair est remplacée par une autre de l’alphabet  et changer plusieurs fois l’alphabet de substitution à l’aide d’un disque à chiffrer. Cette méthode rend caduque l’analyse de fréquence</p></li>
-<li><p><strong>1586</strong> : le <strong>chiffre de Vigenère</strong> du nom d’un diplomate français est une technique qui permet de chiffrer un texte clair à l’aide d’une clef (un secret) par substitution polyalphabétique qui peut produire la même lettre chiffrée à partir de deux lettres claires distinctes</p></li>
+<li><p><strong>1586</strong> : le <strong>chiffre de Vigenère</strong> du nom d’un diplomate français est une technique qui permet de chiffrer un texte clair à l’aide d’une clef (un secret sous la forme d’un mot) par substitution polyalphabétique (un tableau 2D des lettres de l’alphabet) qui peut produire la même lettre chiffrée à partir de deux lettres claires distinctes</p></li>
 <li><p><strong>XIXème siècle</strong> : l’arrivée du télégraphe (d’abord optique dit <em>de Chappe</em> puis à impulsions électriques) ont rendu la cryptographie au premier plan.</p></li>
 <li><p><strong>1883</strong> : le Hollandais Auguste Kerckhoffs publie un ouvrage resté célèbre <strong>La cryptographie militaire</strong> avec la règle toujours en vigueur aujourd’hui : <em>la sécurité d’un système ne doit pas reposer sur le secret de la méthode de chiffrement</em></p></li>
 </ul>
@@ -1012,7 +1017,7 @@ title="Print to PDF"
 <h3>Première guerre mondiale<a class="headerlink" href="#premiere-guerre-mondiale" title="Permalink to this headline">#</a></h3>
 <p>La première guerre mondiale est la victoire de la <strong>cryptanalyse</strong> sur la cryptographie. Les techniques de chiffrement étaient en place et les méthodes mathématiques permettant de les déchiffrer ont été améliorées. Les communications sont instantanées (radio) mais le déchiffrement, effectué à la main, est extrêmement lent.</p>
 <ul class="simple">
-<li><p><strong>Le Télégramme Zimmermann</strong> : Envoyé par l’Allemagne à son ambassade au Mexique et lui demandant de se mettre en contact avec le gouvernement mexicain en vue d’une alliance contre les USA. C’est ce télégramme qui a accéléré l’entrée en guerre des Etats-Uniens.</p></li>
+<li><p><strong>Le Télégramme Zimmermann</strong> : Envoyé par l’Allemagne à son ambassade au Mexique et lui demandant de se mettre en contact avec le gouvernement mexicain en vue d’une alliance contre les USA. C’est ce télégramme qui a accéléré l’entrée en guerre des Etats-Uniens. Il était chiffré à l’aide d’une clef privée et par substitution.</p></li>
 </ul>
 <p><img alt="Zimmermann" src="../../../_images/Zimmermann.jpg" /></p>
 </div>
@@ -1025,7 +1030,7 @@ title="Print to PDF"
 <p><img alt="Enigma" src="../../../_images/enigma.jpg" /></p>
 <ul class="simple">
 <li><p><strong>La bombe</strong> : afin de tester un maximum de combinaisons possibles, les Polonais ont mis en place une machine électromécanique en 1938 : la <em>bomba kryptologiczna</em> conçue par Marian Rejewski. Six bombes ont été construites et étaient capables de tester des milliers de combinaisons par minute ainsi que sélectionner des solutions viables. Les Polonais étaient capables de déchiffrer des messages des premières machines Enigma (avec 3 rotors). Mais dès la guerre déclarée (invasion de la Pologne), l’Allemagne nazie avait modifié ses procédures de cryptographie (en envoyant plus la clef en préambule).</p></li>
-<li><p><strong>La bombe de Turing</strong> : Construite par les Britanniques dans le complexe ultra-secret de <strong>Bletchley Park</strong> au Nord de Londres, elle fonctionnait sur le même principe que la machine polonaise mais avec une performance bien plus élevée. C’est le nom d’Allan Turing qui est resté mais il n’était pas le seul. Le groupe secret - le <strong>Government Code and Cypher School</strong> - était composé de centaines d’employés : des analystes, des interpérteurs, des traducteurs, des mathématiciens. On estime que les travaux de déchiffrement d’Enigma ont raccourci la seconde guerre mondiale de 2 ans.</p></li>
+<li><p><strong>La bombe de Turing</strong> : Construite par les Britanniques dans le complexe ultra-secret de <strong>Bletchley Park</strong> au Nord de Londres, elle fonctionnait sur le même principe que la machine polonaise mais avec une performance bien plus élevée. C’est le nom d’<strong>Alan Turing</strong> qui est resté mais il n’était pas le seul. Le groupe secret - le <strong>Government Code and Cypher School</strong> - était composé de centaines d’employés : des analystes, des interpréteurs, des traducteurs, des mathématiciens. On estime que les travaux de déchiffrement d’Enigma ont raccourci la seconde guerre mondiale de 2 ans.</p></li>
 </ul>
 <p><img alt="bombe" src="../../../_images/bombe.jpg" /></p>
 </div>
@@ -1033,7 +1038,7 @@ title="Print to PDF"
 <h3>Période moderne<a class="headerlink" href="#periode-moderne" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>1949</strong> : débuts de la <strong>cryptographie à clef publique</strong> par le mathématicien Claude Shannon</p></li>
-<li><p><strong>Années 1970</strong>: les ordinateurs permettent des avancées dans le domaine avec le Standard de Chiffrement Public (DES et AES), léchange de clefs publiques, le chiffrement assymétrique.</p></li>
+<li><p><strong>Années 1970</strong>: les ordinateurs permettent des avancées dans le domaine avec le Standard de Chiffrement Public (DES et AES), l’échange de clefs publiques, le chiffrement assymétrique.</p></li>
 <li><p><strong>1980</strong> arrivée des <strong>fonctions de hachage</strong> (comme MD5) qui associent à n’importe quel texte une suite de données de taille arbitraire et dont la propriété principale est qu’elle n’est pas réversible. Ces fonctions de hachages permettent notamment de vérifier l’intégrité d’un message (à savoir qu’il  n’a pas été modifié durant sa transmission), ou de vérifier la validité d’un mot de passe.</p></li>
 </ul>
 </div>
@@ -1095,7 +1100,7 @@ title="Print to PDF"
 <li><p>Alice envoie le coffre-fort ouvert à Bob</p></li>
 <li><p>Bob le reçoit et y place son message</p></li>
 <li><p>Bob ferme le coffre-fort</p></li>
-<li><p>Bonb envoie le coffre-fort fermé à Alice</p></li>
+<li><p>Bob envoie le coffre-fort fermé à Alice</p></li>
 <li><p>Alice le reçoit et ouvre son coffre-fort pour lire le message</p></li>
 </ul>
 </div>
@@ -1162,7 +1167,8 @@ title="Print to PDF"
 <div class="section" id="references-pour-aller-plus-loin">
 <h2>Références pour aller plus loin<a class="headerlink" href="#references-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Auguste Kerckhoffs (1835-1903). « La cryptographie militaire », Journal des sciences militaires, vol. IX, p. 5-38, janvier 1883. Une version est disponible sur la <a class="reference external" href="https://books.google.ch/books?hl=fr&amp;lr=&amp;id=VbQBAAAAYAAJ&amp;oi=fnd&amp;pg=PA1&amp;dq=Kerckhoffs+Cryptographie+militaire+1883&amp;ots=per75JvmC0&amp;sig=omV5TQ8WIfxiZujqnxkY9O27QYw#v=onepage&amp;q&amp;f=false">bibliothèque de Google</a></p></li>
+<li><p>National Security Agency, <em>The Zimmermann Telegram</em>, Cryptology Quarterly, <a class="reference external" href="https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-quarterly/the_zimmermann_telegram.pdf">online sur le site de la NSA</a></p></li>
+<li><p>Auguste Kerckhoffs (1835-1903). <em>La cryptographie militaire</em>, Journal des sciences militaires, vol. IX, p. 5-38, janvier 1883. Une version est disponible sur la <a class="reference external" href="https://books.google.ch/books?hl=fr&amp;lr=&amp;id=VbQBAAAAYAAJ&amp;oi=fnd&amp;pg=PA1&amp;dq=Kerckhoffs+Cryptographie+militaire+1883&amp;ots=per75JvmC0&amp;sig=omV5TQ8WIfxiZujqnxkY9O27QYw#v=onepage&amp;q&amp;f=false">bibliothèque de Google</a></p></li>
 <li><p>Jean-Philippe Javet, cours de mathématiques pour le gymnase de Morges, <a class="reference external" href="http://www.gymomath.ch/javmath/polycopie/OC%20Crypto.pdf">chapitre sur la cryptographie</a></p></li>
 </ul>
 </div>
