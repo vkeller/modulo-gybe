@@ -645,6 +645,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#solutions">
    Solutions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex1">
+     Ex1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex2">
+     Ex2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex3">
+     Ex3
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -694,6 +711,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#solutions">
    Solutions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex1">
+     Ex1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex2">
+     Ex2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex3">
+     Ex3
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -713,7 +747,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>être capable de:</p>
 <ul>
-<li><p>lire un problème simple</p></li>
+<li><p>lire et comprendre un problème simple</p></li>
 <li><p>développer l’algorigramme en utilisant le formalisme des algorigrammes</p></li>
 <li><p>implémenter l’algorithme en Python</p></li>
 </ul>
@@ -738,6 +772,7 @@ title="Print to PDF"
 <li><p>85g de sucre</p></li>
 <li><p>150g de farine</p></li>
 <li><p>1 sachet de sucre vanillé</p></li>
+<li><p>350g de pépites de chocolat</p></li>
 <li><p>1 cc de levure sèche</p></li>
 <li><p>0.5 cc de sel</p></li>
 </ul>
@@ -772,6 +807,97 @@ title="Print to PDF"
 </div>
 <div class="section" id="solutions">
 <h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<div class="section" id="ex1">
+<h3>Ex1<a class="headerlink" href="#ex1" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oeufs</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">beurre</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="n">sucre</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="n">farine</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">sucre_vanille</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">levure</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sel</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">chocolat</span> <span class="o">=</span> <span class="mi">350</span>
+
+<span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="n">oeufs</span><span class="p">,</span><span class="n">beurre</span><span class="p">,</span><span class="n">sucre</span><span class="p">,</span><span class="n">farine</span><span class="p">,</span><span class="n">sucre_vanille</span><span class="p">,</span><span class="n">levure</span><span class="p">,</span><span class="n">sel</span><span class="p">,</span> <span class="n">chocolat</span><span class="p">]</span>
+
+<span class="n">nbr_personnes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le nombre de personnes : &quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ingredients</span><span class="p">)):</span>
+    <span class="n">ingredients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">nbr_personnes</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">ingredients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recette pour &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">nbr_personnes</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; personnes&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Laissez ramollir &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;g. de beurre à température ambiante. Dans un saladier, malaxez-le avec &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;g. de sucre. &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Ajoutez &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;oeuf et éventuellement &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot; sachets de sucre vanillé. &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Versez progressivement &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;g. de farine, &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot; sachets de levure chimique, &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;cc. de sel et &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ingredients</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;g. de pépites de chocolat. Mélangez bien. &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Beurrez une plaque allant au four ou recouvrez-la d&#39;une plaque de silicone. À l&#39;aide de deux cuillères à soupe ou simplement avec les mains, formez des noix de pâte en les espaçant car elles s&#39;étaleront à la cuisson. &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5. Faites cuire 8 à 10 minutes à 180°C soit thermostat 6. Il faut les sortir dès que les contours commencent à brunir.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 12&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">chocolat</span> <span class="o">=</span> <span class="mi">350</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="n">oeufs</span><span class="p">,</span><span class="n">beurre</span><span class="p">,</span><span class="n">sucre</span><span class="p">,</span><span class="n">farine</span><span class="p">,</span><span class="n">sucre_vanille</span><span class="p">,</span><span class="n">levure</span><span class="p">,</span><span class="n">sel</span><span class="p">,</span> <span class="n">chocolat</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">nbr_personnes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le nombre de personnes : &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ingredients</span><span class="p">)):</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">ingredients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">nbr_personnes</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">ingredients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<span class="nn">File ~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex2">
+<h3>Ex2<a class="headerlink" href="#ex2" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="ex3">
+<h3>Ex3<a class="headerlink" href="#ex3" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez la valeur de a : &quot;</span><span class="p">))</span>
+<span class="n">lim</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez la limite      : &quot;</span><span class="p">))</span>
+<span class="n">xn</span> <span class="o">=</span> <span class="n">a</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lim</span><span class="p">):</span>
+    <span class="n">xnp1</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">xn</span> <span class="o">+</span> <span class="n">a</span><span class="o">/</span><span class="n">xn</span><span class="p">)</span>
+    <span class="n">xn</span> <span class="o">=</span> <span class="n">xnp1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Racine de &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">xnp1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez la valeur de a :  2
+Entrez la limite      :  100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Racine de 2.0 = 1.414213562373095
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
