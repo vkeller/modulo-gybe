@@ -800,7 +800,8 @@ title="Print to PDF"
 <p>Heron d’Alexandrie est un mathématicien, ingénieur et mécanicien du 1er siècle ap JC. Il est un contemporain de <a class="reference external" href="https://fr.wikipedia.org/wiki/Pline_l%27Ancien">Pline l’Ancien</a>, célèbre écrivain et naturaliste de la Rome Antique.</p>
 <p>Heron a développé une méthode très simple pour calculer une valeur approchée <strong>de la racine carrée</strong> de n’importe quel nombre <code class="docutils literal notranslate"><span class="pre">n</span></code>:</p>
 <ol class="simple">
-<li><p>Donner la valeur de <code class="docutils literal notranslate"><span class="pre">n</span></code></p></li>
+<li><p>Entrez la valeur de <code class="docutils literal notranslate"><span class="pre">n</span></code></p></li>
+<li><p>Entrez la limite supérieure de la fonction récursive</p></li>
 <li><p>Calculer <span class="math notranslate nohighlight">\(u_1 = n\)</span></p></li>
 <li><p>Calculer <span class="math notranslate nohighlight">\(u_{n+1} = \frac{1}{2}(u_n + \frac{n}{u_n})\)</span></p></li>
 </ol>
@@ -809,6 +810,7 @@ title="Print to PDF"
 <h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
 <div class="section" id="ex1">
 <h3>Ex1<a class="headerlink" href="#ex1" title="Permalink to this headline">#</a></h3>
+<p><img alt="cookies" src="../../../_images/cookies.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oeufs</span> <span class="o">=</span> <span class="mi">1</span>
@@ -872,9 +874,64 @@ title="Print to PDF"
 </div>
 <div class="section" id="ex2">
 <h3>Ex2<a class="headerlink" href="#ex2" title="Permalink to this headline">#</a></h3>
+<p><img alt="promotion" src="../../../_images/promotion.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">francais</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">langue2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">langue3</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">maths</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">informatique</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">chimie</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">physique</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">histoire</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">ecodroit</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">artsvisusmusique</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">os</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">francais</span><span class="p">,</span><span class="n">langue2</span><span class="p">,</span><span class="n">langue3</span><span class="p">,</span><span class="n">maths</span><span class="p">,</span><span class="n">informatique</span><span class="p">,</span><span class="n">chimie</span><span class="p">,</span><span class="n">physique</span><span class="p">,</span><span class="n">histoire</span><span class="p">,</span><span class="n">ecodroit</span><span class="p">,</span><span class="n">artsvisusmusique</span><span class="p">,</span><span class="n">os</span><span class="p">]</span>
+
+<span class="n">promu</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Règle 1 : obtenir un total des notes égal à au moins autant de fois 4 points qu&#39;il y a de notes ;</span>
+<span class="n">regle1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)):</span>
+    <span class="n">regle1</span> <span class="o">=</span> <span class="n">regle1</span> <span class="o">+</span> <span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<span class="c1"># Règle 2 : obtenir au moins 16 points dans un groupe constitué du français, de la moyenne des moyennes des notes de la deuxième langue nationale et de la troisième langue, arrondie au demi-point, des mathématiques et de l&#39;option spécifique ;</span>
+<span class="n">regle2</span> <span class="o">=</span> <span class="n">francais</span> <span class="o">+</span> <span class="p">(</span><span class="n">langue2</span> <span class="o">+</span> <span class="n">langue3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">maths</span> <span class="o">+</span> <span class="n">os</span>
+
+<span class="c1"># Règle 3 : ne pas avoir plus de quatre notes inférieures à 4.</span>
+<span class="n">regle3</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">regle3</span> <span class="o">=</span> <span class="n">regle3</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># Calcul de la promotion</span>
+<span class="k">if</span> <span class="n">regle1</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">regle2</span> <span class="o">&gt;=</span><span class="mi">16</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">regle3</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">promu</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">promu</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">promu</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous êtes promu.e en 2ème&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous n&#39;êtes pas promu.e en 2ềme&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vous êtes promu.e en 2ème
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ex3">
 <h3>Ex3<a class="headerlink" href="#ex3" title="Permalink to this headline">#</a></h3>
+<p><img alt="Heron" src="../../../_images/HeronAlexandrie.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez la valeur de a : &quot;</span><span class="p">))</span>
@@ -888,11 +945,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez la valeur de a :  2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez la valeur de a :  4
 Entrez la limite      :  100
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Racine de 2.0 = 1.414213562373095
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Racine de 4.0 = 2.0
 </pre></div>
 </div>
 </div>
