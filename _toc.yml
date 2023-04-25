@@ -56,7 +56,9 @@ parts:
     - file: 1M/architecture/index
     - file: 1M/esdn/index
       sections:
+      - file: 1M/esdn/cours/IntroductionESDN
       - file: 1M/esdn/cours/Cours1
+      - file: 1M/esdn/cours/LesReseaux
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
