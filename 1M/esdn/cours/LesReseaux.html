@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP ESDN1 : Les réseaux informatique &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP ESDN01 : Les réseaux informatique &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -366,7 +366,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="IntroductionESDN.html">
-     Objectifs
+     Enjeux sociaux du Numérique
     </a>
    </li>
    <li class="toctree-l2">
@@ -376,7 +376,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP ESDN1 : Les réseaux informatique
+     TP ESDN01 : Les réseaux informatique
     </a>
    </li>
   </ul>
@@ -665,10 +665,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#clients-et-serveurs">
    Clients et serveurs
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adresse-ip">
+     Adresse IP
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-logiciel">
-   Exercice 3 (logiciel)
+  <a class="reference internal nav-link" href="#exercice-3-internet-protocol">
+   Exercice 3 (Internet Protocol)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -677,20 +684,45 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-de-faiblesse">
-   Points de faiblesse
+  <a class="reference internal nav-link" href="#nom-de-domaine-nom-de-machine">
+   Nom de domaine, nom de machine
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dns">
+     DNS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#icann">
+     ICANN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-dns-et-url">
+   Exercice 4 (DNS et URL)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#et-le-secret-dans-tout-cela">
-   Et le secret dans tout cela ?
+  <a class="reference internal nav-link" href="#exercice-5-tout-ensemble">
+   Exercice 5 : Tout ensemble
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eteindre-internet">
-   <em>
-    Eteindre internet
-   </em>
+  <a class="reference internal nav-link" href="#et-la-vie-privee-dans-tout-cela">
+   Et la vie privée dans tout cela ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-proteger-la-vie-privee">
+   Exercice 6 : Protéger la vie privée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deep-et-dark-web">
+   Deep et dark web
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -707,7 +739,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP ESDN1 : Les réseaux informatique</h1>
+                <h1>TP ESDN01 : Les réseaux informatique</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -758,10 +790,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#clients-et-serveurs">
    Clients et serveurs
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adresse-ip">
+     Adresse IP
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-logiciel">
-   Exercice 3 (logiciel)
+  <a class="reference internal nav-link" href="#exercice-3-internet-protocol">
+   Exercice 3 (Internet Protocol)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -770,20 +809,45 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-de-faiblesse">
-   Points de faiblesse
+  <a class="reference internal nav-link" href="#nom-de-domaine-nom-de-machine">
+   Nom de domaine, nom de machine
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dns">
+     DNS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#icann">
+     ICANN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-dns-et-url">
+   Exercice 4 (DNS et URL)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#et-le-secret-dans-tout-cela">
-   Et le secret dans tout cela ?
+  <a class="reference internal nav-link" href="#exercice-5-tout-ensemble">
+   Exercice 5 : Tout ensemble
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eteindre-internet">
-   <em>
-    Eteindre internet
-   </em>
+  <a class="reference internal nav-link" href="#et-la-vie-privee-dans-tout-cela">
+   Et la vie privée dans tout cela ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-proteger-la-vie-privee">
+   Exercice 6 : Protéger la vie privée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deep-et-dark-web">
+   Deep et dark web
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -801,10 +865,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="Zuboff" src="../../../_images/zuboff.jpg" /></p>
-<p><strong>Shoshona Zuboff</strong> née en 1951, est universitaire, professeure émérite à Harvard, sociologue et femme de lettres américaine. Elle est l’auteur du livre <a class="reference external" href="https://www.monde-diplomatique.fr/2019/01/ZUBOFF/59443">L’âge du capitalisme de surveillance</a> où elle y décrit l’impact du Big Data dans le capitalisme et qui vise à prédire et modifier le comportement humain dans le but de générer des revenus pour les entreprises qui mettent en place cette surveillance</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tp-esdn1-les-reseaux-informatique">
-<h1>TP ESDN1 : Les réseaux informatique<a class="headerlink" href="#tp-esdn1-les-reseaux-informatique" title="Permalink to this headline">#</a></h1>
+  <p><img alt="network" src="../../../_images/computer-network.jpg" /></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="tp-esdn01-les-reseaux-informatique">
+<h1>TP ESDN01 : Les réseaux informatique<a class="headerlink" href="#tp-esdn01-les-reseaux-informatique" title="Permalink to this headline">#</a></h1>
 <div class="section" id="objectifs">
 <h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -890,16 +953,31 @@ title="Print to PDF"
 <li><p>Le destinataire (la machine qui reçoit des données) est un <strong>client</strong></p></li>
 </ul>
 <p><img alt="Client serveur" src="../../../_images/cs-model.png" /></p>
+<div class="section" id="adresse-ip">
+<h3>Adresse IP<a class="headerlink" href="#adresse-ip" title="Permalink to this headline">#</a></h3>
+<p>L’adresse d’une machine est décrite sous la forme d’une adresse IP (IP = Internet Protocol). Il s’agit de 4 nombres séparés par des points :</p>
+<p><code class="docutils literal notranslate"><span class="pre">XXX.XXX.XXX.XXX</span></code></p>
 </div>
-<div class="section" id="exercice-3-logiciel">
-<h2>Exercice 3 (logiciel)<a class="headerlink" href="#exercice-3-logiciel" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="exercice-3-internet-protocol">
+<h2>Exercice 3 (Internet Protocol)<a class="headerlink" href="#exercice-3-internet-protocol" title="Permalink to this headline">#</a></h2>
+<p>Répondez aux questions suivantes en utilisant tous les outils à disposition sur votre machine :</p>
+<ul class="simple">
+<li><p>moteurs de recherche</p></li>
+<li><p>ChatGPT</p></li>
+<li><p>votre cerveau (surtout)</p></li>
+</ul>
 <ol class="simple">
-<li><p>Qu’est-ce qu’une URL ?</p></li>
-<li><p>Qu’est-ce qu’une adresse IP ?</p></li>
+<li><p>Qu’est-ce qu’une adresse IP ?</p>
+<ul class="simple">
+<li><p>combien de bits faut-il pour coder une adresse IP ?</p></li>
+<li><p>combien d’adresses IP est-il possible de produire ?</p></li>
+<li><p>Pourquoi parle-t-on d’IPv4 ? Mobilisez les connaissances vues au cours pour répondre.</p></li>
+</ul>
+</li>
 <li><p>Recherchez l’adresse IP de votre ordinateur. Quelle similitudes avec l’adresse IP de vos voisins</p></li>
-<li><p>Pourquoi parle-t-il d’IPv4 ? Mobilisez les connaissances vues au cours pour répondre.</p></li>
 </ol>
-<p>Dans un navigateur web de votre préférence, connectez-vous aux URL écrites sur le tableau.</p>
+<p>Dans un navigateur web de votre préférence, connectez-vous aux adresses écrites sur le tableau.</p>
 <ol class="simple">
 <li><p>A quel service correspondent ces adresses ?</p></li>
 <li><p>Où se situent les serveurs physiques ?</p></li>
@@ -913,18 +991,86 @@ title="Print to PDF"
 <p>La passerelle est un point unique qui permet de <strong>router</strong> les paquets, c’est-à-dire de diriger ceux qui ne sont pas à destination d’une machine du réseau local, vers le réseau global.</p>
 <p><img alt="routage" src="../../../_images/routage.png" /></p>
 </div>
-<div class="section" id="points-de-faiblesse">
-<h2>Points de faiblesse<a class="headerlink" href="#points-de-faiblesse" title="Permalink to this headline">#</a></h2>
+<div class="section" id="nom-de-domaine-nom-de-machine">
+<h2>Nom de domaine, nom de machine<a class="headerlink" href="#nom-de-domaine-nom-de-machine" title="Permalink to this headline">#</a></h2>
+<p>Il est difficile de mémoriser le nom d’une machine avec son adresse IP. Pour faire cela, on utilise un <strong>nom</strong>. Ce nom est basé sur le <strong>Système de Noms de Domaines</strong> (en anglais <em>Domain Name System</em>), abbrégé en <strong>DNS</strong>.</p>
+<div class="section" id="dns">
+<h3>DNS<a class="headerlink" href="#dns" title="Permalink to this headline">#</a></h3>
+<p>Le DNS <strong>associe</strong> un nom à toute adresse IP.</p>
+<p>Le système de noms de domaine est constitué par une hiérarchie. Le sommet est la <strong>racine DNS</strong> et on la représente par un point <code class="docutils literal notranslate"><span class="pre">.</span></code> .</p>
+<p>La suite de la hiérachie DNS est formée de :</p>
+<ul class="simple">
+<li><p><strong>Top Level Domain</strong> (TLD) : qui sont les extensions de pays : <code class="docutils literal notranslate"><span class="pre">.ch</span></code>, <code class="docutils literal notranslate"><span class="pre">.it</span></code> ou <code class="docutils literal notranslate"><span class="pre">.de</span></code>, ou des extensions standard : commercial <code class="docutils literal notranslate"><span class="pre">.com</span></code>, organisation <code class="docutils literal notranslate"><span class="pre">.org</span></code>, réseau <code class="docutils literal notranslate"><span class="pre">.net</span></code>. Il existe environ 1800 TLD</p></li>
+<li><p>un <strong>nom de sous-domaine</strong> comme par exemple <code class="docutils literal notranslate"><span class="pre">gymnasedebeaulieu</span></code>, <code class="docutils literal notranslate"><span class="pre">google</span></code> ou <code class="docutils literal notranslate"><span class="pre">cff</span></code></p></li>
+</ul>
+<p>Ces deux éléments (TLD + nom de sous domaine) représentent un <strong>nom de domaine</strong> et se lit de droite à gauche:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cff.ch</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gymnasedebeaulieu.ch</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google.ch</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google.com</span></code></p></li>
+</ul>
+<p>Ce qui vient à droite avant le nom de domaine représente soit</p>
+<ol class="simple">
+<li><p>Une <strong>machine</strong> : l’adresse <code class="docutils literal notranslate"><span class="pre">www.google.ch</span></code> représente la machine <code class="docutils literal notranslate"><span class="pre">www</span></code> du nom de domaine <code class="docutils literal notranslate"><span class="pre">google.ch</span></code></p></li>
+<li><p>Un <strong>sous-domaine</strong>. Au Royaume Uni par exemple, le choix a été fait de régler les adresses avec un TLD et un SLD (Second Level Domain) : <code class="docutils literal notranslate"><span class="pre">.uk</span></code> est le TLD, suivi d’un SLD (par exemple <code class="docutils literal notranslate"><span class="pre">.com.uk</span></code> pour les sites commerciaux, <code class="docutils literal notranslate"><span class="pre">.gov.uk</span></code> pour ceux du gouvernement, etc..)</p></li>
+</ol>
+<p><img alt="DNS" src="../../../_images/dns.png" /></p>
 </div>
-<div class="section" id="et-le-secret-dans-tout-cela">
-<h2>Et le secret dans tout cela ?<a class="headerlink" href="#et-le-secret-dans-tout-cela" title="Permalink to this headline">#</a></h2>
+<div class="section" id="icann">
+<h3>ICANN<a class="headerlink" href="#icann" title="Permalink to this headline">#</a></h3>
+<p>A noter (et à réfléchir), c’est l’<a class="reference external" href="https://www.icann.org/fr">ICANN</a> (<em>Internet Corporation Assigned Names and Numbers</em> qui attribue les Top Level Domain ainsi que les adresses IP au niveau mondial. C’est une société de droit californien à but non lucratif.</p>
 </div>
-<div class="section" id="eteindre-internet">
-<h2><em>Eteindre internet</em><a class="headerlink" href="#eteindre-internet" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="exercice-4-dns-et-url">
+<h2>Exercice 4 (DNS et URL)<a class="headerlink" href="#exercice-4-dns-et-url" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>quel est le nom de votre machine ?</p></li>
+<li><p>quel est l’adresse IP du serveur <a class="reference external" href="https://www.gymnasedebeaulieu.ch">www.gymnasedebeaulieu.ch</a></p></li>
+</ol>
+</div>
+<div class="section" id="exercice-5-tout-ensemble">
+<h2>Exercice 5 : Tout ensemble<a class="headerlink" href="#exercice-5-tout-ensemble" title="Permalink to this headline">#</a></h2>
+<p>Dessinez, en groupe, les différents éléments physiques du réseau de la salle B-310 et du gymnase avec les différents éléments vus :</p>
+<ul class="simple">
+<li><p>type d’élément du réseau</p></li>
+<li><p>adresse IP</p></li>
+<li><p>services</p></li>
+</ul>
+</div>
+<div class="section" id="et-la-vie-privee-dans-tout-cela">
+<h2>Et la vie privée dans tout cela ?<a class="headerlink" href="#et-la-vie-privee-dans-tout-cela" title="Permalink to this headline">#</a></h2>
+<p>On constate que:</p>
+<ul class="simple">
+<li><p>tous les protocoles, règles et normes sont <strong>ouverts</strong> <em>par design</em> puisque l’écosystème de machines est très disparate.</p></li>
+<li><p>toutes les communications <strong>ne sont pas cryptées</strong></p></li>
+</ul>
+<p>Des outils comme <strong>wireshark</strong> ou <strong>tcpdump</strong> ont été développés. Ces outils permettent de capturer, lire et analyser les paquets IP qui transitent à travers une ou plusieurs <strong>interface réseau</strong>.</p>
+<p><img alt="tcpdump" src="../../../_images/tcpdump.png" /></p>
+<p>tcpdump via un <em>Terminal</em></p>
+<p><img alt="wireshark" src="../../../_images/wireshark.png" /></p>
+<p>tcpdump via un <em>Terminal</em></p>
+</div>
+<div class="section" id="exercice-6-proteger-la-vie-privee">
+<h2>Exercice 6 : Protéger la vie privée<a class="headerlink" href="#exercice-6-proteger-la-vie-privee" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Comment protéger les informations qui transitent sur Internet ?</p></li>
+<li><p>Qu’est-ce qu’un VPN ?</p></li>
+</ul>
+</div>
+<div class="section" id="deep-et-dark-web">
+<h2>Deep et dark web<a class="headerlink" href="#deep-et-dark-web" title="Permalink to this headline">#</a></h2>
+<p><img alt="Iceberg" src="../../../_images/iceberg.jpg" /></p>
 </div>
 <div class="section" id="pour-aller-plus-loin">
 <h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://netblocks.org/">Netblocks</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://netblocks.org/">Netblocks</a> : l’état en temps réel de l’Internet</p></li>
+<li><p><a class="reference external" href="https://ourworldindata.org/internet">OurWorldInData</a> : des chiffres et ordres de grandeur de l’Internet au niveau mondial</p></li>
+<li><p>l’outil <a class="reference external" href="https://fr.wikipedia.org/wiki/Tcpdump">tcpdump</a> qui permet de capturer les paquets transitant sur une interface réseau.</p></li>
+<li><p>l’outil <a class="reference external" href="https://www.wireshark.org/">wireshark</a> qui permet de mener plus loin une analyse des paquets réseau</p></li>
+<li><p>le navigateur <a class="reference external" href="https://www.torproject.org/fr/download/">TOR</a> qui permet de naviguer sur le web de façon sécuritaire et anonyme</p></li>
+</ul>
 </div>
 </div>
 
