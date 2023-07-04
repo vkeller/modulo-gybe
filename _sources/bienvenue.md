@@ -1,6 +1,6 @@
 # Bienvenue
 
-Education Numérique en école de maturité. Ce livre (et site web) parcourt l'ensemble du plan d'études de l'école de maturité du Canton de Vaud.
+Education Numérique en école de maturité. Ce livre (et site web) parcourt l'ensemble du [plan d'études de l'école de maturité du Canton de Vaud](DGEP_brochure_EM_web.pdf).
 
 Il est en sources ouvertes (Open Source Project), sous licence BSD, donc vous pouvez l'utiliser comme bon vous semble pour autant que vous citiez l'auteur principal.
 
