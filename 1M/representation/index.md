@@ -1,3 +1,1 @@
-# Représentation des données
-
-
+# Représentation de l'information
