@@ -46,14 +46,10 @@ parts:
       - file: 1M/prog/tableaux/Tableaux
       - file: 1M/prog/files/LesFiles
       - file: 1M/prog/piles/LesPiles
-      - file: 1M/prog/arbres/LesArbres
-      - file: 1M/prog/algos/syracuse/Syracuse
-      - file: 1M/prog/dictionnaires/Dictionnaires2
-      - file: 1M/prog/motdepasse/MotsDePasse
       - file: 1M/prog/cryptographie/Cryptographie
-      - file: 1M/prog/hacking/hacking-romain
-      - file: 1M/prog/fichiers/SystemeDeFichiers
     - file: 1M/architecture/index
+      sections:
+      - file: 1M/architecture/fichiers/SystemeDeFichiers
     - file: 1M/esdn/index
       sections:
       - file: 1M/esdn/cours/IntroductionESDN
@@ -64,20 +60,29 @@ parts:
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
-    - file: 1M/machine-learning/index
-      sections:
-      - file: 1M/machine-learning/cours/IntroML
-      - file: 1M/machine-learning/cours/Automates
-      - file: 1M/machine-learning/cours/RNN
-      - file: 1M/machine-learning/cours/JeudelavieTP
  
 
   - caption: 2ème année
     chapters:
     - file: 2M/algo/index
     - file: 2M/prog/index
-#    chapters:
-#    - file: biblio.md
+      sections:
+      - file: 2M/prog/syracuse/Syracuse
+      - file: 2M/prog/dictionnaires/Dictionnaires2
+      - file: 2M/prog/motdepasse/MotsDePasse
+      - file: 2M/prog/hacking/hacking-romain      
+      - file: 2M/prog/arbres/LesArbres
+    - file: 2M/machine-learning/index
+      sections:
+      - file: 2M/machine-learning/cours/IntroML
+      - file: 2M/machine-learning/cours/Automates
+      - file: 2M/machine-learning/cours/RNN
+      - file: 2M/machine-learning/tp/JeudelavieTP
+    - file: 2M/esdn/index
+
+  - caption: Bibliographie
+    chapters:
+    - file: biblio.md
 
 
 
