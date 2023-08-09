@@ -1,7 +1,17 @@
 # DO Informatique 2M
 
-## Chapitres abordés
+Les chapitres abordés sont les suivants :
 
 - Algorithmique et programmation
 - Réseaux
 - Enjeux sociaux du numérique
+
+## Algorithmique et programmation
+
+
+## Réseaux
+
+
+## Enjeux sociaux du numérique
+
+
