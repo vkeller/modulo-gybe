@@ -2,7 +2,6 @@
 
 ## Chapitres abordés
 
-- Algorithmique
-- Programmation
+- Algorithmique et programmation
 - Réseaux
 - Enjeux sociaux du numérique
