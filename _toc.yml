@@ -7,6 +7,7 @@ parts:
   - caption: 1ère année
 #    maxdepth: 2
     chapters:
+    - file: 1M/index
     - file: 1M/installation/installation
     - file: 1M/representation/index
       sections:
@@ -64,6 +65,7 @@ parts:
 
   - caption: 2ème année
     chapters:
+    - file: 2M/index
     - file: 2M/algo/index
     - file: 2M/prog/index
       sections:
