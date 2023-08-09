@@ -10,9 +10,9 @@ parts:
     - file: 1M/index
     - file: 1M/representation/index
       sections:
-      - file: 1M/representation/cours/Cours1
-      - file: 1M/representation/cours/Cours2
-      - file: 1M/representation/cours/Cours3
+      - file: 1M/representation/cours/Cours01
+      - file: 1M/representation/cours/Cours02
+      - file: 1M/representation/cours/Cours03
       - file: 1M/representation/cours/Cours4
 #      - file: 1M/representation/cours/Cours5
       - file: 1M/representation/cours/Revision
