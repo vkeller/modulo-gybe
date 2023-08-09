@@ -8,7 +8,6 @@ parts:
 #    maxdepth: 2
     chapters:
     - file: 1M/index
-    - file: 1M/installation/installation
     - file: 1M/representation/index
       sections:
       - file: 1M/representation/cours/Cours1
@@ -35,6 +34,7 @@ parts:
       - file: 1M/algo/cours/Cours9
       - file: 1M/algo/cours/Cours10
       - file: 1M/algo/cours/Cours11
+    - file: 1M/installation/installation
     - file: 1M/prog/index
       sections:
       - file: 1M/prog/intro1/intro1
@@ -54,7 +54,7 @@ parts:
     - file: 1M/esdn/index
       sections:
       - file: 1M/esdn/cours/IntroductionESDN
-      - file: 1M/esdn/cours/Cours1
+      - file: 1M/esdn/cours/Cypherpunks
       - file: 1M/esdn/cours/CapitalismeDeSurveillance
       - file: 1M/esdn/cours/LesReseaux
       - file: 1M/esdn/presentations/PresentationsESDN
@@ -86,9 +86,4 @@ parts:
     chapters:
     - file: biblio.md
 
-
-
-#chapters:
-#- file: markdown
-#- file: notebook
 

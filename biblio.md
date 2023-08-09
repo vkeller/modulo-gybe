@@ -1,3 +1,5 @@
-'''{bibliography} references.bib
-:all:
-'''
+Livres et sources
+============================
+
+```{bibliography} refs.bib
+```
