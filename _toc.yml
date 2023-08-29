@@ -69,6 +69,7 @@ parts:
     - file: 2M/algo/index
       sections:
       - file: 2M/algo/Revision2M
+      - file: 2M/algo/Revision2M-2
     - file: 2M/prog/index
       sections:
       - file: 2M/prog/revisions/Revision1M
