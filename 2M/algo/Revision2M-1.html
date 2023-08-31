@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Algorithmique &#8212; Education Numérique Ecole de maturité</title>
+    <title>R2-ALGO-01 : Révision Algorithmes 1M &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="R2-ALGO-01 : Révision Algorithmes 1M" href="Revision2M-1.html" />
-    <link rel="prev" title="DO Informatique 2M" href="../index.html" />
+    <link rel="next" title="R2-ALGO-02 : Révision algorithmes" href="Revision2M-2.html" />
+    <link rel="prev" title="Algorithmique" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -409,7 +411,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Algorithmique
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -417,9 +419,9 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Revision2M-1.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      R2-ALGO-01 : Révision Algorithmes 1M
     </a>
    </li>
@@ -611,7 +613,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/index.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/Revision2M-1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -639,7 +641,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/2M/algo/index.md"
+        <a href="../../_sources/2M/algo/Revision2M-1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -650,7 +652,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -676,23 +678,154 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-des-algorithmes">
+   Caractéristiques des algorithmes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formalisme-algorigrammes">
+   Formalisme : algorigrammes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regles-de-construction">
+   Règles de construction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-un-algorithme-simple">
+   Exercice 1 : Un algorithme simple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-si-vous-avez-du-temps">
+   Exercice 3 (Si vous avez du temps)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction">
+   Correction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-1">
+     Exercice 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Algorithmique</h1>
+                <h1>R2-ALGO-01 : Révision Algorithmes 1M</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-des-algorithmes">
+   Caractéristiques des algorithmes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formalisme-algorigrammes">
+   Formalisme : algorigrammes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regles-de-construction">
+   Règles de construction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-un-algorithme-simple">
+   Exercice 1 : Un algorithme simple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-si-vous-avez-du-temps">
+   Exercice 3 (Si vous avez du temps)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction">
+   Correction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-1">
+     Exercice 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -700,10 +833,106 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="algorithmique">
-<h1>Algorithmique<a class="headerlink" href="#algorithmique" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <p><img alt="revision algos - progr" src="../../_images/revision1.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="r2-algo-01-revision-algorithmes-1m">
+<h1>R2-ALGO-01 : Révision Algorithmes 1M<a class="headerlink" href="#r2-algo-01-revision-algorithmes-1m" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>consolider les concepts algorithmiques nécessaires à la 2M</p>
+<ul>
+<li><p>début et fin</p></li>
+<li><p>liaison</p></li>
+<li><p>instruction</p></li>
+<li><p>condition</p></li>
+<li><p>sous-programme</p></li>
+<li><p>entrées</p></li>
+<li><p>sorties</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="caracteristiques-des-algorithmes">
+<h2>Caractéristiques des algorithmes<a class="headerlink" href="#caracteristiques-des-algorithmes" title="Permalink to this headline">#</a></h2>
+<p>Un algorithme est une succession d’instructions permettant d’aboutir à un résultat souhaité. Il possède les caractéristiques (proriétés) suivantes :</p>
+<ol class="simple">
+<li><p>il doit toujours se terminer après un <strong>nombre fini</strong> d’étapes (finitude)</p></li>
+<li><p>chaque étape d’un algorithme doit être définie précisément, les actions à mener doivent être spécifiées rigoureusement et sans ambigüité pour chaque cas</p></li>
+<li><p>un algorithme a des entrées, zéro ou plus, quantités qui lui sont données avant ou pendant son exécution</p></li>
+<li><p>un algorithme a une ou plusieurs sorties, quantités qui ont une relation spécifiée avec les entrées</p></li>
+<li><p>les instructions doivent être suffisament basiques pour pouvoir être en principe exécutées de manière exacte, en <strong>un temps fini</strong> par une personne utilisant un papier et un crayon.</p></li>
+</ol>
+</section>
+<section id="formalisme-algorigrammes">
+<h2>Formalisme : algorigrammes<a class="headerlink" href="#formalisme-algorigrammes" title="Permalink to this headline">#</a></h2>
+<p>Dans ce cours nous utilisons le formalisme des <strong>algorigrammes</strong>.</p>
+<p><img alt="algorigrammes" src="../../_images/structures1.png" /></p>
+</section>
+<section id="regles-de-construction">
+<h2>Règles de construction<a class="headerlink" href="#regles-de-construction" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Il faut <strong>centrer</strong> l’algorigramme au centre de la feuille ou du programme informatique pour le créer</p></li>
+<li><p>Il faut que la lecture de l’algorigramme puisse se faire <strong>verticalement</strong></p></li>
+<li><p>Les lignes de <strong>liaisons</strong> entre les symboles <strong>ne doivent pas se couper</strong>.</p></li>
+<li><p>Une ligne de liaison doit toujours arriver sur le haut et au centre d’un symbole.</p></li>
+<li><p>Les commentaires sont à placer de préférence à droite et les renvois de branchement à gauche.</p></li>
+</ul>
+<p>A cela on ajoute :</p>
+<ul class="simple">
+<li><p>aucune liaison <strong>orpheline</strong> (qui part d’un symbole et qui arrive nulle part)</p></li>
+</ul>
+</section>
+<section id="exercice-1-un-algorithme-simple">
+<h2>Exercice 1 : Un algorithme simple<a class="headerlink" href="#exercice-1-un-algorithme-simple" title="Permalink to this headline">#</a></h2>
+<p>Sur une feuille de papier et avec un crayon, dessinez l’algorigramme correspondant à l’algorithme suivant :</p>
+<ul class="simple">
+<li><p>demander un entier <code class="docutils literal notranslate"><span class="pre">A</span></code></p></li>
+<li><p>demander un entier <code class="docutils literal notranslate"><span class="pre">B</span></code></p></li>
+<li><p>calculer la somme <code class="docutils literal notranslate"><span class="pre">C</span>&#160; <span class="pre">=</span> <span class="pre">A</span> <span class="pre">+</span> <span class="pre">B</span></code> en calculant:</p>
+<ul>
+<li><p>tant que <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">!=</span> <span class="pre">0</span></code> faire :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">A</span> <span class="pre">-</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">B</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Modifiez votre algorigramme pour qu’il calcule la différence <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">A</span> <span class="pre">-</span> <span class="pre">B</span></code></p>
+<p>(Vous pouvez vous restreindre aux nombre non négatifs)</p>
+</section>
+<section id="exercice-3-si-vous-avez-du-temps">
+<h2>Exercice 3 (Si vous avez du temps)<a class="headerlink" href="#exercice-3-si-vous-avez-du-temps" title="Permalink to this headline">#</a></h2>
+<p>Il existe un algorithme simple appelé <strong>méthode de la bissection</strong> qui permet de calculer une <strong>racine carrée</strong> simplement.</p>
+<p>Méthode pour calculer <span class="math notranslate nohighlight">\(\sqrt{x}\)</span>:</p>
+<ol class="simple">
+<li><p>Choisir un intervalle entre <code class="docutils literal notranslate"><span class="pre">1</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<ol class="simple">
+<li><p>Calculer la moitié de l’intervalle : <span class="math notranslate nohighlight">\(m = \frac{1 + x}{2}\)</span></p></li>
+<li><p>Calculer <span class="math notranslate nohighlight">\(m^2\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(m^2 &gt; x\)</span> alors <span class="math notranslate nohighlight">\(m^2\)</span> devient la borne supérieure</p></li>
+<li><p>Sinon <span class="math notranslate nohighlight">\(m^2\)</span> devient la borne inférieure</p></li>
+<li><p>Recommencer</p></li>
+</ol>
+</li>
+</ol>
+<p>Dessinez l’algorigramme correspondant</p>
+</section>
+<section id="correction">
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this headline">#</a></h2>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h3>
+<p><img alt="addition" src="../../_images/addition.png" /></p>
+</section>
+<section id="id1">
+<h3>Exercice 2<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p><img alt="soustraction" src="../../_images/soustraction.png" /></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -733,17 +962,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">DO Informatique 2M</p>
+            <p class="prev-next-title">Algorithmique</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Revision2M-1.html" title="next page">
+    <a class='right-next' id="next-link" href="Revision2M-2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-ALGO-01 : Révision Algorithmes 1M</p>
+        <p class="prev-next-title">R2-ALGO-02 : Révision algorithmes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
