@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP2-PROG-09 : Les arbres &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-PROG-01 : Approche pratique de la complexité &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Intelligence artificielle" href="../../machine-learning/index.html" />
-    <link rel="prev" title="TP2-PROG-08: Coder et décoder comme les Romains" href="../hacking/hacking-romain.html" />
+    <link rel="next" title="TP2-PROG-05 : Conjecture de Collatz" href="../syracuse/Syracuse.html" />
+    <link rel="prev" title="R2-PROG-01 : Rappels programmation 1M" href="../revisions/Revision1M.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -445,6 +445,11 @@ const thebe_selector_output = ".output, .cell_output"
      R2-PROG-01 : Rappels programmation 1M
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     TP2-PROG-01 : Approche pratique de la complexité
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../syracuse/Syracuse.html">
      TP2-PROG-05 : Conjecture de Collatz
@@ -465,8 +470,8 @@ const thebe_selector_output = ".output, .cell_output"
      TP2-PROG-08: Coder et décoder comme les Romains
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../arbres/LesArbres.html">
      TP2-PROG-09 : Les arbres
     </a>
    </li>
@@ -611,7 +616,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/arbres/LesArbres.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/complexite/Complexite1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -639,7 +644,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/2M/prog/arbres/LesArbres.ipynb"
+        <a href="../../../_sources/2M/prog/complexite/Complexite1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -676,23 +681,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP2-PROG-09 : Les arbres</h1>
+                <h1>TP2-PROG-01 : Approche pratique de la complexité</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -700,10 +742,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tree_%28computer_science%29.svg/526px-Tree_%28computer_science%29.svg.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-prog-09-les-arbres">
-<h1>TP2-PROG-09 : Les arbres<a class="headerlink" href="#tp2-prog-09-les-arbres" title="Permalink to this headline">#</a></h1>
-<p>Un arbre est une structure de données non-linéaire</p>
+  <p><img alt="complexite" src="../../../_images/complexite.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-prog-01-approche-pratique-de-la-complexite">
+<h1>TP2-PROG-01 : Approche pratique de la complexité<a class="headerlink" href="#tp2-prog-01-approche-pratique-de-la-complexite" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>être capable de programmer plusieurs algorithmes pour le problème de la recherche d’un élément dans une liste</p></li>
+<li><p>mesurer la performance des algorithmes</p></li>
+<li><p>déduire le comportement asymptotique et la complexité</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -719,7 +768,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./2M/prog/arbres"
+            path: "./2M/prog/complexite"
         },
         predefinedOutput: true
     }
@@ -733,17 +782,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../hacking/hacking-romain.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../revisions/Revision1M.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP2-PROG-08: Coder et décoder comme les Romains</p>
+            <p class="prev-next-title">R2-PROG-01 : Rappels programmation 1M</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../machine-learning/index.html" title="next page">
+    <a class='right-next' id="next-link" href="../syracuse/Syracuse.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Intelligence artificielle</p>
+        <p class="prev-next-title">TP2-PROG-05 : Conjecture de Collatz</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
