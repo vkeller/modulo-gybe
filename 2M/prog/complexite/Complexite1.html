@@ -708,6 +708,68 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithmes-de-recherche">
+   Algorithmes de recherche
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-lineaire">
+     Recherche linéaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">
+     Recherche aléatoire avec remise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">
+     Recherche aléatoire sans remise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-dichotomique">
+     Recherche dichotomique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
+   Exercice 1 : la boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
+   Exercice 2 : Nombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-recherche-lineaire">
+   Exercice 3 : Recherche linéaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-recherche-aleatoire-sans-remise">
+   Exercice 4 : Recherche aléatoire sans remise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-recherche-aleatoire-avec-remise">
+   Exercice 5 : Recherche aléatoire avec remise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-recherche-dichotomique">
+   Exercice 6 : Recherche dichotomique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7 :
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -732,6 +794,68 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithmes-de-recherche">
+   Algorithmes de recherche
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-lineaire">
+     Recherche linéaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">
+     Recherche aléatoire avec remise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">
+     Recherche aléatoire sans remise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recherche-dichotomique">
+     Recherche dichotomique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
+   Exercice 1 : la boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
+   Exercice 2 : Nombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-recherche-lineaire">
+   Exercice 3 : Recherche linéaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-recherche-aleatoire-sans-remise">
+   Exercice 4 : Recherche aléatoire sans remise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-recherche-aleatoire-avec-remise">
+   Exercice 5 : Recherche aléatoire avec remise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-recherche-dichotomique">
+   Exercice 6 : Recherche dichotomique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7 :
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -748,10 +872,233 @@ title="Print to PDF"
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>être capable de programmer plusieurs algorithmes pour le problème de la recherche d’un élément dans une liste</p></li>
+<li><p>Comprendre et implémenter la boucle <strong>tant qu’une condition est vraie</strong> (boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>)</p></li>
+<li><p>être capable de programmer plusieurs algorithmes différents pour le problème de la recherche d’un élément dans une liste</p>
+<ol class="simple">
+<li><p>recherche linéaire</p></li>
+<li><p>recherche aléatoire sans remise</p></li>
+<li><p>recherche aléatoire avec remise</p></li>
+<li><p>recherche dichotomique</p></li>
+</ol>
+</li>
 <li><p>mesurer la performance des algorithmes</p></li>
 <li><p>déduire le comportement asymptotique et la complexité</p></li>
 </ul>
+</section>
+<section id="algorithmes-de-recherche">
+<h2>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Permalink to this headline">#</a></h2>
+<p>Les quatre algorithmes de recherche étudiés répondent tous au même problème à résoudre : trouver un nombre <strong>aléatoire</strong> dans des nombres triés entre une borne inférieure <strong>borneInf</strong> et une borne supérieure <strong>borneSup</strong></p>
+<section id="recherche-lineaire">
+<h3>Recherche linéaire<a class="headerlink" href="#recherche-lineaire" title="Permalink to this headline">#</a></h3>
+<p>L’algorithme est le plus simple :</p>
+<ol class="simple">
+<li><p>On choisi un nombre aléatoire qu’il faut rechercher: <code class="docutils literal notranslate"><span class="pre">atrouve</span></code></p></li>
+<li><p>On initialise une variable <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">=</span> <span class="pre">borneInf</span></code> :</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">==</span> <span class="pre">atrouve</span></code>, alors on arrête</p></li>
+<li><p>sinon, on passe au nombre suivant</p></li>
+<li><p>tout cela est fait <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span> <span class="pre">nombre</span> <span class="pre">!=</span> <span class="pre">borneSup</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>L’algorigramme est le suivant :</p>
+<p><img alt="RechercheLineaire" src="../../../_images/RechercheLineaire.png" /></p>
+</section>
+<section id="recherche-aleatoire-avec-remise">
+<h3>Recherche aléatoire avec remise<a class="headerlink" href="#recherche-aleatoire-avec-remise" title="Permalink to this headline">#</a></h3>
+<p>L’algorithme est le suivant :</p>
+<ol class="simple">
+<li><p>On choisi un nombre aléatoire qu’il faut rechercher: <code class="docutils literal notranslate"><span class="pre">atrouve</span></code></p></li>
+<li><p>On choisi un nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
+<li><p>tant que <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">!=</span> <span class="pre">atrouve</span></code> :</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">==</span> <span class="pre">atrouve</span></code>, alors on arrête</p></li>
+<li><p>sinon, choisi un nouveau nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>On note que cet algorithme peut faire ressortir plusieurs fois le même nombre aléatoire. C’est pourqoi il s’appelle <strong>recherche aléatoire avec remise</strong>.</p>
+<p>L’algorigramme est le suivant :</p>
+<p><img alt="RechercheAleatoireAvecRemise" src="../../../_images/RechercheAleatoireAvecRemise.png" /></p>
+</section>
+<section id="recherche-aleatoire-sans-remise">
+<h3>Recherche aléatoire sans remise<a class="headerlink" href="#recherche-aleatoire-sans-remise" title="Permalink to this headline">#</a></h3>
+<p>L’algorithme est proche du précédent mais l’algorithme ne tire pas deux fois le même nombre</p>
+</section>
+<section id="recherche-dichotomique">
+<h3>Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Permalink to this headline">#</a></h3>
+<p>L’algorithme est le suivant :</p>
+<ol class="simple">
+<li><p>On choisi un nombre aléatoire qu’il faut rechercher: <code class="docutils literal notranslate"><span class="pre">atrouve</span></code></p></li>
+<li><p>On initialise une variable booléenne <code class="docutils literal notranslate"><span class="pre">trouve</span> <span class="pre">=</span> <span class="pre">False</span></code></p></li>
+<li><p>On initialise une variable <code class="docutils literal notranslate"><span class="pre">bmax</span> <span class="pre">=</span> <span class="pre">borneSup</span></code></p></li>
+<li><p>On initialise une variable <code class="docutils literal notranslate"><span class="pre">bmin</span> <span class="pre">=</span> <span class="pre">borneInf</span></code></p></li>
+<li><p>Tant que <code class="docutils literal notranslate"><span class="pre">trouve</span> <span class="pre">!=</span> <span class="pre">True</span></code> :</p>
+<ul class="simple">
+<li><p>on calcule la moitié des nombres : <code class="docutils literal notranslate"><span class="pre">moitie</span> <span class="pre">=</span> <span class="pre">int((bmax+bmin)/2)</span></code></p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">moitie</span> <span class="pre">==</span> <span class="pre">atrouve</span></code>, alors on arrête : <code class="docutils literal notranslate"><span class="pre">trouve</span> <span class="pre">=</span> <span class="pre">True</span></code></p></li>
+<li><p>sinon si <code class="docutils literal notranslate"><span class="pre">moitie</span> <span class="pre">&gt;</span> <span class="pre">atrouver</span></code>, alors <code class="docutils literal notranslate"><span class="pre">bmax</span> <span class="pre">=</span> <span class="pre">moitie</span></code></p></li>
+<li><p>sinon si <code class="docutils literal notranslate"><span class="pre">moitie</span> <span class="pre">&lt;</span> <span class="pre">atrouver</span></code>, alors <code class="docutils literal notranslate"><span class="pre">bmin</span> <span class="pre">=</span> <span class="pre">moitie</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>L’algorigramme est le suivant :</p>
+<p><img alt="RechercheDichotomique" src="../../../_images/RechercheDichotomique.png" /></p>
+</section>
+</section>
+<section id="exercice-1-la-boucle-while">
+<h2>Exercice 1 : la boucle while<a class="headerlink" href="#exercice-1-la-boucle-while" title="Permalink to this headline">#</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span></code> se déclare en python avec le mot clef <code class="docutils literal notranslate"><span class="pre">while</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+    <span class="n">etc</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>Exemple : Tant que la variable N n’est pas égale à 10, exécuter <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">+</span> <span class="pre">1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">N</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ecrivez un code python qui :</p>
+<ol class="simple">
+<li><p>demande à l’utilisateur une valeur minimum</p></li>
+<li><p>demande à l’utilisateur une valeur maximum</p></li>
+<li><p>initialise une variable <code class="docutils literal notranslate"><span class="pre">carre</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
+<li><p>Calcule le carré des nombres entiers compris entre les valeurs minimum et maximum</p></li>
+</ol>
+<p>(bien qu’il soit possible d’écrire ce programme avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, l’écrire avec une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+</section>
+<section id="exercice-2-nombres-aleatoires">
+<h2>Exercice 2 : Nombres aléatoires<a class="headerlink" href="#exercice-2-nombres-aleatoires" title="Permalink to this headline">#</a></h2>
+<p>La bilbiothèque de fonction <code class="docutils literal notranslate"><span class="pre">random</span></code> permet, via la fonction <code class="docutils literal notranslate"><span class="pre">randint(borneInf,</span> <span class="pre">borneSup)</span></code> d’obtenir un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>modifiez les bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code></p></li>
+<li><p>observez que votre programme donne effectivement un nombre aléatoire compris entre ces bornes</p></li>
+</ul>
+</section>
+<section id="exercice-3-recherche-lineaire">
+<h2>Exercice 3 : Recherche linéaire<a class="headerlink" href="#exercice-3-recherche-lineaire" title="Permalink to this headline">#</a></h2>
+<p>Le programme suivant exécute une recherche linéaire entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> du nombre aléatoire <code class="docutils literal notranslate"><span class="pre">aleatoire</span></code> à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<ul class="simple">
+<li><p>modifiez les bornes</p></li>
+<li><p>exécutez le code et observez les résulats</p></li>
+<li><p>enregistrez votre programme sous le nom <code class="docutils literal notranslate"><span class="pre">recherche_lineaire.py</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">==</span><span class="n">atrouver</span><span class="p">):</span>
+        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 95 : 96
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-4-recherche-aleatoire-sans-remise">
+<h2>Exercice 4 : Recherche aléatoire sans remise<a class="headerlink" href="#exercice-4-recherche-aleatoire-sans-remise" title="Permalink to this headline">#</a></h2>
+<p>Le programme suivant exécute une recherche aléatoire sans remise entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> du nombre aléatoire <code class="docutils literal notranslate"><span class="pre">aleatoire</span></code> à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>. Il est basé sur la mise en mémoire (dans une liste) des nombres choisis au hasard afin de ne pas les retirer.</p>
+<ul class="simple">
+<li><p>Enregistrez votre programme sous le nom <code class="docutils literal notranslate"><span class="pre">recherche_aleatoire_sans_remise.py</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">random_non_tire</span><span class="p">(</span><span class="n">already</span><span class="p">,</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nontire</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">nontire</span> <span class="o">!=</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">aleat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">)</span>
+        <span class="n">tire</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">already</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">already</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">aleat</span> <span class="p">:</span>
+                <span class="n">tire</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">tire</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">nontire</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">aleat</span>
+
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">deja_tire</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random_non_tire</span><span class="p">(</span><span class="n">deja_tire</span><span class="p">,</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">deja_tire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 6 : 47
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-5-recherche-aleatoire-avec-remise">
+<h2>Exercice 5 : Recherche aléatoire avec remise<a class="headerlink" href="#exercice-5-recherche-aleatoire-avec-remise" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>modifiez votre programme pour qu’il effectue une recherche aléatoire avec remise sur la base du code de la recherche aléatoire sans remise.</p></li>
+<li><p>Sauvez votre programme sous le nom <code class="docutils literal notranslate"><span class="pre">recherche_aleatoire_avec_remise.py</span></code></p></li>
+</ul>
+</section>
+<section id="exercice-6-recherche-dichotomique">
+<h2>Exercice 6 : Recherche dichotomique<a class="headerlink" href="#exercice-6-recherche-dichotomique" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ecrivez un programme qui recherche un nbombre aléatoire entre deux bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> en utilisant l’algorithme de recherche dichotomique</p></li>
+<li><p>entregistrez votre programme sous le nom <code class="docutils literal notranslate"><span class="pre">recherche_dichotomique.py</span></code></p></li>
+</ul>
+</section>
+<section id="exercice-7">
+<h2>Exercice 7 :<a class="headerlink" href="#exercice-7" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
