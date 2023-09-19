@@ -71,6 +71,7 @@ parts:
       - file: 2M/algo/Revision2M-1
       - file: 2M/algo/Revision2M-2
 #      - file: 2M/algo/Revision2M-3
+      - file : 2M/algo/C2-ALGO-02
     - file: 2M/prog/index
       sections:
       - file: 2M/prog/revisions/Revision1M
