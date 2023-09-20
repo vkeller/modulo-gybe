@@ -427,7 +427,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/Revision2M-2.html">
-     R2-ALGO-02 : Révision algorithmes (Tri)
+     C2-ALGO-01 : Révision algorithmes (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-02.html">
+     C2-ALGO-02 : Complexité des algorithmes
     </a>
    </li>
   </ul>
@@ -748,6 +753,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
+   Exercice 2.2 : Pile ou face ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-recherche-lineaire">
    Exercice 3 : Recherche linéaire
   </a>
@@ -846,6 +856,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
    Exercice 2 : Nombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
+   Exercice 2.2 : Pile ou face ?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1027,7 +1042,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
 </pre></div>
 </div>
 </div>
@@ -1035,6 +1050,16 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>modifiez les bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code></p></li>
 <li><p>observez que votre programme donne effectivement un nombre aléatoire compris entre ces bornes</p></li>
+</ul>
+</section>
+<section id="exercice-2-2-pile-ou-face">
+<h2>Exercice 2.2 : Pile ou face ?<a class="headerlink" href="#exercice-2-2-pile-ou-face" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on lance une pièce de monnaie en l’air, elle a une chance sur deux de retomber sur face, une chance sur deux sur pile.</p>
+<p>Vérifions que la bibliothèque <code class="docutils literal notranslate"><span class="pre">random</span></code> nous donne bien les bonnes valeurs.</p>
+<ul class="simple">
+<li><p>Ecrivez un programme qui tire 10000, 100000, 10000000 un nombre aléatoire entier entre 0 (pile) et 1 (face) à l’aode d’une boucle</p></li>
+<li><p>comptez le nombre de piles et de face (en stockant la valeur intermédiaire dans deux variables <code class="docutils literal notranslate"><span class="pre">nbrPile</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrFace</span></code></p></li>
+<li><p>Vérifiez que le résultat est le bon</p></li>
 </ul>
 </section>
 <section id="exercice-3-recherche-lineaire">
@@ -1047,24 +1072,36 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="c1"># Input borneInf</span>
 <span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Input borneSup</span>
 <span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
 <span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># nombre est la variable qui contient l&#39;itérateur entre borneInf et borneSup</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># trouve est une variable de type booléen.</span>
 <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># Si le nombre est égal à celui à trouver (atrouver), alors la variable trouve devient True</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">==</span><span class="n">atrouver</span><span class="p">):</span>
         <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># on incrémente l&#39;itérateur</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># On incrémente le nombre de comparaisons</span>
     <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 7 : 8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 20 : 21
 </pre></div>
 </div>
 </div>
@@ -1078,8 +1115,15 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importation de la bibliothèque random (nombres aléatoires)</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
+<span class="c1"># Fonction random_non_tire qui a trois arguments :</span>
+<span class="c1"># already : une liste qui contient tous les nombres aléatoires DEJA TIRES</span>
+<span class="c1"># bmin    : la borne inférieure</span>
+<span class="c1"># bmax    : la borne supérieure</span>
+<span class="c1"># RETOURNE : un nombre aléatoire qui n&#39;a pas déjà été tiré</span>
+<span class="c1"># Remarque : vous n&#39;avez pas à comprendre l&#39;entier du code de la fonction</span>
 <span class="k">def</span> <span class="nf">random_non_tire</span><span class="p">(</span><span class="n">already</span><span class="p">,</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">):</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">nontire</span> <span class="o">=</span> <span class="kc">False</span>
@@ -1093,24 +1137,36 @@ title="Print to PDF"
             <span class="n">nontire</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="n">aleat</span>
 
+<span class="c1"># input : borne inférieure</span>
 <span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># input : borne supérieure</span>
 <span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># input : nombre aléatoire à trouver</span>
 <span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="c1"># N est une variable qui contient le nombre de comparaisons</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># trouve est une variable booléenne qui est initialisée à False</span>
 <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># liste qui contient tous les aléatoires qui ont déjà été tirés</span>
 <span class="n">deja_tire</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Boucle &quot;Tant que la variable trouve n&#39;est pas égale à True)</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># aleatoire contient un nombre aléatoire qui n&#39;a pas été tiré</span>
     <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random_non_tire</span><span class="p">(</span><span class="n">deja_tire</span><span class="p">,</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="c1"># si ce nombre aléatoire est celui qu&#39;il faut trouver, alors trouve devient True (et on sort de la boucle while)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># on incérmente le nombre de comparaisons</span>
     <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># on ajoute l&#39;aléatoire à la liste des nombres déjà triés</span>
     <span class="n">deja_tire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+<span class="c1"># on affiche le nombre à chercher et le nombre de comparaisons</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 46 : 45
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 90 : 58
 </pre></div>
 </div>
 </div>
@@ -1166,7 +1222,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 79 : 80
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 65 : 66
 </pre></div>
 </div>
 </div>
@@ -1193,7 +1249,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 75 : 76
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 43 : 44
 </pre></div>
 </div>
 </div>
@@ -1218,7 +1274,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 57.9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 59.1
 </pre></div>
 </div>
 </div>
