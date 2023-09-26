@@ -893,7 +893,7 @@ title="Print to PDF"
 <p>En <strong>mathématiques</strong>, la <strong>comparaison asymptotique</strong> est une méthode qui étudie la vitesse de croissance (ou de décroissance) d’une fonction <span class="math notranslate nohighlight">\(f(n)\)</span>.</p>
 <p>Une <strong>asymptote</strong> est une <strong>droite</strong> dont une <strong>courbe</strong> s’approche sans jamais l’atteindre.</p>
 <p>L’analyse du <strong>comportement asymptotique</strong> consiste donc à trouver une fonction <span class="math notranslate nohighlight">\(g(n)\)</span> qui exprimerait le comportement de la fonction <span class="math notranslate nohighlight">\(f()\)</span> lorsque <strong>n tend vers l’infini</strong>. On dit alors que la fonction <span class="math notranslate nohighlight">\(f(n)\)</span> est <strong>bornée asymptotiquement</strong> par la fonction <span class="math notranslate nohighlight">\(g(n)\)</span> à un facteur près.</p>
-<p>La notation devient : <span class="math notranslate nohighlight">\(f(n) = \mathcal O (g(n)\)</span></p>
+<p>La notation devient : <span class="math notranslate nohighlight">\(f(n) = \mathcal O (g(n))\)</span></p>
 <section id="definition-exacte-mathematique">
 <h3>Définition exacte mathématique<a class="headerlink" href="#definition-exacte-mathematique" title="Permalink to this headline">#</a></h3>
 <p>La définition rigoreuse mathématique sera explicitée dans un cours de mathématiques. Dans le cadre du cours d’informatique, la recherche du comportement asymptotique se résumera à la recherche - empirique ou non - de la fonction <span class="math notranslate nohighlight">\(g(n)\)</span> qui permet de décrire le comportement de l’algorithme <strong>dans le pire des cas</strong></p>
@@ -982,19 +982,19 @@ title="Print to PDF"
 <td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n)\)</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Recherche dichotomique</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n))\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(1)\)</span></p></td>
 <td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n))\)</span></p></td>
 <td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n))\)</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>Tri à bulles</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n))\)</span></p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n^2))\)</span></p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n^2))\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n^2)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n^2)\)</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Tri sélection</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n^2))\)</span></p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n^2))\)</span></p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n^2))\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n^2)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n^2)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(n^2)\)</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>Tri fusion</p></td>
 <td class="text-align:center"><p><span class="math notranslate nohighlight">\(\mathcal O(log(n log(n)))\)</span></p></td>
