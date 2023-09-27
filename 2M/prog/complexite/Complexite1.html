@@ -721,6 +721,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-while">
+   La boucle While
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
    Exercice 1 : la boucle while
   </a>
@@ -824,6 +829,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectifs-pedagogiques">
    Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-while">
+   La boucle While
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -937,6 +947,22 @@ title="Print to PDF"
 <li><p>déduire le comportement asymptotique et la complexité</p></li>
 </ul>
 </section>
+<section id="la-boucle-while">
+<h2>La boucle While<a class="headerlink" href="#la-boucle-while" title="Permalink to this headline">#</a></h2>
+<p>Une boucle while est une boucle Python qui se fait <strong>tant que</strong> une condition est vraie. On peut la considérer comme une généralisation du test conditionnel <code class="docutils literal notranslate"><span class="pre">if</span></code> qui se ferait tant que la condition est remplie</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>devient :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>ce qui signifie qu’il est obligatoire d’avoir une possibilité de rendre la condition fausse dans la boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>. Sinon, on se retrouve devant une boucle toujours vraie : c’est la <strong>boucle infinie</strong></p>
+</section>
 <section id="exercice-1-la-boucle-while">
 <h2>Exercice 1 : la boucle while<a class="headerlink" href="#exercice-1-la-boucle-while" title="Permalink to this headline">#</a></h2>
 <p>La boucle <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span></code> se déclare en python avec le mot clef <code class="docutils literal notranslate"><span class="pre">while</span></code>:</p>
@@ -985,7 +1011,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -1106,7 +1132,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 15 : 16
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 55 : 56
 </pre></div>
 </div>
 </div>
@@ -1171,7 +1197,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 67 : 29
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 81 : 85
 </pre></div>
 </div>
 </div>
@@ -1227,7 +1253,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 78 : 79
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 53 : 54
 </pre></div>
 </div>
 </div>
@@ -1254,7 +1280,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 35 : 36
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 3 : 4
 </pre></div>
 </div>
 </div>
@@ -1279,7 +1305,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 60.9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 39.7
 </pre></div>
 </div>
 </div>
