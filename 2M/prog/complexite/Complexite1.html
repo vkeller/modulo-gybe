@@ -435,6 +435,11 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-02 : Complexité des algorithmes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-03.html">
+     C2-ALGO-03 : Complexité des algorithmes
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -716,6 +721,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
+   Exercice 1 : la boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
+   Exercice 2 : Nombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
+   Exercice 2.2 : Pile ou face ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#algorithmes-de-recherche">
    Algorithmes de recherche
   </a>
@@ -741,21 +761,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
-   Exercice 1 : la boucle while
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
-   Exercice 2 : Nombres aléatoires
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
-   Exercice 2.2 : Pile ou face ?
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-recherche-lineaire">
@@ -822,6 +827,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
+   Exercice 1 : la boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
+   Exercice 2 : Nombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
+   Exercice 2.2 : Pile ou face ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#algorithmes-de-recherche">
    Algorithmes de recherche
   </a>
@@ -847,21 +867,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
-   Exercice 1 : la boucle while
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
-   Exercice 2 : Nombres aléatoires
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-2-pile-ou-face">
-   Exercice 2.2 : Pile ou face ?
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-recherche-lineaire">
@@ -932,6 +937,74 @@ title="Print to PDF"
 <li><p>déduire le comportement asymptotique et la complexité</p></li>
 </ul>
 </section>
+<section id="exercice-1-la-boucle-while">
+<h2>Exercice 1 : la boucle while<a class="headerlink" href="#exercice-1-la-boucle-while" title="Permalink to this headline">#</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span></code> se déclare en python avec le mot clef <code class="docutils literal notranslate"><span class="pre">while</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span> <span class="p">:</span>
+    <span class="n">instruction</span> <span class="mi">1</span>
+    <span class="n">instruction</span> <span class="mi">2</span>
+    <span class="n">etc</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>Exemple : Tant que la variable N n’est pas égale à 10, exécuter <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">+</span> <span class="pre">1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">N</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ecrivez un code python qui :</p>
+<ol class="simple">
+<li><p>demande à l’utilisateur une valeur minimum</p></li>
+<li><p>demande à l’utilisateur une valeur maximum</p></li>
+<li><p>initialise une variable <code class="docutils literal notranslate"><span class="pre">carre</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
+<li><p>Calcule le carré des nombres entiers compris entre les valeurs minimum et maximum</p></li>
+</ol>
+<p>(bien qu’il soit possible d’écrire ce programme avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, l’écrire avec une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+</section>
+<section id="exercice-2-nombres-aleatoires">
+<h2>Exercice 2 : Nombres aléatoires<a class="headerlink" href="#exercice-2-nombres-aleatoires" title="Permalink to this headline">#</a></h2>
+<p>La bilbiothèque de fonction <code class="docutils literal notranslate"><span class="pre">random</span></code> permet, via la fonction <code class="docutils literal notranslate"><span class="pre">randint(borneInf,</span> <span class="pre">borneSup)</span></code> d’obtenir un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>modifiez les bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code></p></li>
+<li><p>observez que votre programme donne effectivement un nombre aléatoire compris entre ces bornes</p></li>
+</ul>
+</section>
+<section id="exercice-2-2-pile-ou-face">
+<h2>Exercice 2.2 : Pile ou face ?<a class="headerlink" href="#exercice-2-2-pile-ou-face" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on lance une pièce de monnaie en l’air, elle a une chance sur deux de retomber sur face, une chance sur deux sur pile.</p>
+<p>Vérifions que la bibliothèque <code class="docutils literal notranslate"><span class="pre">random</span></code> nous donne bien les bonnes valeurs.</p>
+<ul class="simple">
+<li><p>Ecrivez un programme qui tire 10000, 100000, 10000000 un nombre aléatoire entier entre 0 (pile) et 1 (face) à l’aode d’une boucle</p></li>
+<li><p>comptez le nombre de piles et de face (en stockant la valeur intermédiaire dans deux variables <code class="docutils literal notranslate"><span class="pre">nbrPile</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrFace</span></code></p></li>
+<li><p>Vérifiez que le résultat est le bon</p></li>
+</ul>
+</section>
 <section id="algorithmes-de-recherche">
 <h2>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Permalink to this headline">#</a></h2>
 <p>Les quatre algorithmes de recherche étudiés répondent tous au même problème à résoudre : trouver un nombre <strong>aléatoire</strong> dans des nombres triés entre une borne inférieure <strong>borneInf</strong> et une borne supérieure <strong>borneSup</strong></p>
@@ -994,74 +1067,6 @@ title="Print to PDF"
 <p><img alt="RechercheDichotomique" src="../../../_images/RechercheDichotomique.png" /></p>
 </section>
 </section>
-<section id="exercice-1-la-boucle-while">
-<h2>Exercice 1 : la boucle while<a class="headerlink" href="#exercice-1-la-boucle-while" title="Permalink to this headline">#</a></h2>
-<p>La boucle <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span></code> se déclare en python avec le mot clef <code class="docutils literal notranslate"><span class="pre">while</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">instruction</span> <span class="mi">1</span>
-    <span class="n">instruction</span> <span class="mi">2</span>
-    <span class="n">etc</span><span class="o">..</span>
-</pre></div>
-</div>
-<p>Exemple : Tant que la variable N n’est pas égale à 10, exécuter <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">+</span> <span class="pre">1</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">N</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p>Ecrivez un code python qui :</p>
-<ol class="simple">
-<li><p>demande à l’utilisateur une valeur minimum</p></li>
-<li><p>demande à l’utilisateur une valeur maximum</p></li>
-<li><p>initialise une variable <code class="docutils literal notranslate"><span class="pre">carre</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
-<li><p>Calcule le carré des nombres entiers compris entre les valeurs minimum et maximum</p></li>
-</ol>
-<p>(bien qu’il soit possible d’écrire ce programme avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, l’écrire avec une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
-</section>
-<section id="exercice-2-nombres-aleatoires">
-<h2>Exercice 2 : Nombres aléatoires<a class="headerlink" href="#exercice-2-nombres-aleatoires" title="Permalink to this headline">#</a></h2>
-<p>La bilbiothèque de fonction <code class="docutils literal notranslate"><span class="pre">random</span></code> permet, via la fonction <code class="docutils literal notranslate"><span class="pre">randint(borneInf,</span> <span class="pre">borneSup)</span></code> d’obtenir un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>modifiez les bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code></p></li>
-<li><p>observez que votre programme donne effectivement un nombre aléatoire compris entre ces bornes</p></li>
-</ul>
-</section>
-<section id="exercice-2-2-pile-ou-face">
-<h2>Exercice 2.2 : Pile ou face ?<a class="headerlink" href="#exercice-2-2-pile-ou-face" title="Permalink to this headline">#</a></h2>
-<p>Lorsqu’on lance une pièce de monnaie en l’air, elle a une chance sur deux de retomber sur face, une chance sur deux sur pile.</p>
-<p>Vérifions que la bibliothèque <code class="docutils literal notranslate"><span class="pre">random</span></code> nous donne bien les bonnes valeurs.</p>
-<ul class="simple">
-<li><p>Ecrivez un programme qui tire 10000, 100000, 10000000 un nombre aléatoire entier entre 0 (pile) et 1 (face) à l’aode d’une boucle</p></li>
-<li><p>comptez le nombre de piles et de face (en stockant la valeur intermédiaire dans deux variables <code class="docutils literal notranslate"><span class="pre">nbrPile</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrFace</span></code></p></li>
-<li><p>Vérifiez que le résultat est le bon</p></li>
-</ul>
-</section>
 <section id="exercice-3-recherche-lineaire">
 <h2>Exercice 3 : Recherche linéaire<a class="headerlink" href="#exercice-3-recherche-lineaire" title="Permalink to this headline">#</a></h2>
 <p>Le programme suivant exécute une recherche linéaire entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> du nombre aléatoire <code class="docutils literal notranslate"><span class="pre">aleatoire</span></code> à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
@@ -1101,7 +1106,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 89 : 90
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 15 : 16
 </pre></div>
 </div>
 </div>
@@ -1166,7 +1171,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 8 : 21
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 67 : 29
 </pre></div>
 </div>
 </div>
@@ -1222,7 +1227,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 94 : 95
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 78 : 79
 </pre></div>
 </div>
 </div>
@@ -1249,7 +1254,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 36 : 37
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 35 : 36
 </pre></div>
 </div>
 </div>
@@ -1274,7 +1279,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 43.5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 60.9
 </pre></div>
 </div>
 </div>
