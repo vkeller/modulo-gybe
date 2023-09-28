@@ -743,6 +743,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-bombres-aleatoires">
+   Les bombres aléatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2-nombres-aleatoires">
    Exercice 2 : Nombres aléatoires
   </a>
@@ -878,6 +883,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-la-boucle-while">
    Exercice 1 : la boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-bombres-aleatoires">
+   Les bombres aléatoires
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1062,9 +1072,21 @@ title="Print to PDF"
 </ol>
 <p>(bien qu’il soit possible d’écrire ce programme avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, l’écrire avec une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
 </section>
+<section id="les-bombres-aleatoires">
+<h2>Les bombres aléatoires<a class="headerlink" href="#les-bombres-aleatoires" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>nombre aléatoire</strong> est un nombre quelconque tiré au hasard entre deux bornes.</p>
+<p>Il est difficile pour un ordinateur de produire des nombres aléatoires. Il existe toutefois une bibliothèque de fonctions dans Python qui nous permet de le faire. Cette bibliothèque s’appelle <code class="docutils literal notranslate"><span class="pre">random</span></code>. Elle contient notamment une fonction qui permet de tirer un <strong>nombre aléatoire entier</strong> entre deux bornes :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ce programme tirera à chaque exécution un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+</section>
 <section id="exercice-2-nombres-aleatoires">
 <h2>Exercice 2 : Nombres aléatoires<a class="headerlink" href="#exercice-2-nombres-aleatoires" title="Permalink to this headline">#</a></h2>
-<p>La bilbiothèque de fonction <code class="docutils literal notranslate"><span class="pre">random</span></code> permet, via la fonction <code class="docutils literal notranslate"><span class="pre">randint(borneInf,</span> <span class="pre">borneSup)</span></code> d’obtenir un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>.</p>
+<p>Voici un programme qui permet de tirer un nombre aléatoire et de l’afficher:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -1221,7 +1243,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 38 : 39
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 97 : 98
 </pre></div>
 </div>
 </div>
@@ -1286,7 +1308,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 41 : 80
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 62 : 90
 </pre></div>
 </div>
 </div>
@@ -1342,7 +1364,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 6 : 7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 52 : 53
 </pre></div>
 </div>
 </div>
@@ -1369,7 +1391,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 24 : 25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 40 : 41
 </pre></div>
 </div>
 </div>
@@ -1394,7 +1416,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 44.6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 38.4
 </pre></div>
 </div>
 </div>
