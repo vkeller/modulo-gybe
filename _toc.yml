@@ -76,7 +76,8 @@ parts:
     - file: 2M/prog/index
       sections:
       - file: 2M/prog/revisions/Revision1M
-      - file: 2M/prog/complexite/Complexite1
+      - file: 2M/prog/complexite/TP2-PROG-02
+      - file: 2M/prog/complexite/TP2-PROG-03
       - file: 2M/prog/syracuse/Syracuse
       - file: 2M/prog/dictionnaires/Dictionnaires2
       - file: 2M/prog/motdepasse/MotsDePasse
