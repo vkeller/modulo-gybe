@@ -930,8 +930,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 4, 8, 6, 10, 6, 2, 9, 4]
-[1, 1, 2, 4, 4, 6, 6, 8, 9, 10]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 9, 3, 2, 0, 0, 4, 7, 4, 4]
+[0, 0, 0, 2, 3, 4, 4, 4, 7, 9]
 </pre></div>
 </div>
 </div>
@@ -941,6 +941,29 @@ title="Print to PDF"
 <section id="heron-d-alexandrie-et-ses-racines">
 <h3>Heron d’Alexandrie et ses racines<a class="headerlink" href="#heron-d-alexandrie-et-ses-racines" title="Permalink to this headline">#</a></h3>
 <p><img alt="Heron" src="../../_images/HeronAlexandrie.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Racine d&#39;Heron d&#39;Alexandrie monitoré</span>
+<span class="c1"># La racine à rechercher est fixée : 2.0</span>
+<span class="c1"># Vincent Keller, 2023</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">limite</span> <span class="o">=</span> <span class="mi">1000000</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">,</span><span class="n">limite</span><span class="p">,</span><span class="mi">50000</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">lim</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">xn</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lim</span><span class="p">):</span>
+        <span class="n">xnp1</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">xn</span> <span class="o">+</span> <span class="n">a</span><span class="o">/</span><span class="n">xn</span><span class="p">)</span>
+        <span class="n">xn</span> <span class="o">=</span> <span class="n">xnp1</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="racine" src="../../_images/racine.png" /></p>
 </section>
 </section>
 </section>
