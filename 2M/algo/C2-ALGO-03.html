@@ -733,6 +733,23 @@ title="Print to PDF"
    </span>
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-quelques-algorithmes">
+   Exercice 2 : Quelques algorithmes.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crible">
+     2.2 : Crible
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-algorithme-de-tri">
+     Un algorithme de tri
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -770,6 +787,23 @@ title="Print to PDF"
    </span>
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-quelques-algorithmes">
+   Exercice 2 : Quelques algorithmes.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crible">
+     2.2 : Crible
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-algorithme-de-tri">
+     Un algorithme de tri
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -794,7 +828,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>On calcule toujours la complexité <strong>dans le pire des cas</strong></p></li>
 <li><p>la complexité d’un algorithme est <strong>indépendante</strong> d’une implémentation quelconque et d’une machine quelconque</p></li>
-<li><p>On utilise la notation <em>Big O</em> ( <span class="math notranslate nohighlight">\(f(n) = \mathcal O (g(n))\)</span>. On s’intéresse au comportement asymptotique de la complexité. Soit le <strong>terme dominant</strong></p>
+<li><p>On utilise la notation de Landau <em>Big O</em> ( <span class="math notranslate nohighlight">\(f(n) = \mathcal O (g(n))\)</span>. On s’intéresse au comportement asymptotique de la complexité. Soit le <strong>terme dominant</strong></p>
 <ul>
 <li><p>Exemple : si le temps varie comme <span class="math notranslate nohighlight">\(f(n) = n^2 + 6n -3 = 0\)</span> alors le comportement asymptotique de l’algorithme est <span class="math notranslate nohighlight">\(\mathcal O (n^3)\)</span></p></li>
 </ul>
@@ -825,6 +859,75 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(f(n) = n - 2n~log_2(n)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(n) = 193000 - n!\)</span></p></li>
 </ul>
+</section>
+<section id="exercice-2-quelques-algorithmes">
+<h2>Exercice 2 : Quelques algorithmes.<a class="headerlink" href="#exercice-2-quelques-algorithmes" title="Permalink to this headline">#</a></h2>
+<p>Pour chacun des codes ou algorigrammes suivants :</p>
+<ol class="simple">
+<li><p>Décrivez en français ce que fait l’algorithme</p></li>
+<li><p>En suivant la méthode décrite plus haut, trouvez la complexité algorithmique</p></li>
+</ol>
+<section id="crible">
+<h3>2.2 : Crible<a class="headerlink" href="#crible" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limite</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">tableau</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limite</span><span class="p">):</span>
+    <span class="n">tableau</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">entiers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">tableau</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">tableau</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">limite</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="n">limite</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+            <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limite</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">entiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entiers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="eratocomplexe" src="../../_images/erato.png" /></p>
+</section>
+<section id="un-algorithme-de-tri">
+<h3>Un algorithme de tri<a class="headerlink" href="#un-algorithme-de-tri" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">longueur</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
+    <span class="n">aleat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">longueur</span><span class="p">)</span>
+    <span class="n">nombres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+<span class="c1">## Bubble sort itself</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 8, 9, 2, 10, 6, 6, 5, 4, 6]
+[2, 4, 5, 5, 6, 6, 6, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="bubblecompl" src="../../_images/bubble.png" /></p>
+</section>
 </section>
 </section>
 
