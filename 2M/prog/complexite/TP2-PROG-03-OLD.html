@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP2-PROG-05 : Conjecture de Collatz" href="../syracuse/Syracuse.html" />
-    <link rel="prev" title="TP2-PROG-01 : Approche pratique de la complexité : Pile ou face" href="TP2-PROG-02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -404,7 +402,7 @@ const thebe_selector_output = ".output, .cell_output"
   2ème année
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    DO Informatique 2M
@@ -442,16 +440,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../index.html">
    Programmation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../revisions/Revision1M.html">
      R2-PROG-01 : Rappels programmation 1M
@@ -462,8 +460,8 @@ const thebe_selector_output = ".output, .cell_output"
      TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP2-PROG-03.html">
      TP2-PROG-02 : Approche pratique de la complexité : Recherche
     </a>
    </li>
@@ -633,7 +631,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/complexite/TP2-PROG-03.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/complexite/TP2-PROG-03-OLD.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -661,7 +659,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/2M/prog/complexite/TP2-PROG-03.ipynb"
+        <a href="../../../_sources/2M/prog/complexite/TP2-PROG-03-OLD.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -758,13 +756,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-creation-d-un-code-de-comparaison-refactoring">
-   Exercice 2: Création d’un code de comparaison (refactoring)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">
-   Exercice 3 : Moyenne caractéristique
+  <a class="reference internal nav-link" href="#exercice-2-moyenne-caracteristique">
+   Exercice 2 : Moyenne caractéristique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -839,13 +832,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-creation-d-un-code-de-comparaison-refactoring">
-   Exercice 2: Création d’un code de comparaison (refactoring)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">
-   Exercice 3 : Moyenne caractéristique
+  <a class="reference internal nav-link" href="#exercice-2-moyenne-caracteristique">
+   Exercice 2 : Moyenne caractéristique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -913,7 +901,9 @@ title="Print to PDF"
 <p><img alt="RechercheLineaire" src="../../../_images/RechercheLineaire.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche linéaire commentée</span>
+<span class="c1"># Vincent Keller, 2023</span>
+<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="c1"># Input borneInf</span>
 <span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
@@ -942,7 +932,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 82 : 83
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 47 : 48
 </pre></div>
 </div>
 </div>
@@ -995,7 +985,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 25 : 139
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 100 : 14
 </pre></div>
 </div>
 </div>
@@ -1064,7 +1054,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 57 : 78
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 41 : 26
 </pre></div>
 </div>
 </div>
@@ -1135,7 +1125,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 49 : 7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 47 : 7
 </pre></div>
 </div>
 </div>
@@ -1155,70 +1145,8 @@ title="Print to PDF"
 <li><p><code class="docutils literal notranslate"><span class="pre">recherche_dichotomique.py</span></code></p></li>
 </ul>
 </section>
-<section id="exercice-2-creation-d-un-code-de-comparaison-refactoring">
-<h2>Exercice 2: Création d’un code de comparaison (refactoring)<a class="headerlink" href="#exercice-2-creation-d-un-code-de-comparaison-refactoring" title="Permalink to this headline">#</a></h2>
-<p>Afin de comparer les différents algorithmes, nous avons besoin de les regrouper dans un seul code informatique. Pour cela, nous allons utiliser la méthode de la <strong>factorisation</strong> : chaque code implémentant un algorithme sera écrit comme une fonction.</p>
-<p>Ces 4 codes deviendront 4 <strong>fonctions</strong> dans un nouveau code source nommé <code class="docutils literal notranslate"><span class="pre">recherche.py</span></code>.</p>
-<ul class="simple">
-<li><p>Observez dans chaque code ce qui se répète.</p></li>
-<li><p>Copiez-collez dans une nouvelle fonction ce qui se répète.</p></li>
-<li><p>Faites cette opération pour les 4 codes de recherche</p></li>
-</ul>
-<p>Voici un exemple pour la recherche linéaire :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">==</span><span class="n">atrouver</span><span class="p">):</span>
-        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
-    <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 82 : 83
-</pre></div>
-</div>
-</div>
-</div>
-<p>devient, une fois factorisé en une fonction :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="k">def</span> <span class="nf">recherche_lineaire</span><span class="p">(</span><span class="n">_atrouver</span><span class="p">):</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">==</span><span class="n">_atrouver</span><span class="p">):</span>
-            <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
-        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">N</span>
-<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">recherche_lineaire</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 76 : 77
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercice-3-moyenne-caracteristique">
-<h2>Exercice 3 : Moyenne caractéristique<a class="headerlink" href="#exercice-3-moyenne-caracteristique" title="Permalink to this headline">#</a></h2>
+<section id="exercice-2-moyenne-caracteristique">
+<h2>Exercice 2 : Moyenne caractéristique<a class="headerlink" href="#exercice-2-moyenne-caracteristique" title="Permalink to this headline">#</a></h2>
 <p>Afin d’obtenir des grandeurs caractéristiques, il est utile d’obtenir différentes valeurs dont on prendra la moyenne.</p>
 <ul class="simple">
 <li><p>Pour chaque algorithme, écrivez une boucle qui calcule une moyenne de 10 nombres aléatoires à trouver</p></li>
@@ -1227,16 +1155,27 @@ title="Print to PDF"
 <p>Par exemple :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">recherche_lineaire</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span>
+    <span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">==</span><span class="n">atrouver</span><span class="p">):</span>
+            <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">N</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre moyen pour la recherche linéaire : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">somme</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 39.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 45.0
 </pre></div>
 </div>
 </div>
@@ -1245,19 +1184,23 @@ title="Print to PDF"
 <section id="exercice-4-complexite-d-un-algorithme">
 <h2>Exercice 4 : Complexité d’un algorithme<a class="headerlink" href="#exercice-4-complexite-d-un-algorithme" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Choisissez un algorithme de recherche parmi les 4 fonctions de votre code <code class="docutils literal notranslate"><span class="pre">recherche.py</span></code> avec la moyenne caractéristique</p></li>
+<li><p>Choisissez un algorithme de recherche parmi les 4 codes avec la moyenne caractéristique</p></li>
 <li><p>Modifiez votre code pour qu’il mesure des valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> entre <code class="docutils literal notranslate"><span class="pre">borneInf</span> <span class="pre">=</span> <span class="pre">0</span></code> et une borne supérieure variable <code class="docutils literal notranslate"><span class="pre">b</span></code></p>
 <ul>
 <li><p>de <code class="docutils literal notranslate"><span class="pre">100</span></code> à <code class="docutils literal notranslate"><span class="pre">10000</span></code></p></li>
 </ul>
 </li>
-<li><p>Dans un classeur Excel, reportez les valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> <strong>en fonctio</strong> de <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p>Dans un classeur Excel, reportez les valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> <strong>en fonction</strong> de <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
 <li><p>Décrivez la complexité de l’algorithme</p></li>
 </ul>
+<p><strong>Attention</strong> : pour pouvoir copier-coller les valeurs dans Excel, vous devriez afficher les valeurs de <code class="docutils literal notranslate"><span class="pre">Ǹ</span></code> en fonction de <code class="docutils literal notranslate"><span class="pre">b</span></code>, utilisez la fonction suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="exercice-5-comparaison-des-algorithmes">
 <h2>Exercice 5 : Comparaison des algorithmes<a class="headerlink" href="#exercice-5-comparaison-des-algorithmes" title="Permalink to this headline">#</a></h2>
-<p>Le code <code class="docutils literal notranslate"><span class="pre">recherche.py</span></code> implémente les 4 algorithmes de recherche. Il est maintenant possible de les comparer avec les mêmes bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code>, <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> et le nombre aléatoire à trouver <code class="docutils literal notranslate"><span class="pre">atrouver</span></code></p>
+<p>Modifiez les 4 implémentations des algorithmes de recherche. Il est maintenant possible de les comparer avec les mêmes bornes <code class="docutils literal notranslate"><span class="pre">borneInf</span></code>, <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> et le nombre aléatoire à trouver <code class="docutils literal notranslate"><span class="pre">atrouver</span></code></p>
 <ul class="simple">
 <li><p>Modifiez votre code afin de mesurer les valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> entre <code class="docutils literal notranslate"><span class="pre">borneInf</span> <span class="pre">=</span> <span class="pre">0</span></code> et différentes valeurs de <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> :</p>
 <ul>
@@ -1273,10 +1216,6 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-<p><strong>ATTENTION</strong> pour pouvoir copier-coller les valeurs retournées depuis Thonny, vous devez impérativement placer une tabulation entre chaque valeur :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">borneSup</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">N_lin</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">N_ala</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">N_als</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">N_dic</span><span class="p">)</span>
-</pre></div>
-</div>
 </section>
 <section id="exercice-6-comportement-asymptotique-de-la-complexite-des-4-algorithmes">
 <h2>Exercice 6 : Comportement asymptotique de la complexité des 4 algorithmes<a class="headerlink" href="#exercice-6-comportement-asymptotique-de-la-complexite-des-4-algorithmes" title="Permalink to this headline">#</a></h2>
@@ -1317,20 +1256,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="TP2-PROG-02.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP2-PROG-01 : Approche pratique de la complexité : Pile ou face</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../syracuse/Syracuse.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP2-PROG-05 : Conjecture de Collatz</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
