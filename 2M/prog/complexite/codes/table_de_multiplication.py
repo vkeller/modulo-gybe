@@ -2,10 +2,14 @@
 # Vincent Keller, 2023
 import time
 
-borneSup = 10
+taille = 10
 
-for i in range(borneSup):
-    for j in range(borneSup):
+# Nombre d'opérations ou d'instructions
+N = 0
+
+for i in range(taille):
+    for j in range(taille):
         multiplication = i * j
 
 print(multiplication)
+
