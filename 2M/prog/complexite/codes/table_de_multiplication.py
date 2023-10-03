@@ -1,5 +1,6 @@
 # Calcul de la table de la multiplication des entiers
 # Vincent Keller, 2023
+import time
 
 borneSup = 10
 
