@@ -64,20 +64,20 @@ def recherche_dichotomique(_atrouver,_borneInf,_borneSup):
 
     
 borneInf = 0
-borneSup = 100000
-atrouver = random.randint(borneInf,borneSup)
+borneSup = 1000
 
-print("\t Recherche linéaire       : "+str(recherche_lineaire(atrouver)))
-print("\t Recherche aleatoire avec : "+str(recherche_aleatoire_avec(atrouver,borneInf,borneSup)))
-print("\t Recherche aleatoire sans : "+str(recherche_aleatoire_sans(atrouver,borneInf,borneSup)))
-print("\t Recherche dichotomique   : "+str(recherche_dichotomique(atrouver,borneInf,borneSup)))
+#print("\t Recherche linéaire       : "+str(recherche_lineaire(atrouver)))
+#print("\t Recherche aleatoire avec : "+str(recherche_aleatoire_avec(atrouver,borneInf,borneSup)))
+#print("\t Recherche aleatoire sans : "+str(recherche_aleatoire_sans(atrouver,borneInf,borneSup)))
+#print("\t Recherche dichotomique   : "+str(recherche_dichotomique(atrouver,borneInf,borneSup)))
 
 
-#for i in range(1,100,10):
-#    borneInf = 100
-#    borneSup = i
-#    print(str(i)+"Recherche de "+str(atrouver))
-#    print("\t Recherche linéaire       : "+str(recherche_lineaire(atrouver)))
-#    print("\t Recherche aleatoire avec : "+str(recherche_aleatoire_avec(atrouver,borneInf,borneSup)))
-#    print("\t Recherche aleatoire sans : "+str(recherche_aleatoire_sans(atrouver,borneInf,borneSup)))
-#    print("\t Recherche dichotomique   : "+str(recherche_dichotomique(atrouver,borneInf,borneSup)))
+for i in range(1,10,1):
+    borneInf = 1
+    borneSup = i*10
+    atrouver = random.randint(borneInf,borneSup)
+    print(str(i)+" Recherche de "+str(atrouver)+" entre ",borneInf," et ",borneSup)
+    print("\t Recherche linéaire       : "+str(recherche_lineaire(atrouver)))
+    print("\t Recherche aleatoire avec : "+str(recherche_aleatoire_avec(atrouver,borneInf,borneSup)))
+    print("\t Recherche aleatoire sans : "+str(recherche_aleatoire_sans(atrouver,borneInf,borneSup)))
+    print("\t Recherche dichotomique   : "+str(recherche_dichotomique(atrouver,borneInf,borneSup)))
