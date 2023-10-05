@@ -763,13 +763,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-moyenne-caracteristique">
-   Exercice 2 : Moyenne caractéristique
+  <a class="reference internal nav-link" href="#exercice-2-complexite-d-un-algorithme">
+   Exercice 2 : Complexité d’un algorithme
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-complexite-d-un-algorithme">
-   Exercice 3 : Complexité d’un algorithme
+  <a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">
+   Exercice 3 : Moyenne caractéristique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -839,13 +839,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-moyenne-caracteristique">
-   Exercice 2 : Moyenne caractéristique
+  <a class="reference internal nav-link" href="#exercice-2-complexite-d-un-algorithme">
+   Exercice 2 : Complexité d’un algorithme
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-complexite-d-un-algorithme">
-   Exercice 3 : Complexité d’un algorithme
+  <a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">
+   Exercice 3 : Moyenne caractéristique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -939,7 +939,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 27 : 28
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 8 : 9
 </pre></div>
 </div>
 </div>
@@ -992,7 +992,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 29 : 15
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 68 : 216
 </pre></div>
 </div>
 </div>
@@ -1061,7 +1061,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 56 : 83
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 55 : 25
 </pre></div>
 </div>
 </div>
@@ -1132,16 +1132,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 23&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="n">bmin</span> <span class="o">=</span> <span class="n">moitie</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="c1"># On incrémente le nombre de comparaisons</span>
-<span class="ne">---&gt; </span><span class="mi">38</span>     <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 17 : 7
 </pre></div>
 </div>
 </div>
@@ -1161,8 +1152,27 @@ title="Print to PDF"
 <li><p><code class="docutils literal notranslate"><span class="pre">recherche_dichotomique.py</span></code></p></li>
 </ul>
 </section>
-<section id="exercice-2-moyenne-caracteristique">
-<h2>Exercice 2 : Moyenne caractéristique<a class="headerlink" href="#exercice-2-moyenne-caracteristique" title="Permalink to this headline">#</a></h2>
+<section id="exercice-2-complexite-d-un-algorithme">
+<h2>Exercice 2 : Complexité d’un algorithme<a class="headerlink" href="#exercice-2-complexite-d-un-algorithme" title="Permalink to this headline">#</a></h2>
+<p><strong>Rappel :</strong> la complexité d’un algorithme se déduit de l’équation qui décrit le <strong>nombre d’opérations (ou d’instructions</strong> <code class="docutils literal notranslate"><span class="pre">N</span></code> (durnat ce TP, <code class="docutils literal notranslate"><span class="pre">N</span></code> représente le nombre de comparaisons) en fonction de la <strong>taille du problème</strong> <code class="docutils literal notranslate"><span class="pre">b</span></code>. Dans cet exercice nous allons trouver la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> de l’équation <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">f(b)</span></code></p>
+<ul class="simple">
+<li><p>Choisissez un algorithme de recherche parmi les 4 codes</p></li>
+<li><p>observez la variable qui fait varier la <strong>taille du problème</strong>. Cela sera la variable <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p>Modifiez votre code pour qu’il mesure des valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> entre <code class="docutils literal notranslate"><span class="pre">borneInf</span> <span class="pre">=</span> <span class="pre">0</span></code> et une borne supérieure variable <code class="docutils literal notranslate"><span class="pre">b</span></code></p>
+<ul>
+<li><p>de <code class="docutils literal notranslate"><span class="pre">100</span></code> à <code class="docutils literal notranslate"><span class="pre">10000</span></code></p></li>
+</ul>
+</li>
+<li><p>Dans un classeur Excel, reportez les valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> <strong>en fonction</strong> de <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p>Décrivez la complexité de l’algorithme</p></li>
+</ul>
+<p><strong>Attention</strong> : pour pouvoir copier-coller les valeurs dans Excel, vous devriez afficher les valeurs de <code class="docutils literal notranslate"><span class="pre">Ǹ</span></code> en fonction de <code class="docutils literal notranslate"><span class="pre">b</span></code>, utilisez la fonction suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exercice-3-moyenne-caracteristique">
+<h2>Exercice 3 : Moyenne caractéristique<a class="headerlink" href="#exercice-3-moyenne-caracteristique" title="Permalink to this headline">#</a></h2>
 <p>Afin d’obtenir des grandeurs caractéristiques, il est utile d’obtenir différentes valeurs dont on prendra la moyenne.</p>
 <ul class="simple">
 <li><p>Pour chaque algorithme, écrivez une boucle qui calcule une moyenne de 10 nombres aléatoires à trouver</p></li>
@@ -1191,27 +1201,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 52.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 25.3
 </pre></div>
 </div>
 </div>
-</div>
-</section>
-<section id="exercice-3-complexite-d-un-algorithme">
-<h2>Exercice 3 : Complexité d’un algorithme<a class="headerlink" href="#exercice-3-complexite-d-un-algorithme" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Choisissez un algorithme de recherche parmi les 4 codes avec la moyenne caractéristique</p></li>
-<li><p>Modifiez votre code pour qu’il mesure des valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> entre <code class="docutils literal notranslate"><span class="pre">borneInf</span> <span class="pre">=</span> <span class="pre">0</span></code> et une borne supérieure variable <code class="docutils literal notranslate"><span class="pre">b</span></code></p>
-<ul>
-<li><p>de <code class="docutils literal notranslate"><span class="pre">100</span></code> à <code class="docutils literal notranslate"><span class="pre">10000</span></code></p></li>
-</ul>
-</li>
-<li><p>Dans un classeur Excel, reportez les valeurs de <code class="docutils literal notranslate"><span class="pre">N</span></code> <strong>en fonction</strong> de <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
-<li><p>Décrivez la complexité de l’algorithme</p></li>
-</ul>
-<p><strong>Attention</strong> : pour pouvoir copier-coller les valeurs dans Excel, vous devriez afficher les valeurs de <code class="docutils literal notranslate"><span class="pre">Ǹ</span></code> en fonction de <code class="docutils literal notranslate"><span class="pre">b</span></code>, utilisez la fonction suivante :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
 </div>
 </section>
 <section id="exercice-4-comparaison-des-algorithmes">
