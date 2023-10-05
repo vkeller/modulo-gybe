@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP2-PROG-03 : Algorithme de Luhn &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-PROG-03 : Algorithme de Luhn (carte de crédit) &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="TP2-PROG-05 : Conjecture de Collatz" href="../syracuse/Syracuse.html" />
@@ -467,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP2-PROG-03 : Algorithme de Luhn
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
     </a>
    </li>
    <li class="toctree-l2">
@@ -738,6 +740,21 @@ title="Print to PDF"
    Numéro d’une carte de crédit
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calcul-du-code-de-controle">
+   Calcul du code de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -747,7 +764,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP2-PROG-03 : Algorithme de Luhn</h1>
+                <h1>TP2-PROG-03 : Algorithme de Luhn (carte de crédit)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -772,6 +789,21 @@ title="Print to PDF"
    Numéro d’une carte de crédit
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calcul-du-code-de-controle">
+   Calcul du code de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -783,22 +815,80 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="cartebancaire" src="../../../_images/carte.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-prog-03-algorithme-de-luhn">
-<h1>TP2-PROG-03 : Algorithme de Luhn<a class="headerlink" href="#tp2-prog-03-algorithme-de-luhn" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-prog-03-algorithme-de-luhn-carte-de-credit">
+<h1>TP2-PROG-03 : Algorithme de Luhn (carte de crédit)<a class="headerlink" href="#tp2-prog-03-algorithme-de-luhn-carte-de-credit" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>comprendre le système de codage des numéros de carte de crédit</p></li>
-<li><p>mettre en oeuvre un système de somme de contrôle (<em>checksum</em>) $ l’aide de l’algorithme de Luhn</p></li>
+<li><p>comprendre ce qu’est une somme de contrôle (<em>checksum</em>)</p></li>
+<li><p>connaître le système de codage des numéros de carte de crédit</p></li>
+<li><p>mettre en oeuvre un système de somme de contrôle à l’aide de l’algorithme de Luhn</p></li>
 <li><p>implémenter l’algorithme de Luhn en Python</p></li>
 <li><p>vérifier la validité de sa carte de crédit</p></li>
 </ul>
 </section>
 <section id="somme-de-controle-checksum">
 <h2>Somme de contrôle (checksum)<a class="headerlink" href="#somme-de-controle-checksum" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’un émetteur envoie un message à un récepteur, il se peut que la voie de communication ne soit pas entièrement fiable. Cela signifie que le message reçu a pu être <strong>altéré</strong> et qu’il n’est plus exactement identique au message original envoyé.</p>
+<p>La <strong>somme de contrôle</strong> (<em>checksum</em> en anglais) permet de <strong>détecter</strong> une erreur mais pas de la corriger.</p>
+<p><img alt="check" src="../../../_images/checksum.png" />
+(Source : Wikipedia)</p>
+<p>Dans l’exemple ci-dessus, on converti les caractères en hexadécimal en suivant la table ASCII. la somme des éléments est ensuite calculée, c’est ce que l’on appelle le <strong>hachage</strong> et se réduit à une valeur de contrôle : la <strong>somme de contrôle</strong>. Lorsqu’une lettre change (par exemple le <code class="docutils literal notranslate"><span class="pre">o</span></code> final devient <code class="docutils literal notranslate"><span class="pre">a</span></code>), la somme de contrôle change : <strong>une erreur est détectée</strong>.</p>
+<p>On remarque qu’il n’est pas possible avec la somme de contrôle de réparer l’erreur : le récepteur demande à l’émetteur de lui renvoyer le message. Il existe d’autres algorithmes de contrôle qui permettent de détecter <strong>ET</strong> de corriger l’erreur : ce sont les algorithmes dit de <strong>code cycliques</strong>. Ces algorithmes dépassent le cadre de ce cours.</p>
 </section>
 <section id="numero-d-une-carte-de-credit">
 <h2>Numéro d’une carte de crédit<a class="headerlink" href="#numero-d-une-carte-de-credit" title="Permalink to this headline">#</a></h2>
+<p>Toute carte de crédit est formée de <strong>16 chiffres</strong> compris entre <span class="math notranslate nohighlight">\(1_{10}\)</span> et <span class="math notranslate nohighlight">\(9_{10}\)</span> :</p>
+<p><img alt="CC" src="../../../_images/cartecredit.jpg" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Chiffre</strong></p></th>
+<th class="head"><p><strong>Signification</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>MII (<em>Major Industry Identifier</em>) : <strong>3</strong> : American Express, <strong>4</strong> : Visa, <strong>5</strong> : Mastercard</p></td>
+</tr>
+<tr class="row-odd"><td><p>de 1 à 6</p></td>
+<td><p>IIN (<em>Issuer Identification Number</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p>de 7 à 15</p></td>
+<td><p>Numéro de compte</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p><strong>CODE DE CONTRÔLE</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>On note que les chiffres de 7 à 15 qui représentent le numéro de compte permettent de coder <span class="math notranslate nohighlight">\(10^9\)</span> comptes différents, soit <strong>un milliard</strong>.</p>
+<p>Le <strong>CODE DE CONTRÒLE</strong> est le sujet de ce TP</p>
+</section>
+<section id="calcul-du-code-de-controle">
+<h2>Calcul du code de contrôle<a class="headerlink" href="#calcul-du-code-de-controle" title="Permalink to this headline">#</a></h2>
+<p>L’algorithme pour calculer le dernier chiffre de la carte de crédit se déroule en trois étapes :</p>
+<ol class="simple">
+<li><p>On multiplie par deux un chiffre sur deux en commençant par l’avant-dernier (le 15ème) et en se déplaçant de droite à gauche. Si le double du chiffre dépasse 9 (par exemple <span class="math notranslate nohighlight">\(2 \times 8 = 16\)</span>, alors on soustrait 9 au double</p></li>
+<li><p>On additionne l’ensemble des 15 chiffres trouvés (ceux qui ont été doublés, et ceux qui n’ont pas été doublés)</p></li>
+<li><p>Si le résultat modulo 10 est égal à zéro, alors le numéro de carte de crédit est valide.</p></li>
+</ol>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ecrire un programme qui implémente l’algorithme de Luhn et vérifie la validité d’un numéro de carte de crédit donné</p></li>
+<li><p>Testez votre programme avec les numéros de carte de crédit suivants :</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(5635~4002~9561~3411\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4396~8374~1204~2755\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4624~7482~3324~9080\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Sur la base de ce programme, écrire un nouveau programme qui génère un numéro de carte de crédit valide quelconque</p>
 </section>
 </section>
 
