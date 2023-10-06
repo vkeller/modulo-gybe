@@ -863,7 +863,8 @@ title="Print to PDF"
 <section id="analyse-de-la-taille">
 <h2>Analyse de la taille<a class="headerlink" href="#analyse-de-la-taille" title="Permalink to this headline">#</a></h2>
 <p>Une fois l’entrée ou les entrées de l’algorithme identifiées, il s’agit d’analyser comment celles-ci font varier le nombre d’opérations ou d’instructions <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p>
-<p>Formellement, on ajoute une boucle externe dont l’itérateur (la variable itérateur) de la boucle devient la variable d’entrée. Voici comment on le représente avec un algorigramme :</p>
+<p>Formellement, on ajoute une boucle externe dont l’itérateur (la variable itérateur) de la boucle devient la variable d’entrée. Cette boucle permet de <strong>monitorer</strong> le code : <strong>mesurer le nombre d’opérations <code class="docutils literal notranslate"><span class="pre">N</span></code> en fonction de la taille de l’entrée</strong></p>
+<p>Voici comment on le représente avec un algorigramme :</p>
 <p><img alt="monitoring" src="../../_images/monitoring.png" /></p>
 <p>Cela permet, lorsqu’on analyse <code class="docutils literal notranslate"><span class="pre">N</span></code> en fonction de la <code class="docutils literal notranslate"><span class="pre">taille</span></code> de déduire quelle est la complexité. Cela se fait avec un tableau qui liste la taille de l’entrée et le nombre d’opérations ou d’instructions :</p>
 <table class="colwidths-auto table">
@@ -945,8 +946,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 7, 7, 4, 0, 3, 3, 9, 9, 4]
-[0, 2, 3, 3, 4, 4, 7, 7, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 8, 2, 4, 10, 7, 0, 1, 9, 1]
+[0, 0, 1, 1, 2, 4, 7, 8, 9, 10]
 </pre></div>
 </div>
 </div>
@@ -990,7 +991,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 25 : 22
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 51 : 36
 </pre></div>
 </div>
 </div>
