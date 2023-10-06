@@ -733,6 +733,41 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taille-d-entree-d-un-algorithme">
+   Taille d’entrée d’un algorithme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-de-la-taille">
+   Analyse de la taille
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -757,6 +792,41 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taille-d-entree-d-un-algorithme">
+   Taille d’entrée d’un algorithme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-de-la-taille">
+   Analyse de la taille
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -774,7 +844,197 @@ title="Print to PDF"
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Identifier la ou les variables qui représentent la variation de taille d’entrée de l’algorithme sur quelques algorithmes classiques</p></li>
+<li><p>déduire la complexité temporelle de l’algorithme</p></li>
 </ul>
+</section>
+<section id="taille-d-entree-d-un-algorithme">
+<h2>Taille d’entrée d’un algorithme<a class="headerlink" href="#taille-d-entree-d-un-algorithme" title="Permalink to this headline">#</a></h2>
+<p>Parmi <a class="reference internal" href="../../1M/algo/cours/Cours1.html"><span class="doc std std-doc">les différentes caractéristiques d’un algorithme</span></a>, on rappelle qu’un algorithme a:</p>
+<ol class="simple">
+<li><p>un algorithme a des entrées, zéro ou plus, quantités qui lui sont données avant ou pendant son exécution</p></li>
+</ol>
+<p>S’il y a <strong>une entrée ou plus</strong>, cela signifie que la taille peut être connue avant l’exécution de l’algorithme.</p>
+<p>Quelques exemples d’entrées :</p>
+<ul class="simple">
+<li><p>une liste de taille <code class="docutils literal notranslate"><span class="pre">len(maListe)</span></code> : par exemple dans le cas d’un algorithme de recherche ou de tri</p></li>
+<li><p>un périmètre (<code class="docutils literal notranslate"><span class="pre">range</span></code>) entre une borne inférieure <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et une borne supérieure <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> : par exemple dans le cas d’un algorithme du type Fibonacci où l’on calcule explicitement une suite de nombres en fonction d’un paramètre de boucle</p></li>
+</ul>
+</section>
+<section id="analyse-de-la-taille">
+<h2>Analyse de la taille<a class="headerlink" href="#analyse-de-la-taille" title="Permalink to this headline">#</a></h2>
+<p>Une fois l’entrée ou les entrées de l’algorithme identifiées, il s’agit d’analyser comment celles-ci font varier le nombre d’opérations ou d’instructions <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p>
+<p>Formellement, on ajoute une boucle externe dont l’itérateur (la variable itérateur) de la boucle devient la variable d’entrée. Voici comment on le représente avec un algorigramme :</p>
+<p><img alt="monitoring" src="../../_images/monitoring.png" /></p>
+<p>Cela permet, lorsqu’on analyse <code class="docutils literal notranslate"><span class="pre">N</span></code> en fonction de la <code class="docutils literal notranslate"><span class="pre">taille</span></code> de déduire quelle est la complexité. Cela se fait avec un tableau qui liste la taille de l’entrée et le nombre d’opérations ou d’instructions :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">taille</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">N</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>256</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>2500</p></td>
+<td><p>1024</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>2048</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>4096</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>8192</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>quelle taille de l’entrée avant exécution ?</p></li>
+<li><p>peut-elle varier ?</p></li>
+<li><p>quelle est la complexité de l’algorithme ?</p></li>
+</ul>
+<p><img alt="age" src="../../_images/algo-exemple.png" /></p>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>quelle taille de l’entrée avant exécution ?</p></li>
+<li><p>peut-elle varier ?</p></li>
+<li><p>quelle est la complexité de l’algorithme ?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Insertion sort example</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">longueur</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1">## Remplissage de la liste</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
+    <span class="n">aleat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">longueur</span><span class="p">)</span>
+    <span class="n">nombres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+<span class="c1">## Insertion sort itself</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">longueur</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+        <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 7, 7, 4, 0, 3, 3, 9, 9, 4]
+[0, 2, 3, 3, 4, 4, 7, 7, 9, 9]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>quelle taille de l’entrée avant exécution ?</p></li>
+<li><p>peut-elle varier ?</p></li>
+<li><p>quelle est la complexité de l’algorithme ?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche aléatoire avec remise dans une liste triée commentée </span>
+<span class="c1"># Vincent Keller, 2023</span>
+<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="c1"># Input borneInf</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Input borneSup</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
+<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># trouve est une variable de type booléen.</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># On tire un nombre que l&#39;on assigne à la variable aleatoire</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="c1"># Si le nombre à trouver est égal au nombre aléatoire tiré, alors on sort de la boucle</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># On incrémente le nombre de comparaisons</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 25 : 22
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>quelle taille de l’entrée avant exécution ?</p></li>
+<li><p>peut-elle varier ?</p></li>
+<li><p>quelle est la complexité de l’algorithme ?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">2023</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
+        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023 n&#39;est pas une année bisextile
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>quelle taille de l’entrée avant exécution ?</p></li>
+<li><p>peut-elle varier ?</p></li>
+<li><p>quelle est la complexité de l’algorithme ?</p></li>
+</ul>
+<p><img alt="chiffrement" src="../../_images/chiffrement3.jpg" /></p>
 </section>
 </section>
 
