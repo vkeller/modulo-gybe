@@ -440,6 +440,11 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-03 : Complexité des algorithmes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2-ALGO-04.html">
+     C2-ALGO-04 : Taille du problème
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -458,8 +463,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prog/complexite/Complexite1.html">
-     TP2-PROG-01 : Approche pratique de la complexité
+    <a class="reference internal" href="../prog/complexite/TP2-PROG-01.html">
+     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prog/complexite/TP2-PROG-02.html">
+     TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
     </a>
    </li>
    <li class="toctree-l2">
@@ -779,6 +794,11 @@ title="Print to PDF"
    Exercices
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -860,6 +880,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercices">
    Exercices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
   </a>
  </li>
 </ul>
@@ -1030,7 +1055,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-   <span class="n">a</span> <span class="o">=</span> <span class="n">n</span>
+   <span class="n">a</span> <span class="o">=</span> <span class="n">i</span>
    <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
       <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="mi">2</span>
    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="mi">1</span>
@@ -1040,6 +1065,31 @@ title="Print to PDF"
 </div>
 <p>Voici un algorigramme représentant un algorithme de recherche:</p>
 <p><img alt="linear" src="../../_images/RechercheLineaire.png" /></p>
+</section>
+<section id="correction-des-exercices">
+<h2>Correction des exercices<a class="headerlink" href="#correction-des-exercices" title="Permalink to this headline">#</a></h2>
+<p>Le programme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sommeEntiers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">somme</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">sommeEntiers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>calcule la somme de tous les entiers entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span></code>. Il s’agit d’une boucle simple. La classe de complexité de cet algorithme est <span class="math notranslate nohighlight">\(\mathcal O (N)\)</span></p>
+<p>Le programme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+   <span class="n">a</span> <span class="o">=</span> <span class="n">i</span>
+   <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+      <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="mi">2</span>
+   <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>se compose de deux boucles imbriquées : une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> sur l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code> et une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> sur l’itérateur <code class="docutils literal notranslate"><span class="pre">a</span></code>. La classe de complexité de cet algorithme est <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p>
+<p>L’algorigramme de recherche présente une <strong>recherche linéaire dans une liste triée</strong>. Il n’y a qu’une boucle (sur les éléments triés). La classe de complexité de cet algorithme est donc <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p>
 </section>
 </section>
 

@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Programmation" href="../prog/index.html" />
+    <link rel="next" title="C2-ALGO-04 : Taille du problème" href="C2-ALGO-04.html" />
     <link rel="prev" title="C2-ALGO-02 : Complexité des algorithmes" href="C2-ALGO-02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -440,6 +440,11 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-03 : Complexité des algorithmes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2-ALGO-04.html">
+     C2-ALGO-04 : Taille du problème
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -458,13 +463,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prog/complexite/TP2-PROG-02.html">
+    <a class="reference internal" href="../prog/complexite/TP2-PROG-01.html">
      TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prog/complexite/TP2-PROG-03.html">
+    <a class="reference internal" href="../prog/complexite/TP2-PROG-02.html">
      TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
     </a>
    </li>
    <li class="toctree-l2">
@@ -745,18 +755,76 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#crible">
-     2.2 : Crible
+     2.1 : Crible
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#un-algorithme-de-tri">
-     Un algorithme de tri
+     2.2 Un algorithme de tri
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#heron-d-alexandrie-et-ses-racines">
-     Heron d’Alexandrie et ses racines
+     2.3 Heron d’Alexandrie et ses racines
     </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-crible">
+     2.1 : le crible
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#description-de-l-algorithme-en-francais">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classe-de-complexite-algorithmique">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-algorithme-de-tri">
+     2.2 : L’algorithme de tri
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2.3 : Héron d’Alexandrie et ses racines
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -804,18 +872,76 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#crible">
-     2.2 : Crible
+     2.1 : Crible
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#un-algorithme-de-tri">
-     Un algorithme de tri
+     2.2 Un algorithme de tri
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#heron-d-alexandrie-et-ses-racines">
-     Heron d’Alexandrie et ses racines
+     2.3 Heron d’Alexandrie et ses racines
     </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-crible">
+     2.1 : le crible
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#description-de-l-algorithme-en-francais">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classe-de-complexite-algorithmique">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-algorithme-de-tri">
+     2.2 : L’algorithme de tri
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2.3 : Héron d’Alexandrie et ses racines
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Description de l’algorithme en français
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Classe de complexité algorithmique
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -880,17 +1006,17 @@ title="Print to PDF"
 <p>Pour chacun des codes ou algorigrammes suivants :</p>
 <ol class="simple">
 <li><p>Décrivez en français ce que fait l’algorithme</p></li>
-<li><p>En suivant la méthode décrite plus haut, trouvez la complexité algorithmique</p></li>
+<li><p>En suivant la méthode décrite plus haut, trouvez la classe de complexité algorithmique</p></li>
 </ol>
 <section id="crible">
-<h3>2.2 : Crible<a class="headerlink" href="#crible" title="Permalink to this headline">#</a></h3>
+<h3>2.1 : Crible<a class="headerlink" href="#crible" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limite</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">tableau</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limite</span><span class="p">):</span>
     <span class="n">tableau</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">entiers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">premiers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">tableau</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">tableau</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">limite</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
@@ -899,8 +1025,8 @@ title="Print to PDF"
             <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limite</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">entiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">entiers</span><span class="p">)</span>
+        <span class="n">premiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">premiers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -913,7 +1039,7 @@ title="Print to PDF"
 <p><img alt="eratocomplexe" src="../../_images/erato.png" /></p>
 </section>
 <section id="un-algorithme-de-tri">
-<h3>Un algorithme de tri<a class="headerlink" href="#un-algorithme-de-tri" title="Permalink to this headline">#</a></h3>
+<h3>2.2 Un algorithme de tri<a class="headerlink" href="#un-algorithme-de-tri" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -935,8 +1061,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9, 1, 4, 0, 4, 8, 2, 0, 3, 6]
-[0, 0, 1, 2, 3, 4, 4, 6, 8, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 10, 0, 8, 10, 2, 10, 9, 2, 4]
+[0, 2, 2, 4, 8, 9, 10, 10, 10, 10]
 </pre></div>
 </div>
 </div>
@@ -944,7 +1070,7 @@ title="Print to PDF"
 <p><img alt="bubblecompl" src="../../_images/bubble.png" /></p>
 </section>
 <section id="heron-d-alexandrie-et-ses-racines">
-<h3>Heron d’Alexandrie et ses racines<a class="headerlink" href="#heron-d-alexandrie-et-ses-racines" title="Permalink to this headline">#</a></h3>
+<h3>2.3 Heron d’Alexandrie et ses racines<a class="headerlink" href="#heron-d-alexandrie-et-ses-racines" title="Permalink to this headline">#</a></h3>
 <p><img alt="Heron" src="../../_images/HeronAlexandrie.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -969,6 +1095,47 @@ title="Print to PDF"
 </div>
 </div>
 <p><img alt="racine" src="../../_images/racine.png" /></p>
+</section>
+</section>
+<section id="correction-des-exercices">
+<h2>Correction des exercices<a class="headerlink" href="#correction-des-exercices" title="Permalink to this headline">#</a></h2>
+<section id="le-crible">
+<h3>2.1 : le crible<a class="headerlink" href="#le-crible" title="Permalink to this headline">#</a></h3>
+<section id="description-de-l-algorithme-en-francais">
+<h4>Description de l’algorithme en français<a class="headerlink" href="#description-de-l-algorithme-en-francais" title="Permalink to this headline">#</a></h4>
+<p>Cet algorithme calcule les <strong>nombres premiers</strong> entre <code class="docutils literal notranslate"><span class="pre">1</span></code> et <code class="docutils literal notranslate"><span class="pre">limite</span></code> en supprimant tous les multiples d’un nombre premier trouvé. Ce nombre premier trouvé est l’index d’un tableau de booléens. Finalement, tous les nombres premiers sont placés dans une liste nommée <code class="docutils literal notranslate"><span class="pre">premiers</span></code>. Cet algorithme est appelé <strong>crible d’Eratosthène</strong>.</p>
+</section>
+<section id="classe-de-complexite-algorithmique">
+<h4>Classe de complexité algorithmique<a class="headerlink" href="#classe-de-complexite-algorithmique" title="Permalink to this headline">#</a></h4>
+<p>On observe que la grandeur <strong>qui varie</strong> est la limite supérieure dénommée <code class="docutils literal notranslate"><span class="pre">limite</span></code>. On observe aussi que l’on a effectivement deux boucles imbriquées ce qui exmplique un comportement asymptotique quadratique <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> . La boucle interne (celle sur l’itérateur <code class="docutils literal notranslate"><span class="pre">j</span></code>) est de moins en moins significative à mesure que la boucle externe (celle sur l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code>).</p>
+<p>Pour aller plus loin (facultatif) : <a class="reference external" href="https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_des_nombres_premiers">nombre de nombres premiers entre 0 et <code class="docutils literal notranslate"><span class="pre">limite</span></code></a></p>
+</section>
+</section>
+<section id="l-algorithme-de-tri">
+<h3>2.2 : L’algorithme de tri<a class="headerlink" href="#l-algorithme-de-tri" title="Permalink to this headline">#</a></h3>
+<section id="id1">
+<h4>Description de l’algorithme en français<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<p>Cet algorithme trie les éléments d’une liste de nombres aléatoires en utilisant le <strong>tri à bulles</strong> : lorsqu’un nombre se retrouve être plus grand que celui qui le devance, alors on l’inverse et on passe au suivant.</p>
+</section>
+<section id="id2">
+<h4>Classe de complexité algorithmique<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<p>On observe que la grandeur <strong>qui varie</strong> est la longueur de la liste dénommée <code class="docutils literal notranslate"><span class="pre">longueur</span></code>. On observe que l’on a deux boucles imbriquées : l’une sur l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code> et l’autre sur l’itérateur <code class="docutils literal notranslate"><span class="pre">j</span></code> qui encadrent un test conditionnel (si il faut inverser deux nombres ou pas). Dans le pire des cas (c’est-à-dire que la liste est triée “à l’envers”), alors la classe de complexité algorithmique est quadratique : <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p>
+</section>
+</section>
+<section id="id3">
+<h3>2.3 : Héron d’Alexandrie et ses racines<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id4">
+<h4>Description de l’algorithme en français<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>Cet algorithme calcule la racine d’un nombre <code class="docutils literal notranslate"><span class="pre">n</span></code>. Pour le faire, il demande une <code class="docutils literal notranslate"><span class="pre">limite</span></code> (borne supérieure d’une boucle) et va appliquer une formule mathématique décrite par l’algorigramme :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">xnp1</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">xn</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="n">xn</span><span class="p">)</span>
+    <span class="n">xn</span> <span class="o">=</span> <span class="n">xnp1</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h4>Classe de complexité algorithmique<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<p>On observe que la grandeur <strong>qui varie</strong> est la limite supérieure de la boucle <code class="docutils literal notranslate"><span class="pre">limite</span></code>. Il n’y a pas d’autre boucle imbriqueé. La classe de complexité est donc linéaire : <span class="math notranslate nohighlight">\(\mathcal O (N)\)</span></p>
+</section>
 </section>
 </section>
 </section>
@@ -1007,10 +1174,10 @@ title="Print to PDF"
             <p class="prev-next-title">C2-ALGO-02 : Complexité des algorithmes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../prog/index.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-ALGO-04.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Programmation</p>
+        <p class="prev-next-title">C2-ALGO-04 : Taille du problème</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

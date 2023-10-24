@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Programmation" href="../prog/index.html" />
@@ -768,6 +770,123 @@ title="Print to PDF"
    Exercice 5
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quelle-taille-de-l-entree-avant-execution">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peut-elle-varier">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quelle-est-la-complexite-de-l-algorithme">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Exercice 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Exercice 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Exercice 4
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Exercice 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id16">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id17">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -826,6 +945,123 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercice-5">
    Exercice 5
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-des-exercices">
+   Correction des exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quelle-taille-de-l-entree-avant-execution">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peut-elle-varier">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quelle-est-la-complexite-de-l-algorithme">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Exercice 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Exercice 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Exercice 4
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Exercice 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Quelle taille de l’entrée avant exécution ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id16">
+       Peut-elle varier ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id17">
+       Quelle est la complexité de l’algorithme ?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -946,8 +1182,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 8, 2, 4, 10, 7, 0, 1, 9, 1]
-[0, 0, 1, 1, 2, 4, 7, 8, 9, 10]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 2, 10, 1, 5, 6, 5, 5, 6, 4]
+[1, 2, 4, 5, 5, 5, 6, 6, 6, 10]
 </pre></div>
 </div>
 </div>
@@ -991,7 +1227,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 51 : 36
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 100 : 64
 </pre></div>
 </div>
 </div>
@@ -1036,6 +1272,89 @@ title="Print to PDF"
 <li><p>quelle est la complexité de l’algorithme ?</p></li>
 </ul>
 <p><img alt="chiffrement" src="../../_images/chiffrement3.jpg" /></p>
+</section>
+<section id="correction-des-exercices">
+<h2>Correction des exercices<a class="headerlink" href="#correction-des-exercices" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Exercice 1<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Vérification de l’âge d’un client dans une piscine</p>
+<section id="quelle-taille-de-l-entree-avant-execution">
+<h4>Quelle taille de l’entrée avant exécution ?<a class="headerlink" href="#quelle-taille-de-l-entree-avant-execution" title="Permalink to this headline">#</a></h4>
+<p>La taille de l’entrée est constante : l’âge demandé</p>
+</section>
+<section id="peut-elle-varier">
+<h4>Peut-elle varier ?<a class="headerlink" href="#peut-elle-varier" title="Permalink to this headline">#</a></h4>
+<p>Non, elle ne varie pas</p>
+</section>
+<section id="quelle-est-la-complexite-de-l-algorithme">
+<h4>Quelle est la complexité de l’algorithme ?<a class="headerlink" href="#quelle-est-la-complexite-de-l-algorithme" title="Permalink to this headline">#</a></h4>
+<p>C’est un algorithme de classe de complexité constante : <span class="math notranslate nohighlight">\(\mathcal O (1)\)</span></p>
+</section>
+</section>
+<section id="id2">
+<h3>Exercice 2<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Tri d’une liste de nombres aléatoires avec le <strong>tri par insertion</strong></p>
+<section id="id3">
+<h4>Quelle taille de l’entrée avant exécution ?<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<p>C’est la longueur de la liste de nombres à trier : <code class="docutils literal notranslate"><span class="pre">longueur</span></code>. Ici la valeur est <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+</section>
+<section id="id4">
+<h4>Peut-elle varier ?<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>Oui elle peut varier.</p>
+</section>
+<section id="id5">
+<h4>Quelle est la complexité de l’algorithme ?<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<p>Deux boucles imbriquées signifie que c’est une classe de complexité quadratique : <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p>
+</section>
+</section>
+<section id="id6">
+<h3>Exercice 3<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<p>Recherche d’un élément dans une liste triée en utilisant l’algorithme de recherche aléatoire avec remise du nombre tiré : l’algorithme est susceptible de reprendre le même nombre trié autant de fois qu’il le souhaite.</p>
+<section id="id7">
+<h4>Quelle taille de l’entrée avant exécution ?<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
+<p>C’est la longueur de la liste triée : <code class="docutils literal notranslate"><span class="pre">borneSup</span> <span class="pre">-</span> <span class="pre">borneInf</span></code>. Ici la valeur est <code class="docutils literal notranslate"><span class="pre">100</span></code></p>
+</section>
+<section id="id8">
+<h4>Peut-elle varier ?<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<p>Oui elle peut varier</p>
+</section>
+<section id="id9">
+<h4>Quelle est la complexité de l’algorithme ?<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
+<p>Si la liste est formée de nombres vraiment aléatoires, alors la complexité algorithmique <strong>dans le pire des cas</strong> n’est pas définie. Ce programme n’implémente pas un algorithme puisque, <strong>par définition</strong>, un algorithme doit avoir une fin.</p>
+</section>
+</section>
+<section id="id10">
+<h3>Exercice 4<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<p>Une année entrée en paramètre est-elle bissextile ou pas ?</p>
+<section id="id11">
+<h4>Quelle taille de l’entrée avant exécution ?<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h4>
+<p>La taille de l’entrée est constante : c’est la valeur de l’année entrée par l’utilisateur.</p>
+</section>
+<section id="id12">
+<h4>Peut-elle varier ?<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<p>Non, il s’agit toujours d’un entier qui représente une année.</p>
+</section>
+<section id="id13">
+<h4>Quelle est la complexité de l’algorithme ?<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h4>
+<p>C’est un algorithme de classe de complexité constante : <span class="math notranslate nohighlight">\(\mathcal O (1)\)</span></p>
+</section>
+</section>
+<section id="id14">
+<h3>Exercice 5<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h3>
+<p>Chiffrement d’un texte clair en utilisant l’algorithme par décalage (algorithme de Jules César)</p>
+<section id="id15">
+<h4>Quelle taille de l’entrée avant exécution ?<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h4>
+<p>Il s’agit de la longueur du texte clair à chiffrer : <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">len(texte_clair)</span></code></p>
+</section>
+<section id="id16">
+<h4>Peut-elle varier ?<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h4>
+<p>Oui elle peut varier.</p>
+</section>
+<section id="id17">
+<h4>Quelle est la complexité de l’algorithme ?<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h4>
+<p>Pour chaque lettre du texte clair, l’algorithme calcule la lettre chiffrée. Il s’agit donc d’une boucle simple. La classe de complexité algorithmique est donc linéraire : <span class="math notranslate nohighlight">\(\mathcal O (N)\)</span></p>
+</section>
+</section>
 </section>
 </section>
 
