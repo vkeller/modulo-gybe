@@ -1,7 +1,7 @@
-taille = 5
+taille = 1000
 nops = 0
-phi = 1.
+r2 = 1.
 for i in range(1,taille+1,1):
-    phi = 1 + 1/phi
+    r2 = 1/(2. + r2)
     nops = nops + 1
-print(phi,nops,i)
+print(r2,nops)

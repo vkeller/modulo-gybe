@@ -1,4 +1,4 @@
-longueur = 20
+longueur = 5
 nops = 0
 sdp = 0
 for i in range(longueur):
