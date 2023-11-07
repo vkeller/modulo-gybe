@@ -85,6 +85,9 @@ parts:
       - file: 2M/prog/motdepasse/MotsDePasse
       - file: 2M/prog/hacking/hacking-romain      
       - file: 2M/prog/arbres/LesArbres
+    - file: 2M/strategies/index
+      sections:
+      - file: 2M/strategies/C2-STRAT-01
     - file: 2M/machine-learning/index
       sections:
       - file: 2M/machine-learning/cours/IntroML
