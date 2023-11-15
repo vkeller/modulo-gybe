@@ -815,6 +815,27 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">
+   Conséquences de certaines erreurs historiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">
+     Explosion de la fusée Ariane 5 en 1996
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">
+     Crash du module
+     <em>
+      Mars Climate Orbiter
+     </em>
+     *
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -899,6 +920,27 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">
+   Conséquences de certaines erreurs historiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">
+     Explosion de la fusée Ariane 5 en 1996
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">
+     Crash du module
+     <em>
+      Mars Climate Orbiter
+     </em>
+     *
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -923,6 +965,7 @@ title="Print to PDF"
 <li><p>syntaxique</p></li>
 </ol>
 </li>
+<li><p>Connaître les conséquences de certaines erreurs algorithmiques ou de programmation dans l’histoire de l’informatique</p></li>
 </ol>
 </section>
 <section id="definition-erreur-algorithmique">
@@ -1078,6 +1121,25 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
+</section>
+</section>
+<section id="consequences-de-certaines-erreurs-historiques">
+<h2>Conséquences de certaines erreurs historiques<a class="headerlink" href="#consequences-de-certaines-erreurs-historiques" title="Permalink to this headline">#</a></h2>
+<p>Voici une liste non-exhaustive des conséquences de certaines erreurs de programmation ou algorithmique qui sont restées dans l’histoire</p>
+<section id="explosion-de-la-fusee-ariane-5-en-1996">
+<h3>Explosion de la fusée Ariane 5 en 1996<a class="headerlink" href="#explosion-de-la-fusee-ariane-5-en-1996" title="Permalink to this headline">#</a></h3>
+<p><img alt="ariane5" src="../../_images/ariane5.jpg" /></p>
+<p><strong>Situation</strong> le 4 juin 1996 a lieu le vol 501, vol inaugural du lanceur européen Ariane 5. Il s’est soldé par un échec causé par un dysfonctionnement informatique qui vit la fusée se briser et exploser en vol seulement 36,7 secondes après le décollage à une altitude de 4000m.</p>
+<p><strong>Cause :</strong> Plateforme inertielle (guidage, accéléromètre, gyroscope, etc..) identique à celle du lanceur précédent (Ariane 4) amis pas adapté à la puissance de la nouvelle fusée notamment s’agissant des accélérations d’Ariane 5. L’accéléromètre a détecté une valeur importante qui a provoqué un dépassement de capacité (<strong>la valeur entière retournée par l’accéléromètre ne pouvait pas être codée avec le type de variable programmé</strong>). Le système de navigation a alors donné des ordres impossibles à remplir pour les tuyères des moteurs <a class="reference external" href="https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5">Voir les détails ici</a></p>
+<p><strong>Conséquences :</strong> Perte d’un lanceur ainsi que de la charge utile (quatre satellites de la mission Cluster pour une valeur de 370 millions d’Euros ainsi qu’une perte de crédibilité pour l’agence spatiale européenne.</p>
+</section>
+<section id="crash-du-module-mars-climate-orbiter">
+<h3>Crash du module <em>Mars Climate Orbiter</em>*<a class="headerlink" href="#crash-du-module-mars-climate-orbiter" title="Permalink to this headline">#</a></h3>
+<p><img alt="mars" src="../../_images/mars.jpg" /></p>
+<p><strong>Situation :</strong> La sonde <em>Mars Climate Orbiter</em> est l’une des deux sondes envoyées vers la planète rouge en 1998 par la NASA pour étudier la planète Mars en général, son climat en particulier. Après avoir effectué le voyage Terre - Mars sans encombre, elle est ensuite programmée pour entrer sur une orbite basse de la planète rouge. Résultat : elle se place sur une orbite beaucoup trop basse. Elle est détruite en traversant l’atmosphère martienne à trop haute vitesse.</p>
+<p><strong>Cause :</strong> Le logiciel de contrôle au sol (sur Terre) avait été fourni par l’entreprise Lockheed Martin et il utilisait des valeurs en <strong>mesures impériales</strong> alors que l’orbiteur, construit par la NASA, utilisait des <strong>mesure métriques</strong>. Il s’est agi d’une erreur de conversion de mesures entre unités.</p>
+<p><strong>Conséquences :</strong> En plus de l’échec partiel de la mission (la seconde sonde a pu être utilisée), la NASA a arrêté son programme de lancement bisannuel de missions “à bas coûts” vers Mars. Seules les grandes missions ont été conservées.</p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Mars_Climate_Orbiter">Plus de détails ici</a></p>
 </section>
 </section>
 </section>
