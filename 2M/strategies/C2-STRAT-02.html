@@ -797,11 +797,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
    Définition : erreur algorithmique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complexite-inadequate">
+     Complexité inadéquate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algorithme-inadapte">
+     Algorithme inadapté
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boucle-infinie">
+     Boucle infinie
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-de-programmation">
    Définition : erreur de programmation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division-par-0">
+     division par 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erreur-d-index">
+     Erreur d’index
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">
@@ -873,6 +902,11 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
  </li>
 </ul>
 
@@ -938,11 +972,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
    Définition : erreur algorithmique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complexite-inadequate">
+     Complexité inadéquate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algorithme-inadapte">
+     Algorithme inadapté
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boucle-infinie">
+     Boucle infinie
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-de-programmation">
    Définition : erreur de programmation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division-par-0">
+     division par 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erreur-d-index">
+     Erreur d’index
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">
@@ -1014,6 +1077,11 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
  </li>
 </ul>
 
@@ -1089,18 +1157,64 @@ title="Print to PDF"
 </section>
 <section id="definition-erreur-algorithmique">
 <h2>Définition : erreur algorithmique<a class="headerlink" href="#definition-erreur-algorithmique" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>boucle infinie</p></li>
-<li><p>truc de complexité (algo de tri) : partir aveuglement sur un <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> alors qu’il existe du <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p></li>
-<li></li>
-</ul>
+<p>Une erreur algorithmique est l’une des plus complexes à reconnaître.</p>
+<section id="complexite-inadequate">
+<h3>Complexité inadéquate<a class="headerlink" href="#complexite-inadequate" title="Permalink to this headline">#</a></h3>
+<p>Si pour un problème donné, on part aveuglement sur un algorithme de complexité supérieure à la complexité idéale (par exemple: un <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> alors qu’il existe du <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> pour résoudre le même problème).</p>
+</section>
+<section id="algorithme-inadapte">
+<h3>Algorithme inadapté<a class="headerlink" href="#algorithme-inadapte" title="Permalink to this headline">#</a></h3>
+<p>Un algorithme qui ne répond pas <em>complètement</em> ou <em>totalement</em> au problème qu’il est sensé résoudre…</p>
+</section>
+<section id="boucle-infinie">
+<h3>Boucle infinie<a class="headerlink" href="#boucle-infinie" title="Permalink to this headline">#</a></h3>
+<p>Une boucle infinie dans un algorithme (ce qui signifie <em>de facto</em> que l’algorithme n’en est pas un)</p>
+<p>Ce problème peut être observé dans un algorigramme</p>
+<p><img alt="WhileTrue" src="../../_images/WhileTrue.png" /></p>
+</section>
 </section>
 <section id="definition-erreur-de-programmation">
 <h2>Définition : erreur de programmation<a class="headerlink" href="#definition-erreur-de-programmation" title="Permalink to this headline">#</a></h2>
-<p>Ce qui est compris dans une erreur de programmation est une erreur qui est levée avec un programme qui <strong>fonctionne</strong> mais qui crash pour une raison programmatique.</p>
-<ul class="simple">
-<li><p>division par 0</p></li>
-</ul>
+<p>Ce qui est compris dans une erreur de programmation est une erreur qui existe avec un programme qui <strong>fonctionne</strong> mais qui crash pour une raison programmatique.</p>
+<section id="division-par-0">
+<h3>division par 0<a class="headerlink" href="#division-par-0" title="Permalink to this headline">#</a></h3>
+<p>Le programme suivant fonctionne pour autant que la valeur entrée ne soit pas 2 :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un chiffre : &quot;</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>L’erreur produite sera :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+</pre></div>
+</div>
+<p>Un algorigramme doit être analysé plus finement :</p>
+<p><img alt="ZeroDiv" src="../../_images/ZeroDivision.png" /></p>
+<p>une manière de traiter l’exception (l’erreur) est :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un chiffre : &quot;</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 n&#39;est pas valide&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="erreur-d-index">
+<h3>Erreur d’index<a class="headerlink" href="#erreur-d-index" title="Permalink to this headline">#</a></h3>
+<p>Lorsqu’un programme essaie d’accéder à un index qui n’existe pas (par exemple en dehors d’une liste). Le programme suivant ne fonctionne pas :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>L’erreur produite sera :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</pre></div>
+</div>
+<p>puisque la liste <code class="docutils literal notranslate"><span class="pre">x</span></code> ne dispose que de 3 éléments (index : <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> et <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p>
+</section>
 </section>
 <section id="definition-erreur-de-syntaxe-en-python">
 <h2>Définition : erreur de syntaxe en Python<a class="headerlink" href="#definition-erreur-de-syntaxe-en-python" title="Permalink to this headline">#</a></h2>
@@ -1269,6 +1383,10 @@ title="Print to PDF"
 <p><strong>Conséquences :</strong> En plus de l’échec partiel de la mission (la seconde sonde a pu être utilisée), la NASA a arrêté son programme de lancement bisannuel de missions “à bas coûts” vers Mars. Seules les grandes missions ont été conservées.</p>
 <p><a class="reference external" href="https://fr.wikipedia.org/wiki/Mars_Climate_Orbiter">Plus de détails ici</a></p>
 </section>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<p>Détectez les erreurs dans l’algorigramme suivant. Pour chacune d’elle, indiquez de quel type il s’agit (algorithmique, programmatique)</p>
 </section>
 </section>
 
