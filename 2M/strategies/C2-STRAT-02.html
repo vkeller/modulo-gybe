@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Intelligence artificielle" href="../machine-learning/index.html" />
@@ -756,6 +758,42 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">
+   Qu’est-ce qu’une erreur (un
+   <em>
+    bug
+   </em>
+   ) ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historique">
+     Historique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#causes">
+     Causes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#savoir-les-reconnaitre">
+     Savoir les reconnaître
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#traiter-une-exception">
+     “Traiter une exception”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lever-une-exception">
+     “Lever une exception”
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
    Définition : erreur algorithmique
   </a>
@@ -859,6 +897,42 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#objectifs-pedagogiques">
    Objectifs pédagogiques
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">
+   Qu’est-ce qu’une erreur (un
+   <em>
+    bug
+   </em>
+   ) ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historique">
+     Historique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#causes">
+     Causes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#savoir-les-reconnaitre">
+     Savoir les reconnaître
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#traiter-une-exception">
+     “Traiter une exception”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lever-une-exception">
+     “Lever une exception”
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
@@ -968,11 +1042,65 @@ title="Print to PDF"
 <li><p>Connaître les conséquences de certaines erreurs algorithmiques ou de programmation dans l’histoire de l’informatique</p></li>
 </ol>
 </section>
+<section id="qu-est-ce-qu-une-erreur-un-bug">
+<h2>Qu’est-ce qu’une erreur (un <em>bug</em>) ?<a class="headerlink" href="#qu-est-ce-qu-une-erreur-un-bug" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>bug</strong> est un <em>défaut</em> ou un <em>problème</em> dans un code informatique. Sa nature peut-être de cause variée.</p>
+<section id="historique">
+<h3>Historique<a class="headerlink" href="#historique" title="Permalink to this headline">#</a></h3>
+<p>Le tout premier bug de l’histoire de l’informatique, c’est-à-dire identifié dans un ordinateur a été signalé le <strong>9 septembre 1947</strong> dans l’un des tout premiers calculateurs universels (ordinateur) du monde : le <a class="reference external" href="https://fr.wikipedia.org/wiki/Harvard_Mark_I">Harvard Mark 1</a> installé à l’université de Harvard aux Etats-Unis.</p>
+<p><img alt="bug" src="../../_images/bug1945.jpg" /></p>
+<p>Cet ordinateur ne fonctionnait pas avec des transistors et circuits électroniques modernes, mais avec des relais téléphoniques, des interrupteurs, des arbres mécaniques et des embrayages. Tous ces éléments étaient sensibles à des éléments matériels physiques. Ce fut le cas d’un <strong>insecte</strong> qui se logea dans l’une des parties mécaniques et mis l’ordinateur en erreur. En anglais, un insecte se dit <strong>bug</strong>. Le mot est resté jusqu’à aujourd’hui.</p>
+</section>
+<section id="causes">
+<h3>Causes<a class="headerlink" href="#causes" title="Permalink to this headline">#</a></h3>
+<p>Les causes d’un <strong>bug</strong> sont variées : algorithmique, programmatique ou syntaxique. Parfois le bug résulte de la conception même de la machine : ce sont les bugs matériels.</p>
+</section>
+<section id="savoir-les-reconnaitre">
+<h3>Savoir les reconnaître<a class="headerlink" href="#savoir-les-reconnaitre" title="Permalink to this headline">#</a></h3>
+<p>Tout l’art de l’informaticien est de :</p>
+<ul class="simple">
+<li><p>savoir les reconnaître</p></li>
+<li><p>les prendre en compte dans le design de son programme</p></li>
+</ul>
+</section>
+<section id="traiter-une-exception">
+<h3>“Traiter une exception”<a class="headerlink" href="#traiter-une-exception" title="Permalink to this headline">#</a></h3>
+<p>Dans certains languages de programmation - c’est le cas de Python - une erreur est appellée <strong>exception</strong> et le programmeur peut la prendre en compte dans l’écriture de son programme : <strong>il anticipe qu’elle va arriver</strong>. C’est ce que l’on appelle <strong>traiter une exception</strong>.</p>
+<p><img alt="erreursPython" src="../../_images/erreurs-python.png" /></p>
+<p>Lever une exception se fait par la construction <code class="docutils literal notranslate"><span class="pre">try</span></code>… <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">NomDeLException</span></code>. Par exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un nombre : &quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Désolé la valeur saisie n&#39;est pas un nombre.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="lever-une-exception">
+<h3>“Lever une exception”<a class="headerlink" href="#lever-une-exception" title="Permalink to this headline">#</a></h3>
+<p>Dans certains languages - c’est le cas de Python - à la place de traiter une exception (ou de la jeter), on peut la <strong>lever</strong>. Lorsqu’une erreur est levée, alors le programme s’arrête. Cela se fait par le mot-clef <code class="docutils literal notranslate"><span class="pre">raise</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Désolé, le nombre doit être supérieur à zéro&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</section>
+</section>
 <section id="definition-erreur-algorithmique">
 <h2>Définition : erreur algorithmique<a class="headerlink" href="#definition-erreur-algorithmique" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>boucle infinie</p></li>
+<li><p>truc de complexité (algo de tri) : partir aveuglement sur un <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> alors qu’il existe du <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span></p></li>
+<li></li>
+</ul>
 </section>
 <section id="definition-erreur-de-programmation">
 <h2>Définition : erreur de programmation<a class="headerlink" href="#definition-erreur-de-programmation" title="Permalink to this headline">#</a></h2>
+<p>Ce qui est compris dans une erreur de programmation est une erreur qui est levée avec un programme qui <strong>fonctionne</strong> mais qui crash pour une raison programmatique.</p>
+<ul class="simple">
+<li><p>division par 0</p></li>
+</ul>
 </section>
 <section id="definition-erreur-de-syntaxe-en-python">
 <h2>Définition : erreur de syntaxe en Python<a class="headerlink" href="#definition-erreur-de-syntaxe-en-python" title="Permalink to this headline">#</a></h2>
