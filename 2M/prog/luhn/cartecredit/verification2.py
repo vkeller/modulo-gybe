@@ -5,15 +5,18 @@ carte2 = [4,3,9,6,8,3,7,4,1,2,0,4,2,7,5,5]
 carte = carte2
 limite = len(carte)
 somme = 0
-for i in range(0,limite,2):
-    e = carte[i]*2
-    if e>9 :
-        e = e-9
-    somme += e
-for i in range(1,limite,2):
-    somme += carte[i]
+for i in range(limite):
+    if (i%2) == 0:
+        e = (carte[i]*2)
+        if e>9 :
+            e = e-9
+        somme += e
+    else:
+        somme += carte[i]
 print(carte)
+print(somme)
 if (somme%10 == 0):
     print("carte valide")
 else:
     print("carte invalide")
+
