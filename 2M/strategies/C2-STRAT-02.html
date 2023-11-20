@@ -906,11 +906,21 @@ title="Print to PDF"
      *
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bug-de-l-an-2038">
+     Bug de l’an 2038
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
   </a>
  </li>
 </ul>
@@ -1086,11 +1096,21 @@ title="Print to PDF"
      *
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bug-de-l-an-2038">
+     Bug de l’an 2038
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
   </a>
  </li>
 </ul>
@@ -1398,18 +1418,38 @@ title="Print to PDF"
 <p><strong>Conséquences :</strong> En plus de l’échec partiel de la mission (la seconde sonde a pu être utilisée), la NASA a arrêté son programme de lancement bisannuel de missions “à bas coûts” vers Mars. Seules les grandes missions ont été conservées.</p>
 <p><a class="reference external" href="https://fr.wikipedia.org/wiki/Mars_Climate_Orbiter">Plus de détails ici</a></p>
 </section>
+<section id="bug-de-l-an-2038">
+<h3>Bug de l’an 2038<a class="headerlink" href="#bug-de-l-an-2038" title="Permalink to this headline">#</a></h3>
+<p><img alt="y2038" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Year_2038_problem.gif?uselang=fr" /></p>
+<p><strong>Situation :</strong> bug similaire à celui de l’an 2000, il arrivera le <strong>19 janvier 2038 à 3h14 et 8 secondes</strong> sur les systèmes d’exploitation qui mesurent le temps en 32 bits.</p>
+<p><strong>Cause :</strong> Le temps POSIX (les systèmes UNIX) construisent le temps à partir de <em>l’époque</em> (qui est la date du <strong>1er janvier 1970</strong>) en nombre de secondes écoulées. Un nombre signé en 32 bits s’écrit comme <span class="math notranslate nohighlight">\(2^{31} -1\)</span> ce qui correspond à 2 147 483 647 secondes, soit environ 68 ans.</p>
+<p><strong>Correction :</strong> il suffit de corriger le temps en 64 bits</p>
+</section>
 </section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Détectez les erreurs dans l’algorigramme suivant. Pour chacune d’elles, indiquez de quel type il s’agit (algorithmique, programmatique)</p>
-<p>Problème : Estimation de Pi en utilisant une méthode dite <em>de Monte-Carlo</em>.</p>
-<p><img alt="pi" src="../../_images/pi.png" /></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">randon</span>
-
-
-
+<p>Problème : Estimation de <span class="math notranslate nohighlight">\( \pi \)</span> en utilisant une méthode dite <em>de Monte-Carlo</em>.</p>
+<p><img alt="pi" src="../../_images/pi2.png" /></p>
+<p>(<a class="reference external" href="https://media.eduscol.education.fr/ftp_eduscol/2019/Ressources/Mathematiques/RA19_Lycee_G_1_MATH_Algorithmique_et_Programmation_activite_11.html">source</a>)</p>
+<p>Voici un code qui implémente l’algorithme de Monte-Carlo pour approximer <span class="math notranslate nohighlight">\( \pi \)</span></p>
+<p>Identifiez toutes les erreurs et donnez le type d’erreur (syntaxe, programme, algorithme). Corrigez le code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">randomm</span>
+<span class="n">nb_exp</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">succes</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_exp</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+   <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">succes</span> <span class="o">=</span> <span class="n">succes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">nb_succes</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">succes</span> <span class="o">/</span> <span class="n">nb_exp</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb_succes</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Voici un algorigramme qui contient des erreurs. Identifiez-les avec leur type.</p>
+<p><img alt="MonteCarloPi" src="../../_images/MonteCarloPi_Faux.png" /></p>
 </section>
 </section>
 
