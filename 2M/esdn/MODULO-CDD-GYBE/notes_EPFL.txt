@@ -1,0 +1,67 @@
+Séquence de cours
+
+Objectif : prendre conscience de la matérialité du numérique
+
+2 périodes de 45 minutes (durant les TPs)
+6 activités en classe
+
+A. Impact environnemental du numérique
+	Définition de "l'impact environnemental"
+		- Ensemble des changements qualitatifs, quantitatifs et fonctionnels de l'environnement engendré par un projet, un processes de sa conception à sa fin de vie
+		- Choix de 5 thématiques
+			1. GES
+			2. Biodiversité
+			3. Pollution
+			4. Utilisation de l'eau douce
+			5. Déforestation
+		- Choix de 6 secteurs à impact environnemental
+			1. Alimentation
+			2. Transport motorisé (hors aviation)
+			3. Transport aérien
+			4. Logement
+			5. Investissements financiers
+			6. Vêtements
+	Activité 1 : recherche sur Internet d'un chiffre permettant de placer le numérique dans le "gâteau" des secteurs à impact environnemental
+		- Débat : le numérique a-t-il un impact environnemental faible ou fort par rapport aux autres secteurs ?
+		. Institutionnalisation du savoir : mise en perspective des chiffres avec ceux donnés par ADME pour la France. Préciser le 80% production et 20% utilisation
+
+B. Omniprésence du numérique
+	Activité 2 : questionnaire 
+		- Combien de temps êtes-vous sur votre smartphone ?
+		- Pour y faire quoi ?
+	Mise en perspective avec les chiffres de JAMES
+
+C. Quantité d'appareils connectés
+	- Activité 3 : Discussion sur la base d'une liste d'objets (basée sur l'étude JAMES)
+
+	- A côté de mes objets connectés
+		- infrastructure (serveurs, etc..)
+		- câbles sous-marins
+		- satellites
+
+D. Matériaux rares nécessaires
+	- Composants d'un smartphone
+		Activité 4 : démontage d'un smartphone
+			- "virtuellement" et avec un "vrai" smartphone
+			- insister sur deux valeurs : 15 % du smartphone est du cuivre et 3 % est du fer
+
+E. Où se trouvent ces matériaux rares ?
+	- Mine de cuivre AfSud
+	- Mine de fer Suède
+	Activité 5 : Animation ADEME en rendant attentifs les élèves de relever deux chiffres importants sur les smartphones pour calculer la masse totale qu'il a fallu depuis leur naissance
+	de cuivre et de fer pour construire uniquement les smartphones. 
+
+F. Enjeux écologiques
+	- Exploitation des fonds marins
+	- Rupture des barrages
+	- Rivière morte au Caméroun
+	
+G. Que peut-on faire à notre échelle
+	- Wifi pluôt que 4G et 5G
+	- éteindre son smartphone lorsqu'on ne l'utilise pas
+	- prolonger la durée de vie des objets connectés
+	- connaître l'impact environnemental des différents services connectés
+	- petits trucs : résolution des vidéos, désinstallation des applications non utilisées, communication par texte plutôt que par vidéo, prise de conscience du temps d'écran.
+	
+	
+	
