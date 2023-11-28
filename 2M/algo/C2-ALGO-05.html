@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Programmation avancée" href="../prog/index.html" />
@@ -770,6 +772,35 @@ title="Print to PDF"
    Exemple introductif
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-graphe">
+   Définition : graphe
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orientation">
+     Orientation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-matrice-d-adjacence">
+   Définition : matrice d’adjacence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilisation-des-graphes">
+   Utilisation des graphes
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -799,6 +830,35 @@ title="Print to PDF"
    Exemple introductif
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-graphe">
+   Définition : graphe
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orientation">
+     Orientation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-matrice-d-adjacence">
+   Définition : matrice d’adjacence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilisation-des-graphes">
+   Utilisation des graphes
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -819,6 +879,141 @@ title="Print to PDF"
 <p>Il est d’usage d’introduire la théorie des graphes en présentant le célèbre problème dit <strong>des sept ponts de Königsberg</strong>.</p>
 <p><img alt="konigsberg" src="../../_images/konigsberg.jpg" /></p>
 <p>Le problème est le suivant : La ville de Königsberg (aujourd’hui <a class="reference external" href="https://fr.wikipedia.org/wiki/K%C3%B6nigsberg">Kaliningrad</a>), du temps de <a class="reference external" href="https://fr.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a> le célèbre mathématicien et physicien suisse qui l’a résolu, est construite dans l’estuaire du fleuve Pregolia sur 5 îles reliées par des ponts. Ces ponts étaient au nombre de 7 du temps d’Euler. Le problème consiste à partir d’un point de départ au choix, de passer <strong>une et une seule fois</strong> sur chacun des sept ponts et à revenir au point de départ.</p>
+<p>Solution : il n’existe pas de solution à ce problème. La démonstration (faite par Euler) dépasse largement le cadre de ce cours d’informatique</p>
+</section>
+<section id="definition-graphe">
+<h2>Définition : graphe<a class="headerlink" href="#definition-graphe" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>graphe</strong> est une structure composée de deux objets :</p>
+<ol class="simple">
+<li><p>Une liste de <strong>sommets</strong>. Un sommet peut avoir un <strong>nom</strong></p></li>
+<li><p>Une liste d’<strong>arêtes</strong> qui relient les sommets. L’arête peut possèder un <strong>poids</strong> qui représente n’importe quelle grandeur (une longueur, un coût, etc..)</p></li>
+</ol>
+<p>La représentation courante est graphique avec des cercles pour les sommets et des lignes pour les arêtes.</p>
+<p><img alt="graphe" src="../../_images/graphe1.png" /></p>
+<section id="orientation">
+<h3>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">#</a></h3>
+<p>Un graphe est dit <strong>orienté</strong> lorsque les arêtes sont des flèches avec une direction.</p>
+<p><img alt="graphe2" src="../../_images/graphe2.png" /></p>
+</section>
+</section>
+<section id="definition-matrice-d-adjacence">
+<h2>Définition : matrice d’adjacence<a class="headerlink" href="#definition-matrice-d-adjacence" title="Permalink to this headline">#</a></h2>
+<p>Lorsque le graphe est trop complexe pour être représenté graphiquement, on utilise un tableau. En mathématique, on parle de <strong>matrice</strong>.</p>
+<p>Une <strong>matrice d’adjacence</strong> pour un graphe à <code class="docutils literal notranslate"><span class="pre">n</span></code> sommets est un tableau de dimension <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">n</span></code> dont chaque élément qui ne se trouve pas sur la diagonale contient le poids de l’arête qui relie les deux sommets à l’intersection de la colonne et de la ligne. Si les arêtes ne possèdent pas de poids, alors on indiquera <code class="docutils literal notranslate"><span class="pre">1</span></code> si une arête existe, <code class="docutils literal notranslate"><span class="pre">0</span></code> sinon.</p>
+<section id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h3>
+<p><img alt="graphe3" src="../../_images/graphe3.png" /></p>
+<p>La matrice d’adjacence se présente alors ainsi :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>A</strong></p></th>
+<th class="head"><p><strong>B</strong></p></th>
+<th class="head"><p><strong>C</strong></p></th>
+<th class="head"><p><strong>D</strong></p></th>
+<th class="head"><p><strong>E</strong></p></th>
+<th class="head"><p><strong>F</strong></p></th>
+<th class="head"><p><strong>G</strong></p></th>
+<th class="head"><p><strong>H</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>A</strong></p></td>
+<td><p></p></td>
+<td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>B</strong></p></td>
+<td><p>3</p></td>
+<td><p></p></td>
+<td><p>8</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>12</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>C</strong></p></td>
+<td><p>0</p></td>
+<td><p>8</p></td>
+<td><p></p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>D</strong></p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+<td><p></p></td>
+<td><p>5</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>E</strong></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+<td><p></p></td>
+<td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>F</strong></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>G</strong></p></td>
+<td><p>0</p></td>
+<td><p>12</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>H</strong></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
+<td><p>5</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Mathématiquement on la présente ainsi :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} &amp; 3 &amp; 0 &amp; 10 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\ 3 &amp;  &amp; 8 &amp; 0 &amp; 0 &amp; 0 &amp; 12 &amp; 0 \\ 0 &amp; 8 &amp;  &amp; 4 &amp; 2 &amp; 3 &amp; 0 &amp; 0 \\ 10 &amp; 0 &amp; 4 &amp;  &amp; 5 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; 5 &amp;  &amp; 4 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 3 &amp; 0 &amp; 4 &amp;  &amp; 1 &amp; 7 \\ 0 &amp; 12 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp;  &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 7 &amp; 5 &amp; &amp;  \end{pmatrix}\end{split}\]</div>
+</section>
+</section>
+<section id="utilisation-des-graphes">
+<h2>Utilisation des graphes<a class="headerlink" href="#utilisation-des-graphes" title="Permalink to this headline">#</a></h2>
+<p>Les graphes sont utilisés dans divers domaines :</p>
+<ol class="simple">
+<li><p>Les réseaux informatiques</p></li>
+<li><p>Les réseaux sociaux</p></li>
+<li><p>La cartographie</p></li>
+<li><p>Les réseaux de neurones (et donc l’IA)</p></li>
+</ol>
 </section>
 </section>
 
