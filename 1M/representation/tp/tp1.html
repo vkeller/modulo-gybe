@@ -410,7 +410,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../2M/algo/index.html">
-   Algorithmique
+   Algorithmique avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -447,7 +447,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../2M/prog/index.html">
-   Programmation
+   Programmation avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -519,7 +519,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">
-     C2-STRAT-01 : Gestion des erreurs
+     C2-STRAT-02 : Gestion des erreurs
     </a>
    </li>
   </ul>
@@ -1065,11 +1065,11 @@ title="Print to PDF"
 </section>
 <section id="image-en-niveaux-de-gris">
 <h2>Image en niveaux de gris<a class="headerlink" href="#image-en-niveaux-de-gris" title="Permalink to this headline">#</a></h2>
-<p>En niveau de gris, on utilise le mot magique <code class="docutils literal notranslate"><span class="pre">P2</span></code> et on précise le nombre de niveaux de gris avant la description de l’image (nombre de niveaux de gris : de <code class="docutils literal notranslate"><span class="pre">2</span></code> à <code class="docutils literal notranslate"><span class="pre">255</span></code>).</p>
+<p>En niveau de gris, on utilise le mot magique <code class="docutils literal notranslate"><span class="pre">P2</span></code> et on précise la valeur maximale du nombre de niveaux de gris avant la description de l’image (nombre de niveaux de gris : de <code class="docutils literal notranslate"><span class="pre">2</span></code> à <code class="docutils literal notranslate"><span class="pre">255</span></code>). Ainsi <code class="docutils literal notranslate"><span class="pre">15</span></code> représente la valeur maximale. Les 16 valeurs de gris vont de noir <code class="docutils literal notranslate"><span class="pre">0</span></code> et blanc <code class="docutils literal notranslate"><span class="pre">15</span></code> donc 16 valeurs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P2</span>
 <span class="c1"># Affiche le mot &quot;FEEP&quot; (exemple de la page principale de Netpbm à propos de PGM)</span>
 <span class="mi">24</span> <span class="mi">7</span>
-<span class="c1"># Nombre de niveaux de gris</span>
+<span class="c1"># Valeur maximale du nombre de niveaux de gris (valeurs entre noir 0 et blanc 15)</span>
 <span class="mi">15</span>
 <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
 <span class="mi">0</span>  <span class="mi">3</span>  <span class="mi">3</span>  <span class="mi">3</span>  <span class="mi">3</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">7</span>  <span class="mi">7</span>  <span class="mi">7</span>  <span class="mi">7</span>  <span class="mi">0</span>  <span class="mi">0</span> <span class="mi">11</span> <span class="mi">11</span> <span class="mi">11</span> <span class="mi">11</span>  <span class="mi">0</span>  <span class="mi">0</span> <span class="mi">15</span> <span class="mi">15</span> <span class="mi">15</span> <span class="mi">15</span>  <span class="mi">0</span>
