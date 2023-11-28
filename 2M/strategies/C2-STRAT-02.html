@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Intelligence artificielle" href="../machine-learning/index.html" />
+    <link rel="next" title="TP2-STRAT-01 : Gestion des erreurs" href="TP2-STRAT-01.html" />
     <link rel="prev" title="C2-STRAT-01 : Stratégies de résolution de problèmes" href="C2-STRAT-01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -412,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../algo/index.html">
-   Algorithmique
+   Algorithmique avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -449,7 +449,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../prog/index.html">
-   Programmation
+   Programmation avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -522,6 +522,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs
     </a>
    </li>
   </ul>
@@ -913,16 +918,6 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1102,16 +1097,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
  </li>
 </ul>
 
@@ -1426,31 +1411,6 @@ title="Print to PDF"
 <p><strong>Correction :</strong> il suffit de corriger le temps en 64 bits</p>
 </section>
 </section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Problème : Estimation de <span class="math notranslate nohighlight">\( \pi \)</span> en utilisant une méthode dite <em>de Monte-Carlo</em>.</p>
-<p><img alt="pi" src="../../_images/pi2.png" /></p>
-<p>(<a class="reference external" href="https://media.eduscol.education.fr/ftp_eduscol/2019/Ressources/Mathematiques/RA19_Lycee_G_1_MATH_Algorithmique_et_Programmation_activite_11.html">source</a>)</p>
-<p>Voici un code qui implémente l’algorithme de Monte-Carlo pour approximer <span class="math notranslate nohighlight">\( \pi \)</span></p>
-<p>Identifiez toutes les erreurs et donnez le type d’erreur (syntaxe, programme, algorithme). Corrigez le code.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">randomm</span>
-<span class="n">nb_exp</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">succes</span> <span class="o">==</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_exp</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-   <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">succes</span> <span class="o">=</span> <span class="n">succes</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">nb_succes</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">succes</span> <span class="o">/</span> <span class="n">nb_exp</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nb_succes</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>Voici un algorigramme qui contient des erreurs. Identifiez-les avec leur type.</p>
-<p><img alt="MonteCarloPi" src="../../_images/MonteCarloPi_Faux.png" /></p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1487,10 +1447,10 @@ title="Print to PDF"
             <p class="prev-next-title">C2-STRAT-01 : Stratégies de résolution de problèmes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../machine-learning/index.html" title="next page">
+    <a class='right-next' id="next-link" href="TP2-STRAT-01.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Intelligence artificielle</p>
+        <p class="prev-next-title">TP2-STRAT-01 : Gestion des erreurs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
