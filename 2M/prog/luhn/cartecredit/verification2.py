@@ -2,7 +2,8 @@ carte_invalide = [5,6,3,5,4,0,0,2,9,5,6,1,3,4,1,1]
 carte_valide = [4,9,5,0,4,8,4,7,7,7,5,2,5,9,5,5]
 carte_valide2 = [5,1,3,6,5,9,0,4,3,0,3,6,8,7,4,2]
 carte2 = [4,3,9,6,8,3,7,4,1,2,0,4,2,7,5,5]
-carte = carte2
+carte3 = [4,6,2,4,7,4,8,2,3,3,2,4,9,0,8,0]
+carte = carte3
 limite = len(carte)
 somme = 0
 for i in range(limite):
