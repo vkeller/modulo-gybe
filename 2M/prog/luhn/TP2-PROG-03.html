@@ -412,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../algo/index.html">
-   Algorithmique
+   Algorithmique avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -445,11 +445,16 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-04 : Taille du problème
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-05.html">
+     C2-ALGO-05 : Introduction à la théorie des graphes
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Programmation
+   Programmation avancée
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -521,7 +526,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../strategies/C2-STRAT-02.html">
-     C2-STRAT-01 : Gestion des erreurs
+     C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../strategies/TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
     </a>
    </li>
   </ul>
@@ -860,8 +870,8 @@ title="Print to PDF"
 <p>La <strong>somme de contrôle</strong> (<em>checksum</em> en anglais) permet de <strong>détecter</strong> une erreur mais pas de la corriger.</p>
 <p><img alt="check" src="../../../_images/checksum.png" />
 (Source : Wikipedia)</p>
-<p>Dans l’exemple ci-dessus, on converti les caractères en hexadécimal en suivant la table ASCII. la somme des éléments est ensuite calculée, c’est ce que l’on appelle le <strong>hachage</strong> et se réduit à une valeur de contrôle : la <strong>somme de contrôle</strong>. Lorsqu’une lettre change (par exemple le <code class="docutils literal notranslate"><span class="pre">o</span></code> final devient <code class="docutils literal notranslate"><span class="pre">a</span></code>), la somme de contrôle change : <strong>une erreur est détectée</strong>.</p>
-<p>On remarque qu’il n’est pas possible avec la somme de contrôle de réparer l’erreur : le récepteur demande à l’émetteur de lui renvoyer le message. Il existe d’autres algorithmes de contrôle qui permettent de détecter <strong>ET</strong> de corriger l’erreur : ce sont les algorithmes dit de <strong>code cycliques</strong>. Ces algorithmes dépassent le cadre de ce cours.</p>
+<p>Dans l’exemple ci-dessus, on convertit les caractères en hexadécimal en suivant la table ASCII. la somme des éléments est ensuite calculée, c’est ce que l’on appelle le <strong>hachage</strong> et se réduit à une valeur de contrôle : la <strong>somme de contrôle</strong>. Lorsqu’une lettre change (par exemple le <code class="docutils literal notranslate"><span class="pre">o</span></code> final devient <code class="docutils literal notranslate"><span class="pre">a</span></code>), la somme de contrôle change : <strong>une erreur est détectée</strong>.</p>
+<p>On remarque qu’il n’est pas possible avec la somme de contrôle de réparer l’erreur : le récepteur demande à l’émetteur de lui renvoyer le message. Il existe d’autres algorithmes de contrôle qui permettent de détecter <strong>ET</strong> de corriger l’erreur : ce sont les algorithmes dits de <strong>code cycliques</strong>. Ces algorithmes dépassent le cadre de ce cours.</p>
 </section>
 <section id="numero-d-une-carte-de-credit">
 <h2>Numéro d’une carte de crédit<a class="headerlink" href="#numero-d-une-carte-de-credit" title="Permalink to this headline">#</a></h2>
@@ -906,9 +916,9 @@ title="Print to PDF"
 <li><p>Ecrire un programme qui implémente l’algorithme de Luhn et vérifie la validité d’un numéro de carte de crédit donné</p></li>
 <li><p>Testez votre programme avec les numéros de carte de crédit suivants :</p>
 <ul>
-<li><p><span class="math notranslate nohighlight">\(5635~4002~9561~3411\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(4396~8374~1204~2755\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(4624~7482~3324~9080\)</span></p></li>
+<li><p>code invalide : <code class="docutils literal notranslate"><span class="pre">[5,6,3,5,4,0,0,2,9,5,6,1,3,4,1,1]</span></code></p></li>
+<li><p>code valide : <code class="docutils literal notranslate"><span class="pre">[4,3,9,6,8,3,7,4,1,2,0,4,2,7,5,5]</span></code></p></li>
+<li><p>code invalide : <code class="docutils literal notranslate"><span class="pre">[4,6,2,4,7,4,8,2,3,3,2,4,9,0,8,0]</span></code></p></li>
 </ul>
 </li>
 </ul>
