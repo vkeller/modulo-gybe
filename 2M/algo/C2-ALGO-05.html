@@ -844,6 +844,45 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-dijkstra">
+   Exercice 4 : Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-villes-suisses">
+   Exercice 5 : Villes suisses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-le-voyageur-de-commerce-tsp">
+   Exercice 6 : Le voyageur de commerce (TSP)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comment-proceder">
+     Comment procéder ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approche-glouton-greedy-algorithms">
+     Approche glouton : “Greedy algorithms”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changer-d-approche">
+     Changer d’approche
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-des-exercices">
    Solution des exercices
   </a>
@@ -961,6 +1000,45 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-dijkstra">
+   Exercice 4 : Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-villes-suisses">
+   Exercice 5 : Villes suisses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-le-voyageur-de-commerce-tsp">
+   Exercice 6 : Le voyageur de commerce (TSP)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comment-proceder">
+     Comment procéder ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approche-glouton-greedy-algorithms">
+     Approche glouton : “Greedy algorithms”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changer-d-approche">
+     Changer d’approche
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-des-exercices">
    Solution des exercices
   </a>
@@ -991,11 +1069,6 @@ title="Print to PDF"
 <h1>C2-ALGO-05 : Introduction à la théorie des graphes<a class="headerlink" href="#c2-algo-05-introduction-a-la-theorie-des-graphes" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>connaître les composantes d’un graphe (sommet, arrêtes)</p></li>
-<li><p>connaître les différents types de graphes et leur représentation</p></li>
-<li><p>appliquer l’algorithme de Dijkstra sur un graphe orienté pour trouver le plus court chemin</p></li>
-</ul>
 </section>
 <section id="exemple-introductif">
 <h2>Exemple introductif<a class="headerlink" href="#exemple-introductif" title="Permalink to this headline">#</a></h2>
@@ -1177,16 +1250,314 @@ title="Print to PDF"
 </ul>
 <p>Faisons le graphe !</p>
 <p><img alt="ex3" src="../../_images/exercicegraphe3.png" /></p>
-<p>Une solution est la suivante. Et c’est la meilleure.</p>
-<p><img alt="ex3_s" src="../../_images/exercicegraphe3_s.png" /></p>
-<ul class="simple">
-<li><p>26 minutes</p></li>
-<li><p>chemin non proposé. Pourquoi ?</p></li>
-<li><p>Beaucoup de raisons : heures, correspondances, etc..</p></li>
-</ul>
 </section>
 <section id="algorithme-de-dijkstra">
 <h2>Algorithme de Dijkstra<a class="headerlink" href="#algorithme-de-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>L’algorithme de Dijkstra consiste à partir d’un point (par exemple A) à trouver le chemin le plus court jusqu’à <strong>couvrir</strong> l’ensemble du graphe.</p>
+<p>On ne prend pas deux fois un chemin car on construit un <strong>arbre couvrant</strong>.</p>
+<p><img alt="graphe4" src="../../_images/exercicegraphe4.png" /></p>
+<p>Dans cet exemple, il y a deux chemins qui partent de <code class="docutils literal notranslate"><span class="pre">A</span></code> et finissent à <code class="docutils literal notranslate"><span class="pre">G</span></code> de longueur 17 : <code class="docutils literal notranslate"><span class="pre">A-B-E-F-G</span></code> et <code class="docutils literal notranslate"><span class="pre">A-B-E-G</span></code></p>
+</section>
+<section id="exercice-4-dijkstra">
+<h2>Exercice 4 : Dijkstra<a class="headerlink" href="#exercice-4-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>Construire l’arbre recouvrant dans le graphe suivant :</p>
+<p><img alt="graphe5" src="../../_images/exercicegraphe5.png" /></p>
+</section>
+<section id="exercice-5-villes-suisses">
+<h2>Exercice 5 : Villes suisses<a class="headerlink" href="#exercice-5-villes-suisses" title="Permalink to this headline">#</a></h2>
+<p>Sur ce graphe, on indique les distances entre quelques villes importantes en Suisse.</p>
+<p>Quel est le chemin le plus court entre Genève et Coire ?</p>
+<p><img alt="exo5" src="../../_images/exercicegraphe6.png" /></p>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<p>Voici la matrice d’adjacence entre les villes</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>Lausanne</strong></p></th>
+<th class="head"><p><strong>Genève</strong></p></th>
+<th class="head"><p><strong>Neuchâtel</strong></p></th>
+<th class="head"><p><strong>Fribourg</strong></p></th>
+<th class="head"><p><strong>Berne</strong></p></th>
+<th class="head"><p><strong>Zürich</strong></p></th>
+<th class="head"><p><strong>Lugano</strong></p></th>
+<th class="head"><p><strong>Sion</strong></p></th>
+<th class="head"><p><strong>Bâle</strong></p></th>
+<th class="head"><p><strong>Schaffhouse</strong></p></th>
+<th class="head"><p><strong>St-Gall</strong></p></th>
+<th class="head"><p><strong>Coire</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Lausanne</strong></p></td>
+<td><p>0</p></td>
+<td><p>67</p></td>
+<td><p>73</p></td>
+<td><p>76</p></td>
+<td><p>111</p></td>
+<td><p>231</p></td>
+<td><p>331</p></td>
+<td><p>96</p></td>
+<td><p>206</p></td>
+<td><p>281</p></td>
+<td><p>311</p></td>
+<td><p>350</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Genève</strong></p></td>
+<td><p>67</p></td>
+<td><p>0</p></td>
+<td><p>121</p></td>
+<td><p>143</p></td>
+<td><p>172</p></td>
+<td><p>292</p></td>
+<td><p>398</p></td>
+<td><p>163</p></td>
+<td><p>263</p></td>
+<td><p>342</p></td>
+<td><p>372</p></td>
+<td><p>411</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Neuchâtel</strong></p></td>
+<td><p>73</p></td>
+<td><p>121</p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>51</p></td>
+<td><p>171</p></td>
+<td><p>330</p></td>
+<td><p>169</p></td>
+<td><p>142</p></td>
+<td><p>221</p></td>
+<td><p>251</p></td>
+<td><p>290</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fribourg</strong></p></td>
+<td><p>76</p></td>
+<td><p>143</p></td>
+<td><p>43</p></td>
+<td><p>0</p></td>
+<td><p>35</p></td>
+<td><p>155</p></td>
+<td><p>314</p></td>
+<td><p>128</p></td>
+<td><p>130</p></td>
+<td><p>205</p></td>
+<td><p>235</p></td>
+<td><p>274</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Berne</strong></p></td>
+<td><p>111</p></td>
+<td><p>172</p></td>
+<td><p>51</p></td>
+<td><p>35</p></td>
+<td><p>0</p></td>
+<td><p>120</p></td>
+<td><p>279</p></td>
+<td><p>141</p></td>
+<td><p>95</p></td>
+<td><p>170</p></td>
+<td><p>200</p></td>
+<td><p>239</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Zürich</strong></p></td>
+<td><p>231</p></td>
+<td><p>292</p></td>
+<td><p>171</p></td>
+<td><p>155</p></td>
+<td><p>120</p></td>
+<td><p>0</p></td>
+<td><p>207</p></td>
+<td><p>261</p></td>
+<td><p>87</p></td>
+<td><p>50</p></td>
+<td><p>80</p></td>
+<td><p>119</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lugano</strong></p></td>
+<td><p>331</p></td>
+<td><p>398</p></td>
+<td><p>330</p></td>
+<td><p>314</p></td>
+<td><p>279</p></td>
+<td><p>207</p></td>
+<td><p>0</p></td>
+<td><p>235</p></td>
+<td><p>294</p></td>
+<td><p>257</p></td>
+<td><p>270</p></td>
+<td><p>176</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sion</strong></p></td>
+<td><p>96</p></td>
+<td><p>163</p></td>
+<td><p>169</p></td>
+<td><p>128</p></td>
+<td><p>141</p></td>
+<td><p>261</p></td>
+<td><p>235</p></td>
+<td><p>0</p></td>
+<td><p>246</p></td>
+<td><p>311</p></td>
+<td><p>341</p></td>
+<td><p>380</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Bâle</strong></p></td>
+<td><p>206</p></td>
+<td><p>263</p></td>
+<td><p>142</p></td>
+<td><p>130</p></td>
+<td><p>95</p></td>
+<td><p>87</p></td>
+<td><p>294</p></td>
+<td><p>236</p></td>
+<td><p>0</p></td>
+<td><p>99</p></td>
+<td><p>167</p></td>
+<td><p>206</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Schaffhouse</strong></p></td>
+<td><p>281</p></td>
+<td><p>342</p></td>
+<td><p>221</p></td>
+<td><p>205</p></td>
+<td><p>170</p></td>
+<td><p>50</p></td>
+<td><p>257</p></td>
+<td><p>311</p></td>
+<td><p>99</p></td>
+<td><p>0</p></td>
+<td><p>84</p></td>
+<td><p>169</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>St-Gall</strong></p></td>
+<td><p>311</p></td>
+<td><p>372</p></td>
+<td><p>251</p></td>
+<td><p>235</p></td>
+<td><p>200</p></td>
+<td><p>80</p></td>
+<td><p>270</p></td>
+<td><p>341</p></td>
+<td><p>167</p></td>
+<td><p>84</p></td>
+<td><p>0</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Coire</strong></p></td>
+<td><p>350</p></td>
+<td><p>411</p></td>
+<td><p>290</p></td>
+<td><p>274</p></td>
+<td><p>239</p></td>
+<td><p>119</p></td>
+<td><p>176</p></td>
+<td><p>380</p></td>
+<td><p>206</p></td>
+<td><p>169</p></td>
+<td><p>94</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="exercice-6-le-voyageur-de-commerce-tsp">
+<h2>Exercice 6 : Le voyageur de commerce (TSP)<a class="headerlink" href="#exercice-6-le-voyageur-de-commerce-tsp" title="Permalink to this headline">#</a></h2>
+<p>Depuis <code class="docutils literal notranslate"><span class="pre">Lausanne</span></code>, quel est le <strong>meilleur itinéraire</strong> qui passe par : <code class="docutils literal notranslate"><span class="pre">Neuchâtel</span></code>, <code class="docutils literal notranslate"><span class="pre">Bâle</span></code>, <code class="docutils literal notranslate"><span class="pre">Zürich</span></code> et <code class="docutils literal notranslate"><span class="pre">Sion</span></code> ?</p>
+<p><img alt="exo7" src="../../_images/exercicegraphe7.png" /></p>
+<section id="comment-proceder">
+<h3>Comment procéder ?<a class="headerlink" href="#comment-proceder" title="Permalink to this headline">#</a></h3>
+<p>Voici la matrice d’adjacence :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>Lausanne</strong></p></th>
+<th class="head"><p><strong>Nauchâtel</strong></p></th>
+<th class="head"><p><strong>Zürich</strong></p></th>
+<th class="head"><p><strong>Sion</strong></p></th>
+<th class="head"><p><strong>Bâle</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Lausanne</strong></p></td>
+<td><p>0</p></td>
+<td><p>73</p></td>
+<td><p>233</p></td>
+<td><p>96</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Neuchâtel</strong></p></td>
+<td><p>73</p></td>
+<td><p>0</p></td>
+<td><p>171</p></td>
+<td><p>169</p></td>
+<td><p>142</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Zürich</strong></p></td>
+<td><p>233</p></td>
+<td><p>171</p></td>
+<td><p>0</p></td>
+<td><p>261</p></td>
+<td><p>87</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sion</strong></p></td>
+<td><p>96</p></td>
+<td><p>169</p></td>
+<td><p>261</p></td>
+<td><p>0</p></td>
+<td><p>215</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Bâle</strong></p></td>
+<td><p>200</p></td>
+<td><p>142</p></td>
+<td><p>87</p></td>
+<td><p>215</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Si on calcule tous les itinéraires possibles :</p>
+<ul class="simple">
+<li><p>Avec <code class="docutils literal notranslate"><span class="pre">4</span></code> candidates comme première étape, <code class="docutils literal notranslate"><span class="pre">3</span></code> comme seconde, <code class="docutils literal notranslate"><span class="pre">2</span></code> comme troisième et une dernière : <span class="math notranslate nohighlight">\(4! = 24\)</span> possibilités</p></li>
+<li><p>Mais tout est à double : donc <code class="docutils literal notranslate"><span class="pre">12</span></code></p></li>
+<li><p>Avec <code class="docutils literal notranslate"><span class="pre">12</span></code> villes : <span class="math notranslate nohighlight">\(\frac{12 !}{2} = 239500800\)</span> : 240 millions !</p></li>
+<li><p>Complexité du TSP : <span class="math notranslate nohighlight">\(\mathcal O (N!)\)</span></p></li>
+<li><p>Pas d’autre solution</p></li>
+</ul>
+</section>
+<section id="approche-glouton-greedy-algorithms">
+<h3>Approche glouton : “Greedy algorithms”<a class="headerlink" href="#approche-glouton-greedy-algorithms" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Appliquer une solution localement valable</p></li>
+<li><p>Mesurer le résultat</p></li>
+</ol>
+</section>
+<section id="changer-d-approche">
+<h3>Changer d’approche<a class="headerlink" href="#changer-d-approche" title="Permalink to this headline">#</a></h3>
+<p><img alt="glouton" src="../../_images/exercicegraphe8.png" /></p>
+<ul class="simple">
+<li><p>Proposition : prendre le prochain plus court chemin vers une ville non visitée</p></li>
+<li><p>Lausanne-Neuchâtel-Bâle-Zurich-Sion-Lausanne = 659km</p></li>
+<li><p>C’est bien ?</p></li>
+<li><p>Accessoirement ce chemin emprunte les 4 chemins les plus courts possibles entre 2 villes…</p></li>
+</ul>
+<p><img alt="tab" src="../../_images/graphetab.png" /></p>
+<p><strong>Gagnant improbable</strong></p>
+<ol class="simple">
+<li><p>Lausanne-Sion</p></li>
+<li><p>Sion-Bâle</p></li>
+<li><p>Bâle-Zurich</p></li>
+<li><p>Zurich-Neuchâtel</p></li>
+<li><p>Neuchâtel-Lausanne</p></li>
+</ol>
+<p><strong>Est-ce une bonne solution ?</strong></p>
+<ul class="simple">
+<li><p>2e meilleur</p></li>
+<li><p>17km de plus que le meilleur</p></li>
+<li><p>346 de moins que le pire !</p></li>
+<li><p>En fait, oui c’est pas mal, mais c’était pas évident de le savoir</p></li>
+</ul>
+</section>
 </section>
 <section id="solution-des-exercices">
 <h2>Solution des exercices<a class="headerlink" href="#solution-des-exercices" title="Permalink to this headline">#</a></h2>
@@ -1220,20 +1591,20 @@ title="Print to PDF"
 <tr class="row-odd"><td><p><strong>B</strong></p></td>
 <td><p>3</p></td>
 <td><p></p></td>
+<td><p>12</p></td>
+<td><p>0</p></td>
 <td><p>8</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>C</strong></p></td>
 <td><p>0</p></td>
-<td><p>8</p></td>
+<td><p>12</p></td>
 <td><p></p></td>
 <td><p>4</p></td>
 <td><p>2</p></td>
-<td><p>3</p></td>
+<td><p>6</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 </tr>
@@ -1242,16 +1613,16 @@ title="Print to PDF"
 <td><p>0</p></td>
 <td><p>4</p></td>
 <td><p></p></td>
-<td><p>5</p></td>
+<td><p>12</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>E</strong></p></td>
 <td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>8</p></td>
 <td><p>2</p></td>
-<td><p>5</p></td>
+<td><p>12</p></td>
 <td><p></p></td>
 <td><p>4</p></td>
 <td><p>0</p></td>
@@ -1260,20 +1631,20 @@ title="Print to PDF"
 <tr class="row-odd"><td><p><strong>F</strong></p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>3</p></td>
+<td><p>6</p></td>
 <td><p>0</p></td>
 <td><p>4</p></td>
 <td><p></p></td>
-<td><p>1</p></td>
 <td><p>7</p></td>
+<td><p>15</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>G</strong></p></td>
 <td><p>0</p></td>
-<td><p>12</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
 <td><p></p></td>
 <td><p>5</p></td>
 </tr>
@@ -1283,7 +1654,7 @@ title="Print to PDF"
 <td><p>0</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>7</p></td>
+<td><p>15</p></td>
 <td><p>5</p></td>
 <td><p></p></td>
 </tr>
