@@ -778,6 +778,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complexite-du-probleme">
+   Complexité du problème
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-sur-le-graphe-des-etats-unis">
+     Exemple sur le graphe des états-unis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-le-voyageur-de-commerce-tsp">
    Exercice 1 : Le voyageur de commerce (TSP)
   </a>
@@ -834,6 +846,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complexite-du-probleme">
+   Complexité du problème
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-sur-le-graphe-des-etats-unis">
+     Exemple sur le graphe des états-unis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-le-voyageur-de-commerce-tsp">
    Exercice 1 : Le voyageur de commerce (TSP)
   </a>
@@ -882,9 +906,32 @@ title="Print to PDF"
 </section>
 <section id="le-probleme-du-voyageur-de-commerce">
 <h2>Le problème du Voyageur de commerce<a class="headerlink" href="#le-probleme-du-voyageur-de-commerce" title="Permalink to this headline">#</a></h2>
+<p>Le problème du voyageur de commerce, ou <em>traveling salesman problem</em> (TSP) peut se définir ainsi pour les états-unis :</p>
 <p><img alt="TSP" src="../../_images/TSP.png" /></p>
 <p>Le problème du voyageur de commerce se définit de la façon suivante. Etant donné un ensemble de villes, un voyageur de commerce (ou un commis voyageur) doit trouver le chemin le plus court passant par toutes les villes une seule fois.</p>
 <p>En terme de graphes, chaque ville est un sommet du graphe, chaque arête étant un chemin entre deux villes. Le graphe n’est pas forcément <strong>totalement connecté</strong>, c’est-à-dire que tous les sommets sont reliés à tous les sommets.</p>
+</section>
+<section id="complexite-du-probleme">
+<h2>Complexité du problème<a class="headerlink" href="#complexite-du-probleme" title="Permalink to this headline">#</a></h2>
+<p>Il n’existe <strong>aucun algorithme</strong> qui permet de résoudre le TSP sans <strong>calculer toutes les solutions possibles</strong>. C’est donc un problème très difficile dont la complexité est <span class="math notranslate nohighlight">\(\mathcal O (N!)\)</span></p>
+<section id="exemple-sur-le-graphe-des-etats-unis">
+<h3>Exemple sur le graphe des états-unis<a class="headerlink" href="#exemple-sur-le-graphe-des-etats-unis" title="Permalink to this headline">#</a></h3>
+<p>Sur la carte des états-unis <em>continentaux</em> (<em>Mainland</em> en anglais), c’est-à-dire les états encadrés à l’est par l’Océan Atlantique, le golfe du Mexique au sud-est, l’Océan Pacifique à l’ouest et le Canada au Nord, il y a <code class="docutils literal notranslate"><span class="pre">48</span></code> états. Les <code class="docutils literal notranslate"><span class="pre">2</span></code> restants sont les Îles Hawaï et l’Alaska.</p>
+<p>Données :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(48\)</span> sommets complètement reliés (routes, trains, avions)</p></li>
+<li><p>Nombre de chemins possibles : <span class="math notranslate nohighlight">\(48 ! = 12413915592536072670862289047373375038521486354677760000000000\)</span>, soit <span class="math notranslate nohighlight">\(1.2 * 10^{61}\)</span></p></li>
+</ul>
+<p>Par hypothèse, imaginons qu’un ordinateur soit capable de calculer <span class="math notranslate nohighlight">\(10^9\)</span> soit un milliard de chemins par seconde et que nous mettions tous les ordinateurs de la planète sur le calcul du voyageur de commerce sur les 48 capitales des états américains. On estime le nombre total d’ordinateurs dans le monde entre <span class="math notranslate nohighlight">\(5\)</span> et <span class="math notranslate nohighlight">\(10\)</span> milliards. Prenons la valeur supérieure soit <span class="math notranslate nohighlight">\(10^{10}\)</span> (10 milliards)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(10^9\)</span> milliards de chemins par secondes</p></li>
+<li><p><span class="math notranslate nohighlight">\(31536000\)</span> secondes par année, donc <span class="math notranslate nohighlight">\(3.1 * 10^{17}\)</span> chemins calculé par ordinateur chaque année</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^{10}\)</span> ordinateurs dans le monde (en 2023)</p></li>
+<li><p><span class="math notranslate nohighlight">\(3.1 * 10^{27}\)</span> chemins calculés chaque année par tous les ordinateurs de la planète</p></li>
+<li><p>Tous les chemins seront calculés après <span class="math notranslate nohighlight">\(10^{44}\)</span> années</p></li>
+<li><p>L’âge de l’Univers est estimé à <span class="math notranslate nohighlight">\(1.4 * 10^{10}\)</span> (14 milliards d’années)</p></li>
+</ul>
+</section>
 </section>
 <section id="exercice-1-le-voyageur-de-commerce-tsp">
 <h2>Exercice 1 : Le voyageur de commerce (TSP)<a class="headerlink" href="#exercice-1-le-voyageur-de-commerce-tsp" title="Permalink to this headline">#</a></h2>
