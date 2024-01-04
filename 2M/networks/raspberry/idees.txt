@@ -1,0 +1,24 @@
+Séquence pédagogique en 4 x 2 périodes de TP
+
+
+TP1 : Prise en main de la machine
+	- Système d'exploitation
+	- commandes BASH
+	- configurations système
+	- différents outils de programmation
+	
+	
+TP2 : Mise en réseau des machines
+	- configuration réseau
+	- Modèle OSI
+	- test du réseau
+	- DHCP, DNS
+	- passerelle vers le vrai web
+
+TP3 : Mise en place de services
+	- création d'un site web
+	- HTML + CSS
+	- Base de données ?
+
+TP4 : Jeu en réseau
+	- jeu en ligne
