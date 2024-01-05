@@ -12,8 +12,8 @@ TP2 : Mise en réseau des machines
 	- configuration réseau
 	- Modèle OSI
 	- test du réseau
-	- DHCP, DNS
-	- passerelle vers le vrai web
+	- DHCP
+	- jeu en ligne
 
 TP3 : Mise en place de services
 	- création d'un site web
@@ -21,4 +21,5 @@ TP3 : Mise en place de services
 	- Base de données ?
 
 TP4 : Jeu en réseau
-	- jeu en ligne
+	- passerelle vers le vrai web
+
