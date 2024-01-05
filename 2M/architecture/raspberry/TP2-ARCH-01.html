@@ -798,8 +798,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-du-raspberry-pi">
-   Composants du Raspberry Pi
+  <a class="reference internal nav-link" href="#composants-materiels-du-raspberry-pi">
+   Composants MATÉRIELS du Raspberry Pi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -807,7 +807,22 @@ title="Print to PDF"
      Processeur
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memoire-s">
+     Mémoire(s)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ports-materiels">
+     Ports matériels
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composants-logiciels-du-raspberry-pi">
+   Composants LOGICIELS du Raspberry Pi
+  </a>
  </li>
 </ul>
 
@@ -839,8 +854,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-du-raspberry-pi">
-   Composants du Raspberry Pi
+  <a class="reference internal nav-link" href="#composants-materiels-du-raspberry-pi">
+   Composants MATÉRIELS du Raspberry Pi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -848,7 +863,22 @@ title="Print to PDF"
      Processeur
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memoire-s">
+     Mémoire(s)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ports-materiels">
+     Ports matériels
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composants-logiciels-du-raspberry-pi">
+   Composants LOGICIELS du Raspberry Pi
+  </a>
  </li>
 </ul>
 
@@ -885,13 +915,82 @@ title="Print to PDF"
 <p><img alt="rpi4" src="../../../_images/raspberrypi4.png" /></p>
 <p>Son prix à l’unité est de quelques dizaines de francs suisses auxquels il faut ajouter un écran (HDMI), un clavier et une souris.</p>
 </section>
-<section id="composants-du-raspberry-pi">
-<h2>Composants du Raspberry Pi<a class="headerlink" href="#composants-du-raspberry-pi" title="Permalink to this headline">#</a></h2>
+<section id="composants-materiels-du-raspberry-pi">
+<h2>Composants MATÉRIELS du Raspberry Pi<a class="headerlink" href="#composants-materiels-du-raspberry-pi" title="Permalink to this headline">#</a></h2>
+<p>L’architecture du RPi suit celle de tous les ordinateurs classiques actuels : les laptops, les ordinateurs de bureau, les smartphones, etc.. Cette architecture est nommée <strong>Architecture de Von Neumann</strong>.</p>
+<p><img alt="von Neumann" src="../../../_images/vonneumannarch.png" /></p>
+<p>Elle décompose l’ordinateur en 4 parties distinctes :</p>
+<ol class="simple">
+<li><p>Unité Arithmétique et Logique (<em>Arithmetic and Logical Unit</em> ALU en anglais). Effectue les opérations du programme</p></li>
+<li><p>Unité de contrôle. Se charge du séquençage des opérations</p></li>
+<li><p>Mémoire. Elle contient à la fois les opérations du programme et les données</p></li>
+<li><p>Des entrées et sorties.</p></li>
+</ol>
 <section id="processeur">
 <h3>Processeur<a class="headerlink" href="#processeur" title="Permalink to this headline">#</a></h3>
 <p>Le processeur, appelé aussi Unité Centrale de Calcul, est le composant électronique qui traite l’ensemble des instructions en utilisant les données localisées (1) dans ses mémoires cache ou (2) dans la mémoire centrale (RAM).</p>
 <p>Sur un Raspberry Pi, c’est l’architecture ARM qui a été choisie.</p>
+<p>Le processeur est composé de :</p>
+<ol class="simple">
+<li><p>Une <strong>horloge</strong>. Elle est responsable de la <strong>synchronisation</strong> des flux de calculs et de données</p></li>
+<li><p>Des <strong>Unité Arithmétique et Logique</strong>. Ces ALU permettent de traiter les instructions du programme</p></li>
+<li><p>Des <strong>registres</strong>. Ce sont des mémoires de très petite taille servant à stocker les variables du programme.</p></li>
+<li><p>De trois <strong>BUS</strong>. Un bus permet de transmettre des données :</p>
+<ol class="simple">
+<li><p>Le bus de données. Permet de transmettre les donnée de et vers le processeur</p></li>
+<li><p>Le bus d’adresses. Permet de connaître la position d’une donnée (dans les registres ou la mémoire)</p></li>
+<li><p>Le bus de contrôle. Permet de gérer les différentes interruptions qui pourraient arriver lors de l’exécution d’un programme</p></li>
+</ol>
+</li>
+</ol>
+<p>Le processeur du RPi 4 est un <a class="reference external" href="https://www.arm.com/products/silicon-ip-cpu/cortex-a/cortex-a72">ARM Cortex-A72</a>. Il a les caractéristiques suivantes :</p>
+<ol class="simple">
+<li><p>L’horloge tourne à <code class="docutils literal notranslate"><span class="pre">1.5</span> <span class="pre">GHz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> coeurs (qui contiennent chacun des ALU)</p></li>
+<li><p>La largeurde ses registres est de <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bits</span></code></p></li>
+</ol>
 </section>
+<section id="memoire-s">
+<h3>Mémoire(s)<a class="headerlink" href="#memoire-s" title="Permalink to this headline">#</a></h3>
+<p>Le Raspberry Pi possède deux types de mémoire :</p>
+<ol class="simple">
+<li><p>La <strong>mémoire vive</strong> (ou mémoire volatile). On y stocke les programmes et les données lorsque l’ordinateur est allumé. Une fois éteint, toutes les données qui y sont contenues sont perdues.</p></li>
+<li><p>La <strong>mémoire de stockage</strong> (ou mémoire de masse ou encore mémoire non-volatile). On y stocke les programme et les données qui seront conservées à l’extinction de l’ordinateur.</p></li>
+</ol>
+<p>Il est d’usage de représenter les différents types de mémoires dans un schéma hiérarchique qui met en évidence la <strong>capacité</strong> (ou taille), la <strong>vitesse</strong> et le <strong>coût</strong> :</p>
+<p><img alt="memoire" src="../../../_images/memory.png" /></p>
+<p>Les mémoires du RPi 4 ont les caractéristiques suivantes :</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">GB</span></code> de mémoire vive</p></li>
+<li><p>Une <code class="docutils literal notranslate"><span class="pre">carte</span> <span class="pre">micro-SD</span></code> de <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">GB</span></code></p></li>
+</ol>
+</section>
+<section id="ports-materiels">
+<h3>Ports matériels<a class="headerlink" href="#ports-materiels" title="Permalink to this headline">#</a></h3>
+<p>Les <strong>ports</strong> (externes) d’un ordinateur sont les différentes “prises” sur lesquels on peut brancher des <strong>périphériques</strong> tels qu’un clavier, une souris, un écran ou un câble réseau.</p>
+<p>Sur le RPi, les ports sont les suivants :</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> ports<code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">2.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> ports<code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">3.0</span></code> (plus rapides)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> port <code class="docutils literal notranslate"><span class="pre">GigaEthernet</span></code> pour la connexion à un réseau filaire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> ports<code class="docutils literal notranslate"><span class="pre">micro-HDMI</span></code> pour connecter des écrans</p></li>
+</ol>
+<p>A noter que le port <code class="docutils literal notranslate"><span class="pre">USB-C</span></code> ne sert qu’à l’alimentation du RPi, on ne peut l’utiliser comme entrée-sortie</p>
+</section>
+</section>
+<section id="composants-logiciels-du-raspberry-pi">
+<h2>Composants LOGICIELS du Raspberry Pi<a class="headerlink" href="#composants-logiciels-du-raspberry-pi" title="Permalink to this headline">#</a></h2>
+<p>Pour que l’ensemble des composants matériels fonctionnent ensembles et correctement, un ordinateur a besoin d’un logiciel très important : <strong>le système d’exploitation</strong> (<em>Operating System</em> ou OS en anglais). Sans lui, aucun programme ne pourrait s’exécuter.</p>
+<p><img alt="os" src="../../../_images/os.png" /></p>
+<p>Il existe beaucoup de systèmes d’exploitation. Chacun possède ses propres spécificités et est prévu pour différents matériels ou usage. Parmi les principaux on peut citer :</p>
+<ul class="simple">
+<li><p><img alt="apple" src="../../../_images/apple.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/MacOS">MacOS</a> qui est installé sur les ordinateurs de la marque Apple</p></li>
+<li><p><img alt="windows" src="../../../_images/windows.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Microsoft_Windows">Microsoft Windows</a> principalement installé sur les ordinateurs de bureau dans l’industrie</p></li>
+<li><p><img alt="android" src="../../../_images/android.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Android">Android</a> qui gère la plupart des smartphone du monde. Android est une variante de Linux</p></li>
+<li><p><img alt="linux" src="../../../_images/linux.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Linux">Linux</a> qui est un projet</p></li>
+</ul>
+<p>Voir <a class="reference external" href="https://gs.statcounter.com/os-market-share">Statcounter</a> pour une distribution mondiale des principaux systèmes d’exploitation.</p>
+<p>Le système d’exploitation du RPi est <strong>Linux</strong>.</p>
 </section>
 </section>
 
