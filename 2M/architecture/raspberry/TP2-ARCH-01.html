@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Stratégie de résolution" href="../../strategies/index.html" />
+    <link rel="next" title="TP2-ARCH-02 : Mise en réseau" href="TP2-ARCH-02.html" />
     <link rel="prev" title="Architecture et réseaux" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -532,6 +532,11 @@ const thebe_selector_output = ".output, .cell_output"
      TP2-ARCH-01 : Le nano-ordinateur RPi
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP2-ARCH-02.html">
+     TP2-ARCH-02 : Mise en réseau
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -841,6 +846,36 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-mise-en-place">
+   Exercice 1 : Mise en place
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-installation-d-un-systeme-d-exploitation">
+   Exercice 2 : Installation d’un système d’exploitation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-explorer-le-bureau">
+   Exercice 3 : Explorer le bureau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-le-systeme-de-fichiers">
+   Exercice 4 : Le système de fichiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-le-terminal-et-le-langage-bash">
+   Exercice 5 : Le terminal et le langage BASH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-afficher-des-contenus-proteges-ou-caches">
+   Exercice 6 : Afficher des contenus protégés ou cachés
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -913,6 +948,36 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-mise-en-place">
+   Exercice 1 : Mise en place
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-installation-d-un-systeme-d-exploitation">
+   Exercice 2 : Installation d’un système d’exploitation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-explorer-le-bureau">
+   Exercice 3 : Explorer le bureau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-le-systeme-de-fichiers">
+   Exercice 4 : Le système de fichiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-le-terminal-et-le-langage-bash">
+   Exercice 5 : Le terminal et le langage BASH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-afficher-des-contenus-proteges-ou-caches">
+   Exercice 6 : Afficher des contenus protégés ou cachés
+  </a>
  </li>
 </ul>
 
@@ -1045,6 +1110,84 @@ title="Print to PDF"
 <p>L’ensemble logiciel (système d’exploitation et applications) est en licence <strong>Open Source</strong></p>
 </section>
 </section>
+<section id="exercice-1-mise-en-place">
+<h2>Exercice 1 : Mise en place<a class="headerlink" href="#exercice-1-mise-en-place" title="Permalink to this headline">#</a></h2>
+<p>Le matériel à disposition se trouve sur le chariot. Par <strong>groupe</strong>, vous devez monter votre ordinateur :</p>
+<ol class="simple">
+<li><p>clavier USB-2</p></li>
+<li><p>souris USB-2</p></li>
+<li><p>câble micro-HDMI vers HDMI de l’écran</p></li>
+<li><p>câble USB-C pour l’alimentation (<strong>ne pas le brancher au secteur tout de suite</strong>)</p></li>
+</ol>
+</section>
+<section id="exercice-2-installation-d-un-systeme-d-exploitation">
+<h2>Exercice 2 : Installation d’un système d’exploitation<a class="headerlink" href="#exercice-2-installation-d-un-systeme-d-exploitation" title="Permalink to this headline">#</a></h2>
+<p>Nous allons travailler avec <a class="reference external" href="https://fr.wikipedia.org/wiki/Raspberry_Pi_OS">Raspberry Pi OS</a> qui est le système d’exploitation officiel des RPi. Il s’agit de l’installer sur la carte micro-SD :</p>
+<ol class="simple">
+<li><p>Insérer la carte SD dans le lecteur de cartes</p></li>
+<li><p>Insérer le lecteur de carte dans un port USB libre sur votre ordinateur Mac</p></li>
+<li><p>lancer le programme “Raspberry Pi Imager”</p></li>
+<li><p>Choisir le bon système d’exploitation (version pour RPi 4, 64 bits)</p></li>
+<li><p>Configurer un nom d’utilisateur (nous y reviendrons)</p></li>
+<li><p>Lancer l’installation</p></li>
+</ol>
+<p>Une fois l’installation terminée, vous pouvez retirer le carte SD du lecteur et l’insérer dans le RPi et <strong>brancher le câble d’alimentation au secteur</strong>.</p>
+<p>Votre ordinateur devrait démarrer</p>
+</section>
+<section id="exercice-3-explorer-le-bureau">
+<h2>Exercice 3 : Explorer le bureau<a class="headerlink" href="#exercice-3-explorer-le-bureau" title="Permalink to this headline">#</a></h2>
+<p>Voilà, vous êtes normalent connecté.e avec l’identifiant que vous avez choisi lors de l’exercice précédent. Vous remarquez que vous n’avez pas dû donner le mot de passe choisi. La raison : il n’y a actuellement <strong>qu’un seul utilisateur</strong> enregistré sur l’ordinateur, et cet utilisateur n’a pas tous les droits. Il est par contre possible de lui <strong>upgrader</strong> ses droits en <strong>superutilisateur</strong> avec le mot de passe. Nous y reviendrons.</p>
+<p><img alt="desktop" src="../../../_images/rpidesktop.png" /></p>
+<p>L’icône <strong>framboise</strong> dans le coin supérieur gauche donne accès aux différentes applications :</p>
+<ul class="simple">
+<li><p>Programmation</p></li>
+<li><p>Internet</p></li>
+<li><p>Sound&amp;Video</p></li>
+<li><p>Graphics</p></li>
+<li><p>Accessories</p></li>
+<li><p>etc..</p></li>
+</ul>
+<p>Lancez Thonny et programmez un <code class="docutils literal notranslate"><span class="pre">helloworld.py</span></code></p>
+</section>
+<section id="exercice-4-le-systeme-de-fichiers">
+<h2>Exercice 4 : Le système de fichiers<a class="headerlink" href="#exercice-4-le-systeme-de-fichiers" title="Permalink to this headline">#</a></h2>
+<p>Dans le coin supérieur gauche, à côté de l’icône framboise se trouve le <strong>File Manager</strong>. Il permet d’accéder au système de fichier du RPi.</p>
+<p>Un système de fichiers Linux est un système hiérarchisé en arbre. La racine est symbolisée par <code class="docutils literal notranslate"><span class="pre">/</span></code> :</p>
+<p><img alt="FS" src="../../../_images/filesystem.jpg" />.</p>
+<p>Trouvez le contenu du fichier :</p>
+<ul class="simple">
+<li><p>/etc/firefox/firefox.js</p></li>
+<li><p>/home/votre_nom_utilisateur/.bashrc</p></li>
+<li><p>/var/log/boot.log</p></li>
+</ul>
+<p>Certains ne sont pas visibles, d’autres sont interdits. Pourquoi ?</p>
+</section>
+<section id="exercice-5-le-terminal-et-le-langage-bash">
+<h2>Exercice 5 : Le terminal et le langage BASH<a class="headerlink" href="#exercice-5-le-terminal-et-le-langage-bash" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on travaille avec un ordinateur sous Linux, il est assez rare de n’utiliser que la souris. L’interaction avec l’ordinateur se fait au travers d’un <strong>terminal</strong>.</p>
+<ul class="simple">
+<li><p>Ouvrez un terminal</p></li>
+</ul>
+<p>Voici quelques commandes qui permettent de naviguer dans le système de fichier :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> : affiche la position courante</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> : permet de changer de dossier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code> : permet de lister les fichiers présents dans un dossier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">nom_de_fichier</span></code> : permet d’afficher le contenu du fichier <code class="docutils literal notranslate"><span class="pre">nom_de_fichier</span></code></p></li>
+</ul>
+<p>Il existe deux faux répertoires très important et qui sont présents dans tous les dossiers (à l’exception de <code class="docutils literal notranslate"><span class="pre">/</span></code>) :</p>
+<ul class="simple">
+<li><p>le dossier courant : <code class="docutils literal notranslate"><span class="pre">.</span></code></p></li>
+<li><p>le dossier parent : <code class="docutils literal notranslate"><span class="pre">..</span></code></p></li>
+</ul>
+</section>
+<section id="exercice-6-afficher-des-contenus-proteges-ou-caches">
+<h2>Exercice 6 : Afficher des contenus protégés ou cachés<a class="headerlink" href="#exercice-6-afficher-des-contenus-proteges-ou-caches" title="Permalink to this headline">#</a></h2>
+<p>A l’exercice 4, on a vu que <code class="docutils literal notranslate"><span class="pre">/var/log/boot.log</span></code> était interdit d’accès et que <code class="docutils literal notranslate"><span class="pre">/home/votre_nom_utilisateur/.bashrc</span></code> était invisible.</p>
+<p>Dans le terminal, essayez d’upgrader vos permissions en devenant <strong>superutilisateur</strong>. Cela se fait avec la commande <code class="docutils literal notranslate"><span class="pre">sudo</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">cat</span> <span class="pre">/var/log/boot.log</span></code></p>
+<p><strong>!!! ATTENTION : le mode superutilisateur permet de tout faire, y compris de tout casser !!!</strong></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1081,10 +1224,10 @@ title="Print to PDF"
             <p class="prev-next-title">Architecture et réseaux</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../strategies/index.html" title="next page">
+    <a class='right-next' id="next-link" href="TP2-ARCH-02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Stratégie de résolution</p>
+        <p class="prev-next-title">TP2-ARCH-02 : Mise en réseau</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
