@@ -90,6 +90,7 @@ parts:
       - file: 2M/prog/arbres/LesArbres
     - file: 2M/architecture/index
       sections:
+      - file: 2M/architecture/cours/C22-ARCH-01
       - file: 2M/architecture/raspberry/TP2-ARCH-00
       - file: 2M/architecture/raspberry/TP2-ARCH-01
       - file: 2M/architecture/raspberry/TP2-ARCH-02
