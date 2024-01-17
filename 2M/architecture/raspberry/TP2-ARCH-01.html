@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="TP2-ARCH-02 : Mise en réseau" href="TP2-ARCH-02.html" />
-    <link rel="prev" title="Architecture et réseaux" href="../index.html" />
+    <link rel="prev" title="TP2-ARCH-00 : Introduction avec un micro:bit" href="TP2-ARCH-00.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -527,6 +527,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP2-ARCH-00.html">
+     TP2-ARCH-00 : Introduction avec un micro:bit
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      TP2-ARCH-01 : Le nano-ordinateur RPi
@@ -876,6 +881,26 @@ title="Print to PDF"
    Exercice 6 : Afficher des contenus protégés ou cachés
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-demander-de-l-aide">
+   Exercice 7 : Demander de l’aide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-la-redirection-dans-bash">
+   Exercice 8 : la redirection dans BASH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-la-recherche-d-expressions-regulieres-grep">
+   Exercice 9 : La recherche d’expressions régulières : grep
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-le-pipeline-de-commande">
+   Exercice 10 : Le pipeline de commande
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -977,6 +1002,26 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-6-afficher-des-contenus-proteges-ou-caches">
    Exercice 6 : Afficher des contenus protégés ou cachés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-demander-de-l-aide">
+   Exercice 7 : Demander de l’aide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-la-redirection-dans-bash">
+   Exercice 8 : la redirection dans BASH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-la-recherche-d-expressions-regulieres-grep">
+   Exercice 9 : La recherche d’expressions régulières : grep
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-le-pipeline-de-commande">
+   Exercice 10 : Le pipeline de commande
   </a>
  </li>
 </ul>
@@ -1188,6 +1233,48 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">cat</span> <span class="pre">/var/log/boot.log</span></code></p>
 <p><strong>!!! ATTENTION : le mode superutilisateur permet de tout faire, y compris de tout casser !!!</strong></p>
 </section>
+<section id="exercice-7-demander-de-l-aide">
+<h2>Exercice 7 : Demander de l’aide<a class="headerlink" href="#exercice-7-demander-de-l-aide" title="Permalink to this headline">#</a></h2>
+<p>Chaque commande BASH possède une aide pré-installée qui liste l’entier des possibilités de la commande. On utilise pour se faire <code class="docutils literal notranslate"><span class="pre">man</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">ls</span>
+</pre></div>
+</div>
+<p>affiche toutes les options possibles de la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<p>En vous servant de l’aide.</p>
+<ul class="simple">
+<li><p>Affichez le dernier fichier créé dans votre répertoire personnel</p></li>
+<li><p>Affichez les fichiers du répertoire personnel dans l’ordre chronologique de création</p></li>
+</ul>
+</section>
+<section id="exercice-8-la-redirection-dans-bash">
+<h2>Exercice 8 : la redirection dans BASH<a class="headerlink" href="#exercice-8-la-redirection-dans-bash" title="Permalink to this headline">#</a></h2>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> permet de <em>rediriger</em> le résultat d’une commande vers un fichier. Par exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+<span class="n">ls</span> <span class="o">/</span> <span class="o">&gt;</span> <span class="n">racine</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>permet de rediriger le résultat de la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> à la racine <code class="docutils literal notranslate"><span class="pre">/</span></code> vers le fichier <code class="docutils literal notranslate"><span class="pre">racine.txt</span></code></p>
+<p>Redirigez le contenu complet de votre répertoire personnel vers un fichier <code class="docutils literal notranslate"><span class="pre">content.txt</span></code> et affichez-le</p>
+</section>
+<section id="exercice-9-la-recherche-d-expressions-regulieres-grep">
+<h2>Exercice 9 : La recherche d’expressions régulières : grep<a class="headerlink" href="#exercice-9-la-recherche-d-expressions-regulieres-grep" title="Permalink to this headline">#</a></h2>
+<p>Les <strong>expressions régulières</strong> dans BASH sont des chaînes de caractères. On peut rechercher une expression régulière dans un fichier avec la commande <code class="docutils literal notranslate"><span class="pre">grep</span></code></p>
+<p>Recherchez le fichier <code class="docutils literal notranslate"><span class="pre">.config</span></code> dans le fichier <code class="docutils literal notranslate"><span class="pre">content.txt</span></code> que vous avez créé à l’exercice précédent</p>
+</section>
+<section id="exercice-10-le-pipeline-de-commande">
+<h2>Exercice 10 : Le pipeline de commande<a class="headerlink" href="#exercice-10-le-pipeline-de-commande" title="Permalink to this headline">#</a></h2>
+<p>L’outil BASH devient extrêmement puissant lorsqu’on l’utilise en pipeline, c’est à dire en <strong>flux de commandes</strong>. On peut combiner plusieurs commandes BASH séparées par le sigle <code class="docutils literal notranslate"><span class="pre">|</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commande</span><span class="o">-</span><span class="mi">1</span> <span class="o">|</span> <span class="n">Commande</span><span class="o">-</span><span class="mi">2</span> <span class="o">|</span> <span class="o">...|</span> <span class="n">Commande</span><span class="o">-</span><span class="n">N</span>
+</pre></div>
+</div>
+<p>On lit ce flux de gauche à droite, la première commande <code class="docutils literal notranslate"><span class="pre">Commande-1</span></code> se servira d’entrée à la seconde, etc..</p>
+<p>Ainsi :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">~</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">.</span><span class="n">config</span> 
+</pre></div>
+</div>
+<p>est équivalent à l’exercice précédent</p>
+<p>Recherchez le fichier /bin/ls et ses droit avec un pipeline et les commandes vues jusqu’à l’exercice 9</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1217,11 +1304,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="TP2-ARCH-00.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Architecture et réseaux</p>
+            <p class="prev-next-title">TP2-ARCH-00 : Introduction avec un micro:bit</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="TP2-ARCH-02.html" title="next page">
