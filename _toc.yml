@@ -34,6 +34,7 @@ parts:
       - file: 1M/algo/cours/Cours9
       - file: 1M/algo/cours/Cours10
       - file: 1M/algo/cours/Cours11
+      - file: 1M/algo/cours/C1-ALGO-11
     - file: 1M/installation/installation
     - file: 1M/prog/index
       sections:
@@ -88,6 +89,10 @@ parts:
       - file: 2M/prog/motdepasse/MotsDePasse
       - file: 2M/prog/hacking/hacking-romain      
       - file: 2M/prog/arbres/LesArbres
+    - file: 2M/histoire/index
+      sections:
+      - file: 2M/histoire/C2-HIST-01
+      - file: 2M/histoire/C2-HIST-02
     - file: 2M/architecture/index
       sections:
       - file: 2M/architecture/cours/C2-ARCH-01
