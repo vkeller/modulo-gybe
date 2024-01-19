@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Environnement de développement" href="../../installation/installation.html" />
@@ -531,7 +533,17 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">
+     C2-HIST-01 : Préhistoire de l’informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">
+     C2-HIST-02 : Histoire de l’informatique
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -823,35 +835,124 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#introduction-aux-tests-conditionnels-en-algorithmique">
    Introduction aux tests conditionnels en algorithmique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-des-tests-conditionnels">
+     Définition des tests conditionnels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importance-des-tests-conditionnels-dans-la-resolution-de-problemes-informatiques">
+     Importance des tests conditionnels dans la résolution de problèmes informatiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-applications-courantes-des-tests-conditionnels-dans-la-vie-quotidienne-et-en-informatique">
+     Exemples d’applications courantes des tests conditionnels dans la vie quotidienne et en informatique
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-bases-des-tests-conditionnels">
-   Les bases des tests conditionnels
+  <a class="reference internal nav-link" href="#concepts-fondamentaux-des-tests-conditionnels">
+   Concepts fondamentaux des tests conditionnels
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-structure-if">
+     La structure
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-structure-if-else">
+     La structure
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ...
+      </span>
+      <span class="pre">
+       else
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structures-de-controle-conditionnelles-avancees">
    Structures de contrôle conditionnelles avancées
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-multiples-if-else-if-else">
+     Tests multiples
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ...
+      </span>
+      <span class="pre">
+       else
+      </span>
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ....
+      </span>
+      <span class="pre">
+       else
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-imbriques">
+     Tests imbriqués
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercices-pratiques-et-etudes-de-cas">
-   Exercices pratiques et études de cas
+  <a class="reference internal nav-link" href="#operateurs-de-comparaison">
+   Opérateurs de comparaison
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valeurs-variables-comparees">
+     Valeurs (variables) comparées
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-6-operateurs-de-comparaison">
+     Les 6 opérateurs de comparaison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice1">
+   Exercice1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithmes-de-decision-et-de-tri">
-   Algorithmes de décision et de tri
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#projet-pratique">
-   Projet pratique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+  <a class="reference internal nav-link" href="#exercice-3-plus-difficile">
+   Exercice 3 (plus difficile)
   </a>
  </li>
 </ul>
@@ -877,35 +978,124 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#introduction-aux-tests-conditionnels-en-algorithmique">
    Introduction aux tests conditionnels en algorithmique
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-des-tests-conditionnels">
+     Définition des tests conditionnels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importance-des-tests-conditionnels-dans-la-resolution-de-problemes-informatiques">
+     Importance des tests conditionnels dans la résolution de problèmes informatiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemples-d-applications-courantes-des-tests-conditionnels-dans-la-vie-quotidienne-et-en-informatique">
+     Exemples d’applications courantes des tests conditionnels dans la vie quotidienne et en informatique
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-bases-des-tests-conditionnels">
-   Les bases des tests conditionnels
+  <a class="reference internal nav-link" href="#concepts-fondamentaux-des-tests-conditionnels">
+   Concepts fondamentaux des tests conditionnels
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-structure-if">
+     La structure
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-structure-if-else">
+     La structure
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ...
+      </span>
+      <span class="pre">
+       else
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structures-de-controle-conditionnelles-avancees">
    Structures de contrôle conditionnelles avancées
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-multiples-if-else-if-else">
+     Tests multiples
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ...
+      </span>
+      <span class="pre">
+       else
+      </span>
+      <span class="pre">
+       if
+      </span>
+      <span class="pre">
+       ....
+      </span>
+      <span class="pre">
+       else
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-imbriques">
+     Tests imbriqués
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercices-pratiques-et-etudes-de-cas">
-   Exercices pratiques et études de cas
+  <a class="reference internal nav-link" href="#operateurs-de-comparaison">
+   Opérateurs de comparaison
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valeurs-variables-comparees">
+     Valeurs (variables) comparées
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-6-operateurs-de-comparaison">
+     Les 6 opérateurs de comparaison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice1">
+   Exercice1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithmes-de-decision-et-de-tri">
-   Algorithmes de décision et de tri
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#projet-pratique">
-   Projet pratique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+  <a class="reference internal nav-link" href="#exercice-3-plus-difficile">
+   Exercice 3 (plus difficile)
   </a>
  </li>
 </ul>
@@ -918,59 +1108,159 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="c1-algo-11-les-tests-conditionnels">
+  <p><img alt="ifthenelse" src="../../../_images/ifthenelse.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-11-les-tests-conditionnels">
 <h1>C1-ALGO-11 : Les tests conditionnels<a class="headerlink" href="#c1-algo-11-les-tests-conditionnels" title="Permalink to this headline">#</a></h1>
 <section id="introduction-aux-tests-conditionnels-en-algorithmique">
 <h2>Introduction aux tests conditionnels en algorithmique<a class="headerlink" href="#introduction-aux-tests-conditionnels-en-algorithmique" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Définition des tests conditionnels
-Importance des tests conditionnels dans la résolution de problèmes informatiques
-Exemples d&#39;applications courantes des tests conditionnels dans la vie quotidienne et en informatique
+<section id="definition-des-tests-conditionnels">
+<h3>Définition des tests conditionnels<a class="headerlink" href="#definition-des-tests-conditionnels" title="Permalink to this headline">#</a></h3>
+<p>Un <strong>test conditionnel</strong> ou <strong>une condition</strong> est une expression qui peut prendre l’une des deux valeurs <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>. On dit également que c’est une valeur de type logique ou <strong>booléen</strong>.</p>
+<p><img alt="condition" src="../../../_images/condition.jpg" /></p>
+</section>
+<section id="importance-des-tests-conditionnels-dans-la-resolution-de-problemes-informatiques">
+<h3>Importance des tests conditionnels dans la résolution de problèmes informatiques<a class="headerlink" href="#importance-des-tests-conditionnels-dans-la-resolution-de-problemes-informatiques" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>L’objectif des tests conditionnels est de permettre à un programme de prendre des décisions en fonction de l’évaluation de conditions spécifiques.</p></li>
+<li><p>Leur utilité réside dans la capacité à automatiser la prise de décisions, ce qui est essentiel dans le développement de logiciels et la résolution de problèmes.</p></li>
+</ul>
+</section>
+<section id="exemples-d-applications-courantes-des-tests-conditionnels-dans-la-vie-quotidienne-et-en-informatique">
+<h3>Exemples d’applications courantes des tests conditionnels dans la vie quotidienne et en informatique<a class="headerlink" href="#exemples-d-applications-courantes-des-tests-conditionnels-dans-la-vie-quotidienne-et-en-informatique" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Test de parité : est-ce qu’un nombre est pair ou impair</p></li>
+<li><p>Test de l’âge : a-t-on l’âge requis pour entrer au cinéma</p></li>
+<li><p>Test du nombre de places disponibles : y a-t-il encore des places disponibles pour le concert de Kaaris ?</p></li>
+<li><p>Test du mot de passe : le mot de passe “1234” est-il le bon mot de passe ?</p></li>
+</ul>
+</section>
+</section>
+<section id="concepts-fondamentaux-des-tests-conditionnels">
+<h2>Concepts fondamentaux des tests conditionnels<a class="headerlink" href="#concepts-fondamentaux-des-tests-conditionnels" title="Permalink to this headline">#</a></h2>
+<section id="la-structure-if">
+<h3>La structure <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#la-structure-if" title="Permalink to this headline">#</a></h3>
+<p>La structure <code class="docutils literal notranslate"><span class="pre">if</span></code> est fondamentale en algorithmique. Elle permet d’aiguiller, de choisir un chemin dans un algorigramme en fonction d’une condition vraie ou fausse.</p>
+<p>En programmation, la structure <code class="docutils literal notranslate"><span class="pre">if</span></code> permet d’exécuter un bloc d’instructions si la <strong>condition</strong> (le test conditionnel) est vraie.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
 </pre></div>
 </div>
 </section>
-<section id="les-bases-des-tests-conditionnels">
-<h2>Les bases des tests conditionnels<a class="headerlink" href="#les-bases-des-tests-conditionnels" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Syntaxe des tests conditionnels dans un langage de programmation spécifique (par exemple : Python, Java, C++)
-Utilisation des opérateurs de comparaison (égalité, supériorité, infériorité, etc.)
-Utilisation des mots-clés &quot;if&quot;, &quot;else if&quot; et &quot;else&quot;
+<section id="la-structure-if-else">
+<h3>La structure <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">else</span></code><a class="headerlink" href="#la-structure-if-else" title="Permalink to this headline">#</a></h3>
+<p>Il est possible d’ajouter à la condition <code class="docutils literal notranslate"><span class="pre">if</span></code> la condition opposée <code class="docutils literal notranslate"><span class="pre">else</span></code> et d’exécuter un autre bloc d’instructions si la condition est fausse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="structures-de-controle-conditionnelles-avancees">
 <h2>Structures de contrôle conditionnelles avancées<a class="headerlink" href="#structures-de-controle-conditionnelles-avancees" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Utilisation de conditions multiples avec les opérateurs logiques (et, ou, non)
-Utilisation des opérateurs de comparaison pour comparer des chaînes de caractères et d&#39;autres types de données
+<section id="tests-multiples-if-else-if-else">
+<h3>Tests multiples <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">else</span> <span class="pre">if</span> <span class="pre">....</span> <span class="pre">else</span></code><a class="headerlink" href="#tests-multiples-if-else-if-else" title="Permalink to this headline">#</a></h3>
+<p>Il est possible de tester <strong>plusieurs conditions</strong> dans une structure de contrôle et ainsi exécuter <strong>autant de blocs différents</strong> qu’il y a de <strong>conditions vraies</strong> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
+<span class="k">else</span> <span class="p">(</span><span class="n">une</span> <span class="n">autre</span> <span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span> <span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
+<span class="k">else</span> <span class="p">(</span><span class="n">toutes</span> <span class="n">les</span> <span class="n">conditions</span> <span class="n">sont</span> <span class="n">fausses</span><span class="p">)</span> <span class="n">alors</span> <span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
 </pre></div>
 </div>
 </section>
-<section id="exercices-pratiques-et-etudes-de-cas">
-<h2>Exercices pratiques et études de cas<a class="headerlink" href="#exercices-pratiques-et-etudes-de-cas" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Résolution de problèmes simples en utilisant des tests conditionnels
-Étude de cas impliquant des algorithmes plus complexes avec des branches conditionnelles multiples
+<section id="tests-imbriques">
+<h3>Tests imbriqués<a class="headerlink" href="#tests-imbriques" title="Permalink to this headline">#</a></h3>
+<p>Lorsqu’une condition est vérifiée, alors il est possible de tester une autre condition dans le bloc d’instructions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">une</span> <span class="n">autre</span> <span class="n">condition</span><span class="p">)</span> <span class="n">alors</span> <span class="p">:</span>
+        <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span> <span class="n">si</span> <span class="n">la</span> <span class="n">première</span> <span class="n">condition</span> <span class="n">est</span> <span class="n">fausse</span>
 </pre></div>
 </div>
+<p>En <strong>Python</strong> : attention à <strong>l’indentation</strong> des instructions</p>
 </section>
-<section id="algorithmes-de-decision-et-de-tri">
-<h2>Algorithmes de décision et de tri<a class="headerlink" href="#algorithmes-de-decision-et-de-tri" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Introduction aux algorithmes de décision et de tri basés sur des conditions
-Exemples d&#39;algorithmes de tri (tri par sélection, tri à bulles) et d&#39;algorithmes de décision (recherche de l&#39;élément maximum, minimum)
-</pre></div>
-</div>
 </section>
-<section id="projet-pratique">
-<h2>Projet pratique<a class="headerlink" href="#projet-pratique" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Développement d&#39;un petit programme mettant en œuvre des tests conditionnels pour résoudre un problème spécifique
-Présentation des projets et discussion en classe
-</pre></div>
-</div>
+<section id="operateurs-de-comparaison">
+<h2>Opérateurs de comparaison<a class="headerlink" href="#operateurs-de-comparaison" title="Permalink to this headline">#</a></h2>
+<section id="valeurs-variables-comparees">
+<h3>Valeurs (variables) comparées<a class="headerlink" href="#valeurs-variables-comparees" title="Permalink to this headline">#</a></h3>
+<p>Lorsqu’on souhaite comparer (tester) <strong>deux variables</strong> (une variable est une valeur), alors il faut <strong>IMPERATIVEMENT</strong> qu’elles soient :</p>
+<ol class="simple">
+<li><p><strong>déclarée avant le test</strong> : soit comme entrée, soit comme une instruction</p></li>
+<li><p><strong>du même type</strong></p></li>
+</ol>
+<p>Le <strong>type d’une variable</strong> est une caractéristique d’une grandeur qui en décrit sa nature. Par exemple (non exhaustifs) :</p>
+<ul class="simple">
+<li><p>un <strong>entier</strong> (par exemple <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">6000</span></code>, etc..)</p></li>
+<li><p>une <strong>chaîne de caractères</strong> (par exemple <code class="docutils literal notranslate"><span class="pre">Caroline</span></code>, <code class="docutils literal notranslate"><span class="pre">année</span></code>, …)</p></li>
+</ul>
+<p>On ne peut pas comparer une châine de caractères avec un entier tout comme on <em>ne compare pas des pommes avec des poires</em></p>
 </section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Récapitulatif des concepts clés abordés dans le cours
-Importance des tests conditionnels dans le développement de logiciels
-Perspectives pour des études ou des carrières futures liées à l&#39;algorithmique et à la programmation
-</pre></div>
-</div>
+<section id="les-6-operateurs-de-comparaison">
+<h3>Les 6 opérateurs de comparaison<a class="headerlink" href="#les-6-operateurs-de-comparaison" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Opérateur logique</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Comparaison</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a &lt; b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est strictement plus petit que <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \leq b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est plus petit ou égal à <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a &gt; b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est strictement plus grand que <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \geq b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est plus grand ou égal à <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a = b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est identique à <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a \neq b\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code>est différent <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Il n’en existe pas d’autre !</p>
+</section>
+</section>
+<section id="exercice1">
+<h2>Exercice1<a class="headerlink" href="#exercice1" title="Permalink to this headline">#</a></h2>
+<p>Dessinez l’algorigramme d’un test vérifiant la disponibilité des places au concert de Kaaris</p>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Dessinez l’algorigramme d’un test vérifiant qu’un mot de passe entré est correct ou pas.</p>
+<ul class="simple">
+<li><p>entrée : un mot de passe</p></li>
+<li><p>sortie : un message indiquant que le mot de passe est correct ou non</p></li>
+</ul>
+</section>
+<section id="exercice-3-plus-difficile">
+<h2>Exercice 3 (plus difficile)<a class="headerlink" href="#exercice-3-plus-difficile" title="Permalink to this headline">#</a></h2>
+<p>Dessinez l’algorigramme décrivant un appareil permettant de sélectionner la satisfaction du client :</p>
+<ul class="simple">
+<li><p>Entrée : valeur du bouton</p></li>
+<li><p>sortie : degré de satisfaction</p></li>
+</ul>
+<p><img alt="satisfaction" src="../../../_images/satisfaction.jpg" /></p>
 </section>
 </section>
 
