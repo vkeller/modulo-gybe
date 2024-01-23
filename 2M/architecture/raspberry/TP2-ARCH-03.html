@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP2-ARCH-03 : Le nano-ordinateur RPi &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-ARCH-03 : Mise en réseau &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP2-ARCH-04 : Mise en réseau" href="TP2-ARCH-04.html" />
-    <link rel="prev" title="TP2-ARCH-01 : Les portes logiques" href="../TP/TP2-ARCH-02.html" />
+    <link rel="next" title="Stratégie de résolution" href="../../strategies/index.html" />
+    <link rel="prev" title="TP2-ARCH-02 : Le nano-ordinateur RPi" href="TP2-ARCH-02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -565,18 +565,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../TP/TP2-ARCH-02.html">
+    <a class="reference internal" href="../TP/TP2-ARCH-01.html">
      TP2-ARCH-01 : Les portes logiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP2-ARCH-03 : Le nano-ordinateur RPi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TP2-ARCH-04.html">
-     TP2-ARCH-04 : Mise en réseau
+     TP2-ARCH-03 : Mise en réseau
     </a>
    </li>
   </ul>
@@ -839,105 +839,6 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qu-est-ce-qu-un-raspberry-pi-rpi">
-   Qu’est-ce qu’un Raspberry Pi (RPi)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-materiels-du-raspberry-pi">
-   Composants MATÉRIELS du Raspberry Pi
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#processeur">
-     Processeur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#memoire-s">
-     Mémoire(s)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ports-materiels">
-     Ports matériels
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-logiciels-du-raspberry-pi">
-   Composants LOGICIELS du Raspberry Pi
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#systeme-d-exploitation">
-     Système d’exploitation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#applications">
-     Applications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#licences">
-     Licences
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-mise-en-place">
-   Exercice 1 : Mise en place
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-installation-d-un-systeme-d-exploitation">
-   Exercice 2 : Installation d’un système d’exploitation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-explorer-le-bureau">
-   Exercice 3 : Explorer le bureau
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-le-systeme-de-fichiers">
-   Exercice 4 : Le système de fichiers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-le-terminal-et-le-langage-bash">
-   Exercice 5 : Le terminal et le langage BASH
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-afficher-des-contenus-proteges-ou-caches">
-   Exercice 6 : Afficher des contenus protégés ou cachés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-demander-de-l-aide">
-   Exercice 7 : Demander de l’aide
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-la-redirection-dans-bash">
-   Exercice 8 : la redirection dans BASH
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-la-recherche-d-expressions-regulieres-grep">
-   Exercice 9 : La recherche d’expressions régulières : grep
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-10-le-pipeline-de-commande">
-   Exercice 10 : Le pipeline de commande
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -947,7 +848,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP2-ARCH-03 : Le nano-ordinateur RPi</h1>
+                <h1>TP2-ARCH-03 : Mise en réseau</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -962,105 +863,6 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qu-est-ce-qu-un-raspberry-pi-rpi">
-   Qu’est-ce qu’un Raspberry Pi (RPi)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-materiels-du-raspberry-pi">
-   Composants MATÉRIELS du Raspberry Pi
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#processeur">
-     Processeur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#memoire-s">
-     Mémoire(s)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ports-materiels">
-     Ports matériels
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composants-logiciels-du-raspberry-pi">
-   Composants LOGICIELS du Raspberry Pi
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#systeme-d-exploitation">
-     Système d’exploitation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#applications">
-     Applications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#licences">
-     Licences
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-mise-en-place">
-   Exercice 1 : Mise en place
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-installation-d-un-systeme-d-exploitation">
-   Exercice 2 : Installation d’un système d’exploitation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-explorer-le-bureau">
-   Exercice 3 : Explorer le bureau
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-le-systeme-de-fichiers">
-   Exercice 4 : Le système de fichiers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-le-terminal-et-le-langage-bash">
-   Exercice 5 : Le terminal et le langage BASH
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-afficher-des-contenus-proteges-ou-caches">
-   Exercice 6 : Afficher des contenus protégés ou cachés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-demander-de-l-aide">
-   Exercice 7 : Demander de l’aide
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-la-redirection-dans-bash">
-   Exercice 8 : la redirection dans BASH
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-la-recherche-d-expressions-regulieres-grep">
-   Exercice 9 : La recherche d’expressions régulières : grep
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-10-le-pipeline-de-commande">
-   Exercice 10 : Le pipeline de commande
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1071,246 +873,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="raspbian" src="../../../_images/raspbian.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-03-le-nano-ordinateur-rpi">
-<h1>TP2-ARCH-03 : Le nano-ordinateur RPi<a class="headerlink" href="#tp2-arch-03-le-nano-ordinateur-rpi" title="Permalink to this headline">#</a></h1>
+  <p><img alt="network" src="../../../_images/network.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-03-mise-en-reseau">
+<h1>TP2-ARCH-03 : Mise en réseau<a class="headerlink" href="#tp2-arch-03-mise-en-reseau" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Prise en main d’un Raspberry Pi 4</p></li>
-<li><p>Explorer le système d’exploitation Linux</p></li>
-<li><p>Connaître le système de fichier UNIX</p></li>
-<li><p>Acquérir les bases d’un language de scripting avec BASH</p></li>
-<li><p>Connaître les différents outils de développement à disposition</p></li>
+<li><p>Connaître les éléments matériels d’un réseau local (LAN)</p></li>
+<li><p>Configurer un réseau IPv4 sur des RPi</p></li>
 </ul>
-</section>
-<section id="qu-est-ce-qu-un-raspberry-pi-rpi">
-<h2>Qu’est-ce qu’un Raspberry Pi (RPi)<a class="headerlink" href="#qu-est-ce-qu-un-raspberry-pi-rpi" title="Permalink to this headline">#</a></h2>
-<p>Le Raspberry Pi est un projet développé à l’origine par l’Université de Cambridge en Angleterre. L’objectif principal du projet était de démocratiser l’accès aux ordinateurs. Les contraintes liées étaient donc :</p>
-<ol class="simple">
-<li><p>Utilisation de matériel à bas coût (notamment le processeur)</p></li>
-<li><p>Design extrêmement compact : taille d’une carte de crédit</p></li>
-<li><p>Système d’exploitation et logiciels provenant du monde des logiciels libres</p></li>
-</ol>
-<p>Le résultat est le suivant (ici la version 4 que nous allons utiliser dans ce TP)</p>
-<p><img alt="rpi4" src="../../../_images/raspberrypi4.png" /></p>
-<p>Son prix à l’unité est de quelques dizaines de francs suisses auxquels il faut ajouter un écran (HDMI), un clavier et une souris.</p>
-</section>
-<section id="composants-materiels-du-raspberry-pi">
-<h2>Composants MATÉRIELS du Raspberry Pi<a class="headerlink" href="#composants-materiels-du-raspberry-pi" title="Permalink to this headline">#</a></h2>
-<p>L’architecture du RPi suit celle de tous les ordinateurs classiques actuels : les laptops, les ordinateurs de bureau, les smartphones, etc.. Cette architecture est nommée <strong>Architecture de Von Neumann</strong>.</p>
-<p><img alt="von Neumann" src="../../../_images/vonneumannarch.png" /></p>
-<p>Elle décompose l’ordinateur en 4 parties distinctes :</p>
-<ol class="simple">
-<li><p>Unité Arithmétique et Logique (<em>Arithmetic and Logical Unit</em> ALU en anglais). Effectue les opérations du programme</p></li>
-<li><p>Unité de contrôle. Se charge du séquençage des opérations</p></li>
-<li><p>Mémoire. Elle contient à la fois les opérations du programme et les données</p></li>
-<li><p>Des entrées et sorties.</p></li>
-</ol>
-<section id="processeur">
-<h3>Processeur<a class="headerlink" href="#processeur" title="Permalink to this headline">#</a></h3>
-<p>Le processeur, appelé aussi Unité Centrale de Calcul, est le composant électronique qui traite l’ensemble des instructions en utilisant les données localisées (1) dans ses mémoires cache ou (2) dans la mémoire centrale (RAM).</p>
-<p>Sur un Raspberry Pi, c’est l’architecture ARM qui a été choisie.</p>
-<p>Le processeur est composé de :</p>
-<ol class="simple">
-<li><p>Une <strong>horloge</strong>. Elle est responsable de la <strong>synchronisation</strong> des flux de calculs et de données</p></li>
-<li><p>Des <strong>Unité Arithmétique et Logique</strong>. Ces ALU permettent de traiter les instructions du programme</p></li>
-<li><p>Des <strong>registres</strong>. Ce sont des mémoires de très petite taille servant à stocker les variables du programme.</p></li>
-<li><p>De trois <strong>BUS</strong>. Un bus permet de transmettre des données :</p>
-<ol class="simple">
-<li><p>Le bus de données. Permet de transmettre les donnée de et vers le processeur</p></li>
-<li><p>Le bus d’adresses. Permet de connaître la position d’une donnée (dans les registres ou la mémoire)</p></li>
-<li><p>Le bus de contrôle. Permet de gérer les différentes interruptions qui pourraient arriver lors de l’exécution d’un programme</p></li>
-</ol>
-</li>
-</ol>
-<p>Le processeur du RPi 4 est un <a class="reference external" href="https://www.arm.com/products/silicon-ip-cpu/cortex-a/cortex-a72">ARM Cortex-A72</a>. Il a les caractéristiques suivantes :</p>
-<ol class="simple">
-<li><p>L’horloge tourne à <code class="docutils literal notranslate"><span class="pre">1.5</span> <span class="pre">GHz</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> coeurs (qui contiennent chacun des ALU)</p></li>
-<li><p>La largeurde ses registres est de <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bits</span></code></p></li>
-</ol>
-</section>
-<section id="memoire-s">
-<h3>Mémoire(s)<a class="headerlink" href="#memoire-s" title="Permalink to this headline">#</a></h3>
-<p>Le Raspberry Pi possède deux types de mémoire :</p>
-<ol class="simple">
-<li><p>La <strong>mémoire vive</strong> (ou mémoire volatile). On y stocke les programmes et les données lorsque l’ordinateur est allumé. Une fois éteint, toutes les données qui y sont contenues sont perdues.</p></li>
-<li><p>La <strong>mémoire de stockage</strong> (ou mémoire de masse ou encore mémoire non-volatile). On y stocke les programme et les données qui seront conservées à l’extinction de l’ordinateur.</p></li>
-</ol>
-<p>Il est d’usage de représenter les différents types de mémoires dans un schéma hiérarchique qui met en évidence la <strong>capacité</strong> (ou taille), la <strong>vitesse</strong> et le <strong>coût</strong> :</p>
-<p><img alt="memoire" src="../../../_images/memory.png" /></p>
-<p>Les mémoires du RPi 4 ont les caractéristiques suivantes :</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">GB</span></code> de mémoire vive</p></li>
-<li><p>Une <code class="docutils literal notranslate"><span class="pre">carte</span> <span class="pre">micro-SD</span></code> de <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">GB</span></code></p></li>
-</ol>
-</section>
-<section id="ports-materiels">
-<h3>Ports matériels<a class="headerlink" href="#ports-materiels" title="Permalink to this headline">#</a></h3>
-<p>Les <strong>ports</strong> (externes) d’un ordinateur sont les différentes “prises” sur lesquels on peut brancher des <strong>périphériques</strong> tels qu’un clavier, une souris, un écran ou un câble réseau.</p>
-<p>Sur le RPi, les ports sont les suivants :</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">2x</span></code> ports <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">2.0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2x</span></code> ports <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">3.0</span></code> (plus rapides)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">1x</span></code> port <code class="docutils literal notranslate"><span class="pre">GigaEthernet</span></code> pour la connexion à un réseau filaire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2x</span></code> ports <code class="docutils literal notranslate"><span class="pre">micro-HDMI</span></code> pour connecter des écrans</p></li>
-</ol>
-<p>A noter que le port <code class="docutils literal notranslate"><span class="pre">USB-C</span></code> ne sert qu’à l’alimentation du RPi, on ne peut l’utiliser comme entrée-sortie</p>
-</section>
-</section>
-<section id="composants-logiciels-du-raspberry-pi">
-<h2>Composants LOGICIELS du Raspberry Pi<a class="headerlink" href="#composants-logiciels-du-raspberry-pi" title="Permalink to this headline">#</a></h2>
-<p>Pour que l’ensemble des composants matériels fonctionnent ensembles et correctement, un ordinateur a besoin d’un logiciel très important : <strong>le système d’exploitation</strong> (<em>Operating System</em> ou OS en anglais). Sans lui, aucun programme ne pourrait s’exécuter.</p>
-<p><img alt="os" src="../../../_images/os.png" /></p>
-<p>Il existe beaucoup de systèmes d’exploitation. Chacun possède ses propres spécificités et est prévu pour différents matériels ou usage. Parmi les principaux on peut citer :</p>
-<ul class="simple">
-<li><p><img alt="apple" src="../../../_images/apple.png" /><a class="reference external" href="https://fr.wikipedia.org/wiki/MacOS">Mac OS</a> qui est installé sur les ordinateurs de la marque Apple</p></li>
-<li><p><img alt="windows" src="../../../_images/windows.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Microsoft_Windows">Microsoft Windows</a> principalement installé sur les ordinateurs de bureau dans l’industrie</p></li>
-<li><p><img alt="android" src="../../../_images/android.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Android">Android</a> qui gère la plupart des smartphone du monde. Android est une variante de Linux</p></li>
-<li><p><img alt="linux" src="../../../_images/linux.png" /> <a class="reference external" href="https://fr.wikipedia.org/wiki/Linux">Linux</a> qui est un projet open source basé sur l’un des tout premiers systèmes d’exploitation : UNIX</p></li>
-</ul>
-<p>Voir <a class="reference external" href="https://gs.statcounter.com/os-market-share">Statcounter</a> pour une distribution mondiale des principaux systèmes d’exploitation.</p>
-<section id="systeme-d-exploitation">
-<h3>Système d’exploitation<a class="headerlink" href="#systeme-d-exploitation" title="Permalink to this headline">#</a></h3>
-<p>Le système d’exploitation du RPi est <strong>Linux</strong>.</p>
-</section>
-<section id="applications">
-<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">#</a></h3>
-<p>Le RPi dispose en outre de beaucoup d’applications telles que :</p>
-<ul class="simple">
-<li><p>Suite de bureautique Libreoffice</p></li>
-<li><p>Programmes de développement (Thonny, etc..)</p></li>
-<li><p>Logiciels éducatifs</p></li>
-<li><p>Jeux</p></li>
-<li><p>Etc..</p></li>
-</ul>
-<p>On peut en installer autant que l’on veut jusqu’à concurrence de la taille de la mémoire de masse.</p>
-</section>
-<section id="licences">
-<h3>Licences<a class="headerlink" href="#licences" title="Permalink to this headline">#</a></h3>
-<p>L’ensemble logiciel (système d’exploitation et applications) est en licence <strong>Open Source</strong></p>
-</section>
-</section>
-<section id="exercice-1-mise-en-place">
-<h2>Exercice 1 : Mise en place<a class="headerlink" href="#exercice-1-mise-en-place" title="Permalink to this headline">#</a></h2>
-<p>Le matériel à disposition se trouve sur le chariot. Par <strong>groupe</strong>, vous devez monter votre ordinateur :</p>
-<ol class="simple">
-<li><p>clavier USB-2</p></li>
-<li><p>souris USB-2</p></li>
-<li><p>câble micro-HDMI vers HDMI de l’écran</p></li>
-<li><p>câble USB-C pour l’alimentation (<strong>ne pas le brancher au secteur tout de suite</strong>)</p></li>
-</ol>
-</section>
-<section id="exercice-2-installation-d-un-systeme-d-exploitation">
-<h2>Exercice 2 : Installation d’un système d’exploitation<a class="headerlink" href="#exercice-2-installation-d-un-systeme-d-exploitation" title="Permalink to this headline">#</a></h2>
-<p>Nous allons travailler avec <a class="reference external" href="https://fr.wikipedia.org/wiki/Raspberry_Pi_OS">Raspberry Pi OS</a> qui est le système d’exploitation officiel des RPi. Il s’agit de l’installer sur la carte micro-SD :</p>
-<ol class="simple">
-<li><p>Insérer la carte SD dans le lecteur de cartes</p></li>
-<li><p>Insérer le lecteur de carte dans un port USB libre sur votre ordinateur Mac</p></li>
-<li><p>lancer le programme “Raspberry Pi Imager”</p></li>
-<li><p>Choisir le bon système d’exploitation (version pour RPi 4, 64 bits)</p></li>
-<li><p>Configurer un nom d’utilisateur (nous y reviendrons)</p></li>
-<li><p>Lancer l’installation</p></li>
-</ol>
-<p>Une fois l’installation terminée, vous pouvez retirer la carte SD du lecteur et l’insérer dans le RPi et <strong>brancher le câble d’alimentation au secteur</strong>.</p>
-<p>Votre ordinateur devrait démarrer</p>
-</section>
-<section id="exercice-3-explorer-le-bureau">
-<h2>Exercice 3 : Explorer le bureau<a class="headerlink" href="#exercice-3-explorer-le-bureau" title="Permalink to this headline">#</a></h2>
-<p>Voilà, vous êtes normalent connecté.e avec l’identifiant que vous avez choisi lors de l’exercice précédent. Vous remarquez que vous n’avez pas dû donner le mot de passe choisi. La raison : il n’y a actuellement <strong>qu’un seul utilisateur</strong> enregistré sur l’ordinateur, et cet utilisateur n’a pas tous les droits. Il est par contre possible de lui <strong>upgrader</strong> ses droits en <strong>superutilisateur</strong> avec le mot de passe. Nous y reviendrons.</p>
-<p><img alt="desktop" src="../../../_images/rpidesktop.png" /></p>
-<p>L’icône <strong>framboise</strong> dans le coin supérieur gauche donne accès aux différentes applications :</p>
-<ul class="simple">
-<li><p>Programmation</p></li>
-<li><p>Internet</p></li>
-<li><p>Sound&amp;Video</p></li>
-<li><p>Graphics</p></li>
-<li><p>Accessories</p></li>
-<li><p>etc..</p></li>
-</ul>
-<p>Lancez Thonny et programmez un <code class="docutils literal notranslate"><span class="pre">helloworld.py</span></code></p>
-</section>
-<section id="exercice-4-le-systeme-de-fichiers">
-<h2>Exercice 4 : Le système de fichiers<a class="headerlink" href="#exercice-4-le-systeme-de-fichiers" title="Permalink to this headline">#</a></h2>
-<p>Dans le coin supérieur gauche, à côté de l’icône framboise se trouve le <strong>File Manager</strong>. Il permet d’accéder au système de fichier du RPi.</p>
-<p>Un système de fichiers Linux est un système hiérarchisé en arbre. La racine est symbolisée par <code class="docutils literal notranslate"><span class="pre">/</span></code> :</p>
-<p><img alt="FS" src="../../../_images/filesystem.jpg" />.</p>
-<p>Trouvez le contenu du fichier :</p>
-<ul class="simple">
-<li><p>/etc/firefox/firefox.js</p></li>
-<li><p>/home/votre_nom_utilisateur/.bashrc</p></li>
-<li><p>/var/log/boot.log</p></li>
-</ul>
-<p>Certains ne sont pas visibles, d’autres sont interdits. Pourquoi ?</p>
-</section>
-<section id="exercice-5-le-terminal-et-le-langage-bash">
-<h2>Exercice 5 : Le terminal et le langage BASH<a class="headerlink" href="#exercice-5-le-terminal-et-le-langage-bash" title="Permalink to this headline">#</a></h2>
-<p>Lorsqu’on travaille avec un ordinateur sous Linux, il est assez rare de n’utiliser que la souris. L’interaction avec l’ordinateur se fait au travers d’un <strong>terminal</strong>.</p>
-<ul class="simple">
-<li><p>Ouvrez un terminal</p></li>
-</ul>
-<p>Voici quelques commandes qui permettent de naviguer dans le système de fichier :</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> : affiche la position courante</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> : permet de changer de dossier</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code> : permet de lister les fichiers présents dans un dossier</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">nom_de_fichier</span></code> : permet d’afficher le contenu du fichier <code class="docutils literal notranslate"><span class="pre">nom_de_fichier</span></code></p></li>
-</ul>
-<p>Il existe deux faux répertoires très important et qui sont présents dans tous les dossiers (à l’exception de <code class="docutils literal notranslate"><span class="pre">/</span></code>) :</p>
-<ul class="simple">
-<li><p>le dossier courant : <code class="docutils literal notranslate"><span class="pre">.</span></code></p></li>
-<li><p>le dossier parent : <code class="docutils literal notranslate"><span class="pre">..</span></code></p></li>
-</ul>
-</section>
-<section id="exercice-6-afficher-des-contenus-proteges-ou-caches">
-<h2>Exercice 6 : Afficher des contenus protégés ou cachés<a class="headerlink" href="#exercice-6-afficher-des-contenus-proteges-ou-caches" title="Permalink to this headline">#</a></h2>
-<p>A l’exercice 4, on a vu que <code class="docutils literal notranslate"><span class="pre">/var/log/boot.log</span></code> était interdit d’accès et que <code class="docutils literal notranslate"><span class="pre">/home/votre_nom_utilisateur/.bashrc</span></code> était invisible.</p>
-<p>Dans le terminal, essayez d’upgrader vos permissions en devenant <strong>superutilisateur</strong>. Cela se fait avec la commande <code class="docutils literal notranslate"><span class="pre">sudo</span></code>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">cat</span> <span class="pre">/var/log/boot.log</span></code></p>
-<p><strong>!!! ATTENTION : le mode superutilisateur permet de tout faire, y compris de tout casser !!!</strong></p>
-</section>
-<section id="exercice-7-demander-de-l-aide">
-<h2>Exercice 7 : Demander de l’aide<a class="headerlink" href="#exercice-7-demander-de-l-aide" title="Permalink to this headline">#</a></h2>
-<p>Chaque commande BASH possède une aide pré-installée qui liste l’entier des possibilités de la commande. On utilise pour se faire <code class="docutils literal notranslate"><span class="pre">man</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">ls</span>
-</pre></div>
-</div>
-<p>affiche toutes les options possibles de la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
-<p>En vous servant de l’aide.</p>
-<ul class="simple">
-<li><p>Affichez le dernier fichier créé dans votre répertoire personnel</p></li>
-<li><p>Affichez les fichiers du répertoire personnel dans l’ordre chronologique de création</p></li>
-</ul>
-</section>
-<section id="exercice-8-la-redirection-dans-bash">
-<h2>Exercice 8 : la redirection dans BASH<a class="headerlink" href="#exercice-8-la-redirection-dans-bash" title="Permalink to this headline">#</a></h2>
-<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> permet de <em>rediriger</em> le résultat d’une commande vers un fichier. Par exemple :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
-<span class="n">ls</span> <span class="o">/</span> <span class="o">&gt;</span> <span class="n">racine</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-<p>permet de rediriger le résultat de la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> à la racine <code class="docutils literal notranslate"><span class="pre">/</span></code> vers le fichier <code class="docutils literal notranslate"><span class="pre">racine.txt</span></code></p>
-<p>Redirigez le contenu complet de votre répertoire personnel vers un fichier <code class="docutils literal notranslate"><span class="pre">content.txt</span></code> et affichez-le</p>
-</section>
-<section id="exercice-9-la-recherche-d-expressions-regulieres-grep">
-<h2>Exercice 9 : La recherche d’expressions régulières : grep<a class="headerlink" href="#exercice-9-la-recherche-d-expressions-regulieres-grep" title="Permalink to this headline">#</a></h2>
-<p>Les <strong>expressions régulières</strong> dans BASH sont des chaînes de caractères. On peut rechercher une expression régulière dans un fichier avec la commande <code class="docutils literal notranslate"><span class="pre">grep</span></code></p>
-<p>Recherchez le fichier <code class="docutils literal notranslate"><span class="pre">.config</span></code> dans le fichier <code class="docutils literal notranslate"><span class="pre">content.txt</span></code> que vous avez créé à l’exercice précédent</p>
-</section>
-<section id="exercice-10-le-pipeline-de-commande">
-<h2>Exercice 10 : Le pipeline de commande<a class="headerlink" href="#exercice-10-le-pipeline-de-commande" title="Permalink to this headline">#</a></h2>
-<p>L’outil BASH devient extrêmement puissant lorsqu’on l’utilise en pipeline, c’est à dire en <strong>flux de commandes</strong>. On peut combiner plusieurs commandes BASH séparées par le sigle <code class="docutils literal notranslate"><span class="pre">|</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commande</span><span class="o">-</span><span class="mi">1</span> <span class="o">|</span> <span class="n">Commande</span><span class="o">-</span><span class="mi">2</span> <span class="o">|</span> <span class="o">...|</span> <span class="n">Commande</span><span class="o">-</span><span class="n">N</span>
-</pre></div>
-</div>
-<p>On lit ce flux de gauche à droite, la première commande <code class="docutils literal notranslate"><span class="pre">Commande-1</span></code> se servira d’entrée à la seconde, etc..</p>
-<p>Ainsi :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">~</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">.</span><span class="n">config</span> 
-</pre></div>
-</div>
-<p>est équivalent à l’exercice précédent</p>
-<p>Recherchez le fichier /bin/ls et ses droit avec un pipeline et les commandes vues jusqu’à l’exercice 9</p>
 </section>
 </section>
 
@@ -1341,17 +912,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../TP/TP2-ARCH-02.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="TP2-ARCH-02.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP2-ARCH-01 : Les portes logiques</p>
+            <p class="prev-next-title">TP2-ARCH-02 : Le nano-ordinateur RPi</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="TP2-ARCH-04.html" title="next page">
+    <a class='right-next' id="next-link" href="../../strategies/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP2-ARCH-04 : Mise en réseau</p>
+        <p class="prev-next-title">Stratégie de résolution</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
