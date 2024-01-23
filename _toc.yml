@@ -97,9 +97,9 @@ parts:
       sections:
       - file: 2M/architecture/cours/C2-ARCH-01
       - file: 2M/architecture/raspberry/TP2-ARCH-00
-      - file: 2M/architecture/TP/TP2-ARCH-02
+      - file: 2M/architecture/TP/TP2-ARCH-01
+      - file: 2M/architecture/raspberry/TP2-ARCH-02
       - file: 2M/architecture/raspberry/TP2-ARCH-03
-      - file: 2M/architecture/raspberry/TP2-ARCH-04
     - file: 2M/strategies/index
       sections:
       - file: 2M/strategies/C2-STRAT-01
