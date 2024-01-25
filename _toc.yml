@@ -42,7 +42,7 @@ parts:
       - file: 1M/prog/intro2/intro2
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
-      - file: 1M/prog/conditions/Introduction
+      - file: 1M/prog/conditions/TP1-PROG-05
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/types/Types
       - file: 1M/prog/tableaux/Tableaux
