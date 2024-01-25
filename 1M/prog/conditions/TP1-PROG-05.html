@@ -1,0 +1,1209 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>TP1-PROG-05 - Les tests conditionnels &#8212; Education Numérique Ecole de maturité</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP1-PROG-06 - Les dessins animés" href="../dessinsanimes/dessins.html" />
+    <link rel="prev" title="TP1-PROG-04 - Dessiner des spirales" href="../boucles/boucles2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   DO Informatique 1M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../representation/index.html">
+   Représentation des données
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours01.html">
+     C1-REDO-01 : Du monde physique au monde numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours02.html">
+     C1-REDO-02 binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours03.html">
+     C1-REDO-03 : codage de caractères
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Cours4.html">
+     C1-REDO-04 : Opérations en binaire et en hexadécimal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/Revision.html">
+     C-REDO-05 Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp1.html">
+     TP1-REDO-01 : les images matricielles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp2.html">
+     TP1-REDO-02 : Le son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/tp3.html">
+     TP1-REDO-03 : Compression de fichiers et types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours1.html">
+     C1-ALGO-01 : Introduction à l’algorithmique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours2.html">
+     C1-ALGO-02 : Des algorigrammes aux algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours3.html">
+     C1-ALGO-03 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours4.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.html">
+     C1-ALGO-05.00 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.1.html">
+     C1-ALGO-05.01 Algorithmes classiques (Recherche)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.2.html">
+     C1-ALGO-05.02 Algorithmes classiques (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours6.html">
+     C1-ALGO-06 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours7.html">
+     C1-ALGO-07 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours8.html">
+     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours9.html">
+     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours10.html">
+     C-ALGO-10 - Introduction à la cryptologie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours11.html">
+     R-ALGO-01 - révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-11.html">
+     C1-ALGO-11 : Les tests conditionnels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Programmation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro1/intro1.html">
+     TP1-PROG-01 - Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro2/intro2.html">
+     TP1-PROG-02 - Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles1.html">
+     TP1-PROG-03 - Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boucles/boucles2.html">
+     TP1-PROG-04 - Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     TP1-PROG-05 - Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dessinsanimes/dessins.html">
+     TP1-PROG-06 - Les dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../types/Types.html">
+     TP1-PROG-07 - Notions de types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tableaux/Tableaux.html">
+     TP1-PROG-08 - Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../files/LesFiles.html">
+     TP1-PROG-09 - Les Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../piles/LesPiles.html">
+     TP1-PROG-09 - Les Piles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cryptographie/Cryptographie.html">
+     TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../architecture/fichiers/SystemeDeFichiers.html">
+     TP1-ARCH-01 : Le système de fichiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/IntroductionESDN.html">
+     C1-ESDN-01 : Enjeux sociaux du Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/Cypherpunks.html">
+     C1-ESDN-02 : Le mouvement Cypherpunk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/CapitalismeDeSurveillance.html">
+     C1-ESDN-03 : Le capitalisme de surveillance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/LesReseaux.html">
+     TP1-ESDN-01 : Les réseaux informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/presentations/PresentationsESDN.html">
+     TP1-ESDN-02 : Présentations Enjeux sociaux du Numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../jeux/index.html">
+   Jeux informatiques et logiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeux/logique.html">
+     C1-JEUX-01 : Quizz de logique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/index.html">
+   DO Informatique 2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/Revision2M-1.html">
+     R2-ALGO-01 : Révision Algorithmes 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/Revision2M-2.html">
+     C2-ALGO-01 : Révision algorithmes (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-02.html">
+     C2-ALGO-02 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-03.html">
+     C2-ALGO-03 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-04.html">
+     C2-ALGO-04 : Taille du problème
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">
+     C2-ALGO-05 : Introduction à la théorie des graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-06.html">
+     C2-ALGO-06 : Théorie des graphes, le voyageur de commerce
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-01.html">
+     R1-ALGO-01 : Révision
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/revisions/Revision1M.html">
+     R2-PROG-01 : Rappels programmation 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-01.html">
+     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-02.html">
+     TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/syracuse/Syracuse.html">
+     TP2-PROG-05 : Conjecture de Collatz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/dictionnaires/Dictionnaires2.html">
+     TP2-PROG-06 : Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/motdepasse/MotsDePasse.html">
+     TP2-PROG-07 : Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/hacking/hacking-romain.html">
+     TP2-PROG-08: Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">
+     TP2-PROG-09 : Les arbres
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/histoire/index.html">
+   Histoire de l’informatique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">
+     C2-HIST-01 : Préhistoire de l’informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">
+     C2-HIST-02 : Histoire de l’informatique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/architecture/index.html">
+   Architecture et réseaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-01.html">
+     C2-ARCH-01 : Architecture de Von Neumann
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">
+     TP2-ARCH-00 : Introduction avec un micro:bit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">
+     TP2-ARCH-01 : Les portes logiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/strategies/index.html">
+   Stratégie de résolution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-01.html">
+     C2-STRAT-01 : Stratégies de résolution de problèmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">
+     C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/machine-learning/index.html">
+   Intelligence artificielle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/IntroML.html">
+     C-IA-01 : Introduction à l’Intelligence Artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/Automates.html">
+     C-IA-02 : Automates cellulaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/RNN.html">
+     C-IA-03 : Réseaux de neurones artificiels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/tp/JeudelavieTP.html">
+     TP-IA-01 : Le jeu de la vie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/esdn/index.html">
+   Enjeux sociaux du numérique
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliographie
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../biblio.html">
+   Livres et sources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/conditions/TP1-PROG-05.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/prog/conditions/TP1-PROG-05.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instruction-conditionnelle">
+   Instruction conditionnelle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+   Plusieurs conditions dans un test :
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   et opérateurs logiques
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     and
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     or
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-la-piscine-tire-du-concours-castor-informatique">
+   Exercice 4 La Piscine (tiré du concours Castor Informatique)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>TP1-PROG-05 - Les tests conditionnels</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instruction-conditionnelle">
+   Instruction conditionnelle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+   Plusieurs conditions dans un test :
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   et opérateurs logiques
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     and
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     or
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-la-piscine-tire-du-concours-castor-informatique">
+   Exercice 4 La Piscine (tiré du concours Castor Informatique)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="if-then-else" src="../../../_images/diag.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-05-les-tests-conditionnels">
+<h1>TP1-PROG-05 - Les tests conditionnels<a class="headerlink" href="#tp1-prog-05-les-tests-conditionnels" title="Permalink to this headline">#</a></h1>
+<section id="instruction-conditionnelle">
+<h2>Instruction conditionnelle<a class="headerlink" href="#instruction-conditionnelle" title="Permalink to this headline">#</a></h2>
+<p>la structure est la suivante : SI … ALORS … SINON</p>
+<p>En python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
+   <span class="n">instruction1</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">instruction2</span>
+</pre></div>
+</div>
+<p>La condition est un test. Un test compare deux valeurs et retourne VRAI ou FAUX. Par exemple :</p>
+<ul class="simple">
+<li><p>si la variable a est plus grand que 4 alors …</p></li>
+<li><p>si la chaîne de caractères prenom est égal à ‘Caroline’ alors…</p></li>
+</ul>
+<p>Que l’on traduit en Python par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="p">:</span>
+</pre></div>
+</div>
+<p>et</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">prenom</span> <span class="o">==</span> <span class="s1">&#39;Caroline&#39;</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Attention à la notation, le mot en français “ALORS” se traduit par les deux points.</p>
+<p>Si un test est vrai, alors il existe son opposé qui est faux. Et vice-versa !</p>
+<ul class="simple">
+<li><p>le test “si la variable a est plus grand que 4” est vrai, alors l’opposé est “la variable a est plus petite ou égale à 4”</p></li>
+<li><p>le test “si la chaîne de caractères prenom est égal à ‘Caroline’” est vrai, alors l’opposé est “la chaîne de caractères prenom n’est pas égal à ‘Caroline’”</p></li>
+</ul>
+<p>En python cela se traduit par le mot-clef <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">prenom</span> <span class="o">==</span> <span class="s1">&#39;Caroline&#39;</span><span class="p">:</span>
+   <span class="n">instruction</span><span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">autre</span> <span class="n">instruction</span>
+</pre></div>
+</div>
+<p>Il est possible d’imbriquer plusieurs tests</p>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme qui vérifie qu’un nombre est pair ET divisible par 5</p>
+</section>
+<section id="plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
+<h2>Plusieurs conditions dans un test : <code class="docutils literal notranslate"><span class="pre">elif</span></code> et opérateurs logiques <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’il y a plusieurs conditions à remplir pour un test conditionnel, alors on peut utiliser les mot-clefs <code class="docutils literal notranslate"><span class="pre">elif</span></code> ou les opérateurs logiques <code class="docutils literal notranslate"><span class="pre">or</span></code> et <code class="docutils literal notranslate"><span class="pre">and</span></code></p>
+<p>La clause <code class="docutils literal notranslate"><span class="pre">elif</span></code> teste une nouvelle condition si la première (if) est fausse. Si cette condition est fausse, alors Python pousuit sur <code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+<span class="k">elif</span> <span class="n">condition</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+<span class="k">else</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+</pre></div>
+</div>
+<p>S’agissant des opérateurs logiques :</p>
+<p>Si un test requiert que deux tests soient vrais en même temps, on utilise <code class="docutils literal notranslate"><span class="pre">and</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="ow">and</span> <span class="n">condition2</span> <span class="p">:</span>
+    <span class="n">instruction</span>
+</pre></div>
+</div>
+<p>Si un test requiert que qu’un des deux tests soient vrais, alors on utilise <code class="docutils literal notranslate"><span class="pre">or</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="ow">or</span> <span class="n">condition2</span> <span class="p">:</span>
+    <span class="n">instruction</span>
+
+</pre></div>
+</div>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme qui vérifie qu’un nombre est divisible par 3 et par 7 en utilisant deux conditions dans un seul test.</p>
+</section>
+<section id="exercice-4-la-piscine-tire-du-concours-castor-informatique">
+<h2>Exercice 4 La Piscine (tiré du concours Castor Informatique)<a class="headerlink" href="#exercice-4-la-piscine-tire-du-concours-castor-informatique" title="Permalink to this headline">#</a></h2>
+<p><img alt="castor piscine" src="../../../_images/piscine.jpg" /></p>
+<p>Analysons les conditions d’entrée:</p>
+<ul class="simple">
+<li><p>Si la personne est âgée de 8 ans ou plus</p></li>
+<li><p>Si la personne a moins de 8 ans, alors elle doit être accompagnée par une personne de 10 ans ou plus</p></li>
+</ul>
+<p>Consigne :</p>
+<ul class="simple">
+<li><p>Dessinez l’algorigramme</p></li>
+<li><p>Ecrivez le programme en Python correspondant</p></li>
+</ul>
+</section>
+<section id="exercice-5-pour-aller-plus-loin">
+<h2>Exercice 5 (pour aller plus loin)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ajoutez une question de type philosophie: “La grande question sur la vie, l’univers et le reste” dont la réponse est : A vous de trouver</p></li>
+<li><p>Ajoutez une nouvelle catégorie de question de type psychologie en implémentant une nouvelle fonction quizz_psycho() sur le même modèle que les 2 autres.</p></li>
+</ul>
+<p>En modifiant le code suivant</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quizz_info</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Qui est le meilleur prof: </span><span class="se">\n</span><span class="s2"> 1 : M. Keller </span><span class="se">\n</span><span class="s2"> 2: un autre ... </span><span class="se">\n</span><span class="s2"> Votre réponse:&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonne réponse&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mauvaise réponse&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">quizz_philo</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;quizz philo&quot;</span><span class="p">)</span>
+    
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quizz simple&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jouons ? C&#39;est parti...&quot;</span><span class="p">)</span>
+<span class="n">reponse</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="n">reponse</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisissez votre question: </span><span class="se">\n</span><span class="s2"> 1: informatique </span><span class="se">\n</span><span class="s2"> 2: philo </span><span class="se">\n</span><span class="s2"> Votre réponse (&#39;q&#39; pour quitter):&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">):</span>
+        <span class="n">quizz_info</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">):</span>
+        <span class="n">quizz_philo</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez décidé de quitter&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span><span class="s2">&quot;invalide. Tapez 1 ou 2 ou q pour quitter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quizz simple
+Jouons ? C&#39;est parti...
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 15&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">reponse</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">while</span> <span class="n">reponse</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisissez votre question: </span><span class="se">\n</span><span class="s2"> 1: informatique </span><span class="se">\n</span><span class="s2"> 2: philo </span><span class="se">\n</span><span class="s2"> Votre réponse (&#39;q&#39; pour quitter):&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">quizz_info</span><span class="p">()</span>
+
+<span class="nn">File ~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/prog/conditions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../boucles/boucles2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TP1-PROG-04 - Dessiner des spirales</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../dessinsanimes/dessins.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP1-PROG-06 - Les dessins animés</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
