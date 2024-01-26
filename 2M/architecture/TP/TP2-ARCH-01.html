@@ -294,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/conditions/Introduction.html">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
      TP1-PROG-05 - Les tests conditionnels
     </a>
    </li>
@@ -326,6 +326,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/prog/cryptographie/Cryptographie.html">
      TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
     </a>
    </li>
   </ul>
@@ -840,13 +845,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outil-a-disposition">
-   Outil à disposition
+  <a class="reference internal nav-link" href="#couches-d-abstractions-architecturales">
+   Couches d’abstractions architecturales
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#couches-d-abstractions-architecturales">
-   Couches d’abstractions architecturales
+  <a class="reference internal nav-link" href="#circuit-electronique-de-test">
+   Circuit électronique de test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outil-a-disposition">
+   Outil à disposition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1135,13 +1145,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outil-a-disposition">
-   Outil à disposition
+  <a class="reference internal nav-link" href="#couches-d-abstractions-architecturales">
+   Couches d’abstractions architecturales
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#couches-d-abstractions-architecturales">
-   Couches d’abstractions architecturales
+  <a class="reference internal nav-link" href="#circuit-electronique-de-test">
+   Circuit électronique de test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outil-a-disposition">
+   Outil à disposition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1425,16 +1440,21 @@ title="Print to PDF"
 <li><p>être capable de penser, dessiner et tester des circuits logiques simples</p></li>
 </ul>
 </section>
-<section id="outil-a-disposition">
-<h2>Outil à disposition<a class="headerlink" href="#outil-a-disposition" title="Permalink to this headline">#</a></h2>
-<p>Ce TP sera effectué sur le <a class="reference external" href="https://logic.modulo-info.ch/">logiciel de simulation logic</a>. Les premiers exercices vous permettent de prendre en main le logiciel.</p>
-<p>Il est toujours possible de <strong>sauvegarder son travail</strong> sous la forme d’un fichier <code class="docutils literal notranslate"><span class="pre">json</span></code>. Ce fichier peut ensuite être rechargé dans le même logiciel de simulation.</p>
-</section>
 <section id="couches-d-abstractions-architecturales">
 <h2>Couches d’abstractions architecturales<a class="headerlink" href="#couches-d-abstractions-architecturales" title="Permalink to this headline">#</a></h2>
 <p>Un ordinateur moderne fonctionne en binaire. Il ne connaît que deux valeurs définies : <code class="docutils literal notranslate"><span class="pre">1</span></code> pour vrai et <code class="docutils literal notranslate"><span class="pre">0</span></code> pour faux. Physiquement, les deux valeurs <code class="docutils literal notranslate"><span class="pre">0</span></code> (<code class="docutils literal notranslate"><span class="pre">False</span></code>), <code class="docutils literal notranslate"><span class="pre">1</span></code> (ou <code class="docutils literal notranslate"><span class="pre">True</span></code>) sont représentées par deux tensions électriques différentes : <code class="docutils literal notranslate"><span class="pre">V0</span></code> et <code class="docutils literal notranslate"><span class="pre">V1</span></code>.</p>
 <p><img alt="abstraction" src="../../../_images/abstraction.png" /></p>
 <p>Ce TP se concentre sur des couches de plus <strong>bas niveau</strong> : à celui des <strong>circuits électroniques</strong></p>
+</section>
+<section id="circuit-electronique-de-test">
+<h2>Circuit électronique de test<a class="headerlink" href="#circuit-electronique-de-test" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on se situe dans les couches les plus basses de l’architecture d’un ordinateur, il est tout à fait possible de tester ses réalisations à l’aide d’un <strong>breadboard</strong> (une <em>platine d’experimentation</em>). C’est un outil qui permet de créer des prototypes de circuits électroniques et de les tester : il ne nécessite aucune soudure. Sur ce breadboard, on connecte les différents composants électroniques à l’aide de câbles de connexion. Une simple pile électrique fourni l’énergie.</p>
+<p><img alt="breadboard" src="../../../_images/breadboard.jpg" /></p>
+</section>
+<section id="outil-a-disposition">
+<h2>Outil à disposition<a class="headerlink" href="#outil-a-disposition" title="Permalink to this headline">#</a></h2>
+<p>Ce TP sera effectué sur le <a class="reference external" href="https://logic.modulo-info.ch/">logiciel de simulation logic</a>. Les premiers exercices vous permettent de prendre en main le logiciel.</p>
+<p>Il est toujours possible de <strong>sauvegarder son travail</strong> sous la forme d’un fichier <code class="docutils literal notranslate"><span class="pre">json</span></code>. Ce fichier peut ensuite être rechargé dans le même logiciel de simulation.</p>
 </section>
 <section id="definition-une-porte-logique">
 <h2>Définition : une porte logique<a class="headerlink" href="#definition-une-porte-logique" title="Permalink to this headline">#</a></h2>
