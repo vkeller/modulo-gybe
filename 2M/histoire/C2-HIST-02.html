@@ -256,6 +256,11 @@ const thebe_selector_output = ".output, .cell_output"
      C1-ALGO-11 : Les tests conditionnels
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -294,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/conditions/Introduction.html">
+    <a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05.html">
      TP1-PROG-05 - Les tests conditionnels
     </a>
    </li>
@@ -326,6 +331,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../1M/prog/cryptographie/Cryptographie.html">
      TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1M/prog/IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
     </a>
    </li>
   </ul>
@@ -565,18 +575,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/TP/TP2-ARCH-02.html">
+    <a class="reference internal" href="../architecture/TP/TP2-ARCH-01.html">
      TP2-ARCH-01 : Les portes logiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-03.html">
-     TP2-ARCH-01 : Le nano-ordinateur RPi
+    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-04.html">
-     TP2-ARCH-02 : Mise en réseau
+    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
     </a>
    </li>
   </ul>
@@ -835,6 +845,232 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-un-ordinateur">
+   Définition : un ordinateur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#si-on-resume">
+   Si on résume …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alan-turing-et-sa-machine-theorique">
+   Alan Turing et sa machine théorique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plus-rapide-que-l-etre-humain">
+   1937 : Plus rapide que l’être humain
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-zuse-z1">
+     La Zuse Z1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-zuse-z3">
+     La Zuse Z3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-automatique">
+   1944 : Machine automatique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#harvard-mark-1-ibm-ascc">
+     Harvard Mark 1 (IBM ASCC)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-electronique-tubes-a-vide">
+   1946 : Machine électronique (tubes à vide)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eniac">
+     ENIAC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-enregistres">
+   1948 : Les programmes enregistrés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manchester-mark-1">
+     Manchester Mark 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#en-suisse">
+   1948 : En Suisse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ermeth">
+     ERMETH
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premier-succes-commercial">
+   1954 : Premier succès commercial
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ibm-701">
+     IBM 701
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-tubes-a-vide-aux-transistors">
+   1953 : Des tubes à vide aux transistors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#university-of-manchester-etc">
+     1953 : University of Manchester ETC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-transistors-aux-circuits-integres">
+   1958 : Des transistors aux circuits intégrés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missiles-et-missions-apollo">
+     Missiles et missions Apollo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-premier-micro-processeur">
+   1971 : Le premier micro-processeur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intel-4004">
+     Intel 4004
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motorola-6800">
+     1974 Motorola 6800
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annees-1970-les-micro-ordinateurs">
+   Années 1970 : les
+   <em>
+    micro-ordinateurs
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intel-sim-8-01">
+     1972 Intel Sim-8-01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motorola-mek6800-d2">
+     1976 Motorola MEK6800-D2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-1">
+     1976 Apple 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aujourd-hui-les-ordinateurs-de-maison">
+   1980 - aujourd’hui : les
+   <em>
+    ordinateurs de maison
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commodore-64">
+     1982 : Commodore 64
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-macintosh">
+     1984 : Apple Macintosh
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ibm-ps-1">
+     1991 : IBM PS/1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osborne-1-le-premier-transportable">
+     1981 : Osborne 1 : le premier
+     <em>
+      transportable
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#toshiba-t1100-le-premier-portable">
+     1985 : Toshiba T1100 : le premier
+     <em>
+      portable
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-powerbook">
+     1991 : Apple Powerbook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aujourd-hui-les-smartphones">
+   Aujourd’hui : les smartphones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-iphone">
+     2008 : Apple Iphone
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-de-performances">
+   Comparaison de performances
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-a-l-histoire-de-l-informatique">
    Introduction à l’histoire de l’informatique
   </a>
@@ -879,6 +1115,232 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-un-ordinateur">
+   Définition : un ordinateur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#si-on-resume">
+   Si on résume …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alan-turing-et-sa-machine-theorique">
+   Alan Turing et sa machine théorique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plus-rapide-que-l-etre-humain">
+   1937 : Plus rapide que l’être humain
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-zuse-z1">
+     La Zuse Z1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-zuse-z3">
+     La Zuse Z3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-automatique">
+   1944 : Machine automatique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#harvard-mark-1-ibm-ascc">
+     Harvard Mark 1 (IBM ASCC)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-electronique-tubes-a-vide">
+   1946 : Machine électronique (tubes à vide)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eniac">
+     ENIAC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-enregistres">
+   1948 : Les programmes enregistrés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manchester-mark-1">
+     Manchester Mark 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#en-suisse">
+   1948 : En Suisse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ermeth">
+     ERMETH
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premier-succes-commercial">
+   1954 : Premier succès commercial
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ibm-701">
+     IBM 701
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-tubes-a-vide-aux-transistors">
+   1953 : Des tubes à vide aux transistors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#university-of-manchester-etc">
+     1953 : University of Manchester ETC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-transistors-aux-circuits-integres">
+   1958 : Des transistors aux circuits intégrés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missiles-et-missions-apollo">
+     Missiles et missions Apollo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-premier-micro-processeur">
+   1971 : Le premier micro-processeur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intel-4004">
+     Intel 4004
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motorola-6800">
+     1974 Motorola 6800
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annees-1970-les-micro-ordinateurs">
+   Années 1970 : les
+   <em>
+    micro-ordinateurs
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intel-sim-8-01">
+     1972 Intel Sim-8-01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motorola-mek6800-d2">
+     1976 Motorola MEK6800-D2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-1">
+     1976 Apple 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aujourd-hui-les-ordinateurs-de-maison">
+   1980 - aujourd’hui : les
+   <em>
+    ordinateurs de maison
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commodore-64">
+     1982 : Commodore 64
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-macintosh">
+     1984 : Apple Macintosh
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ibm-ps-1">
+     1991 : IBM PS/1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osborne-1-le-premier-transportable">
+     1981 : Osborne 1 : le premier
+     <em>
+      transportable
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#toshiba-t1100-le-premier-portable">
+     1985 : Toshiba T1100 : le premier
+     <em>
+      portable
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-powerbook">
+     1991 : Apple Powerbook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aujourd-hui-les-smartphones">
+   Aujourd’hui : les smartphones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apple-iphone">
+     2008 : Apple Iphone
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-de-performances">
+   Comparaison de performances
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-a-l-histoire-de-l-informatique">
    Introduction à l’histoire de l’informatique
   </a>
@@ -913,8 +1375,313 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="c2-hist-02-histoire-de-l-informatique">
+  <p><img alt="imsai" src="../../_images/imsai8080.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c2-hist-02-histoire-de-l-informatique">
 <h1>C2-HIST-02 : Histoire de l’informatique<a class="headerlink" href="#c2-hist-02-histoire-de-l-informatique" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>connaître les principales étapes entre le Zuse 1 et le Smartphone</p>
+<ul>
+<li><p>tubes à vide</p></li>
+<li><p>transistors</p></li>
+<li><p>circuits intégrés</p></li>
+</ul>
+</li>
+<li><p>connaître quelques languages de programmation qui ont été développé au fur et à mesure des avancées technologiques</p></li>
+<li><p>savoir placer quelques noms célèbres dans cette histoire</p></li>
+<li><p>connaître les différentes métriques utilisées pour classer la performance d’un ordinateur</p></li>
+</ul>
+</section>
+<section id="definition-un-ordinateur">
+<h2>Définition : un ordinateur<a class="headerlink" href="#definition-un-ordinateur" title="Permalink to this headline">#</a></h2>
+<p>Selon le petit robert :</p>
+<p><img alt="def" src="../../_images/def-ordi.png" /></p>
+</section>
+<section id="si-on-resume">
+<h2>Si on résume …<a class="headerlink" href="#si-on-resume" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Machine <em>plus rapide que l’être humain</em></p></li>
+<li><p>Machine <em>électronique</em></p></li>
+<li><p>Traitement de l’information</p></li>
+<li><p>Programmes <em>enregistrés</em></p></li>
+<li><p>La machine <em>exécute des instructions</em></p></li>
+</ol>
+<p>Dans la <a class="reference internal" href="C2-HIST-01.html"><span class="doc std std-doc">Préhistoire de l’informatique</span></a> nous en étions resté aux “computers” humains : les personnes - pour la plupart des femmes - qui travaillaient sur des machines à calculer mécaniques.</p>
+</section>
+<section id="alan-turing-et-sa-machine-theorique">
+<h2>Alan Turing et sa machine théorique<a class="headerlink" href="#alan-turing-et-sa-machine-theorique" title="Permalink to this headline">#</a></h2>
+<p><img alt="turing" src="../../_images/turing.jpg" /></p>
+<p>Alan Turing est un mathématicien anglais né en 1912. Il propose en 1936 le premier <strong>concept d’un ordinateur moderne</strong>. Cette <em>machine</em> est dans son esprit une expérience de pensée : une méthode qui permet de résoudre un problème en utilisant uniquement la seule puissance de l’imagination du cerveau humain.</p>
+<p>Sa machine est :</p>
+<ol class="simple">
+<li><p>constituée d’un <strong>rouleau de papier de longueur infinie</strong> divisé en cases. Chaque case peut contenir un symbole d’un alphabet fini donné (par exemple 0 et 1)</p></li>
+<li><p>une <strong>tête de lecture/écriture</strong> capable de lire ou d’écrire sur une case à la fois</p></li>
+<li><p>un <strong>registre d’état</strong> qui mémorise l’état courant de la machine</p></li>
+<li><p>une <strong>table d’actions</strong> qui permet à la machine de faire avancer, reculer, lire ou écrire la tête de lecture.</p></li>
+</ol>
+<p>Il peut être démontré en <strong>informatique théorique</strong> que n’importe quel algorithme décrivant un problème peut être résolu avec une machine de Turing.</p>
+<p>On dit d’un système (une machine, un langage de programmation, etc..) qui est équivalent en terme de calcul à une machine de Turing qu’il est <strong>Turing-complet</strong>.</p>
+<p>Des constructrices et constructeurs ont construits des machines physiques qui s’approchent d’une machine de Turing. Ces machines n’en sont pas puisqu’elles n’ont pas de ruban de longueur infinie</p>
+<p><img alt="turingmachine" src="../../_images/turing-machine.jpg" /></p>
+</section>
+<section id="plus-rapide-que-l-etre-humain">
+<h2>1937 : Plus rapide que l’être humain<a class="headerlink" href="#plus-rapide-que-l-etre-humain" title="Permalink to this headline">#</a></h2>
+<p>La première machine mécanique (non Turing-complet) est un ordinateur allemand</p>
+<section id="la-zuse-z1">
+<h3>La Zuse Z1<a class="headerlink" href="#la-zuse-z1" title="Permalink to this headline">#</a></h3>
+<p>Konrad Zuse (1915-1995), ingénieur allemand est considéré parmi les premiers constructeurs de machines qui peuvent s’appeler <strong>ordinateur</strong>.</p>
+<p>En 1937, il construit une première machine <strong>programmable</strong> et entièrement <strong>mécanique</strong> : <strong>la Z1</strong></p>
+<p><img alt="z1" src="../../_images/z1.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>mécanique</p></li>
+<li><p>1 tonne</p></li>
+<li><p>vitesse : <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Hz</span></code></p></li>
+<li><p>temps d’une addition : 3 secondes</p></li>
+</ul>
+</section>
+<section id="la-zuse-z3">
+<h3>La Zuse Z3<a class="headerlink" href="#la-zuse-z3" title="Permalink to this headline">#</a></h3>
+<p>La machine Z1 n’étant pas très fiable quoique de bonne facture, il entame la construction de la <strong>Z3</strong>, une machine <strong>électro-mécanique</strong> et <strong>programmable</strong></p>
+<p>Elle est construite à partir de <strong>relais électromagnétiques</strong> (relais téléphoniques) :</p>
+<p><img alt="relais" src="../../_images/relais.jpg" /></p>
+<p><img alt="z3" src="../../_images/z3.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>électro-mécanique</p></li>
+<li><p><strong>Turing-complet</strong></p></li>
+<li><p>binaire et capable de calcul en <strong>virgule flottante</strong></p></li>
+<li><p>construite à l’aide de relais téléphoniques (2600)</p></li>
+<li><p>programmes écrits sur une bande perforée</p></li>
+<li><p>vitesse : <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Hz</span></code></p></li>
+<li><p>1 tonne</p></li>
+<li><p>Mémoire : 64 mots mémoire de 22 bits</p></li>
+<li><p>Puissance électrique nécessaire : <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">KW</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="machine-automatique">
+<h2>1944 : Machine automatique<a class="headerlink" href="#machine-automatique" title="Permalink to this headline">#</a></h2>
+<p>Les machines Z1 et ses successeur (Z3 et suivantes) nécessitaient toutes l’intervention d’un humain pour pouvoir calculer. La toute première machines entièrement automatique est arrivée pendant la guerre. Elle permettait de calculer des trajectoires balistiques.</p>
+<section id="harvard-mark-1-ibm-ascc">
+<h3>Harvard Mark 1 (IBM ASCC)<a class="headerlink" href="#harvard-mark-1-ibm-ascc" title="Permalink to this headline">#</a></h3>
+<p>Le <strong>Harvard Mark 1</strong> (ou IBM ASCC pour <em>Automatic Sequence Controlled Calculator</em>) a été développé par un ingénieur d’IBM et envoyé à l’université de Harvard.</p>
+<p><img alt="harvard" src="../../_images/harvardmark1.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>765’000 composants électro-magnétiques</p></li>
+<li><p>Mémoire : 72 mots mémoire de 23 chiffres</p></li>
+<li><p>Vitesse : <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">Hz</span></code></p></li>
+<li><p>temps pour :</p>
+<ul>
+<li><p>multiplication : <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">secondes</span></code></p></li>
+<li><p>addition/soustraction : <code class="docutils literal notranslate"><span class="pre">1/3</span> <span class="pre">secondes</span></code></p></li>
+<li><p>division : <code class="docutils literal notranslate"><span class="pre">15.3</span> <span class="pre">secondes</span></code></p></li>
+</ul>
+</li>
+<li><p>4 tonnes</p></li>
+<li><p>Puissance électrique nécessaire : <code class="docutils literal notranslate"><span class="pre">3.7</span> <span class="pre">KW</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="machine-electronique-tubes-a-vide">
+<h2>1946 : Machine électronique (tubes à vide)<a class="headerlink" href="#machine-electronique-tubes-a-vide" title="Permalink to this headline">#</a></h2>
+<p>Les relais ont progressivemenet été remplacé avec l’arrivée de <strong>tubes à vide</strong> fiables. Un tube à vide est un composant électronique. Il ne comprend pas d’élément mécanique comme les relais mais peut fournir le même comportement électrique.</p>
+<p><img alt="tube" src="../../_images/tube.jpg" /></p>
+<section id="eniac">
+<h3>ENIAC<a class="headerlink" href="#eniac" title="Permalink to this headline">#</a></h3>
+<p>En 1946, c’est la fin de la seconde guerre mondiale. Cette guerre a permis de gigantesques progrès technologiques, y compris sur le plan de l’informatique. C’est à cette date que la première machine totalement <strong>électronique</strong> voit le jour aux USA. C’est l’<strong>ENIAC</strong> (<em>Electronic Numerical Integrator and Computer</em>).</p>
+<p><img alt="eniac" src="../../_images/eniac.png" /></p>
+<p>Caractéristiques:</p>
+<ul class="simple">
+<li><p>machine décimale (pas binaire !)</p></li>
+<li><p>vitesse : <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">KHz</span></code></p></li>
+<li><p>temps pour :</p>
+<ul>
+<li><p>multiplication : <code class="docutils literal notranslate"><span class="pre">2.8</span> <span class="pre">millisecondes</span></code></p></li>
+<li><p>addition : <code class="docutils literal notranslate"><span class="pre">200</span> <span class="pre">microsecondes</span></code></p></li>
+<li><p>division ou racine carrée : <code class="docutils literal notranslate"><span class="pre">28,6</span> <span class="pre">millisecondes</span></code></p></li>
+</ul>
+</li>
+<li><p>Puissance électrique nécessaire : inconnue</p></li>
+</ul>
+</section>
+</section>
+<section id="les-programmes-enregistres">
+<h2>1948 : Les programmes enregistrés<a class="headerlink" href="#les-programmes-enregistres" title="Permalink to this headline">#</a></h2>
+<p>Jusqu’à cette date, l’entier des programmes des ordinateurs étaient stockés sur des cartes perforées, sur des rubans ou sur des mechanismes mécaniques. La grande révolution a été de pouvoir stocker les programmes sous forme électronique, c’est-à-dire de les charger dans une <strong>mémoire vive</strong>.</p>
+<p>La mémoire électronique est basée sur les <strong>tubes de Williams</strong>. C’est une technologie proche des tubes à vide.</p>
+<p><img alt="williams" src="../../_images/williamstube.jpg" /></p>
+<section id="manchester-mark-1">
+<h3>Manchester Mark 1<a class="headerlink" href="#manchester-mark-1" title="Permalink to this headline">#</a></h3>
+<p>L’Université de Manchester est l’un des pionniers du monde académique pour le développement de l’informatique civile. C’est dans cette université qu’a été construit le premier ordinateur muni d’une mémoire vive : le <strong>Manchester Mark 1</strong>.</p>
+<p><img alt="ManchesterMark1" src="../../_images/manchestermark1.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>machine binaire</p></li>
+<li><p>travaille en virgule flottante</p></li>
+<li><p>vitesse :</p>
+<ul>
+<li><p>multiplication : <code class="docutils literal notranslate"><span class="pre">2.1</span> <span class="pre">millisecondes</span></code></p></li>
+<li><p>addition : <code class="docutils literal notranslate"><span class="pre">1.59</span> <span class="pre">microsecondes</span></code></p></li>
+</ul>
+</li>
+<li><p>une entreprise privée a racheté le Manchester Mark 1 et l’a commercialisé sous la marque <strong>Ferranti Mark 1</strong> en 1951 le faisant le premier ordinateur programmable commercial.</p></li>
+<li><p>puissance électrique nécessaire : <code class="docutils literal notranslate"><span class="pre">25</span> <span class="pre">KW</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="en-suisse">
+<h2>1948 : En Suisse<a class="headerlink" href="#en-suisse" title="Permalink to this headline">#</a></h2>
+<p>Si le Manchester Mark 1 a été le premier ordinateur de l’histoire qui coche toutes les cases de la définition, d’autres pays se sont attelé à construire des machines. C’est aussi le cas de la Suisse avec l’ETH Zürich.</p>
+<section id="ermeth">
+<h3>ERMETH<a class="headerlink" href="#ermeth" title="Permalink to this headline">#</a></h3>
+<p>Entre 1948 et 1956, l’école polytechnique fédérale de Zürich a construit et exploité une machine 100 % suisse : l’<strong>ERMETH</strong> (pour <em>Elektronische Rechenmaschine der ETH</em>). C’est un des tout premier ordinateurs du monde a disposer d’un <strong>disque dur</strong> pour stocker de l’information une fois la machine mise hors service.</p>
+<p><img alt="ermeth" src="../../_images/ermeth.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>disque dur de 1.5 tonnes (10 Kilo mots de 16 chiffres)</p></li>
+<li><p>1500 tubes électroniques</p></li>
+<li><p>vitesse : inconnue</p></li>
+<li><p>Puissance électrique nécessaire : inconnue</p></li>
+<li><p>La machine peut être vue au <a class="reference external" href="https://www.mfk.ch/">Museum für Kommunikation (Bern)</a></p></li>
+</ul>
+</section>
+</section>
+<section id="premier-succes-commercial">
+<h2>1954 : Premier succès commercial<a class="headerlink" href="#premier-succes-commercial" title="Permalink to this headline">#</a></h2>
+<p>C’est en 1951 que, pour la première fois de l’histoire, une entreprise commercialise un ordinateur. Mais cette tentative fut un échec. Il a fallu attendre trois ans pour que cette commercialisation devienne un succès. C’est l’entreprise américaine <a class="reference external" href="https://www.ibm.com">International Business Machines (IBM</a> qui réussi a vendre le temps de calcul de <strong>19 ordinateurs</strong>.</p>
+<section id="ibm-701">
+<h3>IBM 701<a class="headerlink" href="#ibm-701" title="Permalink to this headline">#</a></h3>
+<p><img alt="701" src="../../_images/701.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>Prix : 12000 dollars américains (en 1954 !) pour un mois de location (avec les ingénieurs)</p></li>
+<li><p>9.3 tonnes</p></li>
+<li><p>Mémoire de 73 Kb.</p></li>
+<li><p>vitesse : inconnue</p></li>
+<li><p>Consommation électrique nécessaire : inconnue</p></li>
+</ul>
+</section>
+</section>
+<section id="des-tubes-a-vide-aux-transistors">
+<h2>1953 : Des tubes à vide aux transistors<a class="headerlink" href="#des-tubes-a-vide-aux-transistors" title="Permalink to this headline">#</a></h2>
+<p>Le transistor est un composant électronique miniature semi-conducteur. Son invention remonte à des concepts inventés dans les années 1920. Le premier brevet déposé l’a été en 1948 par trois chercheurs des laboratoires <a class="reference external" href="https://www.bell-labs.com/">Bell (aujourd’hui Nokia Bell labs</a>: Shockley, Brattain et Bardeen. Le premier transistor fonctionnel est sorti des laboratoires Bell en 1947. Quelques années plus tard il est commercialisé. Infiniment plus stable, beaucoup plus petit, et surtout bien plus économe en énergie, il supplentera les tubes à vide dans presque toute l’électronique mondiale. Il existe encore un marché de niche dans la musique à très haute définition pour des raisons de qualité.</p>
+<p><img alt="transistor" src="../../_images/transistor.png" /></p>
+<section id="university-of-manchester-etc">
+<h3>1953 : University of Manchester ETC<a class="headerlink" href="#university-of-manchester-etc" title="Permalink to this headline">#</a></h3>
+<p>Le premier ordinateur à transistor a été construit par l’Université de Manchester, c’est l’<strong>Experimental Transistor Computer</strong> (ECT). l’ECT était le prototype, la version taille complète est achevée en 1955 et conservera le même nom.</p>
+<p><img alt="ECT" src="../../_images/manchesterECT.png" /></p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>mots mémoire à 48 bits</p></li>
+<li><p>1300 transistors</p></li>
+<li><p>250 ponts</p></li>
+<li><p>puissance électrique nécessaire : <code class="docutils literal notranslate"><span class="pre">150</span> <span class="pre">watts</span></code> (!!)</p></li>
+</ul>
+</section>
+</section>
+<section id="des-transistors-aux-circuits-integres">
+<h2>1958 : Des transistors aux circuits intégrés<a class="headerlink" href="#des-transistors-aux-circuits-integres" title="Permalink to this headline">#</a></h2>
+<p>En 1958, Jack Kilby, physicien travaillant pour <a class="reference external" href="https://www.ti.com/">Texas Instrument</a> eu l’idée de câbler plusieurs transistors ensembles et de les couler dans un boîtier. Cela a permis de miniaturiser l’électronique et de rassembler les composants ensembles en couches plus larges (les portes logiques). Le brevet est déposé en 1964. Jack Kilby recevra le Prix Nobel en 2000 pour cette invention.</p>
+<p><img alt="ci" src="../../_images/ci.jpg" /></p>
+<section id="missiles-et-missions-apollo">
+<h3>Missiles et missions Apollo<a class="headerlink" href="#missiles-et-missions-apollo" title="Permalink to this headline">#</a></h3>
+<p>On sait que les deux technologies sont intimement liées. L’ordinateur de bord des <a class="reference external" href="https://fr.wikipedia.org/wiki/Minuteman_(missile_balistique)">missiles ballistiques intercontinentaux Minuteman</a> fut le premier <em>ordinateur</em> a être construit autour de circuits intégrés. De même que l’ordinateur de bord des missions Apollo le <strong>Apollo Guidance Computer</strong> fut construit avec des circuits intégrés.</p>
+<p><img alt="apollo" src="../../_images/apollo.jpg" /></p>
+</section>
+</section>
+<section id="le-premier-micro-processeur">
+<h2>1971 : Le premier micro-processeur<a class="headerlink" href="#le-premier-micro-processeur" title="Permalink to this headline">#</a></h2>
+<p>Tous les composants électroniques d’un microprocesseur ne pouvaient tenir sur un seul circuit intégré.</p>
+<section id="intel-4004">
+<h3>Intel 4004<a class="headerlink" href="#intel-4004" title="Permalink to this headline">#</a></h3>
+<p>C’est l’entreprise américaine <a class="reference external" href="https://www.intel.com">Intel Corp.</a> qui fut la première à réussir à intégrer l’ensemble des composants électroniques d’un processeur sur un seul circuit intégré, le 4004 :</p>
+<ul class="simple">
+<li><p>ALU</p></li>
+<li><p>registres</p></li>
+<li><p>FPU</p></li>
+<li><p>etc..</p></li>
+</ul>
+<p><img alt="4004" src="../../_images/4004.png" /></p>
+<p>Cette miniaturisation a permis notamment d’augmenter la vitesse de calcul, réduire les coûts de fabrication, augmenter la fiabilité et surtout réduire la consommation électrique.</p>
+<p>Caractéristiques :</p>
+<ul class="simple">
+<li><p>4 bits</p></li>
+<li><p>horloge : 740 <code class="docutils literal notranslate"><span class="pre">KHz</span></code></p></li>
+<li><p>gravure 10 microns</p></li>
+<li><p>92’000 instructions par seconde</p></li>
+<li><p>accède à 4KB de mémoire de programme</p></li>
+<li><p>adresse 640 B de RAM</p></li>
+</ul>
+</section>
+<section id="motorola-6800">
+<h3>1974 Motorola 6800<a class="headerlink" href="#motorola-6800" title="Permalink to this headline">#</a></h3>
+<p>Au Japon, l’entreprise <a class="reference external" href="https://www.motorola.com">motorola</a> possède aussi une section de R&amp;D importante. C’est de cette entreprise qu’en 1974 sort le Motorola 6800, un microprocesseur à 8 bits qui équipera nombre de micro-ordinateurs grand public.</p>
+<p><img alt="6800" src="../../_images/6800.jpg" /></p>
+</section>
+</section>
+<section id="annees-1970-les-micro-ordinateurs">
+<h2>Années 1970 : les <em>micro-ordinateurs</em><a class="headerlink" href="#annees-1970-les-micro-ordinateurs" title="Permalink to this headline">#</a></h2>
+<p>Les premiers ordinateurs dont le prix était accessible au grand public sont arrivés dans les années 1970. Ils étaient basés soit sur des microprocesseurs Intel, soit Motorola. Ces deux entreprises sont les leaders pour les 30 prochaines années. Ces premiers micro-ordinateurs étaient vendus en kit : il fallait les construire soi-même ou les commander montés (ce qui augmentait le prix).</p>
+<section id="intel-sim-8-01">
+<h3>1972 Intel Sim-8-01<a class="headerlink" href="#intel-sim-8-01" title="Permalink to this headline">#</a></h3>
+<p><img alt="sim8" src="../../_images/intelsim8.jpg" /></p>
+</section>
+<section id="motorola-mek6800-d2">
+<h3>1976 Motorola MEK6800-D2<a class="headerlink" href="#motorola-mek6800-d2" title="Permalink to this headline">#</a></h3>
+<p><img alt="mek6800" src="../../_images/mek6800.jpg" /></p>
+</section>
+<section id="apple-1">
+<h3>1976 Apple 1<a class="headerlink" href="#apple-1" title="Permalink to this headline">#</a></h3>
+<p><img alt="apple1" src="../../_images/apple1.jpg" /></p>
+</section>
+</section>
+<section id="aujourd-hui-les-ordinateurs-de-maison">
+<h2>1980 - aujourd’hui : les <em>ordinateurs de maison</em><a class="headerlink" href="#aujourd-hui-les-ordinateurs-de-maison" title="Permalink to this headline">#</a></h2>
+<p>La technologie des microprocesseurs a évidemment évolué. Des instructions nouvelles permettant des traitement de données de plus en plus complexes sont apparus au fil des années. L’architecture entre les premiers micro-ordinateurs et ceux d’aujourd’hui n’a pas fondamentalement changé.</p>
+<section id="commodore-64">
+<h3>1982 : Commodore 64<a class="headerlink" href="#commodore-64" title="Permalink to this headline">#</a></h3>
+<p><img alt="commodore64" src="../../_images/commodore64.jpg" /></p>
+</section>
+<section id="apple-macintosh">
+<h3>1984 : Apple Macintosh<a class="headerlink" href="#apple-macintosh" title="Permalink to this headline">#</a></h3>
+<p><img alt="mac" src="../../_images/mac.jpg" /></p>
+</section>
+<section id="ibm-ps-1">
+<h3>1991 : IBM PS/1<a class="headerlink" href="#ibm-ps-1" title="Permalink to this headline">#</a></h3>
+<p><img alt="ibmps1" src="../../_images/ibmps1.jpg" /></p>
+</section>
+<section id="osborne-1-le-premier-transportable">
+<h3>1981 : Osborne 1 : le premier <em>transportable</em><a class="headerlink" href="#osborne-1-le-premier-transportable" title="Permalink to this headline">#</a></h3>
+<p><img alt="osborne" src="../../_images/osborne.jpg" /></p>
+</section>
+<section id="toshiba-t1100-le-premier-portable">
+<h3>1985 : Toshiba T1100 : le premier <em>portable</em><a class="headerlink" href="#toshiba-t1100-le-premier-portable" title="Permalink to this headline">#</a></h3>
+<p><img alt="toshiba" src="../../_images/toshiba.jpg" /></p>
+</section>
+<section id="apple-powerbook">
+<h3>1991 : Apple Powerbook<a class="headerlink" href="#apple-powerbook" title="Permalink to this headline">#</a></h3>
+<p><img alt="powerbook" src="../../_images/powerbook.jpg" /></p>
+</section>
+</section>
+<section id="aujourd-hui-les-smartphones">
+<h2>Aujourd’hui : les smartphones<a class="headerlink" href="#aujourd-hui-les-smartphones" title="Permalink to this headline">#</a></h2>
+<p>La miniaturisation de tous les composants des ordinateurs a amené la possibilité de positionner l’entier des composants d’un ordinateur (la souris, l’écran, le clavier, le processeur, la mémoire et l’énergie) dans un espace qui tiendrait dans une poche.</p>
+<p>C’est une sorte de <strong>disparition programmée</strong>.</p>
+<section id="apple-iphone">
+<h3>2008 : Apple Iphone<a class="headerlink" href="#apple-iphone" title="Permalink to this headline">#</a></h3>
+<p><img alt="iphone1" src="../../_images/iphone.png" /></p>
+</section>
+</section>
+<section id="comparaison-de-performances">
+<h2>Comparaison de performances<a class="headerlink" href="#comparaison-de-performances" title="Permalink to this headline">#</a></h2>
+<p>Il est d’usage de mesurer la <strong>performance</strong> d’un ordinateur au <strong>nombre d’opérations en virgule flottante</strong> qu’il peut effectuer en <strong>une seconde</strong>. On appelle cette <strong>métrique</strong> le <strong>FLOPS</strong> (<em>Floating Point Operations per Second</em>).</p>
+<p>Le graphique suivant commence en 1993, date à laquelle a été introduit le tout premier ranking mondial <a class="reference external" href="https://top500.org">top500</a> qui liste les 500 ordinateurs les plus rapides (et donc puissants) de la planète. En parallèle, la performance du plus rapide des ordinateurs de gamer à la même date est indiqué tout comme la puissance du smartphone le plus rapide.</p>
+<p><img alt="performance" src="../../_images/performance.png" /></p>
+<p>On remarque qu’il faut <strong>19 années</strong> pour trouver la performance du super-calculateur le plus rapide de la planète dans son <strong>salon</strong>. En attendant <strong>9 années</strong> supplémentaires, cette même performance se trouve dans notre poche.</p>
+</section>
 <section id="introduction-a-l-histoire-de-l-informatique">
 <h2>Introduction à l’histoire de l’informatique<a class="headerlink" href="#introduction-a-l-histoire-de-l-informatique" title="Permalink to this headline">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Définition de l&#39;informatique
