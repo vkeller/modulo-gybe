@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>C2-ARCH-01 : Architecture de Von Neumann &#8212; Education Numérique Ecole de maturité</title>
+    <title>C2-ARCH-01 : Compilation : du Python au langage machine &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -256,6 +256,11 @@ const thebe_selector_output = ".output, .cell_output"
      C1-ALGO-11 : Les tests conditionnels
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -294,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/conditions/Introduction.html">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
      TP1-PROG-05 - Les tests conditionnels
     </a>
    </li>
@@ -326,6 +331,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/prog/cryptographie/Cryptographie.html">
      TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
     </a>
    </li>
   </ul>
@@ -539,7 +549,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../histoire/C2-HIST-02.html">
-     C2-HIST-02 : Histoire de l’informatique
+     C2-HIST-02 : Histoire de l’informatique : le matériel
     </a>
    </li>
   </ul>
@@ -556,7 +566,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     C2-ARCH-01 : Architecture de Von Neumann
+     C2-ARCH-01 : Compilation : du Python au langage machine
     </a>
    </li>
    <li class="toctree-l2">
@@ -565,18 +575,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../TP/TP2-ARCH-02.html">
+    <a class="reference internal" href="../TP/TP2-ARCH-01.html">
      TP2-ARCH-01 : Les portes logiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-03.html">
-     TP2-ARCH-01 : Le nano-ordinateur RPi
+    <a class="reference internal" href="../raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-04.html">
-     TP2-ARCH-02 : Mise en réseau
+    <a class="reference internal" href="../raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
     </a>
    </li>
   </ul>
@@ -839,6 +849,91 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compilation-kezako">
+   Compilation, kézako ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations">
+   Observations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
+     L’ordinateur comprend une langue formée de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       0
+      </span>
+     </code>
+     et de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       1
+      </span>
+     </code>
+     :
+     <strong>
+      le langage machine
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
+     L’utilisateur (le programmeur) comprend une autre langue :
+     <strong>
+      le langage de programmation
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
+     Un compilateur permet de traduire un langage L3G vers L1G
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">
+   Analogie : traduire du français vers l’anglais
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-a-british-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_A
+      </span>
+     </code>
+     (British English)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-b-american-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_B
+      </span>
+     </code>
+     (American English)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-c-australian-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_C
+      </span>
+     </code>
+     (Australian English)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -848,7 +943,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>C2-ARCH-01 : Architecture de Von Neumann</h1>
+                <h1>C2-ARCH-01 : Compilation : du Python au langage machine</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -863,6 +958,91 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compilation-kezako">
+   Compilation, kézako ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations">
+   Observations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
+     L’ordinateur comprend une langue formée de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       0
+      </span>
+     </code>
+     et de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       1
+      </span>
+     </code>
+     :
+     <strong>
+      le langage machine
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
+     L’utilisateur (le programmeur) comprend une autre langue :
+     <strong>
+      le langage de programmation
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
+     Un compilateur permet de traduire un langage L3G vers L1G
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">
+   Analogie : traduire du français vers l’anglais
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-a-british-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_A
+      </span>
+     </code>
+     (British English)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-b-american-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_B
+      </span>
+     </code>
+     (American English)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-processeur-c-australian-english">
+     Version
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Processeur_C
+      </span>
+     </code>
+     (Australian English)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -873,14 +1053,112 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="board" src="../../../_images/board.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c2-arch-01-architecture-de-von-neumann">
-<h1>C2-ARCH-01 : Architecture de Von Neumann<a class="headerlink" href="#c2-arch-01-architecture-de-von-neumann" title="Permalink to this headline">#</a></h1>
+  <p><img alt="magics" src="../../../_images/magics.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c2-arch-01-compilation-du-python-au-langage-machine">
+<h1>C2-ARCH-01 : Compilation : du Python au langage machine<a class="headerlink" href="#c2-arch-01-compilation-du-python-au-langage-machine" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Connaître les composants de l’architecture de Von Neumann</p></li>
+<li><p>savoir nommer les différentes étapes pour passer d’un code source écrit par un humain à un code binaire compris par un micro-processeur</p></li>
+<li><p>appliquer sur des codes sources Python au papier et avec un crayon</p></li>
 </ul>
+</section>
+<section id="compilation-kezako">
+<h2>Compilation, kézako ?<a class="headerlink" href="#compilation-kezako" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’on écrit un programme, on choisit un <strong>langage de programmation</strong>. Dans l’introduction de ce cours, nous avons vu qu’il en existait des centaines (voir des milliers) :</p>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>Fortran</p></li>
+<li><p>C</p></li>
+<li><p>C++</p></li>
+<li><p>etc..</p></li>
+</ul>
+<p>La grande question est de comprendre comment on passe de :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>à une suite de <code class="docutils literal notranslate"><span class="pre">1</span></code> (du courant) et de <code class="docutils literal notranslate"><span class="pre">0</span></code> (pas de courant) compréhensible par <strong>l’électronique</strong> de l’ordinateur (la <strong>màmoire</strong>, le <strong>processeur</strong> et tous les autres <strong>composants</strong>) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01101001</span> <span class="mi">01101110</span> <span class="mi">01110100</span> <span class="mi">00100000</span>
+<span class="mi">01101101</span> <span class="mi">01100001</span> <span class="mi">01101001</span> <span class="mi">01101110</span>
+<span class="mi">00101000</span> <span class="mi">00101001</span> <span class="mi">01111011</span> <span class="mi">00001101</span>
+<span class="mi">00001010</span> <span class="mi">00100000</span> <span class="mi">00100000</span> <span class="mi">00100000</span>
+
+<span class="mi">00100000</span> <span class="mi">01110000</span> <span class="mi">01110010</span> <span class="mi">01101001</span>
+<span class="mi">01101110</span> <span class="mi">01110100</span> <span class="mi">01100110</span> <span class="mi">00101000</span>
+<span class="mi">00100010</span> <span class="mi">01001000</span> <span class="mi">01100101</span> <span class="mi">01101100</span>
+<span class="mi">01101100</span> <span class="mi">01101111</span> <span class="mi">00100000</span> <span class="mi">01010111</span>
+
+<span class="mi">01101111</span> <span class="mi">01110010</span> <span class="mi">01101100</span> <span class="mi">01100100</span>
+<span class="mi">00100010</span> <span class="mi">00101001</span> <span class="mi">00111011</span> <span class="mi">00001101</span>
+<span class="mi">00001010</span> <span class="mi">00100000</span> <span class="mi">00100000</span> <span class="mi">00100000</span>
+<span class="mi">00100000</span> <span class="mi">01110010</span> <span class="mi">01100101</span> <span class="mi">01110100</span>
+
+<span class="mi">01110101</span> <span class="mi">01110010</span> <span class="mi">01101110</span> <span class="mi">00100000</span>
+<span class="mi">00110000</span> <span class="mi">00111011</span> <span class="mi">00001101</span> <span class="mi">00001010</span>
+<span class="mi">01111101</span>
+</pre></div>
+</div>
+<p>Ce processus est appelé <strong>compilation</strong>. Il est exécuté par un programme spécial appelé <strong>compilateur</strong>.</p>
+<p><img alt="compiler" src="../../../_images/compiler.png" /></p>
+</section>
+<section id="observations">
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
+<p>Nous pouvons faire trois observations initiales.</p>
+<section id="l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
+<h3>L’ordinateur comprend une langue formée de <code class="docutils literal notranslate"><span class="pre">0</span></code> et de <code class="docutils literal notranslate"><span class="pre">1</span></code> : <strong>le langage machine</strong><a class="headerlink" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine" title="Permalink to this headline">#</a></h3>
+<p>Le <strong>langage machine</strong> est une suite de bits qui est interprété par le processeur. C’est le seul qu’il puisse traiter. Cette suite de bits est une représentation binaire d’une <strong>instruction</strong> de très bas niveau que le processeur comprend.</p>
+<p>Les tous premiers ordinateurs construits dans les années 1940 étaient programmables uniquement en langage machine. C’est la raison pour laquelle on dit que le langage machine est un langage de programmation de <strong>première génération</strong> (ou <strong>L1G</strong>).</p>
+<p>Aujourd’hui, il est <strong>impossible</strong> de programmer en langage machine. On lui préférera un langage presque aussi proche du processeur, mais un tout petit peu plus compréhensible par un humain : <strong>le langage assembleur</strong> que l’on dit langage de programmation de <strong>seconde génération</strong> (ou <strong>L2G</strong>.</p>
+</section>
+<section id="l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
+<h3>L’utilisateur (le programmeur) comprend une autre langue : <strong>le langage de programmation</strong><a class="headerlink" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation" title="Permalink to this headline">#</a></h3>
+<p>Un langage de programmation tel que <strong>Python</strong> est compréhensible par un humain. Il est assez éloigné de l’électronique du processeur. On le dit de <strong>troisième génération</strong> (ou <strong>L3G</strong>) ou de <strong>haut niveau</strong>.</p>
+<p>Un programme écrit dans un langage de programmation de haut niveau est <strong>indépendant</strong> du processeur. Il peut aussi bien être exécuté sur une architecture Intel x86 qu’une architecture ARM par exemple.</p>
+</section>
+<section id="un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
+<h3>Un compilateur permet de traduire un langage L3G vers L1G<a class="headerlink" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g" title="Permalink to this headline">#</a></h3>
+<p>Le compilateur est un <strong>traducteur</strong>. Le processus de compilation est une <strong>traduction</strong> d’un langage de haut niveau L3G de haut niveau vers un langage de bas niveau (machine) L1G.</p>
+<p>Si on a deux ordinateurs avec des processeurs différents <code class="docutils literal notranslate"><span class="pre">Processeur_A</span></code> et <code class="docutils literal notranslate"><span class="pre">Processeur_B</span></code>, alors le résultat de cette traduction sera <strong>différente</strong> selon que l’on traduit pour l’un ou pour l’autre processeur. Ce qui fait la différence entre les deux processeurs est <strong>le jeu d’instructions</strong> (en anglais <em>instruction set</em>) qu’il est capable d’exécuter.</p>
+</section>
+</section>
+<section id="analogie-traduire-du-francais-vers-l-anglais">
+<h2>Analogie : traduire du français vers l’anglais<a class="headerlink" href="#analogie-traduire-du-francais-vers-l-anglais" title="Permalink to this headline">#</a></h2>
+<p>Pour comprendre les différentes phases de la compilation, on peut faire une analogie avec la traduction d’une phrase écrite en français vers la langue anglaise.</p>
+<p>Imaginons que nous souhaitions traduire la phrase suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pour</span> <span class="n">vous</span> <span class="n">rendre</span> <span class="n">à</span> <span class="n">Milan</span> <span class="n">depuis</span> <span class="n">Lausanne</span><span class="p">,</span> <span class="n">vous</span> <span class="n">devez</span> <span class="n">aller</span> <span class="n">jusqu</span><span class="s1">&#39;à Martigny, puis par le col du Grand Saint-Bernard à Aoste et enfin l&#39;</span><span class="n">autoroute</span> <span class="n">A26</span> <span class="n">depuis</span> <span class="n">Ivrea</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Quelles sont les étapes que vous allez suivre ?</p>
+<section id="version-processeur-a-british-english">
+<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_A</span></code> (British English)<a class="headerlink" href="#version-processeur-a-british-english" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">go</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">motorway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
+</pre></div>
+</div>
+</section>
+<section id="version-processeur-b-american-english">
+<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_B</span></code> (American English)<a class="headerlink" href="#version-processeur-b-american-english" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">drive</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">highway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
+</pre></div>
+</div>
+</section>
+<section id="version-processeur-c-australian-english">
+<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_C</span></code> (Australian English)<a class="headerlink" href="#version-processeur-c-australian-english" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">head</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">motorway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
