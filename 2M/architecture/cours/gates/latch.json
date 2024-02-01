@@ -1,0 +1,12 @@
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [310, 130], id: 0, name: 'S'},
+    in1: {type: 'in', pos: [320, 360], id: 1, name: "R'", val: 1},
+    nand0: {type: 'nand', pos: [460, 140], in: [10, 11], out: 12},
+    nand1: {type: 'nand', pos: [475, 350], in: [13, 14], out: 15},
+    out0: {type: 'out', pos: [620, 140], id: 16, name: 'Q'},
+    out1: {type: 'out', pos: [630, 350], id: 17, name: "Q'"},
+  },
+  wires: [[0, 10], [1, 14], [15, 11], [12, 13], [12, 16], [15, 17]]
+}
