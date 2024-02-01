@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP2-ARCH-00 : Introduction avec un micro:bit" href="../raspberry/TP2-ARCH-00.html" />
+    <link rel="next" title="C2-ARCH-02 : Architecture de Von Neumann" href="C2-ARCH-02.html" />
     <link rel="prev" title="Architecture et réseaux" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -570,6 +572,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../raspberry/TP2-ARCH-00.html">
      TP2-ARCH-00 : Introduction avec un micro:bit
     </a>
@@ -900,39 +907,111 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-a-british-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_A
-      </span>
-     </code>
-     (British English)
+    <a class="reference internal nav-link" href="#reconnaitre-les-lettres">
+     Reconnaître les lettres
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-b-american-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_B
-      </span>
-     </code>
-     (American English)
+    <a class="reference internal nav-link" href="#reconnaitre-les-mots">
+     Reconnaître les mots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-c-australian-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_C
-      </span>
-     </code>
-     (Australian English)
+    <a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">
+     Reconnaître le sens des phrases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-british-english">
+     Version British English
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-american-english">
+     Version American English
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-australian-english">
+     Version Australian English
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etapes-de-compilation">
+   Etapes de compilation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">
+   Les intructions logiques du processeur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-exemple-demi-additionneur">
+     Un exemple : demi-additionneur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-second-exemple-une-memoire">
+     Un second exemple : une mémoire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">
+     Ensemble des instructions d’un processeur
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
+   Besoin d’un langage
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NOT
+    </span>
+    <span class="pre">
+     L3G
+    </span>
+    <span class="pre">
+     AND
+    </span>
+    <span class="pre">
+     NOT
+    </span>
+    <span class="pre">
+     L1G
+    </span>
+   </code>
+   L2G : l’assembleur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">
+     Instruction
+     <em>
+      addition
+     </em>
+     du processeur en assembleur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruction-de-copie-de-deux-registres-du-processeur-en-assembleur">
+     instruction de
+     <strong>
+      copie
+     </strong>
+     de deux registres du processeur en assembleur
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-du-processeur-vk-1020">
+   Design du processeur VK 1020
+  </a>
  </li>
 </ul>
 
@@ -1009,39 +1088,111 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-a-british-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_A
-      </span>
-     </code>
-     (British English)
+    <a class="reference internal nav-link" href="#reconnaitre-les-lettres">
+     Reconnaître les lettres
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-b-american-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_B
-      </span>
-     </code>
-     (American English)
+    <a class="reference internal nav-link" href="#reconnaitre-les-mots">
+     Reconnaître les mots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-processeur-c-australian-english">
-     Version
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Processeur_C
-      </span>
-     </code>
-     (Australian English)
+    <a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">
+     Reconnaître le sens des phrases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-british-english">
+     Version British English
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-american-english">
+     Version American English
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-australian-english">
+     Version Australian English
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etapes-de-compilation">
+   Etapes de compilation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">
+   Les intructions logiques du processeur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-exemple-demi-additionneur">
+     Un exemple : demi-additionneur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-second-exemple-une-memoire">
+     Un second exemple : une mémoire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">
+     Ensemble des instructions d’un processeur
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
+   Besoin d’un langage
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NOT
+    </span>
+    <span class="pre">
+     L3G
+    </span>
+    <span class="pre">
+     AND
+    </span>
+    <span class="pre">
+     NOT
+    </span>
+    <span class="pre">
+     L1G
+    </span>
+   </code>
+   L2G : l’assembleur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">
+     Instruction
+     <em>
+      addition
+     </em>
+     du processeur en assembleur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruction-de-copie-de-deux-registres-du-processeur-en-assembleur">
+     instruction de
+     <strong>
+      copie
+     </strong>
+     de deux registres du processeur en assembleur
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-du-processeur-vk-1020">
+   Design du processeur VK 1020
+  </a>
  </li>
 </ul>
 
@@ -1137,28 +1288,177 @@ title="Print to PDF"
 <h2>Analogie : traduire du français vers l’anglais<a class="headerlink" href="#analogie-traduire-du-francais-vers-l-anglais" title="Permalink to this headline">#</a></h2>
 <p>Pour comprendre les différentes phases de la compilation, on peut faire une analogie avec la traduction d’une phrase écrite en français vers la langue anglaise.</p>
 <p>Imaginons que nous souhaitions traduire la phrase suivante :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pour</span> <span class="n">vous</span> <span class="n">rendre</span> <span class="n">à</span> <span class="n">Milan</span> <span class="n">depuis</span> <span class="n">Lausanne</span><span class="p">,</span> <span class="n">vous</span> <span class="n">devez</span> <span class="n">aller</span> <span class="n">jusqu</span><span class="s1">&#39;à Martigny, puis par le col du Grand Saint-Bernard à Aoste et enfin l&#39;</span><span class="n">autoroute</span> <span class="n">A26</span> <span class="n">depuis</span> <span class="n">Ivrea</span><span class="o">.</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>Pour vous rendre à Milan depuis Lausanne, vous devez aller jusqu’à Martigny, puis par le col du Grand Saint-Bernard à Aoste et enfin l’autoroute A26 depuis Ivrea.</p>
+</div></blockquote>
 <p>Quelles sont les étapes que vous allez suivre ?</p>
-<section id="version-processeur-a-british-english">
-<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_A</span></code> (British English)<a class="headerlink" href="#version-processeur-a-british-english" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">go</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">motorway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
+<ol class="simple">
+<li><p>Reconnaître les lettres</p></li>
+<li><p>Reconnaître les mots</p></li>
+<li><p>Reconnaître le sens des phrases</p></li>
+</ol>
+<section id="reconnaitre-les-lettres">
+<h3>Reconnaître les lettres<a class="headerlink" href="#reconnaitre-les-lettres" title="Permalink to this headline">#</a></h3>
+<p>Si la phrase est écrite ainsi :</p>
+<blockquote>
+<div><p>ローザンヌからミラノに行くには、まずマルティニーへ行き、次にグレートセントベルナール峠をアオスタへと抜け、最後にイヴレアからA26号線を通る必要があります。</p>
+</div></blockquote>
+<p>il est possible de déduire que la phrase</p>
+<ul class="simple">
+<li><p>n’est pas écrite dans une langue basée sur un <strong>alphabet latin moderne</strong>.</p></li>
+</ul>
+<p>On appelle cette étape <strong>l’analyse lexicale</strong> : de quoi sont faits les mots qui composent la phrase ?</p>
+</section>
+<section id="reconnaitre-les-mots">
+<h3>Reconnaître les mots<a class="headerlink" href="#reconnaitre-les-mots" title="Permalink to this headline">#</a></h3>
+<p>Si la phrase avait été écrite ainsi :</p>
+<blockquote>
+<div><p>For å komme deg til Milano fra Lausanne, må du dra til Martigny, deretter gjennom St. Bernhardspasset til Aosta, og til slutt ta motorvei A26 fra Ivrea.</p>
+</div></blockquote>
+<p>il est possible de déduire que la phrase :</p>
+<ul class="simple">
+<li><p>est écrite dans une langue basée sur <strong>l’alphabet latin moderne</strong></p></li>
+<li><p>que les mots ne semblent pas écrits dans une langue enseignée au gymnase (français, allemand, italien, anglais, espagnol, latin, grec)</p></li>
+</ul>
+<p>On appelle cette étape <strong>l’analyse syntaxique</strong> : les mots composés par des lettres sont ils justes dans la phrase ?</p>
+</section>
+<section id="reconnaitre-le-sens-des-phrases">
+<h3>Reconnaître le sens des phrases<a class="headerlink" href="#reconnaitre-le-sens-des-phrases" title="Permalink to this headline">#</a></h3>
+<p>Si la phrase est écrite ainsi :</p>
+<blockquote>
+<div><p>Pour vous aller à Ivrea par Lausanne, vous devez aller A26 enfin Martigny, puis autoroute le Grand du col Saint-Bernard enfin Aoste et à  A26 depuis Milan.</p>
+</div></blockquote>
+<p>il est possible de déduire que la phrase :</p>
+<ul class="simple">
+<li><p>est écrite dans une langue basée sur <strong>l’alphabet latin moderne</strong></p></li>
+<li><p>que les mots sont écrits <strong>en français</strong></p></li>
+<li><p>qu’il n’y a pas de sens dans la phrase</p></li>
+</ul>
+<p>On appelle cette étape <strong>l’analyse sémantique</strong> : les mots mis ensembles donnent-ils un sens à la phrase ?</p>
+</section>
+<section id="version-british-english">
+<h3>Version British English<a class="headerlink" href="#version-british-english" title="Permalink to this headline">#</a></h3>
+<p>Voici une version en <em>British English</em></p>
+<blockquote>
+<div><p>To get to Milan from Lausanne, you need to go to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 motorway from Ivrea.</p>
+</div></blockquote>
+<p>Il existe des locuteurs qui écrivent et comprennent la phrase avec des mots comme <em>to go</em> et <em>motorway</em></p>
+</section>
+<section id="version-american-english">
+<h3>Version American English<a class="headerlink" href="#version-american-english" title="Permalink to this headline">#</a></h3>
+<p>Voici une version en <em>American English</em></p>
+<blockquote>
+<div><p>To get to Milan from Lausanne, you need to drive to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 highway from Ivrea.</p>
+</div></blockquote>
+<p>Il existe des locuteurs qui écrivent et comprennent la phrase avec des mots comme <em>to drive</em> et <em>highway</em></p>
+</section>
+<section id="version-australian-english">
+<h3>Version Australian English<a class="headerlink" href="#version-australian-english" title="Permalink to this headline">#</a></h3>
+<p>Voici une version en <em>Australian English</em></p>
+<blockquote>
+<div><p>To get to Milan from Lausanne, you need to head to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 motorway from Ivrea.</p>
+</div></blockquote>
+<p>Il existe des locuteurs qui écrivent et comprennent la phrase avec des mots comme <em>to head</em> et <em>motorway</em></p>
+<p>Les trois versions sont correctes, mais pour un locuteur différent !</p>
+</section>
+</section>
+<section id="etapes-de-compilation">
+<h2>Etapes de compilation<a class="headerlink" href="#etapes-de-compilation" title="Permalink to this headline">#</a></h2>
+<p>Les trois étapes du passage d’un langage L3G à L1G sont identiques !</p>
+<ol class="simple">
+<li><p>Analyse lexicale</p></li>
+<li><p>Analyse syntaxique</p></li>
+<li><p>Analyse sémantique</p></li>
+</ol>
+</section>
+<section id="les-intructions-logiques-du-processeur">
+<h2>Les intructions logiques du processeur<a class="headerlink" href="#les-intructions-logiques-du-processeur" title="Permalink to this headline">#</a></h2>
+<p>Les <strong>instructions</strong> du processeurs sont des opérations qui sont <strong>codées</strong> sous la forme de <strong>circuits logiques</strong>.</p>
+<section id="un-exemple-demi-additionneur">
+<h3>Un exemple : demi-additionneur<a class="headerlink" href="#un-exemple-demi-additionneur" title="Permalink to this headline">#</a></h3>
+<p>Un demi-additionneur à deux bits permet de calculer la <strong>somme</strong> de deux bits sans tenir compte de la <strong>retenue</strong> (<span class="math notranslate nohighlight">\(1_2 + 1_2 = 10_2\)</span> donc il faudrait un troisième bit pour le coder).</p>
+<p>Le demi-additionneur se construit en un circuit logique dont la table de vérité est :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(R\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(S\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>où <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont les bits d’entrée, <span class="math notranslate nohighlight">\(R\)</span> la retenue et <span class="math notranslate nohighlight">\(S\)</span> le résultat de la somme (attention en binaire !!)</p>
+<p>se <span class="xref myst">construit</span> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">XOR</span></code> et <code class="docutils literal notranslate"><span class="pre">AND</span></code> :</p>
+<p><img alt="demi-additionneur" src="../../../_images/demi.png" /></p>
+</section>
+<section id="un-second-exemple-une-memoire">
+<h3>Un second exemple : une mémoire<a class="headerlink" href="#un-second-exemple-une-memoire" title="Permalink to this headline">#</a></h3>
+<p>On observe dans le circuit du demi-additionneur que l’on ne peut pas conserver la valeur des deux opérandes (les deux bits). On a donc besoin d’une mémoire.</p>
+<p>Une mémoire (ou <strong>bascule D</strong> ou <em>latch</em> en anglais) est un dispositif permettant de conserver la valeur d’une sortie même si l’on fait ensuite varier les entrées. C’est une mémoire ou <strong>registre</strong> dans le cas des processeurs.</p>
+<p>La table est la suivante :</p>
+<p>et on peut <span class="xref myst">la construire</span> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">NAND</span></code>:</p>
+<p><img alt="latch" src="../../../_images/latch.png" /></p>
+</section>
+<section id="ensemble-des-instructions-d-un-processeur">
+<h3>Ensemble des instructions d’un processeur<a class="headerlink" href="#ensemble-des-instructions-d-un-processeur" title="Permalink to this headline">#</a></h3>
+<p>L’<strong>ensemble des instructions d’un processeur</strong> (en anglais <em>instruction set</em>) est l’ensemble des instructions <strong>codées dans un processeur à l’aide de portes logiques</strong>.</p>
+</section>
+</section>
+<section id="besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
+<h2>Besoin d’un langage <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">L3G</span> <span class="pre">AND</span> <span class="pre">NOT</span> <span class="pre">L1G</span></code> L2G : l’assembleur<a class="headerlink" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur" title="Permalink to this headline">#</a></h2>
+<p>On pourrait programmer complètement un processeur à l’aide des instructions codées en binaire comme les héroïques ancêtres des années 1940 et 1950, mais disposer d’un langage de programmation <strong>aussi proche de l’électronique</strong> mais <strong>humainement lisisble</strong>. En quelque sorte, c’est un langage intermédiaire entre le langage L3G de haut niveau et le langage machine binaire.</p>
+<p>C’est le langage <strong>ASSEMBLEUR</strong>.</p>
+<p>On dit qu’il est un langage de <strong>deuxième génération</strong> (ou <strong>L2G</strong>).</p>
+<section id="instruction-addition-du-processeur-en-assembleur">
+<h3>Instruction <em>addition</em> du processeur en assembleur<a class="headerlink" href="#instruction-addition-du-processeur-en-assembleur" title="Permalink to this headline">#</a></h3>
+<p>On a vu qu’on peut construire un circuit logique pour additionner deux bits. Les entrées de l’additionneur sont les deux bits. On dit qu’ils sont <strong>stockés en mémoire</strong>. La mémoire du processeur s’appelle <strong>registre</strong>.</p>
+<p>En mettant plusieurs demi-additionneurs en série, on peut calculer la somme de deux nombre de plusieurs bits.</p>
+<p>Appelons cette instruction <code class="docutils literal notranslate"><span class="pre">ADD</span></code>. Cette instruction a besoin de deux <strong>arguments</strong> : les deux nombres à additionner. Appelons les <code class="docutils literal notranslate"><span class="pre">R1</span></code> et <code class="docutils literal notranslate"><span class="pre">R2</span></code> où :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">R1</span></code> est l’emplacement en mémoire du processeur (le <strong>registre</strong>) du premier opérande en binaire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">R2</span></code> est l’emplacement en mémoire du processeur (le <strong>registre</strong>) du second opérande en binaire</p></li>
+</ul>
+<p>Notre première instruction s’écrit donc :</p>
+<p><code class="docutils literal notranslate"><span class="pre">ADD</span> <span class="pre">R1</span> <span class="pre">R2</span></code></p>
+<p>Le <strong>résultat</strong> se trouvera stocké dans l’emplacement mémoire du premier opérande : <code class="docutils literal notranslate"><span class="pre">R1</span></code> et donc, la <strong>valeur initiale</strong> stockée dans <code class="docutils literal notranslate"><span class="pre">R1</span></code> aura disparu (elle a été écrasée par la somme). Il y a donc un besoin de comprendre comment transférer une donnée d’un registre à un autre; donc le besoin d’une instruction qui permet de copier (transférer) la valeur stockée dans un registre vers un autre.</p>
+</section>
+<section id="instruction-de-copie-de-deux-registres-du-processeur-en-assembleur">
+<h3>instruction de <strong>copie</strong> de deux registres du processeur en assembleur<a class="headerlink" href="#instruction-de-copie-de-deux-registres-du-processeur-en-assembleur" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="design-du-processeur-vk-1020">
+<h2>Design du processeur VK 1020<a class="headerlink" href="#design-du-processeur-vk-1020" title="Permalink to this headline">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ADD : Addition de deux valeurs et stockage du résultat dans un registre.
+SUB : Soustraction de deux valeurs et stockage du résultat dans un registre.
+LOAD : Chargement d&#39;une valeur depuis la mémoire dans un registre.
+STORE : Stockage d&#39;une valeur depuis un registre dans la mémoire.
+JUMP : Saut inconditionnel à une adresse spécifiée.
+BRANCH : Saut conditionnel basé sur une comparaison de valeurs dans les registres.
+HALT : Arrêt de l&#39;exécution.
 </pre></div>
 </div>
-</section>
-<section id="version-processeur-b-american-english">
-<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_B</span></code> (American English)<a class="headerlink" href="#version-processeur-b-american-english" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">drive</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">highway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
-</pre></div>
-</div>
-</section>
-<section id="version-processeur-c-australian-english">
-<h3>Version <code class="docutils literal notranslate"><span class="pre">Processeur_C</span></code> (Australian English)<a class="headerlink" href="#version-processeur-c-australian-english" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">get</span> <span class="n">to</span> <span class="n">Milan</span> <span class="kn">from</span> <span class="nn">Lausanne</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">head</span> <span class="n">to</span> <span class="n">Martigny</span><span class="p">,</span> <span class="n">then</span> <span class="n">through</span> <span class="n">the</span> <span class="n">Great</span> <span class="n">St</span><span class="o">.</span> <span class="n">Bernard</span> <span class="n">Pass</span> <span class="n">to</span> <span class="n">Aosta</span><span class="p">,</span> <span class="ow">and</span> <span class="k">finally</span> <span class="n">take</span> <span class="n">the</span> <span class="n">A26</span> <span class="n">motorway</span> <span class="kn">from</span> <span class="nn">Ivrea.</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -1196,10 +1496,10 @@ title="Print to PDF"
             <p class="prev-next-title">Architecture et réseaux</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../raspberry/TP2-ARCH-00.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-ARCH-02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP2-ARCH-00 : Introduction avec un micro:bit</p>
+        <p class="prev-next-title">C2-ARCH-02 : Architecture de Von Neumann</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
