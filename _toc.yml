@@ -45,7 +45,7 @@ parts:
       - file: 1M/prog/boucles/boucles2
       - file: 1M/prog/conditions/TP1-PROG-05
       - file: 1M/prog/dessinsanimes/dessins
-      - file: 1M/prog/types/Types
+      - file: 1M/prog/types/TP1-PROG-07
       - file: 1M/prog/tableaux/Tableaux
       - file: 1M/prog/files/LesFiles
       - file: 1M/prog/piles/LesPiles
