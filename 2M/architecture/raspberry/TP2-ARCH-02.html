@@ -256,6 +256,11 @@ const thebe_selector_output = ".output, .cell_output"
      C1-ALGO-11 : Les tests conditionnels
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -294,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/conditions/Introduction.html">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
      TP1-PROG-05 - Les tests conditionnels
     </a>
    </li>
@@ -304,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/types/Types.html">
+    <a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">
      TP1-PROG-07 - Notions de types
     </a>
    </li>
@@ -326,6 +331,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/prog/cryptographie/Cryptographie.html">
      TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
     </a>
    </li>
   </ul>
@@ -539,7 +549,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../histoire/C2-HIST-02.html">
-     C2-HIST-02 : Histoire de l’informatique
+     C2-HIST-02 : Histoire de l’informatique : le matériel
     </a>
    </li>
   </ul>
@@ -556,7 +566,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../cours/C2-ARCH-01.html">
-     C2-ARCH-01 : Architecture de Von Neumann
+     C2-ARCH-01 : Compilation : du Python au langage machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
     </a>
    </li>
    <li class="toctree-l2">
@@ -938,6 +953,11 @@ title="Print to PDF"
    Exercice 10 : Le pipeline de commande
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-11-un-peu-d-assembleur">
+   Exercice 11 : Un peu d’assembleur ?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1061,6 +1081,11 @@ title="Print to PDF"
    Exercice 10 : Le pipeline de commande
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-11-un-peu-d-assembleur">
+   Exercice 11 : Un peu d’assembleur ?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1128,7 +1153,7 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>L’horloge tourne à <code class="docutils literal notranslate"><span class="pre">1.5</span> <span class="pre">GHz</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> coeurs (qui contiennent chacun des ALU)</p></li>
-<li><p>La largeurde ses registres est de <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bits</span></code></p></li>
+<li><p>La largeur de ses registres est de <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bits</span></code></p></li>
 </ol>
 </section>
 <section id="memoire-s">
@@ -1311,6 +1336,51 @@ title="Print to PDF"
 </div>
 <p>est équivalent à l’exercice précédent</p>
 <p>Recherchez le fichier /bin/ls et ses droit avec un pipeline et les commandes vues jusqu’à l’exercice 9</p>
+</section>
+<section id="exercice-11-un-peu-d-assembleur">
+<h2>Exercice 11 : Un peu d’assembleur ?<a class="headerlink" href="#exercice-11-un-peu-d-assembleur" title="Permalink to this headline">#</a></h2>
+<p>Il existe un compilateur : <code class="docutils literal notranslate"><span class="pre">gcc</span></code> qui permet de <strong>compiler</strong> n’importe quel code source en <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
+<p>Voici un programme en Python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>son équivalent en <code class="docutils literal notranslate"><span class="pre">C</span></code> est le suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="nb">int</span> <span class="n">main</span><span class="p">(){</span>
+	<span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>créez un fichier appelé <code class="docutils literal notranslate"><span class="pre">addition.c</span></code> et recopiez les instructions dans ce fichier.</p></li>
+<li><p>compilez ce programme en utilisant le compilateur <code class="docutils literal notranslate"><span class="pre">gcc</span></code> : <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">addition.c</span></code></p></li>
+<li><p>vous obtiendrez un fichier <strong>exécutable</strong> appelé <code class="docutils literal notranslate"><span class="pre">a.out</span></code> que l’on peut exécuter : <code class="docutils literal notranslate"><span class="pre">./a.out</span></code></p></li>
+</ul>
+<p>En supprimant l’affichage, on obtient :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="nb">int</span> <span class="n">main</span><span class="p">(){</span>
+	<span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Pour obtenir les instructions assembleur, on peut compiler le code en assembleur avec l’option <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">-S</span></code></p>
+<ul class="simple">
+<li><p>compilez le programme sans l’affichage : <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">-S</span> <span class="pre">addition.c</span> <span class="pre">-o</span> <span class="pre">addition.asm</span></code></p></li>
+<li><p>affichez le contenu du fichier <code class="docutils literal notranslate"><span class="pre">addition.asm</span></code></p></li>
+<li><p>analysez le résultat</p></li>
+</ul>
 </section>
 </section>
 
