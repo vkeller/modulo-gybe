@@ -311,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/types/Types.html">
+    <a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">
      TP1-PROG-07 - Notions de types
     </a>
    </li>
@@ -1668,8 +1668,8 @@ title="Print to PDF"
 <p>Le code complet en assembleur VK 1020 est donc le suivant :</p>
 <p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R0</span> <span class="pre">3</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R1</span> <span class="pre">4</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R2</span> <span class="pre">R1</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R3</span> <span class="pre">R2</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R2</span> <span class="pre">R0</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">MOV</span> <span class="pre">R3</span> <span class="pre">R1</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">ADD</span> <span class="pre">R2</span> <span class="pre">R3</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">HALT</span></code></p>
 <p>Le résultat final se trouve stocké dans <code class="docutils literal notranslate"><span class="pre">R2</span></code></p>
@@ -1685,8 +1685,8 @@ title="Print to PDF"
 <p>On peut donc donner le code en langage machine L1G complet (avec commentaire) :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">010</span> <span class="mi">10000000</span> <span class="mi">00000011</span> <span class="c1"># MOV R0 3</span>
 <span class="mi">010</span> <span class="mi">10000001</span> <span class="mi">00000100</span> <span class="c1"># MOV R1 4</span>
-<span class="mi">010</span> <span class="mi">10000010</span> <span class="mi">10000001</span> <span class="c1"># MOV R2 R1</span>
-<span class="mi">010</span> <span class="mi">10000011</span> <span class="mi">10000010</span> <span class="c1"># MOV R3 R2</span>
+<span class="mi">010</span> <span class="mi">10000010</span> <span class="mi">10000000</span> <span class="c1"># MOV R2 R0</span>
+<span class="mi">010</span> <span class="mi">10000011</span> <span class="mi">10000001</span> <span class="c1"># MOV R3 R1</span>
 <span class="mi">000</span> <span class="mi">10000010</span> <span class="mi">10000011</span> <span class="c1"># ADD R2 R3</span>
 <span class="mi">100</span>                   <span class="c1"># HALT</span>
 </pre></div>
@@ -1694,8 +1694,8 @@ title="Print to PDF"
 <p>Et donc sans commentaires :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">010</span> <span class="mi">10000000</span> <span class="mi">00000011</span>
 <span class="mi">010</span> <span class="mi">10000001</span> <span class="mi">00000100</span>
-<span class="mi">010</span> <span class="mi">10000010</span> <span class="mi">10000001</span>
-<span class="mi">010</span> <span class="mi">10000011</span> <span class="mi">10000010</span>
+<span class="mi">010</span> <span class="mi">10000010</span> <span class="mi">10000000</span>
+<span class="mi">010</span> <span class="mi">10000011</span> <span class="mi">10000001</span>
 <span class="mi">000</span> <span class="mi">10000010</span> <span class="mi">10000011</span>
 <span class="mi">100</span>                  
 </pre></div>
