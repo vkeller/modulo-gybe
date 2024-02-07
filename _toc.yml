@@ -117,7 +117,7 @@ parts:
       - file: 2M/machine-learning/tp/JeudelavieTP
     - file: 2M/esdn/index
       sections:
-      - file: 2M/esdn/environnement/TP1-ESDN-02
+      - file: 2M/esdn/environnement/TP2-ESDN-01
       - file: 2M/esdn/generative-art/TP2-ESDN-02
  
   - caption: Bibliographie
