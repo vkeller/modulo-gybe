@@ -552,6 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
      C2-HIST-02 : Histoire de l’informatique : le matériel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-03.html">
+     C2-HIST-03 : Histoire de l’informatique : le logiciel
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -655,10 +660,27 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../2M/esdn/index.html">
    Enjeux sociaux du numérique
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/environnement/TP2-ESDN-01.html">
+     TP2-ESDN-01 : L’environnement et le numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">
+     TP2-ESDN-02 : L’Art et le Numérique
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -1052,10 +1074,10 @@ Exemple 1</p>
 </section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Est-ce que le programme suivant fonctionne (calcule votre âge dans 10 ans) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre âge &quot;</span><span class="p">)</span>
-<span class="n">age10</span> <span class="o">=</span> <span class="n">age</span> <span class="o">*</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En 2032 vous aurez &quot;</span><span class="o">+</span><span class="n">age10</span><span class="p">)</span>
+<p>Est-ce que le programme suivant fonctionne (calcule votre fortune dans 365 jours à un taux de 2%) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">compte</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Valeur de votre compte en banque (en CHF) &quot;</span><span class="p">)</span>
+<span class="n">compte365</span> <span class="o">=</span> <span class="n">compte</span> <span class="o">+</span> <span class="p">(</span><span class="n">compte</span> <span class="o">*</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En 2032 vous aurez &quot;</span><span class="p">,</span><span class="n">compte365</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="reponse">
