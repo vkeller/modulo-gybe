@@ -111,7 +111,7 @@ parts:
       - file: 2M/strategies/TP2-STRAT-01
     - file: 2M/machine-learning/index
       sections:
-      - file: 2M/machine-learning/cours/IntroML
+      - file: 2M/machine-learning/cours/C2-IA-01
       - file: 2M/machine-learning/cours/Automates
       - file: 2M/machine-learning/cours/RNN
       - file: 2M/machine-learning/tp/JeudelavieTP
