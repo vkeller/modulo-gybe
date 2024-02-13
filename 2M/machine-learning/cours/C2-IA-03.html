@@ -895,20 +895,41 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#donnees-et-caracteristiques">
    Données et caractéristiques
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etiquette-d-une-donnee">
+     Etiquette d’une donnée
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apprentissage-supervise">
    Apprentissage supervisé
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processus-d-apprentissage">
+     Processus d’apprentissage
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apprentissage-non-supervise">
    Apprentissage non-supervisé
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-taches">
+     Types de tâches
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validation-et-test">
-   Validation et test
+  <a class="reference internal nav-link" href="#entrainement-validation-et-test">
+   Entraînement, validation et test
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -954,20 +975,41 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#donnees-et-caracteristiques">
    Données et caractéristiques
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etiquette-d-une-donnee">
+     Etiquette d’une donnée
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apprentissage-supervise">
    Apprentissage supervisé
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processus-d-apprentissage">
+     Processus d’apprentissage
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apprentissage-non-supervise">
    Apprentissage non-supervisé
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-taches">
+     Types de tâches
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validation-et-test">
-   Validation et test
+  <a class="reference internal nav-link" href="#entrainement-validation-et-test">
+   Entraînement, validation et test
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1007,25 +1049,77 @@ title="Print to PDF"
 </section>
 <section id="exemple-introductif-mnist">
 <h2>Exemple introductif : MNIST<a class="headerlink" href="#exemple-introductif-mnist" title="Permalink to this headline">#</a></h2>
-<p>La base de données <strong>MNIST</strong> (<em>Mixed National Institute of Standards and Technology</em> en anglais) est une base de données de 60’000 chiffres écrits à la main. Chaque image contient une méta-donnée (le chiffre écrit).</p>
-<p><img alt="minst" src="../../../_images/minst.png" /></p>
+<p>La base de données <strong>MNIST</strong> (<em>Mixed National Institute of Standards and Technology</em> en anglais) est une base de données de 60’000 chiffres écrits à la main. Chaque image contient une méta-donnée, une <strong>étiquette</strong> (<em>label</em> en anglais) : le chiffre écrit.</p>
+<p><img alt="minst" src="../../../_images/mnist2.png" /></p>
 <p>C’est un jeu de donnée qui est utilisé pour tester les algorithmes d’apprentissage automatique.</p>
 <p>Nicholas Wolff, collègue du gymnase de Beaulieu, a développé une application permettant de tester la <strong>reconnaissance de texte</strong> en utilisant la base de donnée MNIST : <a class="reference external" href="https://nwolff.github.io/cours-RN/predict/">lien sur le site</a></p>
 </section>
 <section id="donnees-et-caracteristiques">
 <h2>Données et caractéristiques<a class="headerlink" href="#donnees-et-caracteristiques" title="Permalink to this headline">#</a></h2>
+<p>L’apprentissage automatique repose sur l’utilisation de données pour entraîner des modèles. Ce données peuvent être structurées (comme des tableaux de données) ou non-structurés (comme des images, des sons ou du texte).</p>
+<p><img alt="classification" src="../../../_images/classification.png" /></p>
+<p>Les caractéristiques (<em>features</em> en anglais) sont des propriétés mesurables des données utilisées par les modèles pour effectuer des prédictions ou prendre une décision. Par exemple, dans un problème de <strong>classification d’images</strong>, les caractéristiques pourraient être les pixels de l’image.</p>
+<section id="etiquette-d-une-donnee">
+<h3>Etiquette d’une donnée<a class="headerlink" href="#etiquette-d-une-donnee" title="Permalink to this headline">#</a></h3>
+<p>Pour pouvoir être utilisées dans une phase d’entraînement, une donnée (image, son, etc..) doit contenir une <strong>meta-donnée</strong> qui caractérise la donnée. On appelle cette méta-donnée <strong>étiquette</strong> (<em>label</em> en anglais).</p>
+<p><img alt="label" src="../../../_images/label.png" /></p>
+</section>
 </section>
 <section id="apprentissage-supervise">
 <h2>Apprentissage supervisé<a class="headerlink" href="#apprentissage-supervise" title="Permalink to this headline">#</a></h2>
+<p>L’apprentissage supervisé consiste à <strong>entraîner un modèle</strong> à partir de paires de données d’entrée et de sortie de l’algorithme. Le modèle apprend à partir d’exemples <strong>étiquetés</strong> afin de faire des prédictions sur de nouvelles données</p>
+<p>Les deux types principaux de tâches en apprentissage supervisé sont :</p>
+<ol class="simple">
+<li><p>La <strong>classification</strong> : prédire une catégorie ou une classe</p></li>
+<li><p>La <strong>régression</strong> : prédire une valeur numérique</p></li>
+</ol>
+<p><img alt="superviserd" src="../../../_images/supervised.png" /></p>
+<section id="processus-d-apprentissage">
+<h3>Processus d’apprentissage<a class="headerlink" href="#processus-d-apprentissage" title="Permalink to this headline">#</a></h3>
+<p>L’apprentissage supervisé implique deux phases :</p>
+<ol class="simple">
+<li><p>Phase <strong>d’entraînement</strong> : le modèle (l’algorithme) est exposé à un ensemble de données étiquetées. Le modèle ajuste ses paramètres internes pour <strong>minimiser une fonction d’erreur</strong> (<em>fitness function</em> en anglais). Cette fonction d’erreur décrit la justesse du résultat d’apprentissage.</p></li>
+<li><p>Phase <strong>de test</strong> : le modèle est évalué sur un ensemble de données distinct pour estimer sa capacité à généraliser à de nouvelles données non utilisées pendant la phase d’entraînement.</p></li>
+</ol>
+</section>
 </section>
 <section id="apprentissage-non-supervise">
 <h2>Apprentissage non-supervisé<a class="headerlink" href="#apprentissage-non-supervise" title="Permalink to this headline">#</a></h2>
+<p>L’apprentissage <strong>non supervisé</strong> implique l’utilisation de données sans étiquette pour apprendre la structure ou les modèles des données. Contrairement à l’apprentissage supervisé, il n’y a pas de variable à prédire en sortie d’algorithme. L’objectif de ce type d’apprentissage est de découvrir des structures, des motifs ou des relations dans les données.</p>
+<section id="types-de-taches">
+<h3>Types de tâches<a class="headerlink" href="#types-de-taches" title="Permalink to this headline">#</a></h3>
+<p>Il existe trois types de tâche dans l’apprentissage non-supervisé :</p>
+<ul class="simple">
+<li><p>le regroupement (<em>clustering</em> en anglais) qui consiste à regrouper des données en fonction de leurs similitudes</p></li>
+</ul>
+<p><img alt="clustering" src="../../../_images/clustering.jpg" /></p>
+<ul class="simple">
+<li><p>la réduction de dimensionnalité (<em>dimensionality reduction</em> en anglais) qui consiste à supprimer des dimensions dans les données pour ne conserver que celles qui sont les plus <strong>discriminantes</strong>.</p></li>
+</ul>
+<p><img alt="dimension" src="../../../_images/dimension.jpg" /></p>
+<ul class="simple">
+<li><p>La détection d’anomalies (<em>anomaly detection</em> en anglais) qui consiste à découvrir et supprimer des données extrêmes qui perturbent un modèle.</p></li>
+</ul>
+<p><img alt="anomaly" src="../../../_images/anomaly.png" /></p>
 </section>
-<section id="validation-et-test">
-<h2>Validation et test<a class="headerlink" href="#validation-et-test" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="entrainement-validation-et-test">
+<h2>Entraînement, validation et test<a class="headerlink" href="#entrainement-validation-et-test" title="Permalink to this headline">#</a></h2>
+<p>L’<strong>entraînement</strong> est la première étape de l’apprentissage automatique. On dispose d’un ensemble de données étiquetées que l’on soumet à l’algorithme (au modèle). Cette phase permet de régler les paramètres de l’algorithme.</p>
+<p>La <strong>validation</strong> est la seconde étape du processus de développement de modèles d’apprentissage automatique. Son objectif est d’évaluer la performance du modèle sur des données distinctes de celles utilisées par l’entraînement.</p>
+<p>L’ensemble de validation est utilisé pour ajuster les paramètres de l’algorithme (du modèle). Ces paramètres sont :</p>
+<ol class="simple">
+<li><p>le taux d’apprentissage : un facteur  qui mesure la fréquence de modification des paramètres de l’algorithme. Plus il est élevé, plus le modèle “oublie” ce qu’il a appris. Si le taux est trop élevé, alors on observe une divergence lors de l’entraînement.</p></li>
+<li><p>le nombre d’itérations : mesure le temps nécessaire à l’algorithme pour donner une réponse</p></li>
+<li><p>la taille de l’ensemble de données</p></li>
+</ol>
+<p>Le <strong>test</strong> est la phase finale du processus de développement du modèle : on utilise des données non étiquetées sur un algorithme entraîné.</p>
+<p>On évalue finalement la <strong>performance</strong> de l’algorithme en comparant les sorties de l’ensemble de test avec la réalité. Il existe différentes mesures pour ce faire : on les appelle des <strong>métriques</strong>.</p>
+<p><img alt="training" src="../../../_images/trainingset.png" /></p>
 </section>
 <section id="evaluation-des-modeles">
 <h2>Evaluation des modèles<a class="headerlink" href="#evaluation-des-modeles" title="Permalink to this headline">#</a></h2>
+<p>Une fois qu’un modèle est entraîné, on peut le comparer avec d’autres modèles (algorithmes) qui résolvent le même problème.</p>
 </section>
 </section>
 
