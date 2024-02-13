@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C-IA-02 : Automates cellulaires" href="Automates.html" />
+    <link rel="next" title="C2-IA-02 : Automates cellulaires" href="C2-IA-02.html" />
     <link rel="prev" title="Intelligence artificielle" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -644,13 +644,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Automates.html">
-     C-IA-02 : Automates cellulaires
+    <a class="reference internal" href="C2-IA-02.html">
+     C2-IA-02 : Automates cellulaires
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="RNN.html">
-     C-IA-03 : Réseaux de neurones artificiels
+    <a class="reference internal" href="C2-IA-03.html">
+     C2-IA-03 : Apprentissage automatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2-IA-04.html">
+     C2-IA-04 : Réseaux de neurones artificiels
     </a>
    </li>
    <li class="toctree-l2">
@@ -919,11 +924,6 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reseau-neuronal">
-   Réseau neuronal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliographie">
    Bibliographie
   </a>
@@ -995,11 +995,6 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reseau-neuronal">
-   Réseau neuronal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliographie">
    Bibliographie
   </a>
@@ -1019,12 +1014,8 @@ title="Print to PDF"
 <h1>C2-IA-01 : Histoire de l’Intelligence Artificielle<a class="headerlink" href="#c2-ia-01-histoire-de-l-intelligence-artificielle" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
-<p>Séquence pédagogique étalée sur plusieurs périodes</p>
 <ul class="simple">
-<li><p>comprendre le concept d’apprentissage automatique</p></li>
-<li><p>connaître quelques éléments d’histoire de l’apprentissage automatique</p></li>
-<li><p>expliquer ce qu’est un automate cellulaire et développer le jeu de la vie en TP</p></li>
-<li><p>comparer les apprentissages supervisés et développer un réseau neuronal simple (MINST) en TP</p></li>
+<li><p>connaître quelques éléments d’histoire de l’intelligence artificielle</p></li>
 </ul>
 </section>
 <section id="c-est-quoi-l-intelligence-artificielle">
@@ -1098,14 +1089,14 @@ title="Print to PDF"
 </section>
 <section id="l-apprentissage-automatique">
 <h3>2000 - 2010 : l’apprentissage automatique<a class="headerlink" href="#l-apprentissage-automatique" title="Permalink to this headline">#</a></h3>
-<p>Le début des années 2000 voit le retour de l’intelligence artificielle au plus haut niveau. Cela est possible grâce à la puissance des ordinateurs qui permettent d’exécuter des programmes d’<strong>apprentissage automatique</strong> (<em>Deep learning</em> en anglais).</p>
+<p>Le début des années 2000 voit le retour de l’intelligence artificielle au plus haut niveau. Cela est possible grâce à la puissance des ordinateurs qui permettent d’exécuter des programmes d’<strong>apprentissage automatique</strong> (<em>Machine learning</em> en anglais).</p>
 <p><img alt="bluebrain" src="../../../_images/bluebrain.jpg" /></p>
 <ul class="simple">
 <li><p><strong>2005</strong> : L’EPFL lance le projet <strong>Blue Brain</strong> qui vise à développer un cerveau artificiel complet par <a class="reference external" href="https://fr.wikipedia.org/wiki/Henry_Markram">Henry Markram</a>. Ce projet sera aussi le point de départ du <em>Flagship project de l’Union Européenne</em> <strong>Human Brain Project</strong>. Ce projet a été possible grâce au développement de <strong>superordinateurs</strong> spécifiques, notamment le <strong>IBM Blue Gene</strong>.</p></li>
 </ul>
 <p><img alt="ps3" src="../../../_images/ps3.jpg" /></p>
 <ul class="simple">
-<li><p><strong>2006</strong> : le laboratoire LACAL du Professeur <a class="reference external" href="https://fr.wikipedia.org/wiki/Arjen_Lenstra">Arjen Lenstra</a> avec le laboratoire LIN du Professeur <span class="xref myst">Michel Deville</span> et le centre de recherche en physique des particules (CRPP) de l’EPFL construisent un <strong>superordinateur</strong> dont les briques sont des <strong>Sony Playstation 3</strong> équipées du processeur <strong>CELL</strong> extrêmement puissant. Des algorithmes d’apprentissage automatique y sont testés avec succès.</p></li>
+<li><p><strong>2006</strong> : le laboratoire LACAL du Professeur <a class="reference external" href="https://fr.wikipedia.org/wiki/Arjen_Lenstra">Arjen Lenstra</a> avec le laboratoire LIN du Professeur <a class="reference external" href="https://people.epfl.ch/michel.deville">Michel Deville</a> et le centre de recherche en physique des particules (CRPP) de l’EPFL construisent un <strong>superordinateur</strong> dont les briques sont des <strong>Sony Playstation 3</strong> équipées du processeur <strong>CELL</strong> extrêmement puissant. Des algorithmes d’apprentissage automatique y sont testés avec succès.</p></li>
 </ul>
 <p><img alt="siri" src="../../../_images/siri.png" /></p>
 <ul class="simple">
@@ -1115,6 +1106,10 @@ title="Print to PDF"
 <section id="omnipresence-de-l-ia">
 <h3>2010 - 2020 : omniprésence de l’IA<a class="headerlink" href="#omnipresence-de-l-ia" title="Permalink to this headline">#</a></h3>
 <p>Les années 2010 et surtout 2020 voient l’arrivée d’algorithmes toujours plus performants d’apprentissage automatique. Ce qui n’était pas possible dix ans auparavant est une réalité : reconnaissance vocale, vision par ordinateur, traduction sémantique.</p>
+<p><img alt="eugene" src="../../../_images/eugene.jpg" /></p>
+<ul class="simple">
+<li><p><strong>2014</strong> : l’intelligence artificielle <em>Eugene Goostman</em> Russe qui simule un jeune garçon de 13 ans parlant ukrainien est le premier programme de l’histoire à passer le <strong>test de Turing</strong>, 64 ans après avoir été formulé.</p></li>
+</ul>
 <p><img alt="alphago" src="../../../_images/alphago.jpg" /></p>
 <ul class="simple">
 <li><p><strong>2016</strong> : le programme <span class="xref myst">AlphaGO</span> bat le champion du monde de jeu de Go Lee Sedol.</p></li>
@@ -1124,14 +1119,6 @@ title="Print to PDF"
 <li><p><strong>2020</strong> : L’entreprise américaine OpenAI rend public son intelligence artificielle générative <strong>Chat-GPT</strong></p></li>
 </ul>
 </section>
-</section>
-<section id="reseau-neuronal">
-<h2>Réseau neuronal<a class="headerlink" href="#reseau-neuronal" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Apprentissage supervisé (MINST chiffres manuscrits)</p></li>
-<li><p>Apprentissage non-supervisé</p></li>
-<li><p>Introduction avec Scikit-learn en TP</p></li>
-</ul>
 </section>
 <section id="bibliographie">
 <h2>Bibliographie<a class="headerlink" href="#bibliographie" title="Permalink to this headline">#</a></h2>
@@ -1178,10 +1165,10 @@ title="Print to PDF"
             <p class="prev-next-title">Intelligence artificielle</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Automates.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-IA-02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C-IA-02 : Automates cellulaires</p>
+        <p class="prev-next-title">C2-IA-02 : Automates cellulaires</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
