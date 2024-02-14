@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C2-IA-04 : Réseaux de neurones artificiels" href="C2-IA-04.html" />
+    <link rel="next" title="C2-IA-04 : Apprentissage profond" href="C2-IA-04.html" />
     <link rel="prev" title="C2-IA-02 : Automates cellulaires" href="C2-IA-02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -655,7 +655,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="C2-IA-04.html">
-     C2-IA-04 : Réseaux de neurones artificiels
+     C2-IA-04 : Apprentissage profond
     </a>
    </li>
    <li class="toctree-l2">
@@ -937,6 +937,23 @@ title="Print to PDF"
    Evaluation des modèles
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemples">
+   Exemples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Apprentissage supervisé
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Apprentissage non-supervisé
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1017,6 +1034,23 @@ title="Print to PDF"
    Evaluation des modèles
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemples">
+   Exemples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Apprentissage supervisé
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Apprentissage non-supervisé
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -1070,16 +1104,17 @@ title="Print to PDF"
 <p>L’apprentissage supervisé consiste à <strong>entraîner un modèle</strong> à partir de paires de données d’entrée et de sortie de l’algorithme. Le modèle apprend à partir d’exemples <strong>étiquetés</strong> afin de faire des prédictions sur de nouvelles données</p>
 <p>Les deux types principaux de tâches en apprentissage supervisé sont :</p>
 <ol class="simple">
-<li><p>La <strong>classification</strong> : prédire une catégorie ou une classe</p></li>
-<li><p>La <strong>régression</strong> : prédire une valeur numérique</p></li>
+<li><p>La <strong>classification</strong> : prédire une catégorie ou une classe (<strong>valeur discrète</strong>)</p></li>
+<li><p>La <strong>régression</strong> : prédire une valeur numérique (<strong>valeur continue</strong>)</p></li>
 </ol>
 <p><img alt="superviserd" src="../../../_images/supervised.png" /></p>
 <section id="processus-d-apprentissage">
 <h3>Processus d’apprentissage<a class="headerlink" href="#processus-d-apprentissage" title="Permalink to this headline">#</a></h3>
-<p>L’apprentissage supervisé implique deux phases :</p>
+<p>L’apprentissage supervisé implique trois phases :</p>
 <ol class="simple">
 <li><p>Phase <strong>d’entraînement</strong> : le modèle (l’algorithme) est exposé à un ensemble de données étiquetées. Le modèle ajuste ses paramètres internes pour <strong>minimiser une fonction d’erreur</strong> (<em>fitness function</em> en anglais). Cette fonction d’erreur décrit la justesse du résultat d’apprentissage.</p></li>
-<li><p>Phase <strong>de test</strong> : le modèle est évalué sur un ensemble de données distinct pour estimer sa capacité à généraliser à de nouvelles données non utilisées pendant la phase d’entraînement.</p></li>
+<li><p>Phase <strong>de validation</strong> : le modèle est exposé à un nouvel ensemble de données étiquetées (différentes de celles qui ont permis l’entraînement).</p></li>
+<li><p>Phase <strong>de test</strong> : le modèle est évalué sur un ensemble de données distinct pour estimer sa capacité à généraliser à de nouvelles données non utilisées pendant la phase d’entraînement ni de validation. Les données ne sont pas étiquetées</p></li>
 </ol>
 </section>
 </section>
@@ -1121,6 +1156,28 @@ title="Print to PDF"
 <h2>Evaluation des modèles<a class="headerlink" href="#evaluation-des-modeles" title="Permalink to this headline">#</a></h2>
 <p>Une fois qu’un modèle est entraîné, on peut le comparer avec d’autres modèles (algorithmes) qui résolvent le même problème.</p>
 </section>
+<section id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
+<p>Ci-dessous, une liste (non exhaustive) d’exemples où l’apprentissage est mis en application.</p>
+<section id="id1">
+<h3>Apprentissage supervisé<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Filtrage d’email</strong>. Un email reçu est il un <strong>spam</strong> non désiré ou un envoi <strong>légitime</strong> (désiré). C’est clairement une <strong>classification</strong>.</p></li>
+<li><p><strong>Notation financière</strong>. Quels sont les risques pour un prêteur (une banque, un détenteur d’obligations ou un fournisseur) de se voir rembourser son prêt. C’est une <strong>classification</strong>.</p></li>
+<li><p><strong>Reconnaissance automatique de la voix</strong>. L’algorithme doit reconnaître les mots utilisés dans la parole enregistrée ou émise en direct. C’est aussi une <strong>classification</strong> (à plusieurs valeurs discrètes).</p></li>
+<li><p><strong>Prédiction du prix d’un bien immobilier</strong>. En connaissant la taille, le nombre de chambres, le lieu où il se trouve, la présence d’un jardin, etc… l’algorithme prédira le prix du bien. C’est une <strong>régression</strong>.</p></li>
+<li><p><strong>Diagnostic médical</strong>. En fonction de données médicales d’un patient (âge, maladies antérieures, symptômes, etc..), l’algorithme prédit le risque du patient de contracter ou non une maladie.</p></li>
+<li><p><strong>Match Tinder</strong>. En fonction du comportement de l’utilisateur A et du profil des autres utilisateurs, l’algorithme prédit quel est la probabilité d’un match entre A et les autres. C’est une <strong>regression</strong>.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Apprentissage non-supervisé<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Analyse du panier d’achat</strong> (<em>Market Basket Analysis</em> en anglais). En fonction des articles qu’un utilisateur a acquis (données récupérées online ou via système de cartes de type <em>COOP Supercard</em> ou <em>Migros Cumulus</em>), l’algorithme prédit quels sont les nouveaux articles susceptibles d’intéresser un utilisateur.</p></li>
+<li><p><strong>Zones accidentogènes</strong>. En fonction de la configuration d’une zone, l’algorithme prédit si elle est accidentogène ou pas.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1160,7 +1217,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="C2-IA-04.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C2-IA-04 : Réseaux de neurones artificiels</p>
+        <p class="prev-next-title">C2-IA-04 : Apprentissage profond</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

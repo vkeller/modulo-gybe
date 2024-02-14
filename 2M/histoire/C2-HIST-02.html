@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Architecture et réseaux" href="../architecture/index.html" />
+    <link rel="next" title="C2-HIST-03 : Histoire de l’informatique : le logiciel" href="C2-HIST-03.html" />
     <link rel="prev" title="C2-HIST-01 : Préhistoire de l’informatique" href="C2-HIST-01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -309,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/types/Types.html">
+    <a class="reference internal" href="../../1M/prog/types/TP1-PROG-07.html">
      TP1-PROG-07 - Notions de types
     </a>
    </li>
@@ -552,6 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
      C2-HIST-02 : Histoire de l’informatique : le matériel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C2-HIST-03.html">
+     C2-HIST-03 : Histoire de l’informatique : le logiciel
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -567,6 +572,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../architecture/cours/C2-ARCH-01.html">
      C2-ARCH-01 : Compilation : du Python au langage machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../architecture/cours/C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
     </a>
    </li>
    <li class="toctree-l2">
@@ -629,18 +639,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/IntroML.html">
-     C-IA-01 : Introduction à l’Intelligence Artificielle
+    <a class="reference internal" href="../machine-learning/cours/C2-IA-01.html">
+     C2-IA-01 : Histoire de l’Intelligence Artificielle
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/Automates.html">
-     C-IA-02 : Automates cellulaires
+    <a class="reference internal" href="../machine-learning/cours/C2-IA-02.html">
+     C2-IA-02 : Automates cellulaires
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/RNN.html">
-     C-IA-03 : Réseaux de neurones artificiels
+    <a class="reference internal" href="../machine-learning/cours/C2-IA-03.html">
+     C2-IA-03 : Apprentissage automatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../machine-learning/cours/C2-IA-04.html">
+     C2-IA-04 : Apprentissage profond
     </a>
    </li>
    <li class="toctree-l2">
@@ -650,10 +665,27 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../esdn/index.html">
    Enjeux sociaux du numérique
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../esdn/environnement/TP2-ESDN-01.html">
+     TP2-ESDN-01 : L’environnement et le numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../esdn/generative-art/TP2-ESDN-02.html">
+     TP2-ESDN-02 : L’Art et le Numérique
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -1537,8 +1569,11 @@ title="Print to PDF"
 <p><img alt="ci" src="../../_images/ci.jpg" /></p>
 <section id="missiles-et-missions-apollo">
 <h3>Missiles et missions Apollo<a class="headerlink" href="#missiles-et-missions-apollo" title="Permalink to this headline">#</a></h3>
-<p>On sait que les deux technologies sont intimement liées. L’ordinateur de bord des <a class="reference external" href="https://fr.wikipedia.org/wiki/Minuteman_(missile_balistique)">missiles ballistiques intercontinentaux Minuteman</a> fut le premier <em>ordinateur</em> a être construit autour de circuits intégrés. De même que l’ordinateur de bord des missions Apollo le <strong>Apollo Guidance Computer</strong> fut construit avec des circuits intégrés.</p>
+<p>On sait que les deux technologies sont intimement liées. L’ordinateur de bord des <a class="reference external" href="https://fr.wikipedia.org/wiki/Minuteman_(missile_balistique)">missiles ballistiques intercontinentaux Minuteman</a> fut le premier <em>ordinateur</em> a être construit autour de circuits intégrés. De même que l’ordinateur de bord des missions Apollo le <strong>Apollo Guidance Computer</strong> (AGC) fut construit avec des circuits intégrés.</p>
+<p><img alt="hamilton" src="../../_images/hamilton.jpg" /></p>
+<p>Margaret Hamilton et le code complet de l’AGC</p>
 <p><img alt="apollo" src="../../_images/apollo.jpg" /></p>
+<p>Buzz Aldrin avec l’AGC en cours de <em>Trans lunar injection</em> (TLI)</p>
 </section>
 </section>
 <section id="le-premier-micro-processeur">
@@ -1667,10 +1702,10 @@ title="Print to PDF"
             <p class="prev-next-title">C2-HIST-01 : Préhistoire de l’informatique</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../architecture/index.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-HIST-03.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Architecture et réseaux</p>
+        <p class="prev-next-title">C2-HIST-03 : Histoire de l’informatique : le logiciel</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
