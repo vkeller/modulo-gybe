@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>C2-IA-04 : Apprentissage profond &#8212; Education Numérique Ecole de maturité</title>
+    <title>C2-IA-04 : Réseau de neurones artificiels &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="TP-IA-01 : Le jeu de la vie" href="../tp/JeudelavieTP.html" />
@@ -655,7 +657,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     C2-IA-04 : Apprentissage profond
+     C2-IA-04 : Réseau de neurones artificiels
     </a>
    </li>
    <li class="toctree-l2">
@@ -882,8 +884,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#neurone">
-   Neurone
+  <a class="reference internal nav-link" href="#neurone-biologique">
+   Neurone biologique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modele-de-neurone-biologique">
+   Modèle de neurone biologique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reseau-de-neurones-artificiels">
+   Réseau de neurones artificiels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apprentissage-profond">
+   Apprentissage profond
   </a>
  </li>
 </ul>
@@ -895,7 +912,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>C2-IA-04 : Apprentissage profond</h1>
+                <h1>C2-IA-04 : Réseau de neurones artificiels</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -911,8 +928,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#neurone">
-   Neurone
+  <a class="reference internal nav-link" href="#neurone-biologique">
+   Neurone biologique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modele-de-neurone-biologique">
+   Modèle de neurone biologique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reseau-de-neurones-artificiels">
+   Réseau de neurones artificiels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apprentissage-profond">
+   Apprentissage profond
   </a>
  </li>
 </ul>
@@ -926,17 +958,73 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="RNN" src="../../../_images/rnn.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c2-ia-04-apprentissage-profond">
-<h1>C2-IA-04 : Apprentissage profond<a class="headerlink" href="#c2-ia-04-apprentissage-profond" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="c2-ia-04-reseau-de-neurones-artificiels">
+<h1>C2-IA-04 : Réseau de neurones artificiels<a class="headerlink" href="#c2-ia-04-reseau-de-neurones-artificiels" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>connaître les éléments entrant en jeu dans le développement d’un algorithme d’apprentissage profond</p></li>
-<li><p>conaître les réseaux de neurones artificiels</p></li>
+<li><p>connaître les bases du modèle de neurone artificiel</p></li>
+<li><p>savoir citer les constitutifs d’un neurone artificiel</p></li>
+<li><p>connaître les constitutifs d’un réseau de neurones artificiels</p></li>
 </ul>
 </section>
-<section id="neurone">
-<h2>Neurone<a class="headerlink" href="#neurone" title="Permalink to this headline">#</a></h2>
+<section id="neurone-biologique">
+<h2>Neurone biologique<a class="headerlink" href="#neurone-biologique" title="Permalink to this headline">#</a></h2>
+<p>Le point de départ des travaux sur le Perceptron de McCulloch et Pitts sont le <strong>neurone biologique</strong>, soit la brique fondamentale, l’unité fonctionnelle de base constitutive du <strong>système nerveux central</strong>.</p>
+<p><img alt="neuronebiologique1" src="../../../_images/neuronebiologique1.png" /></p>
+<p>Celui-ci est constitué principalement de :</p>
+<ol class="simple">
+<li><p>un noyau cellulaire</p></li>
+<li><p>un axone (émetteur) : c’est lui qui conduit le signal électrique vers les synapses</p></li>
+<li><p>des synapses : c’est le lien entre deux neurones</p></li>
+<li><p>des dentrites (récepteurs) : c’est eux qui conduisent le signal reçu vers le noyau du neurone</p></li>
+</ol>
+<p>Un système nerveux central (un cerveau) n’est donc rien de plus qu’un ensemble de neurones interconnectés entre eux.</p>
+<p>(pour plus de détails, voyez votre cours de biologie)</p>
+</section>
+<section id="modele-de-neurone-biologique">
+<h2>Modèle de neurone biologique<a class="headerlink" href="#modele-de-neurone-biologique" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>modèle</strong> d’un objet, d’un phénomène ou d’un concept est une <strong>représentation mathématique qui l’imite</strong>. Le modèle doit imiter les traits les plus importants de l’objet que l’on souhaite modéliser. Les détails de fonctionnement sont laissés de côté.</p>
+<p>Un <strong>neurone biologique</strong> est constitué d’un noyau, de synapses, axone et dentrites, eux-même constitués de membranes, de matériel génétique (ADN), et des éléments constitutifs des <strong>cellules</strong>. Chaque élément constitutif des cellules et constitué de molécules (<strong>biomolécules</strong>) comme les lipides, glucides, protéines et acide nucléique. Toutes ces molécules sont constituées d’<strong>atomes</strong>, eux-même constitués de <strong>protons</strong>, de <strong>neutrons</strong> et d’<strong>électrons</strong>, eux-mêmes constitués de <strong>quarks</strong>.</p>
+<p>Si l’on veut représenter le fonctionnement macroscopique d’un neurone, alors il est impossible de modéliser l’entier du fonctionnement. On se concentre donc sur le <strong>fonctionnement</strong> du neurone.</p>
+<p>C’est ce que l’on appelle un <strong>modèle de neurone biologique</strong>.</p>
+<p><img alt="neuronebiologique2" src="../../../_images/neuronebiologique2.png" /></p>
+<p>Le modèle de neurone biologique le plus simple est le <strong>neurone formel</strong> (ou neurone de McCulloch et Pitts). Il est constitué de 5 éléments :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(m\)</span> entrées <span class="math notranslate nohighlight">\(x_1, ..., x_m\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> poids synaptiques <span class="math notranslate nohighlight">\(\omega_1, ..., \omega_m\)</span> associés aux <span class="math notranslate nohighlight">\(m\)</span> entrées et compris entre <span class="math notranslate nohighlight">\([0 \leq \omega_i &lt; 1]\)</span></p></li>
+<li><p>une fonction de somme <span class="math notranslate nohighlight">\(\sum_{i = 1}^m \omega_i x_i\)</span></p></li>
+<li><p>un seuil <span class="math notranslate nohighlight">\(\omega_0\)</span> fixé à une valeur arbitraire généralement de <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>une fonction d’activation du neurone <span class="math notranslate nohighlight">\(\Phi\)</span></p></li>
+<li><p>une valeur de sortie <span class="math notranslate nohighlight">\(y\)</span></p></li>
+</ol>
+<p>Les mathématiques nécessaires pour expliquer l’entier du neurone dépassent largement le cadre de ce cours d’informatique.</p>
+<p><img alt="neuroneformel" src="../../../_images/neuroneformel.png" /></p>
+<p>C’est ce modèle que l’on appelle <strong>neurone artificiel</strong> qui est utilisé dans les algorithmes d’apprentissage automatique.</p>
+</section>
+<section id="reseau-de-neurones-artificiels">
+<h2>Réseau de neurones artificiels<a class="headerlink" href="#reseau-de-neurones-artificiels" title="Permalink to this headline">#</a></h2>
+<p>Une fois que le neurone est modélisé, on peut en connecter plusieurs ensembles. Les <strong>sorties</strong> des neurones deviennent les <strong>entrées</strong> d’autres neurones.</p>
+<p>C’est ce que l’on appelle un <strong>réseau de neurones artificiels</strong> (<em>Artifical Neural Network</em> ou <em>ANN</em> en anglais).</p>
+<p><img alt="ANN" src="../../../_images/ANN.png" /></p>
+<p>Un réseau de neurones artificiels est constitué de :</p>
+<ol class="simple">
+<li><p>entrées <span class="math notranslate nohighlight">\(x_i\)</span></p></li>
+<li><p>neurones cachés et interconnectés</p></li>
+<li><p>sorties <span class="math notranslate nohighlight">\(y_i\)</span></p></li>
+</ol>
+</section>
+<section id="apprentissage-profond">
+<h2>Apprentissage profond<a class="headerlink" href="#apprentissage-profond" title="Permalink to this headline">#</a></h2>
+<p>L’apprentissage profond (<em>Deep Learning</em>) est un sous-domaine de l’intelligence artificielle. L’apprentissage profond est apparu à la fin des années 2000 lorsque:</p>
+<ol class="simple">
+<li><p>la puissance des ordinateurs a atteint ce qui était nécessaire pour exécuter des algorithmes complexes</p></li>
+<li><p>les ensembles de données suffisamment représentatifs ont été collectés (de façon légale ou non)</p></li>
+<li><p>ces mêmes ensembles de données étiquetés et leurs caractéristiques extraites.</p></li>
+</ol>
+<p>On peut dire que l’équation <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">Data</span> <span class="pre">+</span> <span class="pre">Large</span> <span class="pre">ANN</span> <span class="pre">+</span> <span class="pre">High</span> <span class="pre">Performance</span> <span class="pre">Computing</span> <span class="pre">=</span> <span class="pre">Deep</span> <span class="pre">learning</span></code> représente bien l’apprentissage profond.</p>
+<p>L’apprentissage profond utilise des réseaux de neurones artificiels étendus : le nombre de couches cachées est important.</p>
+<p><img alt="ANN-DL" src="../../../_images/ANN-DL2.jpg" /></p>
 </section>
 </section>
 
