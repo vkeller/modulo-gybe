@@ -22,7 +22,7 @@ somme = 0
 
 for i in range(2, nombre + 1, 2):
     somme = somme + i
-print("La somme des netiers pairs jusqu'à ",n, "est :",somme)
+print("La somme des entiers pairs jusqu'à ",nombre, "est :",somme)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
