@@ -1,3 +1,10 @@
+# ------------------------------------------------------------------------------
+# Programme pour recomposer l'oeuvre "Gaussian Quadratic", 1963 de Michael Noll
+#
+# Utilise les compétences en programmation des élèves de 2M
+#
+# Licence BSD, Vincent Keller, 2024
+# ------------------------------------------------------------------------------
 from turtle import Turtle, Screen
 from random import *
 from PIL import Image
