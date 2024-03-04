@@ -1,5 +1,6 @@
 # ------------------------------------------------------------------------------
-# Programme pour recomposer l'oeuvre "Gaussian Quadratic", 1963 de Michael Noll
+# Programme pour recomposer l'oeuvre "Vertical-Horizontal Number Three",
+# 1963 de Michael Noll
 #
 # Utilise les compétences en programmation des élèves de 2M
 #
