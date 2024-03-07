@@ -10,12 +10,12 @@ from random import *
 from PIL import Image
 from datetime import datetime
 
-def rectangle(t,l1,l2):
+def rectangle(tortue,l1,l2):
     for i in range(2):
-        t.forward(l1)
-        t.left(90)
-        t.forward(l2)
-        t.left(90)
+        tortue.forward(l1)
+        tortue.left(90)
+        tortue.forward(l2)
+        tortue.left(90)
 
 t = Turtle()
 t.speed(100)
@@ -42,6 +42,7 @@ for i in range(60):
         i -= 1
         
         
+# Sauvegarde de la fenêtre dans une image jpg
 screen = Screen()
 canvas = screen.getcanvas()
 fileName = "noll_2024"
