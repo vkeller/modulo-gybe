@@ -1,0 +1,1182 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>C2-RESO-01 : Introduction aux réseaux informatiques &#8212; Education Numérique Ecole de maturité</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP2-ARCH-00 : Introduction avec un micro:bit" href="../raspberry/TP2-ARCH-00.html" />
+    <link rel="prev" title="C2-ARCH-02 : Architecture de Von Neumann" href="../cours/C2-ARCH-02.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../1M/index.html">
+   DO Informatique 1M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/representation/index.html">
+   Représentation des données
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/cours/Cours01.html">
+     C1-REDO-01 : Du monde physique au monde numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/cours/Cours02.html">
+     C1-REDO-02 binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/cours/Cours03.html">
+     C1-REDO-03 : codage de caractères
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/cours/Cours4.html">
+     C1-REDO-04 : Opérations en binaire et en hexadécimal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/cours/Revision.html">
+     C-REDO-05 Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/tp/tp1.html">
+     TP1-REDO-01 : les images matricielles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/tp/tp2.html">
+     TP1-REDO-02 : Le son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/representation/tp/tp3.html">
+     TP1-REDO-03 : Compression de fichiers et types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/algo/index.html">
+   Algorithmique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours1.html">
+     C1-ALGO-01 : Introduction à l’algorithmique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours2.html">
+     C1-ALGO-02 : Des algorigrammes aux algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours3.html">
+     C1-ALGO-03 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours4.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours5.html">
+     C1-ALGO-05.00 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours5.1.html">
+     C1-ALGO-05.01 Algorithmes classiques (Recherche)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours5.2.html">
+     C1-ALGO-05.02 Algorithmes classiques (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours6.html">
+     C1-ALGO-06 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours7.html">
+     C1-ALGO-07 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours8.html">
+     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/Cours9.html">
+     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-10.html">
+     C1-ALGO-10 - Introduction à la cryptologie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-11.html">
+     C1-ALGO-11 : Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-01.html">
+     R1-ALGO-01 - révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-02.html">
+     R1-ALGO-02 : Révision Algorigramme + programmation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../1M/installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/prog/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/intro1/intro1.html">
+     TP1-PROG-01 - Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/intro2/intro2.html">
+     TP1-PROG-02 - Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/boucles/boucles1.html">
+     TP1-PROG-03 - Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/boucles/boucles2.html">
+     TP1-PROG-04 - Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
+     TP1-PROG-05 - Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/dessinsanimes/dessins.html">
+     TP1-PROG-06 - Les dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">
+     TP1-PROG-07 - Notions de types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">
+     TP1-PROG-08 - Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/files/LesFiles.html">
+     TP1-PROG-09 - Les Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/piles/LesPiles.html">
+     TP1-PROG-09 - Les Piles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/cryptographie/Cryptographie.html">
+     TP1-PROG-10 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-11.html">
+     TP1-PROG-11 : Les entrées-sorties
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/architecture/index.html">
+   Architecture
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/architecture/fichiers/SystemeDeFichiers.html">
+     TP1-ARCH-01 : Le système de fichiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/esdn/index.html">
+   Enjeux sociaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/esdn/cours/IntroductionESDN.html">
+     C1-ESDN-01 : Enjeux sociaux du Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/esdn/cours/Cypherpunks.html">
+     C1-ESDN-02 : Le mouvement Cypherpunk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/esdn/cours/CapitalismeDeSurveillance.html">
+     C1-ESDN-03 : Le capitalisme de surveillance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/esdn/cours/LesReseaux.html">
+     TP1-ESDN-01 : Les réseaux informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/esdn/presentations/PresentationsESDN.html">
+     TP1-ESDN-02 : Présentations Enjeux sociaux du Numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../1M/jeux/index.html">
+   Jeux informatiques et logiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/jeux/logique.html">
+     C1-JEUX-01 : Quizz de logique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   DO Informatique 2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/Revision2M-1.html">
+     R2-ALGO-01 : Révision Algorithmes 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/Revision2M-2.html">
+     C2-ALGO-01 : Révision algorithmes (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-02.html">
+     C2-ALGO-02 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-03.html">
+     C2-ALGO-03 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-04.html">
+     C2-ALGO-04 : Taille du problème
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-05.html">
+     C2-ALGO-05 : Introduction à la théorie des graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-06.html">
+     C2-ALGO-06 : Théorie des graphes, le voyageur de commerce
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/R2-ALGO-01.html">
+     R1-ALGO-01 : Révision
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../prog/index.html">
+   Programmation avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/revisions/Revision1M.html">
+     R2-PROG-01 : Rappels programmation 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/complexite/TP2-PROG-01.html">
+     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/complexite/TP2-PROG-02.html">
+     TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/syracuse/Syracuse.html">
+     TP2-PROG-05 : Conjecture de Collatz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/dictionnaires/Dictionnaires2.html">
+     TP2-PROG-06 : Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/motdepasse/MotsDePasse.html">
+     TP2-PROG-07 : Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/hacking/hacking-romain.html">
+     TP2-PROG-08: Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/arbres/LesArbres.html">
+     TP2-PROG-09 : Les arbres
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../histoire/index.html">
+   Histoire de l’informatique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../histoire/C2-HIST-01.html">
+     C2-HIST-01 : Préhistoire de l’informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../histoire/C2-HIST-02.html">
+     C2-HIST-02 : Histoire de l’informatique : le matériel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../histoire/C2-HIST-03.html">
+     C2-HIST-03 : Histoire de l’informatique : le logiciel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Architecture et réseaux
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C2-ARCH-01.html">
+     C2-ARCH-01 : Compilation : du Python au langage machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     C2-RESO-01 : Introduction aux réseaux informatiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raspberry/TP2-ARCH-00.html">
+     TP2-ARCH-00 : Introduction avec un micro:bit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../TP/TP2-ARCH-01.html">
+     TP2-ARCH-01 : Les portes logiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../strategies/index.html">
+   Stratégie de résolution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../strategies/C2-STRAT-01.html">
+     C2-STRAT-01 : Stratégies de résolution de problèmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../strategies/C2-STRAT-02.html">
+     C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../strategies/TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../machine-learning/index.html">
+   Intelligence artificielle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-00.html">
+     C2-IA-00 : Introduction à l’intelligence artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-01.html">
+     C2-IA-01 : Histoire de l’Intelligence Artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-02.html">
+     C2-IA-02 : Automates cellulaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-03.html">
+     C2-IA-03 : Apprentissage automatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-04.html">
+     C2-IA-04 : Réseau de neurones artificiels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">
+     TP-IA-01 : Le jeu de la vie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux du numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">
+     TP2-ESDN-01 : L’environnement et le numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">
+     TP2-ESDN-02 : L’Art et le Numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliographie
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../biblio.html">
+   Livres et sources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/reseau/C2-RESO-01.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/2M/architecture/reseau/C2-RESO-01.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#communication-entre-appareils">
+   Communication entre appareils
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vitesse-debit-et-portee">
+     Vitesse, débit et portée
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modele-de-reseau">
+   Modèle de réseau
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modele-osi">
+     Modèle OSI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modele-tcp-ip">
+     Modèle TCP/IP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adresse-mac">
+   Adresse MAC
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>C2-RESO-01 : Introduction aux réseaux informatiques</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#communication-entre-appareils">
+   Communication entre appareils
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vitesse-debit-et-portee">
+     Vitesse, débit et portée
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modele-de-reseau">
+   Modèle de réseau
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modele-osi">
+     Modèle OSI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modele-tcp-ip">
+     Modèle TCP/IP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adresse-mac">
+   Adresse MAC
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="reseau" src="../../../_images/reseau2.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c2-reso-01-introduction-aux-reseaux-informatiques">
+<h1>C2-RESO-01 : Introduction aux réseaux informatiques<a class="headerlink" href="#c2-reso-01-introduction-aux-reseaux-informatiques" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Nommer les différents composants d’un réseau informatique</p></li>
+<li><p>Connaître les modèles en couche (TCP/IP et OSI)</p></li>
+<li><p>Connaître les topologies principales</p></li>
+</ul>
+</section>
+<section id="communication-entre-appareils">
+<h2>Communication entre appareils<a class="headerlink" href="#communication-entre-appareils" title="Permalink to this headline">#</a></h2>
+<p>Il est possible de faire communiquer deux ordinateurs en les reliant par un simple câble</p>
+<p><img alt="network1" src="../../../_images/net1.png" /></p>
+<p>La <strong>technologie</strong> utilisée est le <strong>câble ethernet</strong> avec un connecteur RJ45 <strong>mâle</strong> :</p>
+<p><img alt="rj45" src="../../../_images/rj45.jpg" /></p>
+<p>L’appareil (l’ordinateur) doit avoir un connecteur RJ45 <strong>femelle</strong>.</p>
+<p>C’est le cas de tous les ordinateurs de bureau. Il faut parfois utiliser un <strong>convertisseur</strong></p>
+<p><img alt="rj45femelle" src="../../../_images/rj45femelle.jpg" /></p>
+<p>Relier deux ordinateurs peut avoir de l’intérêt, mais dans la plupart des cas, un <strong>réseau</strong> sera constitué d’un plus grand nombre d’ordinateurs. Dans ce cas, il est nécessaire d’utiliser un <strong>commutateur de réseau</strong> (un <strong>switch</strong> en anglais):</p>
+<p><img alt="switch" src="../../../_images/switch.jpg" /></p>
+<p>Un <strong>switch</strong> est une sorte de <em>multiprise intelligente</em> qui permet de relier entre eux tous les ordinateurs appartenant à un même réseau. Il existe des switchs qui possèdent 8 <strong>connecteurs RJ45</strong>, d’autres peuvent en possèder 16, 24, 48 ou même plus.</p>
+<p>Chaque ordinateur doit être relié au switch par l’intermédiaire d’un câble ethernet. Dans l’exemple ci-dessous, les ordinateurs A, B, C, et D sont en réseau local (on appelle cela un <strong>LAN</strong> ou <strong>Local Area Network</strong>). Chaque ordinateur peut communiquer avec les trois autres.</p>
+<p><img alt="reseau3" src="../../../_images/switch3.jpg" /></p>
+<p>Les switchs ayant un nombre limité de connecteurs RJ45, il peut être nécessaire d’utiliser plusieurs switchs dans un même résau. Les câbles eux-mêmes ont une longueur maximale.</p>
+<p><img alt="reseau4" src="../../../_images/switch4.jpg" /></p>
+<p>Un <strong>routeur</strong> (<em>router</em> en anglais) permet de relier ensembles plusieurs réseaux locaux de type <strong>LAN</strong>. Les routeurs les plus simples que l’on peut rencontrer permettent de relier ensemble deux réseaux. Dans ce cas, ils sont appelés simplement <strong>passerelles</strong>.</p>
+<p><img alt="routeur" src="../../../_images/router.jpg" /></p>
+<p>Une <strong>borne wifi</strong> peut jouer le rôle de routeur en connectant des appareils sans fils (ordinateurs portables par exemple ou téléphones mobiles) au réseau local ou à Internet.</p>
+<p><img alt="wifi" src="../../../_images/wifi.jpg" /></p>
+<section id="vitesse-debit-et-portee">
+<h3>Vitesse, débit et portée<a class="headerlink" href="#vitesse-debit-et-portee" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:center head"><p><strong>Vitesse</strong></p></th>
+<th class="text-align:center head"><p><strong>Débit</strong></p></th>
+<th class="text-align:center head"><p><strong>Portée</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Wifi</p></td>
+<td class="text-align:center"><p>75 % de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>10 GB/s</p></td>
+<td class="text-align:center"><p>35 mètres</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>RJ45</p></td>
+<td class="text-align:center"><p>75 % de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>1GB/s</p></td>
+<td class="text-align:center"><p>100 mètres</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Fibre optique</p></td>
+<td class="text-align:center"><p>75 % de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>1 TB/s</p></td>
+<td class="text-align:center"><p>50 kilomètres</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>4G</p></td>
+<td class="text-align:center"><p>75 % de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>600 MB/s</p></td>
+<td class="text-align:center"><p>5 kilomètres</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>5G</p></td>
+<td class="text-align:center"><p>75 % de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>3 GB/s</p></td>
+<td class="text-align:center"><p>500 mètres</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="modele-de-reseau">
+<h2>Modèle de réseau<a class="headerlink" href="#modele-de-reseau" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>modèle</strong> est une représentation d’une réalité complexe.</p>
+<p>Il existe deux <strong>modèles de réseaux</strong> utilisés dans le monde de l’informatique :</p>
+<ol class="simple">
+<li><p>Le modèle OSI</p></li>
+<li><p>Le modèle TCP/IP</p></li>
+</ol>
+<section id="modele-osi">
+<h3>Modèle OSI<a class="headerlink" href="#modele-osi" title="Permalink to this headline">#</a></h3>
+<p>Voici le modèle OSI pour <strong>Open System Interconnection</strong></p>
+<p><img alt="osi" src="../../../_images/osi.jpg" /></p>
+</section>
+<section id="modele-tcp-ip">
+<h3>Modèle TCP/IP<a class="headerlink" href="#modele-tcp-ip" title="Permalink to this headline">#</a></h3>
+<p>Les deux protocoles principaux des réseaux sont :</p>
+<ul class="simple">
+<li><p>TCP : <strong>Transfer Control Protocl</strong></p></li>
+<li><p>IP : <strong>Internet Protocol</strong></p></li>
+</ul>
+<p>Ce qui mis en parallèle avec le modèle OSI :</p>
+<p><img alt="tcp" src="../../../_images/tcp.jpg" /></p>
+<p>Ce qu’il est important de remarquer, c’est que chaque <strong>couleur</strong> représente un <strong>niveau d’abstraction</strong> des protocoles. Ainsi, un émetteur et un récepteur doivent <em>simplement</em> se mettre d’accord sur le <strong>protocole</strong> qui régit son niveau d’abstraction. Par exemple, si l’on regarde la partie verte (la couche <strong>application</strong>), il n’est pas nécessaire à l’application - un serveur web par exemple - de connaître les détails des couches inférieures. L’application se doit juste de connaître l’interface entre la couche verte et la couche vert clair (<strong>transport</strong>).</p>
+<p>Cela permet à des marques différentes, des applications différentes, des matériels différents de <strong>pouvoir communiquer</strong>.</p>
+</section>
+</section>
+<section id="adresse-mac">
+<h2>Adresse MAC<a class="headerlink" href="#adresse-mac" title="Permalink to this headline">#</a></h2>
+<p>Chaque appareil susceptible d’être connecté à un réseau (local ou internet) possède une adresse <strong>unique au monde</strong>. C’est l’adresse MAC (pour <strong>Media Access Control</strong>). Un téléphone portable, un ordinateur, un switch, un frigo connecté, une borne wifi ont tous une adresse MAC unique.</p>
+<ul class="simple">
+<li><p>un <strong>identifiant physique</strong> stocké dans l’électronique</p></li>
+<li><p>une adresse MAC unique</p></li>
+<li><p>constituée de <strong>48 bits</strong> (donc <strong>6 octets</strong>)</p></li>
+<li><p>représentée normalement sous forme <strong>hexadécimale</strong></p></li>
+<li><p>chaque octet est séparé par un double point <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+</ul>
+<p><img alt="mac" src="../../../_images/mac2.jpeg" /></p>
+<p><img alt="mac2" src="../../../_images/mac3.jpg" /></p>
+<p>Avec 48 bits, on peut avoir <span class="math notranslate nohighlight">\(2^48 = 281 474 976 710 656\)</span> appareils différents. Cela représente environ <strong>35’000 adresses MAC par être humain</strong>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./2M/architecture/reseau"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../cours/C2-ARCH-02.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">C2-ARCH-02 : Architecture de Von Neumann</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../raspberry/TP2-ARCH-00.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP2-ARCH-00 : Introduction avec un micro:bit</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
