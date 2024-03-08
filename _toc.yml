@@ -32,10 +32,10 @@ parts:
       - file: 1M/algo/cours/Cours7
       - file: 1M/algo/cours/Cours8
       - file: 1M/algo/cours/Cours9
-      - file: 1M/algo/cours/Cours10
-      - file: 1M/algo/cours/R1-ALGO-01
+      - file: 1M/algo/cours/C1-ALGO-10
       - file: 1M/algo/cours/C1-ALGO-11
       - file: 1M/algo/cours/C1-ALGO-12
+      - file: 1M/algo/cours/R1-ALGO-01
       - file: 1M/algo/cours/R1-ALGO-02
     - file: 1M/installation/installation
     - file: 1M/prog/index
@@ -47,7 +47,7 @@ parts:
       - file: 1M/prog/conditions/TP1-PROG-05
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/types/TP1-PROG-07
-      - file: 1M/prog/tableaux/Tableaux
+      - file: 1M/prog/tableaux/TP1-PROG-08
       - file: 1M/prog/files/LesFiles
       - file: 1M/prog/piles/LesPiles
       - file: 1M/prog/cryptographie/Cryptographie
@@ -101,6 +101,7 @@ parts:
       sections:
       - file: 2M/architecture/cours/C2-ARCH-01
       - file: 2M/architecture/cours/C2-ARCH-02
+      - file: 2M/architecture/reseau/C2-RESO-01
       - file: 2M/architecture/raspberry/TP2-ARCH-00
       - file: 2M/architecture/TP/TP2-ARCH-01
       - file: 2M/architecture/raspberry/TP2-ARCH-02

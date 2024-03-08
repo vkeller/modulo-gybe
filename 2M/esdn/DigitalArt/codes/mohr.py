@@ -45,9 +45,9 @@ t.pendown()
 
 # Boucle du dessin
 t.pencolor('black')
-for i in range(100):
-    x = int((randint(1,(xmax-xmin))*2)+xmin*0.5)
-    y = int((randint(1,(ymax-ymin))*2)+ymin*0.5)
+for i in range(80):
+    x = randint(1,(xmax-xmin))+xmin
+    y = randint(1,(ymax-ymin))+ymin
     if x >= xmin-1 and x <= xmax+1 and y >= ymin-1 and y <= ymax+1 :
 #        t.goto(x,y)
         s = randint(1,5)
