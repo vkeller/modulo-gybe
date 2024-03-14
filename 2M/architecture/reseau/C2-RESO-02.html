@@ -976,6 +976,33 @@ title="Print to PDF"
    DHCP
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#routage">
+   Routage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-routeurs">
+     Types de routeurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topologie-d-un-reseau">
+     Topologie d’un réseau
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-de-routage">
+     Table de routage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-routage">
+   Activité : routage
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1071,6 +1098,33 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dhcp">
    DHCP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#routage">
+   Routage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-routeurs">
+     Types de routeurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topologie-d-un-reseau">
+     Topologie d’un réseau
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-de-routage">
+     Table de routage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-routage">
+   Activité : routage
   </a>
  </li>
 </ul>
@@ -1184,6 +1238,44 @@ title="Print to PDF"
 <h2>DHCP<a class="headerlink" href="#dhcp" title="Permalink to this headline">#</a></h2>
 <p>Pour allouer des adresses IP <strong>dynamiques</strong>, il faut un nouveau protocole : DHCP pour <strong>Dynamic Host Configuration Protocol</strong>. C’est un <strong>serveur DHCP</strong> qui fourni ce service dans un réseau privé.</p>
 <p><img alt="dhcp" src="../../../_images/dhcp.png" /></p>
+</section>
+<section id="routage">
+<h2>Routage<a class="headerlink" href="#routage" title="Permalink to this headline">#</a></h2>
+<p>Le <strong>routage</strong> correspond à la sélection d’un chemin que doivent emprunter les <strong>paquets IP</strong> pour se rendre de leur origine (la <strong>source</strong>) à leur <strong>destination</strong>. Dans Internet, celui-ci est <strong>décentralisé</strong></p>
+<p><img alt="routage" src="../../../_images/routage1.png" /></p>
+<p>Ici, l’ordinateur <code class="docutils literal notranslate"><span class="pre">M1</span></code> souhaite communiquer avec l’ordinateur <code class="docutils literal notranslate"><span class="pre">M10</span></code>. Deux chemins sont possibles.</p>
+<section id="types-de-routeurs">
+<h3>Types de routeurs<a class="headerlink" href="#types-de-routeurs" title="Permalink to this headline">#</a></h3>
+<p>Il existe deux types de routeurs :</p>
+<ol class="simple">
+<li><p>Les <strong>routeurs internes</strong> (ou <strong>passerellles</strong>). Ils gèrent un réseau local ainsi qu’un point d’accès vers <strong>le monde</strong></p></li>
+<li><p>Les <strong>routeurs d’accès</strong>. Ils connectent des routeurs entre eux mais ne gèrent pas les paquets d’un réseau local.</p></li>
+</ol>
+<p><img alt="routage2" src="../../../_images/routage2.png" /></p>
+</section>
+<section id="topologie-d-un-reseau">
+<h3>Topologie d’un réseau<a class="headerlink" href="#topologie-d-un-reseau" title="Permalink to this headline">#</a></h3>
+<p>Une <strong>topologie réseau</strong> correspond à l’architecture (routeurs, appareils, liens physiques, liens logiciels, etc..) qui définissent les liaisons entre les équipements qui forment le réseau.</p>
+<p><img alt="topologie" src="../../../_images/topologie.png" /></p>
+</section>
+<section id="table-de-routage">
+<h3>Table de routage<a class="headerlink" href="#table-de-routage" title="Permalink to this headline">#</a></h3>
+<p>La <strong>table de routage</strong> est l’élèment clef de l’ensemble de l’architecture réseau d’internet.</p>
+<p>Chaque <strong>routeur</strong> (d’accès ou interne) possède une certaine part de <strong>connaissance</strong> de la topologie du réseau : <strong>ses voisins les plus proches</strong>.</p>
+<p><img alt="routage3" src="../../../_images/routage3.png" /></p>
+<p><strong>Comment les routeurs connaisent-ils la topologie du réseau ?</strong></p>
+<p><strong>Comment le chemin entre deux appareils est-il choisi ?</strong></p>
+<p>La table de routage contient les informations suivantes :</p>
+<ol class="simple">
+<li><p>Les adresses IP du routeur (il en possède au minimum deux)</p></li>
+<li><p>Les adresses IP des <strong>sous-réseaux</strong> auquel il est connecté</p></li>
+<li><p>Les <strong>routes</strong> (les directions) qu’il faut suivre pour atteindre un réseau</p></li>
+</ol>
+<p><img alt="table" src="../../../_images/table.png" /></p>
+</section>
+</section>
+<section id="activite-routage">
+<h2>Activité : routage<a class="headerlink" href="#activite-routage" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
