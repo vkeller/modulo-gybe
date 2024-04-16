@@ -48,10 +48,10 @@ parts:
       - file: 1M/prog/dessinsanimes/dessins
       - file: 1M/prog/types/TP1-PROG-07
       - file: 1M/prog/tableaux/TP1-PROG-08
-      - file: 1M/prog/files/LesFiles
-      - file: 1M/prog/piles/LesPiles
-      - file: 1M/prog/cryptographie/Cryptographie
-      - file: 1M/prog/IO/TP1-PROG-11
+      - file: 1M/prog/files/TP1-PROG-09
+      - file: 1M/prog/piles/TP1-PROG-10
+      - file: 1M/prog/cryptographie/TP1-PROG-11
+      - file: 1M/prog/IO/TP1-PROG-12
     - file: 1M/architecture/index
       sections:
       - file: 1M/architecture/fichiers/SystemeDeFichiers
