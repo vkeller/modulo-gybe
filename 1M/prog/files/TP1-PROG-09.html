@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP1-PROG-12: Les entrées-sorties &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-PROG-09 - Les Files &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP1-PROG-10 - Les Piles" href="../piles/TP1-PROG-10.html" />
+    <link rel="prev" title="TP1-PROG-08 - Tableaux" href="../tableaux/TP1-PROG-08.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   1ère année
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    DO Informatique 1M
@@ -271,16 +273,16 @@ const thebe_selector_output = ".output, .cell_output"
    Environnement de développement
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
    Programmation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../intro1/intro1.html">
      TP1-PROG-01 - Introduction à la programmation
@@ -321,8 +323,8 @@ const thebe_selector_output = ".output, .cell_output"
      TP1-PROG-08 - Tableaux
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../files/TP1-PROG-09.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      TP1-PROG-09 - Les Files
     </a>
    </li>
@@ -812,7 +814,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/IO/TP1-PROG-11.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/files/TP1-PROG-09.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -840,7 +842,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/1M/prog/IO/TP1-PROG-11.ipynb"
+        <a href="../../../_sources/1M/prog/files/TP1-PROG-09.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -900,74 +902,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques:
+  <a class="reference internal nav-link" href="#la-file-d-attente">
+   La file d’attente
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrees-et-sorties-dans-un-algorithme">
-   Entrées et sorties dans un algorithme
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#entrees">
-     Entrées
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sorties">
-     Sorties
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-entrees-et-sorties-dans-un-algorigramme">
-     Les entrées et sorties dans un algorigramme
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrees-et-sorties-dans-un-ordinateur">
-   Entrées et sorties dans un ordinateur
+  <a class="reference internal nav-link" href="#ajouter-un-element">
+   Ajouter un élément
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programme-python">
-   Programme Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-sorties-python">
-     Les sorties Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-entrees-python">
-     Les entrées Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#type-de-variable">
-     Type de variable
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#passage-d-un-type-a-l-autre-casting">
-       Passage d’un type à l’autre (casting)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#enlever-un-element">
+   Enlever un élément
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
+  <a class="reference internal nav-link" href="#a-la-poste">
+   A la poste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-guichet">
+   Le guichet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice">
+   Exercice
   </a>
  </li>
 </ul>
@@ -979,7 +940,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-PROG-12: Les entrées-sorties</h1>
+                <h1>TP1-PROG-09 - Les Files</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -990,74 +951,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques:
+  <a class="reference internal nav-link" href="#la-file-d-attente">
+   La file d’attente
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrees-et-sorties-dans-un-algorithme">
-   Entrées et sorties dans un algorithme
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#entrees">
-     Entrées
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sorties">
-     Sorties
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-entrees-et-sorties-dans-un-algorigramme">
-     Les entrées et sorties dans un algorigramme
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrees-et-sorties-dans-un-ordinateur">
-   Entrées et sorties dans un ordinateur
+  <a class="reference internal nav-link" href="#ajouter-un-element">
+   Ajouter un élément
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programme-python">
-   Programme Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-sorties-python">
-     Les sorties Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-entrees-python">
-     Les entrées Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#type-de-variable">
-     Type de variable
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#passage-d-un-type-a-l-autre-casting">
-       Passage d’un type à l’autre (casting)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#enlever-un-element">
+   Enlever un élément
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
+  <a class="reference internal nav-link" href="#a-la-poste">
+   A la poste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-guichet">
+   Le guichet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice">
+   Exercice
   </a>
  </li>
 </ul>
@@ -1070,82 +990,258 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="io" src="../../../_images/io1.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-12-les-entrees-sorties">
-<h1>TP1-PROG-12: Les entrées-sorties<a class="headerlink" href="#tp1-prog-12-les-entrees-sorties" title="Permalink to this headline">#</a></h1>
-<section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques:<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+  <p><img alt="" src="../../../_images/poste.jpeg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-09-les-files">
+<h1>TP1-PROG-09 - Les Files<a class="headerlink" href="#tp1-prog-09-les-files" title="Permalink to this headline">#</a></h1>
+<p>Les <strong>files</strong> sont des structures de données proches des listes. Elles permettent de gérer l’arrivé et le départ de ses éléments.</p>
+<section id="la-file-d-attente">
+<h2>La file d’attente<a class="headerlink" href="#la-file-d-attente" title="Permalink to this headline">#</a></h2>
+<p>La file d’attente est une structure de données qui permet de gérer les arrivées et les départs.</p>
+<p>Les opérations d’une file sont :</p>
 <ul class="simple">
-<li><p>approfondir les entrées sorties en Python</p></li>
-<li><p>appliquer sur des problèmes simples</p></li>
+<li><p>créer une nouvelle file vide</p></li>
+<li><p>ajouter un nouvel élément à la file</p></li>
+<li><p>supprimer un élément de la file</p></li>
 </ul>
+<p>Dans une file, <strong>le premier élément ajouté est le dernier que l’on peut enlever</strong></p>
+<p>En anglais une file d’attente est connu sous le nom <strong>FIFO</strong> (First In First Out).</p>
 </section>
-<section id="entrees-et-sorties-dans-un-algorithme">
-<h2>Entrées et sorties dans un algorithme<a class="headerlink" href="#entrees-et-sorties-dans-un-algorithme" title="Permalink to this headline">#</a></h2>
-<p>Un algorithme possède des entrées et des sorties.</p>
-<section id="entrees">
-<h3>Entrées<a class="headerlink" href="#entrees" title="Permalink to this headline">#</a></h3>
-<p>Une entrée d’un algorithme est une donnée qui sera utilisée durant l’exécution de l’algorithme.</p>
-</section>
-<section id="sorties">
-<h3>Sorties<a class="headerlink" href="#sorties" title="Permalink to this headline">#</a></h3>
-<p>Une sortie d’un algorithme est un résultat donné par l’algorithme</p>
-</section>
-<section id="les-entrees-et-sorties-dans-un-algorigramme">
-<h3>Les entrées et sorties dans un algorigramme<a class="headerlink" href="#les-entrees-et-sorties-dans-un-algorigramme" title="Permalink to this headline">#</a></h3>
-<p>Une entrée ou une sortie est symbolisée dans un algorigramme par :</p>
-<p><img alt="io2" src="../../../_images/io-algo.png" /></p>
-</section>
-</section>
-<section id="entrees-et-sorties-dans-un-ordinateur">
-<h2>Entrées et sorties dans un ordinateur<a class="headerlink" href="#entrees-et-sorties-dans-un-ordinateur" title="Permalink to this headline">#</a></h2>
-<p>Il existe deux principaux dispositifs permettant de fournir des données à l’ordinateur : <strong>le clavier</strong> et <strong>la souris</strong>. On dit que ce sont des <em>input devices</em>.</p>
-<p>Il existe un principal dispositif permettant à l’ordinateur de fournir un résultat : <strong>l’écran</strong></p>
-<p>On remarquera que les trois dispositifs sont regroupés dans un seul sur un smartphone : <strong>l’écran tactile</strong></p>
-</section>
-<section id="programme-python">
-<h2>Programme Python<a class="headerlink" href="#programme-python" title="Permalink to this headline">#</a></h2>
-<p>Le shéma d’entrées-sorties dans un programme Python peut être vu comme :</p>
-<p><img alt="io-ico" src="../../../_images/io-icone.png" /></p>
-<section id="les-sorties-python">
-<h3>Les sorties Python<a class="headerlink" href="#les-sorties-python" title="Permalink to this headline">#</a></h3>
-<p>On utilise la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> dont l’argument ou les arguments sont décrits dans la parenthèse:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">)</span>
+<section id="ajouter-un-element">
+<h2>Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Permalink to this headline">#</a></h2>
+<p>Nous ajoutons un élément dans la file avec la fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code></p>
+<p>Simulons une file d’attente à la caféteria.</p>
+<p>Nous commençons avec une file vide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
-</section>
-<section id="les-entrees-python">
-<h3>Les entrées Python<a class="headerlink" href="#les-entrees-python" title="Permalink to this headline">#</a></h3>
-<p>On utilise la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code>. Cette fonction <strong>retourne une valeur</strong> qui doit être assignée à une variable.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+</div>
+</div>
+<p>C’est midi et les personnes commençent à arriver.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code> permet de les ajouter à la liste <code class="docutils literal notranslate"><span class="pre">file</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Anna&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Léa&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Attention</strong> : le type retourné par la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> est une <strong>chaîne de caractères</strong> !!! Cela signifie que la variable <code class="docutils literal notranslate"><span class="pre">N</span></code> est de type <code class="docutils literal notranslate"><span class="pre">str</span></code>(chaîne de caractères)</p>
+</div>
+</div>
+<p>Nous avons maintenant les personnes suivantes dans la file d’attente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Anna&#39;, &#39;Tom&#39;, &#39;Léa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="type-de-variable">
-<h3>Type de variable<a class="headerlink" href="#type-de-variable" title="Permalink to this headline">#</a></h3>
-<p>Dans ce TP, nous allons travailler avec deux types de variables :</p>
+<section id="enlever-un-element">
+<h2>Enlever un élément<a class="headerlink" href="#enlever-un-element" title="Permalink to this headline">#</a></h2>
+<p>La première personne à être servie, est enlevée de la liste avec la fonction <code class="docutils literal notranslate"><span class="pre">pop(0)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Anna&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>La file est devenu plus petite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Tom&#39;, &#39;Léa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Des nouvelles personnes arrivent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Jim&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Noa&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Elsa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une nouvelle personne est servie.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Tom&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Combient de personne sont en attente ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Qui est dans la file d’attente</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Léa&#39;, &#39;Jim&#39;, &#39;Noa&#39;, &#39;Elsa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code> pour enlever les personnes dans le bon ordre.</p>
+</section>
+<section id="a-la-poste">
+<h2>A la poste<a class="headerlink" href="#a-la-poste" title="Permalink to this headline">#</a></h2>
+<p>Nous sommes à la Poste de Renens et il est 14h. Trois guichets sont ouverts et deux personnes attendent dans la file. La machine à tickets indique que le prochain ticket délivré sera le 544.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[</span><span class="mi">542</span><span class="p">,</span> <span class="mi">543</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’indice du dernier numéro (<code class="docutils literal notranslate"><span class="pre">543</span></code>) est <code class="docutils literal notranslate"><span class="pre">[-1]</span></code>. En ajoutant <code class="docutils literal notranslate"><span class="pre">1</span></code> à la valeur contenue dans <code class="docutils literal notranslate"><span class="pre">file[-1]</span></code>, on trouve <code class="docutils literal notranslate"><span class="pre">544</span></code></p>
+<p>Le prochain numéro sera donc</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>544
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si une personne entre, elle prend son numéro et elle s’insére dans la liste d’attente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suivant</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">suivant</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La file d’attente comprend maintenant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ensuite deux personnes entrent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544, 545, 546]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="le-guichet">
+<h2>Le guichet<a class="headerlink" href="#le-guichet" title="Permalink to this headline">#</a></h2>
+<p>Il y a trois guichets A, B, et C, qui vont se libérer de façon alétoire.</p>
+<p>Nous importons le module <code class="docutils literal notranslate"><span class="pre">random</span></code> et utilisons la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> pour choisir un des trois guichets de façon aléatoire.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le prochain guichet qui se libère</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>C’est la personne entrée en premier qui peut se diriger vers le guichet qui se libère</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suivant</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">guichet</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">suivant</span><span class="p">,</span> <span class="n">guichet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>542 C
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice">
+<h2>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">#</a></h2>
+<p>Traduisez en python les étapes suivantes :</p>
 <ol class="simple">
-<li><p>les <strong>chaînes de caractères</strong> ou <code class="docutils literal notranslate"><span class="pre">str</span></code>(qui signifie <em>string</em>)</p></li>
-<li><p>les <strong>nombres entiers</strong> ou <code class="docutils literal notranslate"><span class="pre">int</span></code> (qui signifie <em>integer</em>)</p></li>
+<li><p>Une femme entre dans la poste, elle va chercher son ticket.</p></li>
+<li><p>Le guichet 1 et le guichet 3 se libèrent. Deux personnes de la file les occupent ensuite</p></li>
+<li><p>Une femme suivie d’un homme pressé entrent dans la poste et vont chercher leurs ticket.</p></li>
+<li><p>Le guichet 2 se libère</p></li>
+<li><p>L’homme pressé quitte la poste, il en a marre d’attendre</p></li>
 </ol>
-<section id="passage-d-un-type-a-l-autre-casting">
-<h4>Passage d’un type à l’autre (casting)<a class="headerlink" href="#passage-d-un-type-a-l-autre-casting" title="Permalink to this headline">#</a></h4>
-<p>Il est possible de changer le type d’une variable. C’est le <strong>casting</strong>. Par exemple :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le nombre de places disponibles : &quot;</span><span class="p">)</span>
-<span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-</section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez un programme qui demande un prénom, stocke l’entrée dans la variable <code class="docutils literal notranslate"><span class="pre">prenom</span></code> et affiche des salutations (du type <em>Bonjour Caroline</em></p>
-</section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez un programme qui demande un chiffre, le double, puis affiche le résultat</p>
+<p>Après les étapes, quel est l’état des de la file ? Quel est le prochain numéro délivré par la machine à tickets ?</p>
 </section>
 </section>
 
@@ -1162,7 +1258,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1M/prog/IO"
+            path: "./1M/prog/files"
         },
         predefinedOutput: true
     }
@@ -1176,6 +1272,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../tableaux/TP1-PROG-08.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TP1-PROG-08 - Tableaux</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../piles/TP1-PROG-10.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP1-PROG-10 - Les Piles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
