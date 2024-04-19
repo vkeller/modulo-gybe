@@ -338,6 +338,11 @@ const thebe_selector_output = ".output, .cell_output"
      TP1-PROG-11 : Introduction à la cryptographie
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../IO/TP1-PROG-12.html">
+     TP1-PROG-12: Les entrées-sorties
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -915,21 +920,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#enlever-un-element">
    Enlever un élément
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-1">
+     Exercice 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-fonctions">
+   Exercice 2 : fonctions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-a-la-migros">
+   Exercice 3 : A la Migros
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-la-poste">
    A la poste
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-guichet">
-   Le guichet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice">
-   Exercice
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-des-guichets">
+     Simulation des guichets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-4">
+     Exercice 4
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -964,21 +988,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#enlever-un-element">
    Enlever un élément
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-1">
+     Exercice 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-fonctions">
+   Exercice 2 : fonctions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-a-la-migros">
+   Exercice 3 : A la Migros
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-la-poste">
    A la poste
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-guichet">
-   Le guichet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice">
-   Exercice
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-des-guichets">
+     Simulation des guichets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-4">
+     Exercice 4
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -990,21 +1033,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="" src="../../../_images/poste.jpeg" /></p>
+  <p><img alt="fileattente" src="../../../_images/fileattente.jpg" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-09-les-files">
 <h1>TP1-PROG-09 - Les Files<a class="headerlink" href="#tp1-prog-09-les-files" title="Permalink to this headline">#</a></h1>
 <p>Les <strong>files</strong> sont des structures de données proches des listes. Elles permettent de gérer l’arrivé et le départ de ses éléments.</p>
 <section id="la-file-d-attente">
 <h2>La file d’attente<a class="headerlink" href="#la-file-d-attente" title="Permalink to this headline">#</a></h2>
-<p>La file d’attente est une structure de données qui permet de gérer les arrivées et les départs.</p>
+<p>La file d’attente est une structure de donnée qui permet de gérer des entrées et des sorties dans un ordre précis : <strong>le premier élément ajouté est le dernier que l’on peut enlever</strong>. En anglais une file est connue sous le nom <strong>FIFO</strong> (First In First Out).</p>
 <p>Les opérations d’une file sont :</p>
 <ul class="simple">
 <li><p>créer une nouvelle file vide</p></li>
 <li><p>ajouter un nouvel élément à la file</p></li>
 <li><p>supprimer un élément de la file</p></li>
 </ul>
-<p>Dans une file, <strong>le premier élément ajouté est le dernier que l’on peut enlever</strong></p>
-<p>En anglais une file d’attente est connu sous le nom <strong>FIFO</strong> (First In First Out).</p>
 </section>
 <section id="ajouter-un-element">
 <h2>Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Permalink to this headline">#</a></h2>
@@ -1032,12 +1073,12 @@ title="Print to PDF"
 <p>Nous avons maintenant les personnes suivantes dans la file d’attente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Anna&#39;, &#39;Tom&#39;, &#39;Léa&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Anna&#39;, &#39;Tom&#39;, &#39;Léa&#39;]
 </pre></div>
 </div>
 </div>
@@ -1045,7 +1086,12 @@ title="Print to PDF"
 </section>
 <section id="enlever-un-element">
 <h2>Enlever un élément<a class="headerlink" href="#enlever-un-element" title="Permalink to this headline">#</a></h2>
-<p>La première personne à être servie, est enlevée de la liste avec la fonction <code class="docutils literal notranslate"><span class="pre">pop(0)</span></code></p>
+<p>La première personne à être servie, est enlevée de la liste avec la fonction <code class="docutils literal notranslate"><span class="pre">pop(0)</span></code>.</p>
+<p>En d’autres termes, les éléments sont</p>
+<ol class="simple">
+<li><p><strong>ajoutés</strong> à droite de la file (la liste)</p></li>
+<li><p><strong>supprimés</strong> à gauche : c’est le premier élément (d’index 0) qui est supprimé</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -1061,12 +1107,12 @@ title="Print to PDF"
 <p>La file est devenu plus petite.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Tom&#39;, &#39;Léa&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Tom&#39;, &#39;Léa&#39;]
 </pre></div>
 </div>
 </div>
@@ -1110,22 +1156,72 @@ title="Print to PDF"
 <p>Qui est dans la file d’attente</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Léa&#39;, &#39;Jim&#39;, &#39;Noa&#39;, &#39;Elsa&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Léa&#39;, &#39;Jim&#39;, &#39;Noa&#39;, &#39;Elsa&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Exercice</strong><br />
-Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code> pour enlever les personnes dans le bon ordre.</p>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h3>
+<p>Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code> pour enlever les personnes dans le bon ordre.</p>
+</section>
+</section>
+<section id="exercice-2-fonctions">
+<h2>Exercice 2 : fonctions<a class="headerlink" href="#exercice-2-fonctions" title="Permalink to this headline">#</a></h2>
+<p>Il est possible de simplifier les deux <strong>primitives</strong></p>
+<ol class="simple">
+<li><p>ajouter un élément</p></li>
+<li><p>enlever un élément</p></li>
+</ol>
+<p>à l’aide d’une fonction (un sous-programme). Chaque fonction prendra comme <strong>argument</strong> une file. Cela permet de pouvoir gérer plusieurs files en même temps</p>
+<p>A vous de définir les deux fonctions ayant les signatures suivantes :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">element</span><span class="p">):</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">supprimer</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">file</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Element supprimé : &quot;</span><span class="p">,</span><span class="n">element</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Que se passe-t-il si vous tentez de supprimer un élément dans une file vide ?</p>
+<p>Modifiez la fonction <code class="docutils literal notranslate"><span class="pre">supprimer(file)</span></code> pour qu’il gère une file vide</p>
+<p><img alt="migros" src="../../../_images/caisse.jpg" /></p>
+</section>
+<section id="exercice-3-a-la-migros">
+<h2>Exercice 3 : A la Migros<a class="headerlink" href="#exercice-3-a-la-migros" title="Permalink to this headline">#</a></h2>
+<p>Vous êtes maintenant capable de gérer plusieurs files indépendemment. Dans cet exercice, nous imaginons que nous voulons simuler le comportement des clients dans un magasin Migros où trois caisses sont ouvertes (et qu’il n’existe pas de système de <em>self checking</em>).</p>
+<ol class="simple">
+<li><p>Déclarez trois files distinctes : <code class="docutils literal notranslate"><span class="pre">caisse1</span></code>, <code class="docutils literal notranslate"><span class="pre">caisse2</span></code>, <code class="docutils literal notranslate"><span class="pre">caisse3</span></code></p></li>
+<li><p>Testez vos fonctions <code class="docutils literal notranslate"><span class="pre">ajouter(file,</span> <span class="pre">element)</span></code> et <code class="docutils literal notranslate"><span class="pre">supprimer(file</span></code> sur vos trois files avec des clients (à vous de choisir les prénoms)</p></li>
+</ol>
+<p>Question subsidiaire : est-il possible de compter l’ensemble des clients qui sont passés ce jour-là dans votre magasin Migros ?</p>
+<p><img alt="poste" src="../../../_images/poste.jpeg" /></p>
 </section>
 <section id="a-la-poste">
 <h2>A la poste<a class="headerlink" href="#a-la-poste" title="Permalink to this headline">#</a></h2>
-<p>Nous sommes à la Poste de Renens et il est 14h. Trois guichets sont ouverts et deux personnes attendent dans la file. La machine à tickets indique que le prochain ticket délivré sera le 544.</p>
+<p>Nous allons maintenant <strong>simuler</strong> le système informatique de gestion de l’attente dans une poste.</p>
+<ol class="simple">
+<li><p>Le client entre dans la poste</p></li>
+<li><p>Il se dirige vers un distributeur de tickets</p></li>
+<li><p>Le distributeur imprime un numéro</p></li>
+<li><p>Lorsqu’un guichet est libre, l’employé se déclare <strong>libre</strong> et le système affiche la lettre du guichet au premier client de la file (en position 0)</p></li>
+</ol>
+<p>Nous sommes à la Poste de Renens et il est 14h. Trois guichets sont ouverts <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code> et <code class="docutils literal notranslate"><span class="pre">C</span></code>, deux personnes attendent dans la file. La machine à tickets indique que le prochain ticket délivré sera le 544.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[</span><span class="mi">542</span><span class="p">,</span> <span class="mi">543</span><span class="p">]</span>
@@ -1133,25 +1229,10 @@ Utilisez la fonction <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 </div>
-<p>L’indice du dernier numéro (<code class="docutils literal notranslate"><span class="pre">543</span></code>) est <code class="docutils literal notranslate"><span class="pre">[-1]</span></code>. En ajoutant <code class="docutils literal notranslate"><span class="pre">1</span></code> à la valeur contenue dans <code class="docutils literal notranslate"><span class="pre">file[-1]</span></code>, on trouve <code class="docutils literal notranslate"><span class="pre">544</span></code></p>
-<p>Le prochain numéro sera donc</p>
+<p>Si une personne entre, elle prend son numéro et elle s’insére dans la liste d’attente. Le numéro suivant est le <code class="docutils literal notranslate"><span class="pre">544</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>544
-</pre></div>
-</div>
-</div>
-</div>
-<p>Si une personne entre, elle prend son numéro et elle s’insére dans la liste d’attente.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suivant</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">suivant</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">544</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1159,35 +1240,34 @@ Utilisez la fonction <code class="docutils literal notranslate"><span class="pre
 <p>La file d’attente comprend maintenant:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Ensuite deux personnes entrent.</p>
+<p>Deux nouveaux clients entrent et prennent un ticket.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">545</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">546</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544, 545, 546]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544, 545, 546]
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="le-guichet">
-<h2>Le guichet<a class="headerlink" href="#le-guichet" title="Permalink to this headline">#</a></h2>
-<p>Il y a trois guichets A, B, et C, qui vont se libérer de façon alétoire.</p>
+<section id="simulation-des-guichets">
+<h3>Simulation des guichets<a class="headerlink" href="#simulation-des-guichets" title="Permalink to this headline">#</a></h3>
+<p>Il y a trois guichets A, B, et C, qui vont se libérer de façon alétoire. Le temps de libération dépend de l’opération postale du client.</p>
 <p>Nous importons le module <code class="docutils literal notranslate"><span class="pre">random</span></code> et utilisons la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> pour choisir un des trois guichets de façon aléatoire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1197,7 +1277,7 @@ Utilisez la fonction <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
 </pre></div>
 </div>
 </div>
@@ -1210,7 +1290,7 @@ Utilisez la fonction <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A&#39;
 </pre></div>
 </div>
 </div>
@@ -1231,17 +1311,21 @@ Utilisez la fonction <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 </section>
-<section id="exercice">
-<h2>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">#</a></h2>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h3>
 <p>Traduisez en python les étapes suivantes :</p>
 <ol class="simple">
 <li><p>Une femme entre dans la poste, elle va chercher son ticket.</p></li>
-<li><p>Le guichet 1 et le guichet 3 se libèrent. Deux personnes de la file les occupent ensuite</p></li>
-<li><p>Une femme suivie d’un homme pressé entrent dans la poste et vont chercher leurs ticket.</p></li>
-<li><p>Le guichet 2 se libère</p></li>
+<li><p>Deux guichets se libèrent.</p></li>
+<li><p>Deux clients de la file les occupent.</p></li>
+<li><p>Trois nouveaux clients entrent dans la poste et vont chercher leurs ticket.</p></li>
+<li><p>Un guichet se libère</p></li>
 <li><p>L’homme pressé quitte la poste, il en a marre d’attendre</p></li>
 </ol>
-<p>Après les étapes, quel est l’état des de la file ? Quel est le prochain numéro délivré par la machine à tickets ?</p>
+<p>Après ces étapes, quel est l’état de la file ?</p>
+<p>Quel est le prochain numéro délivré par le distributeur ?</p>
+<p><strong>Conseil :</strong> utilisez les fonction <code class="docutils literal notranslate"><span class="pre">ajouter(file,</span> <span class="pre">element)</span></code>et <code class="docutils literal notranslate"><span class="pre">supprimer(file)</span></code> que vous avez défini à l’exercice 2</p>
+</section>
 </section>
 </section>
 
