@@ -28,7 +28,7 @@ pilier1 = []
 pilier2 = []
 pilier3 = []
 
-for i in range(6,0,-1):
+for i in range(4,0,-1):
     empiler(pilier1,i)
 
 afficher(pilier1)
@@ -37,6 +37,7 @@ deplacer(pilier1,pilier2)
 deplacer(pilier1,pilier3)
 deplacer(pilier2,pilier3)
 afficher(pilier3)
+afficher(pilier1)
 
 print("========================")
 
