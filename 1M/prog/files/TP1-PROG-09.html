@@ -1178,12 +1178,17 @@ title="Print to PDF"
 <li><p>ajouter un élément</p></li>
 <li><p>enlever un élément</p></li>
 </ol>
-<p>à l’aide d’une fonction (un sous-programme). Chaque fonction prendra comme <strong>argument</strong> une file. Cela permet de pouvoir gérer plusieurs files en même temps</p>
+<p>à l’aide d’une fonction (un sous-programme). Chaque fonction prendra comme <strong>argument</strong> une file. Cela permet</p>
+<ul class="simple">
+<li><p>de pouvoir gérer plusieurs files en même temps</p></li>
+<li><p>de s’affranchir de la notion d’index</p></li>
+</ul>
 <p>A vous de définir les deux fonctions ayant les signatures suivantes :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">element</span><span class="p">):</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="c1"># Modifier la méthode suivante</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1191,9 +1196,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">supprimer</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="c1"># modifier les méthodes suivantes</span>
     <span class="n">element</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">file</span><span class="p">)]</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Element supprimé : &quot;</span><span class="p">,</span><span class="n">element</span><span class="p">)</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1290,7 +1296,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
 </pre></div>
 </div>
 </div>
@@ -1305,7 +1311,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>542 C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>542 B
 </pre></div>
 </div>
 </div>
