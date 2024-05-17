@@ -90,7 +90,7 @@ parts:
       - file: 2M/prog/syracuse/Syracuse
       - file: 2M/prog/dictionnaires/Dictionnaires2
       - file: 2M/prog/motdepasse/MotsDePasse
-      - file: 2M/prog/hacking/hacking-romain      
+      - file: 2M/prog/hacking/TP2-PROG-08      
       - file: 2M/prog/arbres/LesArbres
     - file: 2M/histoire/index
       sections:
