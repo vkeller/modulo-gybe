@@ -6,4 +6,6 @@ Il est en sources ouvertes (Open Source Project), sous licence BSD, donc vous po
 
 Le sources du livre se trouvent à l'adresse [github de l'auteur](https://github.com/vkeller/modulo-gybe)
 
+Les ressources cantonales de la discipline éducation numérique au gymnase se trouvent sur [modulo-info.ch](https://modulo-info.ch/)
+
 Vincent Keller, prof d'info au gymnase de Beaulieu, Lausanne 2021-2024.
