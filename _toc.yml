@@ -4,6 +4,10 @@
 format: jb-book
 root: index
 parts:
+  - caption: Généralités
+    chapters:
+    - file: general/generalites
+
   - caption: 1ère année
 #    maxdepth: 2
     chapters:
