@@ -1,0 +1,1639 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>TP1-REDO-03 : Compression de fichiers et types &#8212; Education Numérique Ecole de maturité</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Algorithmique" href="../../algo/index.html" />
+    <link rel="prev" title="TP1-REDO-02 : Le son" href="TP1-REDO-02.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Généralités
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../general/generalites.html">
+   Esprit critique, fraude, plagiat et ChatGPT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   DO Informatique 1M
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Représentation des données
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C1-REDO-01.html">
+     C1-REDO-01 : Du monde physique au monde numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C1-REDO-02.html">
+     C1-REDO-02 binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C1-REDO-03.html">
+     C1-REDO-03 : codage de caractères
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/C1-REDO-04.html">
+     C1-REDO-04 : Opérations en binaire et en hexadécimal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cours/R1-REDO-01.html">
+     R1-REDO-01 Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-REDO-01.html">
+     TP1-REDO-01 : les images matricielles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-REDO-02.html">
+     TP1-REDO-02 : Le son
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     TP1-REDO-03 : Compression de fichiers et types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours1.html">
+     C1-ALGO-01 : Introduction à l’algorithmique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours2.html">
+     C1-ALGO-02 : Des algorigrammes aux algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours3.html">
+     C1-ALGO-03 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours4.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.html">
+     C1-ALGO-05.00 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.1.html">
+     C1-ALGO-05.01 Algorithmes classiques (Recherche)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours5.2.html">
+     C1-ALGO-05.02 Algorithmes classiques (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours6.html">
+     C1-ALGO-06 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours7.html">
+     C1-ALGO-07 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours8.html">
+     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/Cours9.html">
+     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-10.html">
+     C1-ALGO-10 - Introduction à la cryptologie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-11.html">
+     C1-ALGO-11 : Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/R1-ALGO-01.html">
+     R1-ALGO-01 - révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/R1-ALGO-02.html">
+     R1-ALGO-02 : Révision Algorigramme + programmation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../prog/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro1/intro1.html">
+     TP1-PROG-01 - Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro2/intro2.html">
+     TP1-PROG-02 - Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/boucles1.html">
+     TP1-PROG-03 - Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/boucles2.html">
+     TP1-PROG-04 - Dessiner des spirales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/conditions/TP1-PROG-05.html">
+     TP1-PROG-05 - Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/dessinsanimes/dessins.html">
+     TP1-PROG-06 - Les dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/types/TP1-PROG-07.html">
+     TP1-PROG-07 - Notions de types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/tableaux/TP1-PROG-08.html">
+     TP1-PROG-08 - Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/files/TP1-PROG-09.html">
+     TP1-PROG-09 - Les Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/piles/TP1-PROG-10.html">
+     TP1-PROG-10 - Les Piles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/cryptographie/TP1-PROG-11.html">
+     TP1-PROG-11 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/IO/TP1-PROG-12.html">
+     TP1-PROG-12: Les entrées-sorties
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../architecture/fichiers/SystemeDeFichiers.html">
+     TP1-ARCH-01 : Le système de fichiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../esdn/index.html">
+   Enjeux sociaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/IntroductionESDN.html">
+     C1-ESDN-01 : Enjeux sociaux du Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/Cypherpunks.html">
+     C1-ESDN-02 : Le mouvement Cypherpunk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/CapitalismeDeSurveillance.html">
+     C1-ESDN-03 : Le capitalisme de surveillance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/cours/LesReseaux.html">
+     TP1-ESDN-01 : Les réseaux informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../esdn/presentations/PresentationsESDN.html">
+     TP1-ESDN-02 : Présentations Enjeux sociaux du Numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../jeux/index.html">
+   Jeux informatiques et logiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeux/logique.html">
+     C1-JEUX-01 : Quizz de logique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/index.html">
+   DO Informatique 2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/Revision2M-1.html">
+     R2-ALGO-01 : Révision Algorithmes 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/Revision2M-2.html">
+     C2-ALGO-01 : Révision algorithmes (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-02.html">
+     C2-ALGO-02 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-03.html">
+     C2-ALGO-03 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-04.html">
+     C2-ALGO-04 : Taille du problème
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">
+     C2-ALGO-05 : Introduction à la théorie des graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-06.html">
+     C2-ALGO-06 : Théorie des graphes, le voyageur de commerce
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-01.html">
+     R1-ALGO-01 : Révision
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/revisions/R2-PROG-01.html">
+     R2-PROG-01 : Rappels programmation 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-01.html">
+     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-02.html">
+     TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/syracuse/TP2-PROG-05.html">
+     TP2-PROG-05 : Conjecture de Collatz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/dictionnaires/Dictionnaires2.html">
+     TP2-PROG-06 : Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/motdepasse/MotsDePasse.html">
+     TP2-PROG-07 : Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/hacking/TP2-PROG-08.html">
+     TP2-PROG-08: Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">
+     TP2-PROG-09 : Les arbres
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/histoire/index.html">
+   Histoire de l’informatique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">
+     C2-HIST-01 : Préhistoire de l’informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">
+     C2-HIST-02 : Histoire de l’informatique : le matériel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-03.html">
+     C2-HIST-03 : Histoire de l’informatique : le logiciel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/architecture/index.html">
+   Architecture et réseaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-01.html">
+     C2-ARCH-01 : Compilation : du Python au langage machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-01.html">
+     C2-RESO-01 : Introduction aux réseaux informatiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-02.html">
+     C2-RESO-02 : L’adresse IP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">
+     TP2-ARCH-00 : Introduction avec un micro:bit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">
+     TP2-ARCH-01 : Les portes logiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-04.html">
+     TP2-ARCH-04 : Services réseau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-NOTE.html">
+     TP2-ARCH-NOTE : Rapport
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/strategies/index.html">
+   Stratégie de résolution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-01.html">
+     C2-STRAT-01 : Stratégies de résolution de problèmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">
+     C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/machine-learning/index.html">
+   Intelligence artificielle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-00.html">
+     C2-IA-00 : Introduction à l’intelligence artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-01.html">
+     C2-IA-01 : Histoire de l’Intelligence Artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-02.html">
+     C2-IA-02 : Automates cellulaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-03.html">
+     C2-IA-03 : Apprentissage automatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-04.html">
+     C2-IA-04 : Réseau de neurones artificiels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/tp/JeudelavieTP.html">
+     TP-IA-01 : Le jeu de la vie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/esdn/index.html">
+   Enjeux sociaux du numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/environnement/TP2-ESDN-01.html">
+     TP2-ESDN-01 : L’environnement et le numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">
+     TP2-ESDN-02 : L’Art et le Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/hacktivists/P2-ESDN-01.html">
+     P2-ESDN-01 : Cybermilitantisme
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliographie
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../biblio.html">
+   Livres et sources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/representation/tp/TP1-REDO-03.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/representation/tp/TP1-REDO-03.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple !
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-compression-de-donnee">
+   Définition : compression de donnée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-avec-perte-d-information">
+   Compression avec perte d’information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-sans-perte-d-information">
+   Compression sans perte d’information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-huffman">
+   Algorithme de Huffman
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-de-magie">
+   Activité de magie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-singing-in-the-rain">
+   Activité “Singing in the rain”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codage-de-huffmann">
+   Codage de Huffmann
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taux-de-compression">
+   Taux de compression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-taille-d-un-fichier">
+   Définition : Taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suffixes-pour-les-grandes-valeurs">
+     Suffixes pour les grandes valeurs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimation-de-la-taille-d-un-fichier">
+   Estimation de la taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-texte-ascii">
+     Fichier texte ASCII
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-image-ppm-et-pgm">
+     Fichier image PPM et PGM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-son">
+     Fichier son
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
+   Plonger dans un fichier : éditer en hexadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte">
+   Contexte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consignes">
+     Consignes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
+   Exercice 2 : manipuler du son
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ressources-supplementaires">
+   Ressources supplémentaires
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>TP1-REDO-03 : Compression de fichiers et types</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple !
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-compression-de-donnee">
+   Définition : compression de donnée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-avec-perte-d-information">
+   Compression avec perte d’information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-sans-perte-d-information">
+   Compression sans perte d’information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-de-huffman">
+   Algorithme de Huffman
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-de-magie">
+   Activité de magie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activite-singing-in-the-rain">
+   Activité “Singing in the rain”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codage-de-huffmann">
+   Codage de Huffmann
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taux-de-compression">
+   Taux de compression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-taille-d-un-fichier">
+   Définition : Taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suffixes-pour-les-grandes-valeurs">
+     Suffixes pour les grandes valeurs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimation-de-la-taille-d-un-fichier">
+   Estimation de la taille d’un fichier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-texte-ascii">
+     Fichier texte ASCII
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-image-ppm-et-pgm">
+     Fichier image PPM et PGM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fichier-son">
+     Fichier son
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
+   Plonger dans un fichier : éditer en hexadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte">
+   Contexte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consignes">
+     Consignes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
+   Exercice 2 : manipuler du son
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ressources-supplementaires">
+   Ressources supplémentaires
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="matrosh" src="../../../_images/matroshka.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-redo-03-compression-de-fichiers-et-types">
+<h1>TP1-REDO-03 : Compression de fichiers et types<a class="headerlink" href="#tp1-redo-03-compression-de-fichiers-et-types" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Comprendre le processus de compression sans perte avec le codage de Huffman</p></li>
+<li><p>Être capable d’estimer la taille d’un fichier en fonction de son type et de son codage</p></li>
+<li><p>Comprendre comment est construit un fichier en utilisant un éditeur hexadécimal</p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Réduire la taille de l’information à transmettre tout en s’assurant que l’on peut retrouver tout ou partie de l’information se fait tous les jours.</p>
+<section id="exemple">
+<h3>Exemple !<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h3>
+<p><img alt="sms" src="../../../_images/twitter.png" /></p>
+<p>Laura a utilisé 26 lettres, 5 espaces et un emoji pour dire :</p>
+<p><strong>Je n’en peux plus ! Je suis dans le même état que Chrysippe de Soles, philosophe stoïcien du IIIème siècle avant Jésus-Christ après avoir vu un âne manger ses figues, mais la cause m’en a complètement échappé</strong></p>
+<p>qui est certes beaucoup plus poétique, mais qui prend 172 caractères, 36 espaces et des signes de ponctuation.</p>
+</section>
+</section>
+<section id="definition-compression-de-donnee">
+<h2>Définition : compression de donnée<a class="headerlink" href="#definition-compression-de-donnee" title="Permalink to this headline">#</a></h2>
+<p>La <strong>compression de données</strong> est l’opération informatique <span class="math notranslate nohighlight">\(C()\)</span> qui consiste à faire passer une suite de bits <span class="math notranslate nohighlight">\(X\)</span> en en suite de bits <span class="math notranslate nohighlight">\(Y &lt; X\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+Y \leftarrow C(X)
+\]</div>
+<p>L’opération inverse <span class="math notranslate nohighlight">\(C^{-1}()\)</span> est appelée <strong>décompression de données</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+X \leftarrow C^{-1}(Y) = C^{-1}C(X))
+\]</div>
+<p>Il existe deux types de compressions de données :</p>
+<ol class="simple">
+<li><p>La <strong>compression avec perte d’information</strong> qui ne permet pas de retrouver, après décompression, la suite de bits non-compressée</p></li>
+<li><p>La <strong>compression sans perte d’information</strong> qui permet de retrouver, après décompression, l’entier de la suite de bits non-compressée</p></li>
+</ol>
+</section>
+<section id="compression-avec-perte-d-information">
+<h2>Compression avec perte d’information<a class="headerlink" href="#compression-avec-perte-d-information" title="Permalink to this headline">#</a></h2>
+<p>La compression avec perte d’information est une opération complexe <strong>qui dépasse le cadre de ce cours</strong>. Elle fait appel à des outils mathématiques qui ne sont pas traités dans le cadre des études gymnasiales.</p>
+<p>(La compression avec perte d’information ne sera pas évaluée lors d’un test :smiley: )</p>
+</section>
+<section id="compression-sans-perte-d-information">
+<h2>Compression sans perte d’information<a class="headerlink" href="#compression-sans-perte-d-information" title="Permalink to this headline">#</a></h2>
+<p>Il en existe plusieurs. Nous allons aborder le codage de Huffman.</p>
+</section>
+<section id="algorithme-de-huffman">
+<h2>Algorithme de Huffman<a class="headerlink" href="#algorithme-de-huffman" title="Permalink to this headline">#</a></h2>
+<p>Parmis les types de compression de donnée sans perte d’information, on trouve <strong>l’algorithme de Huffman</strong>. Il repose sur un modèle statistique.</p>
+</section>
+<section id="activite-de-magie">
+<h2>Activité de magie<a class="headerlink" href="#activite-de-magie" title="Permalink to this headline">#</a></h2>
+<p>Retrouver la lettre secrète.</p>
+<ul class="simple">
+<li><p>Choisir une lettre parmi “ABCDEFGHIJKLMNOP”</p></li>
+<li><p>poser des questions binaires pour la retrouver. Une question binaire est une question qui se répond uniquement par <strong>oui</strong> ou par <strong>non</strong>.</p></li>
+<li><p>Combien de questions doit-on poser pour retrouver la lettre ?</p></li>
+</ul>
+</section>
+<section id="activite-singing-in-the-rain">
+<h2>Activité “Singing in the rain”<a class="headerlink" href="#activite-singing-in-the-rain" title="Permalink to this headline">#</a></h2>
+<p>Retrouver la lettre secrète plus rapidement.</p>
+<ul class="simple">
+<li><p>choisir une lettre parmi la phrase “SINGING IN THE RAIN”</p></li>
+<li><p>poser des questions binaires pour les retrouver.</p></li>
+<li><p>Combien de questions doit-on poser ?</p></li>
+</ul>
+<p><img alt="lettres" src="../../../_images/frequencelettres.png" /></p>
+</section>
+<section id="codage-de-huffmann">
+<h2>Codage de Huffmann<a class="headerlink" href="#codage-de-huffmann" title="Permalink to this headline">#</a></h2>
+<p>Dans un premier temps, il faut observer que les lettres apparaissent suivant une distribution différente. On compte donc le nombre d’apparitions de chacune des lettres:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>lettre</strong></p></th>
+<th class="head"><p><strong>I</strong></p></th>
+<th class="head"><p><strong>N</strong></p></th>
+<th class="head"><p><strong>G</strong></p></th>
+<th class="head"><p><strong>S</strong></p></th>
+<th class="head"><p><strong>T</strong></p></th>
+<th class="head"><p><strong>H</strong></p></th>
+<th class="head"><p><strong>E</strong></p></th>
+<th class="head"><p><strong>R</strong></p></th>
+<th class="head"><p><strong>A</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Quelle est donc la première question à poser ?</p></li>
+<li><p>Quelle est la seconde question à poser ?</p></li>
+</ul>
+<p>On procède de la même manière en divisant les lettres (dans leur ordre d’apparition). On obtient donc un nombre de questions différentes en fonction du nombre d’apparitions :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>lettre</strong></p></th>
+<th class="head"><p><strong>I</strong></p></th>
+<th class="head"><p><strong>N</strong></p></th>
+<th class="head"><p><strong>G</strong></p></th>
+<th class="head"><p><strong>S</strong></p></th>
+<th class="head"><p><strong>T</strong></p></th>
+<th class="head"><p><strong>H</strong></p></th>
+<th class="head"><p><strong>E</strong></p></th>
+<th class="head"><p><strong>R</strong></p></th>
+<th class="head"><p><strong>A</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>nombre de questions</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p>Finalement il faut encoder chaque lettre avec un nombre de bits variables.</p>
+<ol class="simple">
+<li><p>Chaque lettre est encodée avec un nombre de bits égal au nombre de questions binaires nécessaires pour deviner la lettre.</p></li>
+<li><p>Le mot de code associé à chaque lettre est la séquence de bits correspondant à la séquence de réponses obtenues lors du jeu (avec la correspondance oui=1 et non=0, par exemple).</p></li>
+</ol>
+<p>Ainsi, on obtient :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>lettre</strong></p></th>
+<th class="head"><p><strong>I</strong></p></th>
+<th class="head"><p><strong>N</strong></p></th>
+<th class="head"><p><strong>G</strong></p></th>
+<th class="head"><p><strong>S</strong></p></th>
+<th class="head"><p><strong>T</strong></p></th>
+<th class="head"><p><strong>H</strong></p></th>
+<th class="head"><p><strong>E</strong></p></th>
+<th class="head"><p><strong>R</strong></p></th>
+<th class="head"><p><strong>A</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>nombre de questions</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>lettre encodée en binaire</p></td>
+<td><p>11</p></td>
+<td><p>10</p></td>
+<td><p>011</p></td>
+<td><p>0101</p></td>
+<td><p>0100</p></td>
+<td><p>0011</p></td>
+<td><p>0010</p></td>
+<td><p>0001</p></td>
+<td><p>0000</p></td>
+</tr>
+</tbody>
+</table>
+<p>On appelle cet encodage un <strong>dictionnaire</strong>.</p>
+<p>On observe finalement que la phrase “SINGING IN THE RAIN” s’encode par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">010111100111110011.</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>Si l’on lit cette séquence de gauche à droite, il y a toujours qu’une seule possibilité de décodage et donc on peut récupérer l’ensemble de la phrase.</p>
+</section>
+<section id="taux-de-compression">
+<h2>Taux de compression<a class="headerlink" href="#taux-de-compression" title="Permalink to this headline">#</a></h2>
+<p>Si l’on code les 16 lettres avec 4 bits, la phrase “SINGING IN THE RAIN” contient <span class="math notranslate nohighlight">\(16 * 4 bits = 64 bits\)</span>. A l’aide du codage de Huffmann, on descend à <span class="math notranslate nohighlight">\(46 bits\)</span>.</p>
+<p>On peut donc calculer le <strong>taux de compression</strong> : <span class="math notranslate nohighlight">\(\frac{64 - 46}{64} = \frac{18}{64} \approx 28 \%\)</span></p>
+</section>
+<section id="definition-taille-d-un-fichier">
+<h2>Définition : Taille d’un fichier<a class="headerlink" href="#definition-taille-d-un-fichier" title="Permalink to this headline">#</a></h2>
+<p>La taille d’un fichier mesure la quantité de données du fichier. Elle se mesure en <strong>octets</strong> (à laquelle on peut ajouter un suffixe). Alternativement, elle donne une idée de la quantité de stockage requise pour le stocker.</p>
+<section id="suffixes-pour-les-grandes-valeurs">
+<h3>Suffixes pour les grandes valeurs<a class="headerlink" href="#suffixes-pour-les-grandes-valeurs" title="Permalink to this headline">#</a></h3>
+<p>Dans le <a class="reference external" href="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf/fcf090b2-04e6-88cc-1149-c3e029ad8232">Système international d’unités</a>, il est d’usage d’utiliser des préfixes que l’on ajoute avant l’unité.</p>
+<p>Ainsi :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Nom</p></th>
+<th class="text-align:center head"><p>Symbole (fr/en)</p></th>
+<th class="text-align:center head"><p>Valeur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Kilooctet</p></td>
+<td class="text-align:center"><p>ko (kB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{3}\)</span> octets = 8 kb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>mégaoctet</p></td>
+<td class="text-align:center"><p>Mo (MB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{6}\)</span> octets = 8 Mb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>gigaoctet</p></td>
+<td class="text-align:center"><p>Go (GB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{9}\)</span> octets = 8 Gb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>téraoctet</p></td>
+<td class="text-align:center"><p>To (TB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{12}\)</span> octets = 8 Tb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>pétaoctet</p></td>
+<td class="text-align:center"><p>Po (PB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{15}\)</span> octets = 8 Pb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>exaoctet</p></td>
+<td class="text-align:center"><p>Eo (EB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{18}\)</span> octets = 8 Eb</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>zettaoctet</p></td>
+<td class="text-align:center"><p>Zo (ZB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{21}\)</span> octets = 8 Zb</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>yottaoctet</p></td>
+<td class="text-align:center"><p>Yo (YB)</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(10^{24}\)</span> octets = 8 Yb</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attention : lorsqu’on parle de capacité, on préférera le terme français “octet” plutôt que byte qui est phonétiquement trop proche de bit</strong></p>
+</section>
+</section>
+<section id="estimation-de-la-taille-d-un-fichier">
+<h2>Estimation de la taille d’un fichier<a class="headerlink" href="#estimation-de-la-taille-d-un-fichier" title="Permalink to this headline">#</a></h2>
+<section id="fichier-texte-ascii">
+<h3>Fichier texte ASCII<a class="headerlink" href="#fichier-texte-ascii" title="Permalink to this headline">#</a></h3>
+<p>On sait que chaque caractère ASCII est codé sur 7 bits. Mais un ordinateur <strong>ne travaille qu’avec des octets</strong>. Ainsi, en comptant le nombre de caractères d’un fichier, on peut estimer sa taille.</p>
+<p>Téléchargez le <a class="reference external" href="https://raw.githubusercontent.com/vkeller/modulo-gybe/main/1M/representation/tp/texte/AuClairDeLaLune.txt">fichier texte suivant</a></p>
+<p><em>Terminal</em> : dans un terminal, on peut utilisé la fonciton <code class="docutils literal notranslate"><span class="pre">wc</span></code> qui donne le nombre exact de caractères d’un fichier. Par exemple : <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-c</span> <span class="pre">&lt;</span> <span class="pre">AuClairDeLaLune.txt</span></code></p>
+</section>
+<section id="fichier-image-ppm-et-pgm">
+<h3>Fichier image PPM et PGM<a class="headerlink" href="#fichier-image-ppm-et-pgm" title="Permalink to this headline">#</a></h3>
+<p>Sur un fichier en niveaux de gris (PGM) et en couleurs (PGM), la taille du fichier peut être estimée avec la taille de l’image ainsi que le mode de codage des couleurs (<span class="math notranslate nohighlight">\([0,1]\)</span> pour <span class="math notranslate nohighlight">\(P1\)</span> donc 1 octet, <span class="math notranslate nohighlight">\([0,...,255]\)</span> pour <span class="math notranslate nohighlight">\(P2\)</span> donc 1 octet, <span class="math notranslate nohighlight">\([0,...,255;0,...,255;0,...,255]\)</span> pour <span class="math notranslate nohighlight">\(P3\)</span> donc 3 octets,</p>
+</section>
+<section id="fichier-son">
+<h3>Fichier son<a class="headerlink" href="#fichier-son" title="Permalink to this headline">#</a></h3>
+<p>Un fichier son non-compressé aura une taille multiple par la fréquence d’échantillonnage, la durée du morceau ainsi et le nombre de bits de la quantification.</p>
+</section>
+</section>
+<section id="plonger-dans-un-fichier-editer-en-hexadecimal">
+<h2>Plonger dans un fichier : éditer en hexadécimal<a class="headerlink" href="#plonger-dans-un-fichier-editer-en-hexadecimal" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Prise en main d’un éditeur hexadécimal</p></li>
+<li><p>Découvrir que tous les fichiers sont faits de bytes</p></li>
+<li><p>Découvrir les types de fichiers et le magic number</p></li>
+<li><p>Comprendre le lien entre extension de fichier et programme qui va ouvrir le fichier</p></li>
+<li><p>Découvrir quels types de fichiers sont robustes face a une modification / perturbation arbitraire.</p></li>
+</ul>
+</section>
+<section id="contexte">
+<h2>Contexte<a class="headerlink" href="#contexte" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’un fichier est enregistré sur un medium (un disque dur ou une clef USB par exemple), un <em>lien</em> est aussi créé et qui permet de relier son emplacement physique sur le disque (son <strong>adresse</strong>) à la liste affichée par un explorateur de fichiers (le <strong>Finder</strong> par exemple).</p>
+<p>Imaginez-vous la situation suivante :</p>
+<p>Un truand a enregistré ses complices, il a créé un dossier <code class="docutils literal notranslate"><span class="pre">fichiers</span></code> des fichiers texte contenant l’ensemble de ses contacts, il a même photographié l’arrivage de produit stupéfiants. Prévoyant, il en a créé une archive <code class="docutils literal notranslate"><span class="pre">fichiers-zip</span></code> en prenant garde d’enlever les suffixes de tous les fichiers ce qui les rend illisibles par son ordinateur.</p>
+<p>Tous ces éléments sont compromettants.</p>
+<p>Le truand a été dénoncé. Il voit arriver la police par sa fenêtre. Il a juste le temps de placer son dossier à la corbeille et d’appuyer sur <em>vider la corbeille</em></p>
+<p>Le <strong>policier scientifique c’est maintenant vous</strong>. Vous devez retrouver le contenu de tous les fichiers du truand.</p>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<section id="consignes">
+<h3>Consignes<a class="headerlink" href="#consignes" title="Permalink to this headline">#</a></h3>
+<p>Faites cet exercice par 2, sur un seul ordinateur, et discutez des résultats. A la fin, une discussion avec le reste du groupe où je vous demanderai ce que vous avez trouvé.</p>
+<p>Dans le finder affichez les extensions de fichier :</p>
+<p><img alt="hexfiend" src="../../../_images/hexfiend1.png" /></p>
+<p>Téléchargez cette <a class="reference external" href="https://raw.githubusercontent.com/vkeller/modulo-gybe/main/1M/representation/tp/archives/fichiers.zip">archive</a> et décompressez-la</p>
+<p>Pour chaque fichier:</p>
+<ul class="simple">
+<li><p>Ouvrez le dans Hex Fiend</p></li>
+<li><p>Essayez de déterminer de quel type de fichier il s’agit. Regardez vers le début du fichier. Si vous ne voyez pas immédiatement de quel type il pourrait choisir, aidez vous de cette page wikipédia : <a class="reference external" href="https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)">Nombre magique</a>.</p></li>
+<li><p>Renommez le fichier pour lui attribuer la bonne extension, par exemple fichier1.pptx</p></li>
+<li><p>Double cliquez sur le fichier renommé pour vérifier si vous avez trouvé la bonne extension (si ça ne marche pas, c’est que vous n’avez pas le bon format ou la bonne extension)</p></li>
+</ul>
+<p>Note : si un fichier est trop difficile à identifier, passez alors au suivant.</p>
+<p>Ensuite, pour chaque fichier renommé :</p>
+<ul class="simple">
+<li><p>Essayez d’éditer le contenu du fichier en remplaçant quelques bytes vers le milieu du fichier</p></li>
+<li><p>Vérifiez ce qu’il se passe quand vous essayez maintenant d’ouvrir le fichier</p></li>
+<li><p>Réessayez avec différents types de modifications</p>
+<ul>
+<li><p>supprimer un peu ou beaucoup de bytes</p></li>
+<li><p>dupliquer certaines parties 2, 3, 10 fois…</p></li>
+</ul>
+</li>
+<li><p>Notez ce qui se passe pour chaque type de fichier</p></li>
+<li><p>Faites des suppositions sur pourquoi les différents types de fichiers réagissent différemment</p></li>
+<li><p>A la fin : discussion avec le reste de la demi classe</p></li>
+</ul>
+</section>
+</section>
+<section id="exercice-2-manipuler-du-son">
+<h2>Exercice 2 : manipuler du son<a class="headerlink" href="#exercice-2-manipuler-du-son" title="Permalink to this headline">#</a></h2>
+<p>Le format MP3 est un format de compression avec perte d’information. A l’origine, il a été développé pour la radiodiffusion (le <em>streaming</em>).</p>
+<ol class="simple">
+<li><p>Téléchargez les <a class="reference external" href="https://github.com/vkeller/modulo-gybe/tree/main/1M/representation/tp/sons/CFF">trois fichiers son</a> présent sur le git</p></li>
+<li><p>A l’aide de HexFiend, identifiez le début et la fin de la musique</p></li>
+<li><p>A l’aide des opérations de copie et coller, reproduisez le jingle francophone 3 fois.</p></li>
+<li><p>Ouvrez les autres jingle (italophone et germanique) et créez un nouveau fichier contenant les trois à la suite à l’aide d’HexFiend</p></li>
+</ol>
+</section>
+<section id="ressources-supplementaires">
+<h2>Ressources supplémentaires<a class="headerlink" href="#ressources-supplementaires" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;K2IQLk-BGuk&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/K2IQLk-BGuk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/representation/tp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="TP1-REDO-02.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TP1-REDO-02 : Le son</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../algo/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algorithmique</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
