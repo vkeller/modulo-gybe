@@ -14,15 +14,14 @@ parts:
     - file: 1M/index
     - file: 1M/representation/index
       sections:
-      - file: 1M/representation/cours/Cours01
-      - file: 1M/representation/cours/Cours02
-      - file: 1M/representation/cours/Cours03
-      - file: 1M/representation/cours/Cours4
-#      - file: 1M/representation/cours/Cours5
-      - file: 1M/representation/cours/Revision
-      - file: 1M/representation/tp/tp1
-      - file: 1M/representation/tp/tp2
-      - file: 1M/representation/tp/tp3
+      - file: 1M/representation/cours/C1-REDO-01
+      - file: 1M/representation/cours/C1-REDO-02
+      - file: 1M/representation/cours/C1-REDO-03
+      - file: 1M/representation/cours/C1-REDO-04
+      - file: 1M/representation/cours/R1-REDO-01
+      - file: 1M/representation/tp/TP1-REDO-01
+      - file: 1M/representation/tp/TP1-REDO-02
+      - file: 1M/representation/tp/TP1-REDO-03
     - file: 1M/algo/index
       sections:
       - file: 1M/algo/cours/Cours1
