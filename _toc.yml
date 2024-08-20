@@ -87,11 +87,11 @@ parts:
       - file : 2M/algo/R2-ALGO-01
     - file: 2M/prog/index
       sections:
-      - file: 2M/prog/revisions/Revision1M
+      - file: 2M/prog/revisions/R2-PROG-01
       - file: 2M/prog/complexite/TP2-PROG-01
       - file: 2M/prog/complexite/TP2-PROG-02
       - file: 2M/prog/luhn/TP2-PROG-03
-      - file: 2M/prog/syracuse/Syracuse
+      - file: 2M/prog/syracuse/TP2-PROG-05
       - file: 2M/prog/dictionnaires/Dictionnaires2
       - file: 2M/prog/motdepasse/MotsDePasse
       - file: 2M/prog/hacking/TP2-PROG-08      
