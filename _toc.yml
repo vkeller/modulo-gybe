@@ -75,15 +75,15 @@ parts:
     - file: 2M/index
     - file: 2M/algo/index
       sections:
-      - file: 2M/algo/Revision2M-1
-      - file: 2M/algo/Revision2M-2
+      - file: 2M/algo/R2-ALGO-01
+      - file: 2M/algo/R2-ALGO-02
 #      - file: 2M/algo/Revision2M-3
       - file : 2M/algo/C2-ALGO-02
       - file : 2M/algo/C2-ALGO-03
       - file : 2M/algo/C2-ALGO-04
       - file : 2M/algo/C2-ALGO-05
       - file : 2M/algo/C2-ALGO-06
-      - file : 2M/algo/R2-ALGO-01
+      - file : 2M/algo/R2-ALGO-03
     - file: 2M/prog/index
       sections:
       - file: 2M/prog/revisions/R2-PROG-01
