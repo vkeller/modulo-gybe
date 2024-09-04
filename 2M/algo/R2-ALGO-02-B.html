@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Algorithmique avancée &#8212; Education Numérique Ecole de maturité</title>
+    <title>R2-ALGO-02-B : Révision (Tri) &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="R2-ALGO-01 : Révision Algorithmes 1M" href="R2-ALGO-01.html" />
-    <link rel="prev" title="DO Informatique 2M" href="../index.html" />
+    <link rel="next" title="C2-ALGO-02 : Complexité des algorithmes" href="C2-ALGO-02.html" />
+    <link rel="prev" title="C2-ALGO-02-A : Révision algorithmes (Recherche)" href="R2-ALGO-02-A.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -446,7 +446,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Algorithmique avancée
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -454,7 +454,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="R2-ALGO-01.html">
      R2-ALGO-01 : Révision Algorithmes 1M
@@ -465,8 +465,8 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-02-A : Révision algorithmes (Recherche)
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="R2-ALGO-02-B.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      R2-ALGO-02-B : Révision (Tri)
     </a>
    </li>
@@ -846,7 +846,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/index.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/R2-ALGO-02-B.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -874,7 +874,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/2M/algo/index.md"
+        <a href="../../_sources/2M/algo/R2-ALGO-02-B.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -885,7 +885,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -911,23 +911,150 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-trier-les-cartes">
+   Exercice 1 (trier les cartes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-recherche-dans-une-liste-triee">
+   Exercice 2 (recherche dans une liste triée)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-a-bulles">
+   Tri à bulles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-selection">
+   Tri sélection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-insertion">
+   Tri insertion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-fusion">
+   Tri fusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-mesure">
+   Définition : mesure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-comparaison-des-methodes">
+   Exercice 3 (comparaison des méthodes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulateur-en-ligne">
+   Simulateur en ligne
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Algorithmique avancée</h1>
+                <h1>R2-ALGO-02-B : Révision (Tri)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-trier-les-cartes">
+   Exercice 1 (trier les cartes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-recherche-dans-une-liste-triee">
+   Exercice 2 (recherche dans une liste triée)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-a-bulles">
+   Tri à bulles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-selection">
+   Tri sélection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-insertion">
+   Tri insertion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tri-fusion">
+   Tri fusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-mesure">
+   Définition : mesure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-comparaison-des-methodes">
+   Exercice 3 (comparaison des méthodes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulateur-en-ligne">
+   Simulateur en ligne
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -935,10 +1062,118 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="algorithmique-avancee">
-<h1>Algorithmique avancée<a class="headerlink" href="#algorithmique-avancee" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <p><img alt="jass" src="../../_images/jass.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="r2-algo-02-b-revision-tri">
+<h1>R2-ALGO-02-B : Révision (Tri)<a class="headerlink" href="#r2-algo-02-b-revision-tri" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>mettre en action les différents algorithmes de tri avec des cartes</p></li>
+<li><p>formaliser certains algorithmes en algorigrammes</p></li>
+</ul>
+</section>
+<section id="exercice-1-trier-les-cartes">
+<h2>Exercice 1 (trier les cartes)<a class="headerlink" href="#exercice-1-trier-les-cartes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>mélangez vos 9 cartes</p></li>
+<li><p>placez-les sur la table devant vous <strong>face cachée</strong></p></li>
+<li><p>trouvez une méthode (un algorithme) pour trier les cartes de la <strong>plus petite</strong> à la <strong>plus grande</strong></p></li>
+<li><p><strong>ATTENTION : vous ne pouvez avoir plus de DEUX cartes retournées SIMULTANÉMENT</strong></p></li>
+</ul>
+<p>La méthode doit être régulière, c’est-à-dire que les <em>coups</em> (les intructions) possibles sont :</p>
+<ul class="simple">
+<li><p>échanger deux cartes</p></li>
+<li><p>déplacer une carte</p></li>
+<li><p>comparer deux cartes</p></li>
+</ul>
+</section>
+<section id="exercice-2-recherche-dans-une-liste-triee">
+<h2>Exercice 2 (recherche dans une liste triée)<a class="headerlink" href="#exercice-2-recherche-dans-une-liste-triee" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Une fois que la liste est triée, trouvez une méthode (un algorithme) qui recherche (et trouve) la <strong>plus haute</strong> carte.</p></li>
+</ul>
+</section>
+<section id="tri-a-bulles">
+<h2>Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Permalink to this headline">#</a></h2>
+<p>L’algorithme parcourt le tableau et compare les éléments consécutifs. Lorsque deux éléments consécutifs ne sont pas dans l’ordre, ils sont permutés.</p>
+<p>Après un premier parcours complet du tableau, le plus grand élément est forcément en fin de tableau, à sa position définitive. En effet, aussitôt que le plus grand élément est rencontré durant le parcours, il est mal trié par rapport à tous les éléments suivants, donc permuté avec le suivant jusqu’à arriver à la fin du parcours.</p>
+<p>Après le premier parcours, le plus grand élément étant à sa position définitive, il n’a plus à être traité. Le reste du tableau est en revanche encore en désordre. Il faut donc le parcourir à nouveau, en s’arrêtant à l’avant-dernier élément. Après ce deuxième parcours, les deux plus grands éléments sont à leur position définitive.</p>
+<p>Il faut donc répéter les parcours du tableau, jusqu’à ce que les deux plus petits éléments soient placés à leur position définitive.</p>
+<p><span class="xref myst">Lien sur une vidéo youtube</span></p>
+</section>
+<section id="tri-selection">
+<h2>Tri sélection<a class="headerlink" href="#tri-selection" title="Permalink to this headline">#</a></h2>
+<p>Le principe du tri par sélection est le suivant :</p>
+<ul class="simple">
+<li><p>Rechercher le plus petit élément de la liste, et l’échanger avec l’élément d’indice 0 (le premier) ;</p></li>
+<li><p>Rechercher le second plus petit élément du reste de la liste, et l’échanger avec l’élément d’indice 1 (le second) ;</p></li>
+<li><p>Continuer de cette façon jusqu’à ce que le tableau soit entièrement trié.</p></li>
+</ul>
+<p>À tout moment, la liste d’éléments déjà parcourus (jusqu’à l’élément que l’on considère à un moment donné) est toujours bien triée.</p>
+<p><span class="xref myst">Lien sur une vidéo</span></p>
+</section>
+<section id="tri-insertion">
+<h2>Tri insertion<a class="headerlink" href="#tri-insertion" title="Permalink to this headline">#</a></h2>
+<p>Le principe du tri par insertion est le suivant : 
+ 
+On parcourt la liste d’éléments à trier du deuxième au dernier élément.
+Pour chaque nouvel élément considéré:</p>
+<ul class="simple">
+<li><p>On l’insère à l’emplacement correct dans la liste</p></li>
+<li><p>Et on décale tous les nombres plus grands d’une case vers la droite.</p></li>
+</ul>
+<p>À tout moment, la liste d’éléments déjà parcourus (jusqu’à l’élément que l’on considère à un moment donné) est toujours bien triée.</p>
+<p><span class="xref myst">Lien sur une vidéo youtube</span></p>
+</section>
+<section id="tri-fusion">
+<h2>Tri fusion<a class="headerlink" href="#tri-fusion" title="Permalink to this headline">#</a></h2>
+<p>Ce tri est basé sur la technique algorithmique diviser pour régner. On commence par subdiviser la liste en listes de plus en plus petites. On obtient des listes de taille 1 (un seul élément dans chaque liste)</p>
+<ul class="simple">
+<li><p>On fusionne les listes, ce qui consiste à réunir deux listes triées en une seule.</p></li>
+<li><p>On continue jusqu’à ce qu’on obtienne une seule liste.</p></li>
+</ul>
+<p>L’efficacité de l’algorithme vient du fait que deux listes triées peuvent être fusionnées en temps linéaire (c’est-à-dire un temps proportionnel à la taille des deux listes)</p>
+<p><span class="xref myst">Lien sur une vidéo youtube</span></p>
+</section>
+<section id="definition-mesure">
+<h2>Définition : mesure<a class="headerlink" href="#definition-mesure" title="Permalink to this headline">#</a></h2>
+<p>une <strong>mesure</strong> est l’action d’évaluer une grandeur d’après son rapport avec une grandeur de même espèce, prise comme unité et comme référence.</p>
+<p><a class="reference external" href="https://www.larousse.fr/dictionnaires/francais/mesure/50791">source</a></p>
+</section>
+<section id="exercice-3-comparaison-des-methodes">
+<h2>Exercice 3 (comparaison des méthodes)<a class="headerlink" href="#exercice-3-comparaison-des-methodes" title="Permalink to this headline">#</a></h2>
+<p>Pour pouvoir comparer les méthodes (les algorithmes), il faut une <strong>mesure</strong>. Dans le cas des différents algorithmes de tri, nous choisissons le <strong>nombre de comparaisons</strong> entre deux cartes entre l’état <code class="docutils literal notranslate"><span class="pre">0</span></code> (lorsque les cartes sont mélangées jusqu’à l’état <code class="docutils literal notranslate"><span class="pre">1</span></code> (lorsque les cartes sont totalement triées).</p>
+<p><strong>Par groupes</strong> remplissez le tableau suivant :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>algorithme</p></th>
+<th class="head"><p>Nbr de comparaisons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tri à bulles</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tri sélection</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Tri insertion</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tri fusion</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>un élève compte le nombre de comparaisons</p></li>
+<li><p>l’autre élève compatiblise à chaque étape et note la somme finale dans le tableau</p></li>
+</ul>
+</section>
+<section id="simulateur-en-ligne">
+<h2>Simulateur en ligne<a class="headerlink" href="#simulateur-en-ligne" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://www.toptal.com/developers/sorting-algorithms">Lien vers la simulation visuelle de l’efficacité des algorithmes de tri</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -968,17 +1203,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="R2-ALGO-02-A.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">DO Informatique 2M</p>
+            <p class="prev-next-title">C2-ALGO-02-A : Révision algorithmes (Recherche)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="R2-ALGO-01.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-ALGO-02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-ALGO-01 : Révision Algorithmes 1M</p>
+        <p class="prev-next-title">C2-ALGO-02 : Complexité des algorithmes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
