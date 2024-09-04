@@ -77,7 +77,8 @@ parts:
     - file: 2M/algo/index
       sections:
       - file: 2M/algo/R2-ALGO-01
-      - file: 2M/algo/R2-ALGO-02
+      - file: 2M/algo/R2-ALGO-02-A
+      - file: 2M/algo/R2-ALGO-02-B
 #      - file: 2M/algo/Revision2M-3
       - file : 2M/algo/C2-ALGO-02
       - file : 2M/algo/C2-ALGO-03
