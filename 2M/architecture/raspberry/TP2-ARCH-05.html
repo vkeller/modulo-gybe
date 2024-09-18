@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP2-ARCH-05 : Récepteur ADS-B local &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -462,12 +462,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/R2-ALGO-02-A.html">
-     C2-ALGO-02-A : Révision algorithmes (Recherche)
+     R2-ALGO-02-A : Révision algorithmes (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/R2-ALGO-02-B.html">
      R2-ALGO-02-B : Révision (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-01.html">
+     C2-ALGO-01 : Taille du problème
     </a>
    </li>
    <li class="toctree-l2">
@@ -482,22 +487,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/C2-ALGO-04.html">
-     C2-ALGO-04 : Taille du problème
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-05.html">
-     C2-ALGO-05 : Introduction à la théorie des graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-06.html">
-     C2-ALGO-06 : Théorie des graphes, le voyageur de commerce
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-03.html">
-     R1-ALGO-03 : Révision
+     C2-ALGO-04 : Introduction à la théorie des graphes
     </a>
    </li>
   </ul>
@@ -648,7 +638,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP2-ARCH-05 : Récepteur ADS-B local
+     TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs
     </a>
    </li>
   </ul>
@@ -943,6 +933,43 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigation-aerienne">
+   Navigation aérienne
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#protocole-ads-b">
+   Protocole ADS-B
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#messages-acars">
+   Messages ACARS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilisation-des-messages-ads-b-et-acars">
+   Utilisation des messages ADS-B et ACARS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elon-musk-private-jet">
+     Elon Musk private jet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#taylor-swift">
+     Taylor Swift
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -952,7 +979,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP2-ARCH-05 : Récepteur ADS-B local</h1>
+                <h1>TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -967,6 +994,43 @@ title="Print to PDF"
    Objectifs pédagogiques
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigation-aerienne">
+   Navigation aérienne
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#protocole-ads-b">
+   Protocole ADS-B
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#messages-acars">
+   Messages ACARS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilisation-des-messages-ads-b-et-acars">
+   Utilisation des messages ADS-B et ACARS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elon-musk-private-jet">
+     Elon Musk private jet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#taylor-swift">
+     Taylor Swift
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -978,14 +1042,49 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="atc_radar" src="../../../_images/radar.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-05-recepteur-ads-b-local">
-<h1>TP2-ARCH-05 : Récepteur ADS-B local<a class="headerlink" href="#tp2-arch-05-recepteur-ads-b-local" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-05-aviation-comprendre-la-transmission-des-aeronefs">
+<h1>TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs<a class="headerlink" href="#tp2-arch-05-aviation-comprendre-la-transmission-des-aeronefs" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>comprendre ce qu’est un protocole <em>on demand</em> ou <em>broadcast</em></p></li>
 <li><p>déduire l’architecture du système de surveillance du traffic aérien</p></li>
 <li><p>Construire un récepteur ADS-B avec un Raspberry Pi</p></li>
+<li><p>Afficher les différents aéronefs équipés ADS-B autour du gymnase</p></li>
+</ul>
+</section>
+<section id="navigation-aerienne">
+<h2>Navigation aérienne<a class="headerlink" href="#navigation-aerienne" title="Permalink to this headline">#</a></h2>
+<p>L’<strong>aviation</strong> est un système complexe : énormément de facteurs entrent en ligne de compte pour amener un aéronef d’un point A à un point B. Citons les conditions météorologiques, a présence de vent, l’état de l’aéronef, la présence d’autres aéronefs et bien évidemment le ou la pilote elle-même.</p>
+<p>Il existe deux types de navigation autorisées aujourd’hui chacune dans un périmètre tri-dimensionnel défini. La navigation à vue ou <em>VFR</em> (pour <em>Visual Flight Rules</em>) et la navigation aux instruments ou radionavigation ou <em>IFR</em> (pour <em>Instruments Flight Rules</em>).</p>
+</section>
+<section id="protocole-ads-b">
+<h2>Protocole ADS-B<a class="headerlink" href="#protocole-ads-b" title="Permalink to this headline">#</a></h2>
+<p>Le protocole ADS-B (pour <em>Automatic dependent surveillance-broadcast</em>) permet de contrôler l’espace aérien. C’est l’un des outils (parmi plusieurs redondants) utilisés pour un aéronef d’avoir une idée de sa position dans l’espace.</p>
+<p>L’aéronef est équipé d’un grand nombre de capteurs (vitesse, direction, altitude, position, etc..) qui sont enregistrés à intervalles réguliers. Ce sont ces informations qui sont ensuite transmises en un message ADS-B sur le mode <strong>broadcast</strong>, c’est-à-dire diffusion. Le grand avantage de ce système de communication est qu’’il n’y a pas besoin de radar, le désavantage, l’avion doit être équipé d’un <strong>transpondeur</strong>, un appareil qui permet d’identifier de manière unique n’importe quel aéronef sur une bande radio donnée.</p>
+<p>Les stations au sol peuvent ensuite capter ces messages et reconstruire la trajectoire d’un aéronef donné.</p>
+</section>
+<section id="messages-acars">
+<h2>Messages ACARS<a class="headerlink" href="#messages-acars" title="Permalink to this headline">#</a></h2>
+<p>Le système ACARS (pour <em>Aircraft Communication Addressing and Reporting System</em>)</p>
+</section>
+<section id="utilisation-des-messages-ads-b-et-acars">
+<h2>Utilisation des messages ADS-B et ACARS<a class="headerlink" href="#utilisation-des-messages-ads-b-et-acars" title="Permalink to this headline">#</a></h2>
+<section id="elon-musk-private-jet">
+<h3>Elon Musk private jet<a class="headerlink" href="#elon-musk-private-jet" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="taylor-swift">
+<h3>Taylor Swift<a class="headerlink" href="#taylor-swift" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>SPHAiR (<a class="reference external" href="https://lernprogramm.sphair.ch/fr/luftraeume/classification-de-lespace-a%C3%A9rien-suisse">site web</a>)</p></li>
+<li><p>Cartes geo.admin ICAO (<a class="reference external" href="https://map.geo.admin.ch/#/map?lang=de%C2%A2er=2478190.86,1113421.7&amp;z=3.407&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;topic=ech&amp;layers=ch.bazl.luftfahrtkarten-icao&amp;catalogNodes=687,702">site web</a>)</p></li>
+<li><p>VFR Manual Skyguide (<a class="reference external" href="https://www.skybriefing.com/documents/10156/645440/eVFR_eGEN_fr_09_2024.pdf/517b354e-2420-2c9b-de8d-4aee95c31498?t=1724226017039">télécharger</a>)</p></li>
+<li><p>Taylor Swift private jets tracker (<a class="reference external" href="https://x.com/SwiftJetNextDay">sur X (ex-Twitter)</a>)</p></li>
+<li><p>Elon Musk jet tracker (<a class="reference external" href="https://x.com/ElonJetNextDay">sur X (ex-Twitter)</a>)</p></li>
 </ul>
 </section>
 </section>
