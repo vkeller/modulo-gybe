@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP1-REDO-03 : Compression de fichiers et types &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-REDO-03 : Types de fichiers et compression &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP1-REDO-03 : Compression de fichiers et types
+     TP1-REDO-03 : Types de fichiers et compression
     </a>
    </li>
   </ul>
@@ -946,8 +946,40 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#partie-2-les-fichiers-informatiques">
+   PARTIE 2 : les fichiers informatiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
+   Plonger dans un fichier : éditer en hexadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte">
+   Contexte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consignes">
+     Consignes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
+   Exercice 2 : manipuler du son
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partie-2-fichiers-compresses">
+   PARTIE 2 : Fichiers compressés
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1030,33 +1062,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
-   Plonger dans un fichier : éditer en hexadécimal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contexte">
-   Contexte
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#consignes">
-     Consignes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
-   Exercice 2 : manipuler du son
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ressources-supplementaires">
@@ -1072,7 +1077,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-REDO-03 : Compression de fichiers et types</h1>
+                <h1>TP1-REDO-03 : Types de fichiers et compression</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1088,8 +1093,40 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#partie-2-les-fichiers-informatiques">
+   PARTIE 2 : les fichiers informatiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
+   Plonger dans un fichier : éditer en hexadécimal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte">
+   Contexte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consignes">
+     Consignes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
+   Exercice 2 : manipuler du son
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partie-2-fichiers-compresses">
+   PARTIE 2 : Fichiers compressés
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1172,33 +1209,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plonger-dans-un-fichier-editer-en-hexadecimal">
-   Plonger dans un fichier : éditer en hexadécimal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contexte">
-   Contexte
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#consignes">
-     Consignes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-manipuler-du-son">
-   Exercice 2 : manipuler du son
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ressources-supplementaires">
@@ -1216,19 +1226,90 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="matrosh" src="../../../_images/matroshka.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp1-redo-03-compression-de-fichiers-et-types">
-<h1>TP1-REDO-03 : Compression de fichiers et types<a class="headerlink" href="#tp1-redo-03-compression-de-fichiers-et-types" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-redo-03-types-de-fichiers-et-compression">
+<h1>TP1-REDO-03 : Types de fichiers et compression<a class="headerlink" href="#tp1-redo-03-types-de-fichiers-et-compression" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
+<li><p>Comprendre comment est construit un fichier en utilisant un éditeur hexadécimal</p></li>
 <li><p>Comprendre le processus de compression sans perte avec le codage de Huffman</p></li>
 <li><p>Être capable d’estimer la taille d’un fichier en fonction de son type et de son codage</p></li>
-<li><p>Comprendre comment est construit un fichier en utilisant un éditeur hexadécimal</p></li>
 </ol>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Réduire la taille de l’information à transmettre tout en s’assurant que l’on peut retrouver tout ou partie de l’information se fait tous les jours.</p>
+<section id="partie-2-les-fichiers-informatiques">
+<h2>PARTIE 2 : les fichiers informatiques<a class="headerlink" href="#partie-2-les-fichiers-informatiques" title="Permalink to this headline">#</a></h2>
+<p>Un <strong>fichier informatique</strong> est une séquence d’octets (de bits) qui représentent une information. Un fichier possède généralement :</p>
+<ol class="simple">
+<li><p>un <strong>nom</strong> (par exemple <code class="docutils literal notranslate"><span class="pre">TravailDeMaturite</span></code>)</p></li>
+<li><p>une <strong>extension</strong> qui est séparé du nom par un point <code class="docutils literal notranslate"><span class="pre">.</span></code> (par exemple <code class="docutils literal notranslate"><span class="pre">.docx</span></code>, <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>, <code class="docutils literal notranslate"><span class="pre">.mp3</span></code>)</p></li>
+</ol>
+<p>Le fichier lui-même (ce qu’il contient) suit un <strong>format de fichier</strong> strict qui varie selon la représentation des données qu’il contient. Parfois cette représentation (le format) est <strong>ouvert</strong> (c’est le cas par exemple d’un fichier <code class="docutils literal notranslate"><span class="pre">.pgm</span></code> ou <code class="docutils literal notranslate"><span class="pre">.ppm</span></code> que l’on peut retrouver <a class="reference external" href="https://fr.wikipedia.org/wiki/Portable_pixmap">ici</a>), parfois il est <strong>fermé</strong> (ou <strong>propriétaire</strong>) et ne peut être lu ou écrit uniquement par l’application propriétaire (par exemple <code class="docutils literal notranslate"><span class="pre">.xls</span></code> ou <code class="docutils literal notranslate"><span class="pre">.doc</span></code> qui appartiennent à l’entreprise Microsoft).</p>
+</section>
+<section id="plonger-dans-un-fichier-editer-en-hexadecimal">
+<h2>Plonger dans un fichier : éditer en hexadécimal<a class="headerlink" href="#plonger-dans-un-fichier-editer-en-hexadecimal" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Prise en main d’un éditeur hexadécimal</p></li>
+<li><p>Découvrir que tous les fichiers sont faits de bytes</p></li>
+<li><p>Découvrir les types de fichiers et le magic number</p></li>
+<li><p>Comprendre le lien entre extension de fichier et programme qui va ouvrir le fichier</p></li>
+<li><p>Découvrir quels types de fichiers sont robustes face a une modification / perturbation arbitraire.</p></li>
+</ul>
+</section>
+<section id="contexte">
+<h2>Contexte<a class="headerlink" href="#contexte" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’un fichier est enregistré sur un medium (un disque dur ou une clef USB par exemple), un <em>lien</em> est aussi créé et qui permet de relier son emplacement physique sur le disque (son <strong>adresse</strong>) à la liste affichée par un explorateur de fichiers (le <strong>Finder</strong> par exemple).</p>
+<p>Imaginez-vous la situation suivante :</p>
+<p>Un truand a enregistré ses complices, il a créé un dossier <code class="docutils literal notranslate"><span class="pre">fichiers</span></code> des fichiers texte contenant l’ensemble de ses contacts, il a même photographié l’arrivage de produit stupéfiants. Prévoyant, il en a créé une archive <code class="docutils literal notranslate"><span class="pre">fichiers-zip</span></code> en prenant garde d’enlever les suffixes de tous les fichiers ce qui les rend illisibles par son ordinateur.</p>
+<p>Tous ces éléments sont compromettants.</p>
+<p>Le truand a été dénoncé. Il voit arriver la police par sa fenêtre. Il a juste le temps de placer son dossier à la corbeille et d’appuyer sur <em>vider la corbeille</em></p>
+<p>Le <strong>policier scientifique c’est maintenant vous</strong>. Vous devez retrouver le contenu de tous les fichiers du truand.</p>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<section id="consignes">
+<h3>Consignes<a class="headerlink" href="#consignes" title="Permalink to this headline">#</a></h3>
+<p>Faites cet exercice par 2, sur un seul ordinateur, et discutez des résultats. A la fin, une discussion avec le reste du groupe où je vous demanderai ce que vous avez trouvé.</p>
+<p>Dans le finder affichez les extensions de fichier :</p>
+<p><img alt="hexfiend" src="../../../_images/hexfiend1.png" /></p>
+<p>Téléchargez cette <a class="reference external" href="https://raw.githubusercontent.com/vkeller/modulo-gybe/main/1M/representation/tp/archives/fichiers.zip">archive</a> et décompressez-la</p>
+<p>Pour chaque fichier:</p>
+<ul class="simple">
+<li><p>Ouvrez le dans Hex Fiend</p></li>
+<li><p>Essayez de déterminer de quel type de fichier il s’agit. Regardez vers le début du fichier. Si vous ne voyez pas immédiatement de quel type il pourrait choisir, aidez vous de cette page wikipédia : <a class="reference external" href="https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)">Nombre magique</a>.</p></li>
+<li><p>Renommez le fichier pour lui attribuer la bonne extension, par exemple fichier1.pptx</p></li>
+<li><p>Double cliquez sur le fichier renommé pour vérifier si vous avez trouvé la bonne extension (si ça ne marche pas, c’est que vous n’avez pas le bon format ou la bonne extension)</p></li>
+</ul>
+<p>Note : si un fichier est trop difficile à identifier, passez alors au suivant.</p>
+<p>Ensuite, pour chaque fichier renommé :</p>
+<ul class="simple">
+<li><p>Essayez d’éditer le contenu du fichier en remplaçant quelques bytes vers le milieu du fichier</p></li>
+<li><p>Vérifiez ce qu’il se passe quand vous essayez maintenant d’ouvrir le fichier</p></li>
+<li><p>Réessayez avec différents types de modifications</p>
+<ul>
+<li><p>supprimer un peu ou beaucoup de bytes</p></li>
+<li><p>dupliquer certaines parties 2, 3, 10 fois…</p></li>
+</ul>
+</li>
+<li><p>Notez ce qui se passe pour chaque type de fichier</p></li>
+<li><p>Faites des suppositions sur pourquoi les différents types de fichiers réagissent différemment</p></li>
+<li><p>A la fin : discussion avec le reste de la demi classe</p></li>
+</ul>
+</section>
+</section>
+<section id="exercice-2-manipuler-du-son">
+<h2>Exercice 2 : manipuler du son<a class="headerlink" href="#exercice-2-manipuler-du-son" title="Permalink to this headline">#</a></h2>
+<p>Le format MP3 est un format de compression avec perte d’information. A l’origine, il a été développé pour la radiodiffusion (le <em>streaming</em>).</p>
+<ol class="simple">
+<li><p>Téléchargez les <a class="reference external" href="https://github.com/vkeller/modulo-gybe/tree/main/1M/representation/tp/sons/CFF">trois fichiers son</a> présent sur le git</p></li>
+<li><p>A l’aide de HexFiend, identifiez le début et la fin de la musique</p></li>
+<li><p>A l’aide des opérations de copie et coller, reproduisez le jingle francophone 3 fois.</p></li>
+<li><p>Ouvrez les autres jingle (italophone et germanique) et créez un nouveau fichier contenant les trois à la suite à l’aide d’HexFiend</p></li>
+</ol>
+</section>
+<section id="partie-2-fichiers-compresses">
+<h2>PARTIE 2 : Fichiers compressés<a class="headerlink" href="#partie-2-fichiers-compresses" title="Permalink to this headline">#</a></h2>
+<p>On se rend vite compte que la quantité d’information contenue dans les fichiers peut rapidement prendre des grandes proportions. Vient alors l’idée d’analyser l’agencement des octets et bits et d’imaginer une façon de réduire leur nombre afin de gagner de la place, du temps de transmission et de l’efficacité.</p>
+<p>Réduire la taille de l’information à transmettre tout en s’assurant que l’on peut retrouver tout ou partie de l’information est ce que l’on appelle <strong>compression de données</strong>.</p>
 <section id="exemple">
 <h3>Exemple !<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h3>
 <p><img alt="sms" src="../../../_images/twitter.png" /></p>
@@ -1498,67 +1579,6 @@ X \leftarrow C^{-1}(Y) = C^{-1}C(X))
 <h3>Fichier son<a class="headerlink" href="#fichier-son" title="Permalink to this headline">#</a></h3>
 <p>Un fichier son non-compressé aura une taille multiple par la fréquence d’échantillonnage, la durée du morceau ainsi et le nombre de bits de la quantification.</p>
 </section>
-</section>
-<section id="plonger-dans-un-fichier-editer-en-hexadecimal">
-<h2>Plonger dans un fichier : éditer en hexadécimal<a class="headerlink" href="#plonger-dans-un-fichier-editer-en-hexadecimal" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Prise en main d’un éditeur hexadécimal</p></li>
-<li><p>Découvrir que tous les fichiers sont faits de bytes</p></li>
-<li><p>Découvrir les types de fichiers et le magic number</p></li>
-<li><p>Comprendre le lien entre extension de fichier et programme qui va ouvrir le fichier</p></li>
-<li><p>Découvrir quels types de fichiers sont robustes face a une modification / perturbation arbitraire.</p></li>
-</ul>
-</section>
-<section id="contexte">
-<h2>Contexte<a class="headerlink" href="#contexte" title="Permalink to this headline">#</a></h2>
-<p>Lorsqu’un fichier est enregistré sur un medium (un disque dur ou une clef USB par exemple), un <em>lien</em> est aussi créé et qui permet de relier son emplacement physique sur le disque (son <strong>adresse</strong>) à la liste affichée par un explorateur de fichiers (le <strong>Finder</strong> par exemple).</p>
-<p>Imaginez-vous la situation suivante :</p>
-<p>Un truand a enregistré ses complices, il a créé un dossier <code class="docutils literal notranslate"><span class="pre">fichiers</span></code> des fichiers texte contenant l’ensemble de ses contacts, il a même photographié l’arrivage de produit stupéfiants. Prévoyant, il en a créé une archive <code class="docutils literal notranslate"><span class="pre">fichiers-zip</span></code> en prenant garde d’enlever les suffixes de tous les fichiers ce qui les rend illisibles par son ordinateur.</p>
-<p>Tous ces éléments sont compromettants.</p>
-<p>Le truand a été dénoncé. Il voit arriver la police par sa fenêtre. Il a juste le temps de placer son dossier à la corbeille et d’appuyer sur <em>vider la corbeille</em></p>
-<p>Le <strong>policier scientifique c’est maintenant vous</strong>. Vous devez retrouver le contenu de tous les fichiers du truand.</p>
-</section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<section id="consignes">
-<h3>Consignes<a class="headerlink" href="#consignes" title="Permalink to this headline">#</a></h3>
-<p>Faites cet exercice par 2, sur un seul ordinateur, et discutez des résultats. A la fin, une discussion avec le reste du groupe où je vous demanderai ce que vous avez trouvé.</p>
-<p>Dans le finder affichez les extensions de fichier :</p>
-<p><img alt="hexfiend" src="../../../_images/hexfiend1.png" /></p>
-<p>Téléchargez cette <a class="reference external" href="https://raw.githubusercontent.com/vkeller/modulo-gybe/main/1M/representation/tp/archives/fichiers.zip">archive</a> et décompressez-la</p>
-<p>Pour chaque fichier:</p>
-<ul class="simple">
-<li><p>Ouvrez le dans Hex Fiend</p></li>
-<li><p>Essayez de déterminer de quel type de fichier il s’agit. Regardez vers le début du fichier. Si vous ne voyez pas immédiatement de quel type il pourrait choisir, aidez vous de cette page wikipédia : <a class="reference external" href="https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)">Nombre magique</a>.</p></li>
-<li><p>Renommez le fichier pour lui attribuer la bonne extension, par exemple fichier1.pptx</p></li>
-<li><p>Double cliquez sur le fichier renommé pour vérifier si vous avez trouvé la bonne extension (si ça ne marche pas, c’est que vous n’avez pas le bon format ou la bonne extension)</p></li>
-</ul>
-<p>Note : si un fichier est trop difficile à identifier, passez alors au suivant.</p>
-<p>Ensuite, pour chaque fichier renommé :</p>
-<ul class="simple">
-<li><p>Essayez d’éditer le contenu du fichier en remplaçant quelques bytes vers le milieu du fichier</p></li>
-<li><p>Vérifiez ce qu’il se passe quand vous essayez maintenant d’ouvrir le fichier</p></li>
-<li><p>Réessayez avec différents types de modifications</p>
-<ul>
-<li><p>supprimer un peu ou beaucoup de bytes</p></li>
-<li><p>dupliquer certaines parties 2, 3, 10 fois…</p></li>
-</ul>
-</li>
-<li><p>Notez ce qui se passe pour chaque type de fichier</p></li>
-<li><p>Faites des suppositions sur pourquoi les différents types de fichiers réagissent différemment</p></li>
-<li><p>A la fin : discussion avec le reste de la demi classe</p></li>
-</ul>
-</section>
-</section>
-<section id="exercice-2-manipuler-du-son">
-<h2>Exercice 2 : manipuler du son<a class="headerlink" href="#exercice-2-manipuler-du-son" title="Permalink to this headline">#</a></h2>
-<p>Le format MP3 est un format de compression avec perte d’information. A l’origine, il a été développé pour la radiodiffusion (le <em>streaming</em>).</p>
-<ol class="simple">
-<li><p>Téléchargez les <a class="reference external" href="https://github.com/vkeller/modulo-gybe/tree/main/1M/representation/tp/sons/CFF">trois fichiers son</a> présent sur le git</p></li>
-<li><p>A l’aide de HexFiend, identifiez le début et la fin de la musique</p></li>
-<li><p>A l’aide des opérations de copie et coller, reproduisez le jingle francophone 3 fois.</p></li>
-<li><p>Ouvrez les autres jingle (italophone et germanique) et créez un nouveau fichier contenant les trois à la suite à l’aide d’HexFiend</p></li>
-</ol>
 </section>
 <section id="ressources-supplementaires">
 <h2>Ressources supplémentaires<a class="headerlink" href="#ressources-supplementaires" title="Permalink to this headline">#</a></h2>
