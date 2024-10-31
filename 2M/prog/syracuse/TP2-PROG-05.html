@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-03.html">
-     TP1-REDO-03 : Compression de fichiers et types
+     TP1-REDO-03 : Types de fichiers et compression
     </a>
    </li>
   </ul>
@@ -462,12 +462,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/R2-ALGO-02-A.html">
-     C2-ALGO-02-A : Révision algorithmes (Recherche)
+     R2-ALGO-02-A : Révision algorithmes (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/R2-ALGO-02-B.html">
      R2-ALGO-02-B : Révision (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/C2-ALGO-01.html">
+     C2-ALGO-01 : Taille du problème
     </a>
    </li>
    <li class="toctree-l2">
@@ -477,22 +482,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/C2-ALGO-03.html">
-     C2-ALGO-03 : Complexité des algorithmes
+     C2-ALGO-03 : Complexité des algorithmes (suite)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/C2-ALGO-04.html">
-     C2-ALGO-04 : Taille du problème
+     C2-ALGO-04 : Introduction à la théorie des graphes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/C2-ALGO-05.html">
-     C2-ALGO-05 : Introduction à la théorie des graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-06.html">
-     C2-ALGO-06 : Théorie des graphes, le voyageur de commerce
+     C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
     </a>
    </li>
    <li class="toctree-l2">
@@ -644,6 +644,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-NOTE.html">
      TP2-ARCH-NOTE : Rapport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-05.html">
+     TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs
     </a>
    </li>
   </ul>
@@ -949,18 +954,75 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#exercice-1-suite-de-syracuse-pour-un-n">
+   Exercice 1 : Suite de Syracuse pour un
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     n
+    </span>
+   </code>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
+  <a class="reference internal nav-link" href="#exercice-2-suite-de-syracuse-pour-un-range">
+   Exercice 2 : Suite de Syracuse pour un
+   <em>
+    range
+   </em>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
+  <a class="reference internal nav-link" href="#exercice-3-le-vol">
+   Exercice 3 : Le vol
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-le-vol">
+     Définition : le vol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-du-vol">
+     Calcul du vol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resultat-sous-forme-de-graphique-excel">
+     Résultat sous forme de graphique Excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-l-altitude-maximale">
+   Exercice 4 : l’altitude maximale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-altitude-maximale">
+     Définition : Altitude maximale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-de-l-altitude">
+     Calcul de l’altitude
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Résultat sous forme de graphique Excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+   Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)
   </a>
  </li>
 </ul>
@@ -998,18 +1060,75 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#exercice-1-suite-de-syracuse-pour-un-n">
+   Exercice 1 : Suite de Syracuse pour un
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     n
+    </span>
+   </code>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
+  <a class="reference internal nav-link" href="#exercice-2-suite-de-syracuse-pour-un-range">
+   Exercice 2 : Suite de Syracuse pour un
+   <em>
+    range
+   </em>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
+  <a class="reference internal nav-link" href="#exercice-3-le-vol">
+   Exercice 3 : Le vol
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-le-vol">
+     Définition : le vol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-du-vol">
+     Calcul du vol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resultat-sous-forme-de-graphique-excel">
+     Résultat sous forme de graphique Excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-l-altitude-maximale">
+   Exercice 4 : l’altitude maximale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-altitude-maximale">
+     Définition : Altitude maximale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-de-l-altitude">
+     Calcul de l’altitude
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Résultat sous forme de graphique Excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+   Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)
   </a>
  </li>
 </ul>
@@ -1045,21 +1164,61 @@ title="Print to PDF"
 </section>
 <section id="conjecture-de-collatz">
 <h2>Conjecture de Collatz<a class="headerlink" href="#conjecture-de-collatz" title="Permalink to this headline">#</a></h2>
-<p>La <strong>conjecture de Collatz</strong> (Lothar Collatz, né le 6.07.1910 en Allemagne et mort le 26.09.1990 en Bulgarie. Conjecture énoncée en 1937) est l’une des conjectures les plus célèbres puisqu’en dépit de sa simplicité, elle défie les mathématiciens depuis de très nombreuses années. Elle dit que la <strong>suite de Syracuse</strong> (ou problème <code class="docutils literal notranslate"><span class="pre">3x</span> <span class="pre">+</span> <span class="pre">1</span></code>), lorsqu’elle atteint <code class="docutils literal notranslate"><span class="pre">1</span></code> se répète indéfiniment sur la suite <code class="docutils literal notranslate"><span class="pre">1,4,2,1,4,2,...</span></code></p>
+<p>La <strong>conjecture de Collatz</strong> (Lothar Collatz, né le 6.07.1910 en Allemagne et mort le 26.09.1990 en Bulgarie. Conjecture énoncée en 1937) est l’une des conjectures les plus célèbres puisqu’en dépit de sa simplicité, elle défie les mathématiciens depuis de très nombreuses années. Elle dit que la <strong>suite de Syracuse</strong> (ou problème <code class="docutils literal notranslate"><span class="pre">3x</span> <span class="pre">+</span> <span class="pre">1</span></code>), lorsqu’elle atteint <code class="docutils literal notranslate"><span class="pre">1</span></code> se répète indéfiniment sur la suite <code class="docutils literal notranslate"><span class="pre">4,2,1,4,2,1,...</span></code></p>
 </section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Programmez la suite de Syracuse en Python 3</p>
-<p>Testez la <strong>Conjecture de Collatz</strong> pour les nombres entiers de <code class="docutils literal notranslate"><span class="pre">2</span></code> à <code class="docutils literal notranslate"><span class="pre">1000</span></code></p>
+<section id="exercice-1-suite-de-syracuse-pour-un-n">
+<h2>Exercice 1 : Suite de Syracuse pour un <code class="docutils literal notranslate"><span class="pre">n</span></code><a class="headerlink" href="#exercice-1-suite-de-syracuse-pour-un-n" title="Permalink to this headline">#</a></h2>
+<p>Programmez la suite de Syracuse en <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> . Ce programme prend en entrée <code class="docutils literal notranslate"><span class="pre">n</span></code> et affiche la suite de Syracuse jusqu’à atteindre <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p>
 </section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>Pour chaque entier <code class="docutils literal notranslate"><span class="pre">n</span></code> donné, calculez l’entier le plus élevé du <strong>vol</strong> (le nombre d’étapes de la suite de Syracuse avant d’arriver sur <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p>
+<section id="exercice-2-suite-de-syracuse-pour-un-range">
+<h2>Exercice 2 : Suite de Syracuse pour un <em>range</em><a class="headerlink" href="#exercice-2-suite-de-syracuse-pour-un-range" title="Permalink to this headline">#</a></h2>
+<p>Ecrivez un nouveau programme qui affiche la suite de Syracuse pour les entiers de <code class="docutils literal notranslate"><span class="pre">5</span></code> à <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p>
 </section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
-<p>Pour chaque entier <code class="docutils literal notranslate"><span class="pre">n</span></code>, donnez la longueur du vol.</p>
-<p>Donnez la valeur du plus long vol pour les nombres entre <code class="docutils literal notranslate"><span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
+<section id="exercice-3-le-vol">
+<h2>Exercice 3 : Le vol<a class="headerlink" href="#exercice-3-le-vol" title="Permalink to this headline">#</a></h2>
+<section id="definition-le-vol">
+<h3>Définition : le vol<a class="headerlink" href="#definition-le-vol" title="Permalink to this headline">#</a></h3>
+<p>On appelle <strong>vol</strong> le nombre d’étapes de la suite de Syracuse avant d’arriver sur la valeur <code class="docutils literal notranslate"><span class="pre">4</span></code>. Ainsi : pour <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">10</span></code>, la suite de Syracuse vaut : <code class="docutils literal notranslate"><span class="pre">10,</span> <span class="pre">5,</span> <span class="pre">16,</span> <span class="pre">8,</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">...</span></code>. La longueur du vol pour <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">10</span></code> vaut <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p>
+</section>
+<section id="calcul-du-vol">
+<h3>Calcul du vol<a class="headerlink" href="#calcul-du-vol" title="Permalink to this headline">#</a></h3>
+<p>Pour tout entier <code class="docutils literal notranslate"><span class="pre">n</span></code> entre <code class="docutils literal notranslate"><span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">1000</span></code>, Ecrivez un programme qui calcule son vol.</p>
+</section>
+<section id="resultat-sous-forme-de-graphique-excel">
+<h3>Résultat sous forme de graphique Excel<a class="headerlink" href="#resultat-sous-forme-de-graphique-excel" title="Permalink to this headline">#</a></h3>
+<p>Il est possible de copier des valeurs produites par Thonny et de les injecter dans un tableur Excel. Pour cela, il faut que les valeurs soient <strong>formatées</strong> en CSV (<em>Comma-Separeted Values</em> ou valeurs séparées par des virgules). Pour ce faire, il faut formatter les valeurs en utilisant l’artefact suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">vol</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ce qui produira une suite de valeurs injectables dans Excel et desquelles il sera possible de créer un graphique</p>
+</section>
+</section>
+<section id="exercice-4-l-altitude-maximale">
+<h2>Exercice 4 : l’altitude maximale<a class="headerlink" href="#exercice-4-l-altitude-maximale" title="Permalink to this headline">#</a></h2>
+<section id="definition-altitude-maximale">
+<h3>Définition : Altitude maximale<a class="headerlink" href="#definition-altitude-maximale" title="Permalink to this headline">#</a></h3>
+<p>On appelle <strong>altitude maximale</strong> pour un vol donné la valeur la plus élevèe que prendra la suite de Syracuse avant d’arriver sur <code class="docutils literal notranslate"><span class="pre">4</span></code> Par exemple pour <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">10</span></code>, l’altitude maximale vaut <code class="docutils literal notranslate"><span class="pre">16</span></code></p>
+</section>
+<section id="calcul-de-l-altitude">
+<h3>Calcul de l’altitude<a class="headerlink" href="#calcul-de-l-altitude" title="Permalink to this headline">#</a></h3>
+<p>Pour tout entier <code class="docutils literal notranslate"><span class="pre">n</span></code> entre <code class="docutils literal notranslate"><span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">1000</span></code>, Ecrivez un programme qui calcule son vol.</p>
+</section>
+<section id="id1">
+<h3>Résultat sous forme de graphique Excel<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>En suivant les mêmes consignes qu’à l’exercice 4, injectez les valeurs dans une feuille Excel et produisez un graphique. Qu’observez-vous ?</p>
+</section>
+</section>
+<section id="exercice-5-pour-aller-plus-loin">
+<h2>Exercice 5 (pour aller plus loin)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Reprenez votre code de l’exercice 1. Transformez le coeur de l’algorithme en une <strong>fonction</strong>. Cette fonction aura un argument (<code class="docutils literal notranslate"><span class="pre">n</span></code>) et aucun retour.</p></li>
+<li><p>Réécrivez le code de l’exercice 2 en utilisant votre nouvelle fonction</p></li>
+</ul>
+</section>
+<section id="exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+<h2>Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)<a class="headerlink" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture" title="Permalink to this headline">#</a></h2>
+<p>Pour démontrer la conjecture de Collatz, il suffit de démontrer qu’il existe un seul <code class="docutils literal notranslate"><span class="pre">n</span></code> qui ne se termine pas sur la suite <code class="docutils literal notranslate"><span class="pre">...4,2,1</span></code>. Ce faisant, vous gagnez beaucoup de gloire (et probablement d’argent).</p>
+<p>Ecrivez une nouvelle fonction qui <strong>renvoie</strong> la valeur <strong>True</strong> si <code class="docutils literal notranslate"><span class="pre">n</span></code> se termine par <code class="docutils literal notranslate"><span class="pre">4,2,1</span></code> et <strong>False</strong> sinon. Vous pouvez ensuite modifier votre programme de l’exercice 5 et le faire tourner jusqu’à ce qu’il vous donne ce <code class="docutils literal notranslate"><span class="pre">n</span></code>cherché (s’il existe).</p>
 </section>
 </section>
 
