@@ -44,7 +44,7 @@ parts:
     - file: 1M/installation/installation
     - file: 1M/prog/index
       sections:
-      - file: 1M/prog/intro1/intro1
+      - file: 1M/prog/intro1/TP1-PROG-01
       - file: 1M/prog/intro2/intro2
       - file: 1M/prog/boucles/boucles1
       - file: 1M/prog/boucles/boucles2
