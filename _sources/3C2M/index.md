@@ -1,4 +1,4 @@
-# MAN 3C --> 2M
+# MAN 3C &rarr 2M
 
 Les chapitres abordés sont essentiellement ceux de la 1ère année d'école de maturité :
 
