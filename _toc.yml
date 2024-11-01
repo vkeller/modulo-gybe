@@ -132,7 +132,13 @@ parts:
       - file: 2M/esdn/environnement/TP2-ESDN-01
       - file: 2M/esdn/generative-art/TP2-ESDN-02
       - file: 2M/esdn/hacktivists/P2-ESDN-01
- 
+      
+  - caption: 3C2M
+    chapters:
+    - file: 3C2M/index
+    - file: 3C2M/programmation/index
+      sections:
+      - file: 3C2M/programmation/J1/3C2M-PROG-00 
   - caption: Bibliographie
     chapters:
     - file: biblio.md
