@@ -18,9 +18,10 @@ H = [ 0, 0, 5, 0, 0, 0,15, 0]
 graph = [A,B,C,D,E,F,G,H]
 
 # Nomme le sommet à partir duquel on calcule l'arbre couvrant
-premier = 3
+premier = 0
 
 noeuds = ["A","B","C","D","E","F","G","H"]
+peres = [-1,-1,-1,-1,-1,-1,-1,-1]
 
 nbr = len(graph)
 visites = [False] * nbr
@@ -36,6 +37,11 @@ for i in range(nbr):
             min_distance = distances[v]
             min_index = v
 
+    # Calcul du père
+#    for v in range(nbr):
+#        if visites[v] == True:
+#            peres[i] = v
+
     visites[min_index] = True
 
     # Recalcul des distances depuis le noeud
@@ -44,6 +50,10 @@ for i in range(nbr):
             new_distance = distances[min_index] + graph[min_index][v]
             if new_distance < distances[v]:
                 distances[v] = new_distance
+
+
+#print(peres)
+
 
 print("Distance depuis la source :",noeuds[premier])
 print("Noeud","\t","Distance")
