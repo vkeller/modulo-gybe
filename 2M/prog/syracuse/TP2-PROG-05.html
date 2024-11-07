@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/intro1/intro1.html">
+    <a class="reference internal" href="../../../1M/prog/intro1/TP1-PROG-01.html">
      TP1-PROG-01 - Introduction à la programmation
     </a>
    </li>
@@ -752,6 +752,39 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  3C2M
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../3C2M/index.html">
+   MAN 3C
+   <span class="math notranslate nohighlight">
+    \(\rightarrow\)
+   </span>
+   2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../3C2M/programmation/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">
+     3C2M-PROG-00 : Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Bibliographie
  </span>
 </p>
@@ -1016,13 +1049,18 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
-   Exercice 5 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin-que-1000">
+   Exercice 5 (pour aller plus loin que 1000)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
-   Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin-avec-des-fonctions">
+   Exercice 6 (pour aller plus loin avec des fonctions)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+   Exercice 7 (pour aller vraiment très loin et résoudre la conjecture)
   </a>
  </li>
 </ul>
@@ -1122,13 +1160,18 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
-   Exercice 5 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin-que-1000">
+   Exercice 5 (pour aller plus loin que 1000)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
-   Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin-avec-des-fonctions">
+   Exercice 6 (pour aller plus loin avec des fonctions)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+   Exercice 7 (pour aller vraiment très loin et résoudre la conjecture)
   </a>
  </li>
 </ul>
@@ -1208,15 +1251,45 @@ title="Print to PDF"
 <p>En suivant les mêmes consignes qu’à l’exercice 4, injectez les valeurs dans une feuille Excel et produisez un graphique. Qu’observez-vous ?</p>
 </section>
 </section>
-<section id="exercice-5-pour-aller-plus-loin">
-<h2>Exercice 5 (pour aller plus loin)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<section id="exercice-5-pour-aller-plus-loin-que-1000">
+<h2>Exercice 5 (pour aller plus loin que 1000)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin-que-1000" title="Permalink to this headline">#</a></h2>
+<p>Thonny n’affiche que 1000 lignes dans la console (donc les 1000 premiers résultats). C’est un problème pour créer des graphiques de vol ou d’altitude maximum entre <code class="docutils literal notranslate"><span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">1000000</span></code> (par exemple).</p>
+<p>Vol :</p>
+<p><img alt="vol" src="../../../_images/vol.png" /></p>
+<p>Altitude :</p>
+<p><img alt="altitude" src="../../../_images/altitude.png" /></p>
+<p>La solution (qui est utilisée dans toutes les applications professionnelles) passe par l’écriture, depuis l’application, des données dans un <strong>fichier</strong>. On importe ensuite ce fichier depuis Excel.</p>
+<p>On utilise toujours le format CSV en important un module permettant de créer, écrire, lire ou sauvegarder dans un fichier csv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># importation du module csv</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="c1"># ouverture d&#39;un fichier en mode écriture (&quot;w&quot; = write)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fichier_vol.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="c1"># création d&#39;un objet d&#39;écriture qui permettra d&#39;écrire chaque ligne du fichier csv</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="o">...</span>
+<span class="c1"># écriture d&#39;une ligne (row). La ligne doit être mise sous le format d&#39;une liste (ici data)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="n">altitude_max</span><span class="p">]</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="o">...</span>
+
+<span class="c1"># en toute fin de programme, il faut fermer le fichier avec</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<p>Modifiez votre programme pour qu’il enregistre un fichier des vol et des altitudes maximum et importez le depuis Excel</p>
+</section>
+<section id="exercice-6-pour-aller-plus-loin-avec-des-fonctions">
+<h2>Exercice 6 (pour aller plus loin avec des fonctions)<a class="headerlink" href="#exercice-6-pour-aller-plus-loin-avec-des-fonctions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Reprenez votre code de l’exercice 1. Transformez le coeur de l’algorithme en une <strong>fonction</strong>. Cette fonction aura un argument (<code class="docutils literal notranslate"><span class="pre">n</span></code>) et aucun retour.</p></li>
 <li><p>Réécrivez le code de l’exercice 2 en utilisant votre nouvelle fonction</p></li>
 </ul>
 </section>
-<section id="exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
-<h2>Exercice 6 (pour aller vraiment très loin et résoudre la conjecture)<a class="headerlink" href="#exercice-6-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture" title="Permalink to this headline">#</a></h2>
+<section id="exercice-7-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture">
+<h2>Exercice 7 (pour aller vraiment très loin et résoudre la conjecture)<a class="headerlink" href="#exercice-7-pour-aller-vraiment-tres-loin-et-resoudre-la-conjecture" title="Permalink to this headline">#</a></h2>
 <p>Pour démontrer la conjecture de Collatz, il suffit de démontrer qu’il existe un seul <code class="docutils literal notranslate"><span class="pre">n</span></code> qui ne se termine pas sur la suite <code class="docutils literal notranslate"><span class="pre">...4,2,1</span></code>. Ce faisant, vous gagnez beaucoup de gloire (et probablement d’argent).</p>
 <p>Ecrivez une nouvelle fonction qui <strong>renvoie</strong> la valeur <strong>True</strong> si <code class="docutils literal notranslate"><span class="pre">n</span></code> se termine par <code class="docutils literal notranslate"><span class="pre">4,2,1</span></code> et <strong>False</strong> sinon. Vous pouvez ensuite modifier votre programme de l’exercice 5 et le faire tourner jusqu’à ce qu’il vous donne ce <code class="docutils literal notranslate"><span class="pre">n</span></code>cherché (s’il existe).</p>
 </section>
