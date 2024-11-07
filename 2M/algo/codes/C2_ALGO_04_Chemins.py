@@ -18,7 +18,7 @@ H = [ 0, 0, 5, 0, 0, 0,15, 0]
 graph = [A,B,C,D,E,F,G,H]
 
 # Nomme le sommet à partir duquel on calcule l'arbre couvrant
-premier = 0
+premier = 2
 
 noeuds = ["A","B","C","D","E","F","G","H"]
 peres = [-1,-1,-1,-1,-1,-1,-1,-1]
