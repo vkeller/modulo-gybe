@@ -28,7 +28,7 @@ parts:
       - file: 1M/algo/cours/C1-ALGO-01
       - file: 1M/algo/cours/C1-ALGO-02
       - file: 1M/algo/cours/C1-ALGO-03
-      - file: 1M/algo/cours/Cours4
+      - file: 1M/algo/cours/C1-ALGO-04
       - file: 1M/algo/cours/Cours5
       - file: 1M/algo/cours/Cours5.1
       - file: 1M/algo/cours/Cours5.2
