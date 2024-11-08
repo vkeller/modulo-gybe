@@ -25,9 +25,9 @@ parts:
       - file: 1M/representation/tp/TP1-REDO-03
     - file: 1M/algo/index
       sections:
-      - file: 1M/algo/cours/Cours1
-      - file: 1M/algo/cours/Cours2
-      - file: 1M/algo/cours/Cours3
+      - file: 1M/algo/cours/C1-ALGO-01
+      - file: 1M/algo/cours/C1-ALGO-02
+      - file: 1M/algo/cours/C1-ALGO-03
       - file: 1M/algo/cours/Cours4
       - file: 1M/algo/cours/Cours5
       - file: 1M/algo/cours/Cours5.1
