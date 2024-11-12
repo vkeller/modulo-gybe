@@ -1017,6 +1017,11 @@ title="Print to PDF"
    Exercice 4 : boucle avec bornes et pas
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 : pour aller plus loin
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1074,6 +1079,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-4-boucle-avec-bornes-et-pas">
    Exercice 4 : boucle avec bornes et pas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 : pour aller plus loin
   </a>
  </li>
 </ul>
@@ -1166,6 +1176,49 @@ title="Print to PDF"
 </div>
 <p>Modifiez ce code en utilisant une ou des boucles pour reproduire le dessin suivant :</p>
 <p><img alt="fleur" src="../../../_images/fleur1.png" /></p>
+</section>
+<section id="exercice-5-pour-aller-plus-loin">
+<h2>Exercice 5 : pour aller plus loin<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<p>Voici un code permettant de dessiner une maison dont la taille est précisée par la <strong>variable</strong> <code class="docutils literal notranslate"><span class="pre">taille</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">taille</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> 
+<span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span> 
+<span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span> 
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En ajoutant une nouvelle <strong>variable</strong> <code class="docutils literal notranslate"><span class="pre">nbrMaison</span></code> ainsi qu’une nouvelle boucle, reproduisez le dessin ci-dessous :</p>
+<p><img alt="ville" src="../../../_images/ville.png" /></p>
 </section>
 </section>
 
