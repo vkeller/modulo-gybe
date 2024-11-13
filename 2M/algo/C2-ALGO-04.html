@@ -221,6 +221,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-04.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../1M/algo/cours/Cours5.html">
      C1-ALGO-05.00 : Algorithmes classiques
     </a>
@@ -309,12 +314,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-03.html">
-     TP1-PROG-03 - Boucles
+     TP1-PROG-03 - La boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-04.html">
-     TP1-PROG-04 - Dessiner des spirales
+     TP1-PROG-04 - Boucles
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     approfondissement
     </a>
    </li>
    <li class="toctree-l2">
@@ -1083,6 +1099,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-python-dijkstra">
+   Code Python Dijkstra
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1216,6 +1237,11 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-python-dijkstra">
+   Code Python Dijkstra
+  </a>
  </li>
 </ul>
 
@@ -1736,6 +1762,81 @@ title="Print to PDF"
 <p>Voici une solution :</p>
 <p><img alt="ex2sol" src="../../_images/exercicegraphe2.png" /></p>
 </section>
+</section>
+<section id="code-python-dijkstra">
+<h2>Code Python Dijkstra<a class="headerlink" href="#code-python-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>Le code suivant permet de calculer la longueur des chemins en utilisant la matrice d’adjacence et l’algorithme de Dijkstra</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code permettant de calculer l&#39;algorithme de Dijkstra</span>
+<span class="c1"># sur le graphe du cours C2_ALGO_04</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">INF</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">nbr</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">C</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">D</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">E</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">G</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+<span class="n">H</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+
+<span class="n">graph</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">E</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">H</span><span class="p">]</span>
+
+<span class="c1"># Nomme le sommet à partir duquel on calcule l&#39;arbre couvrant</span>
+<span class="n">premier</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">noeuds</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="s2">&quot;E&quot;</span><span class="p">,</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="s2">&quot;G&quot;</span><span class="p">,</span><span class="s2">&quot;H&quot;</span><span class="p">]</span>
+
+<span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+<span class="n">visites</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">nbr</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="n">INF</span><span class="p">]</span> <span class="o">*</span> <span class="n">nbr</span>
+<span class="n">distances</span><span class="p">[</span><span class="n">premier</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+    <span class="c1"># Recherche des noeuds avec la distance minimum</span>
+    <span class="n">min_distance</span> <span class="o">=</span> <span class="n">INF</span>
+    <span class="n">min_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visites</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="ow">and</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">min_distance</span><span class="p">:</span>
+            <span class="n">min_distance</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+            <span class="n">min_index</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="n">visites</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Recalcul des distances depuis le noeud</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">graph</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">visites</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+            <span class="n">new_distance</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">graph</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="n">v</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">new_distance</span> <span class="o">&lt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+                <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_distance</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance depuis la source : &quot;</span><span class="p">,</span><span class="n">noeuds</span><span class="p">[</span><span class="n">premier</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Noeud&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;Distance&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">noeuds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance depuis la source :  D
+Noeud 	 Distance
+A 	 10
+B 	 12
+C 	 17
+D 	 0
+E 	 4
+F 	 6
+G 	 10
+H 	 22
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
