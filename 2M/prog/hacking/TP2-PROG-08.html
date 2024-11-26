@@ -210,12 +210,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-02.html">
-     C1-ALGO-02 : Des algorigrammes aux algorithmes
+     C1-ALGO-02 : Des algorithmes aux algorigrammes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-03.html">
      C1-ALGO-03 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-04.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
     </a>
    </li>
    <li class="toctree-l2">
@@ -307,12 +312,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-03.html">
-     TP1-PROG-03 - Boucles
+     TP1-PROG-03 - La boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">
-     TP1-PROG-04 - Dessiner des spirales
+     TP1-PROG-04 - Boucles
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     approfondissement
     </a>
    </li>
    <li class="toctree-l2">
@@ -488,6 +504,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../algo/C2-ALGO-05.html">
      C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/R2-ALGO-02.html">
+     R1-ALGO-02 : Révision
     </a>
    </li>
    <li class="toctree-l2">
@@ -1398,26 +1419,9 @@ title="Print to PDF"
         <span class="c1"># coder la lettre c et l&#39;ajouter au message_code</span>
 </pre></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">alphabet_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message_clair</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message_code</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gymnase de beaulieu
-hznobtf ef cfbvmjfv
-</pre></div>
-</div>
-</div>
-</div>
+<p>Par exemple :</p>
+<p><code class="docutils literal notranslate"><span class="pre">gymnase</span> <span class="pre">de</span> <span class="pre">beaulieu</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">hznobtf</span> <span class="pre">ef</span> <span class="pre">cfbvmjfv</span></code></p>
 </section>
 <section id="exercice-1-programme-pour-chiffrer-un-texte-clair">
 <h2>Exercice 1 : Programme pour chiffrer un texte clair<a class="headerlink" href="#exercice-1-programme-pour-chiffrer-un-texte-clair" title="Permalink to this headline">#</a></h2>
@@ -1439,8 +1443,7 @@ hznobtf ef cfbvmjfv
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">message_clair</span> <span class="o">=</span> <span class="n">message_clair</span><span class="o">+</span><span class="n">c</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_code</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">message_clair</span> <span class="o">=</span> <span class="n">message_clair</span> <span class="o">+</span> <span class="n">alphabet_clair</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
 </pre></div>
 </div>
 <p>Modifiez le programme suivant pour qu’il décode le message codé donné</p>
@@ -1454,8 +1457,7 @@ hznobtf ef cfbvmjfv
     <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">alphabet_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">c</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">message_clair</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">message_code</span><span class="p">)</span>
 </pre></div>
