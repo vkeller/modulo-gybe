@@ -1071,8 +1071,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
-   Exercice 5 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin">
+   Exercice 6 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-pour-aller-plus-loin">
+   Exercice 7 (pour aller plus loin)
   </a>
  </li>
 </ul>
@@ -1176,8 +1186,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
-   Exercice 5 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin">
+   Exercice 6 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-pour-aller-plus-loin">
+   Exercice 7 (pour aller plus loin)
   </a>
  </li>
 </ul>
@@ -1273,6 +1293,40 @@ title="Print to PDF"
 </section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
+<p>Reprenez l’<a class="reference external" href="https://vkeller.github.io/modulo-gybe/1M/prog/boucles/TP1-PROG-03.html">exercice 1 du TP-03</a> ou le corrigé qui suit. Voici un code qui permet de dessiner un carré rouge de côté <code class="docutils literal notranslate"><span class="pre">100</span></code> avec un stylo de taille <code class="docutils literal notranslate"><span class="pre">3</span></code> pixels :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modifiez votre programme pour que l’utilisateur/utilisatrice puisse dessiner un carré :</p>
+<ul class="simple">
+<li><p>de n’importe quelle taille</p></li>
+<li><p>de n’importe quelle épaisseur</p></li>
+</ul>
+<p>ATTENTION à l’ordre des instructions !!</p>
+</section>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
+<p>Reprenez votre programme de l’exercice 4 et ajoutez des entrées permettant à votre programme de dessiner un carré :</p>
+<ul class="simple">
+<li><p>de n0importe quelle taille</p></li>
+<li><p>de n’importe quelle épaisseur</p></li>
+<li><p>de n’importe quelle couleur</p></li>
+</ul>
+</section>
+<section id="exercice-6-pour-aller-plus-loin">
+<h2>Exercice 6 (pour aller plus loin)<a class="headerlink" href="#exercice-6-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
 <p>Reprenez votre programme de l’exercice 3 et modifiez-le pour que le texte soit accordé en fonction du genre de la personne (<code class="docutils literal notranslate"><span class="pre">h</span></code> ou <code class="docutils literal notranslate"><span class="pre">f</span></code>).</p>
 <p>Pour réaliser cela, il faut ajouter un <strong>test</strong> :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
@@ -1282,8 +1336,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
-<section id="exercice-5-pour-aller-plus-loin">
-<h2>Exercice 5 (pour aller plus loin)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<section id="exercice-7-pour-aller-plus-loin">
+<h2>Exercice 7 (pour aller plus loin)<a class="headerlink" href="#exercice-7-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
 <p>Le passage d’une température en degrés Farenheit (<span class="math notranslate nohighlight">\(T_{Farenheit}\)</span>) vers la température en degrés Celsius (<span class="math notranslate nohighlight">\(T_{Celsius}\)</span>) se calcule avec l’équation suivante :</p>
 <div class="math notranslate nohighlight">
 \[T_{Celsius} = (T_{Farenheit} * \frac{9}{5}) + 32\]</div>
