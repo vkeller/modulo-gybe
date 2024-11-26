@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Architecture" href="../../architecture/index.html" />
@@ -1068,6 +1070,11 @@ title="Print to PDF"
    Exercice 4
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1168,6 +1175,11 @@ title="Print to PDF"
    Exercice 4
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin">
+   Exercice 5 (pour aller plus loin)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1249,7 +1261,7 @@ title="Print to PDF"
 </section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez un programme qui demande un prénom, stocke l’entrée dans la variable <code class="docutils literal notranslate"><span class="pre">prenom</span></code> et affiche des salutations (du type <em>Bonjour Caroline</em></p>
+<p>Ecrivez un programme qui demande un prénom, stocke l’entrée dans la variable <code class="docutils literal notranslate"><span class="pre">prenom</span></code> et affiche des salutations (du type <code class="docutils literal notranslate"><span class="pre">Bonjour</span> <span class="pre">Caroline</span></code></p>
 </section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
@@ -1269,6 +1281,21 @@ title="Print to PDF"
     <span class="n">instructions</span>
 </pre></div>
 </div>
+</section>
+<section id="exercice-5-pour-aller-plus-loin">
+<h2>Exercice 5 (pour aller plus loin)<a class="headerlink" href="#exercice-5-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<p>Le passage d’une température en degrés Farenheit (<span class="math notranslate nohighlight">\(T_{Farenheit}\)</span>) vers la température en degrés Celsius (<span class="math notranslate nohighlight">\(T_{Celsius}\)</span>) se calcule avec l’équation suivante :</p>
+<div class="math notranslate nohighlight">
+\[T_{Celsius} = (T_{Farenheit} * \frac{9}{5}) + 32\]</div>
+<p>Le passage d’une température en degrés Celsius (<span class="math notranslate nohighlight">\(T_{Celsius}\)</span>) vers la température en degrés Farenheit (<span class="math notranslate nohighlight">\(T_{Farenheit}\)</span>) se calcule avec l’équation suivante :</p>
+<div class="math notranslate nohighlight">
+\[T_{Farenheit} = (T_{Celsius} - 32) * \frac{5}{9}\]</div>
+<p>Ecrivez un programme qui :</p>
+<ol class="simple">
+<li><p>Demande à l’utilisateur une température</p></li>
+<li><p>Demande à l’utilisateur si cette température est en Celsius (<code class="docutils literal notranslate"><span class="pre">C</span></code>) ou Farenheit (<code class="docutils literal notranslate"><span class="pre">F</span></code>)</p></li>
+<li><p>Convertir la température dans l’autre unité (<code class="docutils literal notranslate"><span class="pre">C</span></code> vers <code class="docutils literal notranslate"><span class="pre">F</span></code> ou <code class="docutils literal notranslate"><span class="pre">F</span></code> vers <code class="docutils literal notranslate"><span class="pre">C</span></code>)</p></li>
+</ol>
 </section>
 </section>
 
