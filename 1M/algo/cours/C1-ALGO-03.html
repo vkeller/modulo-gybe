@@ -1038,6 +1038,11 @@ title="Print to PDF"
    Correction exercice 1
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-exercice-2">
+   Correction exercice 2
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1106,6 +1111,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#correction-exercice-1">
    Correction exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correction-exercice-2">
+   Correction exercice 2
   </a>
  </li>
 </ul>
@@ -1182,6 +1192,59 @@ title="Print to PDF"
 <p><img alt="nim3" src="../../../_images/JeuDeNim.png" /></p>
 <p>La version complète est la suivante (avec la possibilité de commencer ou de laisser l’adverssaire commencer)</p>
 <p><img alt="nim4" src="../../../_images/JeuDeNimComplet.png" /></p>
+</section>
+<section id="correction-exercice-2">
+<h2>Correction exercice 2<a class="headerlink" href="#correction-exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Dans le jeu de Marienbad, la stratégie gagnante est la suivante :</p>
+<ol class="simple">
+<li><p>Toujours hériter d’une situation perdante</p></li>
+<li><p>La transformer an une situation gagnante</p></li>
+</ol>
+<p>Une situation gagnante se calcule simplement. Il faut additionner les nombre d’allumettes écrit en binaire mais osus forme dècimal.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Nombre d’allumettes</p></th>
+<th class="text-align:left head"><p>Valeur en binaire</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">000</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">001</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">010</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>3</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">011</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>4</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">100</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>5</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">101</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>6</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">110</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>7</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">111</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Exemple, s’il reste <strong>1</strong> allumette sur la première rangée, <strong>0</strong> sur la seconde, <strong>5</strong> sur la troisième et <strong>5</strong> sur la dernière, on additionne :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">001</span>
+<span class="mi">000</span>
+<span class="mi">101</span>
+<span class="mi">101</span>
+<span class="o">===</span>
+<span class="mi">203</span>
+</pre></div>
+</div>
+<p>Si tous les valeurs sont pair, alors la situation est <strong>gagnante</strong>. Sinon elle est perdante. Une situation gagnante ne peut pas retomber sur une situation gagnante. Quel que soit le coup, la situation suivante est perdante.</p>
+<p><img alt="marienbad" src="../../../_images/marienbad.png" /></p>
 </section>
 </section>
 
