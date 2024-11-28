@@ -1049,6 +1049,11 @@ title="Print to PDF"
    Exercice 5 : N’importe quelle clef !
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-hacking-pour-aller-plus-loin">
+   Exercice 6 : Hacking (pour aller plus loin)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1128,6 +1133,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-5-n-importe-quelle-clef">
    Exercice 5 : N’importe quelle clef !
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-hacking-pour-aller-plus-loin">
+   Exercice 6 : Hacking (pour aller plus loin)
   </a>
  </li>
 </ul>
@@ -1497,6 +1507,26 @@ title="Print to PDF"
 <p>Votre programme fonctionne avec la clef de César (<code class="docutils literal notranslate"><span class="pre">clef</span> <span class="pre">=</span> <span class="pre">3</span></code>). Modifiez vos fonctions pour qu’elles généralisent à n’importe quelle clef comprise entre <code class="docutils literal notranslate"><span class="pre">0</span></code>(pas de chiffrement) et <code class="docutils literal notranslate"><span class="pre">len(alphabet)</span></code></p>
 <p><strong>Conseil :</strong> copier-coller vos fonctions <code class="docutils literal notranslate"><span class="pre">chiffrer(code)</span></code> et <code class="docutils literal notranslate"><span class="pre">dechiffrer(texte_code)</span></code> dans un nouveau fichier source et modifiez ce nouveau fichier source.</p>
 <p><strong>Astuce :</strong> L’utilisation de l’opérateur <strong>modulo</strong> (le symbole est <code class="docutils literal notranslate"><span class="pre">%</span></code>) permet de “voir” la chaîne de caractères comme un ruban.</p>
+</section>
+<section id="exercice-6-hacking-pour-aller-plus-loin">
+<h2>Exercice 6 : Hacking (pour aller plus loin)<a class="headerlink" href="#exercice-6-hacking-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<p>Vous savez coder et décoder un texte avec n’importe quelle clef. Il est temps de vous glisser dans la peau d’un hacker et de retrouver la clef utilisée pour chiffrer un texte que voici :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message_code1</span> <span class="o">=</span> <span class="s2">&quot;yvtl huapxbl bul jpcpspzhapvu xbp h thyxbl s opzavpyl wlukhua wsbz k bu tpssluhpyl klz obtislz vypnpulz zby slz ypclz kb apiyl yvtl lza klclubl bul wbpzzhual ylwbispxbl wbpz bu chzal ltwpyl zvu vynhupzhapvu wvspapxbl ihzll zby sl zluha la slz jvuzbsz h puzwpyl kl uvtiylbzlz jpcpspzhapvuz slz yvthpuz lahplua kl nyhukz jvuzaybjalbyz shpzzhua klyyplyl lbe klz tvubtluaz ltislthapxblz jvttl sl jvspzl la sl whuaolvu slby jbsabyl tlshunl kl ayhkpapvuz la k pumsblujlz nyljxblz h lal ayhuztpzl h ayhclyz sh shunbl shapul la sl kyvpa yvthpu sh jobal kl s ltwpyl yvthpu k vjjpklua thyxbl sh mpu k bul lyl thpz zvu olypahnl wlykbyl lujvyl hbqvbyk obp clbe ab xbl q hqvbal wsbz kl klahpsz zby bu hzwlja whyapjbsply kl sh yvtl huapxbl jvttl why leltwsl sh cpl xbvapkpluul klz yvthpuz slz jvuxblalz tpspahpylz kl yvtl slz kplbe la sh ylspnpvu yvthpul s hya la s hyjopaljabyl yvthpul&quot;</span>
+</pre></div>
+</div>
+<p>Ce texte, affecté à la variable <code class="docutils literal notranslate"><span class="pre">message_code1</span></code> est long : il comporte 872 caractères. Il est écrit en français en utilisant les 26 lettres minuscules de l’alphabet.</p>
+<p><strong>Votre travail</strong> : découvrir la clef avec laquelle il a été chiffré. L’algorithme est le suivant :</p>
+<ol class="simple">
+<li><p>Analyser la fréquence de chacune des lettres codée</p>
+<ul class="simple">
+<li><p>déclarer une liste de longueur 26 avec que des <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p>ajouter <code class="docutils literal notranslate"><span class="pre">1</span></code> à l’index de chacune des lettre analysée dans le texte codé</p></li>
+</ul>
+</li>
+<li><p>Trouver la valeur la plus grande. Elle correspond au <code class="docutils literal notranslate"><span class="pre">e</span></code> du texte clair</p></li>
+<li><p>Déduire la valeur de la clef</p></li>
+<li><p>Utiliser cette clef pour déchiffrer le message codé.</p></li>
+</ol>
 </section>
 </section>
 
