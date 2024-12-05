@@ -1017,6 +1017,11 @@ title="Print to PDF"
    Exercice 4
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pour-aller-beaucoup-plus-loin">
+   (Pour aller beaucoup plus loin)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1064,6 +1069,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-4">
    Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pour-aller-beaucoup-plus-loin">
+   (Pour aller beaucoup plus loin)
   </a>
  </li>
 </ul>
@@ -1115,7 +1125,59 @@ title="Print to PDF"
 </section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
-<p>Dessinez l’algorigramme qui prend en entrée l’heure écrite sous forme “standard” (ex: 13h45 et 12 secondes) et qui renvoie la valeur écrite sur l’horologe de la gare de St-Gall</p>
+<p>Dessinez l’algorigramme qui prend en entrée l’heure écrite sous forme “standard” (ex: 13h45 et 12 secondes) et qui renvoie la valeur écrite sur l’horloge de la gare de St-Gall</p>
+<p><img alt="horloge-st-gall-algo" src="../../../_images/horloge-st-gall.png" /></p>
+</section>
+<section id="pour-aller-beaucoup-plus-loin">
+<h2>(Pour aller beaucoup plus loin)<a class="headerlink" href="#pour-aller-beaucoup-plus-loin" title="Permalink to this headline">#</a></h2>
+<p>Une fois l’algorigramme dessiné, on peut le coder en Python. Voici le code pour la conversion des heures en binaire (cela fonctionne aussi pour les minutes et les secondes mais <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">5</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;heure    : &quot;</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">while</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">h</span> <span class="o">-</span> <span class="mi">2</span><span class="o">**</span><span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lumière&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="s2">&quot;ON&quot;</span><span class="p">)</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">h</span> <span class="o">-</span> <span class="mi">2</span><span class="o">**</span><span class="n">p</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lumière&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="s2">&quot;OFF&quot;</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">h</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;heure    : &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">while</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">:</span>
+
+<span class="nn">File ~/.local/lib/python3.9/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il est finalement possible d’utiliser la tortue pour dessiner les différents éléments et obtenir quelque chose qui simule complètement l’horloge de la gare de St-Gall (mais il faudra attendre la fin de la deuxième année pour acquérir toutes les compétences en programmation pour le faire)</p>
+<p><img alt="st-gall-tortue" src="../../../_images/st-gall-tortue.png" /></p>
 </section>
 </section>
 
