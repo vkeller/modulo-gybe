@@ -1,8 +1,22 @@
-from datetime import datetime
+# ------------------------------------------------------
+# Simulation de l'horologe de la gare de St-Gall
+#
+# Prérequis :
+# - fonctions
+# - modules (time, datetime et turtle)
+# - listes
+# - boucles while
+# - boucles for
+# - tests
+#
+# (c) 2024, Vincent Keller, gymnase de Beaulieu, Lausanne
+# ------------------------------------------------------
 
+from datetime import datetime
 from turtle import *
 from time import *
 
+# Fonction qui dessine un carré de taille et couleur précisée
 def carre(t,s,taille,couleur):
     t.pensize(taille)
     t.pencolor(couleur)    
@@ -11,12 +25,14 @@ def carre(t,s,taille,couleur):
         t.forward(s)
         t.left(90)
 
+# Fonction qui dessine un cercle de taille et couleur précisée
 def rond(t,s, taille, couleur):
     t.pensize(taille)
     t.pencolor(couleur)
     s = 40/2.5
     t.circle(s)
 
+# Fonction qui dessine une croix de taille et couleur précisée
 def croix(t,s,taille,couleur):
     t.pensize(taille)
     t.pencolor(couleur)    
@@ -34,6 +50,9 @@ def croix(t,s,taille,couleur):
     t.forward(s/2)
     t.left(135)
 
+# Fonction qui permet de tracer des ronds, des carrés et des croix
+# à partir d'une liste de longueur quelconque mais déclarée
+# avec des valeurs booléennes
 def tracer(b,t,s,type):
     pos = t.pos()
     for i in range(len(b)-1,-1,-1):
@@ -62,18 +81,20 @@ def tracer(b,t,s,type):
     t.pendown()
             
 t = Turtle()
-#t.speed(0)
 
 wn = Screen()
 wn.tracer(0) 
 
+# Boucle qui ne s'arrête jamais (dessine les éléments et dort 0.5 secondes
 while True : 
     horloge = datetime.now()
-
+    
+    # Récupère l'heure actuelle
     heures = horloge.hour
     minutes = horloge.minute
     secondes = horloge.second
 
+    # Construit les listes de booléens (conversion dec -> bin)
     p = 4
     h = [False, False, False, False, False]
     while p >= 0 :
@@ -100,6 +121,10 @@ while True :
 
     size = 40
 
+    # place les différents éléments sur la fenêtre
+    # il y a un peu de déplacements pour pouvoir
+    # placer les cercles, les carrés et les croix
+    # au bon endroit (méthode try and fail)
     t.penup()
     t.forward(size/2.6)
     t.pendown()
