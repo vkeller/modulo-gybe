@@ -97,6 +97,7 @@ parts:
       - file: 2M/prog/motdepasse/MotsDePasse
       - file: 2M/prog/hacking/TP2-PROG-08      
       - file: 2M/prog/arbres/LesArbres
+      - file: 2M/prog/st-gall/TP2-PROG-10
     - file: 2M/histoire/index
       sections:
       - file: 2M/histoire/C2-HIST-01
