@@ -996,10 +996,22 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#objectifs-pedagogiques">
    Objectifs pédagogiques
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequis">
+     Prérequis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rappels-l-horloge-de-la-gare-de-st-gall">
    Rappels : l’horloge de la gare de St-Gall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-du-code">
+   Structure du code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1010,6 +1022,26 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2-recuperer-l-heure-actuelle">
    Exercice 2 : récupérer l’heure actuelle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-horloge-binaire-en-mode-texte">
+   Exercice 3 : Horloge binaire en mode texte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-affichage-en-mode-turtle">
+   Exercice 4 : Affichage en mode turtle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-tracage-d-une-liste-de-booleens">
+   Exercice 5 : Traçage d’une liste de booléens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-tout-mettre-ensemble">
+   Exercice 6 : Tout mettre ensemble
   </a>
  </li>
 </ul>
@@ -1035,10 +1067,22 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#objectifs-pedagogiques">
    Objectifs pédagogiques
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequis">
+     Prérequis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rappels-l-horloge-de-la-gare-de-st-gall">
    Rappels : l’horloge de la gare de St-Gall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-du-code">
+   Structure du code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1049,6 +1093,26 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-2-recuperer-l-heure-actuelle">
    Exercice 2 : récupérer l’heure actuelle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-horloge-binaire-en-mode-texte">
+   Exercice 3 : Horloge binaire en mode texte
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-affichage-en-mode-turtle">
+   Exercice 4 : Affichage en mode turtle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-tracage-d-une-liste-de-booleens">
+   Exercice 5 : Traçage d’une liste de booléens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-tout-mettre-ensemble">
+   Exercice 6 : Tout mettre ensemble
   </a>
  </li>
 </ul>
@@ -1073,11 +1137,30 @@ title="Print to PDF"
 <li><p>dissocier le coeur du programme de son interface graphique</p></li>
 <li><p>conduire un projet complet de sa conception à sa réalisation</p></li>
 </ul>
+<section id="prerequis">
+<h3>Prérequis<a class="headerlink" href="#prerequis" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Python turtle</p></li>
+<li><p>boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> et <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p>tests <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p>fonctions</p></li>
+</ul>
+</section>
 </section>
 <section id="rappels-l-horloge-de-la-gare-de-st-gall">
 <h2>Rappels : l’horloge de la gare de St-Gall<a class="headerlink" href="#rappels-l-horloge-de-la-gare-de-st-gall" title="Permalink to this headline">#</a></h2>
 <p>L’<a class="reference external" href="https://www.bahnhofsuhrsg.ch/">horloge de la gare de St-Gall</a> est un projet artistique de <a class="reference external" href="https://www.moeslang.com/">Norbert Möslang</a>, un musicien expérimental, luthier, photographe, mais aussi créateur d’art contemporain. Elle a été installée en 2019 sur le fronton de la gare de St-Gall.</p>
 <p>Son <a class="reference external" href="https://vkeller.github.io/modulo-gybe/1M/algo/cours/C1-ALGO-09.html">principe</a> est simple : elle affiche trois lignes qu’il faut lire de gauche à droite en additionnant les puissances de <code class="docutils literal notranslate"><span class="pre">2</span></code>. Les cercles pour les heures, les croix pour les minutes et les carrés pour les secondes.</p>
+</section>
+<section id="structure-du-code">
+<h2>Structure du code<a class="headerlink" href="#structure-du-code" title="Permalink to this headline">#</a></h2>
+<p>Le code va être structuré en deux parties :</p>
+<ol class="simple">
+<li><p>Calcul de l’heure en binaire depuis l’heure en décimal</p></li>
+<li><p>Affichage à l’aide de la tortue</p></li>
+</ol>
+<p>La structure de donnée qui permet de stocker l’heure en binaire est une <code class="docutils literal notranslate"><span class="pre">list</span></code> de longueur <code class="docutils literal notranslate"><span class="pre">5</span></code> pour les heures et <code class="docutils literal notranslate"><span class="pre">6</span></code> pour les minutes et les secondes. Chaque élément de la liste est un booléen <code class="docutils literal notranslate"><span class="pre">True</span></code> pour <code class="docutils literal notranslate"><span class="pre">1</span></code> et <code class="docutils literal notranslate"><span class="pre">False</span></code> pour <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Le projet se déroule donc en deux étapes : construire l’heure en binaire puis dans un second temps l’afficher à l’aide de la tortue.</p>
 </section>
 <section id="exercice-1-conversion-decimal-binaire">
 <h2>Exercice 1 : Conversion décimal binaire<a class="headerlink" href="#exercice-1-conversion-decimal-binaire" title="Permalink to this headline">#</a></h2>
@@ -1094,12 +1177,170 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Trois fonctions de ce module permettent de récupérer l’heure, les minutes et les secondes actuelles :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">heures</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">hour</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">horloge</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">heures</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">hour</span>
 <span class="n">minutes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">minute</span>
 <span class="n">secondes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">second</span>
 </pre></div>
 </div>
 <p>Modifiez votre programme pour qu’il affiche les trois listes <code class="docutils literal notranslate"><span class="pre">heures</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span></code> et <code class="docutils literal notranslate"><span class="pre">secondes</span></code> avec l’heure actuelle</p>
+</section>
+<section id="exercice-3-horloge-binaire-en-mode-texte">
+<h2>Exercice 3 : Horloge binaire en mode texte<a class="headerlink" href="#exercice-3-horloge-binaire-en-mode-texte" title="Permalink to this headline">#</a></h2>
+<p>Une fois les heures, les minutes et secondes stockées dans une liste, il est possible de simuler le temps qui passe à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> infinie. Attention : ce n’est plus un algorithme puisqu’il ne se termine jamais. Pour stopper le programme, il faudra le tuer (appuyer sur le <strong>stop</strong> de Thonny).</p>
+<p>La structure du code devient :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+    <span class="n">horloge</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="n">heures</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">hour</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">minutes</span>
+    <span class="n">secondes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">seconds</span>
+    
+    <span class="c1"># calcul des listes contenant les heures, minutes et secondes</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+    
+    <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+    
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>la fonction <code class="docutils literal notranslate"><span class="pre">sleep(0.5)</span></code> permet de faire <em>dormir</em> le programme pendant une demi-seconde</p>
+</section>
+<section id="exercice-4-affichage-en-mode-turtle">
+<h2>Exercice 4 : Affichage en mode turtle<a class="headerlink" href="#exercice-4-affichage-en-mode-turtle" title="Permalink to this headline">#</a></h2>
+<p>Le code est structuré de telle façon qu’à chaque seconde (0.5 secondes de calcul, 0.5 secondes de <code class="docutils literal notranslate"><span class="pre">sleep</span></code>), les listes <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code> et <code class="docutils literal notranslate"><span class="pre">s</span></code> contiennent les valeurs binaires des heures, minutes et secondes actuelles. Ne reste plus qu’à afficher les cercles, croix et carrés à l’aide de la tortue.</p>
+<p>La première étape est de créer trois fonctions qui permettrons d’afficher un cercle, une croix et un carré.</p>
+<p>Développez donc ces trois fonctions dont les signatures sont les suivantes.</p>
+<p>Pour les cercles :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rond</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">/</span><span class="mf">2.5</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Pour les croix :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">croix</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">taille</span><span class="p">,</span><span class="n">couleur</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Pour les carrés :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">taille</span><span class="p">,</span><span class="n">couleur</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">/</span><span class="mf">1.3</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Les arguments de ces fonctions représentent :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> : la tortue (<code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">Turtle()</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> : la taille du cercle, de la croix ou du carré</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taille</span></code> : l’épaisseur du stylo. Pour un élément à afficher on choisira <code class="docutils literal notranslate"><span class="pre">5</span></code> et pour un élément qu’il ne faut pas afficher une  épaisseur de <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">couleur</span></code> : la couleur du stylo</p></li>
+</ul>
+<p>Le calcul de <code class="docutils literal notranslate"><span class="pre">s</span></code> pour les ronds et les carrés permettent de s’aligner sur la taille des croix afin que tous les éléments aient la même largeur (c’est un peu de trigonométrie). La variable <code class="docutils literal notranslate"><span class="pre">s</span></code> permet ainsi d’afficher n’importe quelle taille de l’horloge binaire. Pour les premiers tests, essayez de fixer <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">40</span></code></p>
+</section>
+<section id="exercice-5-tracage-d-une-liste-de-booleens">
+<h2>Exercice 5 : Traçage d’une liste de booléens<a class="headerlink" href="#exercice-5-tracage-d-une-liste-de-booleens" title="Permalink to this headline">#</a></h2>
+<p>Modifiez votre programme pour qu’il trace des cercles, des croix ou des carrés. Pour ce faire, créez une fonction dont la signature est la suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fonction qui permet de tracer des ronds, des carrés et des croix</span>
+<span class="c1"># à partir d&#39;une liste de longueur quelconque mais déclarée</span>
+<span class="c1"># avec des valeurs booléennes</span>
+<span class="k">def</span> <span class="nf">tracer</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="nb">type</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>où les variables sont les suivantes :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> est une liste de booléens</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> est la tortue</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> est la taille (<code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">40</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> est une chaîne de caractères permettant de discriminer les heures, les minutes et les secondes (par exemple les caractères <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code> et <code class="docutils literal notranslate"><span class="pre">s</span></code>). la fonction <code class="docutils literal notranslate"><span class="pre">tracer(b,t,s,taille)</span></code> trace les cercles, les croix et les carrés.</p></li>
+</ul>
+</section>
+<section id="exercice-6-tout-mettre-ensemble">
+<h2>Exercice 6 : Tout mettre ensemble<a class="headerlink" href="#exercice-6-tout-mettre-ensemble" title="Permalink to this headline">#</a></h2>
+<p>Il est l’heure de mettre toutes les fonctions ensembles en modifiant la boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> infinie.</p>
+<p>La structure du code doit ressembler à :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Fonction qui dessine un carré de taille et couleur précisée</span>
+<span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">taille</span><span class="p">,</span><span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="c1"># Fonction qui dessine un cercle de taille et couleur précisée</span>
+<span class="k">def</span> <span class="nf">rond</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span>
+    
+<span class="c1"># Fonction qui dessine une croix de taille et couleur précisée</span>
+<span class="k">def</span> <span class="nf">croix</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">taille</span><span class="p">,</span><span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span>
+    
+<span class="c1"># Fonction qui permet de tracer des ronds, des carrés et des croix</span>
+<span class="c1"># à partir d&#39;une liste de longueur quelconque mais déclarée</span>
+<span class="c1"># avec des valeurs booléennes</span>
+<span class="k">def</span> <span class="nf">tracer</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="nb">type</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+
+<span class="c1"># On récupère la fenêtre de la tortue. On trace toutes les formes et on update la fenêtre</span>
+<span class="c1"># il n&#39;y a pas de tortue mais la fenêtre qui se met à joue à l&#39;aide de la fonction update()</span>
+<span class="n">wn</span> <span class="o">=</span> <span class="n">Screen</span><span class="p">()</span>
+<span class="n">wn</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
+
+<span class="c1"># Boucle qui ne s&#39;arrête jamais (dessine les éléments et dort 0.5 secondes</span>
+<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span> 
+    <span class="n">horloge</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="c1"># Récupère l&#39;heure actuelle</span>
+    <span class="n">heures</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">hour</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">minute</span>
+    <span class="n">secondes</span> <span class="o">=</span> <span class="n">horloge</span><span class="o">.</span><span class="n">second</span>
+
+    <span class="o">...</span>
+
+    <span class="c1"># Construit les listes de booléens (conversion dec -&gt; bin)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+    <span class="o">...</span>
+    
+    <span class="n">size</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="o">...</span>
+    <span class="n">tracer</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="s2">&quot;h&quot;</span><span class="p">)</span>
+    <span class="o">...</span>
+
+    <span class="n">tracer</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="s2">&quot;m&quot;</span><span class="p">)</span>
+    <span class="o">...</span>
+    
+    <span class="n">tracer</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+    <span class="o">...</span>
+
+    <span class="n">wn</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> 
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>A vous de jouer !</p>
 </section>
 </section>
 
