@@ -29,7 +29,7 @@ def carre(t,s,taille,couleur):
 def rond(t,s, taille, couleur):
     t.pensize(taille)
     t.pencolor(couleur)
-    s = 40/2.5
+    s = s/2.5
     t.circle(s)
 
 # Fonction qui dessine une croix de taille et couleur précisée
