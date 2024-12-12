@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C1-ALGO-09 : L’horologe de la gare de St-Gallen" href="C1-ALGO-09.html" />
+    <link rel="next" title="C1-ALGO-09 : L’horloge de la gare de St-Gallen" href="C1-ALGO-09.html" />
     <link rel="prev" title="C1-ALGO-07 : Des algorigrammes à leur programmation" href="Cours7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -224,17 +224,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.html">
+    <a class="reference internal" href="C1-ALGO-05.html">
      C1-ALGO-05.00 : Algorithmes classiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.1.html">
+    <a class="reference internal" href="C1-ALGO-05.1.html">
      C1-ALGO-05.01 Algorithmes classiques (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.2.html">
+    <a class="reference internal" href="C1-ALGO-05.2.html">
      C1-ALGO-05.02 Algorithmes classiques (Tri)
     </a>
    </li>
@@ -255,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="C1-ALGO-09.html">
-     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+     C1-ALGO-09 : L’horloge de la gare de St-Gallen
     </a>
    </li>
    <li class="toctree-l2">
@@ -571,6 +571,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">
      TP2-PROG-09 : Les arbres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">
+     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
     </a>
    </li>
   </ul>
@@ -1003,11 +1008,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithme-annee-bisextile">
-   Algorithme : année bisextile
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etape-1-determiner-la-balise-du-siecle">
    Etape 1 : Déterminer la balise du siècle
   </a>
@@ -1020,6 +1020,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">
    Etape 3 : Choisir un jour-pivot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-annee-bisextile">
+   Algorithme : année bisextile
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1069,11 +1074,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithme-annee-bisextile">
-   Algorithme : année bisextile
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etape-1-determiner-la-balise-du-siecle">
    Etape 1 : Déterminer la balise du siècle
   </a>
@@ -1086,6 +1086,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">
    Etape 3 : Choisir un jour-pivot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithme-annee-bisextile">
+   Algorithme : année bisextile
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1133,41 +1138,6 @@ title="Print to PDF"
 <li><p><strong>Etape 3 :</strong> Choisir le jour-pivot</p></li>
 </ol>
 <p>Pour la troisième étape, il s’agit d’avoir un sous-algorithme qui renvoie <strong>Vrai</strong> si l’année considérée est <strong>bisextile</strong></p>
-</section>
-<section id="algorithme-annee-bisextile">
-<h2>Algorithme : année bisextile<a class="headerlink" href="#algorithme-annee-bisextile" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>SI l’année est un multiple de 4 alors elle est bisextile</p>
-<ul>
-<li><p>SAUF si l’année est divisible par 100 MAIS pas par 400</p></li>
-</ul>
-</li>
-<li><p>SINON elle n’est pas bisextile</p></li>
-</ul>
-<p><img alt="bisextile" src="../../../_images/bisextile.jpg" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
-        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
-            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="etape-1-determiner-la-balise-du-siecle">
 <h2>Etape 1 : Déterminer la balise du siècle<a class="headerlink" href="#etape-1-determiner-la-balise-du-siecle" title="Permalink to this headline">#</a></h2>
@@ -1283,6 +1253,41 @@ title="Print to PDF"
 </tbody>
 </table>
 </section>
+<section id="algorithme-annee-bisextile">
+<h2>Algorithme : année bisextile<a class="headerlink" href="#algorithme-annee-bisextile" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>SI l’année est un multiple de 4 alors elle est bisextile</p>
+<ul>
+<li><p>SAUF si l’année est divisible par 100 MAIS pas par 400</p></li>
+</ul>
+</li>
+<li><p>SINON elle n’est pas bisextile</p></li>
+</ul>
+<p><img alt="bisextile" src="../../../_images/bisextile.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
+        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="exemples">
 <h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
 <section id="janvier-1967">
@@ -1353,7 +1358,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="C1-ALGO-09.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-ALGO-09 : L’horologe de la gare de St-Gallen</p>
+        <p class="prev-next-title">C1-ALGO-09 : L’horloge de la gare de St-Gallen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
