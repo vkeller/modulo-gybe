@@ -41,14 +41,14 @@ jour_cle = jour_clef(annee,balise)
 
 jc = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi', 'Samedi','Dimanche']
 ordinaire = [10,28,14,4,9,6,11,8,5,10,7,12]
-bisext    = [10,29,14,4,9,6,11,8,5,10,7,12]
+bisext    = [11,29,14,4,9,6,11,8,5,10,7,12]
 
 
 mois = mois - 1
 if bissextile(annee):
-    j = (jour_cle + (jour-bisext[mois]))%7
+    j = (jour_cle + (bisext[mois]-jour)%7)%7
     print("le",jour,mois+1,annee,"est un ",jc[j])
 else:
-    j = (jour_cle + (jour-ordinaire[mois]))%7
+    j = (jour_cle + (ordinaire[mois]-jour)%7)%7
     print("le",jour,mois+1,annee,"est un ",jc[j])
     
