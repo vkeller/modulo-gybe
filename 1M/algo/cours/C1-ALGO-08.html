@@ -1202,6 +1202,42 @@ title="Print to PDF"
 </section>
 <section id="etape-3-choisir-un-jour-pivot">
 <h2>Etape 3 : Choisir un jour-pivot<a class="headerlink" href="#etape-3-choisir-un-jour-pivot" title="Permalink to this headline">#</a></h2>
+<p>Avant de choisir le jour-pivot, il s’agit de déterminer si l’année considérée est ordinaire ou bisextile</p>
+</section>
+<section id="algorithme-annee-bisextile">
+<h2>Algorithme : année bisextile<a class="headerlink" href="#algorithme-annee-bisextile" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>SI l’année est un multiple de 4 alors elle est bisextile</p>
+<ul>
+<li><p>SAUF si l’année est divisible par 100 MAIS pas par 400</p></li>
+</ul>
+</li>
+<li><p>SINON elle n’est pas bisextile</p></li>
+</ul>
+<p><img alt="bisextile" src="../../../_images/bisextile.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
+        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
+</pre></div>
+</div>
+</div>
+</div>
 <p>Une fois le jour-clé déterminé, on choisit un jour proche de celui recherché selon le tableau suivant. Il permettra de calculer facilement le jour de la semaine correspondant à la date recherchée.</p>
 <p><em>Remarque</em> Si le jour-clé est un mardi, toutes les dates du tableau pour l’année considérée sont aussi un mardi.</p>
 <table class="colwidths-auto table">
@@ -1252,41 +1288,6 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</section>
-<section id="algorithme-annee-bisextile">
-<h2>Algorithme : année bisextile<a class="headerlink" href="#algorithme-annee-bisextile" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>SI l’année est un multiple de 4 alors elle est bisextile</p>
-<ul>
-<li><p>SAUF si l’année est divisible par 100 MAIS pas par 400</p></li>
-</ul>
-</li>
-<li><p>SINON elle n’est pas bisextile</p></li>
-</ul>
-<p><img alt="bisextile" src="../../../_images/bisextile.jpg" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
-        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
-            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="exemples">
 <h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
