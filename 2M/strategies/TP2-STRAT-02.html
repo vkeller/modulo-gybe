@@ -1034,11 +1034,6 @@ title="Print to PDF"
    Exercice 4 : Factorisation
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-tout-ensemble">
-   Exercice 5 : Tout ensemble
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1095,11 +1090,6 @@ title="Print to PDF"
    Exercice 4 : Factorisation
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-tout-ensemble">
-   Exercice 5 : Tout ensemble
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1138,7 +1128,7 @@ title="Print to PDF"
 </section>
 <section id="exercice-1-recherche-de-la-balise-du-siecle">
 <h2>Exercice 1 : recherche de la balise du siècle<a class="headerlink" href="#exercice-1-recherche-de-la-balise-du-siecle" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez un programme qui permet de retrouver la balise du siècle. L’entrée de ce programme est l’année écrite sous la forme <code class="docutils literal notranslate"><span class="pre">aaaa</span></code>.</p>
+<p>Ecrivez un programme <code class="docutils literal notranslate"><span class="pre">balise.py</span></code> qui permet de retrouver la balise du siècle. L’entrée de ce programme est l’année écrite sous la forme <code class="docutils literal notranslate"><span class="pre">aaaa</span></code>.</p>
 <section id="rappel-balise-du-siecle">
 <h3>Rappel : balise du siècle<a class="headerlink" href="#rappel-balise-du-siecle" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
@@ -1163,7 +1153,7 @@ title="Print to PDF"
 </section>
 <section id="exercice-2-identification-du-jour-cle">
 <h2>Exercice 2 : identification du jour clé<a class="headerlink" href="#exercice-2-identification-du-jour-cle" title="Permalink to this headline">#</a></h2>
-<p>Ecrivez un programme qui identifie le jour clé de l’année <code class="docutils literal notranslate"><span class="pre">aaaa</span></code> considérée. L’algorithme est le suivant :</p>
+<p>Ecrivez un programme <code class="docutils literal notranslate"><span class="pre">jourcle.py</span></code> qui identifie le jour clé de l’année <code class="docutils literal notranslate"><span class="pre">aaaa</span></code> considérée. L’algorithme est le suivant :</p>
 <p><img alt="doomsday" src="../../_images/doomsday_2.png" /></p>
 <p>Le chiffre obtenu à la fin de l’algorithme est un jour de semaine</p>
 <table class="colwidths-auto table">
@@ -1199,12 +1189,84 @@ title="Print to PDF"
 </section>
 <section id="exercice-3-choix-du-jour-pivot">
 <h2>Exercice 3 : Choix du jour pivot<a class="headerlink" href="#exercice-3-choix-du-jour-pivot" title="Permalink to this headline">#</a></h2>
+<p>Ecrivez un programme <code class="docutils literal notranslate"><span class="pre">pivot.py</span></code> qui permet le choix du jour pivot. Pour cela, vous devez d’abord vérifier que l’année considérée (<code class="docutils literal notranslate"><span class="pre">aaaa</span></code>) est bisextile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aaaa</span> <span class="o">=</span> <span class="mi">1964</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">aaaa</span><span class="o">%</span><span class="mi">4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">aaaa</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">aaaa</span><span class="o">%</span><span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">aaaa</span><span class="o">%</span><span class="mi">400</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">aaaa</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">aaaa</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">aaaa</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Le jour pivot d’une année ordinaire et une année bisextile est un jour clé. les jours pivots sont définis comme suit :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p>Janvier</p></th>
+<th class="text-align:center head"><p>Février</p></th>
+<th class="text-align:center head"><p>Mars</p></th>
+<th class="text-align:center head"><p>Avril</p></th>
+<th class="text-align:center head"><p>Mai</p></th>
+<th class="text-align:center head"><p>Juin</p></th>
+<th class="text-align:center head"><p>Juillet</p></th>
+<th class="text-align:center head"><p>Août</p></th>
+<th class="text-align:center head"><p>Septembre</p></th>
+<th class="text-align:center head"><p>Octobre</p></th>
+<th class="text-align:center head"><p>Novembre</p></th>
+<th class="text-align:center head"><p>Décembre</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Ordinaire</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>28</strong></p></td>
+<td class="text-align:center"><p><strong>14</strong></p></td>
+<td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p><strong>9</strong></p></td>
+<td class="text-align:center"><p><strong>6</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>8</strong></p></td>
+<td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>7</strong></p></td>
+<td class="text-align:center"><p><strong>12</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Bisextile</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>29</strong></p></td>
+<td class="text-align:center"><p><strong>14</strong></p></td>
+<td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p><strong>9</strong></p></td>
+<td class="text-align:center"><p><strong>6</strong></p></td>
+<td class="text-align:center"><p><strong>11</strong></p></td>
+<td class="text-align:center"><p><strong>8</strong></p></td>
+<td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p><strong>10</strong></p></td>
+<td class="text-align:center"><p><strong>7</strong></p></td>
+<td class="text-align:center"><p><strong>12</strong></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="exercice-4-factorisation">
 <h2>Exercice 4 : Factorisation<a class="headerlink" href="#exercice-4-factorisation" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="exercice-5-tout-ensemble">
-<h2>Exercice 5 : Tout ensemble<a class="headerlink" href="#exercice-5-tout-ensemble" title="Permalink to this headline">#</a></h2>
+<p>Vous devriez vous trouver avec trois programmes :</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">balise.py</span></code> qui calcule la balise du siècle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jourcle.py</span></code> qui calcule le jour clé</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pivot.py</span></code> qui calcule le pivot ainsi que le <code class="docutils literal notranslate"><span class="pre">jour</span></code> défini par la date <code class="docutils literal notranslate"><span class="pre">jj.mm.aaaa</span></code></p></li>
+</ol>
+<p>Créez un nouveau programme <code class="docutils literal notranslate"><span class="pre">doomsday.py</span></code>. Ce programme doit contenir trois fonctions qui sont les factorisations des trois programmes ci-dessus.</p>
+<p>Le programme principal se contentera de l’entrée <code class="docutils literal notranslate"><span class="pre">jj.mm.aaaa</span></code> et renverra le nom du jour sous la forme :</p>
+<p><code class="docutils literal notranslate"><span class="pre">Le</span> <span class="pre">11</span> <span class="pre">septembre</span> <span class="pre">2001</span> <span class="pre">était</span> <span class="pre">un</span> <span class="pre">mardi</span></code></p>
+<p>ou</p>
+<p><code class="docutils literal notranslate"><span class="pre">Le</span> <span class="pre">6</span> <span class="pre">septembre</span> <span class="pre">2156</span> <span class="pre">sera</span> <span class="pre">un</span> <span class="pre">lundi</span></code></p>
 </section>
 </section>
 
