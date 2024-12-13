@@ -15,15 +15,12 @@ def balise_siecle(annee):
 
 def jour_clef(annee,balise):
     annee_2 = annee%100
-    if annee_2%2 == 0:
-        annee_2 = int(annee_2 / 2)
-    else:
-        annee_2 = int(annee_2 + 11)
     if annee_2%2 != 0:
-        annee_2 = int(annee_2 / 2)
-    
-    annee_2 = annee_2%7
-    annee_2 = 7 - annee_2
+        annee_2 = int(annee_2 + 11)
+    annee_2 = int(annee_2 / 2)
+    if annee_2%2 != 0:
+        annee_2 = int(annee_2 + 11)
+    annee_2 = 7 - annee_2%7
     annee_2 = (annee_2 + balise)%7
     return annee_2
 
@@ -41,16 +38,16 @@ jour_cle = jour_clef(annee,balise)
 
 ## Etape 3 : jour pivot
 
-jc = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi', 'Samedi','Dimanche']
+jc = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi', 'Samedi']
 ordinaire = [10,28,14,4,9,6,11,8,5,10,7,12]
 bisext    = [11,29,14,4,9,6,11,8,5,10,7,12]
 
 
 mois = mois - 1
 if bissextile(annee):
-    j = (jour_cle + (bisext[mois]-jour)%7)%7
+    j = (jour_cle + (jour-bisext[mois]+35)%7)%7
     print("le",jour,mois+1,annee,"est un ",jc[j])
 else:
-    j = (jour_cle + (ordinaire[mois]-jour)%7)%7
+    j = (jour_cle + (jour-ordinaire[mois]+35)%7)%7
     print("le",jour,mois+1,annee,"est un ",jc[j])
     

@@ -121,6 +121,7 @@ parts:
       - file: 2M/strategies/C2-STRAT-01
       - file: 2M/strategies/C2-STRAT-02
       - file: 2M/strategies/TP2-STRAT-01
+      - file: 2M/strategies/TP2-STRAT-02
     - file: 2M/machine-learning/index
       sections:
       - file: 2M/machine-learning/cours/C2-IA-00
