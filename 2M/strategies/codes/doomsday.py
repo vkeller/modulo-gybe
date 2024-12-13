@@ -15,11 +15,13 @@ def balise_siecle(annee):
 
 def jour_clef(annee,balise):
     annee_2 = annee%100
-    for i in range(2):
-        if annee_2%2 == 0:
-            annee_2 = int(annee_2 / 2)
-        else:
-            annee_2 = int(annee_2 + 11)
+    if annee_2%2 == 0:
+        annee_2 = int(annee_2 / 2)
+    else:
+        annee_2 = int(annee_2 + 11)
+    if annee_2%2 != 0:
+        annee_2 = int(annee_2 / 2)
+    
     annee_2 = annee_2%7
     annee_2 = 7 - annee_2
     annee_2 = (annee_2 + balise)%7
