@@ -226,17 +226,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.html">
+    <a class="reference internal" href="C1-ALGO-05.html">
      C1-ALGO-05.00 : Algorithmes classiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.1.html">
+    <a class="reference internal" href="C1-ALGO-05.1.html">
      C1-ALGO-05.01 Algorithmes classiques (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours5.2.html">
+    <a class="reference internal" href="C1-ALGO-05.2.html">
      C1-ALGO-05.02 Algorithmes classiques (Tri)
     </a>
    </li>
@@ -251,13 +251,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours8.html">
+    <a class="reference internal" href="C1-ALGO-08.html">
      C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours9.html">
-     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+    <a class="reference internal" href="C1-ALGO-09.html">
+     C1-ALGO-09 : L’horloge de la gare de St-Gallen
     </a>
    </li>
    <li class="toctree-l2">
@@ -575,6 +575,11 @@ const thebe_selector_output = ".output, .cell_output"
      TP2-PROG-09 : Les arbres
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">
+     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -694,6 +699,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
      TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-02.html">
+     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
     </a>
    </li>
   </ul>
@@ -1050,7 +1060,7 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tests-multiples-if-else-if-else">
+    <a class="reference internal nav-link" href="#tests-multiples-if-elif-else">
      Tests multiples
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -1060,10 +1070,7 @@ title="Print to PDF"
        ...
       </span>
       <span class="pre">
-       else
-      </span>
-      <span class="pre">
-       if
+       elif
       </span>
       <span class="pre">
        ....
@@ -1193,7 +1200,7 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tests-multiples-if-else-if-else">
+    <a class="reference internal nav-link" href="#tests-multiples-if-elif-else">
      Tests multiples
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -1203,10 +1210,7 @@ title="Print to PDF"
        ...
       </span>
       <span class="pre">
-       else
-      </span>
-      <span class="pre">
-       if
+       elif
       </span>
       <span class="pre">
        ....
@@ -1317,14 +1321,14 @@ title="Print to PDF"
 </section>
 <section id="structures-de-controle-conditionnelles-avancees">
 <h2>Structures de contrôle conditionnelles avancées<a class="headerlink" href="#structures-de-controle-conditionnelles-avancees" title="Permalink to this headline">#</a></h2>
-<section id="tests-multiples-if-else-if-else">
-<h3>Tests multiples <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">else</span> <span class="pre">if</span> <span class="pre">....</span> <span class="pre">else</span></code><a class="headerlink" href="#tests-multiples-if-else-if-else" title="Permalink to this headline">#</a></h3>
+<section id="tests-multiples-if-elif-else">
+<h3>Tests multiples <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span> <span class="pre">....</span> <span class="pre">else</span></code><a class="headerlink" href="#tests-multiples-if-elif-else" title="Permalink to this headline">#</a></h3>
 <p>Il est possible de tester <strong>plusieurs conditions</strong> dans une structure de contrôle et ainsi exécuter <strong>autant de blocs différents</strong> qu’il y a de <strong>conditions vraies</strong> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
     <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
-<span class="k">else</span> <span class="p">(</span><span class="n">une</span> <span class="n">autre</span> <span class="n">condition</span> <span class="n">est</span> <span class="n">vraie</span><span class="p">)</span> <span class="n">alors</span> <span class="p">:</span>
+<span class="k">elif</span> <span class="n">condition2</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
     <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
-<span class="k">else</span> <span class="p">(</span><span class="n">toutes</span> <span class="n">les</span> <span class="n">conditions</span> <span class="n">sont</span> <span class="n">fausses</span><span class="p">)</span> <span class="n">alors</span> <span class="p">:</span>
+<span class="k">else</span> <span class="p">:</span> <span class="c1"># (toutes les conditions sont fausses)</span>
     <span class="n">exécuter</span> <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
 </pre></div>
 </div>
