@@ -224,38 +224,33 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours5.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.html">
      C1-ALGO-05.00 : Algorithmes classiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours5.1.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.1.html">
      C1-ALGO-05.01 Algorithmes classiques (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours5.2.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.2.html">
      C1-ALGO-05.02 Algorithmes classiques (Tri)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours6.html">
-     C1-ALGO-06 : Algorithmes évolutionnistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours7.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-07.html">
      C1-ALGO-07 : Des algorigrammes à leur programmation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours8.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-08.html">
      C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours9.html">
-     C1-ALGO-09 : L’horologe de la gare de St-Gallen
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-09.html">
+     C1-ALGO-09 : L’horloge de la gare de St-Gallen
     </a>
    </li>
    <li class="toctree-l2">
@@ -573,6 +568,11 @@ const thebe_selector_output = ".output, .cell_output"
      TP2-PROG-09 : Les arbres
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">
+     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -692,6 +692,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
      TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-02.html">
+     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
     </a>
    </li>
   </ul>
@@ -1003,6 +1008,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
    Plusieurs conditions dans un test :
    <code class="docutils literal notranslate">
@@ -1025,7 +1035,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
+  <a class="reference internal nav-link" href="#id1">
    Exercice 3
   </a>
  </li>
@@ -1074,6 +1084,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
    Plusieurs conditions dans un test :
    <code class="docutils literal notranslate">
@@ -1096,7 +1111,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
+  <a class="reference internal nav-link" href="#id1">
    Exercice 3
   </a>
  </li>
@@ -1163,10 +1178,20 @@ title="Print to PDF"
 </section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
-<p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
+<p>Ecrire un programme qui :</p>
+<ol class="simple">
+<li><p>Affecte un mot de passe <code class="docutils literal notranslate"><span class="pre">123soleil</span></code> à une variable <code class="docutils literal notranslate"><span class="pre">mot</span></code></p></li>
+<li><p>demande à l’utilisateur un mot de passe (variable stockée dans <code class="docutils literal notranslate"><span class="pre">mdp</span></code>)</p></li>
+<li><p>vérifie si le mot de passe entré par l’utilisateur est correct.</p></li>
+<li><p>Affiche <code class="docutils literal notranslate"><span class="pre">mot</span> <span class="pre">de</span> <span class="pre">passe</span> <span class="pre">correct</span></code> ou <code class="docutils literal notranslate"><span class="pre">mot</span> <span class="pre">de</span> <span class="pre">passe</span> <span class="pre">incorrect</span></code></p></li>
+</ol>
 </section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
 <p>Ecrire un programme qui vérifie qu’un nombre est pair ET divisible par 5</p>
 </section>
 <section id="plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
@@ -1194,8 +1219,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h2>Exercice 3<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Ecrire un programme qui vérifie qu’un nombre est divisible par 3 et par 7 en utilisant deux conditions dans un seul test.</p>
 </section>
 <section id="exercice-4-la-piscine-tire-du-concours-castor-informatique">
