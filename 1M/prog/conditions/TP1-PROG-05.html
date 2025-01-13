@@ -1011,6 +1011,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercice-2-pair-ou-impair">
    Exercice 2 : pair ou impair ?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulo-reste-de-la-division-entiere">
+     Modulo : reste de la division entière
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-pair-et-divisible-par-5">
@@ -1097,6 +1104,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercice-2-pair-ou-impair">
    Exercice 2 : pair ou impair ?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulo-reste-de-la-division-entiere">
+     Modulo : reste de la division entière
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-pair-et-divisible-par-5">
@@ -1214,10 +1228,33 @@ title="Print to PDF"
 <section id="exercice-2-pair-ou-impair">
 <h2>Exercice 2 : pair ou impair ?<a class="headerlink" href="#exercice-2-pair-ou-impair" title="Permalink to this headline">#</a></h2>
 <p>Ecrire un programme qui vérifie qu’un nombre est pair (ou impair)</p>
+<section id="modulo-reste-de-la-division-entiere">
+<h3>Modulo : reste de la division entière<a class="headerlink" href="#modulo-reste-de-la-division-entiere" title="Permalink to this headline">#</a></h3>
+<p>Afin de vérifier qu’un nombre <code class="docutils literal notranslate"><span class="pre">nombre</span></code> est pair ou impair, il suffit d’utiliser l’opérateur mathématique <code class="docutils literal notranslate"><span class="pre">modulo</span></code>. Le modulo donne le reste de la division entière et en Python, il se note avec le signe <code class="docutils literal notranslate"><span class="pre">%</span></code>. Par exemple : <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">modulo</span> <span class="pre">2</span></code> vaut <code class="docutils literal notranslate"><span class="pre">1</span></code>puisque <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">x</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">6</span> <span class="pre">+</span> <span class="pre">1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">7</span><span class="o">%</span><span class="k">2</span>)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="exercice-3-pair-et-divisible-par-5">
 <h2>Exercice 3 pair et divisible par 5 ?<a class="headerlink" href="#exercice-3-pair-et-divisible-par-5" title="Permalink to this headline">#</a></h2>
-<p>Ecrire un programme qui vérifie qu’un nombre est pair ET divisible par 5</p>
+<p>Ecrire un programme qui vérifie qu’un nombre est pair ET divisible par 5.</p>
+<p>Ce programme fait appel à une structure en *tests imbriqués” : on vérifie d’abord que le nombre et pair, puis ensuite s’il est divisible par 5. Cela donne donc 4 possibilités :</p>
+<ul class="simple">
+<li><p>pair et divisible par 5 (par exemple 10)</p></li>
+<li><p>pair et non divisible par 5 (par exemple 8)</p></li>
+<li><p>impair et divisible par 5 (par exemple 15)</p></li>
+<li><p>impair et non divisible par 5 (par exemple 17)</p></li>
+</ul>
 </section>
 <section id="plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or">
 <h2>Plusieurs conditions dans un test : <code class="docutils literal notranslate"><span class="pre">elif</span></code> et opérateurs logiques <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#plusieurs-conditions-dans-un-test-elif-et-operateurs-logiques-and-or" title="Permalink to this headline">#</a></h2>
@@ -1313,7 +1350,7 @@ Jouons ? C&#39;est parti...
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 15&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 15&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">reponse</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">while</span> <span class="n">reponse</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisissez votre question: </span><span class="se">\n</span><span class="s2"> 1: informatique </span><span class="se">\n</span><span class="s2"> 2: philo </span><span class="se">\n</span><span class="s2"> Votre réponse (&#39;q&#39; pour quitter):&quot;</span><span class="p">)</span>
