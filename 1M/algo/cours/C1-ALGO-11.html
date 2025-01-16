@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Cours7.html">
+    <a class="reference internal" href="C1-ALGO-07.html">
      C1-ALGO-07 : Des algorigrammes à leur programmation
     </a>
    </li>
@@ -1058,6 +1058,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-imbriques">
+     Tests imbriqués
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tests-multiples-if-elif-else">
      Tests multiples
      <code class="docutils literal notranslate">
@@ -1077,11 +1082,6 @@ title="Print to PDF"
        else
       </span>
      </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tests-imbriques">
-     Tests imbriqués
     </a>
    </li>
   </ul>
@@ -1206,6 +1206,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests-imbriques">
+     Tests imbriqués
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tests-multiples-if-elif-else">
      Tests multiples
      <code class="docutils literal notranslate">
@@ -1225,11 +1230,6 @@ title="Print to PDF"
        else
       </span>
      </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tests-imbriques">
-     Tests imbriqués
     </a>
    </li>
   </ul>
@@ -1348,18 +1348,6 @@ title="Print to PDF"
 </section>
 <section id="structures-de-controle-conditionnelles-avancees">
 <h2>Structures de contrôle conditionnelles avancées<a class="headerlink" href="#structures-de-controle-conditionnelles-avancees" title="Permalink to this headline">#</a></h2>
-<section id="tests-multiples-if-elif-else">
-<h3>Tests multiples <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span> <span class="pre">....</span> <span class="pre">else</span></code><a class="headerlink" href="#tests-multiples-if-elif-else" title="Permalink to this headline">#</a></h3>
-<p>Il est possible de tester <strong>plusieurs conditions</strong> dans une structure de contrôle et ainsi exécuter <strong>autant de blocs différents</strong> qu’il y a de <strong>conditions vraies</strong> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
-    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
-<span class="k">elif</span> <span class="n">condition2</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
-    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
-<span class="k">else</span> <span class="p">:</span> <span class="c1"># (toutes les conditions sont fausses)</span>
-    <span class="n">exécuter</span> <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
-</pre></div>
-</div>
-</section>
 <section id="tests-imbriques">
 <h3>Tests imbriqués<a class="headerlink" href="#tests-imbriques" title="Permalink to this headline">#</a></h3>
 <p>Lorsqu’une condition est vérifiée, alors il est possible de tester une autre condition dans le bloc d’instructions:</p>
@@ -1373,6 +1361,18 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>En <strong>Python</strong> : attention à <strong>l’indentation</strong> des instructions</p>
+</section>
+<section id="tests-multiples-if-elif-else">
+<h3>Tests multiples <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span> <span class="pre">....</span> <span class="pre">else</span></code><a class="headerlink" href="#tests-multiples-if-elif-else" title="Permalink to this headline">#</a></h3>
+<p>Il est possible de tester <strong>plusieurs conditions</strong> dans une structure de contrôle et ainsi exécuter <strong>autant de blocs différents</strong> qu’il y a de <strong>conditions vraies</strong> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">bloc</span>
+<span class="k">elif</span> <span class="n">condition2</span> <span class="n">est</span> <span class="n">vraie</span> <span class="p">:</span>
+    <span class="n">exécuter</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
+<span class="k">else</span> <span class="p">:</span> <span class="c1"># (toutes les conditions sont fausses)</span>
+    <span class="n">exécuter</span> <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="comparaison-des-valeurs-dans-la-condition">
