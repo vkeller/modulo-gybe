@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Architecture et réseaux" href="../architecture/index.html" />
@@ -1060,8 +1062,50 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#couches-applicatives">
-   Couches applicatives
+  <a class="reference internal nav-link" href="#la-couche-applicative">
+   La couche applicative
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#avant-les-langages-de-programmation">
+   Avant les langages de programmation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manchester-baby">
+     Manchester Baby
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eniac">
+     ENIAC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-langages-de-programmation">
+   Les langages de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmes-sur-cartes-perforees">
+   Programmes sur cartes perforées
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-premiers-programmes-vendus">
+   Les premiers programmes vendus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-a-sources-ouvertes-oss">
+   Les programmes à sources ouvertes (OSS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-proprietaires">
+   Les programmes propriétaires
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1070,16 +1114,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#langages-de-programmation">
-   Langages de programmation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logiciels">
-   Logiciels
-  </a>
  </li>
 </ul>
 
@@ -1163,8 +1197,50 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#couches-applicatives">
-   Couches applicatives
+  <a class="reference internal nav-link" href="#la-couche-applicative">
+   La couche applicative
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#avant-les-langages-de-programmation">
+   Avant les langages de programmation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manchester-baby">
+     Manchester Baby
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eniac">
+     ENIAC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-langages-de-programmation">
+   Les langages de programmation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmes-sur-cartes-perforees">
+   Programmes sur cartes perforées
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-premiers-programmes-vendus">
+   Les premiers programmes vendus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-a-sources-ouvertes-oss">
+   Les programmes à sources ouvertes (OSS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-programmes-proprietaires">
+   Les programmes propriétaires
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1173,16 +1249,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#langages-de-programmation">
-   Langages de programmation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logiciels">
-   Logiciels
-  </a>
  </li>
 </ul>
 
@@ -1249,7 +1315,7 @@ title="Print to PDF"
 <ol class="simple">
 <li><p><strong>multi-threading</strong></p></li>
 </ol>
-<p>Deux chercheurs de l’entreprise américaine <a class="reference external" href="https://fr.wikipedia.org/wiki/Laboratoires_Bell">Bell Laboratories</a>, <strong>Ken Thompson</strong> et <strong>Dennis Ritchie</strong> développent donc UNIX.</p>
+<p>Deux chercheurs de l’entreprise américaine <a class="reference external" href="https://fr.wikipedia.org/wiki/Laboratoires_Bell">Bell Laboratories</a>, <strong>Ken Thompson</strong> et <strong>Dennis Ritchie</strong> développent UNIX.</p>
 <p><img alt="UNIX" src="../../_images/UNIX.png" /></p>
 </section>
 <section id="annees-1980-ordinateurs-personnels">
@@ -1295,16 +1361,31 @@ title="Print to PDF"
 <p>Le <a class="reference external" href="https://gs.statcounter.com/os-market-share">site statcounter.com</a> donne une statistique mondiale mise à jour</p>
 </section>
 </section>
-<section id="couches-applicatives">
-<h2>Couches applicatives<a class="headerlink" href="#couches-applicatives" title="Permalink to this headline">#</a></h2>
-<section id="exemple-d-une-pile-technologique-un-serveur-web-sous-linux">
-<h3>Exemple d’une pile technologique : un serveur Web sous Linux<a class="headerlink" href="#exemple-d-une-pile-technologique-un-serveur-web-sous-linux" title="Permalink to this headline">#</a></h3>
-<p><img alt="linux web app" src="../../_images/Linux_app_stack_wikipedia.png" /></p>
+<section id="la-couche-applicative">
+<h2>La couche applicative<a class="headerlink" href="#la-couche-applicative" title="Permalink to this headline">#</a></h2>
+<p>Au-dessus du système d’exploitation se trouve la (ou les) couche applicative. Dans le cadre de ce cours, nous nous concentrerons sur l’application elle-même.</p>
+</section>
+<section id="avant-les-langages-de-programmation">
+<h2>Avant les langages de programmation<a class="headerlink" href="#avant-les-langages-de-programmation" title="Permalink to this headline">#</a></h2>
+<p>Avant les langages de programmation, les programmes étaient mis en oeuvre dans les ordinateurs par câblage sur la console. Aucun des premiers systèmes n’était capable de programmer de façon <em>générique</em>.</p>
+<p>Il est difficile de dire quel a été le premier programme de tous les temps comme il est difficile de dire quel est le premier ordinateur. Plusieurs équipes dans le monde ont travaillé en parallèle pour résoudre des problèmes différents.</p>
+<section id="manchester-baby">
+<h3>Manchester Baby<a class="headerlink" href="#manchester-baby" title="Permalink to this headline">#</a></h3>
+<p>Le premier programme historiquement (en terme de date) a été écrit sur le <a class="reference external" href="https://en.wikipedia.org/wiki/Manchester_Baby">Manchester baby</a> en 1948, un ordinateur expérimental qui possédait un processeur à 7 instructions.</p>
+<p>Le programme faisait 17 lignes :</p>
+<p><img alt="man-baby-prog" src="../../_images/manchester-baby-program.jpg" /></p>
+<p>dont l’algorigramme est le suivant :</p>
+<p><img alt="man-baby-algo" src="../../_images/manchester-baby-program-algorigramme.png" /></p>
+<p>Ce programme ne servait à pas grand chose. Il lui a fallu 52 minutes pour calculer la plus grande valeur de <span class="math notranslate nohighlight">\(2^18\)</span>, <a class="reference external" href="https://computerhistory.org/blog/programming-the-eniac-an-example-of-why-computer-history-is-hard/">un résultat connu de tous</a>.</p>
+</section>
+<section id="eniac">
+<h3>ENIAC<a class="headerlink" href="#eniac" title="Permalink to this headline">#</a></h3>
+<p>Quelques mois après le premier programme sur le Manchester Baby, les programmeuses (et programmeurs) de l’ENIAC on réussi à écrire un programme sur l’ENIAC. Ce programme a permis d’obtenir un résultat jusque là inconnu : une simultation de désintégration de neutrons lors d’une fission nucléaire.</p>
 </section>
 </section>
-<section id="langages-de-programmation">
-<h2>Langages de programmation<a class="headerlink" href="#langages-de-programmation" title="Permalink to this headline">#</a></h2>
-<p>Du <strong>système d’exploitation</strong> aux <strong>logiciels</strong> en passant par les diverses <strong>bibliothèques de fonctions</strong> (<strong>modules</strong> sous Python) sont écrits à l’aide d’un langage de programmation.</p>
+<section id="les-langages-de-programmation">
+<h2>Les langages de programmation<a class="headerlink" href="#les-langages-de-programmation" title="Permalink to this headline">#</a></h2>
+<p>Dès l’apparition des premiers <strong>système d’exploitation</strong> aux premiers <strong>logiciels</strong> en passant par les diverses <strong>bibliothèques de fonctions</strong> (<strong>modules</strong> sous Python) il y a un (ou des) langage de programmation.</p>
 <p>Quelques dates et langages :</p>
 <ul class="simple">
 <li><p>Avant 1950 : aucun langage (à l’exception de <a class="reference external" href="https://en.wikipedia.org/wiki/Short_Code_(computer_language)">short code</a>, un langage plus évolué que le langage machine en 1949)</p></li>
@@ -1318,8 +1399,34 @@ title="Print to PDF"
 <li><p>1995 : <strong>PHP</strong> qui est le principal langage de programmation pour les sites internet</p></li>
 </ul>
 </section>
-<section id="logiciels">
-<h2>Logiciels<a class="headerlink" href="#logiciels" title="Permalink to this headline">#</a></h2>
+<section id="programmes-sur-cartes-perforees">
+<h2>Programmes sur cartes perforées<a class="headerlink" href="#programmes-sur-cartes-perforees" title="Permalink to this headline">#</a></h2>
+<p>Le langage de programmation permet d’écrire un programme complet et de le charger dans l’ordinateur qui se chargera de transformer les instructions du langages en instructions machines (bits) compréhensibles par les composants électroniques de l’ordinateur.</p>
+<p>Pour le passage du programme écrit dans un langage de programmation vers l’ordinateur, on a tout d’abord utilisé des <strong>cartes perforées</strong> à l’image du métier Jaccard.</p>
+<p><img alt="punched-card" src="../../_images/punched-card.jpg" /></p>
+<p>Le principe est extrêmement simple : chaque ligne du programme est écrite par une opératrice ou un opérateur sur une machine appelée <strong>perforatrice</strong> qui traduit l’instruction du langage en <em>trous</em> dans la carte. La position du trou correspond à un bit à 1.</p>
+<p><img alt="perforatrice" src="../../_images/IBM_029.jpg" /></p>
+<p>Un programme complet était donc un paquet de cartes appelé <strong>batch</strong></p>
+<p><img alt="batch" src="../../_images/batch-punched-cards.jpg" /></p>
+<p>La carte était ensuite lue par un appareil connecté à l’ordinateur afin de stocker le programme dans la mémoire. Le système de cartes perforées est resté en fonction jusque dans les années 1980 lorsque des systèmes de stockage plus performants (cassettes, disquettes et disques durs) sont arrivés sur le marché</p>
+</section>
+<section id="les-premiers-programmes-vendus">
+<h2>Les premiers programmes vendus<a class="headerlink" href="#les-premiers-programmes-vendus" title="Permalink to this headline">#</a></h2>
+<p>Les années 1970 voient l’arrivée des <strong>micro-ordinateurs</strong> (à l’opposé des <strong>mainframes</strong> gigantesques) que le grand public a pu acquérir pour plusieurs dizaines de milliers de dollars. Ils n’étaient pas dotés de lecteurs de cartes perforées mais de lecteurs de cassettes pour le stockage de masse.</p>
+<p>Parmis les premiers programmes vendus, on peut citer <a class="reference external" href="https://benlo.com/microchess/index.html">Microchess</a>, développé par Peter Jennings en 1976. Le programme était envoyé sous la forme du <strong>code source</strong> que l’acheteur devait intégralement réécrire.</p>
+<p>C’est aussi à cette époque que les premières grandes entreprises de développement logiciel sont apparues. Notamment <a class="reference external" href="https://www.microsoft.com">Microsoft</a></p>
+</section>
+<section id="les-programmes-a-sources-ouvertes-oss">
+<h2>Les programmes à sources ouvertes (OSS)<a class="headerlink" href="#les-programmes-a-sources-ouvertes-oss" title="Permalink to this headline">#</a></h2>
+<p>Les premiers programmes vendus étaient donc en sources ouvertes.</p>
+</section>
+<section id="les-programmes-proprietaires">
+<h2>Les programmes propriétaires<a class="headerlink" href="#les-programmes-proprietaires" title="Permalink to this headline">#</a></h2>
+<p>Paul Allen et Bill Gates, fondateur de Microsoft est parmi les premiers à s’inquiéter du modèle trop ouvert et non adapté - selon eux - à une exploitation commerciale.</p>
+<section id="exemple-d-une-pile-technologique-un-serveur-web-sous-linux">
+<h3>Exemple d’une pile technologique : un serveur Web sous Linux<a class="headerlink" href="#exemple-d-une-pile-technologique-un-serveur-web-sous-linux" title="Permalink to this headline">#</a></h3>
+<p><img alt="linux web app" src="../../_images/Linux_app_stack_wikipedia.png" /></p>
+</section>
 </section>
 </section>
 
