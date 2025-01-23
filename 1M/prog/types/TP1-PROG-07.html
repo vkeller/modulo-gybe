@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP1-PROG-07 - Notions de types &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-PROG-07 - Notions de types de variable &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -343,7 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP1-PROG-07 - Notions de types
+     TP1-PROG-07 - Notions de types de variable
     </a>
    </li>
    <li class="toctree-l2">
@@ -998,23 +998,40 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communiquer-avec-l-ordinateur">
-   Communiquer avec l’ordinateur
+  <a class="reference internal nav-link" href="#variable-definition">
+   Variable : définition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nom-d-une-variable">
+     Nom d’une variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-valeur-et-le-type-d-une-variable">
+     La valeur et le type d’une variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-adresse-d-une-variable">
+     L’adresse d’une variable
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#casting">
+   Casting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#passer-d-un-type-a-l-autre-le-casting">
-   Passer d’un type à l’autre : le casting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1033,13 +1050,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5b-calculette">
-   Exercice 5b : calculette
+  <a class="reference internal nav-link" href="#exercice-5-calculette">
+   Exercice 5 : calculette
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1066,7 +1078,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-PROG-07 - Notions de types</h1>
+                <h1>TP1-PROG-07 - Notions de types de variable</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1077,23 +1089,40 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communiquer-avec-l-ordinateur">
-   Communiquer avec l’ordinateur
+  <a class="reference internal nav-link" href="#variable-definition">
+   Variable : définition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nom-d-une-variable">
+     Nom d’une variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-valeur-et-le-type-d-une-variable">
+     La valeur et le type d’une variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-adresse-d-une-variable">
+     L’adresse d’une variable
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#casting">
+   Casting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#passer-d-un-type-a-l-autre-le-casting">
-   Passer d’un type à l’autre : le casting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1112,13 +1141,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5b-calculette">
-   Exercice 5b : calculette
+  <a class="reference internal nav-link" href="#exercice-5-calculette">
+   Exercice 5 : calculette
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1147,52 +1171,79 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="datatypes" src="../../../_images/datatypes.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-07-notions-de-types">
-<h1>TP1-PROG-07 - Notions de types<a class="headerlink" href="#tp1-prog-07-notions-de-types" title="Permalink to this headline">#</a></h1>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Jusqu’à présent, nous avons écrit des programmes que l’on exécutait. Pour modifier la valeur d’une variable, nous la changions dans le programme, et nous exécutions à nouveau le programme.
-Exemple 1</p>
-<p>Concaténer de la variable a qui vaut “Bonjour” par la variable b qui vaut ” Caroline” et affichage du résultat dans la variable c:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; Caroline&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Pour modifier ce programme avec b = ” Jean”, il fallait modifier le programme :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; Jean&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Ce n’est pas très interactif !</p>
-<p>Mais l’ordinateur sait nous parler avec la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-07-notions-de-types-de-variable">
+<h1>TP1-PROG-07 - Notions de types de variable<a class="headerlink" href="#tp1-prog-07-notions-de-types-de-variable" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>comprendre la mise en oeuvre d’une variable dans le langage de programmation Python</p></li>
+<li><p>connaître les 4 principales caractéristiques d’une variable</p></li>
+<li><p>connaître les types primitifs de variables et savoir utiliser le casting</p></li>
+<li><p>connaître la structure de donnée <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p>implémenter quelques exercices mettant en oeuvre les concepts de types, de nom et de valeur des variables</p></li>
+</ul>
 </section>
-<section id="communiquer-avec-l-ordinateur">
-<h2>Communiquer avec l’ordinateur<a class="headerlink" href="#communiquer-avec-l-ordinateur" title="Permalink to this headline">#</a></h2>
-<p>Pour communiquer avec l’ordinateur, on utilise la fonction input() . Cette fonction place la valeur entrée par l’utilisateur du programme (vous !) dans une variable de type chaîne de caractères:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<section id="variable-definition">
+<h2>Variable : définition<a class="headerlink" href="#variable-definition" title="Permalink to this headline">#</a></h2>
+<p>Une <strong>variable</strong>, dans un langage impératif tel que Python est un <strong>espace mémoire élémentaire</strong> qui possède les quatre caractéristiques principales suivantes :</p>
+<ol class="simple">
+<li><p>son <strong>nom</strong> : comment je l’identifie dans le programme</p></li>
+<li><p>sa <strong>valeur</strong> : ce qu’elle vaut au moment où je la lis dans le programme</p></li>
+<li><p>son <strong>type</strong> : quelle est la représentation de sa valeur</p></li>
+<li><p>son <strong>adresse</strong> : où est-elle stockée dans la mémoire</p></li>
+</ol>
+<p>On pourrait faire l’analogie avec un paquet postal : il a un nom : <strong>paquet postal</strong>, il a une valeur : <strong>son contenu</strong>, il a un type : <strong>la nature de son contenu</strong> et il a une adresse : son <strong>destinataire</strong>.</p>
+<p><img alt="variable" src="../../../_images/variable.png" /></p>
+<section id="nom-d-une-variable">
+<h3>Nom d’une variable<a class="headerlink" href="#nom-d-une-variable" title="Permalink to this headline">#</a></h3>
+<p>Le nom de la variable est choisi par la programmeuse ou le programmeur. Il n’y a que très peu de règles qui permettent d’en choisir un. En Python, les <strong>règles et conventions de nommage</strong> (simplifiées) sont les suivantes :</p>
+<ul class="simple">
+<li><p>le nom doit commencer par une lettre (majuscule ou minuscule)</p></li>
+<li><p>il ne doit pas y avoir le signe tiret <code class="docutils literal notranslate"><span class="pre">-</span></code>, d’espace dans le nom</p></li>
+<li><p>le nom ne doit pas être un mot-clef du langage (comme <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">import</span></code> par exemple)</p></li>
+<li><p>le nom ne devrait pas contenir de lettres accentuées</p></li>
+</ul>
+<p>Dans le monde professionnel, lorsque plusieurs personnes travaillent sur le même code, il est d’usage de préciser les règles et conventions de nommage dans un document concomitant au projet : les <strong>Coding rules</strong></p>
+</section>
+<section id="la-valeur-et-le-type-d-une-variable">
+<h3>La valeur et le type d’une variable<a class="headerlink" href="#la-valeur-et-le-type-d-une-variable" title="Permalink to this headline">#</a></h3>
+<p>La valeur de la variable est son contenu. Cette valeur est liée au type de cette valeur. Il existe 5 types primitifs en Python :</p>
+<ol class="simple">
+<li><p>les chaînes de caractères : <strong>str</strong> (pour <em>string</em>)</p></li>
+<li><p>les entiers : <strong>int</strong> (pour <em>integer</em>)</p></li>
+<li><p>les booléens : <strong>bool</strong> (pour <em>boolean</em>)</p></li>
+<li><p>les nombres en virgule flottante : <strong>float</strong> (pour <strong>floating point</strong>)</p></li>
+<li><p>les nombres complexes <strong>complex</strong> (pour <strong>complex number</strong>)</p></li>
+</ol>
+<p>Ainsi la valeur de la variable doit être représentée par son type. La variable <code class="docutils literal notranslate"><span class="pre">a</span></code> et la variable <code class="docutils literal notranslate"><span class="pre">b</span></code> suivantes ne sont pas du même type :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;1234&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1234</span>
 </pre></div>
 </div>
-<p>Déjà plus interactif ! Mais pas très causant. On peut donc placer un texte avant :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre prénom &quot;</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">a</span></code> représente la chaîne de caractères (str) <code class="docutils literal notranslate"><span class="pre">&quot;1234&quot;</span></code> alors que la variable <code class="docutils literal notranslate"><span class="pre">b</span></code> représente l’entier <code class="docutils literal notranslate"><span class="pre">1234</span></code> (mille deux cent trente quatre).</p>
+</section>
+<section id="l-adresse-d-une-variable">
+<h3>L’adresse d’une variable<a class="headerlink" href="#l-adresse-d-une-variable" title="Permalink to this headline">#</a></h3>
+<p>L’adresse d’une variable représente sa localisation physique dans la <strong>mémoire vive de l’ordinateur</strong>. Cette adresse (aussi nommée <strong>adresse mémoire</strong> est une valeur représentée par un nombre hexadécimal et correspond à une “case” dans la mémoire de l’ordinateur. Lorsqu’on affecte ou que l’on modifie (lecture ou écriture) la valeur d’une variable, la valeur est effectivement écrite à cette position mémoire.</p>
+<p>A noter que si l’on exécute plusieurs fois le même programme, une même variable ne sera pas écrite forcément à la même position mémoire. Ceci est dû aux divers programmes et logiciels qui partagent le temps de calcul du processeur.</p>
+</section>
+</section>
+<section id="casting">
+<h2>Casting<a class="headerlink" href="#casting" title="Permalink to this headline">#</a></h2>
+<p>Il est tout à fait possible de modifier le type d’une variable au cours d’un programme. C’est le <strong>casting</strong>. Le casting doit cependant respecter quelques règles notamment lorsqu’on passe d’une chaîne de caractères à un entier (ou un flottant) : la chaîne de caractères doit être formée uniquement de chiffres (et d’un point dans le cas d’un flottant).</p>
+<p>Trois fonctions de casting existent en Python :</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int()</span></code> : construit un entier avec une chaîne de caractères ou un flottant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float()</span></code>: construit un flottant avec une chaîne de caractères ou un entier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code> : construit une chaîne de caractère à partir de n’importe quel type</p></li>
+</ol>
+<p>Par exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># x vaut 1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">2.8</span><span class="p">)</span> <span class="c1"># y vaut 2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span> <span class="c1"># z vaut 3</span>
 </pre></div>
 </div>
-<p>Ici on travaille avec des variable de type chaînes de caractères (des STRINGS) comme “Bonjour” entre guillemets.</p>
-<p>Il est possible de simplifier le programme puisque la variable c ne sert à rien :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Bonjour&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre prénom &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
+<p><strong>Rappel</strong> : le type de retour de la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> est une chaîne de caractères, il est obligatoire de la caster si l’on veut l’utiliser comme un entier ou un flottant.</p>
 </section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
@@ -1202,30 +1253,11 @@ Exemple 1</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dans un an, vous aurez &quot;</span><span class="p">,</span><span class="n">compte365</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="passer-d-un-type-a-l-autre-le-casting">
-<h2>Passer d’un type à l’autre : le casting<a class="headerlink" href="#passer-d-un-type-a-l-autre-le-casting" title="Permalink to this headline">#</a></h2>
-<p>Python interdit de manipuler des données de type différentes.
-Passer d’un type à l’autre : Casting</p>
-<p>Il est possible de manipuler des données d’un type vers un autre. C’est le casting :</p>
-<ul class="simple">
-<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">str()</span></code> transforme n’importe quelle variable en type chaîne de caractères (string)</p></li>
-<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> transforme n’importe quelle variable en type entier (int)</p></li>
-<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">float()</span></code> transforme n’importe quelle variable en type à virgule flottante (float)</p></li>
-</ul>
+<p>Modifiez le programme pour qu’il fonctionne</p>
 </section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>Transformer le type du compte pour que le programme fonctionne :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">compte</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Valeur de votre compte en banque (en CHF) &quot;</span><span class="p">)</span>
-<span class="n">compte365</span> <span class="o">=</span> <span class="n">compte</span> <span class="o">+</span> <span class="p">(</span><span class="n">compte</span> <span class="o">*</span><span class="mf">0.02</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dans un an, vous aurez &quot;</span><span class="p">,</span><span class="n">compte365</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
-<p>Quel est le type de :</p>
+<p>Quel est le type de chacune des variables suivantes :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">1.234</span>
 <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1237,16 +1269,16 @@ Passer d’un type à l’autre : Casting</p>
 </div>
 <p>Pour déterminer les types de ces variables, vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">type()</span></code> our alors l’inspecteur d’objets et le listeur de variables sous Thonny (<code class="docutils literal notranslate"><span class="pre">Affichage</span> <span class="pre">-&gt;</span> <span class="pre">Variables</span></code> et <code class="docutils literal notranslate"><span class="pre">Affichage</span> <span class="pre">&gt;</span> <span class="pre">Inspecteur</span> <span class="pre">d'objets</span></code>sélectionnés)</p>
 </section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
 <p>Programmez une calculette qui multiplie deux nombres entrés par l’utilisateur avec la fonction input()</p>
 </section>
-<section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
 <p>Est-ce que votre calculette fonctionne avec des chiffres à virgule (float) ? Que faut-il modifier au programme pour qu’il accepte les nombres à virgule ?</p>
 </section>
-<section id="exercice-5b-calculette">
-<h2>Exercice 5b : calculette<a class="headerlink" href="#exercice-5b-calculette" title="Permalink to this headline">#</a></h2>
+<section id="exercice-5-calculette">
+<h2>Exercice 5 : calculette<a class="headerlink" href="#exercice-5-calculette" title="Permalink to this headline">#</a></h2>
 <p>Codez maintenant une calculatrice capable d’exécuter les 4 opérations de base (addition, soustraction, multiplication, division). Attention aux valeurs “interdites” (par exemple : une division par 0).</p>
 <p>Voici un algorigramme simplifié :</p>
 <p><img alt="calculette" src="../../../_images/calculatrice.png" /></p>
