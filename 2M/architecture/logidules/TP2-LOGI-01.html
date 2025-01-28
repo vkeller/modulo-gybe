@@ -1013,6 +1013,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#petit-detour-avec-les-micro-bits">
+   Petit détour avec les micro:bits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-aux-logidules">
    Introduction aux logidules
   </a>
@@ -1044,6 +1049,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bref-historique">
    Bref historique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#petit-detour-avec-les-micro-bits">
+   Petit détour avec les micro:bits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1081,6 +1091,20 @@ title="Print to PDF"
 <li><p>l’ordinateur SMAKY</p></li>
 <li><p>l’outil pédagogique LOGIDULES</p></li>
 </ol>
+</section>
+<section id="petit-detour-avec-les-micro-bits">
+<h2>Petit détour avec les micro:bits<a class="headerlink" href="#petit-detour-avec-les-micro-bits" title="Permalink to this headline">#</a></h2>
+<p>A l’aide d’une platine de tests (breadboard), on peut commander quelques composants électroniques simples à l’aide du micro:bit. Par exemple, faire clignoter une LED :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span> 
+    <span class="n">pin0</span><span class="o">.</span><span class="n">write_digital</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># turn pin0 (and the LED) on</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>             <span class="c1"># delay for half a second (500 milliseconds)</span>
+    <span class="n">pin0</span><span class="o">.</span><span class="n">write_digital</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># turn pin0 (and the LED) off</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>             <span class="c1"># delay for half a second</span>
+</pre></div>
+</div>
+<p>Source : <a class="reference external" href="https://learn.adafruit.com/micro-bit-lesson-2-controlling-leds-on-breadboard/blinking-an-led">adafruit</a></p>
 </section>
 <section id="introduction-aux-logidules">
 <h2>Introduction aux logidules<a class="headerlink" href="#introduction-aux-logidules" title="Permalink to this headline">#</a></h2>
