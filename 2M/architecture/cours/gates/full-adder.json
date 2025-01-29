@@ -1,0 +1,16 @@
+{ // JSON5
+  v: 6,
+  components: {
+    xor0: {type: 'xor', pos: [400, 145], in: [0, 1], out: 2},
+    in0: {type: 'in', pos: [165, 135], id: 3, name: 'A', val: 1},
+    in1: {type: 'in', pos: [165, 210], id: 4, name: 'B', val: 1},
+    and0: {type: 'and', pos: [405, 295], in: [5, 6], out: 7},
+    out0: {type: 'out', pos: [945, 280], id: 8, name: 'S'},
+    out1: {type: 'out', pos: [990, 515], id: 9, name: 'R'},
+    in2: {type: 'in', pos: [160, 490], id: 10, name: 'C', val: 1},
+    xor1: {type: 'xor', pos: [560, 445], in: [11, 12], out: 13},
+    and1: {type: 'and', pos: [550, 530], in: [14, 15], out: 16},
+    or0: {type: 'or', pos: [775, 510], in: [17, 18], out: 19},
+  },
+  wires: [[3, 0], [3, 5], [4, 1], [4, 6], [19, 9], [10, 12], [2, 11], [2, 14], [10, 15], [7, 17], [13, 8], [16, 18]]
+}
