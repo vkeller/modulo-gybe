@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="C2-RESO-01 : Introduction aux réseaux informatiques" href="../reseau/C2-RESO-01.html" />
@@ -1013,6 +1015,66 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte-historique">
+   Contexte historique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-draft-of-a-report-on-the-edvac">
+   <em>
+    First Draft of a Report on the EDVAC
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-ca-unite-de-calcul-arithmetique-et-logique">
+   La
+   <em>
+    CA
+   </em>
+   : unité de calcul arithmétique et logique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-cc-unite-de-controle">
+   Le
+   <em>
+    CC
+   </em>
+   : unité de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-m-la-memoire">
+   La
+   <em>
+    M
+   </em>
+   : la mémoire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
+   Les unités d’entrées et de sorties
+   <em>
+    I
+   </em>
+   et
+   <em>
+    O
+   </em>
+   : le système
+   <em>
+    R
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    Références
   </a>
@@ -1047,6 +1109,66 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contexte-historique">
+   Contexte historique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-draft-of-a-report-on-the-edvac">
+   <em>
+    First Draft of a Report on the EDVAC
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-ca-unite-de-calcul-arithmetique-et-logique">
+   La
+   <em>
+    CA
+   </em>
+   : unité de calcul arithmétique et logique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-cc-unite-de-controle">
+   Le
+   <em>
+    CC
+   </em>
+   : unité de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-m-la-memoire">
+   La
+   <em>
+    M
+   </em>
+   : la mémoire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
+   Les unités d’entrées et de sorties
+   <em>
+    I
+   </em>
+   et
+   <em>
+    O
+   </em>
+   : le système
+   <em>
+    R
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    Références
   </a>
@@ -1068,6 +1190,8 @@ title="Print to PDF"
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Connaître les composants de l’architecture de Von Neumann</p></li>
+<li><p>savoir dessiner l’architecture de Von Neumann</p></li>
+<li><p>connaître les limites de ce type d’architecture</p></li>
 </ul>
 </section>
 <section id="john-von-neumann">
@@ -1075,16 +1199,76 @@ title="Print to PDF"
 <p>John Von Neumann est né en 1903 à Budapest et est mort en 1957. C’est un mathématicien, physicien et logicien qui a apporté une pierre importante à l’édifice de l’informatique, notamment.</p>
 <p><img alt="vonneum" src="../../../_images/johnvonneumann.jpg" /></p>
 <p>Ses principales contributions à l’informatique sont les suivantes :</p>
-<p>Introduction</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>L&#39;architecture de Von Neumann, également connue sous le nom de modèle de Von Neumann, est un modèle conceptuel pour la conception d&#39;ordinateurs qui intègre le concept du programme enregistré, où les données et les instructions sont stockées dans la même mémoire.
-John von Neumann, un mathématicien et physicien renommé d&#39;origine hongroise, a grandement influencé le développement de cette architecture par ses contributions à la théorie des automates et à la construction de calculateurs.
-</pre></div>
-</div>
-<p>Fondements de l’architecture de Von Neumann</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Les composants principaux de l&#39;architecture de Von Neumann comprennent l&#39;unité de traitement, responsable de l&#39;exécution des opérations arithmétiques et logiques, l&#39;unité de contrôle, qui gère l&#39;ordre d&#39;exécution des opérations, la mémoire, qui stocke à la fois les données et les instructions, et les entrées/sorties, qui permettent la communication avec l&#39;extérieur.
-Le concept du programme enregistré permet d&#39;exécuter des instructions stockées en mémoire, ce qui permet une grande flexibilité dans l&#39;exécution des tâches par un ordinateur.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>Architecture d’un ordinateur moderne (dite <em>architecture de Von Neumann</em>)</p></li>
+<li><p>Automates cellulaires (algorithmique) qui peuvent être décrits comme un modèle de calcul.</p></li>
+<li><p>Concept dit <em>de la singularitué technologique</em> ou simplement <em>La Singularité</em> qui pose l’hypothèse que l’invention de l’intelligence artificielle déclanchera une croissance technologique sans précédent.</p></li>
+</ul>
+</section>
+<section id="contexte-historique">
+<h2>Contexte historique<a class="headerlink" href="#contexte-historique" title="Permalink to this headline">#</a></h2>
+<p>A la fin de la guerre, le premier ordinateur électronique, programmable et générique (<em>Harvard Mark 1</em> développé à l’université de Harvard avec IBM) fonctionnait en séparant physiquement</p>
+<ol class="simple">
+<li><p>les <strong>instructions</strong> du programme</p></li>
+<li><p>les <strong>données</strong> du programme</p></li>
+</ol>
+<p>On dit que les deux éléments (l’<strong>unité de calcul</strong> et la <strong>mémoire</strong>) possèdent des connections (des <strong>bus</strong> séparés). Cette architecture est communément appelée *<em>architecture Harvard</em>.</p>
+<p><img alt="harvard" src="../../../_images/harvard.png" /></p>
+<p>L’architecture de Harvard est toujours utilisée aujourd’hui dans certains types de processeurs spécialisés (processeurs de traitement du signal, certains micro-contrôleurs) mais plus du tout dans les processeurs des ordinateurs modernes.</p>
+<p>John Von Neumann a travaillé sur le Harvard Mark 1 : c’est même lui qui a écrit et exécuté l’un des premiers programmes sur cet ordinateur.</p>
+<p>Parallèlement au Harvard Mark 1, John Von Neumann travaillait à la <a class="reference external" href="https://www.seas.upenn.edu/">Moore School of Electrical Engineering de l’Université de Pennsylvanie</a> là où était installé l’ordinateur militaire <a class="reference external" href="https://www.universalis.fr/encyclopedie/e-n-i-a-c/">ENIAC</a> et son successeur <a class="reference external" href="https://en.wikipedia.org/wiki/EDVAC">EDVAC</a>. C’est dans ce contexte qu’il y développé une <strong>nouvelle architecture</strong> dans un rapport resté célèbre <em>First Draft of a Report on the EDVAC</em> <span id="id1">[<a class="reference internal" href="../../../biblio.html#id5" title="John von Neumann. First draft of a report on the edvac. Technical Report, Moore School of Electrical Engineering - University of Pennsylvania, 1945.">Neumann, 1945</a>]</span> . C’est de ce modèle conceptuel que sont décliné tous les processeurs génériques modernes.</p>
+</section>
+<section id="first-draft-of-a-report-on-the-edvac">
+<h2><em>First Draft of a Report on the EDVAC</em><a class="headerlink" href="#first-draft-of-a-report-on-the-edvac" title="Permalink to this headline">#</a></h2>
+<p>Il s’agit du premier rapport technique post-fonctionnement de l’EDVAC (<em>Electronic Discrete Variable Automatic Computer</em>), successeur à tube de l’ENIAC. C’est un document de 101 pages resté incomplet à ce jour.</p>
+<p>Dans ce rapport technique, John Von Neumann décrit six composants qui sont la base de son modèle :</p>
+<ol class="simple">
+<li><p>la <strong>CA</strong> pour l’unité de calcul arithmétique</p></li>
+<li><p>la <strong>CC</strong> pour l’unité de contrôle</p></li>
+<li><p>la <strong>M</strong> pour décrire les mémoires :</p></li>
+<li><p>le <strong>R</strong> pour un média externe d’enregistrement composé de <strong>I</strong> et de <strong>O</strong></p></li>
+<li><p>les <strong>I</strong> pour les entrées</p></li>
+<li><p>les <strong>O</strong> pour les sorties</p></li>
+</ol>
+<p>Chaque composant est relié à l’autre par un <strong>BUS de données</strong>.</p>
+<p>Tout cela mis ensemble conduit au schéma suivant :</p>
+<p><img alt="archvoneum" src="../../../_images/archVonNeumann.png" /></p>
+<p>d’autre part, il définit clairement que le processeur (construit avec des tubes à vide plutôt que des relais téléphoniques car environ 1000 fois plus rapides) devra fonctionner en binaire et non en décimel.</p>
+</section>
+<section id="la-ca-unite-de-calcul-arithmetique-et-logique">
+<h2>La <em>CA</em> : unité de calcul arithmétique et logique<a class="headerlink" href="#la-ca-unite-de-calcul-arithmetique-et-logique" title="Permalink to this headline">#</a></h2>
+<p>Von Neumann précise qu’elle doit pouvoir :</p>
+<ul class="simple">
+<li><p>exécuter les 4 opérations mathématques de base : <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> et <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>ces opéreations peuvent être étendues à d’autres comme : <span class="math notranslate nohighlight">\(\sqrt{ }\)</span>, <code class="docutils literal notranslate"><span class="pre">signe</span></code>, <span class="math notranslate nohighlight">\(log_{2}\)</span>, <span class="math notranslate nohighlight">\(log_{10}\)</span>, <span class="math notranslate nohighlight">\(\sin\)</span>, <span class="math notranslate nohighlight">\(\cos\)</span>. etc..</p></li>
+<li><p>calculer des fonctions logiques pures (qui ne sont pas du fait de l’unité de contrôle</p></li>
+<li><p>opérer des instructions plus complexes qui seraients <em>câblées</em> dans l’unité (Von Neumann décrit ici les instructions étendues)</p></li>
+</ul>
+</section>
+<section id="le-cc-unite-de-controle">
+<h2>Le <em>CC</em> : unité de contrôle<a class="headerlink" href="#le-cc-unite-de-controle" title="Permalink to this headline">#</a></h2>
+<p>Cette unité est ce qu’il appelle <em>le contrôle logique de l’ordinateur</em>. Cette unité doit :</p>
+<ul class="simple">
+<li><p>pourvoir discriminer une <strong>instruction</strong> (ou opération) et les <strong>données</strong> : cela signifie l’accès à une mémoire que Von Neumann considère qu’elle doit être grande.</p></li>
+</ul>
+</section>
+<section id="la-m-la-memoire">
+<h2>La <em>M</em> : la mémoire<a class="headerlink" href="#la-m-la-memoire" title="Permalink to this headline">#</a></h2>
+<p>Von Neumann décrit quatre phases successives qui nécessitent une grande quantité de mémoire :</p>
+<ol class="simple">
+<li><p>pour une instruction (opéreation) donnée, il peut y avoir une série de résultats intermédiaires ou partiels.</p></li>
+<li><p>les intructions pour un algorithme complexe (le <em>programme</em>) prennent de la place</p></li>
+<li><p>certaines fonctions mathématiques sont efficaces lorsqu’elles sont utilisées sous la forme de tables fixes.</p></li>
+<li><p>pour certaines fonctions mathématiques (équations différentielles), les conditions initiales constituent beaucoup de données</p></li>
+</ol>
+<p>Il précise finalement que ces différentes phases doivent mener à la création d’une mémoire unique.</p>
+<p>John Von Neumann considère que les trois unités <strong>CA</strong>, <strong>CC</strong> et <strong>M</strong> correspondent aux neurones associatifs du système nerveux central humain. Il précise encore que pour avoir une analogie complète, il faut des stimulis exterieurs : les <strong>neurones afférents</strong>, c’est le rôle des entrées et des sorties.correspondent</p>
+</section>
+<section id="les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
+<h2>Les unités d’entrées et de sorties <em>I</em> et <em>O</em> : le système <em>R</em><a class="headerlink" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Fonctionnement de l’architecture de Von Neumann</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Le cycle d&#39;instruction de l&#39;architecture de Von Neumann comprend les étapes de récupération, où l&#39;ordinateur lit une instruction depuis la mémoire, de décodage, où il interprète l&#39;instruction, d&#39;exécution, où il effectue l&#39;opération spécifiée, et d&#39;écriture, où il enregistre le résultat dans la mémoire ou les registres.
 Le cheminement des données et des instructions à travers l&#39;architecture de l&#39;ordinateur est géré de manière séquentielle, c&#39;est-à-dire que chaque instruction est exécutée dans un ordre linéaire.
@@ -1114,7 +1298,7 @@ Toutefois, elle est confrontée à des défis croissants liés à la demande de 
 <section id="references">
 <h2>Références<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="../../../biblio.html#id5">Neumann, 1945</a>]</span></p></li>
+<li><p><span id="id2">[<a class="reference internal" href="../../../biblio.html#id5" title="John von Neumann. First draft of a report on the edvac. Technical Report, Moore School of Electrical Engineering - University of Pennsylvania, 1945.">Neumann, 1945</a>]</span></p></li>
 </ul>
 </section>
 </section>
