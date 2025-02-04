@@ -1,5 +1,6 @@
 Livres et sources
 ============================
 
-```{bibliography} refs.bib
+```{bibliography}
+:filter: docname in docnames
 ```
