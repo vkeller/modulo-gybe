@@ -1,5 +1,6 @@
 Livres et sources
 ============================
 
-```{bibliography : :all:}	
+```{bibliography}	
 ```
+:all:
