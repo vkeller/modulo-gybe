@@ -61,7 +61,7 @@ parts:
       - file: 1M/architecture/fichiers/SystemeDeFichiers
     - file: 1M/esdn/index
       sections:
-      - file: 1M/esdn/cours/IntroductionESDN
+      - file: 1M/esdn/cours/C1-ESDN-01
       - file: 1M/esdn/cours/Cypherpunks
       - file: 1M/esdn/cours/CapitalismeDeSurveillance
       - file: 1M/esdn/cours/LesReseaux
