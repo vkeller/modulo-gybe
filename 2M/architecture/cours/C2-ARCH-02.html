@@ -1010,8 +1010,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#john-von-neumann">
-   John Von Neumann
+  <a class="reference internal nav-link" href="#john-von-neumann-et-j-presper-eckert">
+   John Von Neumann et J. Presper Eckert
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1070,8 +1070,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#fonctionnement">
+   Fonctionnement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-et-avantages-de-l-architecture-de-von-neumann">
+   Caractéristiques et avantages de l’architecture de Von Neumann
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1104,8 +1109,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#john-von-neumann">
-   John Von Neumann
+  <a class="reference internal nav-link" href="#john-von-neumann-et-j-presper-eckert">
+   John Von Neumann et J. Presper Eckert
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1164,8 +1169,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#fonctionnement">
+   Fonctionnement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-et-avantages-de-l-architecture-de-von-neumann">
+   Caractéristiques et avantages de l’architecture de Von Neumann
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1194,8 +1204,8 @@ title="Print to PDF"
 <li><p>connaître les limites de ce type d’architecture</p></li>
 </ul>
 </section>
-<section id="john-von-neumann">
-<h2>John Von Neumann<a class="headerlink" href="#john-von-neumann" title="Permalink to this headline">#</a></h2>
+<section id="john-von-neumann-et-j-presper-eckert">
+<h2>John Von Neumann et J. Presper Eckert<a class="headerlink" href="#john-von-neumann-et-j-presper-eckert" title="Permalink to this headline">#</a></h2>
 <p>John Von Neumann est né en 1903 à Budapest et est mort en 1957. C’est un mathématicien, physicien et logicien qui a apporté une pierre importante à l’édifice de l’informatique, notamment.</p>
 <p><img alt="vonneum" src="../../../_images/johnvonneumann.jpg" /></p>
 <p>Ses principales contributions à l’informatique sont les suivantes :</p>
@@ -1204,6 +1214,8 @@ title="Print to PDF"
 <li><p>Automates cellulaires (algorithmique) qui peuvent être décrits comme un modèle de calcul.</p></li>
 <li><p>Concept dit <em>de la singularitué technologique</em> ou simplement <em>La Singularité</em> qui pose l’hypothèse que l’invention de l’intelligence artificielle déclanchera une croissance technologique sans précédent.</p></li>
 </ul>
+<p>L’architecture principal de l’ENIAC (premier ordinateur électronique programmable du monde) J. Presper Eckert a remis en cause le nom de Von Neumann pour nommer l’architecture puisque ce dernier n’était pas encore en poste lorsque l’EDVAC a été designé.</p>
+<p><img alt="eckert" src="../../../_images/eckert.png" /></p>
 </section>
 <section id="contexte-historique">
 <h2>Contexte historique<a class="headerlink" href="#contexte-historique" title="Permalink to this headline">#</a></h2>
@@ -1266,34 +1278,31 @@ title="Print to PDF"
 </section>
 <section id="les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
 <h2>Les unités d’entrées et de sorties <em>I</em> et <em>O</em> : le système <em>R</em><a class="headerlink" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r" title="Permalink to this headline">#</a></h2>
+<p>Von Neumann construit les communications avec l’extérieur de son modèle avec ce qu’il appelle les <strong>entrées</strong> (unité <em>I</em>) et les <strong>sorties</strong> (unité <em>O</em>). Il précise que ces entrées et sorties doivent être réduites à des nombres et des instructions.</p>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Fonctionnement de l’architecture de Von Neumann</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Le cycle d&#39;instruction de l&#39;architecture de Von Neumann comprend les étapes de récupération, où l&#39;ordinateur lit une instruction depuis la mémoire, de décodage, où il interprète l&#39;instruction, d&#39;exécution, où il effectue l&#39;opération spécifiée, et d&#39;écriture, où il enregistre le résultat dans la mémoire ou les registres.
-Le cheminement des données et des instructions à travers l&#39;architecture de l&#39;ordinateur est géré de manière séquentielle, c&#39;est-à-dire que chaque instruction est exécutée dans un ordre linéaire.
-</pre></div>
-</div>
-<p>Caractéristiques et avantages de l’architecture de Von Neumann</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Comparée à d&#39;autres architectures telles que l&#39;architecture Harvard, l&#39;architecture de Von Neumann offre une simplicité et une uniformité qui facilitent la programmation et la conception des ordinateurs.
-Cependant, cette architecture présente des limitations en termes de performance pour certaines applications, notamment en raison de possibles goulots d&#39;étranglement liés à la gestion unifiée de la mémoire pour les données et les instructions.
-</pre></div>
-</div>
-<p>Impact de l’architecture de Von Neumann</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>L&#39;architecture de Von Neumann a révolutionné le domaine des ordinateurs en introduisant une méthode universelle pour exécuter des programmes, ce qui a permis le développement de machines polyvalentes capables de répondre à une grande variété de besoins informatiques.
-Elle est largement utilisée dans les ordinateurs personnels, les serveurs, les smartphones et de nombreuses autres technologies, ce qui en fait un élément fondamental de l&#39;infrastructure informatique moderne.
-</pre></div>
-</div>
-<p>Évolution et perspectives</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Les développements récents dans le domaine de l&#39;architecture des ordinateurs incluent des avancées telles que les processeurs multi-cœurs, qui permettent d&#39;exécuter plusieurs tâches simultanément, et les architectures spécialisées pour des tâches spécifiques telles que l&#39;intelligence artificielle et les calculs scientifiques.
-Ces avancées soulèvent des défis et des opportunités pour l&#39;avenir de l&#39;architecture de Von Neumann, car les besoins en termes de performances, d&#39;efficacité énergétique et de sécurité continuent d&#39;évoluer.
-</pre></div>
-</div>
-<p>Conclusion</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>L&#39;architecture de Von Neumann reste un pilier fondamental de l&#39;informatique moderne en raison de sa simplicité et de sa flexibilité, permettant aux ordinateurs de traiter une grande variété de tâches de manière efficace et économique.
-Toutefois, elle est confrontée à des défis croissants liés à la demande de performances toujours plus élevées et à l&#39;évolution des besoins en informatique, ce qui nécessitera des innovations continues pour répondre aux exigences futures.
-</pre></div>
-</div>
+<section id="fonctionnement">
+<h2>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permalink to this headline">#</a></h2>
+<p>Le cycle de calcul de l’architecture de Von Neumann comprend donc plusieurs étapes que l’on peut résumer ici :</p>
+<ol class="simple">
+<li><p>récupération l’instruction depuis la mémoire</p></li>
+<li><p>décodage de l’instruction</p></li>
+<li><p>récupération des opérandes de l’instruction</p></li>
+<li><p>exécution de l’instruction</p></li>
+<li><p>écriture du résultat en mémoire</p></li>
+</ol>
+<p>Ce cycle est parfaitement <strong>séquentiel</strong> : chaque opération est exécutée dans un ordre linéaire</p>
+</section>
+<section id="caracteristiques-et-avantages-de-l-architecture-de-von-neumann">
+<h2>Caractéristiques et avantages de l’architecture de Von Neumann<a class="headerlink" href="#caracteristiques-et-avantages-de-l-architecture-de-von-neumann" title="Permalink to this headline">#</a></h2>
+<p>Comparativement à l’architecture Harvard (où le bus des données est séparé du bus des instructions), l’architecture de Von Neumann est :</p>
+<ul class="simple">
+<li><p>simple en terme de conception d’un ordinateur physique</p></li>
+<li><p>simple en terme de programmation d’algorithmes</p></li>
+</ul>
+<p>par contre :</p>
+<ul class="simple">
+<li><p>limitations en terme de performance des applications (goulets d’étranglement de la mémoire)</p></li>
+</ul>
 </section>
 <section id="references">
 <h2>Références<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
