@@ -8,4 +8,6 @@ Le sources du livre se trouvent à l'adresse [github de l'auteur](https://github
 
 Les ressources cantonales de la discipline éducation numérique au gymnase se trouvent sur [modulo-info.ch](https://modulo-info.ch/)
 
+{cite}`perez2011python`
+
 Vincent Keller, prof d'info au gymnase de Beaulieu, Lausanne 2021-2024.
