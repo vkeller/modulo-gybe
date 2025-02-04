@@ -1054,7 +1054,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
+  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o">
    Les unités d’entrées et de sorties
    <em>
     I
@@ -1062,10 +1062,6 @@ title="Print to PDF"
    et
    <em>
     O
-   </em>
-   : le système
-   <em>
-    R
    </em>
   </a>
  </li>
@@ -1077,6 +1073,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#caracteristiques-et-avantages-de-l-architecture-de-von-neumann">
    Caractéristiques et avantages de l’architecture de Von Neumann
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processeurs-modernes">
+   Processeurs modernes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1153,7 +1154,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
+  <a class="reference internal nav-link" href="#les-unites-d-entrees-et-de-sorties-i-et-o">
    Les unités d’entrées et de sorties
    <em>
     I
@@ -1161,10 +1162,6 @@ title="Print to PDF"
    et
    <em>
     O
-   </em>
-   : le système
-   <em>
-    R
    </em>
   </a>
  </li>
@@ -1176,6 +1173,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#caracteristiques-et-avantages-de-l-architecture-de-von-neumann">
    Caractéristiques et avantages de l’architecture de Von Neumann
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processeurs-modernes">
+   Processeurs modernes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1233,12 +1235,11 @@ title="Print to PDF"
 <section id="first-draft-of-a-report-on-the-edvac">
 <h2><em>First Draft of a Report on the EDVAC</em><a class="headerlink" href="#first-draft-of-a-report-on-the-edvac" title="Permalink to this headline">#</a></h2>
 <p>Il s’agit du premier rapport technique post-fonctionnement de l’EDVAC (<em>Electronic Discrete Variable Automatic Computer</em>), successeur à tube de l’ENIAC. C’est un document de 101 pages resté incomplet à ce jour.</p>
-<p>Dans ce rapport technique, John Von Neumann décrit six composants qui sont la base de son modèle :</p>
+<p>Dans ce rapport technique, John Von Neumann décrit cinq composants qui sont la base de son modèle :</p>
 <ol class="simple">
 <li><p>la <strong>CA</strong> pour l’unité de calcul arithmétique</p></li>
 <li><p>la <strong>CC</strong> pour l’unité de contrôle</p></li>
 <li><p>la <strong>M</strong> pour décrire les mémoires :</p></li>
-<li><p>le <strong>R</strong> pour un média externe d’enregistrement composé de <strong>I</strong> et de <strong>O</strong></p></li>
 <li><p>les <strong>I</strong> pour les entrées</p></li>
 <li><p>les <strong>O</strong> pour les sorties</p></li>
 </ol>
@@ -1276,8 +1277,8 @@ title="Print to PDF"
 <p>Il précise finalement que ces différentes phases doivent mener à la création d’une mémoire unique.</p>
 <p>John Von Neumann considère que les trois unités <strong>CA</strong>, <strong>CC</strong> et <strong>M</strong> correspondent aux neurones associatifs du système nerveux central humain. Il précise encore que pour avoir une analogie complète, il faut des stimulis exterieurs : les <strong>neurones afférents</strong>, c’est le rôle des entrées et des sorties.correspondent</p>
 </section>
-<section id="les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r">
-<h2>Les unités d’entrées et de sorties <em>I</em> et <em>O</em> : le système <em>R</em><a class="headerlink" href="#les-unites-d-entrees-et-de-sorties-i-et-o-le-systeme-r" title="Permalink to this headline">#</a></h2>
+<section id="les-unites-d-entrees-et-de-sorties-i-et-o">
+<h2>Les unités d’entrées et de sorties <em>I</em> et <em>O</em><a class="headerlink" href="#les-unites-d-entrees-et-de-sorties-i-et-o" title="Permalink to this headline">#</a></h2>
 <p>Von Neumann construit les communications avec l’extérieur de son modèle avec ce qu’il appelle les <strong>entrées</strong> (unité <em>I</em>) et les <strong>sorties</strong> (unité <em>O</em>). Il précise que ces entrées et sorties doivent être réduites à des nombres et des instructions.</p>
 </section>
 <section id="fonctionnement">
@@ -1304,10 +1305,26 @@ title="Print to PDF"
 <li><p>limitations en terme de performance des applications (goulets d’étranglement de la mémoire)</p></li>
 </ul>
 </section>
+<section id="processeurs-modernes">
+<h2>Processeurs modernes<a class="headerlink" href="#processeurs-modernes" title="Permalink to this headline">#</a></h2>
+<p>Aujourd’hui, les ordinateurs (du nano-ordinateur au supercalulateur) implémentent tous le modèle de John Von Neumann dans leur processeur. Certains éléments ont été ajoutés : notamment une hiérarchie dans les mémoires</p>
+<p><img alt="moderncpu" src="../../../_images/moderncpu.png" /></p>
+<p>Ainsi, un processeur moderne (CPU) contient :</p>
+<ol class="simple">
+<li><p>une <strong>ALU</strong>, unité arithmétique et logique (<em>Arithmetic and logic unit</em>) correspondant aux deux unités <strong>CA</strong> et <strong>CC</strong></p></li>
+<li><p>deux à trois niveaux de mémoires processeurs (les <strong>caches</strong>) L1, L2, etc.. correspondant à l’unité <strong>M</strong></p></li>
+<li><p>Les bus données, adresses et contrôle, correspondant aux deux unités <strong>I</strong> et <strong>O</strong></p></li>
+</ol>
+<p>Au cours des dernières décennies, l’accent de développement des processeurs l’a été sur leur vitesse. <strong>La vitesse d’exécution</strong>. Mais un processeur qui exécute rapidement des instructions a besoin d’être nourri d’instructions et de données. Le développement de la vitesse des mémoires n’a pas suivi la même rapidité. C’est l’une des raisons pour lesquelles des mémoires <em>locales</em>, <em>très rapides</em>, <em>proches de l’ALU et du CU</em> ont été ajoutée dans les microprocesseurs : les <strong>mémoires cache</strong>.</p>
+<p>Plus une mémoire est proche de l’ALU et rapide, plus elle est petite est chère.</p>
+<p><img alt="memory" src="../../../_images/memoryhierarchy.png" /></p>
+<p><a class="reference external" href="https://shadesofcode.hashnode.dev/where-the-hell-is-my-data">Source de l’image</a></p>
+</section>
 <section id="references">
 <h2>Références<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><span id="id2">[<a class="reference internal" href="../../../biblio.html#id5" title="John von Neumann. First draft of a report on the edvac. Technical Report, Moore School of Electrical Engineering - University of Pennsylvania, 1945.">Neumann, 1945</a>]</span></p></li>
+<li><p>First Draft of a Report on the EDVAC : <span id="id2">[<a class="reference internal" href="../../../biblio.html#id5" title="John von Neumann. First draft of a report on the edvac. Technical Report, Moore School of Electrical Engineering - University of Pennsylvania, 1945.">Neumann, 1945</a>]</span></p></li>
+<li><p>Simulateur de l’architecture de Von Neumann : <span id="id3">[<a class="reference internal" href="../../../biblio.html#id6" title="Peter Higginson. Simulateur aqa architecture de von neumann. 2025. https://www.peterhigginson.co.uk/AQA [Accessed: février 2025].">Higginson, 2025</a>]</span></p></li>
 </ul>
 </section>
 </section>
