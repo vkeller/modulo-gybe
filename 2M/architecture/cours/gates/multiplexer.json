@@ -1,0 +1,18 @@
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [195, 120], id: 0, name: 'Data'},
+    in1: {type: 'in', pos: [200, 300], id: 1, name: 'Load'},
+    out0: {type: 'out', pos: [915, 285], id: 14, name: 'Qbarre'},
+    mux0: {type: 'mux', pos: [1135, 470], in: '15-19', out: [20, 21], from: 4, to: 2},
+    out1: {type: 'out', pos: [890, 105], id: 22, name: 'Q'},
+    not0: {type: 'not', pos: [345, 300], in: 23, out: 24},
+    and0: {type: 'and', pos: [490, 290], in: [25, 26], out: 27},
+    and1: {type: 'and', pos: [490, 125], in: [28, 29], out: 30},
+    or0: {type: 'or', pos: [785, 300], in: [34, 35], out: 36},
+    or1: {type: 'or', pos: [780, 165], in: [37, 38], out: 39},
+    not1: {type: 'not', pos: [685, 260], in: 40, out: 41},
+    not2: {type: 'not', pos: [685, 205], in: 42, out: 43},
+  },
+  wires: [[41, 34], [43, 38], [39, 22], [36, 14], [30, 37], [27, 35], [39, 40], [36, 42], [0, 28], [0, 26], [1, 23], [24, 25], [1, 29]]
+}

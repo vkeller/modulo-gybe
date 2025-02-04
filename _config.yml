@@ -3,6 +3,12 @@
 
 title: Education Numérique Ecole de maturité
 author: Vincent Keller
+copyright: "2022"
+email: Vincent.Keller@eduvaud.ch
+description: Cours et travaux pratiques en informatique pour l'école de maturité (1ère année et 2ème année)
+url: "https://vkeller.github.io/modulo-gybe"
+repository: modulo-gybe
+repository_branch: "master"
 logo: logo-beaulieu.png
 
 # Force re-execution of notebooks on each build.
@@ -16,10 +22,11 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - refs.bib
-#  - bibliographie.bib
-#  - references.bib
+bibtex_bibfiles: refs.bib
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
 
 # Information about where the book exists on the web
 repository:
