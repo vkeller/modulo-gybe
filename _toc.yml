@@ -103,6 +103,7 @@ parts:
       - file: 2M/histoire/C2-HIST-01
       - file: 2M/histoire/C2-HIST-02
       - file: 2M/histoire/C2-HIST-03
+      - file: 2M/histoire/C2-HIST-04
     - file: 2M/architecture/index
       sections:
       - file: 2M/architecture/cours/C2-ARCH-01
