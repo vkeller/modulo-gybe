@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP1-PROG-08 - Tableaux &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-PROG-08 - Les listes (tableaux) &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -348,7 +348,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP1-PROG-08 - Tableaux
+     TP1-PROG-08 - Les listes (tableaux)
     </a>
    </li>
    <li class="toctree-l2">
@@ -401,7 +401,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/IntroductionESDN.html">
+    <a class="reference internal" href="../../esdn/cours/C1-ESDN-01.html">
      C1-ESDN-01 : Enjeux sociaux du Numérique
     </a>
    </li>
@@ -1008,13 +1008,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tableau-1d-les-listes">
-   Tableau 1D : les listes
+  <a class="reference internal nav-link" href="#les-listes">
+   Les listes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-d-une-liste-vide">
-     Création d’une liste vide
+    <a class="reference internal nav-link" href="#creer-une-liste-vide">
+     Créer une liste vide
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajouter-un-element-a-une-liste">
+     Ajouter un élément à une liste
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1023,23 +1028,18 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#longueur-d-une-liste">
-     Longueur d’une liste
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajout-d-un-element-a-la-liste">
-     Ajout d’un élément à la liste
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modification-d-un-element-de-la-liste">
      Modification d’un élément de la liste
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enlever-des-elements-d-une-liste">
-     Enlever des éléments d’une liste
+    <a class="reference internal nav-link" href="#enlever-un-element-a-une-liste">
+     Enlever un élément à une liste
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longueur-d-une-liste">
+     Longueur d’une liste
     </a>
    </li>
   </ul>
@@ -1050,84 +1050,75 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-de-l-horaire">
-     Création de l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-1-ajout-d-un-train">
-     Exercice 1  : Ajout d’un train
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-2-creation-de-l-horaire">
-     Exercice 2 : Création de l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3-ajout-d-un-train-a-l-horaire">
-     Exercice 3 : ajout d’un train à l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acceder-aux-elements-de-l-horaire-les-trains">
-     Accèder aux éléments de l’horaire (les trains)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3-acceder-a-un-element-dans-le-tableau-d-affichage">
-     Exercice 3 : accéder à un élément dans le tableau d’affichage
+    <a class="reference internal nav-link" href="#creation-des-trains">
+     Création des trains
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acceder-a-une-plage">
-   Accéder à une plage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-4-affichage-d-une-plage-de-l-horaire">
-     Exercice 4 : Affichage d’une plage de l’horaire
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajouter-un-nouveau-train-a-l-horaire">
-   Ajouter un nouveau train à l’horaire
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modification-des-informations">
-     Modification des informations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#suppression-de-train">
-     Suppression de train
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
+  <a class="reference internal nav-link" href="#exercice-1-ajout-d-un-train">
+   Exercice 1  : Ajout d’un train
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-affichage-des-quais">
-   Exercice 6 (Affichage des quais)
+  <a class="reference internal nav-link" href="#horaire-cff-definition">
+   Horaire CFF : définition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-annonce-vocale">
-   Exercice 7 (Annonce vocale)
+  <a class="reference internal nav-link" href="#exercice-2-creation-de-l-horaire">
+   Exercice 2 : création de l’horaire
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-annonce-vocale-complete-avec-jingle">
-   Exercice 8 : Annonce vocale complète (avec jingle)
+  <a class="reference internal nav-link" href="#exercice-3-affichez-un-train">
+   Exercice 3 : Affichez un train
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-affichez-une-destination">
+   Exercice 4 : Affichez une destination
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-acceder-a-un-element-dans-le-tableau-d-affichage">
+   Exercice 5 : accéder à un élément dans le tableau d’affichage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
+   Affichage de l’horaire complet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-ajouter-un-train">
+   Exercice 6 : ajouter un train
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-perturbations">
+   Exercice 7 : perturbations !
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-mince-j-ai-rate-mon-train">
+   Exercice 8 : “Mince ! J’ai raté mon train”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-l-affichage-sur-les-quais">
+   Exercice 9 L’affichage sur les quais
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-simone-et-l-annonce-vocale">
+   Exercice 10 : Simone et l’annonce vocale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-annonce-vocale-complete-avec-jingle">
+   Exercice 10 : Annonce vocale complète (avec jingle)
   </a>
  </li>
 </ul>
@@ -1139,7 +1130,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-PROG-08 - Tableaux</h1>
+                <h1>TP1-PROG-08 - Les listes (tableaux)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1155,13 +1146,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tableau-1d-les-listes">
-   Tableau 1D : les listes
+  <a class="reference internal nav-link" href="#les-listes">
+   Les listes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-d-une-liste-vide">
-     Création d’une liste vide
+    <a class="reference internal nav-link" href="#creer-une-liste-vide">
+     Créer une liste vide
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajouter-un-element-a-une-liste">
+     Ajouter un élément à une liste
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1170,23 +1166,18 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#longueur-d-une-liste">
-     Longueur d’une liste
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajout-d-un-element-a-la-liste">
-     Ajout d’un élément à la liste
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modification-d-un-element-de-la-liste">
      Modification d’un élément de la liste
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enlever-des-elements-d-une-liste">
-     Enlever des éléments d’une liste
+    <a class="reference internal nav-link" href="#enlever-un-element-a-une-liste">
+     Enlever un élément à une liste
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longueur-d-une-liste">
+     Longueur d’une liste
     </a>
    </li>
   </ul>
@@ -1197,84 +1188,75 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-de-l-horaire">
-     Création de l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-1-ajout-d-un-train">
-     Exercice 1  : Ajout d’un train
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-2-creation-de-l-horaire">
-     Exercice 2 : Création de l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3-ajout-d-un-train-a-l-horaire">
-     Exercice 3 : ajout d’un train à l’horaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acceder-aux-elements-de-l-horaire-les-trains">
-     Accèder aux éléments de l’horaire (les trains)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3-acceder-a-un-element-dans-le-tableau-d-affichage">
-     Exercice 3 : accéder à un élément dans le tableau d’affichage
+    <a class="reference internal nav-link" href="#creation-des-trains">
+     Création des trains
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acceder-a-une-plage">
-   Accéder à une plage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-4-affichage-d-une-plage-de-l-horaire">
-     Exercice 4 : Affichage d’une plage de l’horaire
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajouter-un-nouveau-train-a-l-horaire">
-   Ajouter un nouveau train à l’horaire
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modification-des-informations">
-     Modification des informations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#suppression-de-train">
-     Suppression de train
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
+  <a class="reference internal nav-link" href="#exercice-1-ajout-d-un-train">
+   Exercice 1  : Ajout d’un train
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-affichage-des-quais">
-   Exercice 6 (Affichage des quais)
+  <a class="reference internal nav-link" href="#horaire-cff-definition">
+   Horaire CFF : définition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-annonce-vocale">
-   Exercice 7 (Annonce vocale)
+  <a class="reference internal nav-link" href="#exercice-2-creation-de-l-horaire">
+   Exercice 2 : création de l’horaire
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-annonce-vocale-complete-avec-jingle">
-   Exercice 8 : Annonce vocale complète (avec jingle)
+  <a class="reference internal nav-link" href="#exercice-3-affichez-un-train">
+   Exercice 3 : Affichez un train
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-affichez-une-destination">
+   Exercice 4 : Affichez une destination
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5-acceder-a-un-element-dans-le-tableau-d-affichage">
+   Exercice 5 : accéder à un élément dans le tableau d’affichage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
+   Affichage de l’horaire complet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6-ajouter-un-train">
+   Exercice 6 : ajouter un train
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7-perturbations">
+   Exercice 7 : perturbations !
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8-mince-j-ai-rate-mon-train">
+   Exercice 8 : “Mince ! J’ai raté mon train”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-l-affichage-sur-les-quais">
+   Exercice 9 L’affichage sur les quais
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-simone-et-l-annonce-vocale">
+   Exercice 10 : Simone et l’annonce vocale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-10-annonce-vocale-complete-avec-jingle">
+   Exercice 10 : Annonce vocale complète (avec jingle)
   </a>
  </li>
 </ul>
@@ -1288,8 +1270,8 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="" src="../../../_images/cff-general.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-08-tableaux">
-<h1>TP1-PROG-08 - Tableaux<a class="headerlink" href="#tp1-prog-08-tableaux" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-08-les-listes-tableaux">
+<h1>TP1-PROG-08 - Les listes (tableaux)<a class="headerlink" href="#tp1-prog-08-les-listes-tableaux" title="Permalink to this headline">#</a></h1>
 <section id="objectifs">
 <h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -1298,19 +1280,60 @@ title="Print to PDF"
 <li><p>Appliquer sur la gestion d’un horaire automatique d’une gare CFF</p></li>
 </ul>
 </section>
-<section id="tableau-1d-les-listes">
-<h2>Tableau 1D : les listes<a class="headerlink" href="#tableau-1d-les-listes" title="Permalink to this headline">#</a></h2>
-<p>En Python, on décrit une liste avec les éléments qui le composent. Ces éléments sont des variables qui peuvent être de n’importe quel type.</p>
-<p>Une <strong>liste</strong> est caractérisée par :</p>
+<section id="les-listes">
+<h2>Les listes<a class="headerlink" href="#les-listes" title="Permalink to this headline">#</a></h2>
+<p>En Python, une <strong>liste</strong> est une <strong>structure de donnée</strong>. On peut le voir comme un <strong>tableu en une dimension</strong> (ou <strong>Tableau 1D</strong>)</p>
+<p>Elle est caractérisée par :</p>
 <ul class="simple">
-<li><p>est délimitée par des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, et</p></li>
-<li><p>ses éléments sont séparés par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code></p></li>
+<li><p>des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, et</p></li>
+<li><p>ses éléments (<strong>variables</strong> ou <strong>valeurs</strong>) sont séparés par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code></p></li>
 </ul>
-<section id="creation-d-une-liste-vide">
-<h3>Création d’une liste vide<a class="headerlink" href="#creation-d-une-liste-vide" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;une liste vide</span>
+<p>Chaque élément de la liste se distingue par sa <strong>valeur</strong> et son <strong>index</strong>. L’index décrit la <strong>position</strong> de l’élément dans la liste. Le premier élément a l’index <code class="docutils literal notranslate"><span class="pre">0</span></code>, puis le second <code class="docutils literal notranslate"><span class="pre">1</span></code> et ainsi de suite.</p>
+<p>Il y a donc une syntaxe pour chacune des opérations suivantes :</p>
+<ol class="simple">
+<li><p>créer une liste vide</p></li>
+<li><p>ajouter un élément à une liste</p></li>
+<li><p>accéder et modifier un élément à une liste</p></li>
+<li><p>enlever un élément à une liste</p></li>
+</ol>
+<section id="creer-une-liste-vide">
+<h3>Créer une liste vide<a class="headerlink" href="#creer-une-liste-vide" title="Permalink to this headline">#</a></h3>
+<p>Pour créer une liste vide, on affecte à une variable un objet liste vide</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créer une liste vide</span>
 <span class="n">uneListe</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ajouter-un-element-a-une-liste">
+<h3>Ajouter un élément à une liste<a class="headerlink" href="#ajouter-un-element-a-une-liste" title="Permalink to this headline">#</a></h3>
+<p>Pour ajouter un nouvel élément <code class="docutils literal notranslate"><span class="pre">element</span></code> à la liste, il existe deux façon :</p>
+<ol class="simple">
+<li><p>A la <strong>fin de la liste</strong> : on utilise la <strong>méthode</strong> (c’est comme une fonction) <code class="docutils literal notranslate"><span class="pre">uneListe.append(element)</span></code></p></li>
+<li><p>A l’<strong>index</strong> <code class="docutils literal notranslate"><span class="pre">i</span></code>, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">uneListe.insert(i,</span> <span class="pre">element)</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ajouter la chaîne de caractères &#39;salut&#39; à la fin de la liste</span>
+<span class="n">uneListe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;salut&#39;</span><span class="p">)</span>
+<span class="c1"># Afficher la liste</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
+<span class="c1"># Ajouter le valeur `0.618&#39; à l&#39;index 1</span>
+<span class="n">uneListe</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.618</span><span class="p">)</span>
+<span class="c1"># Afficher la liste une seconde fois</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;salut&#39;]
+[&#39;salut&#39;, 0.618]
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="acceder-aux-elements-d-une-liste">
@@ -1321,10 +1344,10 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;une liste avec une chaîne de caractères, un entier et un float</span>
 <span class="n">uneListe</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;une chaîne de caractères&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">3.14</span><span class="p">]</span>
 
-<span class="c1"># On accède au premier élément avec :</span>
-<span class="n">uneListe</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># On accède au deuxième élément avec :</span>
+<span class="n">uneListe</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># On imprime le premier élément :</span>
+<span class="c1"># On imprime le deuxième élément :</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1337,13 +1360,13 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On imprime le second élément :</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On imprime le premier élément :</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>une chaîne de caractères
 </pre></div>
 </div>
 </div>
@@ -1362,71 +1385,27 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="longueur-d-une-liste">
-<h3>Longueur d’une liste<a class="headerlink" href="#longueur-d-une-liste" title="Permalink to this headline">#</a></h3>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">len(list)</span></code> retourne la longueur de la liste <code class="docutils literal notranslate"><span class="pre">list</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="ajout-d-un-element-a-la-liste">
-<h3>Ajout d’un élément à la liste<a class="headerlink" href="#ajout-d-un-element-a-la-liste" title="Permalink to this headline">#</a></h3>
-<p>Pour ajouter un nouvel élément à la liste, il existe deux façon :</p>
-<ol class="simple">
-<li><p>pour ajouter un élément à la <strong>fin de la liste</strong> on utilise la <strong>méthode</strong> (c’est comme une fonction) <code class="docutils literal notranslate"><span class="pre">uneListe.append()</span></code></p></li>
-<li><p>pour ajouter un élément <code class="docutils literal notranslate"><span class="pre">element</span></code> à la <strong>position</strong> <code class="docutils literal notranslate"><span class="pre">i</span></code>, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">uneListe.insert(i,</span> <span class="pre">element)</span></code></p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ajouter la chaîne de caractères &#39;salut&#39; à la fin de la liste</span>
-<span class="n">uneListe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;salut&#39;</span><span class="p">)</span>
-<span class="c1"># Afficher la liste</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
-<span class="c1"># Ajouter le valeur `0.618&#39; à la position 2 (soit entre 4 et 3.14)</span>
-<span class="n">uneListe</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.618</span><span class="p">)</span>
-<span class="c1"># Afficher la liste une seconde fois</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 3.14, &#39;salut&#39;]
-[&#39;une chaîne de caractères&#39;, 4, 0.618, 3.14, &#39;salut&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="modification-d-un-element-de-la-liste">
 <h3>Modification d’un élément de la liste<a class="headerlink" href="#modification-d-un-element-de-la-liste" title="Permalink to this headline">#</a></h3>
-<p>On peut modifier un élément en y accédant à l’aide de l’indice <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<p>On peut modifier un élément en y accédant à l’aide de l’indice <code class="docutils literal notranslate"><span class="pre">i</span></code> comme on accède à l’élément à l’index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Modification de 3.14 en 6.28</span>
-<span class="n">uneListe</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">6.18</span>
+<span class="n">uneListe</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">6.18</span>
 <span class="c1"># Affichage de la liste</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 0.618, 6.18, &#39;salut&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 6.18]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="enlever-des-elements-d-une-liste">
-<h3>Enlever des éléments d’une liste<a class="headerlink" href="#enlever-des-elements-d-une-liste" title="Permalink to this headline">#</a></h3>
+<section id="enlever-un-element-a-une-liste">
+<h3>Enlever un élément à une liste<a class="headerlink" href="#enlever-un-element-a-une-liste" title="Permalink to this headline">#</a></h3>
 <p>On peut enlever des éléments avec les méthodes suivantes :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">list.remove(x)</span></code> si l’élément <code class="docutils literal notranslate"><span class="pre">x</span></code> existe</p></li>
@@ -1436,14 +1415,14 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppression de 0.618</span>
-<span class="n">uneListe</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mf">0.618</span><span class="p">)</span>
+<span class="n">uneListe</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mf">6.18</span><span class="p">)</span>
 <span class="c1"># Affichage de la liste</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 6.18, &#39;salut&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4]
 </pre></div>
 </div>
 </div>
@@ -1458,7 +1437,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;, 4, 6.18]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;une chaîne de caractères&#39;]
 </pre></div>
 </div>
 </div>
@@ -1479,6 +1458,24 @@ title="Print to PDF"
 </div>
 </div>
 </section>
+<section id="longueur-d-une-liste">
+<h3>Longueur d’une liste<a class="headerlink" href="#longueur-d-une-liste" title="Permalink to this headline">#</a></h3>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">len(list)</span></code> retourne la longueur de la liste <code class="docutils literal notranslate"><span class="pre">list</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uneListe</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;une chaîne de caractères&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">3.14</span><span class="p">]</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">uneListe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="affichage-de-l-horaire-des-trains-en-gare">
 <h2>Affichage de l’horaire des trains en gare<a class="headerlink" href="#affichage-de-l-horaire-des-trains-en-gare" title="Permalink to this headline">#</a></h2>
@@ -1489,13 +1486,10 @@ title="Print to PDF"
 <li><p>la gare de destination</p></li>
 <li><p>une voie d’arrivée</p></li>
 </ul>
-<p>Un train est donc une <strong>liste 1D</strong></p>
-<p>L’horaire affiché est donc une <strong>liste de listes 1D</strong>, à savoir un <strong>tableau en deux dimensions</strong>.</p>
-<p>En informatique, on parle d’un <strong>tableau 2D</strong> ou tableau à deux dimensions. Chaque <strong>colonne</strong> représente les caractéristiques d’un train (type, heure de départ, destination, etc..) et chaque ligne représente un train.</p>
-<section id="creation-de-l-horaire">
-<h3>Création de l’horaire<a class="headerlink" href="#creation-de-l-horaire" title="Permalink to this headline">#</a></h3>
-<p>L’<strong>horaire</strong> est constitué d’une <strong>liste de listes 1D</strong>.</p>
-<p>Chaque <code class="docutils literal notranslate"><span class="pre">train</span></code> est une <strong>liste 1D</strong> qui possède autant d’éléments qu’il y a de caractéristiques dans l’horaire, séparées par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code> :</p>
+<p>Un train peut donc se modéliser à l’aide d’une <strong>liste</strong></p>
+<section id="creation-des-trains">
+<h3>Création des trains<a class="headerlink" href="#creation-des-trains" title="Permalink to this headline">#</a></h3>
+<p>Chaque <code class="docutils literal notranslate"><span class="pre">train</span></code> est une <strong>liste</strong> qui possède autant d’éléments qu’il y a de caractéristiques dans l’horaire, séparées par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code> :</p>
 <ul class="simple">
 <li><p>type (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p>heure de départ (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -1512,272 +1506,65 @@ title="Print to PDF"
 </div>
 </div>
 </section>
+</section>
 <section id="exercice-1-ajout-d-un-train">
-<h3>Exercice 1  : Ajout d’un train<a class="headerlink" href="#exercice-1-ajout-d-un-train" title="Permalink to this headline">#</a></h3>
+<h2>Exercice 1  : Ajout d’un train<a class="headerlink" href="#exercice-1-ajout-d-un-train" title="Permalink to this headline">#</a></h2>
 <p>Définissez la liste <code class="docutils literal notranslate"><span class="pre">train4</span></code> selon l’horaire affiché par l’image : c’est un S1 à destination de Lausanne qui arrive sur la voie 4 à 8h57</p>
 </section>
+<section id="horaire-cff-definition">
+<h2>Horaire CFF : définition<a class="headerlink" href="#horaire-cff-definition" title="Permalink to this headline">#</a></h2>
+<p>L’horaire à modéliser est une <strong>liste de listes</strong> : chaque <code class="docutils literal notranslate"><span class="pre">element</span></code> de la liste est une liste.</p>
+<p>En informatique, on parle d’un <strong>tableau 2D</strong> ou tableau à deux dimensions. Chaque <strong>colonne</strong> représente les caractéristiques d’un train (type, heure de départ, destination, etc..) et chaque ligne représente un train.</p>
+</section>
 <section id="exercice-2-creation-de-l-horaire">
-<h3>Exercice 2 : Création de l’horaire<a class="headerlink" href="#exercice-2-creation-de-l-horaire" title="Permalink to this headline">#</a></h3>
-<p>L’horaire est un tableau en 2 dimensions donc une <strong>liste de listes</strong>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création de l&#39;horaire avec les trois trains</span>
-<span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span> <span class="n">train2</span><span class="p">,</span> <span class="n">train3</span><span class="p">]</span>
-<span class="n">horaire</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
- [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
- [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]]
-</pre></div>
-</div>
-</div>
-</div>
+<h2>Exercice 2 : création de l’horaire<a class="headerlink" href="#exercice-2-creation-de-l-horaire" title="Permalink to this headline">#</a></h2>
+<p>A l’aide des fonctions de création et d’ajout, créez une variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code> qui contient les quatre variables créées à l’exercice 1.</p>
 </section>
-<section id="exercice-3-ajout-d-un-train-a-l-horaire">
-<h3>Exercice 3 : ajout d’un train à l’horaire<a class="headerlink" href="#exercice-3-ajout-d-un-train-a-l-horaire" title="Permalink to this headline">#</a></h3>
-<p>Créez l’horaire avec les 4 trains <code class="docutils literal notranslate"><span class="pre">train1</span></code>, <code class="docutils literal notranslate"><span class="pre">train2</span></code>, <code class="docutils literal notranslate"><span class="pre">train3</span></code>, <code class="docutils literal notranslate"><span class="pre">train4</span></code></p>
+<section id="exercice-3-affichez-un-train">
+<h2>Exercice 3 : Affichez un train<a class="headerlink" href="#exercice-3-affichez-un-train" title="Permalink to this headline">#</a></h2>
+<p>A l’aide de la fonction d’accès à un élément de la liste <code class="docutils literal notranslate"><span class="pre">horaire</span></code>, affichez le train qui part à 8h55.</p>
 </section>
-<section id="acceder-aux-elements-de-l-horaire-les-trains">
-<h3>Accèder aux éléments de l’horaire (les trains)<a class="headerlink" href="#acceder-aux-elements-de-l-horaire-les-trains" title="Permalink to this headline">#</a></h3>
-<p>Avec une liste de liste, il faut donner <strong>deux indices</strong>. Le premier correspond à un élément de l’horaire.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Affichage du train2 (S2 de 8h51 en direction d&#39;Aigle sur voie 4)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Le second indice correspond à un élément à l’intérieur de la liste définie. Ainsi, pour obtenir uniquement l’heure, on choisira le second élément de la liste.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Affichage de la destination du train 2:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aigle
-</pre></div>
-</div>
-</div>
-</div>
-<p>On accède de même aux éléments de la ligne <code class="docutils literal notranslate"><span class="pre">horaire[1]</span></code></p>
-<p>L’élément <code class="docutils literal notranslate"><span class="pre">horaire[1][2]</span></code> correspond au troisième élément de la liste <code class="docutils literal notranslate"><span class="pre">horaire[1]</span></code>, donc la destination</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Aigle&#39;
-</pre></div>
-</div>
-</div>
-</div>
+<section id="exercice-4-affichez-une-destination">
+<h2>Exercice 4 : Affichez une destination<a class="headerlink" href="#exercice-4-affichez-une-destination" title="Permalink to this headline">#</a></h2>
+<p>A l’exercice précédent, vous avez affiché une liste qui contient 4 éléments : c’est un train. Il est maintenant possible d’afficher un seul élément de cette liste à l’aide de la fonction d’accès à un élément.</p>
+<ol class="simple">
+<li><p>stockez le train qui se trouve à la position 2 dans une variable <code class="docutils literal notranslate"><span class="pre">tchoutchou</span></code> (de type liste)</p></li>
+<li><p>affichez la destination à l’aide de la position dans cette variable</p></li>
+</ol>
 </section>
-<section id="exercice-3-acceder-a-un-element-dans-le-tableau-d-affichage">
-<h3>Exercice 3 : accéder à un élément dans le tableau d’affichage<a class="headerlink" href="#exercice-3-acceder-a-un-element-dans-le-tableau-d-affichage" title="Permalink to this headline">#</a></h3>
+<section id="exercice-5-acceder-a-un-element-dans-le-tableau-d-affichage">
+<h2>Exercice 5 : accéder à un élément dans le tableau d’affichage<a class="headerlink" href="#exercice-5-acceder-a-un-element-dans-le-tableau-d-affichage" title="Permalink to this headline">#</a></h2>
+<p>En utilisant <strong>uniquement</strong> la variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code> :</p>
 <ul class="simple">
 <li><p>Affichez l’heure de départ du troisième train dans le tableau.</p></li>
 <li><p>Affichez la destination du premier train</p></li>
 <li><p>Affichez la voie d’arrivée du second train</p></li>
 </ul>
+<p>Cet exercice demande un peu de réflexion : vous manipulez la variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code> qui est une liste de listes ! Il vous faut donc accéder à l’élément qui se trouve en troisième position dans la liste qui se trouve en deuxième position dans la liste de listes.</p>
 </section>
-</section>
-<section id="acceder-a-une-plage">
-<h2>Accéder à une plage<a class="headerlink" href="#acceder-a-une-plage" title="Permalink to this headline">#</a></h2>
-<p>On peut accéder à une plage d’éléments. La plage entre le premier et le deuxième élément s’écrit <code class="docutils literal notranslate"><span class="pre">horaire[0:2]</span></code></p>
+<section id="affichage-de-l-horaire-complet">
+<h2>Affichage de l’horaire complet<a class="headerlink" href="#affichage-de-l-horaire-complet" title="Permalink to this headline">#</a></h2>
+<p>Si notre horaire est construit ainsi :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1], [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> nous pouvons itérer sur la liste et afficher les trains ligne par ligne.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-</pre></div>
-</div>
-</div>
-</div>
-<section id="exercice-4-affichage-d-une-plage-de-l-horaire">
-<h3>Exercice 4 : Affichage d’une plage de l’horaire<a class="headerlink" href="#exercice-4-affichage-d-une-plage-de-l-horaire" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Affichez les lignes 3-4 de l’horaire.</p></li>
-</ul>
-<p><strong>Remarque</strong> : il existe une seconde possibilité en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(4)</span></code></p>
-</section>
-</section>
-<section id="ajouter-un-nouveau-train-a-l-horaire">
-<h2>Ajouter un nouveau train à l’horaire<a class="headerlink" href="#ajouter-un-nouveau-train-a-l-horaire" title="Permalink to this headline">#</a></h2>
-<p><strong>Rappel</strong> : on ajoute une nouvelle ligne à la fin avec la fonction <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un nouveau train</span>
-<span class="n">train5</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;RE&#39;</span><span class="p">,</span> <span class="s1">&#39;8h58&#39;</span><span class="p">,</span> <span class="s1">&#39;Annemasse&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="c1"># Ajout de ce train à l&#39;horaire</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
-<span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
-</pre></div>
-</div>
-</div>
-</div>
-<p>On peut ajouter une nouvelle ligne à la position <code class="docutils literal notranslate"><span class="pre">i</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">list.insert(i,</span> <span class="pre">element)</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train6</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;8h57&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">train6</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
-</pre></div>
-</div>
-</div>
-</div>
-<section id="modification-des-informations">
-<h3>Modification des informations<a class="headerlink" href="#modification-des-informations" title="Permalink to this headline">#</a></h3>
-<p>En cet hiver difficile, la ligne de contact souffre. Le train S4 pour Palézieux aura 30 minutes de retard. Il faut modifier l’entrée et ajouter l’information</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Modification de l&#39;horaire du S4</span>
-<span class="n">horaire</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;8h55 + 30min&#39;</span>
-<span class="c1">## Ajout de l&#39;information</span>
-<span class="n">horaire</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Problème sur la ligne de contact&#39;</span><span class="p">)</span>
-<span class="c1">## Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="suppression-de-train">
-<h3>Suppression de train<a class="headerlink" href="#suppression-de-train" title="Permalink to this headline">#</a></h3>
-<p>A mesure que le temps passe, les trains entrent en gare, prennent des voyageurs et en laissent descendre d’autres, puis repartent verts leurs destinations. Il faut donc les supprimer de l’horaire</p>
-<p><strong>Rappel</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">list.remove(x)</span></code> si l’élément <code class="docutils literal notranslate"><span class="pre">x</span></code> existe</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">list.pop()</span></code> le dernier élément</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">list.clear()</span></code> tous les éléments</p></li>
-</ul>
-<p>On enlève l’élément <code class="docutils literal notranslate"><span class="pre">train5</span></code> :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppression du train numéro 5</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
-<span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppression du dernier train</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="c1"># affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55 + 30min&#39;, &#39;Palézieux&#39;, 3, &#39;Problème sur la ligne de contact&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Effacement de tous les trains. Nous sommes en fin de service</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
-<p>Voici votre horaire de départ.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création des trains</span>
-<span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">train2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;8h51&#39;</span><span class="p">,</span> <span class="s1">&#39;Aigle&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">train3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">train4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;8h57&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">train5</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RE&#39;</span><span class="p">,</span><span class="s1">&#39;8h58&#39;</span><span class="p">,</span><span class="s1">&#39;Annemasse&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">train3</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
-<span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span> <span class="n">train2</span><span class="p">,</span> <span class="n">train3</span><span class="p">,</span> <span class="n">train4</span><span class="p">,</span> <span class="n">train5</span><span class="p">]</span>
-<span class="c1"># Affichage de l&#39;horaire</span>
-<span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">horaire</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train1</span><span class="p">)</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train2</span><span class="p">)</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>on peut afficher l’entier de l’horaire dans la console sous une forme agréable à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">horaire</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1785,24 +1572,35 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
 [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
 [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Ajoutez à l’horaire le régional S1 pour Bussigny qui part à 9h01 sur voie 1</p></li>
-<li><p>Il est 8h50, le régional S22 pour Bussigny et Vufflens-la-Ville est parti. Supprimez-le de l’horaire</p></li>
-<li><p>Un problème sur la ligne entre Vevey et Lausanne provoque un retard de 20 minutes. Ajoutez cette information pour le RE de 8h58 pour Annemasse</p></li>
-</ol>
 </section>
-<section id="exercice-6-affichage-des-quais">
-<h2>Exercice 6 (Affichage des quais)<a class="headerlink" href="#exercice-6-affichage-des-quais" title="Permalink to this headline">#</a></h2>
-<p>Chaque quai possède un <strong>afficheur de quai</strong>. Cet afficheur de quai utilise les mêmes informations que l’horaire complet. En utilisant un test conditionnel, affichez uniquement les trains qui partent du quai 4.</p>
+<section id="exercice-6-ajouter-un-train">
+<h2>Exercice 6 : ajouter un train<a class="headerlink" href="#exercice-6-ajouter-un-train" title="Permalink to this headline">#</a></h2>
+<p>Ajoutez à votre horaire le S1 pour Lausanne en voie 4 qui part à 8h57</p>
 </section>
-<section id="exercice-7-annonce-vocale">
-<h2>Exercice 7 (Annonce vocale)<a class="headerlink" href="#exercice-7-annonce-vocale" title="Permalink to this headline">#</a></h2>
+<section id="exercice-7-perturbations">
+<h2>Exercice 7 : perturbations !<a class="headerlink" href="#exercice-7-perturbations" title="Permalink to this headline">#</a></h2>
+<p>En cet hiver difficile, la ligne de contact souffre. Le train S4 pour Palézieux aura 20 minutes de retard. Il faut modifier l’entrée et ajouter une information dans la colonne <strong>remarques</strong> de l’horaire. Attention : uniquement pour ce train -là !</p>
+<p>Le résultat devrait être :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55 + 30min&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Problème sur la ligne de contact&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Modifiez donc votre horaire en utilisant uniquement la variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code></p>
+</section>
+<section id="exercice-8-mince-j-ai-rate-mon-train">
+<h2>Exercice 8 : “Mince ! J’ai raté mon train”<a class="headerlink" href="#exercice-8-mince-j-ai-rate-mon-train" title="Permalink to this headline">#</a></h2>
+<p>A mesure que le temps passe, les trains entrent en gare, prennent des voyageurs et en laissent descendre d’autres, puis repartent verts leurs destinations. Il faut donc les supprimer de l’horaire affiché en gare.</p>
+<p>Supprimez le premier train de l’horaire (celui qui se trouve à l’index <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</section>
+<section id="exercice-9-l-affichage-sur-les-quais">
+<h2>Exercice 9 L’affichage sur les quais<a class="headerlink" href="#exercice-9-l-affichage-sur-les-quais" title="Permalink to this headline">#</a></h2>
+<p>Chaque quai possède un <strong>afficheur de quai</strong>. Cet afficheur de quai utilise les mêmes informations que l’horaire complet. En utilisant un test conditionnel <code class="docutils literal notranslate"><span class="pre">if</span></code>, affichez uniquement les trains qui partent du quai 4.</p>
+</section>
+<section id="exercice-10-simone-et-l-annonce-vocale">
+<h2>Exercice 10 : Simone et l’annonce vocale<a class="headerlink" href="#exercice-10-simone-et-l-annonce-vocale" title="Permalink to this headline">#</a></h2>
 <p>Il est possible de <em>faire parler</em> votre ordinateur. En important le module:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
 </pre></div>
@@ -1816,8 +1614,8 @@ title="Print to PDF"
 </div>
 <p>Annoncez les trains arrivant sur voie 4</p>
 </section>
-<section id="exercice-8-annonce-vocale-complete-avec-jingle">
-<h2>Exercice 8 : Annonce vocale complète (avec jingle)<a class="headerlink" href="#exercice-8-annonce-vocale-complete-avec-jingle" title="Permalink to this headline">#</a></h2>
+<section id="exercice-10-annonce-vocale-complete-avec-jingle">
+<h2>Exercice 10 : Annonce vocale complète (avec jingle)<a class="headerlink" href="#exercice-10-annonce-vocale-complete-avec-jingle" title="Permalink to this headline">#</a></h2>
 <p>Il est finalement possible de faire jouer le jingle des CFF avant l’annonce en important le module <code class="docutils literal notranslate"><span class="pre">playsound</span></code> :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">playsound</span>
 </pre></div>
