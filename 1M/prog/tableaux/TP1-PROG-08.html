@@ -1093,11 +1093,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
-   Affichage de l’horaire complet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-6-ajouter-un-train">
    Exercice 6 : ajouter un train
   </a>
@@ -1110,6 +1105,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-8-mince-j-ai-rate-mon-train">
    Exercice 8 : “Mince ! J’ai raté mon train”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
+   Affichage de l’horaire complet
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1231,11 +1231,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
-   Affichage de l’horaire complet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-6-ajouter-un-train">
    Exercice 6 : ajouter un train
   </a>
@@ -1248,6 +1243,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-8-mince-j-ai-rate-mon-train">
    Exercice 8 : “Mince ! J’ai raté mon train”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#affichage-de-l-horaire-complet">
+   Affichage de l’horaire complet
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1548,41 +1548,6 @@ title="Print to PDF"
 </ul>
 <p>Cet exercice demande un peu de réflexion : vous manipulez la variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code> qui est une liste de listes ! Il vous faut donc accéder à l’élément qui se trouve en troisième position dans la liste qui se trouve en deuxième position dans la liste de listes.</p>
 </section>
-<section id="affichage-de-l-horaire-complet">
-<h2>Affichage de l’horaire complet<a class="headerlink" href="#affichage-de-l-horaire-complet" title="Permalink to this headline">#</a></h2>
-<p>Si notre horaire est construit ainsi :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">train2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;8h51&#39;</span><span class="p">,</span> <span class="s1">&#39;Aigle&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">train3</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-
-<span class="n">horaire</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train1</span><span class="p">)</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train2</span><span class="p">)</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>on peut afficher l’entier de l’horaire dans la console sous une forme agréable à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> .</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">horaire</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="exercice-6-ajouter-un-train">
 <h2>Exercice 6 : ajouter un train<a class="headerlink" href="#exercice-6-ajouter-un-train" title="Permalink to this headline">#</a></h2>
 <p>Ajoutez à votre horaire le S1 pour Lausanne en voie 4 qui part à 8h57</p>
@@ -1600,6 +1565,44 @@ title="Print to PDF"
 <h2>Exercice 8 : “Mince ! J’ai raté mon train”<a class="headerlink" href="#exercice-8-mince-j-ai-rate-mon-train" title="Permalink to this headline">#</a></h2>
 <p>A mesure que le temps passe, les trains entrent en gare, prennent des voyageurs et en laissent descendre d’autres, puis repartent vers leur destination. Il faut donc les supprimer de l’horaire affiché en gare.</p>
 <p>Supprimez le premier train de l’horaire (celui qui se trouve à l’index <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</section>
+<section id="affichage-de-l-horaire-complet">
+<h2>Affichage de l’horaire complet<a class="headerlink" href="#affichage-de-l-horaire-complet" title="Permalink to this headline">#</a></h2>
+<p>Si notre horaire est construit ainsi :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">train2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;8h51&#39;</span><span class="p">,</span> <span class="s1">&#39;Aigle&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">train3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">train4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;8h57&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">horaire</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train1</span><span class="p">)</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train2</span><span class="p">)</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train3</span><span class="p">)</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>on peut afficher l’entier de l’horaire dans la console sous une forme agréable à l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">horaire</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
+[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+[&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]
+[&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercice-9-l-affichage-sur-les-quais">
 <h2>Exercice 9 L’affichage sur les quais<a class="headerlink" href="#exercice-9-l-affichage-sur-les-quais" title="Permalink to this headline">#</a></h2>
