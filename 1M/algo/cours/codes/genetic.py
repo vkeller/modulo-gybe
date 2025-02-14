@@ -13,16 +13,17 @@ def fitness(individu):
             ret += 1
     return ret
 
-taille = 100
-longueur = 100
-population = []
-population_selected = []
-pop_index = []
 
 # paramètres de l'algorithme
+taille = 100000
+longueur = 8
+population = []
+population_selected = []
 taux_mutation = 0.05
-taux_selection = 0.3
+taux_crossover = 0.3
 generations = 1000
+type_select = 3 # 1 = roulette, 2 = tournoi, 3 = élitisme
+
 
 # --------------------------------------------------
 # Initialisation de la population
@@ -33,61 +34,71 @@ for i in range(taille):
         individu.append(random.randint(0,1))
     population.append(individu)
 
-tmp = 0
-
 for m in range(generations):
     fitness_global = 0
-    pop_index.clear()
     
-    # --------------------------------------------------
-    # Evaluation
-    # --------------------------------------------------
-    for i in range(taille):
-#        print("Individu",i,"fitness = ",fitness(population[i]))
-        fitness_global += fitness(population[i])
-
-
     # --------------------------------------------------
     # Selection
     # --------------------------------------------------
-    for i in range(taille):
-        taux_s = random.random()
-        if taux_s < taux_selection :
-#            population_selected.append(population[i])
-            pop_index.append(i)
+    for i in range(0,taille,2):
+        # 1. roulette
+        if type_select == 1 :
+            r = random.randint(0,1)
+            if r == 1:
+                population_selected.append(population[i])
+                population_selected.append(population[i])
+            else:
+                population_selected.append(population[i+1])
+                population_selected.append(population[i+1])            
+        # 2. tournoi
+#        elif type_select == 2 :
 
-#    if len(population_selected)%2 == 1:
-    if len(pop_index)%2 == 1:
-        index_plus = random.randint(0,len(population)-1)
-#        population_selected.append(population[index_plus])
-        pop_index.append(index_plus)
+
+        # 3. élitisme
+        elif type_select == 3 :
+            if fitness(population[i]) >= fitness(population[i+1]) :
+                population_selected.append(population[i])
+                population_selected.append(population[i])
+            else:
+                population_selected.append(population[i+1])
+                population_selected.append(population[i+1])
+        
+        else:
+            print("Choisissez un type de sélection de population (1,2, ou 3 voir doc)")
+            break
 
     # --------------------------------------------------
     # Crossover
     # --------------------------------------------------
-#    for i in range(0,int(len(population_selected)),2):
-    for i in range(0,int(len(pop_index)),2):
-        point_of_crack = random.randint(0,longueur-1)
-        for n in range(point_of_crack,longueur,1):
-#            population_selected[i], population_selected[i+1] = population_selected[i+1], population_selected[i]
-            population[pop_index[i]][n], population[pop_index[i+1]][n] = population[pop_index[i+1]][n], population[pop_index[i]][n]
+    for i in range(0,int(len(population_selected)),2):
+        prob = random.random()
+        if prob < taux_crossover :
+            point_of_crack = random.randint(0,longueur-1)
+            for n in range(point_of_crack,longueur,1):
+                population_selected[i], population_selected[i+1] = population_selected[i+1], population_selected[i]
 
     # --------------------------------------------------
     # Mutations
     # --------------------------------------------------
-#    for i in range(0,int(len(population_selected)),2):
-    for i in range(0,int(len(pop_index)),2):
+    for i in range(0,int(len(population_selected)),2):
         taux_s = random.random()
         if taux_s < taux_mutation :
             point_of_mutation = random.randint(0,longueur-1)
-            if population[i][point_of_mutation] == 0:
-                population[i][point_of_mutation] = 1
+            if population_selected[i][point_of_mutation] == 0:
+                population_selected[i][point_of_mutation] = 1
             else:
-                population[i][point_of_mutation] = 0
-#             if population_selected[i] == 0:
-#                 population_selected[i] = 1
-#             else:
-#                 population_selected[i] = 0
-    
-    # Affichage fitness global
+                population_selected[i][point_of_mutation] = 0
+
+    # --------------------------------------------------
+    # Evaluation globale
+    # --------------------------------------------------
+    for i in range(taille):
+        fitness_global += fitness(population_selected[i])
     print("Fitness global. Generation",m,":",fitness_global)
+
+
+
+    population.clear()
+    for i in range(taille):
+        population.append(population_selected[i])
+    population_selected.clear()
