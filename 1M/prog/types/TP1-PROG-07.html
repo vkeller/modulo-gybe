@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="TP1-PROG-08 - Les listes (tableaux)" href="../tableaux/TP1-PROG-08.html" />
@@ -239,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/Cours6.html">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-06.html">
      C1-ALGO-06 : Algorithmes évolutionnistes
     </a>
    </li>
@@ -1066,18 +1068,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-ma-moyenne">
-   Exercice 6 : ma moyenne
+  <a class="reference internal nav-link" href="#exercice-6-equations-du-deuxieme-degre">
+   Exercice 6 : Equations du deuxième degré
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-pour-aller-plus-loin">
-   Exercice 7 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-7-ma-moyenne">
+   Exercice 7 : ma moyenne
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-pour-aller-encore-plus-loin">
-   Exercice 8 (pour aller encore plus loin)
+  <a class="reference internal nav-link" href="#exercice-8-pour-aller-plus-loin">
+   Exercice 8 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-pour-aller-encore-plus-loin">
+   Exercice 9 (pour aller encore plus loin)
   </a>
  </li>
 </ul>
@@ -1157,18 +1164,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-ma-moyenne">
-   Exercice 6 : ma moyenne
+  <a class="reference internal nav-link" href="#exercice-6-equations-du-deuxieme-degre">
+   Exercice 6 : Equations du deuxième degré
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-pour-aller-plus-loin">
-   Exercice 7 (pour aller plus loin)
+  <a class="reference internal nav-link" href="#exercice-7-ma-moyenne">
+   Exercice 7 : ma moyenne
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-pour-aller-encore-plus-loin">
-   Exercice 8 (pour aller encore plus loin)
+  <a class="reference internal nav-link" href="#exercice-8-pour-aller-plus-loin">
+   Exercice 8 (pour aller plus loin)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9-pour-aller-encore-plus-loin">
+   Exercice 9 (pour aller encore plus loin)
   </a>
  </li>
 </ul>
@@ -1294,8 +1306,13 @@ title="Print to PDF"
 <p>Voici un algorigramme simplifié :</p>
 <p><img alt="calculette" src="../../../_images/calculatrice.png" /></p>
 </section>
-<section id="exercice-6-ma-moyenne">
-<h2>Exercice 6 : ma moyenne<a class="headerlink" href="#exercice-6-ma-moyenne" title="Permalink to this headline">#</a></h2>
+<section id="exercice-6-equations-du-deuxieme-degre">
+<h2>Exercice 6 : Equations du deuxième degré<a class="headerlink" href="#exercice-6-equations-du-deuxieme-degre" title="Permalink to this headline">#</a></h2>
+<p>Ecrivez un programme qui résoud une équation du deuxième degré du type <span class="math notranslate nohighlight">\(a x^2 + b x + c = 0\)</span>.</p>
+<p>Votre code est-il capable de calculer le résultat de <span class="math notranslate nohighlight">\(x^2 = -1\)</span> ? Sinon, que faut-il modifier ?</p>
+</section>
+<section id="exercice-7-ma-moyenne">
+<h2>Exercice 7 : ma moyenne<a class="headerlink" href="#exercice-7-ma-moyenne" title="Permalink to this headline">#</a></h2>
 <p>Écrivez un programme Python qui demande à l’utilisateur de saisir trois notes, stocke ces notes dans une liste, calcule la moyenne des notes à l’aide de la liste, puis affiche la moyenne avec deux décimales.
 Instructions :</p>
 <ul class="simple">
@@ -1305,12 +1322,12 @@ Instructions :</p>
 <li><p>Affichez la moyenne avec deux décimales.</p></li>
 </ul>
 </section>
-<section id="exercice-7-pour-aller-plus-loin">
-<h2>Exercice 7 (pour aller plus loin)<a class="headerlink" href="#exercice-7-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<section id="exercice-8-pour-aller-plus-loin">
+<h2>Exercice 8 (pour aller plus loin)<a class="headerlink" href="#exercice-8-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
 <p>Même donnée que l’exercice 6 mais avec toutes les disciplines. Vous devez obtenir la moyenne de chaque branche et la moyenne générale.</p>
 </section>
-<section id="exercice-8-pour-aller-encore-plus-loin">
-<h2>Exercice 8 (pour aller encore plus loin)<a class="headerlink" href="#exercice-8-pour-aller-encore-plus-loin" title="Permalink to this headline">#</a></h2>
+<section id="exercice-9-pour-aller-encore-plus-loin">
+<h2>Exercice 9 (pour aller encore plus loin)<a class="headerlink" href="#exercice-9-pour-aller-encore-plus-loin" title="Permalink to this headline">#</a></h2>
 <p>Implémentez l’algorithme dit de “Promotion en 2M” décrit lors du <a class="reference external" href="https://vkeller.github.io/modulo-gybe/1M/algo/cours/Cours11.html">cours d’algorithmique</a> à votre calculateur de moyenne de l’exercice 6.</p>
 </section>
 </section>
