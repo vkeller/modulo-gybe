@@ -6,8 +6,20 @@
 import random
 import time
 
+## -------------------------------------------------
+## Pour graphique
 from matplotlib import pyplot as plt
 from matplotlib import animation
+
+# First set up the figure, the axis, and the plot element we want to animate
+fig = plt.figure()
+ax = plt.axes(xlim=(0, 2), ylim=(-2, 2))
+line, = ax.plot([], [], lw=2)
+
+def init():
+    line.set_data([], [])
+    return line,
+## -------------------------------------------------
 
 # Fonction d'objectif
 def fitness(individu):
@@ -16,7 +28,6 @@ def fitness(individu):
         if individu[i] == 1:
             ret += 1
     return ret
-
 
 # paramètres de l'algorithme
 taille = 400
@@ -28,7 +39,6 @@ taux_crossover = 0.5
 generations = 1000
 type_select = 3 # 1 = roulette, 2 = tournoi, 3 = élitisme
 
-
 # --------------------------------------------------
 # Initialisation de la population
 # --------------------------------------------------
@@ -38,9 +48,11 @@ for i in range(taille):
         individu.append(random.randint(0,1))
     population.append(individu)
 
-for generation in range(generations):
+
+
+def animate(gen):
     fitness_global = 0
-    
+
     # --------------------------------------------------
     # Selection
     # --------------------------------------------------
@@ -55,7 +67,7 @@ for generation in range(generations):
                 population_selected.append(population[i+1])
                 population_selected.append(population[i+1])            
         # 2. tournoi
-#        elif type_select == 2 :
+    #     elif type_select == 2 :
 
 
         # 3. élitisme
@@ -101,7 +113,7 @@ for generation in range(generations):
         fitness_global += fitness(population_selected[i])
         if fitness(population_selected[i]) == longueur:
             perfect += 1
-    print("Fitness global. Generation",generation,":",fitness_global, "(nbr individus cibles",perfect,")")
+    print("Fitness global. Generation",gen,":",fitness_global, "(nbr individus cibles",perfect,")")
 
 
     population.clear()
@@ -109,5 +121,14 @@ for generation in range(generations):
         population.append(population_selected[i])
     population_selected.clear()
 
-    
-    
+    # pour graphique
+    line.set_data(gen, fitness_global)
+    return line,    
+
+anim = animation.FuncAnimation(fig, animate, init_func=init,frames=200, interval=20, blit=True)
+#anim.save('basic_animation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+
+plt.show()
+
+#for i in range(generations):
+#    animate(i)

@@ -56,6 +56,7 @@ parts:
       - file: 1M/prog/piles/TP1-PROG-10
       - file: 1M/prog/cryptographie/TP1-PROG-11
       - file: 1M/prog/IO/TP1-PROG-12
+      - file: 1M/prog/revisions/TP1-PROG-13      
     - file: 1M/architecture/index
       sections:
       - file: 1M/architecture/fichiers/SystemeDeFichiers
