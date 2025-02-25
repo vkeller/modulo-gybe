@@ -11,4 +11,8 @@ for i in range(len(produits)):
         prix_final.append(prix[i])
 
 for i in range(len(produits)):
-    print(produits[i], prix_final[i])
+    if prix_final[i] == "Promo" :
+        print(produits[i], "est en promotion")
+    else:
+        print(produits[i], "est au prix de ", prix_final[i], "CHF")
+        
