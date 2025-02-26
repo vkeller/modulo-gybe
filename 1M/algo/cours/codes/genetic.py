@@ -19,13 +19,13 @@ def fitness(individu):
 
 
 # paramètres de l'algorithme
-taille = 400
-longueur = 32
+taille = 10
+longueur = 8
 population = []
 population_selected = []
 taux_mutation = 0.1
 taux_crossover = 0.5
-generations = 1000
+generations = 100
 type_select = 3 # 1 = roulette, 2 = tournoi, 3 = élitisme
 
 
@@ -99,6 +99,7 @@ for generation in range(generations):
     perfect = 0
     for i in range(taille):
         fitness_global += fitness(population_selected[i])
+        print("======>",population_selected[i])
         if fitness(population_selected[i]) == longueur:
             perfect += 1
     print("Fitness global. Generation",generation,":",fitness_global, "(nbr individus cibles",perfect,")")
