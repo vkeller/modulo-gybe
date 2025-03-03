@@ -39,6 +39,7 @@ parts:
       - file: 1M/algo/cours/C1-ALGO-10
       - file: 1M/algo/cours/C1-ALGO-11
       - file: 1M/algo/cours/C1-ALGO-12
+      - file: 1M/algo/cours/C1-ALGO-13
       - file: 1M/algo/cours/R1-ALGO-01
       - file: 1M/algo/cours/R1-ALGO-02
     - file: 1M/installation/installation
