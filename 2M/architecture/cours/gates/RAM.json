@@ -1,0 +1,19 @@
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [180, 300], id: 0, name: 'Entrée'},
+    in1: {type: 'in', pos: [190, 60], id: 1, name: 'Select', val: 1},
+    latch0: {type: 'latch-sr', pos: [710, 315], in: [2, 3], out: [4, 5], state: 1},
+    and0: {type: 'and', pos: [415, 110], in: [16, 17], out: 18},
+    and1: {type: 'and', pos: [495, 155], in: [19, 20], out: 21},
+    and2: {type: 'and', pos: [395, 260], in: [22, 23], out: 24},
+    and3: {type: 'and', pos: [475, 305], in: [25, 26], out: 27},
+    and4: {type: 'and', pos: [915, 175], in: [28, 29], out: 30},
+    and5: {type: 'and', pos: [995, 230], in: [31, 32], out: 33},
+    out1: {type: 'out', pos: [1140, 235], id: 35, name: 'Sortie'},
+    not0: {type: 'not', pos: [325, 370], in: 36, out: 37},
+    pass0: {type: 'pass', pos: [345, 165], in: 40, out: 41},
+    in2: {type: 'in', pos: [190, 160], id: 42, name: 'I/O'},
+  },
+  wires: [[18, 19], [1, 16], [24, 25], [30, 31], [33, 35], [1, 22], [41, 23], [41, 17], [0, 20], [0, 36], [37, 26], [21, 2], [27, 3], [4, 29], [1, 28], [42, 40], [41, 32]]
+}
