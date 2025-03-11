@@ -65,8 +65,9 @@ parts:
     - file: 1M/esdn/index
       sections:
       - file: 1M/esdn/cours/C1-ESDN-01
-      - file: 1M/esdn/cours/Cypherpunks
-      - file: 1M/esdn/cours/CapitalismeDeSurveillance
+      - file: 1M/esdn/cours/C1-ESDN-02
+      - file: 1M/esdn/cours/C1-ESDN-03
+      - file: 1M/esdn/cours/C1-ESDN-04
       - file: 1M/esdn/cours/LesReseaux
       - file: 1M/esdn/presentations/PresentationsESDN
     - file: 1M/jeux/index
