@@ -1,0 +1,1481 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>C1-ESDN-05 : Collectes de données : l’affaire Burrill &#8212; Education Numérique Ecole de maturité</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique" href="../presentations/TP1-ESDN-00.html" />
+    <link rel="prev" title="C1-ESDN-04 : Edward Snowden et la surveillance de masse" href="C1-ESDN-04.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Généralités
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../general/generalites.html">
+   Esprit critique, fraude, plagiat et ChatGPT
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../general/outils.html">
+   Outils utiles pour le cours d’informatique
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1ère année
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   DO Informatique 1M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../representation/index.html">
+   Représentation des données
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/C1-REDO-01.html">
+     C1-REDO-01 : Du monde physique au monde numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/C1-REDO-02.html">
+     C1-REDO-02 binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/C1-REDO-03.html">
+     C1-REDO-03 : codage de caractères
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/C1-REDO-04.html">
+     C1-REDO-04 : Opérations en binaire et en hexadécimal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/cours/R1-REDO-01.html">
+     R1-REDO-01 Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/TP1-REDO-01.html">
+     TP1-REDO-01 : les images matricielles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/TP1-REDO-02.html">
+     TP1-REDO-02 : Le son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../representation/tp/TP1-REDO-03.html">
+     TP1-REDO-03 : Types de fichiers et compression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../algo/index.html">
+   Algorithmique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-01.html">
+     C1-ALGO-01 : Introduction à l’algorithmique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-02.html">
+     C1-ALGO-02 : Des algorithmes aux algorigrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-03.html">
+     C1-ALGO-03 : Les jeux de Nim
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-04.html">
+     C1-ALGO-04 : Caractéristiques des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.html">
+     C1-ALGO-05.00 : Algorithmes classiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.1.html">
+     C1-ALGO-05.01 Algorithmes classiques (Recherche)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.2.html">
+     C1-ALGO-05.02 Algorithmes classiques (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-06.html">
+     C1-ALGO-06 : Algorithmes évolutionnistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-07.html">
+     C1-ALGO-07 : Des algorigrammes à leur programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-08.html">
+     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-09.html">
+     C1-ALGO-09 : L’horloge de la gare de St-Gallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-10.html">
+     C1-ALGO-10 - Introduction à la cryptologie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-11.html">
+     C1-ALGO-11 : Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-12.html">
+     C1-ALGO-12 : Les boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/C1-ALGO-13.html">
+     C1-ALGO-13 : Les algorithmes gloutons
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/R1-ALGO-01.html">
+     R1-ALGO-01 - révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/R1-ALGO-02.html">
+     R1-ALGO-02 : Révision Algorigramme + programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../algo/cours/R1-ALGO-03.html">
+     R1-ALGO-03 : Rappels algorigrammes - Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../installation/installation.html">
+   Environnement de développement
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../prog/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro1/TP1-PROG-01.html">
+     TP1-PROG-01 - Introduction à la programmation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/intro2/TP1-PROG-02.html">
+     TP1-PROG-02 - Introduction : les fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/TP1-PROG-03.html">
+     TP1-PROG-03 - La boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/boucles/TP1-PROG-04.html">
+     TP1-PROG-04 - Boucles
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     approfondissement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/conditions/TP1-PROG-05.html">
+     TP1-PROG-05 - Les tests conditionnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/dessinsanimes/TP1-PROG-06.html">
+     TP1-PROG-06 - Les dessins animés
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/types/TP1-PROG-07.html">
+     TP1-PROG-07 - Les variables en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/tableaux/TP1-PROG-08.html">
+     TP1-PROG-08 - Les listes (tableaux)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/files/TP1-PROG-09.html">
+     TP1-PROG-09 - Les Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/piles/TP1-PROG-10.html">
+     TP1-PROG-10 - Les Piles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/cryptographie/TP1-PROG-11.html">
+     TP1-PROG-11 : Introduction à la cryptographie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/IO/TP1-PROG-12.html">
+     TP1-PROG-12: Les entrées-sorties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prog/revisions/TP1-PROG-13.html">
+     TP1-PROG-13 : TP supplémentaire prog 1M
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../architecture/index.html">
+   Architecture
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../architecture/fichiers/SystemeDeFichiers.html">
+     TP1-ARCH-01 : Le système de fichiers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Enjeux sociaux
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="C1-ESDN-01.html">
+     C1-ESDN-01 : Enjeux sociaux du Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C1-ESDN-02.html">
+     C1-ESDN-02 : Le mouvement Cypherpunk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C1-ESDN-03.html">
+     C1-ESDN-03 : Le capitalisme de surveillance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C1-ESDN-04.html">
+     C1-ESDN-04 : Edward Snowden et la surveillance de masse
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     C1-ESDN-05 : Collectes de données : l’affaire Burrill
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../presentations/TP1-ESDN-00.html">
+     TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-ESDN-01.html">
+     TP1-ESDN-01 : Les réseaux informatique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../jeux/index.html">
+   Jeux informatiques et logiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeux/logique.html">
+     C1-JEUX-01 : Quizz de logique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2ème année
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../2M/index.html">
+   DO Informatique 2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/algo/index.html">
+   Algorithmique avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-01.html">
+     R2-ALGO-01 : Révision Algorithmes 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02-A.html">
+     R2-ALGO-02-A : Révision algorithmes (Recherche)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02-B.html">
+     R2-ALGO-02-B : Révision (Tri)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-01.html">
+     C2-ALGO-01 : Taille du problème
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-02.html">
+     C2-ALGO-02 : Complexité des algorithmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-03.html">
+     C2-ALGO-03 : Complexité des algorithmes (suite)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-04.html">
+     C2-ALGO-04 : Introduction à la théorie des graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">
+     C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02.html">
+     R1-ALGO-02 : Révision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/algo/R2-ALGO-03.html">
+     R1-ALGO-03 : Révision
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/prog/index.html">
+   Programmation avancée
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/revisions/R2-PROG-01.html">
+     R2-PROG-01 : Rappels programmation 1M
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-01.html">
+     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-02.html">
+     TP2-PROG-02 : Approche pratique de la complexité : Recherche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/luhn/TP2-PROG-03.html">
+     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/syracuse/TP2-PROG-05.html">
+     TP2-PROG-05 : Conjecture de Collatz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/dictionnaires/Dictionnaires2.html">
+     TP2-PROG-06 : Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/motdepasse/MotsDePasse.html">
+     TP2-PROG-07 : Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/hacking/TP2-PROG-08.html">
+     TP2-PROG-08: Coder et décoder comme les Romains
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">
+     TP2-PROG-09 : Les arbres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">
+     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/histoire/index.html">
+   Histoire de l’informatique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">
+     C2-HIST-01 : Préhistoire de l’informatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">
+     C2-HIST-02 : Histoire de l’informatique : le matériel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-03.html">
+     C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/histoire/C2-HIST-04.html">
+     C2-HIST-04 : Histoire des logiciels (la couche applicative)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/architecture/index.html">
+   Architecture et réseaux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-01.html">
+     C2-ARCH-01 : Compilation : du Python au langage machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-02.html">
+     C2-ARCH-02 : Architecture de Von Neumann
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-01.html">
+     C2-RESO-01 : Introduction aux réseaux informatiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-02.html">
+     C2-RESO-02 : L’adresse IP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">
+     TP2-ARCH-00 : Introduction avec un micro:bit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">
+     TP2-ARCH-01 : Les portes logiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">
+     TP2-ARCH-02 : Le nano-ordinateur RPi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-03.html">
+     TP2-ARCH-03 : Mise en réseau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-04.html">
+     TP2-ARCH-04 : Services réseau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-NOTE2.html">
+     TP2-ARCH-NOTE : Journal de bord
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-05.html">
+     TP2-ARCH-05 : Aviation : comprendre la transmission des aéronefs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-06.html">
+     TP2-ARCH-06 : RPi pour aller plus loin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/architecture/logidules/TP2-LOGI-01.html">
+     TP2-LOGI-01 : Les logidules
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/strategies/index.html">
+   Stratégie de résolution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-01.html">
+     C2-STRAT-01 : Stratégies de résolution de problèmes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">
+     C2-STRAT-02 : Gestion des erreurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
+     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-02.html">
+     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/machine-learning/index.html">
+   Intelligence artificielle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-00.html">
+     C2-IA-00 : Introduction à l’intelligence artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-01.html">
+     C2-IA-01 : Histoire de l’Intelligence Artificielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-02.html">
+     C2-IA-02 : Automates cellulaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-03.html">
+     C2-IA-03 : Apprentissage automatique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-04.html">
+     C2-IA-04 : Réseau de neurones artificiels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/machine-learning/tp/JeudelavieTP.html">
+     TP-IA-01 : Le jeu de la vie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../2M/esdn/index.html">
+   Enjeux sociaux du numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/environnement/TP2-ESDN-01.html">
+     TP2-ESDN-01 : L’environnement et le numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">
+     TP2-ESDN-02 : L’Art et le Numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../2M/esdn/women/P2-ESDN-02.html">
+     P2-ESDN-02 : Femmes dans l’informatique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  3C2M
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../3C2M/index.html">
+   MAN 3C &gt; 2M
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../3C2M/programmation/index.html">
+   Programmation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">
+     3C2M-PROG-00 : Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliographie
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../biblio.html">
+   Livres et sources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/esdn/cours/C1-ESDN-05.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/1M/esdn/cours/C1-ESDN-05.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#une-simple-image-postee-sur-un-reseau">
+   Une simple image postée sur un réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donnee-et-metadonnees">
+   Donnée et métadonnées
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#donnee">
+     Donnée
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadonnee">
+     Métadonnée
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collection-de-donnees">
+   Collection de données
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ou-finissent-ces-donnees">
+   Où finissent ces données ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#profilage">
+   Profilage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-pratique-msgr-jeffrey-burrill">
+   Cas pratique : Msgr Jeffrey Burrill
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consequences">
+     Conséquences
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources-pour-aller-plus-loin">
+   Sources : pour aller plus loin
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>C1-ESDN-05 : Collectes de données : l’affaire Burrill</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#une-simple-image-postee-sur-un-reseau">
+   Une simple image postée sur un réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#donnee-et-metadonnees">
+   Donnée et métadonnées
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#donnee">
+     Donnée
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadonnee">
+     Métadonnée
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collection-de-donnees">
+   Collection de données
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ou-finissent-ces-donnees">
+   Où finissent ces données ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#profilage">
+   Profilage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-pratique-msgr-jeffrey-burrill">
+   Cas pratique : Msgr Jeffrey Burrill
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consequences">
+     Conséquences
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources-pour-aller-plus-loin">
+   Sources : pour aller plus loin
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="head" src="../../../_images/header.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-esdn-05-collectes-de-donnees-l-affaire-burrill">
+<h1>C1-ESDN-05 : Collectes de données : l’affaire Burrill<a class="headerlink" href="#c1-esdn-05-collectes-de-donnees-l-affaire-burrill" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Comprendre ce qu’est une donnée. Mettre en relation les données et leur écosystème.</p></li>
+</ul>
+</section>
+<section id="une-simple-image-postee-sur-un-reseau">
+<h2>Une simple image postée sur un réseau<a class="headerlink" href="#une-simple-image-postee-sur-un-reseau" title="Permalink to this headline">#</a></h2>
+<p>A votre avis, quelle information se trouve encaspulée dans cette image tirée de mon album de vacances ?</p>
+<p><img alt="lezard" src="../../../_images/lezard.jpg" /></p>
+<p>En utilisant un outil d’extraction de méta données, voici l’information :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ExifTool</span> <span class="n">Version</span> <span class="n">Number</span>         <span class="p">:</span> <span class="mf">12.16</span>
+<span class="n">File</span> <span class="n">Name</span>                       <span class="p">:</span> <span class="mf">20250415_132848.</span><span class="n">jpg</span>
+<span class="n">Directory</span>                       <span class="p">:</span> <span class="o">.</span>
+<span class="n">File</span> <span class="n">Size</span>                       <span class="p">:</span> <span class="mf">3.9</span> <span class="n">MiB</span>
+<span class="n">File</span> <span class="n">Modification</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">29</span> <span class="mi">15</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">42</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">File</span> <span class="n">Access</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>           <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">29</span> <span class="mi">15</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">28</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">File</span> <span class="n">Inode</span> <span class="n">Change</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">29</span> <span class="mi">15</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">03</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">File</span> <span class="n">Permissions</span>                <span class="p">:</span> <span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>
+<span class="n">File</span> <span class="n">Type</span>                       <span class="p">:</span> <span class="n">JPEG</span>
+<span class="n">File</span> <span class="n">Type</span> <span class="n">Extension</span>             <span class="p">:</span> <span class="n">jpg</span>
+<span class="n">MIME</span> <span class="n">Type</span>                       <span class="p">:</span> <span class="n">image</span><span class="o">/</span><span class="n">jpeg</span>
+<span class="n">Exif</span> <span class="n">Byte</span> <span class="n">Order</span>                 <span class="p">:</span> <span class="n">Little</span><span class="o">-</span><span class="n">endian</span> <span class="p">(</span><span class="n">Intel</span><span class="p">,</span> <span class="n">II</span><span class="p">)</span>
+<span class="n">Make</span>                            <span class="p">:</span> <span class="n">samsung</span>
+<span class="n">Camera</span> <span class="n">Model</span> <span class="n">Name</span>               <span class="p">:</span> <span class="n">Galaxy</span> <span class="n">S24</span>
+<span class="n">Orientation</span>                     <span class="p">:</span> <span class="n">Horizontal</span> <span class="p">(</span><span class="n">normal</span><span class="p">)</span>
+<span class="n">X</span> <span class="n">Resolution</span>                    <span class="p">:</span> <span class="mi">72</span>
+<span class="n">Y</span> <span class="n">Resolution</span>                    <span class="p">:</span> <span class="mi">72</span>
+<span class="n">Resolution</span> <span class="n">Unit</span>                 <span class="p">:</span> <span class="n">inches</span>
+<span class="n">Software</span>                        <span class="p">:</span> <span class="n">S921BXXS5AYB6</span>
+<span class="n">Modify</span> <span class="n">Date</span>                     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">48</span>
+<span class="n">Y</span> <span class="n">Cb</span> <span class="n">Cr</span> <span class="n">Positioning</span>             <span class="p">:</span> <span class="n">Centered</span>
+<span class="n">Exposure</span> <span class="n">Time</span>                   <span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1112</span>
+<span class="n">F</span> <span class="n">Number</span>                        <span class="p">:</span> <span class="mf">2.4</span>
+<span class="n">Exposure</span> <span class="n">Program</span>                <span class="p">:</span> <span class="n">Program</span> <span class="n">AE</span>
+<span class="n">ISO</span>                             <span class="p">:</span> <span class="mi">25</span>
+<span class="n">Exif</span> <span class="n">Version</span>                    <span class="p">:</span> <span class="mi">0220</span>
+<span class="n">Date</span><span class="o">/</span><span class="n">Time</span> <span class="n">Original</span>              <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">48</span>
+<span class="n">Create</span> <span class="n">Date</span>                     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">48</span>
+<span class="n">Offset</span> <span class="n">Time</span>                     <span class="p">:</span> <span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Offset</span> <span class="n">Time</span> <span class="n">Original</span>            <span class="p">:</span> <span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Shutter</span> <span class="n">Speed</span> <span class="n">Value</span>             <span class="p">:</span> <span class="mi">1</span>
+<span class="n">Aperture</span> <span class="n">Value</span>                  <span class="p">:</span> <span class="mf">2.4</span>
+<span class="n">Brightness</span> <span class="n">Value</span>                <span class="p">:</span> <span class="mf">9.69</span>
+<span class="n">Exposure</span> <span class="n">Compensation</span>           <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Max</span> <span class="n">Aperture</span> <span class="n">Value</span>              <span class="p">:</span> <span class="mf">2.4</span>
+<span class="n">Metering</span> <span class="n">Mode</span>                   <span class="p">:</span> <span class="n">Center</span><span class="o">-</span><span class="n">weighted</span> <span class="n">average</span>
+<span class="n">Flash</span>                           <span class="p">:</span> <span class="n">No</span> <span class="n">Flash</span>
+<span class="n">Focal</span> <span class="n">Length</span>                    <span class="p">:</span> <span class="mf">7.0</span> <span class="n">mm</span>
+<span class="n">Sub</span> <span class="n">Sec</span> <span class="n">Time</span>                    <span class="p">:</span> <span class="mi">917</span>
+<span class="n">Sub</span> <span class="n">Sec</span> <span class="n">Time</span> <span class="n">Original</span>           <span class="p">:</span> <span class="mi">917</span>
+<span class="n">Sub</span> <span class="n">Sec</span> <span class="n">Time</span> <span class="n">Digitized</span>          <span class="p">:</span> <span class="mi">917</span>
+<span class="n">Flashpix</span> <span class="n">Version</span>                <span class="p">:</span> <span class="mi">0100</span>
+<span class="n">Color</span> <span class="n">Space</span>                     <span class="p">:</span> <span class="n">Uncalibrated</span>
+<span class="n">Exif</span> <span class="n">Image</span> <span class="n">Width</span>                <span class="p">:</span> <span class="mi">4000</span>
+<span class="n">Exif</span> <span class="n">Image</span> <span class="n">Height</span>               <span class="p">:</span> <span class="mi">3000</span>
+<span class="n">Exposure</span> <span class="n">Mode</span>                   <span class="p">:</span> <span class="n">Auto</span>
+<span class="n">White</span> <span class="n">Balance</span>                   <span class="p">:</span> <span class="n">Auto</span>
+<span class="n">Digital</span> <span class="n">Zoom</span> <span class="n">Ratio</span>              <span class="p">:</span> <span class="mf">7.42</span>
+<span class="n">Focal</span> <span class="n">Length</span> <span class="n">In</span> <span class="mi">35</span><span class="n">mm</span> <span class="n">Format</span>     <span class="p">:</span> <span class="mi">69</span> <span class="n">mm</span>
+<span class="n">Scene</span> <span class="n">Capture</span> <span class="n">Type</span>              <span class="p">:</span> <span class="n">Standard</span>
+<span class="n">Image</span> <span class="n">Unique</span> <span class="n">ID</span>                 <span class="p">:</span> <span class="n">F11XLPE00SM</span>
+<span class="n">GPS</span> <span class="n">Latitude</span> <span class="n">Ref</span>                <span class="p">:</span> <span class="n">North</span>
+<span class="n">GPS</span> <span class="n">Longitude</span> <span class="n">Ref</span>               <span class="p">:</span> <span class="n">East</span>
+<span class="n">GPS</span> <span class="n">Altitude</span> <span class="n">Ref</span>                <span class="p">:</span> <span class="n">Above</span> <span class="n">Sea</span> <span class="n">Level</span>
+<span class="n">Compression</span>                     <span class="p">:</span> <span class="n">JPEG</span> <span class="p">(</span><span class="n">old</span><span class="o">-</span><span class="n">style</span><span class="p">)</span>
+<span class="n">Thumbnail</span> <span class="n">Offset</span>                <span class="p">:</span> <span class="mi">1010</span>
+<span class="n">Thumbnail</span> <span class="n">Length</span>                <span class="p">:</span> <span class="mi">51797</span>
+<span class="ne">Warning</span>                         <span class="p">:</span> <span class="n">Bad</span> <span class="n">length</span> <span class="n">ICC_Profile</span> <span class="p">(</span><span class="n">length</span> <span class="mi">632</span><span class="p">)</span>
+<span class="n">Profile</span> <span class="n">CMM</span> <span class="n">Type</span>                <span class="p">:</span> 
+<span class="n">Profile</span> <span class="n">Version</span>                 <span class="p">:</span> <span class="mf">4.3</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Profile</span> <span class="n">Class</span>                   <span class="p">:</span> <span class="n">Display</span> <span class="n">Device</span> <span class="n">Profile</span>
+<span class="n">Color</span> <span class="n">Space</span> <span class="n">Data</span>                <span class="p">:</span> <span class="n">RGB</span>
+<span class="n">Profile</span> <span class="n">Connection</span> <span class="n">Space</span>        <span class="p">:</span> <span class="n">XYZ</span>
+<span class="n">Profile</span> <span class="n">Date</span> <span class="n">Time</span>               <span class="p">:</span> <span class="mi">2022</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Profile</span> <span class="n">File</span> <span class="n">Signature</span>          <span class="p">:</span> <span class="n">acsp</span>
+<span class="n">Primary</span> <span class="n">Platform</span>                <span class="p">:</span> <span class="n">Unknown</span> <span class="p">(</span><span class="n">SEC</span><span class="p">)</span>
+<span class="n">CMM</span> <span class="n">Flags</span>                       <span class="p">:</span> <span class="n">Not</span> <span class="n">Embedded</span><span class="p">,</span> <span class="n">Independent</span>
+<span class="n">Device</span> <span class="n">Manufacturer</span>             <span class="p">:</span> <span class="n">Unknown</span> <span class="p">(</span><span class="n">SEC</span><span class="p">)</span>
+<span class="n">Device</span> <span class="n">Model</span>                    <span class="p">:</span> 
+<span class="n">Device</span> <span class="n">Attributes</span>               <span class="p">:</span> <span class="n">Reflective</span><span class="p">,</span> <span class="n">Glossy</span><span class="p">,</span> <span class="n">Positive</span><span class="p">,</span> <span class="n">Color</span>
+<span class="n">Rendering</span> <span class="n">Intent</span>                <span class="p">:</span> <span class="n">Perceptual</span>
+<span class="n">Connection</span> <span class="n">Space</span> <span class="n">Illuminant</span>     <span class="p">:</span> <span class="mf">0.9642</span> <span class="mi">1</span> <span class="mf">0.82491</span>
+<span class="n">Profile</span> <span class="n">Creator</span>                 <span class="p">:</span> <span class="n">Unknown</span> <span class="p">(</span><span class="n">SEC</span><span class="p">)</span>
+<span class="n">Profile</span> <span class="n">ID</span>                      <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Profile</span> <span class="n">Description</span>             <span class="p">:</span> <span class="n">DCI</span><span class="o">-</span><span class="n">P3</span> <span class="n">D65</span> <span class="n">Gamut</span> <span class="k">with</span> <span class="n">sRGB</span> <span class="n">Transfer</span>
+<span class="n">Profile</span> <span class="n">Copyright</span>               <span class="p">:</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2022</span> <span class="n">Samsung</span> <span class="n">Electronics</span> <span class="n">Co</span><span class="o">.</span><span class="p">,</span> <span class="n">Ltd</span><span class="o">.</span>
+<span class="n">Media</span> <span class="n">White</span> <span class="n">Point</span>               <span class="p">:</span> <span class="mf">0.9642</span> <span class="mi">1</span> <span class="mf">0.82491</span>
+<span class="n">Chromatic</span> <span class="n">Adaptation</span>            <span class="p">:</span> <span class="mf">1.04781</span> <span class="mf">0.02289</span> <span class="o">-</span><span class="mf">0.05013</span> <span class="mf">0.02954</span> <span class="mf">0.99048</span> <span class="o">-</span><span class="mf">0.01704</span> <span class="o">-</span><span class="mf">0.00923</span> <span class="mf">0.01505</span> <span class="mf">0.75214</span>
+<span class="n">Red</span> <span class="n">Matrix</span> <span class="n">Column</span>               <span class="p">:</span> <span class="mf">0.51508</span> <span class="mf">0.24117</span> <span class="o">-</span><span class="mf">0.00105</span>
+<span class="n">Green</span> <span class="n">Matrix</span> <span class="n">Column</span>             <span class="p">:</span> <span class="mf">0.29195</span> <span class="mf">0.69223</span> <span class="mf">0.04189</span>
+<span class="n">Blue</span> <span class="n">Matrix</span> <span class="n">Column</span>              <span class="p">:</span> <span class="mf">0.15718</span> <span class="mf">0.06659</span> <span class="mf">0.78455</span>
+<span class="n">Red</span> <span class="n">Tone</span> <span class="n">Reproduction</span> <span class="n">Curve</span>     <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">32</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+<span class="n">Green</span> <span class="n">Tone</span> <span class="n">Reproduction</span> <span class="n">Curve</span>   <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">32</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+<span class="n">Blue</span> <span class="n">Tone</span> <span class="n">Reproduction</span> <span class="n">Curve</span>    <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">32</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+<span class="n">XMP</span> <span class="n">Toolkit</span>                     <span class="p">:</span> <span class="n">Adobe</span> <span class="n">XMP</span> <span class="n">Core</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">Version</span>                         <span class="p">:</span> <span class="mf">1.0</span>
+<span class="n">Directory</span> <span class="n">Item</span> <span class="n">Semantic</span>         <span class="p">:</span> <span class="n">Primary</span>
+<span class="n">Directory</span> <span class="n">Item</span> <span class="n">Mime</span>             <span class="p">:</span> <span class="n">image</span><span class="o">/</span><span class="n">jpeg</span>
+<span class="n">Directory</span> <span class="n">Item</span> <span class="n">Length</span>           <span class="p">:</span> <span class="mi">185484</span>
+<span class="n">MPF</span> <span class="n">Version</span>                     <span class="p">:</span> <span class="mi">0100</span>
+<span class="n">Number</span> <span class="n">Of</span> <span class="n">Images</span>                <span class="p">:</span> <span class="mi">2</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="n">Flags</span>                  <span class="p">:</span> <span class="p">(</span><span class="n">none</span><span class="p">)</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="n">Format</span>                 <span class="p">:</span> <span class="n">JPEG</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="n">Type</span>                   <span class="p">:</span> <span class="n">Undefined</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="n">Length</span>                 <span class="p">:</span> <span class="mi">185484</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="n">Start</span>                  <span class="p">:</span> <span class="mi">3913453</span>
+<span class="n">Dependent</span> <span class="n">Image</span> <span class="mi">1</span> <span class="n">Entry</span> <span class="n">Number</span>  <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Dependent</span> <span class="n">Image</span> <span class="mi">2</span> <span class="n">Entry</span> <span class="n">Number</span>  <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Image</span> <span class="n">Width</span>                     <span class="p">:</span> <span class="mi">4000</span>
+<span class="n">Image</span> <span class="n">Height</span>                    <span class="p">:</span> <span class="mi">3000</span>
+<span class="n">Encoding</span> <span class="n">Process</span>                <span class="p">:</span> <span class="n">Baseline</span> <span class="n">DCT</span><span class="p">,</span> <span class="n">Huffman</span> <span class="n">coding</span>
+<span class="n">Bits</span> <span class="n">Per</span> <span class="n">Sample</span>                 <span class="p">:</span> <span class="mi">8</span>
+<span class="n">Color</span> <span class="n">Components</span>                <span class="p">:</span> <span class="mi">3</span>
+<span class="n">Y</span> <span class="n">Cb</span> <span class="n">Cr</span> <span class="n">Sub</span> <span class="n">Sampling</span>            <span class="p">:</span> <span class="n">YCbCr4</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span> <span class="p">(</span><span class="mi">2</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">Time</span> <span class="n">Stamp</span>                      <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">49</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Aperture</span>                        <span class="p">:</span> <span class="mf">2.4</span>
+<span class="n">Image</span> <span class="n">Size</span>                      <span class="p">:</span> <span class="mi">4000</span><span class="n">x3000</span>
+<span class="n">Megapixels</span>                      <span class="p">:</span> <span class="mf">12.0</span>
+<span class="n">Scale</span> <span class="n">Factor</span> <span class="n">To</span> <span class="mi">35</span> <span class="n">mm</span> <span class="n">Equivalent</span><span class="p">:</span> <span class="mf">9.9</span>
+<span class="n">Shutter</span> <span class="n">Speed</span>                   <span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1112</span>
+<span class="n">Create</span> <span class="n">Date</span>                     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mf">48.917</span>
+<span class="n">Date</span><span class="o">/</span><span class="n">Time</span> <span class="n">Original</span>              <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mf">48.917</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Modify</span> <span class="n">Date</span>                     <span class="p">:</span> <span class="mi">2025</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">15</span> <span class="mi">13</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mf">48.917</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Thumbnail</span> <span class="n">Image</span>                 <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">51797</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+<span class="n">GPS</span> <span class="n">Altitude</span>                    <span class="p">:</span> <span class="mi">342</span> <span class="n">m</span> <span class="n">Above</span> <span class="n">Sea</span> <span class="n">Level</span>
+<span class="n">GPS</span> <span class="n">Latitude</span>                    <span class="p">:</span> <span class="mi">44</span> <span class="n">deg</span> <span class="mi">43</span><span class="s1">&#39; 38.83&quot; N</span>
+<span class="n">GPS</span> <span class="n">Longitude</span>                   <span class="p">:</span> <span class="mi">8</span> <span class="n">deg</span> <span class="mi">4</span><span class="s1">&#39; 48.89&quot; E</span>
+<span class="n">MP</span> <span class="n">Image</span> <span class="mi">2</span>                      <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">185484</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+<span class="n">Circle</span> <span class="n">Of</span> <span class="n">Confusion</span>             <span class="p">:</span> <span class="mf">0.003</span> <span class="n">mm</span>
+<span class="n">Field</span> <span class="n">Of</span> <span class="n">View</span>                   <span class="p">:</span> <span class="mf">29.2</span> <span class="n">deg</span>
+<span class="n">Focal</span> <span class="n">Length</span>                    <span class="p">:</span> <span class="mf">7.0</span> <span class="n">mm</span> <span class="p">(</span><span class="mi">35</span> <span class="n">mm</span> <span class="n">equivalent</span><span class="p">:</span> <span class="mf">69.0</span> <span class="n">mm</span><span class="p">)</span>
+<span class="n">GPS</span> <span class="n">Position</span>                    <span class="p">:</span> <span class="mi">44</span> <span class="n">deg</span> <span class="mi">43</span><span class="s1">&#39; 38.83&quot; N, 8 deg 4&#39;</span> <span class="mf">48.89</span><span class="s2">&quot; E</span>
+<span class="n">Hyperfocal</span> <span class="n">Distance</span>             <span class="p">:</span> <span class="mf">6.70</span> <span class="n">m</span>
+<span class="n">Light</span> <span class="n">Value</span>                     <span class="p">:</span> <span class="mf">14.6</span>
+</pre></div>
+</div>
+<p>On peut en déduire que :</p>
+<ol class="simple">
+<li><p>je possède un Samsung Galaxy S24</p></li>
+<li><p>cette image a été prise le <strong>mardi 15 avril 2025 à 13h28</strong></p></li>
+<li><p>le lézard se trouve à <strong>une altitude de 342 mètres</strong> au-dessus de la mer.</p></li>
+<li><p>la position GPS du lézard est : <strong>44°43’38.83” N, 8°4’48.89”E</strong></p></li>
+</ol>
+<p>On se trouve bien à l’angle sud-ouest de la Tour de Barbaresco :</p>
+<p><img alt="barbaresco" src="../../../_images/barbaresco.png" /></p>
+</section>
+<section id="donnee-et-metadonnees">
+<h2>Donnée et métadonnées<a class="headerlink" href="#donnee-et-metadonnees" title="Permalink to this headline">#</a></h2>
+<section id="donnee">
+<h3>Donnée<a class="headerlink" href="#donnee" title="Permalink to this headline">#</a></h3>
+<p>Toute trace ou information issue d’une extraction en référence au dispositif dont elle est issue.</p>
+</section>
+<section id="metadonnee">
+<h3>Métadonnée<a class="headerlink" href="#metadonnee" title="Permalink to this headline">#</a></h3>
+<p>Donnée utilisée pour <strong>décrire ou définir</strong> une autre donnée.</p>
+</section>
+</section>
+<section id="collection-de-donnees">
+<h2>Collection de données<a class="headerlink" href="#collection-de-donnees" title="Permalink to this headline">#</a></h2>
+<p>Les données et les métadonnées sont évidemment collectées par les appareils électroniques personnels connectés (<em>Internet of Things</em> :</p>
+<ol class="simple">
+<li><p>Smartphones</p></li>
+<li><p>Ordinateurs</p></li>
+</ol>
+<p>Elles son aussi collectées par d’autre dispositifs :</p>
+<ol class="simple">
+<li><p>Organisations bancaires lors de <strong>transactions par carte bancaire</strong> : numéro de la carte, commerçant, localisation, etc..</p></li>
+<li><p>Commerces avec cartes de fidélité : une <strong>Migros carte cumulus</strong> ou <strong>COOP Supercard</strong> c’est un <em>like</em> sur un réseau social !</p></li>
+<li><p>Applications pour Smartphone qui <em>a priori</em> ne collectent rien (il est possible de vérifier les droits de ces applications)</p></li>
+<li><p>Compteur de temps passé sur des publicités (ou un certain type de média sur les réseaux sociaux)</p></li>
+<li><p>Cookies sur les sites web</p></li>
+</ol>
+<p><img alt="statistoca" src="../../../_images/statistica.jpg" /></p>
+</section>
+<section id="ou-finissent-ces-donnees">
+<h2>Où finissent ces données ?<a class="headerlink" href="#ou-finissent-ces-donnees" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><strong>Elles restent dans l’organisation qui les a collectées</strong>. Cela doit être le cas dans un monde idéal.</p></li>
+<li><p><strong>Elles sont vendues</strong>. Parfois légalement, parfois pas. C’est par exemple le cas de <a class="reference external" href="https://www.blick.ch/fr/suisse/une-veritable-mine-dor-migros-et-coop-revendent-les-donnees-de-leurs-clients-en-toute-legalite-id18997319.html?utm_medium=social&amp;utm_campaign=share-button&amp;utm_source=copy-to-clipboard">Migros et COOP</a> qui l’ont fait de manière légale. Les acheteurs de ces données sont des <strong>data brokers</strong> (ou <em>boursiers de données</em>)</p></li>
+<li><p><strong>Elles sont volées</strong> lors d’une attaque et peuvent finir par être disponible publiquement. Ce fût le cas notamment avec l’affaire</p></li>
+</ol>
+</section>
+<section id="profilage">
+<h2>Profilage<a class="headerlink" href="#profilage" title="Permalink to this headline">#</a></h2>
+<p>Le stockage de l’ensemble des données relatives à un individu ou un groupe d’individus permet ensuite d’en faire l’analyse. On parle d’<strong>agrégation de données</strong> et d’<strong>analyse sur les données agrégées</strong>.</p>
+<p>Cette étape permet de dresser un <strong>profil d’utilisateur</strong>. Il peut se faire de manière <strong>automatique</strong>. Le RGPD le défini comme <em>toute forme de traitement automatisé de données à caractère personnel consistant à utiliser ces données à caractère personnel pour évaluer certains aspects personnels relatifs à une personne physique (…)</em>. Ce même RGPD permet d’une certaine manière à l’utilisateur de s’opposer à une partie du traitement automatique.</p>
+<p>Un profile d’utilisateur peut donc contenir :</p>
+<ol class="simple">
+<li><p>Ses données personnelles (nom, prénom, âge, localisation)</p></li>
+<li><p>Ses habitudes d’achat (quoi, quand, quels commerces)</p></li>
+<li><p>les dates de ses vacances (hors scolaire, scolaire)</p></li>
+<li><p>Ses intérêts personnels</p></li>
+<li><p>Ses hobbies</p></li>
+<li><p>Etc..</p></li>
+</ol>
+</section>
+<section id="cas-pratique-msgr-jeffrey-burrill">
+<h2>Cas pratique : Msgr Jeffrey Burrill<a class="headerlink" href="#cas-pratique-msgr-jeffrey-burrill" title="Permalink to this headline">#</a></h2>
+<p>L’affaire a <a class="reference external" href="https://www.pillarcatholic.com/p/pillar-investigates-usccb-gen-sec">fait grand bruit en 2021</a>.</p>
+<p>En résumé :</p>
+<ol class="simple">
+<li><p>Msgr Burrill a été élu Secrétaire Général de la Conférence US des Évêques Catholiques en novembre 2020. Il a été choisi pour coordonnéer la réponse des évêques américains au sujets des abus sexuels qui ont secoué l’Eglise en 2018.</p></li>
+<li><p>Msgr Burril démissionne 9 mois après en juillet 2021.</p></li>
+</ol>
+<p>Que s’est-il passé ?</p>
+<p>Des journalistes ont simplement <strong>acheté des données</strong>. L’analyse de ces données ont permis de :</p>
+<ol class="simple">
+<li><p>récupérer les données de géolocalisation horodatées</p></li>
+<li><p>savoir quand il se trouvait à son bureau ainsi que dans chaque ville où se réunissait la conférence des évêques US</p></li>
+<li><p>remonter jusqu’à 2018</p></li>
+<li><p>retrouver les connexions de Burrill sur des réseaux de rencontre (notamment Grindr)</p></li>
+<li><p>Il est expressement ordonné aux responsables de l’église qu’ils soient abstinents</p></li>
+</ol>
+<section id="consequences">
+<h3>Conséquences<a class="headerlink" href="#consequences" title="Permalink to this headline">#</a></h3>
+<p>L’affaire a mis en lumière la problèmatique de la protection des données aux Etats-Unis et la revente des données.</p>
+</section>
+</section>
+<section id="sources-pour-aller-plus-loin">
+<h2>Sources : pour aller plus loin<a class="headerlink" href="#sources-pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev-enseigner.modulo-info.ch/enjx1/activ/donnees_reputation.html">https://dev-enseigner.modulo-info.ch/enjx1/activ/donnees_reputation.html</a></p></li>
+<li><p>Exodus : <a class="reference external" href="https://exodus-privacy.eu.org/fr/">https://exodus-privacy.eu.org/fr/</a></p></li>
+<li><p>The Pillar : Pillar Investigates: USCCB gen sec Burrill resignsaer sexual misconduct allegations</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./1M/esdn/cours"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="C1-ESDN-04.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">C1-ESDN-04 : Edward Snowden et la surveillance de masse</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../presentations/TP1-ESDN-00.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Keller<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
