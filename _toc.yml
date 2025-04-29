@@ -68,6 +68,7 @@ parts:
       - file: 1M/esdn/cours/C1-ESDN-02
       - file: 1M/esdn/cours/C1-ESDN-03
       - file: 1M/esdn/cours/C1-ESDN-04
+      - file: 1M/esdn/cours/C1-ESDN-05
       - file: 1M/esdn/presentations/TP1-ESDN-00
       - file: 1M/esdn/cours/TP1-ESDN-01
     - file: 1M/jeux/index
