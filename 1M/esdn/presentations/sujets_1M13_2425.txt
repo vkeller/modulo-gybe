@@ -1,16 +1,15 @@
-Valentin - Tuong - Loan : médecine
-Zoe - Aurea - Mathilde : réseaux sociaux
-Anisa - Zeynep - Yasmein : Markeintg et e-commerce
-Tamara - eleonor : droit et justice
+Valentin, Tuong, Loan	médecine
+Zoe, Aurea, Mathilde	réseaux sociaux
+Anisa, Zeynep, Yasmin	Markeintg et e-commerce
+Tamara, eleonor	droit et justice
 
-Elsora + (Hanna ne fait rien) : Fake news
-Emilie et Valentina : Impact environnemental du numérique
-Charlotte + Marine + Sarah : Art numlrique
-Ryhstina + Yasemin (pas là) et Brian : Réalité virtuelle
+Elsora, Hanna	Fake news
+Emilie, Valentina	Impact environnemental du numérique
+Charlotte, Marine, Sarah	Art numlrique
+Ryhstina, Brian	Réalité virtuelle
 
-Séraphin : Cyberviolences
+Séraphin	Cyberviolences
 
-Lara ??
-Elisa ??
-Eva ??
-
+Lara	
+Elisa	
+Eva	
