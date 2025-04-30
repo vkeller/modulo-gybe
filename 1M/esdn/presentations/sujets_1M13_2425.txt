@@ -1,7 +1,7 @@
-Valentin, Tuong, Loan	médecine
+Valentin, Tuong, Loan	médecine (ne foutent strictement rien à la deuxième double période. Tuong passe son temps sur son téléphone)
 Zoe, Aurea, Mathilde	réseaux sociaux
-Anisa, Zeynep, Yasmin	Markeintg et e-commerce
-Tamara, eleonor	droit et justice
+Anisa, Zeynep, Lara	Markeintg et e-commerce
+Tamara, eleonor	droit et justice (Tamara absente au deuxième double période)
 
 Elsora, Hanna	Fake news
 Emilie, Valentina	Impact environnemental du numérique
@@ -10,6 +10,6 @@ Ryhstina, Brian	Réalité virtuelle
 
 Séraphin	Cyberviolences
 
-Lara	
-Elisa	
-Eva	
+Elisa, Eva	Deepfake
+
+Yasemin ?
