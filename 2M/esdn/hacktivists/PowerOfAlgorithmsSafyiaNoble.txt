@@ -1,0 +1,25 @@
+Voici un résumé chapitre par chapitre de Algorithms of Oppression: How Search Engines Reinforce Racism de Safiya Umoja Noble, publié en 2018. Ce livre est un ouvrage critique majeur sur la manière dont les technologies de l’information, en particulier les moteurs de recherche, reproduisent des logiques de domination.
+Introduction – The Power of Algorithms
+
+Safiya Noble commence par poser sa thèse principale : les algorithmes ne sont ni neutres ni objectifs. Ils sont conçus dans des contextes sociaux, politiques et économiques particuliers, souvent imprégnés de biais racistes, sexistes et capitalistes. Elle revient sur le choc initial qui l’a poussée à écrire ce livre : la recherche Google de l’expression « Black girls » produisait des résultats hypersexualisés et pornographiques. Ce constat devient le point de départ de son enquête critique sur les biais algorithmiques.
+Chapitre 1 – A Society, Searching
+
+Ce chapitre interroge le rôle des moteurs de recherche dans la société contemporaine. Noble montre que ces outils sont devenus des formes d’"autorité informationnelle", au même titre que les bibliothèques ou les institutions éducatives, mais sans aucune régulation ni transparence. Elle critique le pouvoir quasi monopolistique de Google et le fait que le public considère les résultats de recherche comme objectifs, alors qu'ils sont hiérarchisés selon des logiques commerciales (comme le référencement payant).
+Chapitre 2 – Searching for Black Girls
+
+Ce chapitre développe plus en profondeur l’exemple de la recherche « Black girls ». Noble montre que les résultats déshumanisants ne sont pas une coïncidence, mais le produit d’un système économique (le capitalisme de surveillance) qui priorise les contenus populaires et lucratifs, souvent au détriment de contenus éducatifs ou représentatifs. Elle démontre comment ces résultats contribuent à la stigmatisation des jeunes filles noires dans l’espace numérique.
+Chapitre 3 – Searching for People and Communities
+
+Noble élargit son analyse aux représentations d'autres groupes marginalisés : Latinos, musulmans, autochtones, etc. Elle montre que les résultats de recherche tendent à essentialiser et à criminaliser ces communautés. Elle évoque aussi les effets délétères de ces biais sur les jeunes utilisateurs qui forment leur identité à travers des représentations numériques déformées.
+Chapitre 4 – The Future of Knowledge in the Public
+
+Ce chapitre critique la manière dont la connaissance est structurée et contrôlée par des entreprises privées. Noble explique que Google s’est imposé comme une nouvelle infrastructure cognitive, remplaçant les bibliothécaires et les éducateurs dans la hiérarchisation de l’information. Elle met en garde contre les dangers de la privatisation du savoir, notamment pour les publics déjà marginalisés, qui voient leur réalité effacée ou caricaturée.
+Chapitre 5 – The Power of Algorithms
+
+Ici, Noble s’intéresse au fonctionnement technique et politique des algorithmes. Elle déconstruit l’idée que les résultats sont "générés automatiquement" sans intention humaine, montrant que les choix de design, d’entraînement des données, et de hiérarchisation des résultats sont des actes politiques. Elle rappelle que ces choix ont des impacts concrets : sur les comportements, les opinions, voire les politiques publiques.
+Chapitre 6 – Representations, Politics, and Power
+
+Ce chapitre discute plus largement des liens entre représentation, pouvoir et technologie. Noble mobilise des penseurs critiques (bell hooks, Stuart Hall) pour montrer que la domination symbolique est au cœur de l’infrastructure algorithmique. Elle appelle à développer des systèmes plus éthiques, intégrant les perspectives des populations marginalisées dans leur conception même.
+Conclusion – The Ethics of Algorithms
+
+Dans sa conclusion, Noble plaide pour un changement structurel. Elle appelle à des politiques publiques pour réguler les entreprises technologiques, à plus de transparence sur les systèmes algorithmiques, et à une plus grande responsabilité sociale des ingénieurs. Elle souligne également l’importance des sciences sociales et critiques pour analyser et transformer le rapport entre technologie et pouvoir.
