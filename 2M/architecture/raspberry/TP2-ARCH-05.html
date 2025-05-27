@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP2-ARCH-05 : Sécurité dans le traffic aérien &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-ARCH-05 : Décoder le ciel &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -699,7 +699,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
+     TP2-ARCH-05 : Décoder le ciel
     </a>
    </li>
    <li class="toctree-l2">
@@ -1071,18 +1071,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#utilisation-des-messages-ads-b">
-   Utilisation des messages ADS-B
+  <a class="reference internal nav-link" href="#exercice-1-afficher-les-avions">
+   Exercice 1 : Afficher les avions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-mise-a-jour-automatique">
+   Exercice 2 : Mise à jour automatique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-compter-les-avions">
+   Exercice 3 : Compter les avions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
+   Exercice 4 (pour aller plus loin) : Affichage en temps réel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jack-sweeney-tracking-des-celebrites">
+   Jack Sweeney : tracking des célébrités
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#elon-musk-private-jet">
-     Elon Musk private jet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#taylor-swift">
-     Taylor Swift
+    <a class="reference internal nav-link" href="#privacy-icao-aircraft-address-program">
+     Privacy ICAO Aircraft Address program
     </a>
    </li>
   </ul>
@@ -1093,8 +1108,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mise-en-place">
-   Mise en place
+  <a class="reference internal nav-link" href="#annexes-mise-en-place">
+   ANNEXES : Mise en place
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1117,6 +1132,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#export-des-donnees-chaque-2-secondes">
+   Export des données chaque 2 secondes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-compter-le-nombre-d-avions-dans-une-zone-definie">
    Exercice 1 (compter le nombre d’avions dans une zone définie)
   </a>
@@ -1130,7 +1150,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP2-ARCH-05 : Sécurité dans le traffic aérien</h1>
+                <h1>TP2-ARCH-05 : Décoder le ciel</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1178,18 +1198,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#utilisation-des-messages-ads-b">
-   Utilisation des messages ADS-B
+  <a class="reference internal nav-link" href="#exercice-1-afficher-les-avions">
+   Exercice 1 : Afficher les avions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-mise-a-jour-automatique">
+   Exercice 2 : Mise à jour automatique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3-compter-les-avions">
+   Exercice 3 : Compter les avions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
+   Exercice 4 (pour aller plus loin) : Affichage en temps réel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jack-sweeney-tracking-des-celebrites">
+   Jack Sweeney : tracking des célébrités
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#elon-musk-private-jet">
-     Elon Musk private jet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#taylor-swift">
-     Taylor Swift
+    <a class="reference internal nav-link" href="#privacy-icao-aircraft-address-program">
+     Privacy ICAO Aircraft Address program
     </a>
    </li>
   </ul>
@@ -1200,8 +1235,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mise-en-place">
-   Mise en place
+  <a class="reference internal nav-link" href="#annexes-mise-en-place">
+   ANNEXES : Mise en place
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1224,6 +1259,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#export-des-donnees-chaque-2-secondes">
+   Export des données chaque 2 secondes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-compter-le-nombre-d-avions-dans-une-zone-definie">
    Exercice 1 (compter le nombre d’avions dans une zone définie)
   </a>
@@ -1238,15 +1278,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="atc_radar" src="../../../_images/radar.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-05-securite-dans-le-traffic-aerien">
-<h1>TP2-ARCH-05 : Sécurité dans le traffic aérien<a class="headerlink" href="#tp2-arch-05-securite-dans-le-traffic-aerien" title="Permalink to this headline">#</a></h1>
+  <p><img alt="atc_radar" src="../../../_images/elonjet.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-05-decoder-le-ciel">
+<h1>TP2-ARCH-05 : Décoder le ciel<a class="headerlink" href="#tp2-arch-05-decoder-le-ciel" title="Permalink to this headline">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>comprendre ce qu’est un protocole <em>on demand</em> ou <em>broadcast</em></p></li>
 <li><p>déduire l’architecture du système de surveillance du traffic aérien</p></li>
 <li><p>Afficher les différents aéronefs équipés ADS-B autour du gymnase <strong>en temps réel</strong></p></li>
+<li><p>Compter les avions passant au-dessus du gymnase et mettre en évidence les enjeux sociaux</p></li>
 </ul>
 </section>
 <section id="navigation-aerienne">
@@ -1512,13 +1553,135 @@ Appel radio (Callsign) : F_0
 </div>
 </div>
 </section>
-<section id="utilisation-des-messages-ads-b">
-<h2>Utilisation des messages ADS-B<a class="headerlink" href="#utilisation-des-messages-ads-b" title="Permalink to this headline">#</a></h2>
-<section id="elon-musk-private-jet">
-<h3>Elon Musk private jet<a class="headerlink" href="#elon-musk-private-jet" title="Permalink to this headline">#</a></h3>
+<section id="exercice-1-afficher-les-avions">
+<h2>Exercice 1 : Afficher les avions<a class="headerlink" href="#exercice-1-afficher-les-avions" title="Permalink to this headline">#</a></h2>
+<p>Tous les avions se trouvant au-dessus du Gymnase de Beaulieu sont stockés dans un fichier de <strong>type JSON</strong> : c’est un format de description et de transmission de données.</p>
+<p>Ce fichier se trouve à l’adresse <code class="docutils literal notranslate"><span class="pre">http://adresseIP_donnee_par_l'enseignant/adsb/avions.json</span></code></p>
+<p>En voici un exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;flight&quot;</span><span class="p">:</span> <span class="s2">&quot;AFR1234&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">48.8571</span><span class="p">,</span>
+        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mf">2.3542</span><span class="p">,</span>
+        <span class="s2">&quot;altitude&quot;</span><span class="p">:</span> <span class="mi">10200</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span><span class="p">:</span> <span class="mi">850</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-05-22T14:00:00&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;flight&quot;</span><span class="p">:</span> <span class="s2">&quot;BAW2020&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">48.8530</span><span class="p">,</span>
+        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mf">2.3600</span><span class="p">,</span>
+        <span class="s2">&quot;altitude&quot;</span><span class="p">:</span> <span class="mi">10400</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span><span class="p">:</span> <span class="mi">890</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-05-22T14:01:00&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+<p>Construisez une page en HTML permettant d’afficher les avions qui se trouvent au-dessus du gymnase de Beaulieu. Vous pouvez vous inspirer du fichier suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Avions au-dessus du Gymnase de Beaulieu&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #f0f0f0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Avions détectés au-dessus du Gymnase de Beaulieu&lt;/h1&gt;
+    &lt;table id=&quot;tableau-avions&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Vol&lt;/th&gt;
+                &lt;th&gt;Altitude (m)&lt;/th&gt;
+                &lt;th&gt;Vitesse (km/h)&lt;/th&gt;
+                &lt;th&gt;Latitude&lt;/th&gt;
+                &lt;th&gt;Longitude&lt;/th&gt;
+                &lt;th&gt;Heure&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;script&gt;
+        async function chargerDonnees() {
+            const response = await fetch(&#39;avions.json&#39;);
+            const data = await response.json();
+            const tbody = document.querySelector(&quot;#tableau-avions tbody&quot;);
+            tbody.innerHTML = &quot;&quot;;
+            data.forEach(avion =&gt; {
+                const row = `&lt;tr&gt;
+                    &lt;td&gt;${avion.flight}&lt;/td&gt;
+                    &lt;td&gt;${avion.altitude}&lt;/td&gt;
+                    &lt;td&gt;${avion.speed}&lt;/td&gt;
+                    &lt;td&gt;${avion.lat}&lt;/td&gt;
+                    &lt;td&gt;${avion.lon}&lt;/td&gt;
+                    &lt;td&gt;${new Date(avion.timestamp).toLocaleTimeString()}&lt;/td&gt;
+                &lt;/tr&gt;`;
+                tbody.innerHTML += row;
+            });
+        }
+
+        chargerDonnees();
+        setInterval(chargerDonnees, 10000); // Met à jour toutes les 10 sec
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Vous devez télécharger le fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code> et le placer au même niveau que le fichier HTML.</p>
 </section>
-<section id="taylor-swift">
-<h3>Taylor Swift<a class="headerlink" href="#taylor-swift" title="Permalink to this headline">#</a></h3>
+<section id="exercice-2-mise-a-jour-automatique">
+<h2>Exercice 2 : Mise à jour automatique<a class="headerlink" href="#exercice-2-mise-a-jour-automatique" title="Permalink to this headline">#</a></h2>
+<p>Pour mettre à jour automatiquement le fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code> à jour, il s’agit de le télécharger à intervalle régulier.</p>
+<p>Développez un programme Python qui permet de télécharger le fichier distant. Vous pouvez vous inspirer du code suivant :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># 🔗 URL du fichier à télécharger</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost/adsb/avions.json&quot;</span> 
+
+<span class="c1"># 📝 Nom du fichier local</span>
+<span class="n">nom_fichier</span> <span class="o">=</span> <span class="s2">&quot;aircrafts.json&quot;</span>
+
+<span class="c1"># 📥 Téléchargement direct du contenu</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fichier téléchargé sous : </span><span class="si">{</span><span class="n">nom_fichier</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fichier téléchargé sous : aircrafts.json
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-3-compter-les-avions">
+<h2>Exercice 3 : Compter les avions<a class="headerlink" href="#exercice-3-compter-les-avions" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme Python qui permet de compter les avions qui se trouvent dans un environnement proche du Gymnase de Beaulieu <strong>chaque minute</strong>.</p>
+</section>
+<section id="exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
+<h2>Exercice 4 (pour aller plus loin) : Affichage en temps réel<a class="headerlink" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel" title="Permalink to this headline">#</a></h2>
+<p>Affichez tous les avions se trouvant dans un périmètre donné autour du Gymnase de Beaulieu <strong>en temps réel</strong>. Vous pouvez vous aider d’outils extérieurs.</p>
+</section>
+<section id="jack-sweeney-tracking-des-celebrites">
+<h2>Jack Sweeney : tracking des célébrités<a class="headerlink" href="#jack-sweeney-tracking-des-celebrites" title="Permalink to this headline">#</a></h2>
+<p>Né en 2002, Jack Sweeney, alors étudiant à l’Université de Floride, a développé un <em>bot</em> publiant sur <em>X</em> (anciennement <em>Twitter</em>) les données en temps réel des avions privés de célébrités. Parmi elles, Elon Musk, Jeff Bezos, Mark Zuckerberg, Bill Gates, Donald Trump, Drake, Taylor Swift.</p>
+<p>Son système utilise les données librement accessibles provenant des messages ADS-B.</p>
+<p>Il a été poursuivi en justice par certaines célébrités, notamment Elon Musk, pour ses activités.</p>
+<section id="privacy-icao-aircraft-address-program">
+<h3>Privacy ICAO Aircraft Address program<a class="headerlink" href="#privacy-icao-aircraft-address-program" title="Permalink to this headline">#</a></h3>
+<p>En 2025, la FAA (<em>Federal Aviation Administration</em>) étasunienne a lancé le programme <strong>Privacy ICAO Aircraft Address</strong> qui permet, sous certaines conditions, à un avion d’utiliser un identifiant ICAO qui n’est pas relié à un opérateur. Cette procédure rend donc le tracking des avions qui en sont équipés, plus difficile. Ce programme fonctionne uniquement au-dessus du territoire des USA.</p>
 </section>
 </section>
 <section id="sources">
@@ -1531,10 +1694,13 @@ Appel radio (Callsign) : F_0
 <li><p>VFR Manual Skyguide (<a class="reference external" href="https://www.skybriefing.com/documents/10156/645440/eVFR_eGEN_fr_09_2024.pdf/517b354e-2420-2c9b-de8d-4aee95c31498?t=1724226017039">télécharger</a>)</p></li>
 <li><p>Taylor Swift private jets tracker (<a class="reference external" href="https://x.com/SwiftJetNextDay">sur X (ex-Twitter)</a>)</p></li>
 <li><p>Elon Musk jet tracker (<a class="reference external" href="https://x.com/ElonJetNextDay">sur X (ex-Twitter)</a>)</p></li>
+<li><p>ADS-B Privacy, FAA, 2025 <a class="reference external" href="https://www.faa.gov/air_traffic/technology/equipadsb/privacy">site web de la FAA</a></p></li>
+<li><p>Jack Sweeney sur <a class="reference external" href="https://en.wikipedia.org/wiki/Jack_Sweeney">wikipedia</a></p></li>
+<li><p>Le format JSON, JavaScript Object Notation, sur <a class="reference external" href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation">wikipedia </a></p></li>
 </ul>
 </section>
-<section id="mise-en-place">
-<h2>Mise en place<a class="headerlink" href="#mise-en-place" title="Permalink to this headline">#</a></h2>
+<section id="annexes-mise-en-place">
+<h2>ANNEXES : Mise en place<a class="headerlink" href="#annexes-mise-en-place" title="Permalink to this headline">#</a></h2>
 <p>Le matériel à disposition est le suivant :</p>
 <ol class="simple">
 <li><p>un <strong>serveur</strong> permettant d’enregistrer les messages ADS-B</p></li>
@@ -1571,13 +1737,87 @@ Appel radio (Callsign) : F_0
 </pre></div>
 </div>
 <p>Puis lancer :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dump1090</span><span class="o">-</span><span class="n">mutability</span> <span class="o">--</span><span class="n">net</span> <span class="o">--</span><span class="n">html</span><span class="o">-</span><span class="nb">dir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">adsb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dump1090</span><span class="o">-</span><span class="n">mutability</span> <span class="o">--</span><span class="n">interactive</span> <span class="o">--</span><span class="n">net</span> <span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">json</span> <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">dump1090</span><span class="o">-</span><span class="n">mutability</span>
 </pre></div>
 </div>
 <p>Les données peuvent ensuite être visionnées en temps réel sous :</p>
 <p><a class="reference external" href="http://localhost/adsb/aircraft.json">http://localhost/adsb/aircraft.json</a></p>
 </section>
 </section>
+</section>
+<section id="export-des-donnees-chaque-2-secondes">
+<h2>Export des données chaque 2 secondes<a class="headerlink" href="#export-des-donnees-chaque-2-secondes" title="Permalink to this headline">#</a></h2>
+<p>Pour exporter les données stockées dans <code class="docutils literal notranslate"><span class="pre">/run/dump1090-mutability</span></code> vers le dossier du serveur apache2 <code class="docutils literal notranslate"><span class="pre">/var/www/html/adsb</span></code> dans un fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code>, exécuter le script suivant :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Zone du gymnase (attention : mettre les bonnes latitude et longitude !!)</span>
+
+<span class="c1"># LAT_MIN = 46.52</span>
+<span class="c1"># LAT_MAX = 46.54</span>
+<span class="c1"># LON_MIN = 6.62</span>
+<span class="c1"># LON_MAX = 6.64</span>
+
+<span class="n">LAT_MIN</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">LAT_MAX</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">LON_MIN</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">LON_MAX</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;file:///run/dump1090-mutability/aircraft.json&quot;</span>
+
+<span class="k">def</span> <span class="nf">est_dans_zone</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">LAT_MIN</span> <span class="o">&lt;=</span> <span class="n">lat</span> <span class="o">&lt;=</span> <span class="n">LAT_MAX</span> <span class="ow">and</span> <span class="n">LON_MIN</span> <span class="o">&lt;=</span> <span class="n">lon</span> <span class="o">&lt;=</span> <span class="n">LON_MAX</span>
+
+<span class="k">def</span> <span class="nf">collecter</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="n">avions</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;aircraft&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+        <span class="n">avions_filtrés</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">avion</span> <span class="ow">in</span> <span class="n">avions</span><span class="p">:</span>
+            <span class="n">lat</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">)</span>
+            <span class="n">lon</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">lat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">lon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">est_dans_zone</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
+                <span class="n">vitessekm</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;speed&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">vitessekm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">vitessekm</span><span class="o">*</span><span class="mf">1.609344</span><span class="p">)</span>
+                <span class="n">altitudem</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;altitude&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">altitudem</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">altitudem</span><span class="o">*</span><span class="mf">0.3048</span><span class="p">)</span>
+                <span class="n">avions_filtrés</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;flight&quot;</span><span class="p">:</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;flight&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">lat</span><span class="p">,</span>
+                    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">lon</span><span class="p">,</span>
+                    <span class="s2">&quot;altitude&quot;</span><span class="p">:</span> <span class="n">altitudem</span><span class="p">,</span>
+                    <span class="s2">&quot;speed&quot;</span><span class="p">:</span> <span class="n">vitessekm</span><span class="p">,</span>
+                    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+                <span class="p">})</span>
+
+        <span class="c1"># Sauvegarde dans un fichier JSON</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/var/www/html/adsb/avions.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">avions_filtrés</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">avions_filtrés</span><span class="p">)</span><span class="si">}</span><span class="s2"> avions sauvegardés.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Décommenter la ligne suivante </span>
+<span class="c1">#    while True:</span>
+        <span class="n">collecter</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Répéter toutes les 2 secondes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erreur : &lt;urlopen error [Errno 2] No such file or directory: &#39;/run/dump1090-mutability/aircraft.json&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercice-1-compter-le-nombre-d-avions-dans-une-zone-definie">
 <h2>Exercice 1 (compter le nombre d’avions dans une zone définie)<a class="headerlink" href="#exercice-1-compter-le-nombre-d-avions-dans-une-zone-definie" title="Permalink to this headline">#</a></h2>
@@ -1594,13 +1834,13 @@ Appel radio (Callsign) : F_0
 <span class="n">LON_MIN</span> <span class="o">=</span> <span class="mf">6.42</span>
 <span class="n">LON_MAX</span> <span class="o">=</span> <span class="mf">6.82</span>
 
-<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://localhost/adsb/aircraft.json&quot;</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://localhost/adsb/avions.json&quot;</span>
 
 <span class="k">def</span> <span class="nf">est_dans_zone</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">LAT_MIN</span> <span class="o">&lt;=</span> <span class="n">lat</span> <span class="o">&lt;=</span> <span class="n">LAT_MAX</span> <span class="ow">and</span> <span class="n">LON_MIN</span> <span class="o">&lt;=</span> <span class="n">lon</span> <span class="o">&lt;=</span> <span class="n">LON_MAX</span>
 
-<span class="c1"># Modifier False vers True:</span>
-<span class="k">while</span> <span class="kc">False</span><span class="p">:</span>
+<span class="c1"># Décommenter la ligne suivante:</span>
+<span class="c1"># while True:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Récupère les données JSON</span>
         <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
