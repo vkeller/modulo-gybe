@@ -1066,28 +1066,28 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decodage-d-un-message-ads-b">
-   Décodage d’un message ADS-B
+  <a class="reference internal nav-link" href="#exercice-1-decodage-d-un-message-ads-b">
+   Exercice 1 : Décodage d’un message ADS-B
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-afficher-les-avions">
-   Exercice 1 : Afficher les avions
+  <a class="reference internal nav-link" href="#exercice-2-afficher-les-avions">
+   Exercice 2 : Afficher les avions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-mise-a-jour-automatique">
-   Exercice 2 : Mise à jour automatique
+  <a class="reference internal nav-link" href="#exercice-3-mise-a-jour-automatique">
+   Exercice 3 : Mise à jour automatique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-compter-les-avions">
-   Exercice 3 : Compter les avions
+  <a class="reference internal nav-link" href="#exercice-4-compter-les-avions">
+   Exercice 4 : Compter les avions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
-   Exercice 4 (pour aller plus loin) : Affichage en temps réel
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin-affichage-en-temps-reel">
+   Exercice 5 (pour aller plus loin) : Affichage en temps réel
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1193,28 +1193,28 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decodage-d-un-message-ads-b">
-   Décodage d’un message ADS-B
+  <a class="reference internal nav-link" href="#exercice-1-decodage-d-un-message-ads-b">
+   Exercice 1 : Décodage d’un message ADS-B
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-afficher-les-avions">
-   Exercice 1 : Afficher les avions
+  <a class="reference internal nav-link" href="#exercice-2-afficher-les-avions">
+   Exercice 2 : Afficher les avions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-mise-a-jour-automatique">
-   Exercice 2 : Mise à jour automatique
+  <a class="reference internal nav-link" href="#exercice-3-mise-a-jour-automatique">
+   Exercice 3 : Mise à jour automatique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-compter-les-avions">
-   Exercice 3 : Compter les avions
+  <a class="reference internal nav-link" href="#exercice-4-compter-les-avions">
+   Exercice 4 : Compter les avions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
-   Exercice 4 (pour aller plus loin) : Affichage en temps réel
+  <a class="reference internal nav-link" href="#exercice-5-pour-aller-plus-loin-affichage-en-temps-reel">
+   Exercice 5 (pour aller plus loin) : Affichage en temps réel
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1505,9 +1505,10 @@ title="Print to PDF"
 </table>
 </section>
 </section>
-<section id="decodage-d-un-message-ads-b">
-<h2>Décodage d’un message ADS-B<a class="headerlink" href="#decodage-d-un-message-ads-b" title="Permalink to this headline">#</a></h2>
+<section id="exercice-1-decodage-d-un-message-ads-b">
+<h2>Exercice 1 : Décodage d’un message ADS-B<a class="headerlink" href="#exercice-1-decodage-d-un-message-ads-b" title="Permalink to this headline">#</a></h2>
 <p>Il <em>suffit</em> de conaître la <strong>structure</strong> de la suite de bits codée en hexadécimal. Il est possible de le faire à la main mais nous préférerons utiliser une bibliothèque de fonctions (un <em>module externe</em>) qui le fait tout seul : <code class="docutils literal notranslate"><span class="pre">pyModeS</span></code></p>
+<p>En vous aidant d’une IA artificielle, complètez le code suivant pour afficher les éléments du message ADS-B reçu (typcode, callsign, etc..)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyModeS</span> <span class="k">as</span> <span class="nn">pms</span>
@@ -1519,49 +1520,19 @@ title="Print to PDF"
 <span class="c1"># 1️⃣ Adresse ICAO de l’avion (code unique de 24 bits)</span>
 <span class="n">icao</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">icao</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Adresse ICAO :&quot;</span><span class="p">,</span> <span class="n">icao</span><span class="p">,</span> <span class="s2">&quot;→ identifiant unique de l&#39;avion&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2️⃣ Type de message : cela détermine le contenu (position, vitesse, etc.)</span>
-<span class="n">tc</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">adsb</span><span class="o">.</span><span class="n">typecode</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Typecode :&quot;</span><span class="p">,</span> <span class="n">tc</span><span class="p">)</span>
-
-<span class="c1"># 3️⃣ Décodage selon le type de message</span>
-<span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">tc</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">:</span>
-    <span class="c1"># ✈️ Identification de vol (callsign)</span>
-    <span class="n">callsign</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">adsb</span><span class="o">.</span><span class="n">callsign</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appel radio (Callsign) :&quot;</span><span class="p">,</span> <span class="n">callsign</span><span class="p">)</span>
-
-<span class="k">elif</span> <span class="mi">9</span> <span class="o">&lt;=</span> <span class="n">tc</span> <span class="o">&lt;=</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="c1"># 📍 Position (partielle) et altitude</span>
-    <span class="n">altitude</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">adsb</span><span class="o">.</span><span class="n">altitude</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="n">cpr_format</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">adsb</span><span class="o">.</span><span class="n">cpr_format</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Altitude :&quot;</span><span class="p">,</span> <span class="n">altitude</span><span class="p">,</span> <span class="s2">&quot;ft&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Format CPR :&quot;</span><span class="p">,</span> <span class="s2">&quot;pair&quot;</span> <span class="k">if</span> <span class="n">cpr_format</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;impair&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ Pour obtenir la position complète, il faut un second message (CPR pair + impair)&quot;</span><span class="p">)</span>
-
-<span class="k">elif</span> <span class="mi">19</span> <span class="o">&lt;=</span> <span class="n">tc</span> <span class="o">&lt;=</span> <span class="mi">22</span><span class="p">:</span>
-    <span class="c1"># 🚀 Vitesse et cap</span>
-    <span class="n">speed</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">vrate</span> <span class="o">=</span> <span class="n">pms</span><span class="o">.</span><span class="n">adsb</span><span class="o">.</span><span class="n">velocity</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vitesse sol :&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="s2">&quot;nœuds&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cap :&quot;</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="s2">&quot;°&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Taux de montée/descente :&quot;</span><span class="p">,</span> <span class="n">vrate</span><span class="p">,</span> <span class="s2">&quot;ft/min&quot;</span><span class="p">)</span>
-
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Message non pris en charge dans cette démo simple.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Message ADS-B reçu : 8DA9C3F2201A0A3F8B096527B6F0
 Adresse ICAO : A9C3F2 → identifiant unique de l&#39;avion
-Typecode : 4
-Appel radio (Callsign) : F_0
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="exercice-1-afficher-les-avions">
-<h2>Exercice 1 : Afficher les avions<a class="headerlink" href="#exercice-1-afficher-les-avions" title="Permalink to this headline">#</a></h2>
+<section id="exercice-2-afficher-les-avions">
+<h2>Exercice 2 : Afficher les avions<a class="headerlink" href="#exercice-2-afficher-les-avions" title="Permalink to this headline">#</a></h2>
 <p>Tous les avions se trouvant au-dessus du Gymnase de Beaulieu sont stockés dans un fichier de <strong>type JSON</strong> : c’est un format de description et de transmission de données.</p>
 <p>Ce fichier se trouve à l’adresse <code class="docutils literal notranslate"><span class="pre">http://adresseIP_donnee_par_l'enseignant/adsb/avions.json</span></code></p>
 <p>En voici un exemple :</p>
@@ -1586,100 +1557,35 @@ Appel radio (Callsign) : F_0
 
 </pre></div>
 </div>
-<p>Construisez une page en HTML permettant d’afficher les avions qui se trouvent au-dessus du gymnase de Beaulieu. Vous pouvez vous inspirer du fichier suivant :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;fr&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Avions au-dessus du Gymnase de Beaulieu&lt;/title&gt;
-    &lt;style&gt;
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-        th { background-color: #f0f0f0; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Avions détectés au-dessus du Gymnase de Beaulieu&lt;/h1&gt;
-    &lt;table id=&quot;tableau-avions&quot;&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th&gt;Vol&lt;/th&gt;
-                &lt;th&gt;Altitude (m)&lt;/th&gt;
-                &lt;th&gt;Vitesse (km/h)&lt;/th&gt;
-                &lt;th&gt;Latitude&lt;/th&gt;
-                &lt;th&gt;Longitude&lt;/th&gt;
-                &lt;th&gt;Heure&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;&lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;script&gt;
-        async function chargerDonnees() {
-            const response = await fetch(&#39;avions.json&#39;);
-            const data = await response.json();
-            const tbody = document.querySelector(&quot;#tableau-avions tbody&quot;);
-            tbody.innerHTML = &quot;&quot;;
-            data.forEach(avion =&gt; {
-                const row = `&lt;tr&gt;
-                    &lt;td&gt;${avion.flight}&lt;/td&gt;
-                    &lt;td&gt;${avion.altitude}&lt;/td&gt;
-                    &lt;td&gt;${avion.speed}&lt;/td&gt;
-                    &lt;td&gt;${avion.lat}&lt;/td&gt;
-                    &lt;td&gt;${avion.lon}&lt;/td&gt;
-                    &lt;td&gt;${new Date(avion.timestamp).toLocaleTimeString()}&lt;/td&gt;
-                &lt;/tr&gt;`;
-                tbody.innerHTML += row;
-            });
-        }
-
-        chargerDonnees();
-        setInterval(chargerDonnees, 10000); // Met à jour toutes les 10 sec
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre></div>
-</div>
-<p>Vous devez télécharger le fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code> et le placer au même niveau que le fichier HTML.</p>
+<p>En vous aidant d’une IA générative, construisez une page en HTML permettant d’afficher les avions qui se trouvent au-dessus du gymnase de Beaulieu. Vous pouvez vous inspirer du fichier suivant :</p>
+<p>Vous devez télécharger le fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code> et le placer au même niveau que votre fichier HTML local.</p>
 </section>
-<section id="exercice-2-mise-a-jour-automatique">
-<h2>Exercice 2 : Mise à jour automatique<a class="headerlink" href="#exercice-2-mise-a-jour-automatique" title="Permalink to this headline">#</a></h2>
-<p>Pour mettre à jour automatiquement le fichier <code class="docutils literal notranslate"><span class="pre">avions.json</span></code> à jour, il s’agit de le télécharger à intervalle régulier.</p>
-<p>Développez un programme Python qui permet de télécharger le fichier distant. Vous pouvez vous inspirer du code suivant :</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="c1"># 🔗 URL du fichier à télécharger</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost/adsb/avions.json&quot;</span> 
-
-<span class="c1"># 📝 Nom du fichier local</span>
-<span class="n">nom_fichier</span> <span class="o">=</span> <span class="s2">&quot;aircrafts.json&quot;</span>
-
-<span class="c1"># 📥 Téléchargement direct du contenu</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fichier téléchargé sous : </span><span class="si">{</span><span class="n">nom_fichier</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fichier téléchargé sous : aircrafts.json
-</pre></div>
-</div>
-</div>
-</div>
+<section id="exercice-3-mise-a-jour-automatique">
+<h2>Exercice 3 : Mise à jour automatique<a class="headerlink" href="#exercice-3-mise-a-jour-automatique" title="Permalink to this headline">#</a></h2>
+<p>Modifiez votre fichier HTML pour qu’il se mette à joue automatiquement (le fichier JSON sur le serveur se met à jour automatiquement).</p>
 </section>
-<section id="exercice-3-compter-les-avions">
-<h2>Exercice 3 : Compter les avions<a class="headerlink" href="#exercice-3-compter-les-avions" title="Permalink to this headline">#</a></h2>
-<p>Ecrire un programme Python qui permet de compter les avions qui se trouvent dans un environnement proche du Gymnase de Beaulieu <strong>chaque minute</strong>.</p>
+<section id="exercice-4-compter-les-avions">
+<h2>Exercice 4 : Compter les avions<a class="headerlink" href="#exercice-4-compter-les-avions" title="Permalink to this headline">#</a></h2>
+<p>Ecrivez un programme Python qui :</p>
+<ol class="simple">
+<li><p>télécharge le fichier JSON (avions.json) depuis le serveur en local sur votre ordinateur</p></li>
+<li><p>lis le fichier local</p></li>
+<li><p>compte les avions qui se trouvent dans un périmètre donné autour du gymase</p>
+<ul class="simple">
+<li><p>la position du gymnase (latitude et longitude) se trouvent via google maps (prenez la position exacte de la salle 310)</p></li>
+<li><p>la position des avions est stockée dans le fichier JSON</p></li>
+<li><p>il faut calculer en degrés, minutes, secondes de latitude et longitude</p></li>
+</ul>
+</li>
+</ol>
 </section>
-<section id="exercice-4-pour-aller-plus-loin-affichage-en-temps-reel">
-<h2>Exercice 4 (pour aller plus loin) : Affichage en temps réel<a class="headerlink" href="#exercice-4-pour-aller-plus-loin-affichage-en-temps-reel" title="Permalink to this headline">#</a></h2>
-<p>Affichez tous les avions se trouvant dans un périmètre donné autour du Gymnase de Beaulieu <strong>en temps réel</strong>. Vous pouvez vous aider d’outils extérieurs.</p>
+<section id="exercice-5-pour-aller-plus-loin-affichage-en-temps-reel">
+<h2>Exercice 5 (pour aller plus loin) : Affichage en temps réel<a class="headerlink" href="#exercice-5-pour-aller-plus-loin-affichage-en-temps-reel" title="Permalink to this headline">#</a></h2>
+<p>Modifiez votre programme pour :</p>
+<ol class="simple">
+<li><p>qu’il télécharge le fichier à intervalle régulier (par exemple <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">secondes</span></code> le fichier depuis le serveur</p></li>
+<li><p>compte le nombre d’avions dans le périmètre donné durant ce même intervalle</p></li>
+</ol>
 </section>
 <section id="jack-sweeney-tracking-des-celebrites">
 <h2>Jack Sweeney : tracking des célébrités<a class="headerlink" href="#jack-sweeney-tracking-des-celebrites" title="Permalink to this headline">#</a></h2>
@@ -1774,7 +1680,7 @@ Appel radio (Callsign) : F_0
 <span class="n">LON_MIN</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">LON_MAX</span> <span class="o">=</span> <span class="mi">100</span>
 
-<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;file:///run/dump1090-mutability/aircraft.json&quot;</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;localfile/avions.json&quot;</span>
 
 <span class="k">def</span> <span class="nf">est_dans_zone</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">LAT_MIN</span> <span class="o">&lt;=</span> <span class="n">lat</span> <span class="o">&lt;=</span> <span class="n">LAT_MAX</span> <span class="ow">and</span> <span class="n">LON_MIN</span> <span class="o">&lt;=</span> <span class="n">lon</span> <span class="o">&lt;=</span> <span class="n">LON_MAX</span>
@@ -1820,7 +1726,7 @@ Appel radio (Callsign) : F_0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erreur : &lt;urlopen error [Errno 2] No such file or directory: &#39;/run/dump1090-mutability/aircraft.json&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erreur : unknown url type: &#39;localfile/avions.json&#39;
 </pre></div>
 </div>
 </div>
@@ -1851,25 +1757,23 @@ Appel radio (Callsign) : F_0
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Récupère les données JSON</span>
         <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="n">avions</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
-        <span class="n">avions</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;aircraft&quot;</span><span class="p">,</span> <span class="p">[])</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Avions détectés au-dessus du lycée :&quot;</span><span class="p">)</span>
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">avion</span> <span class="ow">in</span> <span class="n">avions</span><span class="p">:</span>
             <span class="n">lat</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">)</span>
             <span class="n">lon</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">)</span>
             <span class="n">flight</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;flight&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="n">alt</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alt_geom&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-            <span class="n">speed</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;gs&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">alt</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;altitude&quot;</span><span class="p">)</span>
+            <span class="n">speed</span> <span class="o">=</span> <span class="n">avion</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;speed&quot;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">lat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">lon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">est_dans_zone</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
                 <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vol </span><span class="si">{</span><span class="n">flight</span><span class="si">}</span><span class="s2"> | Altitude : </span><span class="si">{</span><span class="n">alt</span><span class="si">}</span><span class="s2"> m | Vitesse : </span><span class="si">{</span><span class="n">speed</span><span class="si">}</span><span class="s2"> km/h&quot;</span><span class="p">)</span>
 
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total au-dessus du lycée : </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> avion(s)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre d&#39;avions au-dessus du gymnase: &quot;</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
         
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Attend 10 secondes avant la prochaine lecture</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Attend 10 secondes avant la prochaine lecture</span>
 
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur lors de la récupération :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
