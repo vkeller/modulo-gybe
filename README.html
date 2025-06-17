@@ -697,7 +697,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2M/architecture/raspberry/TP2-ARCH-05.html">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
+     TP2-ARCH-05 : Décoder le ciel
     </a>
    </li>
    <li class="toctree-l2">
@@ -1036,6 +1036,11 @@ title="Print to PDF"
    Création du site modulo-gybe (sur githubpages)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suppression-et-non-prise-en-compte-des-checkpoints-des-jupyter-notebooks">
+   Suppression et non prise en compte des checkpoints des jupyter notebooks
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1058,6 +1063,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creation-du-site-modulo-gybe-sur-githubpages">
    Création du site modulo-gybe (sur githubpages)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suppression-et-non-prise-en-compte-des-checkpoints-des-jupyter-notebooks">
+   Suppression et non prise en compte des checkpoints des jupyter notebooks
   </a>
  </li>
 </ul>
@@ -1086,6 +1096,17 @@ title="Print to PDF"
 <li><p>attendre 5 minutes et vérifier le résultat</p></li>
 <li><p>détruire le répertoire complet <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-Rf</span> <span class="pre">_build</span></code></p></li>
 </ul>
+</section>
+<section id="suppression-et-non-prise-en-compte-des-checkpoints-des-jupyter-notebooks">
+<h2>Suppression et non prise en compte des checkpoints des jupyter notebooks<a class="headerlink" href="#suppression-et-non-prise-en-compte-des-checkpoints-des-jupyter-notebooks" title="Permalink to this headline">#</a></h2>
+<p>Pour supprimer les anciens et éventuels dejà commités :</p>
+<hr class="docutils" />
+<p>rm -rf <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-name</span> <span class="pre">.ipynb_checkpoints</span></code></p>
+<hr class="docutils" />
+<p>Pour ne pas les commiter à chaque fois, créer un fichier <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> qui ne contient qu’une seule ligne :</p>
+<hr class="docutils" />
+<p>.ipynb_checkpoints</p>
+<hr class="docutils" />
 </section>
 </section>
 
