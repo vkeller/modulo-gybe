@@ -6,6 +6,7 @@ root: index
 parts:
   - caption: Généralités
     chapters:
+    - file: general/quisuisje
     - file: general/generalites
     - file: general/outils
 
