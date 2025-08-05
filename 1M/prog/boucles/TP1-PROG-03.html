@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TP1-PROG-03 - La boucle for &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-PROG-03 - La boucle while &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -325,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
      TP1-PROG-03 - La boucle
      <code class="docutils literal notranslate">
       <span class="pre">
-       for
+       while
       </span>
      </code>
     </a>
@@ -379,6 +379,27 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../IO/TP1-PROG-12.html">
      TP1-PROG-12: Les entrées-sorties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-PROG-14.html">
+     TP1-PROG-03 - La boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-PROG-15.html">
+     TP1-PROG-04 - Boucles
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     approfondissement
     </a>
    </li>
    <li class="toctree-l2">
@@ -699,7 +720,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-05.html">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
+     TP2-ARCH-05 : Décoder le ciel
     </a>
    </li>
    <li class="toctree-l2">
@@ -1082,7 +1103,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-PROG-03 - La boucle for</h1>
+                <h1>TP1-PROG-03 - La boucle while</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1143,8 +1164,8 @@ title="Print to PDF"
               <div>
                 
   <p><img alt="rollercoaster" src="../../../_images/grandhuit.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-03-la-boucle-for">
-<h1>TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#tp1-prog-03-la-boucle-for" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-03-la-boucle-while">
+<h1>TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#tp1-prog-03-la-boucle-while" title="Permalink to this headline">#</a></h1>
 <section id="objectifs">
 <h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -1172,16 +1193,25 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>On peut transformer ces trois instructions identiques en une boucle qui les appelerait les trois à la suite :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pour</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="n">faire</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">faire</span> <span class="n">trois</span> <span class="n">fois</span><span class="p">:</span>
    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>En Python, une boucle s’écrit en utilisant le mot-clef <code class="docutils literal notranslate"><span class="pre">for</span></code>, suivi d’une variable nommée <strong>itérateur</strong>, par convention on la nomme <code class="docutils literal notranslate"><span class="pre">i</span></code>, puis des deux mot-clefs <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">range(x)</span></code> où la valeur de <code class="docutils literal notranslate"><span class="pre">x</span></code> est la portée de l’intervalle.</p>
+<p>En Python, une boucle s’écrit en utilisant le mot-clef <code class="docutils literal notranslate"><span class="pre">while</span></code>, suivi d’un <strong>test de fin</strong>. Le mot-clef <code class="docutils literal notranslate"><span class="pre">while</span></code> pourrait se traduire en français par <strong>tant que</strong>. On pourrait avoir un nombre <code class="docutils literal notranslate"><span class="pre">i</span></code> qui serait initialisé à <code class="docutils literal notranslate"><span class="pre">0</span></code> et qui ajouterait, à chaque <strong>itération</strong> de la boucle, une unité jusqu’à obtenir <code class="docutils literal notranslate"><span class="pre">3</span></code>. Le test correspondant serait <strong>tant que i est strictement plus petit que 3, faire :</strong> en français.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tant</span> <span class="n">que</span> <span class="n">i</span> <span class="n">plus</span> <span class="n">petit</span> <span class="n">que</span> <span class="mi">3</span><span class="p">,</span> <span class="n">faire</span><span class="p">:</span>
+   <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+   <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
 <p>Ainsi les instructions pour dessiner un triangle deviennent :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
     <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </section>
@@ -1219,7 +1249,7 @@ title="Print to PDF"
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
 <p>Utilisez votre programme <code class="docutils literal notranslate"><span class="pre">polygone.py</span></code> pour dessiner les polygones de 3 (triangle) à 12 (dodécagone) côtés.</p>
-<p><strong>Hint</strong> : observez les instructions qui se répètent et placez-les dans une boucle. La fonction <code class="docutils literal notranslate"><span class="pre">range</span></code> peut prendre deux arguments : la borne inférieure (par exemple <code class="docutils literal notranslate"><span class="pre">bi</span></code>) et la borne supérieure (par exemple <code class="docutils literal notranslate"><span class="pre">bs</span></code>) : <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(bi,bs)</span> <span class="pre">:</span></code></p>
+<p><strong>Hint</strong> : observez les instructions qui se répètent et placez-les dans une boucle.</p>
 </section>
 </section>
 

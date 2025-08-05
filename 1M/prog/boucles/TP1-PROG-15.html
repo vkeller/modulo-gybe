@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP1-PROG-05 - Les tests conditionnels" href="../conditions/TP1-PROG-05.html" />
-    <link rel="prev" title="TP1-PROG-03 - La boucle while" href="TP1-PROG-03.html" />
+    <link rel="next" title="TP1-PROG-13 : TP supplémentaire prog 1M" href="../revisions/TP1-PROG-13.html" />
+    <link rel="prev" title="TP1-PROG-03 - La boucle for" href="TP1-PROG-14.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -330,8 +330,8 @@ const thebe_selector_output = ".output, .cell_output"
      </code>
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="TP1-PROG-04.html">
      TP1-PROG-04 - Boucles
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -391,8 +391,8 @@ const thebe_selector_output = ".output, .cell_output"
      </code>
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TP1-PROG-15.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      TP1-PROG-04 - Boucles
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -967,7 +967,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/boucles/TP1-PROG-04.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/boucles/TP1-PROG-15.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -995,7 +995,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/1M/prog/boucles/TP1-PROG-04.ipynb"
+        <a href="../../../_sources/1M/prog/boucles/TP1-PROG-15.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1080,6 +1080,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntaxe-complete-de-la-boucle-for">
+   Syntaxe complète de la boucle
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-4-boucle-avec-bornes-et-pas">
    Exercice 4 : boucle avec bornes et pas
   </a>
@@ -1131,6 +1141,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-3-a-step-forward">
    Exercice 3 (a step forward)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntaxe-complete-de-la-boucle-for">
+   Syntaxe complète de la boucle
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1196,6 +1216,14 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
+<section id="syntaxe-complete-de-la-boucle-for">
+<h2>Syntaxe complète de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#syntaxe-complete-de-la-boucle-for" title="Permalink to this headline">#</a></h2>
+<p>La <em>fonction</em> <code class="docutils literal notranslate"><span class="pre">range()</span></code> se généralise avec 3 paramètres : la borne inférieure (<code class="docutils literal notranslate"><span class="pre">bi</span></code>), la borne supérieure (<code class="docutils literal notranslate"><span class="pre">bs</span></code>) ainsi que le pas (<code class="docutils literal notranslate"><span class="pre">pas</span></code>) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bi</span><span class="p">,</span> <span class="n">bs</span><span class="p">,</span> <span class="n">pas</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">bloc</span> <span class="n">instructions</span>
+</pre></div>
+</div>
+</section>
 <section id="exercice-4-boucle-avec-bornes-et-pas">
 <h2>Exercice 4 : boucle avec bornes et pas<a class="headerlink" href="#exercice-4-boucle-avec-bornes-et-pas" title="Permalink to this headline">#</a></h2>
 <p>Le code suivant permet de dessiner un losange bleu rempli de jaune :</p>
@@ -1241,12 +1269,10 @@ title="Print to PDF"
 <span class="n">taille</span> <span class="o">=</span> <span class="mi">100</span>
 
 <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> 
-<span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+<span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">t</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span> 
 <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
@@ -1255,11 +1281,9 @@ title="Print to PDF"
 <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 <span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span> 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">t</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span> 
 <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
 <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -1302,17 +1326,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="TP1-PROG-03.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="TP1-PROG-14.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+            <p class="prev-next-title">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../conditions/TP1-PROG-05.html" title="next page">
+    <a class='right-next' id="next-link" href="../revisions/TP1-PROG-13.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP1-PROG-05 - Les tests conditionnels</p>
+        <p class="prev-next-title">TP1-PROG-13 : TP supplémentaire prog 1M</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
