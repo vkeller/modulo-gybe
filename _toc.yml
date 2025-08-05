@@ -50,6 +50,7 @@ parts:
       - file: 1M/prog/intro2/TP1-PROG-02
       - file: 1M/prog/boucles/TP1-PROG-03
       - file: 1M/prog/boucles/TP1-PROG-04
+      - file: 1M/prog/conditions/TP1-PROG-05-Turtle
       - file: 1M/prog/conditions/TP1-PROG-05
       - file: 1M/prog/dessinsanimes/TP1-PROG-06
       - file: 1M/prog/types/TP1-PROG-07
