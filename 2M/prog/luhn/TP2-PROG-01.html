@@ -6,54 +6,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Programmation avancée &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-PROG-01 : Algorithme de Luhn (carte de crédit) &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="R2-PROG-01 : Rappels programmation 1M" href="revisions/R2-PROG-01.html" />
-    <link rel="prev" title="R1-ALGO-03 : Révision" href="../algo/R2-ALGO-03.html" />
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP2-PROG-02 : Approche pratique de la complexité : Recherche" href="../complexite/TP2-PROG-02.html" />
+    <link rel="prev" title="R2-PROG-01 : Rappels programmation 1M" href="../revisions/R2-PROG-01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,19 +90,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../../_static/logo-beaulieu.png" class="logo" alt="logo">
+      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -108,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../../index.html">
+                <a class="reference internal" href="../../../index.html">
                     Bienvenue
                 </a>
             </li>
@@ -120,17 +122,17 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../general/quisuisje.html">
+  <a class="reference internal" href="../../../general/quisuisje.html">
    Qui suis-je ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../general/generalites.html">
+  <a class="reference internal" href="../../../general/generalites.html">
    Esprit critique, fraude, plagiat et ChatGPT
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../general/outils.html">
+  <a class="reference internal" href="../../../general/outils.html">
    Outils utiles pour le cours d’informatique
   </a>
  </li>
@@ -142,12 +144,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../1M/index.html">
+  <a class="reference internal" href="../../../1M/index.html">
    DO Informatique 1M
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/representation/index.html">
+  <a class="reference internal" href="../../../1M/representation/index.html">
    Représentation des données
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -157,49 +159,49 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-01.html">
+    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-01.html">
      C1-REDO-01 : Du monde physique au monde numérique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-02.html">
+    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-02.html">
      C1-REDO-02 binaire
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-03.html">
+    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">
      C1-REDO-03 : codage de caractères
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">
+    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">
      C1-REDO-04 : Opérations en binaire et en hexadécimal
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/R1-REDO-01.html">
+    <a class="reference internal" href="../../../1M/representation/cours/R1-REDO-01.html">
      R1-REDO-01 Révision
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-01.html">
+    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-01.html">
      TP1-REDO-01 : les images matricielles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02.html">
+    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-02.html">
      TP1-REDO-02 : Le son
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-03.html">
+    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-03.html">
      TP1-REDO-03 : Types de fichiers et compression
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/algo/index.html">
+  <a class="reference internal" href="../../../1M/algo/index.html">
    Algorithmique
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -209,104 +211,104 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-01.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-01.html">
      C1-ALGO-01 : Introduction à l’algorithmique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-02.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-02.html">
      C1-ALGO-02 : Des algorithmes aux algorigrammes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-03.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-03.html">
      C1-ALGO-03 : Les jeux de Nim
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-04.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-04.html">
      C1-ALGO-04 : Caractéristiques des algorithmes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.html">
      C1-ALGO-05.00 : Algorithmes classiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.1.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.1.html">
      C1-ALGO-05.01 Algorithmes classiques (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.2.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.2.html">
      C1-ALGO-05.02 Algorithmes classiques (Tri)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-06.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-06.html">
      C1-ALGO-06 : Algorithmes évolutionnistes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-07.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.html">
      C1-ALGO-07 : Des algorigrammes à leur programmation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-08.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-08.html">
      C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-09.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-09.html">
      C1-ALGO-09 : L’horloge de la gare de St-Gallen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-10.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-10.html">
      C1-ALGO-10 - Introduction à la cryptologie
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-11.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-11.html">
      C1-ALGO-11 : Les tests conditionnels
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-12.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">
      C1-ALGO-12 : Les boucles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-13.html">
+    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-13.html">
      C1-ALGO-13 : Les algorithmes gloutons
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-01.html">
+    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-01.html">
      R1-ALGO-01 - révision
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-02.html">
+    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-02.html">
      R1-ALGO-02 : Révision Algorigramme + programmation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-03.html">
+    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-03.html">
      R1-ALGO-03 : Rappels algorigrammes - Python
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../1M/installation/installation.html">
+  <a class="reference internal" href="../../../1M/installation/installation.html">
    Environnement de développement
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/prog/index.html">
+  <a class="reference internal" href="../../../1M/prog/index.html">
    Programmation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -316,17 +318,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/intro1/TP1-PROG-01.html">
+    <a class="reference internal" href="../../../1M/prog/intro1/TP1-PROG-01.html">
      TP1-PROG-01 - Introduction à la programmation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/intro2/TP1-PROG-02.html">
+    <a class="reference internal" href="../../../1M/prog/intro2/TP1-PROG-02.html">
      TP1-PROG-02 - Introduction : les fonctions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-03.html">
+    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-03.html">
      TP1-PROG-03 - La boucle
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -336,7 +338,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-04.html">
+    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">
      TP1-PROG-04 - Boucles
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -347,42 +349,42 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05-Turtle.html">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05-Turtle.html">
      TP1-PROG-05-Turtle - Les tests conditionnels
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05.html">
+    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
      TP1-PROG-05 - Les tests conditionnels
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/types/TP1-PROG-07.html">
+    <a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">
      TP1-PROG-07 - Les variables en Python
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/tableaux/TP1-PROG-08.html">
+    <a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">
      TP1-PROG-08 - Les listes (tableaux)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/files/TP1-PROG-09.html">
+    <a class="reference internal" href="../../../1M/prog/files/TP1-PROG-09.html">
      TP1-PROG-09 - Les Files
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/piles/TP1-PROG-10.html">
+    <a class="reference internal" href="../../../1M/prog/piles/TP1-PROG-10.html">
      TP1-PROG-10 - Les Piles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/cryptographie/TP1-PROG-11.html">
+    <a class="reference internal" href="../../../1M/prog/cryptographie/TP1-PROG-11.html">
      TP1-PROG-11 : Introduction à la cryptographie
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-14.html">
+    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-14.html">
      TP1-PROG-03 - La boucle
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -392,7 +394,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-15.html">
+    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-15.html">
      TP1-PROG-04 - Boucles
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -403,14 +405,14 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/revisions/TP1-PROG-13.html">
+    <a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">
      TP1-PROG-13 : TP supplémentaire prog 1M
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/architecture/index.html">
+  <a class="reference internal" href="../../../1M/architecture/index.html">
    Architecture
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -420,14 +422,14 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/architecture/fichiers/SystemeDeFichiers.html">
+    <a class="reference internal" href="../../../1M/architecture/fichiers/SystemeDeFichiers.html">
      TP1-ARCH-01 : Le système de fichiers
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/esdn/index.html">
+  <a class="reference internal" href="../../../1M/esdn/index.html">
    Enjeux sociaux
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -437,44 +439,44 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-01.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-01.html">
      C1-ESDN-01 : Enjeux sociaux du Numérique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-02.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-02.html">
      C1-ESDN-02 : Le mouvement Cypherpunk
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-03.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-03.html">
      C1-ESDN-03 : Le capitalisme de surveillance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-04.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-04.html">
      C1-ESDN-04 : Edward Snowden et la surveillance de masse
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-05.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-05.html">
      C1-ESDN-05 : Profilage numérique : l’affaire Burrill
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/presentations/TP1-ESDN-00.html">
+    <a class="reference internal" href="../../../1M/esdn/presentations/TP1-ESDN-00.html">
      TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/TP1-ESDN-01.html">
+    <a class="reference internal" href="../../../1M/esdn/cours/TP1-ESDN-01.html">
      TP1-ESDN-01 : Les réseaux informatique
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/jeux/index.html">
+  <a class="reference internal" href="../../../1M/jeux/index.html">
    Jeux informatiques et logiques
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -484,7 +486,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/jeux/logique.html">
+    <a class="reference internal" href="../../../1M/jeux/logique.html">
      C1-JEUX-01 : Quizz de logique
     </a>
    </li>
@@ -498,12 +500,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
+  <a class="reference internal" href="../../index.html">
    DO Informatique 2M
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../algo/index.html">
+  <a class="reference internal" href="../../algo/index.html">
    Algorithmique avancée
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -513,59 +515,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-01.html">
+    <a class="reference internal" href="../../algo/R2-ALGO-01.html">
      R2-ALGO-01 : Révision Algorithmes 1M
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02-A.html">
+    <a class="reference internal" href="../../algo/R2-ALGO-02-A.html">
      R2-ALGO-02-A : Révision algorithmes (Recherche)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02-B.html">
+    <a class="reference internal" href="../../algo/R2-ALGO-02-B.html">
      R2-ALGO-02-B : Révision (Tri)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-01.html">
+    <a class="reference internal" href="../../algo/C2-ALGO-01.html">
      C2-ALGO-01 : Taille du problème
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-02.html">
+    <a class="reference internal" href="../../algo/C2-ALGO-02.html">
      C2-ALGO-02 : Complexité des algorithmes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-03.html">
+    <a class="reference internal" href="../../algo/C2-ALGO-03.html">
      C2-ALGO-03 : Complexité des algorithmes (suite)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-04.html">
+    <a class="reference internal" href="../../algo/C2-ALGO-04.html">
      C2-ALGO-04 : Introduction à la théorie des graphes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-05.html">
+    <a class="reference internal" href="../../algo/C2-ALGO-05.html">
      C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02.html">
+    <a class="reference internal" href="../../algo/R2-ALGO-02.html">
      R1-ALGO-02 : Révision
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-03.html">
+    <a class="reference internal" href="../../algo/R2-ALGO-03.html">
      R1-ALGO-03 : Révision
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="../index.html">
    Programmation avancée
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -573,61 +575,61 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="revisions/R2-PROG-01.html">
+    <a class="reference internal" href="../revisions/R2-PROG-01.html">
      R2-PROG-01 : Rappels programmation 1M
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="luhn/TP2-PROG-01.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      TP2-PROG-01 : Algorithme de Luhn (carte de crédit)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="complexite/TP2-PROG-02.html">
+    <a class="reference internal" href="../complexite/TP2-PROG-02.html">
      TP2-PROG-02 : Approche pratique de la complexité : Recherche
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="complexite/TP2-PROG-03.html">
+    <a class="reference internal" href="../complexite/TP2-PROG-03.html">
      TP2-PROG-02 : Approche pratique de la complexité : Recherche
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="syracuse/TP2-PROG-05.html">
+    <a class="reference internal" href="../syracuse/TP2-PROG-05.html">
      TP2-PROG-05 : Conjecture de Collatz
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="dictionnaires/Dictionnaires2.html">
+    <a class="reference internal" href="../dictionnaires/Dictionnaires2.html">
      TP2-PROG-06 : Dictionnaires
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="motdepasse/MotsDePasse.html">
+    <a class="reference internal" href="../motdepasse/MotsDePasse.html">
      TP2-PROG-07 : Les mots de passe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="hacking/TP2-PROG-08.html">
+    <a class="reference internal" href="../hacking/TP2-PROG-08.html">
      TP2-PROG-08: Coder et décoder comme les Romains
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="arbres/LesArbres.html">
+    <a class="reference internal" href="../arbres/LesArbres.html">
      TP2-PROG-09 : Les arbres
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="st-gall/TP2-PROG-10.html">
+    <a class="reference internal" href="../st-gall/TP2-PROG-10.html">
      TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../histoire/index.html">
+  <a class="reference internal" href="../../histoire/index.html">
    Histoire de l’informatique
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -637,29 +639,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-01.html">
+    <a class="reference internal" href="../../histoire/C2-HIST-01.html">
      C2-HIST-01 : Préhistoire de l’informatique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-02.html">
+    <a class="reference internal" href="../../histoire/C2-HIST-02.html">
      C2-HIST-02 : Histoire de l’informatique : le matériel
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-03.html">
+    <a class="reference internal" href="../../histoire/C2-HIST-03.html">
      C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-04.html">
+    <a class="reference internal" href="../../histoire/C2-HIST-04.html">
      C2-HIST-04 : Histoire des logiciels (la couche applicative)
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../architecture/index.html">
+  <a class="reference internal" href="../../architecture/index.html">
    Architecture et réseaux
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -669,74 +671,74 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/cours/C2-ARCH-01.html">
+    <a class="reference internal" href="../../architecture/cours/C2-ARCH-01.html">
      C2-ARCH-01 : Compilation : du Python au langage machine
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/cours/C2-ARCH-02.html">
+    <a class="reference internal" href="../../architecture/cours/C2-ARCH-02.html">
      C2-ARCH-02 : Architecture de Von Neumann
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/reseau/C2-RESO-01.html">
+    <a class="reference internal" href="../../architecture/reseau/C2-RESO-01.html">
      C2-RESO-01 : Introduction aux réseaux informatiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/reseau/C2-RESO-02.html">
+    <a class="reference internal" href="../../architecture/reseau/C2-RESO-02.html">
      C2-RESO-02 : L’adresse IP
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-00.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-00.html">
      TP2-ARCH-00 : Introduction avec un micro:bit
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/TP/TP2-ARCH-01.html">
+    <a class="reference internal" href="../../architecture/TP/TP2-ARCH-01.html">
      TP2-ARCH-01 : Les portes logiques
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-02.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-02.html">
      TP2-ARCH-02 : Le nano-ordinateur RPi
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-03.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-03.html">
      TP2-ARCH-03 : Mise en réseau
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-04.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-04.html">
      TP2-ARCH-04 : Services réseau
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-NOTE2.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-NOTE2.html">
      TP2-ARCH-NOTE : Journal de bord
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-05.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-05.html">
      TP2-ARCH-05 : Décoder le ciel
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-06.html">
+    <a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-06.html">
      TP2-ARCH-06 : RPi pour aller plus loin
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/logidules/TP2-LOGI-01.html">
+    <a class="reference internal" href="../../architecture/logidules/TP2-LOGI-01.html">
      TP2-LOGI-01 : Les logidules
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../strategies/index.html">
+  <a class="reference internal" href="../../strategies/index.html">
    Stratégie de résolution
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
@@ -746,29 +748,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../strategies/C2-STRAT-01.html">
+    <a class="reference internal" href="../../strategies/C2-STRAT-01.html">
      C2-STRAT-01 : Stratégies de résolution de problèmes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../strategies/C2-STRAT-02.html">
+    <a class="reference internal" href="../../strategies/C2-STRAT-02.html">
      C2-STRAT-02 : Gestion des erreurs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../strategies/TP2-STRAT-01.html">
+    <a class="reference internal" href="../../strategies/TP2-STRAT-01.html">
      TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../strategies/TP2-STRAT-02.html">
+    <a class="reference internal" href="../../strategies/TP2-STRAT-02.html">
      TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../machine-learning/index.html">
+  <a class="reference internal" href="../../machine-learning/index.html">
    Intelligence artificielle
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -778,39 +780,39 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-00.html">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-00.html">
      C2-IA-00 : Introduction à l’intelligence artificielle
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-01.html">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-01.html">
      C2-IA-01 : Histoire de l’Intelligence Artificielle
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-02.html">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-02.html">
      C2-IA-02 : Automates cellulaires
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-03.html">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-03.html">
      C2-IA-03 : Apprentissage automatique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-04.html">
+    <a class="reference internal" href="../../machine-learning/cours/C2-IA-04.html">
      C2-IA-04 : Réseau de neurones artificiels
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/tp/JeudelavieTP.html">
+    <a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">
      TP-IA-01 : Le jeu de la vie
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../esdn/index.html">
+  <a class="reference internal" href="../../esdn/index.html">
    Enjeux sociaux du numérique
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -820,17 +822,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/environnement/TP2-ESDN-01.html">
+    <a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">
      TP2-ESDN-01 : L’environnement et le numérique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/generative-art/TP2-ESDN-02.html">
+    <a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">
      TP2-ESDN-02 : L’Art et le Numérique
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/women/P2-ESDN-02.html">
+    <a class="reference internal" href="../../esdn/women/P2-ESDN-02.html">
      P2-ESDN-02 : Femmes dans l’informatique
     </a>
    </li>
@@ -844,12 +846,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../3C2M/index.html">
+  <a class="reference internal" href="../../../3C2M/index.html">
    MAN 3C &gt; 2M
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../3C2M/programmation/index.html">
+  <a class="reference internal" href="../../../3C2M/programmation/index.html">
    Programmation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
@@ -859,7 +861,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../3C2M/programmation/J1/3C2M-PROG-00.html">
+    <a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">
      3C2M-PROG-00 : Introduction
     </a>
    </li>
@@ -873,7 +875,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../biblio.html">
+  <a class="reference internal" href="../../../biblio.html">
    Livres et sources
   </a>
  </li>
@@ -967,7 +969,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/index.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/luhn/TP2-PROG-01.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -995,7 +997,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/2M/prog/index.md"
+        <a href="../../../_sources/2M/prog/luhn/TP2-PROG-01.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1006,7 +1008,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -1032,23 +1034,120 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#somme-de-controle-checksum">
+   Somme de contrôle (checksum)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numero-d-une-carte-de-credit">
+   Numéro d’une carte de crédit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calcul-du-code-de-controle">
+   Calcul du code de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Programmation avancée</h1>
+                <h1>TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#somme-de-controle-checksum">
+   Somme de contrôle (checksum)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numero-d-une-carte-de-credit">
+   Numéro d’une carte de crédit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calcul-du-code-de-controle">
+   Calcul du code de contrôle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1056,10 +1155,88 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="programmation-avancee">
-<h1>Programmation avancée<a class="headerlink" href="#programmation-avancee" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <p><img alt="cartebancaire" src="../../../_images/carte.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="tp2-prog-01-algorithme-de-luhn-carte-de-credit">
+<h1>TP2-PROG-01 : Algorithme de Luhn (carte de crédit)<a class="headerlink" href="#tp2-prog-01-algorithme-de-luhn-carte-de-credit" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>comprendre ce qu’est une somme de contrôle (<em>checksum</em>)</p></li>
+<li><p>connaître le système de codage des numéros de carte de crédit</p></li>
+<li><p>mettre en oeuvre un système de somme de contrôle à l’aide de l’algorithme de Luhn</p></li>
+<li><p>implémenter l’algorithme de Luhn en Python</p></li>
+<li><p>vérifier la validité de sa carte de crédit</p></li>
+</ul>
+</section>
+<section id="somme-de-controle-checksum">
+<h2>Somme de contrôle (checksum)<a class="headerlink" href="#somme-de-controle-checksum" title="Permalink to this headline">#</a></h2>
+<p>Lorsqu’un émetteur envoie un message à un récepteur, il se peut que la voie de communication ne soit pas entièrement fiable. Cela signifie que le message reçu a pu être <strong>altéré</strong> et qu’il n’est plus exactement identique au message original envoyé.</p>
+<p>La <strong>somme de contrôle</strong> (<em>checksum</em> en anglais) permet de <strong>détecter</strong> une erreur mais pas de la corriger.</p>
+<p><img alt="check" src="../../../_images/checksum.png" />
+(Source : Wikipedia)</p>
+<p>Dans l’exemple ci-dessus, on convertit les caractères en hexadécimal en suivant la table ASCII. la somme des éléments est ensuite calculée, c’est ce que l’on appelle le <strong>hachage</strong> et se réduit à une valeur de contrôle : la <strong>somme de contrôle</strong>. Lorsqu’une lettre change (par exemple le <code class="docutils literal notranslate"><span class="pre">o</span></code> final devient <code class="docutils literal notranslate"><span class="pre">a</span></code>), la somme de contrôle change : <strong>une erreur est détectée</strong>.</p>
+<p>On remarque qu’il n’est pas possible avec la somme de contrôle de réparer l’erreur : le récepteur demande à l’émetteur de lui renvoyer le message. Il existe d’autres algorithmes de contrôle qui permettent de détecter <strong>ET</strong> de corriger l’erreur : ce sont les algorithmes dits de <strong>code cycliques</strong>. Ces algorithmes dépassent le cadre de ce cours.</p>
+</section>
+<section id="numero-d-une-carte-de-credit">
+<h2>Numéro d’une carte de crédit<a class="headerlink" href="#numero-d-une-carte-de-credit" title="Permalink to this headline">#</a></h2>
+<p>Toute carte de crédit est formée de <strong>16 chiffres</strong> compris entre <span class="math notranslate nohighlight">\(0_{10}\)</span> et <span class="math notranslate nohighlight">\(9_{10}\)</span> (sauf le premier) :</p>
+<p><img alt="CC" src="../../../_images/cartecredit.jpg" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Chiffre</strong></p></th>
+<th class="head"><p><strong>Signification</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>MII (<em>Major Industry Identifier</em>) : <strong>3</strong> : American Express, <strong>4</strong> : Visa, <strong>5</strong> : Mastercard</p></td>
+</tr>
+<tr class="row-odd"><td><p>de 1 à 6</p></td>
+<td><p>IIN (<em>Issuer Identification Number</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p>de 7 à 15</p></td>
+<td><p>Numéro de compte</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p><strong>CODE DE CONTRÔLE</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>On note que les chiffres de 7 à 15 qui représentent le numéro de compte permettent de coder <span class="math notranslate nohighlight">\(10^9\)</span> comptes différents, soit <strong>un milliard</strong>.</p>
+<p>Le <strong>CODE DE CONTRÒLE</strong> est le sujet de ce TP</p>
+</section>
+<section id="calcul-du-code-de-controle">
+<h2>Calcul du code de contrôle<a class="headerlink" href="#calcul-du-code-de-controle" title="Permalink to this headline">#</a></h2>
+<p>L’algorithme pour calculer le dernier chiffre de la carte de crédit se déroule en trois étapes :</p>
+<ol class="simple">
+<li><p>On multiplie par deux un chiffre sur deux en commençant par l’avant-dernier (le 15ème) et en se déplaçant de droite à gauche. Si le double du chiffre dépasse 9 (par exemple <span class="math notranslate nohighlight">\(2 \times 8 = 16\)</span>, alors on soustrait 9 au double</p></li>
+<li><p>On additionne l’ensemble des 15 chiffres trouvés (ceux qui ont été doublés, et ceux qui n’ont pas été doublés)</p></li>
+<li><p>Si le résultat modulo 10 est égal à zéro, alors le numéro de carte de crédit est valide.</p></li>
+</ol>
+</section>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<p>Dessinez l’algorigramme d’un algorithme permettant la vérification de la validité d’un numéro de carte de crédit</p>
+<p>Vous pouvez vous aider de la <span class="xref myst">feuille de triche</span></p>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ecrire un programme qui implémente l’algorithme de Luhn et vérifie la validité d’un numéro de carte de crédit donné</p></li>
+<li><p>Traduisez votre algorigramme en Python !</p></li>
+<li><p>Testez votre programme avec les numéros de carte de crédit suivants :</p>
+<ul>
+<li><p>code invalide : <code class="docutils literal notranslate"><span class="pre">[5,6,3,5,4,0,0,2,9,5,6,1,3,4,1,1]</span></code></p></li>
+<li><p>code valide : <code class="docutils literal notranslate"><span class="pre">[4,3,9,6,8,3,7,4,1,2,0,4,2,7,5,5]</span></code></p></li>
+<li><p>code invalide : <code class="docutils literal notranslate"><span class="pre">[4,6,2,4,7,4,8,2,3,3,2,4,9,0,8,0]</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<p>Sur la base de ce programme, écrire un nouveau programme qui génère un numéro de carte de crédit valide quelconque</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1075,7 +1252,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./2M/prog"
+            path: "./2M/prog/luhn"
         },
         predefinedOutput: true
     }
@@ -1089,17 +1266,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../algo/R2-ALGO-03.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../revisions/R2-PROG-01.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">R1-ALGO-03 : Révision</p>
+            <p class="prev-next-title">R2-PROG-01 : Rappels programmation 1M</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="revisions/R2-PROG-01.html" title="next page">
+    <a class='right-next' id="next-link" href="../complexite/TP2-PROG-02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-PROG-01 : Rappels programmation 1M</p>
+        <p class="prev-next-title">TP2-PROG-02 : Approche pratique de la complexité : Recherche</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1124,7 +1301,7 @@ title="Print to PDF"
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>
