@@ -91,7 +91,8 @@ parts:
       - file : 2M/algo/C2-ALGO-01
       - file : 2M/algo/C2-ALGO-02
       - file : 2M/algo/C2-ALGO-03
-      - file : 2M/algo/C2-ALGO-04
+      - file : 2M/algo/C2-ALGO-04-A
+      - file : 2M/algo/C2-ALGO-04-B
       - file : 2M/algo/C2-ALGO-05
       - file : 2M/algo/R2-ALGO-02
       - file : 2M/algo/R2-ALGO-03      
