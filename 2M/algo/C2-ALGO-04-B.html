@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>R2-ALGO-02-A : Révision algorithmes (Recherche) &#8212; Education Numérique Ecole de maturité</title>
+    <title>C2-ALGO-04-B : Parcours de graphes &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="R2-ALGO-02-B : Révision (Tri)" href="R2-ALGO-02-B.html" />
-    <link rel="prev" title="R2-ALGO-01 : Révision Algorithmes 1M" href="R2-ALGO-01.html" />
+    <link rel="next" title="C2-ALGO-05 : Théorie des graphes, le voyageur de commerce" href="C2-ALGO-05.html" />
+    <link rel="prev" title="C2-ALGO-04-A : Introduction à la théorie des graphes" href="C2-ALGO-04-A.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -517,8 +517,8 @@ const thebe_selector_output = ".output, .cell_output"
      R2-ALGO-01 : Révision Algorithmes 1M
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="R2-ALGO-02-A.html">
      R2-ALGO-02-A : Révision algorithmes (Recherche)
     </a>
    </li>
@@ -547,8 +547,8 @@ const thebe_selector_output = ".output, .cell_output"
      C2-ALGO-04-A : Introduction à la théorie des graphes
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="C2-ALGO-04-B.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      C2-ALGO-04-B : Parcours de graphes
     </a>
    </li>
@@ -972,7 +972,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/R2-ALGO-02-A.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/algo/C2-ALGO-04-B.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1000,7 +1000,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/2M/algo/R2-ALGO-02-A.ipynb"
+        <a href="../../_sources/2M/algo/C2-ALGO-04-B.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1060,23 +1060,50 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-jeu-de-jass">
-   Le jeu de Jass
+  <a class="reference internal nav-link" href="#exercice-introductif-chemin-le-plus-court-1">
+   Exercice introductif : chemin le plus court 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#exercice-introductif-2-chemin-le-plus-cours-2">
+   Exercice introductif 2 : chemin le plus cours 2 !
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-recherche-d-une-carte">
-   Exercice 2 (recherche d’une carte)
+  <a class="reference internal nav-link" href="#algorithme-de-dijkstra">
+   Algorithme de Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-dijkstra">
+   Exercice 1 : Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-villes-suisses">
+   Exercice 2 : Villes suisses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-introductif-1">
+     Exercice introductif 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 2 (villes suisses)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-python-dijkstra">
+   Code Python Dijkstra
   </a>
  </li>
 </ul>
@@ -1088,7 +1115,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>R2-ALGO-02-A : Révision algorithmes (Recherche)</h1>
+                <h1>C2-ALGO-04-B : Parcours de graphes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1099,23 +1126,50 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-jeu-de-jass">
-   Le jeu de Jass
+  <a class="reference internal nav-link" href="#exercice-introductif-chemin-le-plus-court-1">
+   Exercice introductif : chemin le plus court 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
+  <a class="reference internal nav-link" href="#exercice-introductif-2-chemin-le-plus-cours-2">
+   Exercice introductif 2 : chemin le plus cours 2 !
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-recherche-d-une-carte">
-   Exercice 2 (recherche d’une carte)
+  <a class="reference internal nav-link" href="#algorithme-de-dijkstra">
+   Algorithme de Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1-dijkstra">
+   Exercice 1 : Dijkstra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2-villes-suisses">
+   Exercice 2 : Villes suisses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-introductif-1">
+     Exercice introductif 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 2 (villes suisses)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-python-dijkstra">
+   Code Python Dijkstra
   </a>
  </li>
 </ul>
@@ -1128,60 +1182,327 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="jass" src="../../_images/jass.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="r2-algo-02-a-revision-algorithmes-recherche">
-<h1>R2-ALGO-02-A : Révision algorithmes (Recherche)<a class="headerlink" href="#r2-algo-02-a-revision-algorithmes-recherche" title="Permalink to this headline">#</a></h1>
-<section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>mettre en action les différents algorithmes de recherche avec des cartes</p></li>
-<li><p>formaliser certains algorithmes en algorigrammes</p></li>
-<li><p>compter le nombre d’étapes pour l’algorithme</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="c2-algo-04-b-parcours-de-graphes">
+<h1>C2-ALGO-04-B : Parcours de graphes<a class="headerlink" href="#c2-algo-04-b-parcours-de-graphes" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Un graphe représente des sommets et des arêtes reliées ou non. Il est facile de représenter un graphe à l’aide d’une matrice d’adjacence.</p>
+<p>Le <strong>parcours d’un graphe</strong> permet de trouver des <strong>chemins</strong>, c’est-à-dire une suite de sommets reliés entre eux par des arêtes (ou des arcs dans le cas d’un graphe orienté).</p>
 </section>
-<section id="le-jeu-de-jass">
-<h2>Le jeu de Jass<a class="headerlink" href="#le-jeu-de-jass" title="Permalink to this headline">#</a></h2>
-<p>Un jeu de cartes de jass se compose de :</p>
-<ul class="simple">
-<li><p>36 cartes:</p>
-<ul>
-<li><p>9 hauteurs</p></li>
-<li><p>4 couleurs : pique, coeur, carreau, trèfle</p></li>
-</ul>
-</li>
-<li><p>les hauteurs sont dans l’ordre :</p>
-<ol class="simple">
-<li><p>le 6</p></li>
-<li><p>le 7</p></li>
-<li><p>le 8</p></li>
-<li><p>le 9</p></li>
-<li><p>le 10</p></li>
-<li><p>le valet</p></li>
-<li><p>la dame</p></li>
-<li><p>le roi</p></li>
-<li><p>l’as</p></li>
-</ol>
-</li>
-</ul>
+<section id="exercice-introductif-chemin-le-plus-court-1">
+<h2>Exercice introductif : chemin le plus court 1<a class="headerlink" href="#exercice-introductif-chemin-le-plus-court-1" title="Permalink to this headline">#</a></h2>
+<p><img alt="ex1" src="../../_images/exercicegraphe1.png" /></p>
+<p>Quel est le chemin le plus court entre les sommets <code class="docutils literal notranslate"><span class="pre">D</span></code> et <code class="docutils literal notranslate"><span class="pre">H</span></code> ?</p>
 </section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<section id="exercice-introductif-2-chemin-le-plus-cours-2">
+<h2>Exercice introductif 2 : chemin le plus cours 2 !<a class="headerlink" href="#exercice-introductif-2-chemin-le-plus-cours-2" title="Permalink to this headline">#</a></h2>
+<p>Pour le trajet Tour Haldimand -&gt; Tour de Sauvabelin, Google Maps propose</p>
 <ul class="simple">
-<li><p>Vous recevez un paquet de cartes</p></li>
-<li><p>observez toutes les cartes</p></li>
+<li><p>Bus 24 jusqu’à Ouchy (3’), M2 jusqu’à Sallaz (14’), puis à pied (16’)</p></li>
+<li><p>Bus 21 jusqu’à Alpes (6’), bus 8 jusqu’à Bel Air (7’), bus 16 jusqu’à Sauvabelin (13’), puis à pied (5’)</p></li>
+<li><p>Bus 21 jusqu’à Chauderon (18’), bus 16 jusqu’à Sauvabelin(16’), puis à pied (5’)</p></li>
+<li><p>1h15 à pied, ça fait du bien !</p></li>
+<li><p>Quel trajet mettrait le moins de temps ?</p></li>
 </ul>
+<p>Faisons le graphe !</p>
+<p><img alt="ex3" src="../../_images/exercicegraphe3.png" /></p>
 </section>
-<section id="exercice-2-recherche-d-une-carte">
-<h2>Exercice 2 (recherche d’une carte)<a class="headerlink" href="#exercice-2-recherche-d-une-carte" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>mélangez vos 9 cartes</p></li>
-<li><p>placez-les sur la table devant vous <strong>face cachée</strong></p></li>
-<li><p>trouvez une méthode (un <strong>algorithme</strong>) pour recherchez la <strong>plus haute</strong> carte.</p></li>
-<li><p><strong>comptez</strong> le nombre d’étapes (combien de cartes retournées) il a fallu pour retrouver la plus haute carte.</p></li>
-<li><p>recommencez avec un nouveau mélange</p></li>
-<li><p><strong>ATTENTION : vous ne pouvez avoir plus de DEUX cartes retournées SIMULTANÉMENT</strong></p></li>
-<li><p>dessinez l’algorigramme de votre méthode</p></li>
-</ul>
+<section id="algorithme-de-dijkstra">
+<h2>Algorithme de Dijkstra<a class="headerlink" href="#algorithme-de-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>L’algorithme de Dijkstra consiste à partir d’un point (par exemple A) à trouver le chemin le plus court jusqu’à <strong>couvrir</strong> l’ensemble du graphe.</p>
+<p>On ne prend pas deux fois un chemin car on construit un <strong>arbre couvrant</strong>.</p>
+<p><img alt="graphe4" src="../../_images/exercicegraphe4.png" /></p>
+<p>Dans cet exemple, il y a deux chemins qui partent de <code class="docutils literal notranslate"><span class="pre">A</span></code> et finissent à <code class="docutils literal notranslate"><span class="pre">G</span></code> de longueur 17 : <code class="docutils literal notranslate"><span class="pre">A-B-E-F-G</span></code> et <code class="docutils literal notranslate"><span class="pre">A-B-E-G</span></code></p>
+</section>
+<section id="exercice-1-dijkstra">
+<h2>Exercice 1 : Dijkstra<a class="headerlink" href="#exercice-1-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>Construire l’arbre recouvrant dans le graphe suivant :</p>
+<p><img alt="graphe5" src="../../_images/exercicegraphe5.png" /></p>
+</section>
+<section id="exercice-2-villes-suisses">
+<h2>Exercice 2 : Villes suisses<a class="headerlink" href="#exercice-2-villes-suisses" title="Permalink to this headline">#</a></h2>
+<p>Sur ce graphe, on indique les distances entre quelques villes importantes en Suisse.</p>
+<p>Quel est le chemin le plus court entre Genève et Coire ?</p>
+<p><img alt="exo5" src="../../_images/exercicegraphe6.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Solution aux exercices</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercice-introductif-1">
+<h3>Exercice introductif 1<a class="headerlink" href="#exercice-introductif-1" title="Permalink to this headline">#</a></h3>
+<p>Voici une solution :</p>
+<p><img alt="ex2sol" src="../../_images/exercicegraphe2.png" /></p>
+</section>
+<section id="id1">
+<h3>Exercice 2 (villes suisses)<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Voici la matrice d’adjacence entre les villes</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>Lausanne</strong></p></th>
+<th class="head"><p><strong>Genève</strong></p></th>
+<th class="head"><p><strong>Neuchâtel</strong></p></th>
+<th class="head"><p><strong>Fribourg</strong></p></th>
+<th class="head"><p><strong>Berne</strong></p></th>
+<th class="head"><p><strong>Zürich</strong></p></th>
+<th class="head"><p><strong>Lugano</strong></p></th>
+<th class="head"><p><strong>Sion</strong></p></th>
+<th class="head"><p><strong>Bâle</strong></p></th>
+<th class="head"><p><strong>Schaffhouse</strong></p></th>
+<th class="head"><p><strong>St-Gall</strong></p></th>
+<th class="head"><p><strong>Coire</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Lausanne</strong></p></td>
+<td><p>0</p></td>
+<td><p>67</p></td>
+<td><p>73</p></td>
+<td><p>76</p></td>
+<td><p>111</p></td>
+<td><p>231</p></td>
+<td><p>331</p></td>
+<td><p>96</p></td>
+<td><p>206</p></td>
+<td><p>281</p></td>
+<td><p>311</p></td>
+<td><p>350</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Genève</strong></p></td>
+<td><p>67</p></td>
+<td><p>0</p></td>
+<td><p>121</p></td>
+<td><p>143</p></td>
+<td><p>172</p></td>
+<td><p>292</p></td>
+<td><p>398</p></td>
+<td><p>163</p></td>
+<td><p>263</p></td>
+<td><p>342</p></td>
+<td><p>372</p></td>
+<td><p>411</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Neuchâtel</strong></p></td>
+<td><p>73</p></td>
+<td><p>121</p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>51</p></td>
+<td><p>171</p></td>
+<td><p>330</p></td>
+<td><p>169</p></td>
+<td><p>142</p></td>
+<td><p>221</p></td>
+<td><p>251</p></td>
+<td><p>290</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fribourg</strong></p></td>
+<td><p>76</p></td>
+<td><p>143</p></td>
+<td><p>43</p></td>
+<td><p>0</p></td>
+<td><p>35</p></td>
+<td><p>155</p></td>
+<td><p>314</p></td>
+<td><p>128</p></td>
+<td><p>130</p></td>
+<td><p>205</p></td>
+<td><p>235</p></td>
+<td><p>274</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Berne</strong></p></td>
+<td><p>111</p></td>
+<td><p>172</p></td>
+<td><p>51</p></td>
+<td><p>35</p></td>
+<td><p>0</p></td>
+<td><p>120</p></td>
+<td><p>279</p></td>
+<td><p>141</p></td>
+<td><p>95</p></td>
+<td><p>170</p></td>
+<td><p>200</p></td>
+<td><p>239</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Zürich</strong></p></td>
+<td><p>231</p></td>
+<td><p>292</p></td>
+<td><p>171</p></td>
+<td><p>155</p></td>
+<td><p>120</p></td>
+<td><p>0</p></td>
+<td><p>207</p></td>
+<td><p>261</p></td>
+<td><p>87</p></td>
+<td><p>50</p></td>
+<td><p>80</p></td>
+<td><p>119</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lugano</strong></p></td>
+<td><p>331</p></td>
+<td><p>398</p></td>
+<td><p>330</p></td>
+<td><p>314</p></td>
+<td><p>279</p></td>
+<td><p>207</p></td>
+<td><p>0</p></td>
+<td><p>235</p></td>
+<td><p>294</p></td>
+<td><p>257</p></td>
+<td><p>270</p></td>
+<td><p>176</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sion</strong></p></td>
+<td><p>96</p></td>
+<td><p>163</p></td>
+<td><p>169</p></td>
+<td><p>128</p></td>
+<td><p>141</p></td>
+<td><p>261</p></td>
+<td><p>235</p></td>
+<td><p>0</p></td>
+<td><p>246</p></td>
+<td><p>311</p></td>
+<td><p>341</p></td>
+<td><p>380</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Bâle</strong></p></td>
+<td><p>206</p></td>
+<td><p>263</p></td>
+<td><p>142</p></td>
+<td><p>130</p></td>
+<td><p>95</p></td>
+<td><p>87</p></td>
+<td><p>294</p></td>
+<td><p>236</p></td>
+<td><p>0</p></td>
+<td><p>99</p></td>
+<td><p>167</p></td>
+<td><p>206</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Schaffhouse</strong></p></td>
+<td><p>281</p></td>
+<td><p>342</p></td>
+<td><p>221</p></td>
+<td><p>205</p></td>
+<td><p>170</p></td>
+<td><p>50</p></td>
+<td><p>257</p></td>
+<td><p>311</p></td>
+<td><p>99</p></td>
+<td><p>0</p></td>
+<td><p>84</p></td>
+<td><p>169</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>St-Gall</strong></p></td>
+<td><p>311</p></td>
+<td><p>372</p></td>
+<td><p>251</p></td>
+<td><p>235</p></td>
+<td><p>200</p></td>
+<td><p>80</p></td>
+<td><p>270</p></td>
+<td><p>341</p></td>
+<td><p>167</p></td>
+<td><p>84</p></td>
+<td><p>0</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Coire</strong></p></td>
+<td><p>350</p></td>
+<td><p>411</p></td>
+<td><p>290</p></td>
+<td><p>274</p></td>
+<td><p>239</p></td>
+<td><p>119</p></td>
+<td><p>176</p></td>
+<td><p>380</p></td>
+<td><p>206</p></td>
+<td><p>169</p></td>
+<td><p>94</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="code-python-dijkstra">
+<h2>Code Python Dijkstra<a class="headerlink" href="#code-python-dijkstra" title="Permalink to this headline">#</a></h2>
+<p>Le code suivant permet de calculer la longueur des chemins en utilisant la matrice d’adjacence et l’algorithme de Dijkstra</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code permettant de calculer l&#39;algorithme de Dijkstra</span>
+<span class="c1"># sur le graphe du cours C2_ALGO_04</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">INF</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">nbr</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">C</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">D</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">E</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">G</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+<span class="n">H</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+
+<span class="n">graph</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">E</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">H</span><span class="p">]</span>
+
+<span class="c1"># Nomme le sommet à partir duquel on calcule l&#39;arbre couvrant</span>
+<span class="n">premier</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">noeuds</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="s2">&quot;E&quot;</span><span class="p">,</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="s2">&quot;G&quot;</span><span class="p">,</span><span class="s2">&quot;H&quot;</span><span class="p">]</span>
+
+<span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+<span class="n">visites</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">nbr</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="n">INF</span><span class="p">]</span> <span class="o">*</span> <span class="n">nbr</span>
+<span class="n">distances</span><span class="p">[</span><span class="n">premier</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+    <span class="c1"># Recherche des noeuds avec la distance minimum</span>
+    <span class="n">min_distance</span> <span class="o">=</span> <span class="n">INF</span>
+    <span class="n">min_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visites</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="ow">and</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">min_distance</span><span class="p">:</span>
+            <span class="n">min_distance</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+            <span class="n">min_index</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="n">visites</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Recalcul des distances depuis le noeud</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">graph</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">visites</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+            <span class="n">new_distance</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">graph</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="n">v</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">new_distance</span> <span class="o">&lt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+                <span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_distance</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance depuis la source : &quot;</span><span class="p">,</span><span class="n">noeuds</span><span class="p">[</span><span class="n">premier</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Noeud&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;Distance&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">noeuds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance depuis la source :  D
+Noeud 	 Distance
+A 	 10
+B 	 12
+C 	 17
+D 	 0
+E 	 4
+F 	 6
+G 	 10
+H 	 22
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -1212,17 +1533,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="R2-ALGO-01.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="C2-ALGO-04-A.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">R2-ALGO-01 : Révision Algorithmes 1M</p>
+            <p class="prev-next-title">C2-ALGO-04-A : Introduction à la théorie des graphes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="R2-ALGO-02-B.html" title="next page">
+    <a class='right-next' id="next-link" href="C2-ALGO-05.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-ALGO-02-B : Révision (Tri)</p>
+        <p class="prev-next-title">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
