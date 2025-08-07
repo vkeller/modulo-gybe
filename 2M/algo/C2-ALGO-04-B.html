@@ -1078,6 +1078,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#algorithme-de-dijkstra">
    Algorithme de Dijkstra
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etapes-de-l-algorithme-de-dijkstra-pour-trouver-le-plus-cours-chemin">
+     Etapes de l’algorithme de Dijkstra pour trouver le plus cours chemin
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple">
+   Exemple
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1-dijkstra">
@@ -1143,6 +1155,18 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#algorithme-de-dijkstra">
    Algorithme de Dijkstra
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etapes-de-l-algorithme-de-dijkstra-pour-trouver-le-plus-cours-chemin">
+     Etapes de l’algorithme de Dijkstra pour trouver le plus cours chemin
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple">
+   Exemple
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1211,6 +1235,19 @@ title="Print to PDF"
 <h2>Algorithme de Dijkstra<a class="headerlink" href="#algorithme-de-dijkstra" title="Permalink to this headline">#</a></h2>
 <p>L’algorithme de Dijkstra consiste à partir d’un point (par exemple A) à trouver le chemin le plus court jusqu’à <strong>couvrir</strong> l’ensemble du graphe.</p>
 <p>On ne prend pas deux fois un chemin car on construit un <strong>arbre couvrant</strong>.</p>
+<section id="etapes-de-l-algorithme-de-dijkstra-pour-trouver-le-plus-cours-chemin">
+<h3>Etapes de l’algorithme de Dijkstra pour trouver le plus cours chemin<a class="headerlink" href="#etapes-de-l-algorithme-de-dijkstra-pour-trouver-le-plus-cours-chemin" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>On initialise les distances : 0 pour le sommet de départ, infini pour les autres.</p></li>
+<li><p>On visite le sommet le plus proche non encore visité.</p></li>
+<li><p>On met à jour les distances pour ses voisins.</p></li>
+<li><p>On répète jusqu’à avoir visité tous les sommets.</p></li>
+</ol>
+<p>L’utilité de la matrice d’adjacence est évidente.</p>
+</section>
+</section>
+<section id="exemple">
+<h2>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h2>
 <p><img alt="graphe4" src="../../_images/exercicegraphe4.png" /></p>
 <p>Dans cet exemple, il y a deux chemins qui partent de <code class="docutils literal notranslate"><span class="pre">A</span></code> et finissent à <code class="docutils literal notranslate"><span class="pre">G</span></code> de longueur 17 : <code class="docutils literal notranslate"><span class="pre">A-B-E-F-G</span></code> et <code class="docutils literal notranslate"><span class="pre">A-B-E-G</span></code></p>
 </section>
