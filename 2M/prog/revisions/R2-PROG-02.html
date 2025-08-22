@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>R2-PROG-01 : Rappels programmation 1M &#8212; Education Numérique Ecole de maturité</title>
+    <title>R2-PROG-02 : Rappels 1M - mini-projet &#8212; Education Numérique Ecole de maturité</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="R2-PROG-02 : Rappels 1M - mini-projet" href="R2-PROG-02.html" />
-    <link rel="prev" title="Programmation avancée" href="../index.html" />
+    <link rel="next" title="TP2-PROG-01 : Algorithme de Luhn (carte de crédit)" href="../luhn/TP2-PROG-01.html" />
+    <link rel="prev" title="R2-PROG-01 : Rappels programmation 1M" href="R2-PROG-01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -579,13 +579,13 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="R2-PROG-01.html">
      R2-PROG-01 : Rappels programmation 1M
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="R2-PROG-02.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      R2-PROG-02 : Rappels 1M - mini-projet
     </a>
    </li>
@@ -982,7 +982,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/revisions/R2-PROG-01.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/revisions/R2-PROG-02.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1010,7 +1010,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/2M/prog/revisions/R2-PROG-01.ipynb"
+        <a href="../../../_sources/2M/prog/revisions/R2-PROG-02.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1070,121 +1070,48 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#l-ide-thonny-les-entrees-et-les-sorties">
-   L’IDE Thonny, les entrées et les sorties
+  <a class="reference internal nav-link" href="#objectif-du-projet-suivi-des-depenses-hebdomadaires">
+   Objectif du projet : Suivi des dépenses hebdomadaires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partie-1-creation-d-un-budget-hebdomadaire">
+   Partie 1 – Création d’un budget hebdomadaire
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-1-sortie">
-     Exercice 1 (sortie)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-2-entrees">
-     Exercice 2 (entrées)
+    <a class="reference internal nav-link" href="#exemple-dexecution">
+     Exemple d’exécution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-et-types">
-   Variables et types
+  <a class="reference internal nav-link" href="#partie-2-ameliorations-avec-categories">
+   Partie 2 – Améliorations avec catégories
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3">
-     Exercice 3
+    <a class="reference internal nav-link" href="#fonctionnalites-a-ajouter">
+     Fonctionnalités à ajouter :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exemple d’exécution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-tests-conditionnels">
-   Les tests conditionnels
+  <a class="reference internal nav-link" href="#regles-techniques">
+   Règles techniques
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-4">
-     Exercice 4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-5">
-     Exercice 5
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-boucles">
-   Les boucles
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-6-boucles">
-     Exercice 6 (boucles)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-7-boucles-conditions">
-     Exercice 7 (boucles + conditions)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-8-boucles-double-conditions">
-     Exercice 8 (boucles + double conditions)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-boucle-while">
-   Exercice 9 (boucle while)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-listes">
-   Les listes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-10-listes">
-     Exercice 10 (listes)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-11-listes-boucles">
-     Exercice 11 (listes + boucles)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-12-listes-boucles-conditions-facultatif">
-     Exercice 12 (listes + boucles + conditions) : facultatif
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-fonctions">
-   Les fonctions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-13-fonctions">
-     Exercice 13 (fonctions)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-14-fonctions-conditions">
-     Exercice 14 (fonctions + conditions)
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1195,7 +1122,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>R2-PROG-01 : Rappels programmation 1M</h1>
+                <h1>R2-PROG-02 : Rappels 1M - mini-projet</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1206,121 +1133,48 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
+  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
+   Objectifs pédagogiques
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#l-ide-thonny-les-entrees-et-les-sorties">
-   L’IDE Thonny, les entrées et les sorties
+  <a class="reference internal nav-link" href="#objectif-du-projet-suivi-des-depenses-hebdomadaires">
+   Objectif du projet : Suivi des dépenses hebdomadaires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partie-1-creation-d-un-budget-hebdomadaire">
+   Partie 1 – Création d’un budget hebdomadaire
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-1-sortie">
-     Exercice 1 (sortie)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-2-entrees">
-     Exercice 2 (entrées)
+    <a class="reference internal nav-link" href="#exemple-dexecution">
+     Exemple d’exécution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-et-types">
-   Variables et types
+  <a class="reference internal nav-link" href="#partie-2-ameliorations-avec-categories">
+   Partie 2 – Améliorations avec catégories
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-3">
-     Exercice 3
+    <a class="reference internal nav-link" href="#fonctionnalites-a-ajouter">
+     Fonctionnalités à ajouter :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exemple d’exécution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-tests-conditionnels">
-   Les tests conditionnels
+  <a class="reference internal nav-link" href="#regles-techniques">
+   Règles techniques
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-4">
-     Exercice 4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-5">
-     Exercice 5
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-boucles">
-   Les boucles
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-6-boucles">
-     Exercice 6 (boucles)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-7-boucles-conditions">
-     Exercice 7 (boucles + conditions)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-8-boucles-double-conditions">
-     Exercice 8 (boucles + double conditions)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-boucle-while">
-   Exercice 9 (boucle while)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-listes">
-   Les listes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-10-listes">
-     Exercice 10 (listes)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-11-listes-boucles">
-     Exercice 11 (listes + boucles)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-12-listes-boucles-conditions-facultatif">
-     Exercice 12 (listes + boucles + conditions) : facultatif
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-fonctions">
-   Les fonctions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-13-fonctions">
-     Exercice 13 (fonctions)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-14-fonctions-conditions">
-     Exercice 14 (fonctions + conditions)
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1332,349 +1186,136 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><img alt="important" src="../../../_images/important.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="r2-prog-01-rappels-programmation-1m">
-<h1>R2-PROG-01 : Rappels programmation 1M<a class="headerlink" href="#r2-prog-01-rappels-programmation-1m" title="Permalink to this headline">#</a></h1>
-<section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
+  <p><img alt="budget" src="../../../_images/budget.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="r2-prog-02-rappels-1m-mini-projet">
+<h1>R2-PROG-02 : Rappels 1M - mini-projet<a class="headerlink" href="#r2-prog-02-rappels-1m-mini-projet" title="Permalink to this headline">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>réviser les éléments importants du thème <strong>programmation</strong> de 1M pour bien aborder la programmation en 2M</p>
+<li><p>Révision des concepts de programmation vus en première année</p>
 <ul>
-<li><p>créer, enregistrer, sauvegarder, envoyer un fichier source Python</p></li>
-<li><p>connaître les principaux types de variables</p></li>
-<li><p>être capable de faire test conditionnel</p></li>
-<li><p>connaître les différents types de boucles</p></li>
-<li><p>construire une structure de données avec une liste</p></li>
-<li><p>construire des fonctions simples</p></li>
+<li><p>entrées, sorties, variables, types, boucles, tests conditionnels</p></li>
 </ul>
 </li>
+<li><p>Durée : 2 séances de 45 minutes</p></li>
+<li><p>Langage : Python</p></li>
 </ul>
 </section>
-<section id="l-ide-thonny-les-entrees-et-les-sorties">
-<h2>L’IDE Thonny, les entrées et les sorties<a class="headerlink" href="#l-ide-thonny-les-entrees-et-les-sorties" title="Permalink to this headline">#</a></h2>
-<p>L’environnement de développement intégré (IDE) utilisé est <strong>Thonny</strong></p>
-<section id="exercice-1-sortie">
-<h3>Exercice 1 (sortie)<a class="headerlink" href="#exercice-1-sortie" title="Permalink to this headline">#</a></h3>
+<section id="objectif-du-projet-suivi-des-depenses-hebdomadaires">
+<h2>Objectif du projet : Suivi des dépenses hebdomadaires<a class="headerlink" href="#objectif-du-projet-suivi-des-depenses-hebdomadaires" title="Permalink to this headline">#</a></h2>
+<p>Créer un programme en Python qui permet de suivre les <strong>dépenses hebdomadaires</strong> d’un élève.</p>
+<p>Le programme demandera :</p>
 <ul class="simple">
-<li><p>ouvrir thonny</p></li>
-<li><p>créer un nouveau fichier code source Python <code class="docutils literal notranslate"><span class="pre">entree.py</span></code></p></li>
-<li><p>créer un programme qui écrit <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span> <span class="pre">!</span></code> (<em>Hint : utiliser la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></em>)</p></li>
-<li><p>enregistrer le fichier sur son volume du réseau pédagogique</p></li>
-<li><p>envoyer le fichier sur le <a class="reference external" href="https://moodle.gymnasedebeaulieu.ch">Moodle</a></p></li>
+<li><p>Le <strong>budget disponible</strong>,</p></li>
+<li><p>Puis les <strong>montants des dépenses</strong> une par une,</p></li>
+<li><p>Et pour chaque dépense, son <strong>type</strong> (snack, transport, jeux, autre).</p></li>
 </ul>
+<p>À la fin, le programme affichera un <strong>bilan complet</strong> : total des dépenses, comparaison avec le budget, répartition par catégorie, et la dépense la plus élevée.</p>
 </section>
-<section id="exercice-2-entrees">
-<h3>Exercice 2 (entrées)<a class="headerlink" href="#exercice-2-entrees" title="Permalink to this headline">#</a></h3>
+<section id="partie-1-creation-d-un-budget-hebdomadaire">
+<h2>Partie 1 – Création d’un budget hebdomadaire<a class="headerlink" href="#partie-1-creation-d-un-budget-hebdomadaire" title="Permalink to this headline">#</a></h2>
+<p>Ecrire un programme qui aide à suivre les <strong>dépenses hebdomadaires</strong> d’une personne. Ce programme devra :</p>
 <ul class="simple">
-<li><p>créez un nouveau fichier code source Python <code class="docutils literal notranslate"><span class="pre">sortie.py</span></code></p></li>
-<li><p>écrivez un programme qui demande un prénom (<em>hint : utilisez la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code></em>) et l’affiche (<em>hint : utilisez la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></em>)</p></li>
-<li><p>modifiez votre programme pour qu’il affiche <code class="docutils literal notranslate"><span class="pre">Bonjour</span> </code> et le prénom choisi par l’utilisateur</p></li>
+<li><p>Stocker tous les montants des dépenses,</p></li>
+<li><p>Stocker les catégories associées,</p></li>
+<li><p>Afficher un historique complet à la fin.</p></li>
 </ul>
-</section>
-</section>
-<section id="variables-et-types">
-<h2>Variables et types<a class="headerlink" href="#variables-et-types" title="Permalink to this headline">#</a></h2>
-<p>Les variables sont utilisées pour stocker de l’information dans un code informatique. Elles sont décrites par :</p>
+<p>À la fin, le programme affichera :</p>
+<ul class="simple">
+<li><p>Le total, la moyenne, la plus grosse dépense,</p></li>
+<li><p>Le nombre de dépenses par catégorie,</p></li>
+<li><p>Et un récapitulatif détaillé de chaque achat.</p></li>
+</ul>
+<p>Les étapes du programme sont les suivantes :</p>
 <ol class="simple">
-<li><p>leur nom</p></li>
-<li><p>leur type</p></li>
-<li><p>leur contenu (leur valeur)</p></li>
-<li><p>leur adresse</p></li>
+<li><p>Demander le <strong>budget hebdomadaire</strong>.</p></li>
+<li><p>Permettre de saisir des <strong>dépenses</strong> une par une (terminer par <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p></li>
+<li><p>Stocker chaque montant dans une <strong>liste</strong>.</p></li>
+<li><p>Calculer le <strong>total</strong> des dépenses.</p></li>
+<li><p>Afficher un message si le <strong>budget est dépassé</strong>.</p></li>
+<li><p>Afficher un <strong>résumé</strong> : total, budget, reste ou dépassement.</p></li>
 </ol>
-<p>Vous pouvez consulter <span class="xref myst">le TP sur les notions de types de 1M</span></p>
-<section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>sous thonny, créer un nouveau fichier source Python <code class="docutils literal notranslate"><span class="pre">variables.py</span></code></p></li>
-<li><p>écrire un programme qui déclare :</p>
-<ul>
-<li><p>en entier (<code class="docutils literal notranslate"><span class="pre">int</span></code>)</p></li>
-<li><p>une chaîne de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p>un booléen (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-</ul>
-</li>
-<li><p>modifiez les valeurs assignées</p></li>
-<li><p>Observer les modifications dans l’<strong>explorateur de variables</strong> et l’””inspecteur d’objets**</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">f</span> <span class="o">=</span> <span class="mf">4.0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<section id="exemple-dexecution">
+<h3>Exemple d’exécution<a class="headerlink" href="#exemple-dexecution" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Quel est ton budget hebdomadaire (en CHF) ? 30
+Saisis tes dépenses une par une. Tape 0 pour terminer.
+Montant de la dépense (0 pour finir) : 2.50
+Montant de la dépense (0 pour finir) : 8
+Montant de la dépense (0 pour finir) : 15
+Montant de la dépense (0 pour finir) : 0 
+
+--- Résumé ---
+Budget : 30.00 CHF
+Dépenses totales : 25.50 CHF
+Bien joué ! Il te reste 4.50 CHF.
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 4 True 4.0
+<p><strong>hints</strong> utililser une boucle while pour entrer les différentes dépenses ainsi qu’une variable <code class="docutils literal notranslate"><span class="pre">total_depenses</span></code> à augmenter. Crée une liste vide au départ : <code class="docutils literal notranslate"><span class="pre">depenses</span> <span class="pre">=</span> <span class="pre">[]</span></code></p>
+</section>
+</section>
+<section id="partie-2-ameliorations-avec-categories">
+<h2>Partie 2 – Améliorations avec catégories<a class="headerlink" href="#partie-2-ameliorations-avec-categories" title="Permalink to this headline">#</a></h2>
+<p>Nous allons étendre les possibilités de notre programme de gestion de budget hebdomadaire :</p>
+<ul class="simple">
+<li><p>Une <strong>deuxième liste</strong> pour les <strong>catégories</strong> de dépenses,</p></li>
+<li><p>Le <strong>calcul de la moyenne</strong> des dépenses,</p></li>
+<li><p>La <strong>recherche de la dépense la plus élevée</strong> (sans utiliser la fonction <code class="docutils literal notranslate"><span class="pre">max()</span></code>),</p></li>
+<li><p>Un <strong>comptage par catégorie</strong>,</p></li>
+<li><p>Un <strong>affichage détaillé</strong> de chaque dépense avec sa catégorie.</p></li>
+</ul>
+<section id="fonctionnalites-a-ajouter">
+<h3>Fonctionnalités à ajouter :<a class="headerlink" href="#fonctionnalites-a-ajouter" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Après chaque montant, demander la <strong>catégorie</strong> (1 à 4) :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = snack</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = transport</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> = jeux</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> = autre</p></li>
+</ul>
+</li>
+<li><p>Stocker les catégories dans une liste <code class="docutils literal notranslate"><span class="pre">categories</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p></li>
+<li><p>À la fin, afficher chaque dépense avec son type.</p></li>
+<li><p>Calculer la <strong>moyenne</strong> des dépenses.</p></li>
+<li><p>Trouver <strong>manuellement</strong> la dépense la plus élevée (boucle + condition).</p></li>
+<li><p>Afficher un bilan complet.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Exemple d’exécution<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Voici un exemple d’exécution du programme avec les catégories :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Montant : 10.00 CHF pour Jeux
+Montant : 2.50 € pour Snack
+Montant : 15.00 € pour Transport 
+
+--- Bilan final ---
+Budget : 30.00 CHF
+Total des dépenses : 27.50 CHF
+Moyenne par dépense : 9.17 CHF
+Dépense la plus élevée : 15.00 CHF (Transport)
+Nombre de snacks : 1
+Nombre de jeux : 1
+Nombre de transports : 1
+Nombre d&#39;autres : 0 
 </pre></div>
 </div>
-</div>
-</div>
 </section>
 </section>
-<section id="les-tests-conditionnels">
-<h2>Les tests conditionnels<a class="headerlink" href="#les-tests-conditionnels" title="Permalink to this headline">#</a></h2>
-<p>La <strong>structure conditionnelle</strong> s’écrit avec le mot-clef <code class="docutils literal notranslate"><span class="pre">if</span></code> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">instruction1</span>
-</pre></div>
-</div>
-<p>la condition est toujours une <strong>comparaison</strong> entre deux valeurs (variables ou valeurs fixes) <strong>de même type</strong> avec les opérateurs conditionnels usuels (qui se lisent de gauche à droite):</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Opérateur conditionnel</strong></p></th>
-<th class="head"><p><strong>Signification</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
-<td><p><em>est égal à</em></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
-<td><p><em>n’est pas égal à</em></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
-<td><p><em>est strictement plus grand que</em></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
-<td><p><em>est plus grand ou égal à</em></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
-<td><p><em>est strictement plus petit que à</em></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
-<td><p><em>est plus petit ou égal à</em></p></td>
-</tr>
-</tbody>
-</table>
-<p>Il est possible d’ajouter une condition opposée avec le mot-clef <code class="docutils literal notranslate"><span class="pre">else</span></code> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">instruction1</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">instruction2</span>
-</pre></div>
-</div>
-<p>en français : <em>si la <code class="docutils literal notranslate"><span class="pre">condition</span></code> est remplie, alors le programme exécute l’instruction1, sinon il exécute l’instruction2</em></p>
-<p>Vous pouvez consulter <span class="xref myst">le TP sur les tests conditionnels de 1M</span></p>
-<section id="exercice-4">
-<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h3>
+<hr class="docutils" />
+<section id="regles-techniques">
+<h2>Règles techniques<a class="headerlink" href="#regles-techniques" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python nommé <code class="docutils literal notranslate"><span class="pre">conditions1.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
+<li><p>Le code doit être <strong>séquentiel</strong>.</p></li>
+<li><p>Utiliser <strong>deux listes</strong> :</p>
 <ul>
-<li><p>demande un entier <code class="docutils literal notranslate"><span class="pre">x</span></code> à l’utilisateur</p></li>
-<li><p>écrit si cet entier est plus petit ou égal à 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depenses</span></code> : pour les montants,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">categories</span></code> : pour les numéros de catégorie.</p></li>
 </ul>
 </li>
-<li><p>testez votre programme avec différentes entrées</p></li>
-<li><p>enregistrez votre programme</p></li>
+<li><p>Gèrer les erreurs de saisie (montant invalide, catégorie invalide).</p></li>
+<li><p>Utiliser des <strong>variables bien nommées</strong> : <code class="docutils literal notranslate"><span class="pre">budget</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_snack</span></code>, etc.</p></li>
+<li><p><strong>Ne pas utiliser</strong> de fonctions <code class="docutils literal notranslate"><span class="pre">max()</span></code>, <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort()</span></code> : faire les calculs à la main avec des boucles.</p></li>
 </ul>
-</section>
-<section id="exercice-5">
-<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python nommé <code class="docutils literal notranslate"><span class="pre">conditions2.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ul>
-<li><p>demande le prénom de l’utilisateur et le stocke dans la variable <code class="docutils literal notranslate"><span class="pre">prenom</span></code></p></li>
-<li><p>demande l’âge de l’utilisateur et le stocke dans la variable <code class="docutils literal notranslate"><span class="pre">age</span></code></p></li>
-<li><p>répond à l’utilisateur une phrase du type : <code class="docutils literal notranslate"><span class="pre">Bonjour</span> <span class="pre">Caroline,</span> <span class="pre">votre</span> <span class="pre">âge</span> <span class="pre">est</span> <span class="pre">de</span> <span class="pre">16</span> <span class="pre">ans</span> <span class="pre">donc</span> <span class="pre">vous</span> <span class="pre">êtes</span> <span class="pre">mineure</span></code> ou <code class="docutils literal notranslate"><span class="pre">Bonjour</span> <span class="pre">Stéphane,</span> <span class="pre">votre</span> <span class="pre">âge</span> <span class="pre">est</span> <span class="pre">de</span> <span class="pre">30</span> <span class="pre">ans,</span> <span class="pre">donc</span> <span class="pre">vous</span> <span class="pre">êtes</span> <span class="pre">majeure</span></code></p></li>
-<li><p>(facultatif) vous pouvez encore demander le genre de l’utilisateur et accorder l’adjectif <em>majeur</em> à celui-ci</p></li>
-</ul>
-</li>
-<li><p>testez votre programme avec différentes entrées</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-</section>
-<section id="les-boucles">
-<h2>Les boucles<a class="headerlink" href="#les-boucles" title="Permalink to this headline">#</a></h2>
-<p>Une boucle permet de répéter plusieurs fois un <strong>bloc d’instructions</strong>. On utilise le mot-clef <code class="docutils literal notranslate"><span class="pre">for</span></code>, un <strong>itérateur</strong> qui est une variable (généralement <code class="docutils literal notranslate"><span class="pre">i</span></code>) et d’un <strong>périmètre</strong> appelé <code class="docutils literal notranslate"><span class="pre">range()</span></code>:</p>
-<p>Rappel : la <em>signature</em> de la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> est <code class="docutils literal notranslate"><span class="pre">range(borneInf,</span> <span class="pre">borneSup,</span> <span class="pre">pas)</span></code> ou <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> (facultatif) est la borne inférieure, <code class="docutils literal notranslate"><span class="pre">borneSup</span></code> est la borne supérieure, et <code class="docutils literal notranslate"><span class="pre">pas</span></code> (facultatif) est le pas à chacune des itérations. Dans l’exemple suivant :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-    <span class="n">instruction1</span>
-    <span class="n">instruction2</span>
-</pre></div>
-</div>
-<p>le programme va <strong>itérer</strong> (répéter) les instructions <code class="docutils literal notranslate"><span class="pre">instruction1</span></code> et <code class="docutils literal notranslate"><span class="pre">instruction2</span></code> entre 1 et 100 avec un pas de 2. La variable <code class="docutils literal notranslate"><span class="pre">i</span></code> va donc prendre les valeurs successive : <code class="docutils literal notranslate"><span class="pre">1,3,5,7,...</span></code></p>
-<p>Vous pouvez consulter <span class="xref myst">le TP sur les boucles de 1M</span></p>
-<section id="exercice-6-boucles">
-<h3>Exercice 6 (boucles)<a class="headerlink" href="#exercice-6-boucles" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python appelé <code class="docutils literal notranslate"><span class="pre">boucles1.py</span></code></p></li>
-<li><p>écrivez un programme qui affiche tous les nombres multiples de 5 entre 1 et 100</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-<section id="exercice-7-boucles-conditions">
-<h3>Exercice 7 (boucles + conditions)<a class="headerlink" href="#exercice-7-boucles-conditions" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python appelé <code class="docutils literal notranslate"><span class="pre">boucles2.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ol class="simple">
-<li><p>demande à l’utilisateur une borne supérieure appelée <code class="docutils literal notranslate"><span class="pre">borneSup</span></code></p></li>
-<li><p>affiche tous les nombres impairs entre 1 et cette borne supérieure</p></li>
-</ol>
-</li>
-<li><p>testez votre programme avec différentes entrées</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-<section id="exercice-8-boucles-double-conditions">
-<h3>Exercice 8 (boucles + double conditions)<a class="headerlink" href="#exercice-8-boucles-double-conditions" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python appelé <code class="docutils literal notranslate"><span class="pre">boucles3.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ol class="simple">
-<li><p>demande à l’utilisateur s’il souhaite afficher les nombres pairs ou les nombres impairs (variable <code class="docutils literal notranslate"><span class="pre">pair</span></code> de type <code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p>demande à l’utilisateur entre quelles bornes il les souhaite (variables <code class="docutils literal notranslate"><span class="pre">borneInf</span></code> et <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>)</p></li>
-<li><p>affiche les nombres demandés</p></li>
-</ol>
-</li>
-<li><p>testez votre programme avec différentes entrées qui vérifient toutes les possibilités conditionnelles</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-</section>
-<section id="exercice-9-boucle-while">
-<h2>Exercice 9 (boucle while)<a class="headerlink" href="#exercice-9-boucle-while" title="Permalink to this headline">#</a></h2>
-<p>Développer un jeu de devinettes</p>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python appelé <code class="docutils literal notranslate"><span class="pre">boucles4.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ol class="simple">
-<li><p>choisir un nombre à deviner <code class="docutils literal notranslate"><span class="pre">nombre</span></code>  entre <code class="docutils literal notranslate"><span class="pre">binf</span></code>et <code class="docutils literal notranslate"><span class="pre">bsup</span></code></p></li>
-<li><p>initialiser la tentative du joueur<code class="docutils literal notranslate"><span class="pre">tentative</span></code></p></li>
-<li><p>demander au joueur un nombre <code class="docutils literal notranslate"><span class="pre">tentative</span></code> compris entre <code class="docutils literal notranslate"><span class="pre">binf</span></code>et <code class="docutils literal notranslate"><span class="pre">bsup</span></code></p>
-<ol class="simple">
-<li><p>Le programme précise si la <code class="docutils literal notranslate"><span class="pre">tentative</span></code> proposée est plus grande ou plus petite que le nombre à devier</p></li>
-<li><p>sortir de la boucle lorsque le joueur a trouvé le <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-<p><em>Facultatif :</em> implémentez une sortie de la boucle si le joueur écrit <code class="docutils literal notranslate"><span class="pre">-1</span></code> comme entrée de la tentative</p>
-</section>
-<section id="les-listes">
-<h2>Les listes<a class="headerlink" href="#les-listes" title="Permalink to this headline">#</a></h2>
-<p>Les <strong>listes</strong> sont des structures de données en Python qui permettent de stocker plusieurs variables de même type ou de types différents. Chaque élément d’une <strong>liste</strong> est accessible par son <strong>index</strong> : sa position dans le tableau de la première variable à la dernière en commençant par <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-<p>Plusieurs fonctions permettent de manipuler la liste. On peut :</p>
-<ul class="simple">
-<li><p>connaître la taille d’une liste avec la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code></p></li>
-<li><p>créer une liste vide nommée <code class="docutils literal notranslate"><span class="pre">maliste</span></code> en la définissant par <code class="docutils literal notranslate"><span class="pre">maliste</span> <span class="pre">=</span> <span class="pre">[]</span></code></p></li>
-<li><p>ajouter un élément à la dernière position avec la fonction <code class="docutils literal notranslate"><span class="pre">maliste.append(élément)</span></code></p></li>
-<li><p>ajouter un élément à l’index <code class="docutils literal notranslate"><span class="pre">i</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">maliste.insert(i,élément)</span></code></p></li>
-<li><p>modifier un élément d’une liste à l’index <code class="docutils literal notranslate"><span class="pre">i</span></code> : <code class="docutils literal notranslate"><span class="pre">maliste[i]</span> <span class="pre">=</span> <span class="pre">4</span></code></p></li>
-<li><p>supprimer le dernier élément avec la fonction <code class="docutils literal notranslate"><span class="pre">maliste.pop()</span></code></p></li>
-<li><p>supprimer l’élément <code class="docutils literal notranslate"><span class="pre">x</span></code> (s’il existe avec la fonction <code class="docutils literal notranslate"><span class="pre">maliste.remove(x)</span></code></p></li>
-<li><p>vider la liste avec la fonction <code class="docutils literal notranslate"><span class="pre">maliste.clear()</span></code></p></li>
-</ul>
-<p>Vous pouvez consulter <span class="xref myst">le TP sur les tableaux de 1M</span></p>
-<section id="exercice-10-listes">
-<h3>Exercice 10 (listes)<a class="headerlink" href="#exercice-10-listes" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python nommé <code class="docutils literal notranslate"><span class="pre">listes1.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ul>
-<li><p>définit une liste vide nommée <code class="docutils literal notranslate"><span class="pre">eleve</span></code></p></li>
-<li><p>demande à l’utilisateur son prénom (variable <code class="docutils literal notranslate"><span class="pre">prenom</span></code>) et l’ajoute à la position <code class="docutils literal notranslate"><span class="pre">0</span></code> dans la liste <code class="docutils literal notranslate"><span class="pre">eleve</span></code></p></li>
-<li><p>demande à l’utilisateur son nom (variable <code class="docutils literal notranslate"><span class="pre">nom</span></code>) et l’ajoute à la position <code class="docutils literal notranslate"><span class="pre">1</span></code> dans la liste <code class="docutils literal notranslate"><span class="pre">eleve</span></code></p></li>
-<li><p>demande à l’utilisateur le nom de sa classe (variable <code class="docutils literal notranslate"><span class="pre">classe</span></code>) et l’ajoute à la position <code class="docutils literal notranslate"><span class="pre">2</span></code> dans la liste <code class="docutils literal notranslate"><span class="pre">eleve</span></code></p></li>
-<li><p>demande à l’utilisateur son âge (variable <code class="docutils literal notranslate"><span class="pre">age</span></code>) et l’ajoute à la position <code class="docutils literal notranslate"><span class="pre">3</span></code> dans la liste <code class="docutils literal notranslate"><span class="pre">eleve</span></code></p></li>
-<li><p>affiche tous les éléments de la liste</p></li>
-</ul>
-</li>
-<li><p>testez votre programme avec différentes entrées</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-<section id="exercice-11-listes-boucles">
-<h3>Exercice 11 (listes + boucles)<a class="headerlink" href="#exercice-11-listes-boucles" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python nommé <code class="docutils literal notranslate"><span class="pre">listes2.py</span></code></p></li>
-<li><p>copiez-collez <strong>toutes les instructions</strong> de votre programme <code class="docutils literal notranslate"><span class="pre">listes1.py</span></code></p></li>
-<li><p>modifiez le programme pour qu’il :</p>
-<ul>
-<li><p>définisse une nouvelle liste vide nommée <code class="docutils literal notranslate"><span class="pre">gymnase</span></code></p></li>
-<li><p>demande à l’utilisateur combien il veut enregisrter d’élèves (variable <code class="docutils literal notranslate"><span class="pre">nbr</span></code>)</p></li>
-<li><p>utilise une boucle (instruction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(nbr)</span></code> pour répèter toutes les instructions du programme <code class="docutils literal notranslate"><span class="pre">listes1.py</span></code> sauf la définition de la liste vide et l’affichage des éléments de la liste</p></li>
-<li><p>affiche tous les éléments de la liste <code class="docutils literal notranslate"><span class="pre">gymnase</span></code> (aussi avec une boucle)</p></li>
-</ul>
-</li>
-<li><p>testez votre programme avec des valeurs pas trop élevées de la variable <code class="docutils literal notranslate"><span class="pre">nbr</span></code></p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-<section id="exercice-12-listes-boucles-conditions-facultatif">
-<h3>Exercice 12 (listes + boucles + conditions) : facultatif<a class="headerlink" href="#exercice-12-listes-boucles-conditions-facultatif" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier python nommé <code class="docutils literal notranslate"><span class="pre">listes3.py</span></code></p></li>
-<li><p>copiez-collez <strong>toutes les instructions</strong> de votre programme <code class="docutils literal notranslate"><span class="pre">listes2.py</span></code></p></li>
-<li><p>modifiez le programme pour qu’il :</p>
-<ul>
-<li><p>n’affiche que les élèves de la liste <code class="docutils literal notranslate"><span class="pre">gymnase</span></code> qui :</p>
-<ol class="simple">
-<li><p>sont mineurs</p></li>
-<li><p>s’appellent <code class="docutils literal notranslate"><span class="pre">Caroline</span></code></p></li>
-<li><p>sont dans la classe <code class="docutils literal notranslate"><span class="pre">1C1</span></code></p></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>testez votre programme (notamment en ajoutant des élèves qui remplissent certaines des conditions)</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
-</section>
-<section id="les-fonctions">
-<h2>Les fonctions<a class="headerlink" href="#les-fonctions" title="Permalink to this headline">#</a></h2>
-<p>Les fonctions permettent de simplifier la lecture d’un programme en regroupant les instructions et opérations répétées. On définit une fonction avec le mot-clef <code class="docutils literal notranslate"><span class="pre">def</span></code> suivi du <strong>nom de la fonction</strong> avec ses éventuels <strong>arguments</strong> (facultatifs):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maFonction</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mon âge est de &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39; ans&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>est une fonction qui s’appelle au sein du programme par :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maFonction</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>et va afficher :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mon</span> <span class="n">âge</span> <span class="n">est</span> <span class="n">de</span> <span class="mi">15</span> <span class="n">ans</span>
-</pre></div>
-</div>
-<p>Vous pouvez consulter <span class="xref myst">le TP sur les fonctions de 1M</span></p>
-<section id="exercice-13-fonctions">
-<h3>Exercice 13 (fonctions)<a class="headerlink" href="#exercice-13-fonctions" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier nommé <code class="docutils literal notranslate"><span class="pre">fonctions1.py</span></code></p></li>
-<li><p>écrivez un programme qui :</p>
-<ul>
-<li><p>comporte une fonction nommée <code class="docutils literal notranslate"><span class="pre">temp()</span></code> avec 1 argument (variable <code class="docutils literal notranslate"><span class="pre">temp</span></code>)</p></li>
-<li><p>demande à l’utilisateur la température extérieure (variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code>)</p></li>
-<li><p>affiche la température extérieure sous la forme <code class="docutils literal notranslate"><span class="pre">Aujourd'hui,</span> <span class="pre">il</span> <span class="pre">fait</span> <span class="pre">temperature</span> <span class="pre">°C</span></code></p></li>
-</ul>
-</li>
-<li><p>testez votre programme avec différentes valeurs</p></li>
-<li><p>enregisrez votre programme</p></li>
-</ul>
-</section>
-<section id="exercice-14-fonctions-conditions">
-<h3>Exercice 14 (fonctions + conditions)<a class="headerlink" href="#exercice-14-fonctions-conditions" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>dans thonny, créez un nouveau fichier nommé <code class="docutils literal notranslate"><span class="pre">fonctions2.py</span></code></p></li>
-<li><p>copiez-collez toutes les instructions de votre programme <code class="docutils literal notranslate"><span class="pre">fonctions1.py</span></code></p></li>
-<li><p>modifiez votre programme en ajoutant une nouvelle fonction nommée <code class="docutils literal notranslate"><span class="pre">canicule()</span></code> avec 1 argument <code class="docutils literal notranslate"><span class="pre">temp</span></code> :</p>
-<ul>
-<li><p>demande à l’utilisateur la température extérieure (variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code>)</p></li>
-<li><p>affiche un message sous la forme <code class="docutils literal notranslate"><span class="pre">Aujourd'hui</span> <span class="pre">est</span> <span class="pre">une</span> <span class="pre">journée</span> <span class="pre">caniculaire</span></code> si la température est supérieure à <code class="docutils literal notranslate"><span class="pre">30</span></code> degrés. Affiche la température telle quelle si au-dessous.</p></li>
-</ul>
-</li>
-<li><p>testez votre programme avec différentes valeurs</p></li>
-<li><p>enregistrez votre programme</p></li>
-</ul>
-</section>
 </section>
 </section>
 
@@ -1705,17 +1346,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="R2-PROG-01.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Programmation avancée</p>
+            <p class="prev-next-title">R2-PROG-01 : Rappels programmation 1M</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="R2-PROG-02.html" title="next page">
+    <a class='right-next' id="next-link" href="../luhn/TP2-PROG-01.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-PROG-02 : Rappels 1M - mini-projet</p>
+        <p class="prev-next-title">TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
