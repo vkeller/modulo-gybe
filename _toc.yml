@@ -99,6 +99,7 @@ parts:
     - file: 2M/prog/index
       sections:
       - file: 2M/prog/revisions/R2-PROG-01
+      - file: 2M/prog/revisions/R2-PROG-02
       - file: 2M/prog/luhn/TP2-PROG-01
       - file: 2M/prog/complexite/TP2-PROG-02
       - file: 2M/prog/complexite/TP2-PROG-03
@@ -143,6 +144,7 @@ parts:
       - file: 2M/machine-learning/cours/C2-IA-02
       - file: 2M/machine-learning/cours/C2-IA-03
       - file: 2M/machine-learning/cours/C2-IA-04
+      - file: 2M/machine-learning/cours/C2-IA-05
       - file: 2M/machine-learning/tp/JeudelavieTP
     - file: 2M/esdn/index
       sections:
