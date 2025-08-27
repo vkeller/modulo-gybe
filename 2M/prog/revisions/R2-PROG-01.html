@@ -1399,19 +1399,33 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">f</span> <span class="o">=</span> <span class="mf">4.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">4.0</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 4 True 4.0
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;e&#39; is not defined
 </pre></div>
 </div>
 </div>
+</div>
+<p>Modifiez le code pour que les types des variables <code class="docutils literal notranslate"><span class="pre">a,b,c,d</span></code> soient :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">de</span> <span class="nb">type</span> <span class="n">chaîne</span> <span class="n">de</span> <span class="n">caractères</span>
+<span class="n">b</span> <span class="n">de</span> <span class="nb">type</span> <span class="n">flottant</span>
+<span class="n">c</span> <span class="n">de</span> <span class="nb">type</span> <span class="n">chaîne</span> <span class="n">de</span> <span class="n">caractières</span>
+<span class="n">d</span> <span class="n">de</span> <span class="nb">type</span> <span class="n">entier</span>
+</pre></div>
 </div>
 </section>
 </section>
