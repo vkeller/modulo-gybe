@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------
-# Algorithme pour trouver le PGCVD entre deux nombres entiers positifs
+# Algorithme pour trouver le PGCD entre deux nombres entiers positifs
 # - Demander deux entiers A et B (positifs, non nuls)
 # - Tant que A ≠ B faire :
 #     - Si A > B alors
