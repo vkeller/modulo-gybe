@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C1-REDO-02 binaire" href="C1-REDO-02.html" />
-    <link rel="prev" title="Représentation des données" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -140,24 +138,24 @@ const thebe_selector_output = ".output, .cell_output"
   1ère année
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    DO Informatique 1M
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../index.html">
    Représentation des données
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C1-REDO-01.html">
      C1-REDO-01 : Du monde physique au monde numérique
     </a>
    </li>
@@ -982,7 +980,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/representation/cours/C1-REDO-01.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/representation/cours/C1-REDO-01-old.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1010,7 +1008,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/1M/representation/cours/C1-REDO-01.ipynb"
+        <a href="../../../_sources/1M/representation/cours/C1-REDO-01-old.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1154,6 +1152,21 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#echantillonnage">
+   1. Echantillonnage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantification">
+   2. Quantification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encodage">
+   3. Encodage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
    DISCLAIMER : l’espace et le temps : des grandeurs discrètes ou continues ?
   </a>
@@ -1260,6 +1273,21 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#echantillonnage">
+   1. Echantillonnage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantification">
+   2. Quantification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encodage">
+   3. Encodage
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
@@ -1438,6 +1466,27 @@ title="Print to PDF"
 <p>Ce qui nous donne finalement la suite binaire : <code class="docutils literal notranslate"><span class="pre">111100111010100000100100100111101011101110101110101101100110100100100010100001100011</span></code> qui pourrait être le fichier final <code class="docutils literal notranslate"><span class="pre">cervin.png</span></code></p>
 </section>
 </section>
+<section id="echantillonnage">
+<h2>1. Echantillonnage<a class="headerlink" href="#echantillonnage" title="Permalink to this headline">#</a></h2>
+<p>L’échantillonnage (en anglais <em>sampling</em>) est la première étape de la numérisation. Elle consiste à enregistrer la valeur instantanée d’une grandeur physique continue à intervalle régulier. La fréquence d’enregistrement de ces valeurs s’appelle <strong>fréquence d’échantillonnage</strong> (mesurée en <strong>Hz</strong> soit en <strong>Herz</strong>. <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Hz</span> <span class="pre">=</span> <span class="pre">1/s</span></code></p>
+<p>Si la fréquence d’échantillonnage est trop petite, alors le signal numérique enregistré ne sera pas une bonne approximation du signal continu. C’est le principe de <strong>sous-échantillonnage</strong>. Dans cet exemple, le signal réel (en bleu) n’est pas correctement échantillonné (valeurs noir), la résultante (fonction rouge) ne correspond pas :</p>
+<p><img alt="sous-echantillonnage" src="../../../_images/sous.png" /></p>
+<p>Au contraire, si la fréquence d’échantillonnage est trop grande, alors l’approximation résultante sera de meilleure qualité (on dit qu’il permet d’augmenter le rapport <strong>signal-bruit</strong> (en anglais <em>signal-to-noise ratio</em>, c’est-à-dire le rapport entre la quantité d’information du signal et ce qui ne l’est pas (que l’on appelle <strong>bruit</strong>)</p>
+<p><img alt="SNR" src="../../../_images/snr.png" /></p>
+<p>On peut montrer qu’une <strong>fréquence d’échantillonnage adéquate</strong> se situe autour du double de la valeur de la fréquence mesurée (c’est le <strong>Théorème de Shannon</strong> que nous ne verrons pas dans ce cours)</p>
+<p><img alt="echantillonnage" src="../../../_images/echantillonnage.png" /></p>
+</section>
+<section id="quantification">
+<h2>2. Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">#</a></h2>
+<p>Après avoir échantillonné le signal, il faut attribuer à la valeur de chaque échantillon une valeur binaire. A chaque <strong>plage de valeurs mesurées</strong> correspond une valeur binaire. Ainsi un convertisseur analogique-digital codé sur 3 bits possèdera 8 niveaux de quantification :</p>
+<p><img alt="quantif" src="../../../_images/quantification.png" /></p>
+</section>
+<section id="encodage">
+<h2>3. Encodage<a class="headerlink" href="#encodage" title="Permalink to this headline">#</a></h2>
+<p>Finalement l’<strong>encodage</strong> permet de traduire les différentes valeurs quantifiées en un <strong>langage compris par l’ordinateur</strong> (des <code class="docutils literal notranslate"><span class="pre">1</span></code> et des <code class="docutils literal notranslate"><span class="pre">0</span></code> : du courant ou pas de courant).</p>
+<p>Pour cela, il faut apprendre à écrire avec les deux valeurs <code class="docutils literal notranslate"><span class="pre">1</span></code> et <code class="docutils literal notranslate"><span class="pre">0</span></code>. C’est ce que l’on appelle <strong>code binaire</strong></p>
+<p><img alt="bits" src="../../../_images/bits.jpg" /></p>
+</section>
 <section id="disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues">
 <h2>DISCLAIMER : l’espace et le temps : des grandeurs discrètes ou continues ?<a class="headerlink" href="#disclaimer-l-espace-et-le-temps-des-grandeurs-discretes-ou-continues" title="Permalink to this headline">#</a></h2>
 <p>Cette question est toujours ouverte aujourd’hui. La physique Newtonienne (dite <em>classique</em>) considère que ces deux grandeurs sont continues, la physique d’Einstein (dite <em>relativiste</em>) considère que les deux grandeurs sont liées, la physique quantique considère qu’elles sont discrètes. D’autres enfin, dans des tentatives de réponses qui relève plus de la philosophie métaphysique : l’espace et le temps ne sont peut-être finalement que des manifestations d’un concept plus profond et encore inconnu.</p>
@@ -1473,20 +1522,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Représentation des données</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="C1-REDO-02.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-REDO-02 binaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
