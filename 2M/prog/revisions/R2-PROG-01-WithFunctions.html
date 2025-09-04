@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="R2-PROG-02 : Rappels 1M - mini-projet" href="R2-PROG-02.html" />
-    <link rel="prev" title="Programmation avancée" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -496,7 +494,7 @@ const thebe_selector_output = ".output, .cell_output"
   2ème année
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    DO Informatique 2M
@@ -569,18 +567,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../index.html">
    Programmation avancée
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="R2-PROG-01.html">
      R2-PROG-01 : Rappels programmation 1M
     </a>
    </li>
@@ -982,7 +980,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/revisions/R2-PROG-01.html&body=Your%20issue%20content%20here."
+        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/prog/revisions/R2-PROG-01-WithFunctions.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1010,7 +1008,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/2M/prog/revisions/R2-PROG-01.ipynb"
+        <a href="../../../_sources/2M/prog/revisions/R2-PROG-01-WithFunctions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1169,6 +1167,23 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-fonctions">
+   Les fonctions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-13-fonctions">
+     Exercice 13 (fonctions)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-14-fonctions-conditions">
+     Exercice 14 (fonctions + conditions)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1284,6 +1299,23 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice-12-listes-boucles-conditions-facultatif">
      Exercice 12 (listes + boucles + conditions) : facultatif
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-fonctions">
+   Les fonctions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-13-fonctions">
+     Exercice 13 (fonctions)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-14-fonctions-conditions">
+     Exercice 14 (fonctions + conditions)
     </a>
    </li>
   </ul>
@@ -1606,6 +1638,53 @@ title="Print to PDF"
 </ul>
 </section>
 </section>
+<section id="les-fonctions">
+<h2>Les fonctions<a class="headerlink" href="#les-fonctions" title="Permalink to this headline">#</a></h2>
+<p>Les fonctions permettent de simplifier la lecture d’un programme en regroupant les instructions et opérations répétées. On définit une fonction avec le mot-clef <code class="docutils literal notranslate"><span class="pre">def</span></code> suivi du <strong>nom de la fonction</strong> avec ses éventuels <strong>arguments</strong> (facultatifs):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maFonction</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mon âge est de &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39; ans&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>est une fonction qui s’appelle au sein du programme par :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maFonction</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>et va afficher :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mon</span> <span class="n">âge</span> <span class="n">est</span> <span class="n">de</span> <span class="mi">15</span> <span class="n">ans</span>
+</pre></div>
+</div>
+<p>Vous pouvez consulter <span class="xref myst">le TP sur les fonctions de 1M</span></p>
+<section id="exercice-13-fonctions">
+<h3>Exercice 13 (fonctions)<a class="headerlink" href="#exercice-13-fonctions" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>dans thonny, créez un nouveau fichier nommé <code class="docutils literal notranslate"><span class="pre">fonctions1.py</span></code></p></li>
+<li><p>écrivez un programme qui :</p>
+<ul>
+<li><p>comporte une fonction nommée <code class="docutils literal notranslate"><span class="pre">temp()</span></code> avec 1 argument (variable <code class="docutils literal notranslate"><span class="pre">temp</span></code>)</p></li>
+<li><p>demande à l’utilisateur la température extérieure (variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code>)</p></li>
+<li><p>affiche la température extérieure sous la forme <code class="docutils literal notranslate"><span class="pre">Aujourd'hui,</span> <span class="pre">il</span> <span class="pre">fait</span> <span class="pre">temperature</span> <span class="pre">°C</span></code></p></li>
+</ul>
+</li>
+<li><p>testez votre programme avec différentes valeurs</p></li>
+<li><p>enregisrez votre programme</p></li>
+</ul>
+</section>
+<section id="exercice-14-fonctions-conditions">
+<h3>Exercice 14 (fonctions + conditions)<a class="headerlink" href="#exercice-14-fonctions-conditions" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>dans thonny, créez un nouveau fichier nommé <code class="docutils literal notranslate"><span class="pre">fonctions2.py</span></code></p></li>
+<li><p>copiez-collez toutes les instructions de votre programme <code class="docutils literal notranslate"><span class="pre">fonctions1.py</span></code></p></li>
+<li><p>modifiez votre programme en ajoutant une nouvelle fonction nommée <code class="docutils literal notranslate"><span class="pre">canicule()</span></code> avec 1 argument <code class="docutils literal notranslate"><span class="pre">temp</span></code> :</p>
+<ul>
+<li><p>demande à l’utilisateur la température extérieure (variable <code class="docutils literal notranslate"><span class="pre">temperature</span></code>)</p></li>
+<li><p>affiche un message sous la forme <code class="docutils literal notranslate"><span class="pre">Aujourd'hui</span> <span class="pre">est</span> <span class="pre">une</span> <span class="pre">journée</span> <span class="pre">caniculaire</span></code> si la température est supérieure à <code class="docutils literal notranslate"><span class="pre">30</span></code> degrés. Affiche la température telle quelle si au-dessous.</p></li>
+</ul>
+</li>
+<li><p>testez votre programme avec différentes valeurs</p></li>
+<li><p>enregistrez votre programme</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1635,20 +1714,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Programmation avancée</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="R2-PROG-02.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R2-PROG-02 : Rappels 1M - mini-projet</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
