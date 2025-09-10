@@ -1,112 +1,178 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>C2-STRAT-02 : Gestion des erreurs &#8212; Education Numérique Ecole de maturité</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2M/strategies/C2-STRAT-02';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo" href="TP2-STRAT-01.html" />
     <link rel="prev" title="C2-STRAT-01 : Stratégies de résolution de problèmes" href="C2-STRAT-01.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo-beaulieu.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo-beaulieu.png" class="logo__image only-light" alt="Education Numérique Ecole de maturité - Home"/>
+    <script>document.write(`<img src="../../_static/logo-beaulieu.png" class="logo__image only-dark" alt="Education Numérique Ecole de maturité - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -115,1286 +181,437 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Généralités
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Généralités</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../general/generalites.html">
-   Esprit critique, fraude, plagiat et ChatGPT
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../general/outils.html">
-   Outils utiles pour le cours d’informatique
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/quisuisje.html">Qui suis-je ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/generalites.html">Esprit critique, fraude, plagiat et ChatGPT</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../general/outils.html">Outils utiles pour le cours d’informatique</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  1ère année
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">1ère année</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../1M/index.html">
-   DO Informatique 1M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/representation/index.html">
-   Représentation des données
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-01.html">
-     C1-REDO-01 : Du monde physique au monde numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-02.html">
-     C1-REDO-02 binaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-03.html">
-     C1-REDO-03 : codage de caractères
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">
-     C1-REDO-04 : Opérations en binaire et en hexadécimal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/cours/R1-REDO-01.html">
-     R1-REDO-01 Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-01.html">
-     TP1-REDO-01 : les images matricielles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02.html">
-     TP1-REDO-02 : Le son
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/representation/tp/TP1-REDO-03.html">
-     TP1-REDO-03 : Types de fichiers et compression
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/algo/index.html">
-   Algorithmique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-01.html">
-     C1-ALGO-01 : Introduction à l’algorithmique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-02.html">
-     C1-ALGO-02 : Des algorithmes aux algorigrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-03.html">
-     C1-ALGO-03 : Les jeux de Nim
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-04.html">
-     C1-ALGO-04 : Caractéristiques des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.html">
-     C1-ALGO-05.00 : Algorithmes classiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.1.html">
-     C1-ALGO-05.01 Algorithmes classiques (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.2.html">
-     C1-ALGO-05.02 Algorithmes classiques (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-06.html">
-     C1-ALGO-06 : Algorithmes évolutionnistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-07.html">
-     C1-ALGO-07 : Des algorigrammes à leur programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-08.html">
-     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-09.html">
-     C1-ALGO-09 : L’horloge de la gare de St-Gallen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-10.html">
-     C1-ALGO-10 - Introduction à la cryptologie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-11.html">
-     C1-ALGO-11 : Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-12.html">
-     C1-ALGO-12 : Les boucles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/C1-ALGO-13.html">
-     C1-ALGO-13 : Les algorithmes gloutons
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-01.html">
-     R1-ALGO-01 - révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-02.html">
-     R1-ALGO-02 : Révision Algorigramme + programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/algo/cours/R1-ALGO-03.html">
-     R1-ALGO-03 : Rappels algorigrammes - Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../1M/installation/installation.html">
-   Environnement de développement
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/prog/index.html">
-   Programmation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/intro1/TP1-PROG-01.html">
-     TP1-PROG-01 - Introduction à la programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/intro2/TP1-PROG-02.html">
-     TP1-PROG-02 - Introduction : les fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-03.html">
-     TP1-PROG-03 - La boucle
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-04.html">
-     TP1-PROG-04 - Boucles
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-     approfondissement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05.html">
-     TP1-PROG-05 - Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/dessinsanimes/TP1-PROG-06.html">
-     TP1-PROG-06 - Les dessins animés
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/types/TP1-PROG-07.html">
-     TP1-PROG-07 - Les variables en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/tableaux/TP1-PROG-08.html">
-     TP1-PROG-08 - Les listes (tableaux)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/files/TP1-PROG-09.html">
-     TP1-PROG-09 - Les Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/piles/TP1-PROG-10.html">
-     TP1-PROG-10 - Les Piles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/cryptographie/TP1-PROG-11.html">
-     TP1-PROG-11 : Introduction à la cryptographie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/IO/TP1-PROG-12.html">
-     TP1-PROG-12: Les entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/prog/revisions/TP1-PROG-13.html">
-     TP1-PROG-13 : TP supplémentaire prog 1M
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/architecture/index.html">
-   Architecture
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/architecture/fichiers/SystemeDeFichiers.html">
-     TP1-ARCH-01 : Le système de fichiers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/esdn/index.html">
-   Enjeux sociaux
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-01.html">
-     C1-ESDN-01 : Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-02.html">
-     C1-ESDN-02 : Le mouvement Cypherpunk
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-03.html">
-     C1-ESDN-03 : Le capitalisme de surveillance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-04.html">
-     C1-ESDN-04 : Edward Snowden et la surveillance de masse
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-05.html">
-     C1-ESDN-05 : Profilage numérique : l’affaire Burrill
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/presentations/TP1-ESDN-00.html">
-     TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/esdn/cours/TP1-ESDN-01.html">
-     TP1-ESDN-01 : Les réseaux informatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../1M/jeux/index.html">
-   Jeux informatiques et logiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../1M/jeux/logique.html">
-     C1-JEUX-01 : Quizz de logique
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../1M/index.html">DO Informatique 1M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-03.html">TP1-REDO-03 : Types de fichiers et compression</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  2ème année
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/algo/index.html">Algorithmique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-02.html">C1-ALGO-02 : Des algorithmes aux algorigrammes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-04.html">C1-ALGO-04 : Caractéristiques des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-05.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-06.html">C1-ALGO-06 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-07.html">C1-ALGO-07 : Des algorigrammes à leur programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-08.html">C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-09.html">C1-ALGO-09 : L’horloge de la gare de St-Gallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../1M/algo/cours/R1-ALGO-03.html">R1-ALGO-03 : Rappels algorigrammes - Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1M/installation/installation.html">Environnement de développement</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/prog/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/intro1/TP1-PROG-01.html">TP1-PROG-01 - Introduction à la programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/intro2/TP1-PROG-02.html">TP1-PROG-02 - Introduction : les fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-03.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-04.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05-Turtle.html">TP1-PROG-05-Turtle - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/conditions/TP1-PROG-05.html">TP1-PROG-05 - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/types/TP1-PROG-07.html">TP1-PROG-07 - Les variables en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/tableaux/TP1-PROG-08.html">TP1-PROG-08 - Les listes (tableaux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/files/TP1-PROG-09.html">TP1-PROG-09 - Les Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/piles/TP1-PROG-10.html">TP1-PROG-10 - Les Piles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/cryptographie/TP1-PROG-11.html">TP1-PROG-11 : Introduction à la cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : TP supplémentaire prog 1M</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/architecture/fichiers/SystemeDeFichiers.html">TP1-ARCH-01 : Le système de fichiers</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/esdn/index.html">Enjeux sociaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-01.html">C1-ESDN-01 : Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-02.html">C1-ESDN-02 : Le mouvement Cypherpunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-03.html">C1-ESDN-03 : Le capitalisme de surveillance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-04.html">C1-ESDN-04 : Edward Snowden et la surveillance de masse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/C1-ESDN-05.html">C1-ESDN-05 : Profilage numérique : l’affaire Burrill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/presentations/TP1-ESDN-00.html">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/esdn/cours/TP1-ESDN-01.html">TP1-ESDN-01 : Les réseaux informatique</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2ème année</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   DO Informatique 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../algo/index.html">
-   Algorithmique avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-01.html">
-     R2-ALGO-01 : Révision Algorithmes 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02-A.html">
-     R2-ALGO-02-A : Révision algorithmes (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02-B.html">
-     R2-ALGO-02-B : Révision (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-01.html">
-     C2-ALGO-01 : Taille du problème
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-02.html">
-     C2-ALGO-02 : Complexité des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-03.html">
-     C2-ALGO-03 : Complexité des algorithmes (suite)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-04.html">
-     C2-ALGO-04 : Introduction à la théorie des graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/C2-ALGO-05.html">
-     C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-02.html">
-     R1-ALGO-02 : Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../algo/R2-ALGO-03.html">
-     R1-ALGO-03 : Révision
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../prog/index.html">
-   Programmation avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/revisions/R2-PROG-01.html">
-     R2-PROG-01 : Rappels programmation 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/complexite/TP2-PROG-01.html">
-     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/complexite/TP2-PROG-02.html">
-     TP2-PROG-02 : Approche pratique de la complexité : Recherche
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/luhn/TP2-PROG-03.html">
-     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/syracuse/TP2-PROG-05.html">
-     TP2-PROG-05 : Conjecture de Collatz
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/dictionnaires/Dictionnaires2.html">
-     TP2-PROG-06 : Dictionnaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/motdepasse/MotsDePasse.html">
-     TP2-PROG-07 : Les mots de passe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/hacking/TP2-PROG-08.html">
-     TP2-PROG-08: Coder et décoder comme les Romains
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/arbres/LesArbres.html">
-     TP2-PROG-09 : Les arbres
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prog/st-gall/TP2-PROG-10.html">
-     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../histoire/index.html">
-   Histoire de l’informatique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-01.html">
-     C2-HIST-01 : Préhistoire de l’informatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-02.html">
-     C2-HIST-02 : Histoire de l’informatique : le matériel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-03.html">
-     C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../histoire/C2-HIST-04.html">
-     C2-HIST-04 : Histoire des logiciels (la couche applicative)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../architecture/index.html">
-   Architecture et réseaux
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/cours/C2-ARCH-01.html">
-     C2-ARCH-01 : Compilation : du Python au langage machine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/cours/C2-ARCH-02.html">
-     C2-ARCH-02 : Architecture de Von Neumann
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/reseau/C2-RESO-01.html">
-     C2-RESO-01 : Introduction aux réseaux informatiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/reseau/C2-RESO-02.html">
-     C2-RESO-02 : L’adresse IP
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-00.html">
-     TP2-ARCH-00 : Introduction avec un micro:bit
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/TP/TP2-ARCH-01.html">
-     TP2-ARCH-01 : Les portes logiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-02.html">
-     TP2-ARCH-02 : Le nano-ordinateur RPi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-03.html">
-     TP2-ARCH-03 : Mise en réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-04.html">
-     TP2-ARCH-04 : Services réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-NOTE2.html">
-     TP2-ARCH-NOTE : Journal de bord
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-05.html">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/raspberry/TP2-ARCH-06.html">
-     TP2-ARCH-06 : RPi pour aller plus loin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../architecture/logidules/TP2-LOGI-01.html">
-     TP2-LOGI-01 : Les logidules
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   Stratégie de résolution
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="C2-STRAT-01.html">
-     C2-STRAT-01 : Stratégies de résolution de problèmes
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     C2-STRAT-02 : Gestion des erreurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TP2-STRAT-01.html">
-     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TP2-STRAT-02.html">
-     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../machine-learning/index.html">
-   Intelligence artificielle
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-00.html">
-     C2-IA-00 : Introduction à l’intelligence artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-01.html">
-     C2-IA-01 : Histoire de l’Intelligence Artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-02.html">
-     C2-IA-02 : Automates cellulaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-03.html">
-     C2-IA-03 : Apprentissage automatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/cours/C2-IA-04.html">
-     C2-IA-04 : Réseau de neurones artificiels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../machine-learning/tp/JeudelavieTP.html">
-     TP-IA-01 : Le jeu de la vie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../esdn/index.html">
-   Enjeux sociaux du numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/environnement/TP2-ESDN-01.html">
-     TP2-ESDN-01 : L’environnement et le numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/generative-art/TP2-ESDN-02.html">
-     TP2-ESDN-02 : L’Art et le Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../esdn/women/P2-ESDN-02.html">
-     P2-ESDN-02 : Femmes dans l’informatique
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">DO Informatique 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo/index.html">Algorithmique avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo/R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/R2-ALGO-02-A.html">R2-ALGO-02-A : Révision algorithmes (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/R2-ALGO-02-B.html">R2-ALGO-02-B : Révision (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-01.html">C2-ALGO-01 : Taille du problème</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-02.html">C2-ALGO-02 : Complexité des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-03.html">C2-ALGO-03 : Complexité des algorithmes (suite)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-04-A.html">C2-ALGO-04-A : Introduction à la théorie des graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-04-B.html">C2-ALGO-04-B : Parcours de graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  3C2M
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../3C2M/index.html">
-   MAN 3C &gt; 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../3C2M/programmation/index.html">
-   Programmation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../3C2M/programmation/J1/3C2M-PROG-00.html">
-     3C2M-PROG-00 : Introduction
-    </a>
-   </li>
-  </ul>
- </li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog/revisions/R2-PROG-01.html">R2-PROG-01 : Rappels programmation 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/revisions/R2-PROG-02.html">R2-PROG-02 : Rappels 1M - mini-projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/luhn/TP2-PROG-01.html">TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/complexite/TP2-PROG-02.html">TP2-PROG-02 : Approche pratique de la complexité : Pile ou face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/complexite/TP2-PROG-03.html">TP2-PROG-03 : Approche pratique de la complexité : Recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/syracuse/TP2-PROG-05.html">TP2-PROG-05 : Conjecture de Collatz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/dictionnaires/Dictionnaires2.html">TP2-PROG-06 : Dictionnaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/motdepasse/MotsDePasse.html">TP2-PROG-07 : Les mots de passe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/hacking/TP2-PROG-08.html">TP2-PROG-08: Coder et décoder comme les Romains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/arbres/LesArbres.html">TP2-PROG-09 : Les arbres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/st-gall/TP2-PROG-10.html">TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bibliographie
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../histoire/index.html">Histoire de l’informatique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../histoire/C2-HIST-01.html">C2-HIST-01 : Préhistoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../histoire/C2-HIST-02.html">C2-HIST-02 : Histoire de l’informatique : le matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../histoire/C2-HIST-03.html">C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../histoire/C2-HIST-04.html">C2-HIST-04 : Histoire des logiciels (la couche applicative)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../architecture/index.html">Architecture et réseaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/cours/C2-ARCH-01.html">C2-ARCH-01 : Compilation : du Python au langage machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/cours/C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/TP/TP2-ARCH-01.html">TP2-ARCH-01 : Les portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-03.html">TP2-ARCH-03 : Mise en réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Stratégie de résolution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../machine-learning/index.html">Intelligence artificielle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-00.html">C2-IA-00 : Introduction à l’intelligence artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-01.html">C2-IA-01 : Histoire de l’Intelligence Artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-02.html">C2-IA-02 : Automates cellulaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-03.html">C2-IA-03 : Apprentissage automatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-04.html">C2-IA-04 : Réseau de neurones artificiels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/cours/C2-IA-05.html">La boucle d’apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine-learning/tp/JeudelavieTP.html">TP-IA-01 : Le jeu de la vie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../esdn/index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../esdn/environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3C2M</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../biblio.html">
-   Livres et sources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../3C2M/index.html">MAN 3C &gt; 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../3C2M/programmation/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../3C2M/programmation/J1/3C2M-PROG-00.html">3C2M-PROG-00 : Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../biblio.html">Livres et sources</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/strategies/C2-STRAT-02.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/2M/strategies/C2-STRAT-02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/strategies/C2-STRAT-02.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/2M/strategies/C2-STRAT-02.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">
-   Qu’est-ce qu’une erreur (un
-   <em>
-    bug
-   </em>
-   ) ?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#historique">
-     Historique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#causes">
-     Causes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-les-reconnaitre">
-     Savoir les reconnaître
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-integrante-du-cycle-de-developpement-logiciel">
-     Partie intégrante du cycle de développement logiciel
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#traiter-une-exception">
-     “Traiter une exception”
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lever-une-exception">
-     “Lever une exception”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
-   Définition : erreur algorithmique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complexite-inadequate">
-     Complexité inadéquate
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algorithme-inadapte">
-     Algorithme inadapté
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boucle-infinie">
-     Boucle infinie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-de-programmation">
-   Définition : erreur de programmation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#division-par-0">
-     division par 0
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#erreur-d-index">
-     Erreur d’index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">
-   Définition : erreur de syntaxe en Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemples-d-erreurs-de-syntaxe-pure">
-     Exemples d’erreurs de syntaxe pure
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvais-nom-de-module-modulenotfounderror">
-       Mauvais nom de module : ModuleNotFoundError
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#syntaxe-incorrecte">
-       Syntaxe incorrecte
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#erreur-d-indentation">
-       Erreur d’indentation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvaise-utilisation-de-l-operateur-d-assignation">
-       Mauvaise utilisation de l’opérateur d’assignation (
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         =
-        </span>
-       </code>
-       )
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parentheses-manquantes">
-       Parenthèses manquantes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvais-appel-de-fonctions-internes-ou-declarees">
-       Mauvais appel de fonctions (internes ou déclarées)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">
-   Conséquences de certaines erreurs historiques
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">
-     Explosion de la fusée Ariane 5 en 1996
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">
-     Crash du module
-     <em>
-      Mars Climate Orbiter
-     </em>
-     *
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bug-de-l-an-2038">
-     Bug de l’an 2038
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>C2-STRAT-02 : Gestion des erreurs</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">
-   Qu’est-ce qu’une erreur (un
-   <em>
-    bug
-   </em>
-   ) ?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#historique">
-     Historique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#causes">
-     Causes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-les-reconnaitre">
-     Savoir les reconnaître
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-integrante-du-cycle-de-developpement-logiciel">
-     Partie intégrante du cycle de développement logiciel
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#traiter-une-exception">
-     “Traiter une exception”
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lever-une-exception">
-     “Lever une exception”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-algorithmique">
-   Définition : erreur algorithmique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complexite-inadequate">
-     Complexité inadéquate
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algorithme-inadapte">
-     Algorithme inadapté
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boucle-infinie">
-     Boucle infinie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-de-programmation">
-   Définition : erreur de programmation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#division-par-0">
-     division par 0
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#erreur-d-index">
-     Erreur d’index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">
-   Définition : erreur de syntaxe en Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemples-d-erreurs-de-syntaxe-pure">
-     Exemples d’erreurs de syntaxe pure
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvais-nom-de-module-modulenotfounderror">
-       Mauvais nom de module : ModuleNotFoundError
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#syntaxe-incorrecte">
-       Syntaxe incorrecte
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#erreur-d-indentation">
-       Erreur d’indentation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvaise-utilisation-de-l-operateur-d-assignation">
-       Mauvaise utilisation de l’opérateur d’assignation (
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         =
-        </span>
-       </code>
-       )
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parentheses-manquantes">
-       Parenthèses manquantes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mauvais-appel-de-fonctions-internes-ou-declarees">
-       Mauvais appel de fonctions (internes ou déclarées)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">
-   Conséquences de certaines erreurs historiques
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">
-     Explosion de la fusée Ariane 5 en 1996
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">
-     Crash du module
-     <em>
-      Mars Climate Orbiter
-     </em>
-     *
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bug-de-l-an-2038">
-     Bug de l’an 2038
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>C2-STRAT-02 : Gestion des erreurs</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">Qu’est-ce qu’une erreur (un <em>bug</em>) ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historique">Historique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#causes">Causes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-les-reconnaitre">Savoir les reconnaître</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-integrante-du-cycle-de-developpement-logiciel">Partie intégrante du cycle de développement logiciel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traiter-une-exception">“Traiter une exception”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lever-une-exception">“Lever une exception”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-algorithmique">Définition : erreur algorithmique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-inadequate">Complexité inadéquate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-inadapte">Algorithme inadapté</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boucle-infinie">Boucle infinie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-de-programmation">Définition : erreur de programmation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-par-0">division par 0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-d-index">Erreur d’index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">Définition : erreur de syntaxe en Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-erreurs-de-syntaxe-pure">Exemples d’erreurs de syntaxe pure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvais-nom-de-module-modulenotfounderror">Mauvais nom de module : ModuleNotFoundError</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxe-incorrecte">Syntaxe incorrecte</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-d-indentation">Erreur d’indentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvaise-utilisation-de-l-operateur-d-assignation">Mauvaise utilisation de l’opérateur d’assignation (<code class="docutils literal notranslate"><span class="pre">=</span></code>)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parentheses-manquantes">Parenthèses manquantes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvais-appel-de-fonctions-internes-ou-declarees">Mauvais appel de fonctions (internes ou déclarées)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">Conséquences de certaines erreurs historiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">Explosion de la fusée Ariane 5 en 1996</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">Crash du module <em>Mars Climate Orbiter</em>*</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-de-l-an-2038">Bug de l’an 2038</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <p><img alt="error" src="../../_images/error.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="c2-strat-02-gestion-des-erreurs">
-<h1>C2-STRAT-02 : Gestion des erreurs<a class="headerlink" href="#c2-strat-02-gestion-des-erreurs" title="Permalink to this headline">#</a></h1>
+<h1>C2-STRAT-02 : Gestion des erreurs<a class="headerlink" href="#c2-strat-02-gestion-des-erreurs" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>Connaître la définition d’une erreur</p></li>
 <li><p>Savoir identifier le type d’une erreur :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>algorithmique</p></li>
 <li><p>erreur de programmation</p></li>
 <li><p>syntaxique</p></li>
@@ -1404,20 +621,20 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="qu-est-ce-qu-une-erreur-un-bug">
-<h2>Qu’est-ce qu’une erreur (un <em>bug</em>) ?<a class="headerlink" href="#qu-est-ce-qu-une-erreur-un-bug" title="Permalink to this headline">#</a></h2>
+<h2>Qu’est-ce qu’une erreur (un <em>bug</em>) ?<a class="headerlink" href="#qu-est-ce-qu-une-erreur-un-bug" title="Link to this heading">#</a></h2>
 <p>Un <strong>bug</strong> est un <em>défaut</em> ou un <em>problème</em> dans un code informatique. Sa nature peut-être de cause variée.</p>
 <section id="historique">
-<h3>Historique<a class="headerlink" href="#historique" title="Permalink to this headline">#</a></h3>
+<h3>Historique<a class="headerlink" href="#historique" title="Link to this heading">#</a></h3>
 <p>Le tout premier bug de l’histoire de l’informatique, c’est-à-dire identifié dans un ordinateur a été signalé le <strong>9 septembre 1947</strong> dans l’un des tout premiers calculateurs universels (ordinateur) du monde : le <a class="reference external" href="https://fr.wikipedia.org/wiki/Harvard_Mark_I">Harvard Mark 1</a> installé à l’université de Harvard aux Etats-Unis.</p>
 <p><img alt="bug" src="../../_images/bug1945.jpg" /></p>
 <p>Cet ordinateur ne fonctionnait pas avec des transistors et circuits électroniques modernes, mais avec des relais téléphoniques, des interrupteurs, des arbres mécaniques et des embrayages. Tous ces éléments étaient sensibles à des éléments matériels physiques. Ce fut le cas d’un <strong>insecte</strong> qui se logea dans l’une des parties mécaniques et mis l’ordinateur en erreur. En anglais, un insecte se dit <strong>bug</strong>. Le mot est resté jusqu’à aujourd’hui.</p>
 </section>
 <section id="causes">
-<h3>Causes<a class="headerlink" href="#causes" title="Permalink to this headline">#</a></h3>
+<h3>Causes<a class="headerlink" href="#causes" title="Link to this heading">#</a></h3>
 <p>Les causes d’un <strong>bug</strong> sont variées : algorithmique, programmatique ou syntaxique. Parfois le bug résulte de la conception même de la machine : ce sont les bugs matériels.</p>
 </section>
 <section id="savoir-les-reconnaitre">
-<h3>Savoir les reconnaître<a class="headerlink" href="#savoir-les-reconnaitre" title="Permalink to this headline">#</a></h3>
+<h3>Savoir les reconnaître<a class="headerlink" href="#savoir-les-reconnaitre" title="Link to this heading">#</a></h3>
 <p>Tout l’art de l’informaticien est de :</p>
 <ul class="simple">
 <li><p>savoir les reconnaître</p></li>
@@ -1425,12 +642,12 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="partie-integrante-du-cycle-de-developpement-logiciel">
-<h3>Partie intégrante du cycle de développement logiciel<a class="headerlink" href="#partie-integrante-du-cycle-de-developpement-logiciel" title="Permalink to this headline">#</a></h3>
+<h3>Partie intégrante du cycle de développement logiciel<a class="headerlink" href="#partie-integrante-du-cycle-de-developpement-logiciel" title="Link to this heading">#</a></h3>
 <p><img alt="cycle" src="../../_images/cycle.png" /></p>
 <p>La phase de tests du logiciel (du programme) est celle qui comporte le traitement des erreurs.</p>
 </section>
 <section id="traiter-une-exception">
-<h3>“Traiter une exception”<a class="headerlink" href="#traiter-une-exception" title="Permalink to this headline">#</a></h3>
+<h3>“Traiter une exception”<a class="headerlink" href="#traiter-une-exception" title="Link to this heading">#</a></h3>
 <p>Dans certains languages de programmation - c’est le cas de Python - une erreur est appellée <strong>exception</strong> et le programmeur peut la prendre en compte dans l’écriture de son programme : <strong>il anticipe qu’elle va arriver</strong>. C’est ce que l’on appelle <strong>traiter une exception</strong>.</p>
 <p><img alt="erreursPython" src="../../_images/erreurs-python.png" /></p>
 <p>Lever une exception se fait par la construction <code class="docutils literal notranslate"><span class="pre">try</span></code>… <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">NomDeLException</span></code>. Par exemple :</p>
@@ -1443,7 +660,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="lever-une-exception">
-<h3>“Lever une exception”<a class="headerlink" href="#lever-une-exception" title="Permalink to this headline">#</a></h3>
+<h3>“Lever une exception”<a class="headerlink" href="#lever-une-exception" title="Link to this heading">#</a></h3>
 <p>Dans certains languages - c’est le cas de Python - à la place de traiter une exception (ou de la jeter), on peut la <strong>lever</strong>. Lorsqu’une erreur est levée, alors le programme s’arrête. Cela se fait par le mot-clef <code class="docutils literal notranslate"><span class="pre">raise</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
@@ -1454,28 +671,28 @@ title="Print to PDF"
 </section>
 </section>
 <section id="definition-erreur-algorithmique">
-<h2>Définition : erreur algorithmique<a class="headerlink" href="#definition-erreur-algorithmique" title="Permalink to this headline">#</a></h2>
+<h2>Définition : erreur algorithmique<a class="headerlink" href="#definition-erreur-algorithmique" title="Link to this heading">#</a></h2>
 <p>Une erreur algorithmique est l’une des plus complexes à reconnaître.</p>
 <section id="complexite-inadequate">
-<h3>Complexité inadéquate<a class="headerlink" href="#complexite-inadequate" title="Permalink to this headline">#</a></h3>
+<h3>Complexité inadéquate<a class="headerlink" href="#complexite-inadequate" title="Link to this heading">#</a></h3>
 <p>Si pour un problème donné, on part aveuglement sur un algorithme de complexité supérieure à la complexité idéale (par exemple: un <span class="math notranslate nohighlight">\(\mathcal O (N^3)\)</span> alors qu’il existe du <span class="math notranslate nohighlight">\(\mathcal O (N^2)\)</span> pour résoudre le même problème).</p>
 </section>
 <section id="algorithme-inadapte">
-<h3>Algorithme inadapté<a class="headerlink" href="#algorithme-inadapte" title="Permalink to this headline">#</a></h3>
+<h3>Algorithme inadapté<a class="headerlink" href="#algorithme-inadapte" title="Link to this heading">#</a></h3>
 <p>Un algorithme qui ne répond pas <em>complètement</em> ou <em>totalement</em> au problème qu’il est sensé résoudre…</p>
 </section>
 <section id="boucle-infinie">
-<h3>Boucle infinie<a class="headerlink" href="#boucle-infinie" title="Permalink to this headline">#</a></h3>
+<h3>Boucle infinie<a class="headerlink" href="#boucle-infinie" title="Link to this heading">#</a></h3>
 <p>Une boucle infinie dans un algorithme (ce qui signifie <em>de facto</em> que l’algorithme n’en est pas un)</p>
 <p>Ce problème peut être observé dans un algorigramme</p>
 <p><img alt="WhileTrue" src="../../_images/WhileTrue.png" /></p>
 </section>
 </section>
 <section id="definition-erreur-de-programmation">
-<h2>Définition : erreur de programmation<a class="headerlink" href="#definition-erreur-de-programmation" title="Permalink to this headline">#</a></h2>
+<h2>Définition : erreur de programmation<a class="headerlink" href="#definition-erreur-de-programmation" title="Link to this heading">#</a></h2>
 <p>Ce qui est compris dans une erreur de programmation est une erreur qui existe avec un programme qui <strong>fonctionne</strong> mais qui crash pour une raison programmatique.</p>
 <section id="division-par-0">
-<h3>division par 0<a class="headerlink" href="#division-par-0" title="Permalink to this headline">#</a></h3>
+<h3>division par 0<a class="headerlink" href="#division-par-0" title="Link to this heading">#</a></h3>
 <p>Le programme suivant fonctionne pour autant que la valeur entrée ne soit pas 2 :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un chiffre : &quot;</span><span class="p">))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
@@ -1500,7 +717,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="erreur-d-index">
-<h3>Erreur d’index<a class="headerlink" href="#erreur-d-index" title="Permalink to this headline">#</a></h3>
+<h3>Erreur d’index<a class="headerlink" href="#erreur-d-index" title="Link to this heading">#</a></h3>
 <p>Lorsqu’un programme essaie d’accéder à un index qui n’existe pas (par exemple en dehors d’une liste). Le programme suivant ne fonctionne pas :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
@@ -1515,19 +732,19 @@ title="Print to PDF"
 </section>
 </section>
 <section id="definition-erreur-de-syntaxe-en-python">
-<h2>Définition : erreur de syntaxe en Python<a class="headerlink" href="#definition-erreur-de-syntaxe-en-python" title="Permalink to this headline">#</a></h2>
+<h2>Définition : erreur de syntaxe en Python<a class="headerlink" href="#definition-erreur-de-syntaxe-en-python" title="Link to this heading">#</a></h2>
 <p>Ce sont les erreurs les plus simples à corriger. Le compilateur (ou l’IDE) indique généralement la ligne sur laquelle s’est produite l’erreur et la raison. Elles sont de deux sous-types :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Les erreurs de syntaxe pures</p></li>
 <li><p>Les exceptions</p></li>
 </ol>
 <p>A noter que pour les exceptions, il est possible d’écrire un programme qui les traite au moment de l’exécution.</p>
 <section id="exemples-d-erreurs-de-syntaxe-pure">
-<h3>Exemples d’erreurs de syntaxe pure<a class="headerlink" href="#exemples-d-erreurs-de-syntaxe-pure" title="Permalink to this headline">#</a></h3>
+<h3>Exemples d’erreurs de syntaxe pure<a class="headerlink" href="#exemples-d-erreurs-de-syntaxe-pure" title="Link to this heading">#</a></h3>
 <section id="mauvais-nom-de-module-modulenotfounderror">
-<h4>Mauvais nom de module : ModuleNotFoundError<a class="headerlink" href="#mauvais-nom-de-module-modulenotfounderror" title="Permalink to this headline">#</a></h4>
+<h4>Mauvais nom de module : ModuleNotFoundError<a class="headerlink" href="#mauvais-nom-de-module-modulenotfounderror" title="Link to this heading">#</a></h4>
 <p>Code :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtles</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtles</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>L’erreur indique :</p>
@@ -1537,7 +754,7 @@ title="Print to PDF"
 <p>La syntaxe correct est <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">turtle</span> <span class="pre">import</span> <span class="pre">*</span></code> (sans <code class="docutils literal notranslate"><span class="pre">s</span></code>)</p>
 </section>
 <section id="syntaxe-incorrecte">
-<h4>Syntaxe incorrecte<a class="headerlink" href="#syntaxe-incorrecte" title="Permalink to this headline">#</a></h4>
+<h4>Syntaxe incorrecte<a class="headerlink" href="#syntaxe-incorrecte" title="Link to this heading">#</a></h4>
 <p>Code :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">)</span>
@@ -1556,14 +773,14 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Il est à noter que cette erreur est levée dans 3 cas possibles:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Un mot-clef du langage est <strong>mal écrit</strong></p></li>
 <li><p>Un mot-clef du langage <strong>manque</strong></p></li>
 <li><p>Un mot-clef du langage est <strong>mal utilisé</strong> (ou utilisé dans un mauvais contexte)</p></li>
 </ol>
 </section>
 <section id="erreur-d-indentation">
-<h4>Erreur d’indentation<a class="headerlink" href="#erreur-d-indentation" title="Permalink to this headline">#</a></h4>
+<h4>Erreur d’indentation<a class="headerlink" href="#erreur-d-indentation" title="Link to this heading">#</a></h4>
 <p>Code :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
@@ -1584,7 +801,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="mauvaise-utilisation-de-l-operateur-d-assignation">
-<h4>Mauvaise utilisation de l’opérateur d’assignation (<code class="docutils literal notranslate"><span class="pre">=</span></code>)<a class="headerlink" href="#mauvaise-utilisation-de-l-operateur-d-assignation" title="Permalink to this headline">#</a></h4>
+<h4>Mauvaise utilisation de l’opérateur d’assignation (<code class="docutils literal notranslate"><span class="pre">=</span></code>)<a class="headerlink" href="#mauvaise-utilisation-de-l-operateur-d-assignation" title="Link to this heading">#</a></h4>
 <p>Code :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
@@ -1626,7 +843,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="parentheses-manquantes">
-<h4>Parenthèses manquantes<a class="headerlink" href="#parentheses-manquantes" title="Permalink to this headline">#</a></h4>
+<h4>Parenthèses manquantes<a class="headerlink" href="#parentheses-manquantes" title="Link to this heading">#</a></h4>
 <p>Code :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prenom</span> <span class="o">=</span> <span class="s2">&quot;Caroline&quot;</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="n">prenom</span> <span class="o">+</span> <span class="s2">&quot;. Comment allez-vous ?&quot;</span>
@@ -1643,9 +860,9 @@ title="Print to PDF"
 </div>
 </section>
 <section id="mauvais-appel-de-fonctions-internes-ou-declarees">
-<h4>Mauvais appel de fonctions (internes ou déclarées)<a class="headerlink" href="#mauvais-appel-de-fonctions-internes-ou-declarees" title="Permalink to this headline">#</a></h4>
+<h4>Mauvais appel de fonctions (internes ou déclarées)<a class="headerlink" href="#mauvais-appel-de-fonctions-internes-ou-declarees" title="Link to this heading">#</a></h4>
 <p>Code :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maFonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">maFonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">maFonction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -1655,7 +872,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>La syntaxe correcte est:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maFonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">maFonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">maFonction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -1664,17 +881,17 @@ title="Print to PDF"
 </section>
 </section>
 <section id="consequences-de-certaines-erreurs-historiques">
-<h2>Conséquences de certaines erreurs historiques<a class="headerlink" href="#consequences-de-certaines-erreurs-historiques" title="Permalink to this headline">#</a></h2>
+<h2>Conséquences de certaines erreurs historiques<a class="headerlink" href="#consequences-de-certaines-erreurs-historiques" title="Link to this heading">#</a></h2>
 <p>Voici une liste non-exhaustive des conséquences de certaines erreurs de programmation ou algorithmique qui sont restées dans l’histoire</p>
 <section id="explosion-de-la-fusee-ariane-5-en-1996">
-<h3>Explosion de la fusée Ariane 5 en 1996<a class="headerlink" href="#explosion-de-la-fusee-ariane-5-en-1996" title="Permalink to this headline">#</a></h3>
+<h3>Explosion de la fusée Ariane 5 en 1996<a class="headerlink" href="#explosion-de-la-fusee-ariane-5-en-1996" title="Link to this heading">#</a></h3>
 <p><img alt="ariane5" src="../../_images/ariane5.jpg" /></p>
 <p><strong>Situation</strong> le 4 juin 1996 a lieu le vol 501, vol inaugural du lanceur européen Ariane 5. Il s’est soldé par un échec causé par un dysfonctionnement informatique qui vit la fusée se briser et exploser en vol seulement 36,7 secondes après le décollage à une altitude de 4000m.</p>
 <p><strong>Cause :</strong> Plateforme inertielle (guidage, accéléromètre, gyroscope, etc..) identique à celle du lanceur précédent (Ariane 4) amis pas adapté à la puissance de la nouvelle fusée notamment s’agissant des accélérations d’Ariane 5. L’accéléromètre a détecté une valeur importante qui a provoqué un dépassement de capacité (<strong>la valeur entière retournée par l’accéléromètre ne pouvait pas être codée avec le type de variable programmé</strong>). Le système de navigation a alors donné des ordres impossibles à remplir pour les tuyères des moteurs <a class="reference external" href="https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5">Voir les détails ici</a></p>
 <p><strong>Conséquences :</strong> Perte d’un lanceur ainsi que de la charge utile (quatre satellites de la mission Cluster pour une valeur de 370 millions d’Euros ainsi qu’une perte de crédibilité pour l’agence spatiale européenne.</p>
 </section>
 <section id="crash-du-module-mars-climate-orbiter">
-<h3>Crash du module <em>Mars Climate Orbiter</em>*<a class="headerlink" href="#crash-du-module-mars-climate-orbiter" title="Permalink to this headline">#</a></h3>
+<h3>Crash du module <em>Mars Climate Orbiter</em>*<a class="headerlink" href="#crash-du-module-mars-climate-orbiter" title="Link to this heading">#</a></h3>
 <p><img alt="mars" src="../../_images/mars.jpg" /></p>
 <p><strong>Situation :</strong> La sonde <em>Mars Climate Orbiter</em> est l’une des deux sondes envoyées vers la planète rouge en 1998 par la NASA pour étudier la planète Mars en général, son climat en particulier. Après avoir effectué le voyage Terre - Mars sans encombre, elle est ensuite programmée pour entrer sur une orbite basse de la planète rouge. Résultat : elle se place sur une orbite beaucoup trop basse. Elle est détruite en traversant l’atmosphère martienne à trop haute vitesse.</p>
 <p><strong>Cause :</strong> Le logiciel de contrôle au sol (sur Terre) avait été fourni par l’entreprise Lockheed Martin et il utilisait des valeurs en <strong>mesures impériales</strong> alors que l’orbiteur, construit par la NASA, utilisait des <strong>mesure métriques</strong>. Il s’est agi d’une erreur de conversion de mesures entre unités.</p>
@@ -1682,7 +899,7 @@ title="Print to PDF"
 <p><a class="reference external" href="https://fr.wikipedia.org/wiki/Mars_Climate_Orbiter">Plus de détails ici</a></p>
 </section>
 <section id="bug-de-l-an-2038">
-<h3>Bug de l’an 2038<a class="headerlink" href="#bug-de-l-an-2038" title="Permalink to this headline">#</a></h3>
+<h3>Bug de l’an 2038<a class="headerlink" href="#bug-de-l-an-2038" title="Link to this heading">#</a></h3>
 <p><img alt="y2038" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Year_2038_problem.gif?uselang=fr" /></p>
 <p><strong>Situation :</strong> bug similaire à celui de l’an 2000, il arrivera le <strong>19 janvier 2038 à 3h14 et 8 secondes</strong> sur les systèmes d’exploitation qui mesurent le temps en 32 bits.</p>
 <p><strong>Cause :</strong> Le temps POSIX (les systèmes UNIX) construisent le temps à partir de <em>l’époque</em> (qui est la date du <strong>1er janvier 1970</strong>) en nombre de secondes écoulées. Un nombre signé en 32 bits s’écrit comme <span class="math notranslate nohighlight">\(2^{31} -1\)</span> ce qui correspond à 2 147 483 647 secondes, soit environ 68 ans.</p>
@@ -1703,7 +920,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./2M/strategies"
         },
         predefinedOutput: true
@@ -1711,50 +928,141 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="C2-STRAT-01.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">C2-STRAT-01 : Stratégies de résolution de problèmes</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="C2-STRAT-01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">C2-STRAT-01 : Stratégies de résolution de problèmes</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="TP2-STRAT-01.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="TP2-STRAT-01.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qu-est-ce-qu-une-erreur-un-bug">Qu’est-ce qu’une erreur (un <em>bug</em>) ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historique">Historique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#causes">Causes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-les-reconnaitre">Savoir les reconnaître</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-integrante-du-cycle-de-developpement-logiciel">Partie intégrante du cycle de développement logiciel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traiter-une-exception">“Traiter une exception”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lever-une-exception">“Lever une exception”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-algorithmique">Définition : erreur algorithmique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-inadequate">Complexité inadéquate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-inadapte">Algorithme inadapté</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boucle-infinie">Boucle infinie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-de-programmation">Définition : erreur de programmation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-par-0">division par 0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-d-index">Erreur d’index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-erreur-de-syntaxe-en-python">Définition : erreur de syntaxe en Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-erreurs-de-syntaxe-pure">Exemples d’erreurs de syntaxe pure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvais-nom-de-module-modulenotfounderror">Mauvais nom de module : ModuleNotFoundError</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxe-incorrecte">Syntaxe incorrecte</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-d-indentation">Erreur d’indentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvaise-utilisation-de-l-operateur-d-assignation">Mauvaise utilisation de l’opérateur d’assignation (<code class="docutils literal notranslate"><span class="pre">=</span></code>)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parentheses-manquantes">Parenthèses manquantes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mauvais-appel-de-fonctions-internes-ou-declarees">Mauvais appel de fonctions (internes ou déclarées)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-de-certaines-erreurs-historiques">Conséquences de certaines erreurs historiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explosion-de-la-fusee-ariane-5-en-1996">Explosion de la fusée Ariane 5 en 1996</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crash-du-module-mars-climate-orbiter">Crash du module <em>Mars Climate Orbiter</em>*</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-de-l-an-2038">Bug de l’an 2038</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Vincent Keller<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Vincent Keller
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

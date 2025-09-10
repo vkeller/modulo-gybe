@@ -1,110 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>TP1-PROG-11 : Introduction à la cryptographie &#8212; Education Numérique Ecole de maturité</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1M/prog/cryptographie/TP1-PROG-11';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP1-PROG-12: Les entrées-sorties" href="../IO/TP1-PROG-12.html" />
+    <link rel="next" title="TP1-PROG-03 - La boucle for" href="../boucles/TP1-PROG-14.html" />
     <link rel="prev" title="TP1-PROG-10 - Les Piles" href="../piles/TP1-PROG-10.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../_static/logo-beaulieu.png" class="logo__image only-light" alt="Education Numérique Ecole de maturité - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-beaulieu.png" class="logo__image only-dark" alt="Education Numérique Ecole de maturité - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -113,1168 +179,418 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Généralités
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Généralités</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../general/generalites.html">
-   Esprit critique, fraude, plagiat et ChatGPT
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../general/outils.html">
-   Outils utiles pour le cours d’informatique
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/quisuisje.html">Qui suis-je ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/generalites.html">Esprit critique, fraude, plagiat et ChatGPT</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../general/outils.html">Outils utiles pour le cours d’informatique</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  1ère année
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">1ère année</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
-   DO Informatique 1M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../representation/index.html">
-   Représentation des données
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/cours/C1-REDO-01.html">
-     C1-REDO-01 : Du monde physique au monde numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/cours/C1-REDO-02.html">
-     C1-REDO-02 binaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/cours/C1-REDO-03.html">
-     C1-REDO-03 : codage de caractères
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/cours/C1-REDO-04.html">
-     C1-REDO-04 : Opérations en binaire et en hexadécimal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/cours/R1-REDO-01.html">
-     R1-REDO-01 Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/tp/TP1-REDO-01.html">
-     TP1-REDO-01 : les images matricielles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/tp/TP1-REDO-02.html">
-     TP1-REDO-02 : Le son
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../representation/tp/TP1-REDO-03.html">
-     TP1-REDO-03 : Types de fichiers et compression
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../algo/index.html">
-   Algorithmique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-01.html">
-     C1-ALGO-01 : Introduction à l’algorithmique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-02.html">
-     C1-ALGO-02 : Des algorithmes aux algorigrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-03.html">
-     C1-ALGO-03 : Les jeux de Nim
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-04.html">
-     C1-ALGO-04 : Caractéristiques des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.html">
-     C1-ALGO-05.00 : Algorithmes classiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.1.html">
-     C1-ALGO-05.01 Algorithmes classiques (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-05.2.html">
-     C1-ALGO-05.02 Algorithmes classiques (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-06.html">
-     C1-ALGO-06 : Algorithmes évolutionnistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-07.html">
-     C1-ALGO-07 : Des algorigrammes à leur programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-08.html">
-     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-09.html">
-     C1-ALGO-09 : L’horloge de la gare de St-Gallen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-10.html">
-     C1-ALGO-10 - Introduction à la cryptologie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-11.html">
-     C1-ALGO-11 : Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-12.html">
-     C1-ALGO-12 : Les boucles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/C1-ALGO-13.html">
-     C1-ALGO-13 : Les algorithmes gloutons
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/R1-ALGO-01.html">
-     R1-ALGO-01 - révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/R1-ALGO-02.html">
-     R1-ALGO-02 : Révision Algorigramme + programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/cours/R1-ALGO-03.html">
-     R1-ALGO-03 : Rappels algorigrammes - Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../installation/installation.html">
-   Environnement de développement
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Programmation
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../intro1/TP1-PROG-01.html">
-     TP1-PROG-01 - Introduction à la programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../intro2/TP1-PROG-02.html">
-     TP1-PROG-02 - Introduction : les fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boucles/TP1-PROG-03.html">
-     TP1-PROG-03 - La boucle
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boucles/TP1-PROG-04.html">
-     TP1-PROG-04 - Boucles
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-     approfondissement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../conditions/TP1-PROG-05.html">
-     TP1-PROG-05 - Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../dessinsanimes/TP1-PROG-06.html">
-     TP1-PROG-06 - Les dessins animés
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../types/TP1-PROG-07.html">
-     TP1-PROG-07 - Les variables en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tableaux/TP1-PROG-08.html">
-     TP1-PROG-08 - Les listes (tableaux)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../files/TP1-PROG-09.html">
-     TP1-PROG-09 - Les Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../piles/TP1-PROG-10.html">
-     TP1-PROG-10 - Les Piles
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     TP1-PROG-11 : Introduction à la cryptographie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../IO/TP1-PROG-12.html">
-     TP1-PROG-12: Les entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../revisions/TP1-PROG-13.html">
-     TP1-PROG-13 : TP supplémentaire prog 1M
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../architecture/index.html">
-   Architecture
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../architecture/fichiers/SystemeDeFichiers.html">
-     TP1-ARCH-01 : Le système de fichiers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../esdn/index.html">
-   Enjeux sociaux
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/C1-ESDN-01.html">
-     C1-ESDN-01 : Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/C1-ESDN-02.html">
-     C1-ESDN-02 : Le mouvement Cypherpunk
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/C1-ESDN-03.html">
-     C1-ESDN-03 : Le capitalisme de surveillance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/C1-ESDN-04.html">
-     C1-ESDN-04 : Edward Snowden et la surveillance de masse
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/C1-ESDN-05.html">
-     C1-ESDN-05 : Profilage numérique : l’affaire Burrill
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/presentations/TP1-ESDN-00.html">
-     TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/cours/TP1-ESDN-01.html">
-     TP1-ESDN-01 : Les réseaux informatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../jeux/index.html">
-   Jeux informatiques et logiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../jeux/logique.html">
-     C1-JEUX-01 : Quizz de logique
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DO Informatique 1M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/cours/C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/cours/C1-REDO-04.html">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../representation/tp/TP1-REDO-03.html">TP1-REDO-03 : Types de fichiers et compression</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  2ème année
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../2M/index.html">
-   DO Informatique 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/algo/index.html">
-   Algorithmique avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/R2-ALGO-01.html">
-     R2-ALGO-01 : Révision Algorithmes 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02-A.html">
-     R2-ALGO-02-A : Révision algorithmes (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02-B.html">
-     R2-ALGO-02-B : Révision (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/C2-ALGO-01.html">
-     C2-ALGO-01 : Taille du problème
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/C2-ALGO-02.html">
-     C2-ALGO-02 : Complexité des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/C2-ALGO-03.html">
-     C2-ALGO-03 : Complexité des algorithmes (suite)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/C2-ALGO-04.html">
-     C2-ALGO-04 : Introduction à la théorie des graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">
-     C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/R2-ALGO-02.html">
-     R1-ALGO-02 : Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/algo/R2-ALGO-03.html">
-     R1-ALGO-03 : Révision
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/prog/index.html">
-   Programmation avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/revisions/R2-PROG-01.html">
-     R2-PROG-01 : Rappels programmation 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-01.html">
-     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-02.html">
-     TP2-PROG-02 : Approche pratique de la complexité : Recherche
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/luhn/TP2-PROG-03.html">
-     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/syracuse/TP2-PROG-05.html">
-     TP2-PROG-05 : Conjecture de Collatz
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/dictionnaires/Dictionnaires2.html">
-     TP2-PROG-06 : Dictionnaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/motdepasse/MotsDePasse.html">
-     TP2-PROG-07 : Les mots de passe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/hacking/TP2-PROG-08.html">
-     TP2-PROG-08: Coder et décoder comme les Romains
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">
-     TP2-PROG-09 : Les arbres
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">
-     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/histoire/index.html">
-   Histoire de l’informatique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">
-     C2-HIST-01 : Préhistoire de l’informatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">
-     C2-HIST-02 : Histoire de l’informatique : le matériel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/histoire/C2-HIST-03.html">
-     C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/histoire/C2-HIST-04.html">
-     C2-HIST-04 : Histoire des logiciels (la couche applicative)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/architecture/index.html">
-   Architecture et réseaux
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-01.html">
-     C2-ARCH-01 : Compilation : du Python au langage machine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-02.html">
-     C2-ARCH-02 : Architecture de Von Neumann
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-01.html">
-     C2-RESO-01 : Introduction aux réseaux informatiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-02.html">
-     C2-RESO-02 : L’adresse IP
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">
-     TP2-ARCH-00 : Introduction avec un micro:bit
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">
-     TP2-ARCH-01 : Les portes logiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">
-     TP2-ARCH-02 : Le nano-ordinateur RPi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-03.html">
-     TP2-ARCH-03 : Mise en réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-04.html">
-     TP2-ARCH-04 : Services réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-NOTE2.html">
-     TP2-ARCH-NOTE : Journal de bord
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-05.html">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-06.html">
-     TP2-ARCH-06 : RPi pour aller plus loin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/architecture/logidules/TP2-LOGI-01.html">
-     TP2-LOGI-01 : Les logidules
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/strategies/index.html">
-   Stratégie de résolution
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-01.html">
-     C2-STRAT-01 : Stratégies de résolution de problèmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">
-     C2-STRAT-02 : Gestion des erreurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">
-     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/strategies/TP2-STRAT-02.html">
-     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/machine-learning/index.html">
-   Intelligence artificielle
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-00.html">
-     C2-IA-00 : Introduction à l’intelligence artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-01.html">
-     C2-IA-01 : Histoire de l’Intelligence Artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-02.html">
-     C2-IA-02 : Automates cellulaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-03.html">
-     C2-IA-03 : Apprentissage automatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-04.html">
-     C2-IA-04 : Réseau de neurones artificiels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/machine-learning/tp/JeudelavieTP.html">
-     TP-IA-01 : Le jeu de la vie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../2M/esdn/index.html">
-   Enjeux sociaux du numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/esdn/environnement/TP2-ESDN-01.html">
-     TP2-ESDN-01 : L’environnement et le numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">
-     TP2-ESDN-02 : L’Art et le Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../2M/esdn/women/P2-ESDN-02.html">
-     P2-ESDN-02 : Femmes dans l’informatique
-    </a>
-   </li>
-  </ul>
- </li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo/index.html">Algorithmique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-02.html">C1-ALGO-02 : Des algorithmes aux algorigrammes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-04.html">C1-ALGO-04 : Caractéristiques des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-05.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-05.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-06.html">C1-ALGO-06 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-07.html">C1-ALGO-07 : Des algorigrammes à leur programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-08.html">C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-09.html">C1-ALGO-09 : L’horloge de la gare de St-Gallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../algo/cours/R1-ALGO-03.html">R1-ALGO-03 : Rappels algorigrammes - Python</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  3C2M
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../3C2M/index.html">
-   MAN 3C &gt; 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../3C2M/programmation/index.html">
-   Programmation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">
-     3C2M-PROG-00 : Introduction
-    </a>
-   </li>
-  </ul>
- </li>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/installation.html">Environnement de développement</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Programmation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro1/TP1-PROG-01.html">TP1-PROG-01 - Introduction à la programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro2/TP1-PROG-02.html">TP1-PROG-02 - Introduction : les fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boucles/TP1-PROG-03.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boucles/TP1-PROG-04.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditions/TP1-PROG-05-Turtle.html">TP1-PROG-05-Turtle - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditions/TP1-PROG-05.html">TP1-PROG-05 - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../types/TP1-PROG-07.html">TP1-PROG-07 - Les variables en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tableaux/TP1-PROG-08.html">TP1-PROG-08 - Les listes (tableaux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/TP1-PROG-09.html">TP1-PROG-09 - Les Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../piles/TP1-PROG-10.html">TP1-PROG-10 - Les Piles</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">TP1-PROG-11 : Introduction à la cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../revisions/TP1-PROG-13.html">TP1-PROG-13 : TP supplémentaire prog 1M</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bibliographie
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture/fichiers/SystemeDeFichiers.html">TP1-ARCH-01 : Le système de fichiers</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../esdn/index.html">Enjeux sociaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/C1-ESDN-01.html">C1-ESDN-01 : Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/C1-ESDN-02.html">C1-ESDN-02 : Le mouvement Cypherpunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/C1-ESDN-03.html">C1-ESDN-03 : Le capitalisme de surveillance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/C1-ESDN-04.html">C1-ESDN-04 : Edward Snowden et la surveillance de masse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/C1-ESDN-05.html">C1-ESDN-05 : Profilage numérique : l’affaire Burrill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/presentations/TP1-ESDN-00.html">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/cours/TP1-ESDN-01.html">TP1-ESDN-01 : Les réseaux informatique</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2ème année</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../biblio.html">
-   Livres et sources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2M/index.html">DO Informatique 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/algo/index.html">Algorithmique avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-02-A.html">R2-ALGO-02-A : Révision algorithmes (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-02-B.html">R2-ALGO-02-B : Révision (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-01.html">C2-ALGO-01 : Taille du problème</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-02.html">C2-ALGO-02 : Complexité des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-03.html">C2-ALGO-03 : Complexité des algorithmes (suite)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-04-A.html">C2-ALGO-04-A : Introduction à la théorie des graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-04-B.html">C2-ALGO-04-B : Parcours de graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/revisions/R2-PROG-01.html">R2-PROG-01 : Rappels programmation 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/revisions/R2-PROG-02.html">R2-PROG-02 : Rappels 1M - mini-projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/luhn/TP2-PROG-01.html">TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-02.html">TP2-PROG-02 : Approche pratique de la complexité : Pile ou face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/complexite/TP2-PROG-03.html">TP2-PROG-03 : Approche pratique de la complexité : Recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/syracuse/TP2-PROG-05.html">TP2-PROG-05 : Conjecture de Collatz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/dictionnaires/Dictionnaires2.html">TP2-PROG-06 : Dictionnaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/motdepasse/MotsDePasse.html">TP2-PROG-07 : Les mots de passe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/hacking/TP2-PROG-08.html">TP2-PROG-08: Coder et décoder comme les Romains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/arbres/LesArbres.html">TP2-PROG-09 : Les arbres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/prog/st-gall/TP2-PROG-10.html">TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/histoire/index.html">Histoire de l’informatique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/histoire/C2-HIST-01.html">C2-HIST-01 : Préhistoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/histoire/C2-HIST-02.html">C2-HIST-02 : Histoire de l’informatique : le matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/histoire/C2-HIST-03.html">C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/histoire/C2-HIST-04.html">C2-HIST-04 : Histoire des logiciels (la couche applicative)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/architecture/index.html">Architecture et réseaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-01.html">C2-ARCH-01 : Compilation : du Python au langage machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">TP2-ARCH-01 : Les portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-03.html">TP2-ARCH-03 : Mise en réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/machine-learning/index.html">Intelligence artificielle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-00.html">C2-IA-00 : Introduction à l’intelligence artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-01.html">C2-IA-01 : Histoire de l’Intelligence Artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-02.html">C2-IA-02 : Automates cellulaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-03.html">C2-IA-03 : Apprentissage automatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-04.html">C2-IA-04 : Réseau de neurones artificiels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/cours/C2-IA-05.html">La boucle d’apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/machine-learning/tp/JeudelavieTP.html">TP-IA-01 : Le jeu de la vie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/esdn/index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3C2M</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../3C2M/index.html">MAN 3C &gt; 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../3C2M/programmation/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">3C2M-PROG-00 : Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../biblio.html">Livres et sources</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/cryptographie/TP1-PROG-11.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/1M/prog/cryptographie/TP1-PROG-11.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/prog/cryptographie/TP1-PROG-11.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/1M/prog/cryptographie/TP1-PROG-11.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelisation-d-une-scytale">
-   Modélisation d’une scytale
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decalage">
-     Décalage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attaque-en-force-brute">
-     Attaque en force brute
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-declarer-les-phrases-claires">
-   Exercice 1 : déclarer les phrases claires
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boucles-formalisme-des-algorigrammes-programme-python">
-   Boucles : formalisme des algorigrammes - programme Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-construction-de-la-fonction-de-chiffrement">
-   Exercice 2 : Construction de la fonction de chiffrement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-test-de-la-fonction">
-   Exercice 3 : Test de la fonction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-construction-de-la-fonction-de-dechiffrement">
-   Exercice 4 : Construction de la fonction de déchiffrement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-chiffrer-et-dechiffrer">
-   Exercice 5 : Chiffrer et déchiffrer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-force-brute">
-   Exercice 6 : Force brute
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pour-aller-plus-loin">
-   Pour aller plus loin
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyse-de-la-langue-utilisee">
-     Analyse de la langue utilisée
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creer-des-sets-de-donnees-dans-differentes-langues">
-     Créer des sets de données dans différentes langues
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-creez-les-datasets">
-   Exercice 7 : Créez les datasets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-analyse-linguistique-du-texte-dechiffre">
-   Exercice 8 : Analyse linguistique du texte déchiffré
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais">
-   Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-10-application-de-la-force-brute">
-   Exercice 10: Application de la force brute
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-11-decrypter-un-tres-long-texte-chiffre">
-   Exercice 11 : Décrypter un très long texte chiffré
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-12-envoyer-un-message-crypte">
-   Exercice 12 : Envoyer un message crypté
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1-PROG-11 : Introduction à la cryptographie</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelisation-d-une-scytale">
-   Modélisation d’une scytale
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decalage">
-     Décalage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attaque-en-force-brute">
-     Attaque en force brute
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1-declarer-les-phrases-claires">
-   Exercice 1 : déclarer les phrases claires
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boucles-formalisme-des-algorigrammes-programme-python">
-   Boucles : formalisme des algorigrammes - programme Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2-construction-de-la-fonction-de-chiffrement">
-   Exercice 2 : Construction de la fonction de chiffrement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3-test-de-la-fonction">
-   Exercice 3 : Test de la fonction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4-construction-de-la-fonction-de-dechiffrement">
-   Exercice 4 : Construction de la fonction de déchiffrement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5-chiffrer-et-dechiffrer">
-   Exercice 5 : Chiffrer et déchiffrer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6-force-brute">
-   Exercice 6 : Force brute
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pour-aller-plus-loin">
-   Pour aller plus loin
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyse-de-la-langue-utilisee">
-     Analyse de la langue utilisée
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creer-des-sets-de-donnees-dans-differentes-langues">
-     Créer des sets de données dans différentes langues
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-7-creez-les-datasets">
-   Exercice 7 : Créez les datasets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-8-analyse-linguistique-du-texte-dechiffre">
-   Exercice 8 : Analyse linguistique du texte déchiffré
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais">
-   Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-10-application-de-la-force-brute">
-   Exercice 10: Application de la force brute
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-11-decrypter-un-tres-long-texte-chiffre">
-   Exercice 11 : Décrypter un très long texte chiffré
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-12-envoyer-un-message-crypte">
-   Exercice 12 : Envoyer un message crypté
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP1-PROG-11 : Introduction à la cryptographie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelisation-d-une-scytale">Modélisation d’une scytale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decalage">Décalage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attaque-en-force-brute">Attaque en force brute</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-declarer-les-phrases-claires">Exercice 1 : déclarer les phrases claires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-formalisme-des-algorigrammes-programme-python">Boucles : formalisme des algorigrammes - programme Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-construction-de-la-fonction-de-chiffrement">Exercice 2 : Construction de la fonction de chiffrement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-test-de-la-fonction">Exercice 3 : Test de la fonction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-construction-de-la-fonction-de-dechiffrement">Exercice 4 : Construction de la fonction de déchiffrement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-chiffrer-et-dechiffrer">Exercice 5 : Chiffrer et déchiffrer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-force-brute">Exercice 6 : Force brute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-aller-plus-loin">Pour aller plus loin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-langue-utilisee">Analyse de la langue utilisée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sets-de-donnees-dans-differentes-langues">Créer des sets de données dans différentes langues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-creez-les-datasets">Exercice 7 : Créez les datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-analyse-linguistique-du-texte-dechiffre">Exercice 8 : Analyse linguistique du texte déchiffré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais">Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-application-de-la-force-brute">Exercice 10: Application de la force brute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-11-decrypter-un-tres-long-texte-chiffre">Exercice 11 : Décrypter un très long texte chiffré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-12-envoyer-un-message-crypte">Exercice 12 : Envoyer un message crypté</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <p><img alt="clef" src="../../../_images/clef.jpg" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="tp1-prog-11-introduction-a-la-cryptographie">
-<h1>TP1-PROG-11 : Introduction à la cryptographie<a class="headerlink" href="#tp1-prog-11-introduction-a-la-cryptographie" title="Permalink to this headline">#</a></h1>
+<h1>TP1-PROG-11 : Introduction à la cryptographie<a class="headerlink" href="#tp1-prog-11-introduction-a-la-cryptographie" title="Link to this heading">#</a></h1>
 <section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Modéliser une scytale</p>
 <ul>
@@ -1298,7 +614,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="modelisation-d-une-scytale">
-<h2>Modélisation d’une scytale<a class="headerlink" href="#modelisation-d-une-scytale" title="Permalink to this headline">#</a></h2>
+<h2>Modélisation d’une scytale<a class="headerlink" href="#modelisation-d-une-scytale" title="Link to this heading">#</a></h2>
 <p>La <a class="reference external" href="https://vkeller.github.io/modulo-gybe/1M/algo/cours/Cours10.html">scytale</a> est l’un des premiers dispositifs permettant de chiffrer ou déchiffrer un message. La méthode de chiffrement se fait <strong>par transposition</strong>.</p>
 <p>Concrètement, le message à crypter est écrit sur un rouleau de papier ou de cuir enroulé sur la <strong>scytale</strong> (ou <strong>Bâton de Plutarque</strong>) :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       <span class="o">|</span> <span class="n">u</span> <span class="o">|</span> <span class="n">n</span> <span class="o">|</span> <span class="n">e</span> <span class="o">|</span> <span class="n">s</span> <span class="o">|</span> <span class="n">c</span> <span class="o">|</span> <span class="n">y</span> <span class="o">|</span>
@@ -1315,17 +631,17 @@ title="Print to PDF"
 </div>
 <p>Le <strong>clé de codage</strong>, c’est à dire le décalage sur la scytale vaut : <code class="docutils literal notranslate"><span class="pre">clef</span> <span class="pre">=</span> <span class="pre">6</span></code>. Cette clef permet de chiffrer et déchiffrer le message clair et codé.</p>
 <section id="decalage">
-<h3>Décalage<a class="headerlink" href="#decalage" title="Permalink to this headline">#</a></h3>
+<h3>Décalage<a class="headerlink" href="#decalage" title="Link to this heading">#</a></h3>
 <p>Le décalage (lié à la clef de codage/décodage) est lié au nombre de lettres que l’on peut inscrire sur le périmètre de la scytale. Par conséquent, la clef est directement liée au rayon de la scytale.</p>
 </section>
 <section id="attaque-en-force-brute">
-<h3>Attaque en force brute<a class="headerlink" href="#attaque-en-force-brute" title="Permalink to this headline">#</a></h3>
+<h3>Attaque en force brute<a class="headerlink" href="#attaque-en-force-brute" title="Link to this heading">#</a></h3>
 <p>Si <strong>on ne connaît pas la clef de codage/décodage</strong>, le seul moyen de décoder le message est de tester <strong>toutes les possibilités de décalage des lettres</strong> et de reconnaître un éventuel message clair.</p>
 <p>C’est la technique de la <strong>force brute</strong>.</p>
 </section>
 </section>
 <section id="exercice-1-declarer-les-phrases-claires">
-<h2>Exercice 1 : déclarer les phrases claires<a class="headerlink" href="#exercice-1-declarer-les-phrases-claires" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 1 : déclarer les phrases claires<a class="headerlink" href="#exercice-1-declarer-les-phrases-claires" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Ouvrez l’IDE Python et créez un nouveau fichier <code class="docutils literal notranslate"><span class="pre">crypto.py</span></code>.</p></li>
 <li><p>choisissez une phrase en clair (un <code class="docutils literal notranslate"><span class="pre">texte_clair</span></code>) en anglais ou en français</p></li>
@@ -1352,7 +668,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="boucles-formalisme-des-algorigrammes-programme-python">
-<h2>Boucles : formalisme des algorigrammes - programme Python<a class="headerlink" href="#boucles-formalisme-des-algorigrammes-programme-python" title="Permalink to this headline">#</a></h2>
+<h2>Boucles : formalisme des algorigrammes - programme Python<a class="headerlink" href="#boucles-formalisme-des-algorigrammes-programme-python" title="Link to this heading">#</a></h2>
 <p>Une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> est une construction où un test conditionnel est fait de manière implicite. En effet, en Python on écrit une boucle de la façon suivante :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
     <span class="n">instruction</span> <span class="mi">1</span>
@@ -1369,22 +685,22 @@ title="Print to PDF"
 <p><img alt="boucle_for" src="../../../_images/boucle_for1.jpg" /></p>
 </section>
 <section id="exercice-2-construction-de-la-fonction-de-chiffrement">
-<h2>Exercice 2 : Construction de la fonction de chiffrement<a class="headerlink" href="#exercice-2-construction-de-la-fonction-de-chiffrement" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 2 : Construction de la fonction de chiffrement<a class="headerlink" href="#exercice-2-construction-de-la-fonction-de-chiffrement" title="Link to this heading">#</a></h2>
 <p>La signature de la fonction de chiffrement est la suivante :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fonction permettant de chiffrer un texte en clair</span>
 <span class="c1"># Argument 1 : le texte clair</span>
 <span class="c1"># Argument 2 : la clef de chiffrage</span>
 <span class="c1"># Retour     : le texte chiffré</span>
-<span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">texte_clair</span><span class="p">,</span><span class="n">saut</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">chiffre</span><span class="p">(</span><span class="n">texte_clair</span><span class="p">,</span><span class="n">saut</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>Elle prend en paramètre le texte clair à chiffrer ainsi que le clef de chiffrement. Et le retourne la phrase chiffrée. L’algorithme est donc :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>POUR toute lettre du <code class="docutils literal notranslate"><span class="pre">texte_clair</span></code> faire</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>calculer la position chiffrée <code class="docutils literal notranslate"><span class="pre">pos_c</span></code> : <code class="docutils literal notranslate"><span class="pre">pos_c</span> <span class="pre">=</span> <span class="pre">pos_c</span> <span class="pre">+</span> <span class="pre">clef</span></code></p></li>
 <li><p>SI on a atteint la fin du texte_clair <code class="docutils literal notranslate"><span class="pre">l</span></code>, alors incrémenter : <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(pos_c</span> <span class="pre">&gt;</span> <span class="pre">l-1)</span></code></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dec</span> <span class="pre">=</span> <span class="pre">dec</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
 <li><p>la position dans le texte chiffré devient la valeur de l’incrément : <code class="docutils literal notranslate"><span class="pre">pos_c</span> <span class="pre">=</span> <span class="pre">dec</span></code></p></li>
 </ol>
@@ -1402,7 +718,7 @@ title="Print to PDF"
 <li><p>codez le mot <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code> avec <code class="docutils literal notranslate"><span class="pre">clef</span> <span class="pre">=</span> <span class="pre">2</span></code></p></li>
 <li><p>analysez chacune des étapes dans un tableau qui contient :</p></li>
 </ul>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Valeur de <strong>pos</strong></p></th>
 <th class="head"><p>Valeur de <strong>pos_c</strong></p></th>
@@ -1428,6 +744,7 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
+</div>
 <ul class="simple">
 <li><p>le mot <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code> chiffré avec <code class="docutils literal notranslate"><span class="pre">clef</span> <span class="pre">=</span> <span class="pre">2</span></code> vaut <code class="docutils literal notranslate"><span class="pre">BNOROJU</span></code></p></li>
 </ul>
@@ -1437,7 +754,7 @@ title="Print to PDF"
 <span class="c1"># Argument 1 : le texte clair</span>
 <span class="c1"># Argument 2 : la clef de chiffrage</span>
 <span class="c1"># Retour     : le texte chiffré</span>
-<span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">texte_clair</span><span class="p">,</span><span class="n">clef</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">chiffre</span><span class="p">(</span><span class="n">texte_clair</span><span class="p">,</span><span class="n">clef</span><span class="p">):</span>
     <span class="n">texte_chiffre</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="c1"># la variable pos contient l&#39;index (la position) dans le texte clair</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1456,14 +773,14 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-3-test-de-la-fonction">
-<h2>Exercice 3 : Test de la fonction<a class="headerlink" href="#exercice-3-test-de-la-fonction" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 3 : Test de la fonction<a class="headerlink" href="#exercice-3-test-de-la-fonction" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Pour tester votre fonction, appelez-la sur la phrase que vous avez choisie à l’exercice 1.</p></li>
 <li><p>Testez plusieurs valeurs de <code class="docutils literal notranslate"><span class="pre">clef</span></code></p></li>
 </ul>
 </section>
 <section id="exercice-4-construction-de-la-fonction-de-dechiffrement">
-<h2>Exercice 4 : Construction de la fonction de déchiffrement<a class="headerlink" href="#exercice-4-construction-de-la-fonction-de-dechiffrement" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 4 : Construction de la fonction de déchiffrement<a class="headerlink" href="#exercice-4-construction-de-la-fonction-de-dechiffrement" title="Link to this heading">#</a></h2>
 <p>La fonction de déchiffrement est parfaitement équivalente à la fonction de chiffrement. La seule différence est qu’elle prend en paramètre le <code class="docutils literal notranslate"><span class="pre">texte_chiffre</span></code> et que la position chiffrée <code class="docutils literal notranslate"><span class="pre">pos_c</span></code> devient la position dans le texte clair.</p>
 <p><strong>Attention</strong> : on travaille ici avec une liste <code class="docutils literal notranslate"><span class="pre">ret</span></code> pour recréer le texte clair et initialisée à la longueur du texte chiffré, puisqu’<strong>il n’est pas possible de changer un caractère dans une chaîne</strong>. Le retour s’effectue avec la fonction <code class="docutils literal notranslate"><span class="pre">''.join(ret)</span></code> qui transforme une liste en chaîne de caractères.</p>
 <div class="cell docutils container">
@@ -1472,7 +789,7 @@ title="Print to PDF"
 <span class="c1"># Argument 1 : le texte crypté</span>
 <span class="c1"># Argument 2 : la clef de chiffrage</span>
 <span class="c1"># Retour     : le texte déchiffré</span>
-<span class="k">def</span> <span class="nf">dechiffre</span><span class="p">(</span><span class="n">texte_chiffre</span><span class="p">,</span><span class="n">clef</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">dechiffre</span><span class="p">(</span><span class="n">texte_chiffre</span><span class="p">,</span><span class="n">clef</span><span class="p">):</span>
     <span class="c1"># la variable l contient la longueur du texte chiffré</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte_chiffre</span><span class="p">)</span>
     <span class="c1"># la variable pos continent l&#39;index (la position) dans le texte chiffré</span>
@@ -1494,44 +811,44 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-5-chiffrer-et-dechiffrer">
-<h2>Exercice 5 : Chiffrer et déchiffrer<a class="headerlink" href="#exercice-5-chiffrer-et-dechiffrer" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 5 : Chiffrer et déchiffrer<a class="headerlink" href="#exercice-5-chiffrer-et-dechiffrer" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>testez vos deux fonctions <code class="docutils literal notranslate"><span class="pre">chiffrer(texte_clair,clef)</span></code> et <code class="docutils literal notranslate"><span class="pre">dechiffre(texte_chiffre,</span> <span class="pre">clef)</span></code> sur la phrase choisir</p></li>
 <li><p>vous devriez obtenir la phrase clair</p></li>
 </ul>
 </section>
 <section id="exercice-6-force-brute">
-<h2>Exercice 6 : Force brute<a class="headerlink" href="#exercice-6-force-brute" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 6 : Force brute<a class="headerlink" href="#exercice-6-force-brute" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Choisissez une valeur pour la variable <code class="docutils literal notranslate"><span class="pre">clef</span></code></p></li>
 <li><p>chiffrez une phrase de votre crû à l’aide de votre fonction de chiffrement et cette clef</p></li>
 <li><p>Testez l’ensemble des possibilités par la force brute pour retrouver la phrase en clair.</p></li>
 </ul>
 <p>Répondez aux questions suivantes :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Combien de clef maximum devez-vous tester ?</p></li>
 <li><p>Quelles sont les difficultés que vous rencontrez ?</p></li>
 </ol>
 </section>
 <section id="pour-aller-plus-loin">
-<h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permalink to this headline">#</a></h2>
+<h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Link to this heading">#</a></h2>
 <p>Une fois que vous avez les deux fonctions de chiffrement et déchiffrement, il vous manque un élément pour être capable de casser une phrase chiffrée sans connaissance préalable de la clef de chiffrement.</p>
 <section id="analyse-de-la-langue-utilisee">
-<h3>Analyse de la langue utilisée<a class="headerlink" href="#analyse-de-la-langue-utilisee" title="Permalink to this headline">#</a></h3>
+<h3>Analyse de la langue utilisée<a class="headerlink" href="#analyse-de-la-langue-utilisee" title="Link to this heading">#</a></h3>
 <p>Pour pimenter la difficulté, les messages sont écrit dans des langues différentes. Dans ce TP, nous utiliserons le <strong>français</strong> et <strong>l’anglais</strong>. La question devient donc : si l’on ne connaît pas la clef, comment faire <em>comprendre</em> à l’ordinateur qu’une phrase décryptée est peut-être la solution de décodage ?</p>
 <p>Deux possibilités existent pour ce faire :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Une <strong>analyse fréquentielle</strong> : on compare la fréquence de chaque lettre du message codé avec la fréquence d’utilisation des lettres de chacune des langues. On prend la plus proche.</p></li>
 <li><p>Une analyse par <strong>apparition des mots les plus courants</strong> des deux langues.</p></li>
 </ol>
 </section>
 <section id="creer-des-sets-de-donnees-dans-differentes-langues">
-<h3>Créer des sets de données dans différentes langues<a class="headerlink" href="#creer-des-sets-de-donnees-dans-differentes-langues" title="Permalink to this headline">#</a></h3>
+<h3>Créer des sets de données dans différentes langues<a class="headerlink" href="#creer-des-sets-de-donnees-dans-differentes-langues" title="Link to this heading">#</a></h3>
 <p>Afin de tester l’analyse de la langue, il s’agit d’avoir deux datasets (l’un en <strong>anglais</strong> et l’autre en <strong>français</strong>). Ces sets de données comprennent l’entier des phrases déclarées à l’exercice 1</p>
 </section>
 </section>
 <section id="exercice-7-creez-les-datasets">
-<h2>Exercice 7 : Créez les datasets<a class="headerlink" href="#exercice-7-creez-les-datasets" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 7 : Créez les datasets<a class="headerlink" href="#exercice-7-creez-les-datasets" title="Link to this heading">#</a></h2>
 <p>Ces ensembles de données permettront de tester les différentes fonctions de chiffrement et de déchiffrement</p>
 <ul class="simple">
 <li><p>déclarez l’ensemble des phrases en français et en anglais</p></li>
@@ -1547,9 +864,9 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-8-analyse-linguistique-du-texte-dechiffre">
-<h2>Exercice 8 : Analyse linguistique du texte déchiffré<a class="headerlink" href="#exercice-8-analyse-linguistique-du-texte-dechiffre" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 8 : Analyse linguistique du texte déchiffré<a class="headerlink" href="#exercice-8-analyse-linguistique-du-texte-dechiffre" title="Link to this heading">#</a></h2>
 <p>Lorsqu’on a un très grand texte chiffré, la difficulté humaine lorsqu’on utilise la méthode de la force brute, est de devoir lire tous les résultats. Il peut y en avoir énormément et cela prend du temps. On peut demander à l’ordinateur de le faire à notre place.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Analyser chaque sous-chaîne de caractère du texte décrypté</p></li>
 <li><p>Comparer avec un ensemble de mot très couramment utilisé dans les langues cibles.</p></li>
 <li><p>Si “peu” de mots apparaissent, la clef n’est <em>probablement</em> pas la bonne, sinon, on conserve la solution possible</p></li>
@@ -1560,7 +877,7 @@ title="Print to PDF"
 <span class="c1"># La liste des mots clefs est basée sur les classements internationaux (comme COCA)</span>
 <span class="c1"># Argument 1 : le texte clair</span>
 <span class="c1"># Retour     : une liste qui contient : [la langue possible, le nombre d&#39;occurences des mots-clefs] </span>
-<span class="k">def</span> <span class="nf">analyse_langue</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyse_langue</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>elle doit permettre de trouver si le texte est en <strong>français</strong> ou en <strong>anglais</strong>, sans garantie d’exactitude. Il s’agit d’abord de définir une suite des mots les plus utilisés en français et en anglais. Une recherche internet devrait vous y aider.</p>
@@ -1604,7 +921,7 @@ title="Print to PDF"
 <span class="c1"># La liste des mots clefs est basée sur les classements internationaux (comme COCA)</span>
 <span class="c1"># Argument 1 : le texte clair</span>
 <span class="c1"># Retour     : une liste qui contient : [la langue possible, le nombre d&#39;occurences des mots-clefs] </span>
-<span class="k">def</span> <span class="nf">analyse_langue</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyse_langue</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
     <span class="n">mots_clefs_f</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;le&#39;</span><span class="p">,</span><span class="s1">&#39;la&#39;</span><span class="p">,</span><span class="s1">&#39;les&#39;</span><span class="p">,</span><span class="s1">&#39;un&#39;</span><span class="p">,</span><span class="s1">&#39;une&#39;</span><span class="p">,</span><span class="s1">&#39;de&#39;</span><span class="p">,</span><span class="s1">&#39;des&#39;</span><span class="p">,</span><span class="s1">&#39;il&#39;</span><span class="p">,</span><span class="s1">&#39;elle&#39;</span><span class="p">,</span><span class="s1">&#39;et&#39;</span><span class="p">,</span><span class="s1">&#39;non&#39;</span><span class="p">,</span><span class="s1">&#39;est&#39;</span><span class="p">,</span><span class="s1">&#39;on&#39;</span><span class="p">,</span><span class="s1">&#39;vous&#39;</span><span class="p">,</span><span class="s1">&#39;nous&#39;</span><span class="p">,</span><span class="s1">&#39;se&#39;</span><span class="p">,</span><span class="s1">&#39;pas&#39;</span><span class="p">,</span><span class="s1">&#39;leur&#39;</span><span class="p">]</span>
     <span class="n">mots_clefs_a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;the&#39;</span><span class="p">,</span><span class="s1">&#39;be&#39;</span><span class="p">,</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="s1">&#39;of&#39;</span><span class="p">,</span><span class="s1">&#39;and&#39;</span><span class="p">,</span><span class="s1">&#39;in&#39;</span><span class="p">,</span><span class="s1">&#39;that&#39;</span><span class="p">,</span><span class="s1">&#39;have&#39;</span><span class="p">,</span><span class="s1">&#39;it&#39;</span><span class="p">,</span><span class="s1">&#39;for&#39;</span><span class="p">,</span><span class="s1">&#39;not&#39;</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;if&#39;</span><span class="p">]</span>
     <span class="n">retour</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -1625,19 +942,19 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">16</span>
     <span class="k">for</span> <span class="n">mot_clef</span> <span class="ow">in</span> <span class="n">mots_clefs_a</span><span class="p">:</span>
     <span class="o">^</span>
-<span class="ne">IndentationError</span>: expected an indented block
+<span class="ne">IndentationError</span>: expected an indented block after &#39;for&#39; statement on line 13
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais">
-<h2>Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais<a class="headerlink" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais<a class="headerlink" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais" title="Link to this heading">#</a></h2>
 <p>Pour chiffrer et déchiffrer, nous choisissons des clefs de codage <strong>aléatoirement</strong> avec le module Python <code class="docutils literal notranslate"><span class="pre">random</span></code>. Il s’agit d’importer ce module en tout début de programme :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 </pre></div>
 </div>
 <p>Pour <strong>tirer un entier au hasard</strong>, on utilise la fonction</p>
@@ -1651,7 +968,7 @@ title="Print to PDF"
 <p>va tirer un entier <strong>au hasard</strong> compris entre <code class="docutils literal notranslate"><span class="pre">3</span></code> et <code class="docutils literal notranslate"><span class="pre">100</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1695,11 +1012,11 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-10-application-de-la-force-brute">
-<h2>Exercice 10: Application de la force brute<a class="headerlink" href="#exercice-10-application-de-la-force-brute" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 10: Application de la force brute<a class="headerlink" href="#exercice-10-application-de-la-force-brute" title="Link to this heading">#</a></h2>
 <p>A partir de la boucle précédente, calculer toutes les possibilités et clefs associées, c’est-à-dire <strong>sans connaître la clef a priori</strong></p>
 </section>
 <section id="exercice-11-decrypter-un-tres-long-texte-chiffre">
-<h2>Exercice 11 : Décrypter un très long texte chiffré<a class="headerlink" href="#exercice-11-decrypter-un-tres-long-texte-chiffre" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 11 : Décrypter un très long texte chiffré<a class="headerlink" href="#exercice-11-decrypter-un-tres-long-texte-chiffre" title="Link to this heading">#</a></h2>
 <p>A l’aide des trois fonctions <code class="docutils literal notranslate"><span class="pre">chiffre(texte_clair,clef)</span></code>, <code class="docutils literal notranslate"><span class="pre">dechiffre(texte_chiffre,clef)</span></code> et <code class="docutils literal notranslate"><span class="pre">analyse_langue(texte)</span></code>, déchiffrez la phrase suivante :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phrase_chiffree</span> <span class="o">=</span> <span class="s2">&quot;Lemasp  lccerr yycppottnoonggurr aadppehh iiceqr,uy eplsta o pgsrrciaimpeihnticieev  eudste i ellxi iséséctera iipteounurtre   dpdareno stc éolgd eeArsn  tdeietqs u diietn éfc oheritmf,af tràie omunensn  tccseo rnptfoaiuidrne  nudtneiege rlcélo,em sml uadn aiptcleau tpdiaeor nt3   sd5ée0cs0u  rcaiinsvséi ele,in sveaistrtio onln. s u Unan n dcseicser niénbleeés m mesénestmosbp lopetrnaitmn icaeivnpo airurex c eoauuy raraneitct o ruàer nsld auà   cplroays psctirobyglpreta oplgh’riiaenp vhpeioneut.ri  oLdnei  sdrseeismm pucllraeycrpe tmuoen-nemt o fndonera misueylsme b eodtle e d,ge lsla açb ulfrooecr kmdceeh  alpiaon tspe lrmuiosed ,eé rlunétemisel.ni tsLaéeiesr  est uedrce h dnceirsqy uptetasob glcreratyptphetisoe g,dr  aaapprhpgiaiqrluaeeî.st  uàt illai sféoeiss  aduajnosu rlde sh uéic rsiotnst  écgeyppetnideannst  alnet ifqruueist  edt  umnées olpoontgaumei ehniss.t oLier ep ldues  daénvceileonp peexmeemnptl.e  Dceopnunius  dle  Acnet itqyupiet éd,e  lcar ycprtyopgtroagprhaipeh iae  épteér mterto udveé  tdraannss mleat ttroem bdee sd  iunnf onrombaltei oéngsy pdtei emna nnioèmrmeé  sKéhcnuurmihsoétee.p  VIoIi,c iq uli’ hviisvtaoiitr ei lf ays cai neannvtier odne  3l a9 0c0r yapntso.g r aLpeh iree mqpulia cae mceonntd udiet  sayumxb omléetsh oddaenss  alv’ainncsécersi petti osno pdhei sKtnihquuméheost eupt inl’ias épeass  ppoouurr  loeb jcercytpitfa gdee  nduimsésriimquulee rm oddeesr nien.f o r mLaetsi ornasc,i nmeasi sa ndcei ernennefso rdcee rl al ecurry pattotgrraaipth ilei n gOuni sstaiiqtu eq.u eL el epsr etmeicehrn ieqxue&quot;</span>
 </pre></div>
@@ -1713,7 +1030,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-12-envoyer-un-message-crypte">
-<h2>Exercice 12 : Envoyer un message crypté<a class="headerlink" href="#exercice-12-envoyer-un-message-crypte" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 12 : Envoyer un message crypté<a class="headerlink" href="#exercice-12-envoyer-un-message-crypte" title="Link to this heading">#</a></h2>
 <p>Envoyez un email contenant un message chiffré à un ou une camarade de classe présent dans la salle sans lui dévoiler la clef et demandez-lui de le déchiffrer.</p>
 </section>
 </section>
@@ -1730,7 +1047,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./1M/prog/cryptographie"
         },
         predefinedOutput: true
@@ -1738,50 +1055,126 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../piles/TP1-PROG-10.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP1-PROG-10 - Les Piles</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../IO/TP1-PROG-12.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP1-PROG-12: Les entrées-sorties</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Vincent Keller<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../piles/TP1-PROG-10.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TP1-PROG-10 - Les Piles</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../boucles/TP1-PROG-14.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelisation-d-une-scytale">Modélisation d’une scytale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decalage">Décalage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attaque-en-force-brute">Attaque en force brute</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-declarer-les-phrases-claires">Exercice 1 : déclarer les phrases claires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-formalisme-des-algorigrammes-programme-python">Boucles : formalisme des algorigrammes - programme Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-construction-de-la-fonction-de-chiffrement">Exercice 2 : Construction de la fonction de chiffrement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-test-de-la-fonction">Exercice 3 : Test de la fonction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-construction-de-la-fonction-de-dechiffrement">Exercice 4 : Construction de la fonction de déchiffrement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-chiffrer-et-dechiffrer">Exercice 5 : Chiffrer et déchiffrer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-force-brute">Exercice 6 : Force brute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-aller-plus-loin">Pour aller plus loin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-langue-utilisee">Analyse de la langue utilisée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sets-de-donnees-dans-differentes-langues">Créer des sets de données dans différentes langues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-creez-les-datasets">Exercice 7 : Créez les datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-analyse-linguistique-du-texte-dechiffre">Exercice 8 : Analyse linguistique du texte déchiffré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-chiffrement-et-dechiffrement-des-datasets-francais-et-anglais">Exercice 9 : Chiffrement et déchiffrement des datasets français et anglais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-application-de-la-force-brute">Exercice 10: Application de la force brute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-11-decrypter-un-tres-long-texte-chiffre">Exercice 11 : Décrypter un très long texte chiffré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-12-envoyer-un-message-crypte">Exercice 12 : Envoyer un message crypté</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vincent Keller
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

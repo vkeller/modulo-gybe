@@ -1,112 +1,178 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>C2-ARCH-01 : Compilation : du Python au langage machine &#8212; Education Numérique Ecole de maturité</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2M/architecture/cours/C2-ARCH-01';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="C2-ARCH-02 : Architecture de Von Neumann" href="C2-ARCH-02.html" />
     <link rel="prev" title="Architecture et réseaux" href="../index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo-beaulieu.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Education Numérique Ecole de maturité</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../_static/logo-beaulieu.png" class="logo__image only-light" alt="Education Numérique Ecole de maturité - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-beaulieu.png" class="logo__image only-dark" alt="Education Numérique Ecole de maturité - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -115,1348 +181,442 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Généralités
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Généralités</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../general/generalites.html">
-   Esprit critique, fraude, plagiat et ChatGPT
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../general/outils.html">
-   Outils utiles pour le cours d’informatique
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/quisuisje.html">Qui suis-je ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/generalites.html">Esprit critique, fraude, plagiat et ChatGPT</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../general/outils.html">Outils utiles pour le cours d’informatique</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  1ère année
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">1ère année</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../1M/index.html">
-   DO Informatique 1M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/representation/index.html">
-   Représentation des données
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-01.html">
-     C1-REDO-01 : Du monde physique au monde numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-02.html">
-     C1-REDO-02 binaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">
-     C1-REDO-03 : codage de caractères
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">
-     C1-REDO-04 : Opérations en binaire et en hexadécimal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/cours/R1-REDO-01.html">
-     R1-REDO-01 Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-01.html">
-     TP1-REDO-01 : les images matricielles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-02.html">
-     TP1-REDO-02 : Le son
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-03.html">
-     TP1-REDO-03 : Types de fichiers et compression
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/algo/index.html">
-   Algorithmique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-01.html">
-     C1-ALGO-01 : Introduction à l’algorithmique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-02.html">
-     C1-ALGO-02 : Des algorithmes aux algorigrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-03.html">
-     C1-ALGO-03 : Les jeux de Nim
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-04.html">
-     C1-ALGO-04 : Caractéristiques des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.html">
-     C1-ALGO-05.00 : Algorithmes classiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.1.html">
-     C1-ALGO-05.01 Algorithmes classiques (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.2.html">
-     C1-ALGO-05.02 Algorithmes classiques (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-06.html">
-     C1-ALGO-06 : Algorithmes évolutionnistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.html">
-     C1-ALGO-07 : Des algorigrammes à leur programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-08.html">
-     C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-09.html">
-     C1-ALGO-09 : L’horloge de la gare de St-Gallen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-10.html">
-     C1-ALGO-10 - Introduction à la cryptologie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-11.html">
-     C1-ALGO-11 : Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">
-     C1-ALGO-12 : Les boucles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-13.html">
-     C1-ALGO-13 : Les algorithmes gloutons
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-01.html">
-     R1-ALGO-01 - révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-02.html">
-     R1-ALGO-02 : Révision Algorigramme + programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-03.html">
-     R1-ALGO-03 : Rappels algorigrammes - Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../1M/installation/installation.html">
-   Environnement de développement
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/prog/index.html">
-   Programmation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/intro1/TP1-PROG-01.html">
-     TP1-PROG-01 - Introduction à la programmation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/intro2/TP1-PROG-02.html">
-     TP1-PROG-02 - Introduction : les fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-03.html">
-     TP1-PROG-03 - La boucle
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">
-     TP1-PROG-04 - Boucles
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-     approfondissement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">
-     TP1-PROG-05 - Les tests conditionnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/dessinsanimes/TP1-PROG-06.html">
-     TP1-PROG-06 - Les dessins animés
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">
-     TP1-PROG-07 - Les variables en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">
-     TP1-PROG-08 - Les listes (tableaux)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/files/TP1-PROG-09.html">
-     TP1-PROG-09 - Les Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/piles/TP1-PROG-10.html">
-     TP1-PROG-10 - Les Piles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/cryptographie/TP1-PROG-11.html">
-     TP1-PROG-11 : Introduction à la cryptographie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-12.html">
-     TP1-PROG-12: Les entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">
-     TP1-PROG-13 : TP supplémentaire prog 1M
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/architecture/index.html">
-   Architecture
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/architecture/fichiers/SystemeDeFichiers.html">
-     TP1-ARCH-01 : Le système de fichiers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/esdn/index.html">
-   Enjeux sociaux
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-01.html">
-     C1-ESDN-01 : Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-02.html">
-     C1-ESDN-02 : Le mouvement Cypherpunk
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-03.html">
-     C1-ESDN-03 : Le capitalisme de surveillance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-04.html">
-     C1-ESDN-04 : Edward Snowden et la surveillance de masse
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-05.html">
-     C1-ESDN-05 : Profilage numérique : l’affaire Burrill
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/presentations/TP1-ESDN-00.html">
-     TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/esdn/cours/TP1-ESDN-01.html">
-     TP1-ESDN-01 : Les réseaux informatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../1M/jeux/index.html">
-   Jeux informatiques et logiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../1M/jeux/logique.html">
-     C1-JEUX-01 : Quizz de logique
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1M/index.html">DO Informatique 1M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-03.html">TP1-REDO-03 : Types de fichiers et compression</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  2ème année
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/algo/index.html">Algorithmique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-02.html">C1-ALGO-02 : Des algorithmes aux algorigrammes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-04.html">C1-ALGO-04 : Caractéristiques des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-06.html">C1-ALGO-06 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.html">C1-ALGO-07 : Des algorigrammes à leur programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-08.html">C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-09.html">C1-ALGO-09 : L’horloge de la gare de St-Gallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-03.html">R1-ALGO-03 : Rappels algorigrammes - Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1M/installation/installation.html">Environnement de développement</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/prog/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/intro1/TP1-PROG-01.html">TP1-PROG-01 - Introduction à la programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/intro2/TP1-PROG-02.html">TP1-PROG-02 - Introduction : les fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-03.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05-Turtle.html">TP1-PROG-05-Turtle - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">TP1-PROG-05 - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">TP1-PROG-07 - Les variables en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">TP1-PROG-08 - Les listes (tableaux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/files/TP1-PROG-09.html">TP1-PROG-09 - Les Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/piles/TP1-PROG-10.html">TP1-PROG-10 - Les Piles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/cryptographie/TP1-PROG-11.html">TP1-PROG-11 : Introduction à la cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : TP supplémentaire prog 1M</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/architecture/fichiers/SystemeDeFichiers.html">TP1-ARCH-01 : Le système de fichiers</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/esdn/index.html">Enjeux sociaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-01.html">C1-ESDN-01 : Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-02.html">C1-ESDN-02 : Le mouvement Cypherpunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-03.html">C1-ESDN-03 : Le capitalisme de surveillance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-04.html">C1-ESDN-04 : Edward Snowden et la surveillance de masse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-05.html">C1-ESDN-05 : Profilage numérique : l’affaire Burrill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/presentations/TP1-ESDN-00.html">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/TP1-ESDN-01.html">TP1-ESDN-01 : Les réseaux informatique</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2ème année</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
-   DO Informatique 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../algo/index.html">
-   Algorithmique avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-01.html">
-     R2-ALGO-01 : Révision Algorithmes 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-02-A.html">
-     R2-ALGO-02-A : Révision algorithmes (Recherche)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-02-B.html">
-     R2-ALGO-02-B : Révision (Tri)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-01.html">
-     C2-ALGO-01 : Taille du problème
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-02.html">
-     C2-ALGO-02 : Complexité des algorithmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-03.html">
-     C2-ALGO-03 : Complexité des algorithmes (suite)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-04.html">
-     C2-ALGO-04 : Introduction à la théorie des graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/C2-ALGO-05.html">
-     C2-ALGO-05 : Théorie des graphes, le voyageur de commerce
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-02.html">
-     R1-ALGO-02 : Révision
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../algo/R2-ALGO-03.html">
-     R1-ALGO-03 : Révision
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../prog/index.html">
-   Programmation avancée
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/revisions/R2-PROG-01.html">
-     R2-PROG-01 : Rappels programmation 1M
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/complexite/TP2-PROG-01.html">
-     TP2-PROG-01 : Approche pratique de la complexité : Pile ou face
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/complexite/TP2-PROG-02.html">
-     TP2-PROG-02 : Approche pratique de la complexité : Recherche
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/luhn/TP2-PROG-03.html">
-     TP2-PROG-03 : Algorithme de Luhn (carte de crédit)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/syracuse/TP2-PROG-05.html">
-     TP2-PROG-05 : Conjecture de Collatz
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/dictionnaires/Dictionnaires2.html">
-     TP2-PROG-06 : Dictionnaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/motdepasse/MotsDePasse.html">
-     TP2-PROG-07 : Les mots de passe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/hacking/TP2-PROG-08.html">
-     TP2-PROG-08: Coder et décoder comme les Romains
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/arbres/LesArbres.html">
-     TP2-PROG-09 : Les arbres
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../prog/st-gall/TP2-PROG-10.html">
-     TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../histoire/index.html">
-   Histoire de l’informatique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../histoire/C2-HIST-01.html">
-     C2-HIST-01 : Préhistoire de l’informatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../histoire/C2-HIST-02.html">
-     C2-HIST-02 : Histoire de l’informatique : le matériel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../histoire/C2-HIST-03.html">
-     C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../histoire/C2-HIST-04.html">
-     C2-HIST-04 : Histoire des logiciels (la couche applicative)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Architecture et réseaux
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     C2-ARCH-01 : Compilation : du Python au langage machine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="C2-ARCH-02.html">
-     C2-ARCH-02 : Architecture de Von Neumann
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reseau/C2-RESO-01.html">
-     C2-RESO-01 : Introduction aux réseaux informatiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reseau/C2-RESO-02.html">
-     C2-RESO-02 : L’adresse IP
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-00.html">
-     TP2-ARCH-00 : Introduction avec un micro:bit
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP/TP2-ARCH-01.html">
-     TP2-ARCH-01 : Les portes logiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-02.html">
-     TP2-ARCH-02 : Le nano-ordinateur RPi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-03.html">
-     TP2-ARCH-03 : Mise en réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-04.html">
-     TP2-ARCH-04 : Services réseau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-NOTE2.html">
-     TP2-ARCH-NOTE : Journal de bord
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-05.html">
-     TP2-ARCH-05 : Sécurité dans le traffic aérien
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raspberry/TP2-ARCH-06.html">
-     TP2-ARCH-06 : RPi pour aller plus loin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../logidules/TP2-LOGI-01.html">
-     TP2-LOGI-01 : Les logidules
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../strategies/index.html">
-   Stratégie de résolution
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../strategies/C2-STRAT-01.html">
-     C2-STRAT-01 : Stratégies de résolution de problèmes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../strategies/C2-STRAT-02.html">
-     C2-STRAT-02 : Gestion des erreurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../strategies/TP2-STRAT-01.html">
-     TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../strategies/TP2-STRAT-02.html">
-     TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../machine-learning/index.html">
-   Intelligence artificielle
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/cours/C2-IA-00.html">
-     C2-IA-00 : Introduction à l’intelligence artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/cours/C2-IA-01.html">
-     C2-IA-01 : Histoire de l’Intelligence Artificielle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/cours/C2-IA-02.html">
-     C2-IA-02 : Automates cellulaires
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/cours/C2-IA-03.html">
-     C2-IA-03 : Apprentissage automatique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/cours/C2-IA-04.html">
-     C2-IA-04 : Réseau de neurones artificiels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">
-     TP-IA-01 : Le jeu de la vie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../esdn/index.html">
-   Enjeux sociaux du numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">
-     TP2-ESDN-01 : L’environnement et le numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">
-     TP2-ESDN-02 : L’Art et le Numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../esdn/women/P2-ESDN-02.html">
-     P2-ESDN-02 : Femmes dans l’informatique
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DO Informatique 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo/index.html">Algorithmique avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02-A.html">R2-ALGO-02-A : Révision algorithmes (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02-B.html">R2-ALGO-02-B : Révision (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-01.html">C2-ALGO-01 : Taille du problème</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-02.html">C2-ALGO-02 : Complexité des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-03.html">C2-ALGO-03 : Complexité des algorithmes (suite)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-04-A.html">C2-ALGO-04-A : Introduction à la théorie des graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-04-B.html">C2-ALGO-04-B : Parcours de graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  3C2M
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../3C2M/index.html">
-   MAN 3C &gt; 2M
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../3C2M/programmation/index.html">
-   Programmation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">
-     3C2M-PROG-00 : Introduction
-    </a>
-   </li>
-  </ul>
- </li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/R2-PROG-01.html">R2-PROG-01 : Rappels programmation 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/R2-PROG-02.html">R2-PROG-02 : Rappels 1M - mini-projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/luhn/TP2-PROG-01.html">TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/complexite/TP2-PROG-02.html">TP2-PROG-02 : Approche pratique de la complexité : Pile ou face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/complexite/TP2-PROG-03.html">TP2-PROG-03 : Approche pratique de la complexité : Recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/syracuse/TP2-PROG-05.html">TP2-PROG-05 : Conjecture de Collatz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/dictionnaires/Dictionnaires2.html">TP2-PROG-06 : Dictionnaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/motdepasse/MotsDePasse.html">TP2-PROG-07 : Les mots de passe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/hacking/TP2-PROG-08.html">TP2-PROG-08: Coder et décoder comme les Romains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/arbres/LesArbres.html">TP2-PROG-09 : Les arbres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/st-gall/TP2-PROG-10.html">TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bibliographie
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../histoire/index.html">Histoire de l’informatique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-01.html">C2-HIST-01 : Préhistoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-02.html">C2-HIST-02 : Histoire de l’informatique : le matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-03.html">C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-04.html">C2-HIST-04 : Histoire des logiciels (la couche applicative)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Architecture et réseaux</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C2-ARCH-01 : Compilation : du Python au langage machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TP/TP2-ARCH-01.html">TP2-ARCH-01 : Les portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-03.html">TP2-ARCH-03 : Mise en réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../machine-learning/index.html">Intelligence artificielle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-00.html">C2-IA-00 : Introduction à l’intelligence artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-01.html">C2-IA-01 : Histoire de l’Intelligence Artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-02.html">C2-IA-02 : Automates cellulaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-03.html">C2-IA-03 : Apprentissage automatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-04.html">C2-IA-04 : Réseau de neurones artificiels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-05.html">La boucle d’apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">TP-IA-01 : Le jeu de la vie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../esdn/index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3C2M</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../biblio.html">
-   Livres et sources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3C2M/index.html">MAN 3C &gt; 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../3C2M/programmation/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">3C2M-PROG-00 : Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../biblio.html">Livres et sources</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/cours/C2-ARCH-01.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/2M/architecture/cours/C2-ARCH-01.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/cours/C2-ARCH-01.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/2M/architecture/cours/C2-ARCH-01.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#propos-liminaires">
-   PROPOS LIMINAIRES
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compilation-kezako">
-   Compilation, kézako ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observations">
-   Observations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
-     L’ordinateur comprend une langue formée de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       0
-      </span>
-     </code>
-     et de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       1
-      </span>
-     </code>
-     :
-     <strong>
-      le langage machine
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
-     L’utilisateur (le programmeur) comprend une autre langue :
-     <strong>
-      le langage de programmation
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
-     Un compilateur permet de traduire un langage L3G vers L1G
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">
-   Analogie : traduire du français vers l’anglais
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-les-lettres">
-     Reconnaître les lettres
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-les-mots">
-     Reconnaître les mots
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">
-     Reconnaître le sens des phrases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-british-english">
-     Version British English
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-american-english">
-     Version American English
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-australian-english">
-     Version Australian English
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etapes-de-compilation">
-   Etapes de compilation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">
-   Les intructions logiques du processeur
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-exemple-demi-additionneur">
-     Un exemple : demi-additionneur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-second-exemple-une-memoire-de-1-bit">
-     Un second exemple : une mémoire de 1 bit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">
-     Ensemble des instructions d’un processeur
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
-   Besoin d’un langage
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     NOT
-    </span>
-    <span class="pre">
-     L3G
-    </span>
-    <span class="pre">
-     AND
-    </span>
-    <span class="pre">
-     NOT
-    </span>
-    <span class="pre">
-     L1G
-    </span>
-   </code>
-   L2G : l’assembleur
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">
-     Instruction
-     <em>
-      addition
-     </em>
-     du processeur en assembleur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre">
-     instruction pour transférer une valeur d’un emplacement à l’autre
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#design-du-processeur-vk-1020">
-   Design du processeur VK 1020
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compilons">
-   Compilons !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#de-l-assembleur-au-langage-machine">
-   De l’assembleur au langage machine
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>C2-ARCH-01 : Compilation : du Python au langage machine</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs-pedagogiques">
-   Objectifs pédagogiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#propos-liminaires">
-   PROPOS LIMINAIRES
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compilation-kezako">
-   Compilation, kézako ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observations">
-   Observations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
-     L’ordinateur comprend une langue formée de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       0
-      </span>
-     </code>
-     et de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       1
-      </span>
-     </code>
-     :
-     <strong>
-      le langage machine
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
-     L’utilisateur (le programmeur) comprend une autre langue :
-     <strong>
-      le langage de programmation
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
-     Un compilateur permet de traduire un langage L3G vers L1G
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">
-   Analogie : traduire du français vers l’anglais
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-les-lettres">
-     Reconnaître les lettres
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-les-mots">
-     Reconnaître les mots
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">
-     Reconnaître le sens des phrases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-british-english">
-     Version British English
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-american-english">
-     Version American English
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#version-australian-english">
-     Version Australian English
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etapes-de-compilation">
-   Etapes de compilation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">
-   Les intructions logiques du processeur
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-exemple-demi-additionneur">
-     Un exemple : demi-additionneur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-second-exemple-une-memoire-de-1-bit">
-     Un second exemple : une mémoire de 1 bit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">
-     Ensemble des instructions d’un processeur
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
-   Besoin d’un langage
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     NOT
-    </span>
-    <span class="pre">
-     L3G
-    </span>
-    <span class="pre">
-     AND
-    </span>
-    <span class="pre">
-     NOT
-    </span>
-    <span class="pre">
-     L1G
-    </span>
-   </code>
-   L2G : l’assembleur
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">
-     Instruction
-     <em>
-      addition
-     </em>
-     du processeur en assembleur
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre">
-     instruction pour transférer une valeur d’un emplacement à l’autre
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#design-du-processeur-vk-1020">
-   Design du processeur VK 1020
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compilons">
-   Compilons !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#de-l-assembleur-au-langage-machine">
-   De l’assembleur au langage machine
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>C2-ARCH-01 : Compilation : du Python au langage machine</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propos-liminaires">PROPOS LIMINAIRES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compilation-kezako">Compilation, kézako ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">L’ordinateur comprend une langue formée de <code class="docutils literal notranslate"><span class="pre">0</span></code> et de <code class="docutils literal notranslate"><span class="pre">1</span></code> : <strong>le langage machine</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">L’utilisateur (le programmeur) comprend une autre langue : <strong>le langage de programmation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">Un compilateur permet de traduire un langage L3G vers L1G</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">Analogie : traduire du français vers l’anglais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-les-lettres">Reconnaître les lettres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-les-mots">Reconnaître les mots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">Reconnaître le sens des phrases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-british-english">Version British English</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-american-english">Version American English</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-australian-english">Version Australian English</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-compilation">Etapes de compilation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">Les intructions logiques du processeur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-exemple-demi-additionneur">Un exemple : demi-additionneur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-second-exemple-une-memoire-de-1-bit">Un second exemple : une mémoire de 1 bit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">Ensemble des instructions d’un processeur</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">Besoin d’un langage <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">L3G</span> <span class="pre">AND</span> <span class="pre">NOT</span> <span class="pre">L1G</span></code> L2G : l’assembleur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">Instruction <em>addition</em> du processeur en assembleur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre">instruction pour transférer une valeur d’un emplacement à l’autre</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-du-processeur-vk-1020">Design du processeur VK 1020</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compilons">Compilons !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-assembleur-au-langage-machine">De l’assembleur au langage machine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <p><img alt="magics" src="../../../_images/magics.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="c2-arch-01-compilation-du-python-au-langage-machine">
-<h1>C2-ARCH-01 : Compilation : du Python au langage machine<a class="headerlink" href="#c2-arch-01-compilation-du-python-au-langage-machine" title="Permalink to this headline">#</a></h1>
+<h1>C2-ARCH-01 : Compilation : du Python au langage machine<a class="headerlink" href="#c2-arch-01-compilation-du-python-au-langage-machine" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permalink to this headline">#</a></h2>
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>savoir nommer les différentes étapes pour passer d’un code source écrit par un humain à un code binaire compris par un micro-processeur</p></li>
 <li><p>appliquer sur des codes sources Python au papier et avec un crayon</p></li>
 </ul>
 </section>
 <section id="propos-liminaires">
-<h2>PROPOS LIMINAIRES<a class="headerlink" href="#propos-liminaires" title="Permalink to this headline">#</a></h2>
+<h2>PROPOS LIMINAIRES<a class="headerlink" href="#propos-liminaires" title="Link to this heading">#</a></h2>
 <p>Le monde des langages de programmation est vaste. La manière dont s’exécutent les programmes varient en fonction du langage.</p>
 <p>Le langage Python <strong>n’est pas compilé directement en langage machine</strong>, il est <strong>interprété</strong>. Pour la suite de ce cours, nous supposerons qu’il est compilé comme le sont des langages comme <code class="docutils literal notranslate"><span class="pre">C</span></code> ou <code class="docutils literal notranslate"><span class="pre">C++</span></code>.</p>
 </section>
 <section id="compilation-kezako">
-<h2>Compilation, kézako ?<a class="headerlink" href="#compilation-kezako" title="Permalink to this headline">#</a></h2>
+<h2>Compilation, kézako ?<a class="headerlink" href="#compilation-kezako" title="Link to this heading">#</a></h2>
 <p>Lorsqu’on écrit un programme, on choisit un <strong>langage de programmation</strong>. Dans l’introduction de ce cours, nous avons vu qu’il en existait des centaines (voir des milliers) :</p>
 <ul class="simple">
 <li><p>Python</p></li>
@@ -1506,40 +666,40 @@ title="Print to PDF"
 <p><img alt="compiler" src="../../../_images/compiler.png" /></p>
 </section>
 <section id="observations">
-<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
+<h2>Observations<a class="headerlink" href="#observations" title="Link to this heading">#</a></h2>
 <p>Nous pouvons faire trois observations initiales.</p>
 <section id="l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">
-<h3>L’ordinateur comprend une langue formée de <code class="docutils literal notranslate"><span class="pre">0</span></code> et de <code class="docutils literal notranslate"><span class="pre">1</span></code> : <strong>le langage machine</strong><a class="headerlink" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine" title="Permalink to this headline">#</a></h3>
+<h3>L’ordinateur comprend une langue formée de <code class="docutils literal notranslate"><span class="pre">0</span></code> et de <code class="docutils literal notranslate"><span class="pre">1</span></code> : <strong>le langage machine</strong><a class="headerlink" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine" title="Link to this heading">#</a></h3>
 <p>Le <strong>langage machine</strong> est une suite de bits qui est interprété par le processeur. C’est le seul qu’il puisse traiter. Cette suite de bits est une représentation binaire d’une <strong>instruction</strong> de très bas niveau que le processeur comprend.</p>
 <p>Les tous premiers ordinateurs construits dans les années 1940 étaient programmables uniquement en langage machine. C’est la raison pour laquelle on dit que le langage machine est un langage de programmation de <strong>première génération</strong> (ou <strong>L1G</strong>).</p>
 <p>Aujourd’hui, il est <strong>impossible</strong> de programmer en langage machine : les instructions des processeurs modernes sont beaucoup trop nombreuses et complexes pour être programmées à la main.</p>
 </section>
 <section id="l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">
-<h3>L’utilisateur (le programmeur) comprend une autre langue : <strong>le langage de programmation</strong><a class="headerlink" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation" title="Permalink to this headline">#</a></h3>
+<h3>L’utilisateur (le programmeur) comprend une autre langue : <strong>le langage de programmation</strong><a class="headerlink" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation" title="Link to this heading">#</a></h3>
 <p>Un langage de programmation tel que <strong>Python</strong> est compréhensible par un humain. Il est assez éloigné de l’électronique du processeur. On le dit de <strong>troisième génération</strong> (ou <strong>L3G</strong>) ou de <strong>haut niveau</strong>.</p>
 <p>Un programme écrit dans un langage de programmation de haut niveau est <strong>indépendant</strong> du processeur. Il peut aussi bien être exécuté sur une architecture Intel x86 qu’une architecture ARM par exemple.</p>
 </section>
 <section id="un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">
-<h3>Un compilateur permet de traduire un langage L3G vers L1G<a class="headerlink" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g" title="Permalink to this headline">#</a></h3>
+<h3>Un compilateur permet de traduire un langage L3G vers L1G<a class="headerlink" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g" title="Link to this heading">#</a></h3>
 <p>Le compilateur est un <strong>traducteur</strong>. Le processus de compilation est une <strong>traduction</strong> d’un langage de haut niveau L3G de haut niveau vers un langage de bas niveau (machine) L1G.</p>
 <p>Si on a deux ordinateurs avec des processeurs différents <code class="docutils literal notranslate"><span class="pre">Processeur_A</span></code> et <code class="docutils literal notranslate"><span class="pre">Processeur_B</span></code>, alors le résultat de cette traduction sera <strong>différente</strong> selon que l’on traduit pour l’un ou pour l’autre processeur. Ce qui fait la différence entre les deux processeurs est <strong>le jeu d’instructions</strong> (en anglais <em>instruction set</em>) qu’il est capable d’exécuter.</p>
 </section>
 </section>
 <section id="analogie-traduire-du-francais-vers-l-anglais">
-<h2>Analogie : traduire du français vers l’anglais<a class="headerlink" href="#analogie-traduire-du-francais-vers-l-anglais" title="Permalink to this headline">#</a></h2>
+<h2>Analogie : traduire du français vers l’anglais<a class="headerlink" href="#analogie-traduire-du-francais-vers-l-anglais" title="Link to this heading">#</a></h2>
 <p>Pour comprendre les différentes phases de la compilation, on peut faire une analogie avec la traduction d’une phrase écrite en français vers la langue anglaise.</p>
 <p>Imaginons que nous souhaitions traduire la phrase suivante :</p>
 <blockquote>
 <div><p>Pour vous rendre à Milan depuis Lausanne, vous devez aller jusqu’à Martigny, puis par le col du Grand Saint-Bernard à Aoste et enfin l’autoroute A26 depuis Ivrea.</p>
 </div></blockquote>
 <p>Quelles sont les étapes que vous allez suivre ?</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Reconnaître les lettres</p></li>
 <li><p>Reconnaître les mots</p></li>
 <li><p>Reconnaître le sens des phrases</p></li>
 </ol>
 <section id="reconnaitre-les-lettres">
-<h3>Reconnaître les lettres<a class="headerlink" href="#reconnaitre-les-lettres" title="Permalink to this headline">#</a></h3>
+<h3>Reconnaître les lettres<a class="headerlink" href="#reconnaitre-les-lettres" title="Link to this heading">#</a></h3>
 <p>Si la phrase est écrite ainsi :</p>
 <blockquote>
 <div><p>ローザンヌからミラノに行くには、まずマルティニーへ行き、次にグレートセントベルナール峠をアオスタへと抜け、最後にイヴレアからA26号線を通る必要があります。</p>
@@ -1551,7 +711,7 @@ title="Print to PDF"
 <p>On appelle cette étape <strong>l’analyse lexicale</strong> : de quoi sont faits les mots qui composent la phrase ?</p>
 </section>
 <section id="reconnaitre-les-mots">
-<h3>Reconnaître les mots<a class="headerlink" href="#reconnaitre-les-mots" title="Permalink to this headline">#</a></h3>
+<h3>Reconnaître les mots<a class="headerlink" href="#reconnaitre-les-mots" title="Link to this heading">#</a></h3>
 <p>Si la phrase avait été écrite ainsi :</p>
 <blockquote>
 <div><p>For å komme deg til Milano fra Lausanne, må du dra til Martigny, deretter gjennom St. Bernhardspasset til Aosta, og til slutt ta motorvei A26 fra Ivrea.</p>
@@ -1564,7 +724,7 @@ title="Print to PDF"
 <p>On appelle cette étape <strong>l’analyse syntaxique</strong> : les mots composés par des lettres sont ils justes dans la phrase ?</p>
 </section>
 <section id="reconnaitre-le-sens-des-phrases">
-<h3>Reconnaître le sens des phrases<a class="headerlink" href="#reconnaitre-le-sens-des-phrases" title="Permalink to this headline">#</a></h3>
+<h3>Reconnaître le sens des phrases<a class="headerlink" href="#reconnaitre-le-sens-des-phrases" title="Link to this heading">#</a></h3>
 <p>Si la phrase est écrite ainsi :</p>
 <blockquote>
 <div><p>Pour vous aller à Ivrea par Lausanne, vous devez aller A26 enfin Martigny, puis autoroute le Grand du col Saint-Bernard enfin Aoste et à  A26 depuis Milan.</p>
@@ -1578,7 +738,7 @@ title="Print to PDF"
 <p>On appelle cette étape <strong>l’analyse sémantique</strong> : les mots mis ensembles donnent-ils un sens à la phrase ?</p>
 </section>
 <section id="version-british-english">
-<h3>Version British English<a class="headerlink" href="#version-british-english" title="Permalink to this headline">#</a></h3>
+<h3>Version British English<a class="headerlink" href="#version-british-english" title="Link to this heading">#</a></h3>
 <p>Voici une version en <em>British English</em></p>
 <blockquote>
 <div><p>To get to Milan from Lausanne, you need to go to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 motorway from Ivrea.</p>
@@ -1586,7 +746,7 @@ title="Print to PDF"
 <p>Il existe des locuteurs qui écrivent et comprennent la phrase avec des mots comme <em>to go</em> et <em>motorway</em></p>
 </section>
 <section id="version-american-english">
-<h3>Version American English<a class="headerlink" href="#version-american-english" title="Permalink to this headline">#</a></h3>
+<h3>Version American English<a class="headerlink" href="#version-american-english" title="Link to this heading">#</a></h3>
 <p>Voici une version en <em>American English</em></p>
 <blockquote>
 <div><p>To get to Milan from Lausanne, you need to drive to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 highway from Ivrea.</p>
@@ -1594,7 +754,7 @@ title="Print to PDF"
 <p>Il existe des locuteurs qui écrivent et comprennent la phrase avec des mots comme <em>to drive</em> et <em>highway</em></p>
 </section>
 <section id="version-australian-english">
-<h3>Version Australian English<a class="headerlink" href="#version-australian-english" title="Permalink to this headline">#</a></h3>
+<h3>Version Australian English<a class="headerlink" href="#version-australian-english" title="Link to this heading">#</a></h3>
 <p>Voici une version en <em>Australian English</em></p>
 <blockquote>
 <div><p>To get to Milan from Lausanne, you need to head to Martigny, then through the Great St. Bernard Pass to Aosta, and finally take the A26 motorway from Ivrea.</p>
@@ -1604,116 +764,118 @@ title="Print to PDF"
 </section>
 </section>
 <section id="etapes-de-compilation">
-<h2>Etapes de compilation<a class="headerlink" href="#etapes-de-compilation" title="Permalink to this headline">#</a></h2>
+<h2>Etapes de compilation<a class="headerlink" href="#etapes-de-compilation" title="Link to this heading">#</a></h2>
 <p>Les trois étapes du passage d’un langage L3G à L1G sont identiques !</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Analyse lexicale</p></li>
 <li><p>Analyse syntaxique</p></li>
 <li><p>Analyse sémantique</p></li>
 </ol>
 </section>
 <section id="les-intructions-logiques-du-processeur">
-<h2>Les intructions logiques du processeur<a class="headerlink" href="#les-intructions-logiques-du-processeur" title="Permalink to this headline">#</a></h2>
+<h2>Les intructions logiques du processeur<a class="headerlink" href="#les-intructions-logiques-du-processeur" title="Link to this heading">#</a></h2>
 <p>Les <strong>instructions</strong> du processeurs sont des opérations qui sont <strong>codées</strong> sous la forme de <strong>circuits logiques</strong>.</p>
 <section id="un-exemple-demi-additionneur">
-<h3>Un exemple : demi-additionneur<a class="headerlink" href="#un-exemple-demi-additionneur" title="Permalink to this headline">#</a></h3>
+<h3>Un exemple : demi-additionneur<a class="headerlink" href="#un-exemple-demi-additionneur" title="Link to this heading">#</a></h3>
 <p>Un demi-additionneur à deux bits permet de calculer la <strong>somme</strong> de deux bits sans tenir compte de la <strong>retenue</strong> (<span class="math notranslate nohighlight">\(1_2 + 1_2 = 10_2\)</span> donc il faudrait un troisième bit pour le coder).</p>
 <p>Le demi-additionneur se construit en un circuit logique dont la table de vérité est :</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(R\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(S\)</span></p></th>
+<tr class="row-odd"><th class="head text-left"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(R\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(S\)</span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
+<tr class="row-even"><td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>1</p></td>
+<tr class="row-odd"><td class="text-left"><p>0</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>1</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>1</p></td>
+<tr class="row-even"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>1</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>0</p></td>
+<tr class="row-odd"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>où <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont les bits d’entrée, <span class="math notranslate nohighlight">\(R\)</span> la retenue et <span class="math notranslate nohighlight">\(S\)</span> le résultat de la somme (attention en binaire !!)</p>
-<p>se <span class="xref myst">construit</span> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">XOR</span></code> et <code class="docutils literal notranslate"><span class="pre">AND</span></code> :</p>
+<p>se <a class="reference download internal" download="" href="../../../_downloads/caebeaa241adbd7db7260ba006ea8c83/demi-additionneur.json"><span class="xref download myst">construit</span></a> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">XOR</span></code> et <code class="docutils literal notranslate"><span class="pre">AND</span></code> :</p>
 <p><img alt="demi-additionneur" src="../../../_images/demi.png" /></p>
 </section>
 <section id="un-second-exemple-une-memoire-de-1-bit">
-<h3>Un second exemple : une mémoire de 1 bit<a class="headerlink" href="#un-second-exemple-une-memoire-de-1-bit" title="Permalink to this headline">#</a></h3>
+<h3>Un second exemple : une mémoire de 1 bit<a class="headerlink" href="#un-second-exemple-une-memoire-de-1-bit" title="Link to this heading">#</a></h3>
 <p>On observe dans le circuit du demi-additionneur que l’on ne peut pas conserver la valeur des deux opérandes (les deux bits). On a donc besoin d’une mémoire.</p>
 <p>Une mémoire (ou <strong>bascule D</strong> ou <em>D latch</em> en anglais) est un dispositif permettant de conserver la valeur d’un bit d’entrée (<span class="math notranslate nohighlight">\(D\)</span>) même si l’on fait ensuite varier les entrées pour autant qu’un loquet <span class="math notranslate nohighlight">\(E\)</span> soit vrai. C’est une mémoire ou <strong>registre</strong> dans le cas des processeurs.</p>
 <p>La table est la suivante :</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(E\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(D\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(Q\)</span></p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(\bar{Q}\)</span></p></th>
-<th class="text-align:left head"><p>remarque</p></th>
+<tr class="row-odd"><th class="head text-left"><p><span class="math notranslate nohighlight">\(E\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(D\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(Q\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\bar{Q}\)</span></p></th>
+<th class="head text-left"><p>remarque</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(q_{prev}\)</span></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\bar{q}_{prev}\)</span></p></td>
-<td class="text-align:left"><p>pas de changement</p></td>
+<tr class="row-even"><td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(q_{prev}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\bar{q}_{prev}\)</span></p></td>
+<td class="text-left"><p>pas de changement</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(q_{prev}\)</span></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\bar{q}_{prev}\)</span></p></td>
-<td class="text-align:left"><p>pas de changement</p></td>
+<tr class="row-odd"><td class="text-left"><p>0</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(q_{prev}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\bar{q}_{prev}\)</span></p></td>
+<td class="text-left"><p>pas de changement</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>Reset</p></td>
+<tr class="row-even"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Reset</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>0</p></td>
-<td class="text-align:left"><p>Set</p></td>
+<tr class="row-odd"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Set</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <ul class="simple">
 <li><p>lorsque <span class="math notranslate nohighlight">\(E = 0\)</span> (Disabled), la sortie <span class="math notranslate nohighlight">\(Q\)</span> et <span class="math notranslate nohighlight">\(\bar{Q}\)</span> conservent son leur état quelque soit la valeur de <span class="math notranslate nohighlight">\(D\)</span></p></li>
 <li><p>lorsque <span class="math notranslate nohighlight">\(E = 1\)</span> (Enabled), la sortie <span class="math notranslate nohighlight">\(Q\)</span> recopie l’état de l’entrée <span class="math notranslate nohighlight">\(D\)</span></p></li>
 </ul>
-<p>et on peut <span class="xref myst">la construire</span> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">NOR</span></code> (au-dessus) ou avec une bascule flip-flap (au-dessous):</p>
+<p>et on peut <a class="reference download internal" download="" href="../../../_downloads/7ef36ba2ebfdf6b0bc5bedf7105aeed6/basculed.json"><span class="xref download myst">la construire</span></a> avec deux portes logiques <code class="docutils literal notranslate"><span class="pre">NOR</span></code> (au-dessus) ou avec une bascule flip-flap (au-dessous):</p>
 <p><img alt="latch" src="../../../_images/basculeD.png" /></p>
 </section>
 <section id="ensemble-des-instructions-d-un-processeur">
-<h3>Ensemble des instructions d’un processeur<a class="headerlink" href="#ensemble-des-instructions-d-un-processeur" title="Permalink to this headline">#</a></h3>
+<h3>Ensemble des instructions d’un processeur<a class="headerlink" href="#ensemble-des-instructions-d-un-processeur" title="Link to this heading">#</a></h3>
 <p>L’<strong>ensemble des instructions d’un processeur</strong> (en anglais <em>instruction set</em>) est l’ensemble des instructions <strong>codées dans un processeur à l’aide de portes logiques</strong>.</p>
 </section>
 </section>
 <section id="besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">
-<h2>Besoin d’un langage <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">L3G</span> <span class="pre">AND</span> <span class="pre">NOT</span> <span class="pre">L1G</span></code> L2G : l’assembleur<a class="headerlink" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur" title="Permalink to this headline">#</a></h2>
+<h2>Besoin d’un langage <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">L3G</span> <span class="pre">AND</span> <span class="pre">NOT</span> <span class="pre">L1G</span></code> L2G : l’assembleur<a class="headerlink" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur" title="Link to this heading">#</a></h2>
 <p>On pourrait programmer complètement un processeur à l’aide des instructions codées en binaire comme les héroïques ancêtres des années 1940 et 1950, mais disposer d’un langage de programmation <strong>aussi proche de l’électronique</strong> mais <strong>humainement lisisble</strong>. En quelque sorte, c’est un langage intermédiaire entre le langage L3G de haut niveau et le langage machine binaire.</p>
 <p>C’est le langage <strong>ASSEMBLEUR</strong>.</p>
 <p>On dit qu’il est un langage de <strong>deuxième génération</strong> (ou <strong>L2G</strong>).</p>
 <section id="instruction-addition-du-processeur-en-assembleur">
-<h3>Instruction <em>addition</em> du processeur en assembleur<a class="headerlink" href="#instruction-addition-du-processeur-en-assembleur" title="Permalink to this headline">#</a></h3>
+<h3>Instruction <em>addition</em> du processeur en assembleur<a class="headerlink" href="#instruction-addition-du-processeur-en-assembleur" title="Link to this heading">#</a></h3>
 <p>On a vu qu’on peut construire un circuit logique pour additionner deux bits. Les entrées de l’additionneur sont les deux bits. On dit qu’ils sont <strong>stockés en mémoire</strong>. La mémoire du processeur s’appelle <strong>registre</strong>.</p>
 <p>En mettant plusieurs demi-additionneurs en série, on peut calculer la somme de deux nombre de plusieurs bits.</p>
 <p>Appelons cette instruction <code class="docutils literal notranslate"><span class="pre">ADD</span></code>. Cette instruction a besoin de deux <strong>arguments</strong> : les adresses où se trouvent les deux nombres à additionner (un registre ou une adresse mémoire).  Appelons les <code class="docutils literal notranslate"><span class="pre">dest</span></code> et <code class="docutils literal notranslate"><span class="pre">source</span></code> où :</p>
@@ -1726,7 +888,7 @@ title="Print to PDF"
 <p>Le <strong>résultat</strong> se trouvera stocké dans l’emplacement mémoire du premier opérande : <code class="docutils literal notranslate"><span class="pre">dest</span></code> et donc, la <strong>valeur initiale</strong> stockée dans <code class="docutils literal notranslate"><span class="pre">dest</span></code> aura disparu (elle a été écrasée par la somme). Il y a donc un besoin de comprendre comment transférer une donnée d’un emplacement à un autre.</p>
 </section>
 <section id="instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre">
-<h3>instruction pour transférer une valeur d’un emplacement à l’autre<a class="headerlink" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre" title="Permalink to this headline">#</a></h3>
+<h3>instruction pour transférer une valeur d’un emplacement à l’autre<a class="headerlink" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre" title="Link to this heading">#</a></h3>
 <p>Il est possible de construire une mémoire (bascule D) pour l’état d’un seul bit. Il est tout à fait possible d’en placer plusieurs en parallèle pour conserver en mémoire l’état d’un octet (ou même de plusieurs octets).</p>
 <p>Appelons l’instruction permettant de transférer une valeur vers une mémoire ou un registre : <code class="docutils literal notranslate"><span class="pre">MOV</span></code>. Cette instruction a besoin de deux <strong>arguments</strong> : la <strong>destination</strong> et la <strong>source</strong></p>
 <ul class="simple">
@@ -1738,52 +900,53 @@ title="Print to PDF"
 </section>
 </section>
 <section id="design-du-processeur-vk-1020">
-<h2>Design du processeur VK 1020<a class="headerlink" href="#design-du-processeur-vk-1020" title="Permalink to this headline">#</a></h2>
+<h2>Design du processeur VK 1020<a class="headerlink" href="#design-du-processeur-vk-1020" title="Link to this heading">#</a></h2>
 <p>On peut maintenant imaginer <strong>designer</strong> un processeur extrêmement simple. Il contiendra <strong>5 instructions</strong> :</p>
 <p>A chaque instruction on associe un <strong>code binaire unique</strong> : <strong>l’Opcode</strong> (<em>Operation code</em>). C’est ce code binaire qui est lu par le processeur. Le processeur ensuite décode la valeur binaire pour diriger le calcul vers les circuits logiques correspondants.</p>
 <p>Pour 5 instructions, il sera nécessaire de coder sur <strong>3 bits</strong> (<span class="math notranslate nohighlight">\(5 &lt; 2^3\)</span>)</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p><strong>instruction</strong></p></th>
-<th class="text-align:left head"><p><strong>Opérande 1</strong></p></th>
-<th class="text-align:left head"><p><strong>Opérande 2</strong></p></th>
-<th class="text-align:left head"><p><strong>Remarque</strong></p></th>
-<th class="text-align:left head"><p><strong>Opcode</strong></p></th>
+<tr class="row-odd"><th class="head text-left"><p><strong>instruction</strong></p></th>
+<th class="head text-left"><p><strong>Opérande 1</strong></p></th>
+<th class="head text-left"><p><strong>Opérande 2</strong></p></th>
+<th class="head text-left"><p><strong>Remarque</strong></p></th>
+<th class="head text-left"><p><strong>Opcode</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
-<td class="text-align:left"><p>Addition de <code class="docutils literal notranslate"><span class="pre">dest</span></code> et de <code class="docutils literal notranslate"><span class="pre">source</span></code> stocké dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(0 0 0\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
+<td class="text-left"><p>Addition de <code class="docutils literal notranslate"><span class="pre">dest</span></code> et de <code class="docutils literal notranslate"><span class="pre">source</span></code> stocké dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0 0 0\)</span></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">SUB</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
-<td class="text-align:left"><p>Soustraction de <code class="docutils literal notranslate"><span class="pre">dest</span></code> et de <code class="docutils literal notranslate"><span class="pre">source</span></code> stocké dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(0 0 1\)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SUB</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
+<td class="text-left"><p>Soustraction de <code class="docutils literal notranslate"><span class="pre">dest</span></code> et de <code class="docutils literal notranslate"><span class="pre">source</span></code> stocké dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0 0 1\)</span></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">MOV</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
-<td class="text-align:left"><p>Chargement dans <code class="docutils literal notranslate"><span class="pre">dest</span></code> de la valeur stockée à l’endroit <code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(0 1 0\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOV</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
+<td class="text-left"><p>Chargement dans <code class="docutils literal notranslate"><span class="pre">dest</span></code> de la valeur stockée à l’endroit <code class="docutils literal notranslate"><span class="pre">source</span></code></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0 1 0\)</span></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">JMP</span></code></p></td>
-<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>Saut conditionnel à la position stockée dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(0 1 1\)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">JMP</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Saut conditionnel à la position stockée dans <code class="docutils literal notranslate"><span class="pre">dest</span></code></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0 1 1\)</span></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">HALT</span></code></p></td>
-<td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>Arrêt de l’exécution</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(1 0 0\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HALT</span></code></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Arrêt de l’exécution</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1 0 0\)</span></p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>Les capacités du processeur VK 1020 se résument donc à additionner et soustraire. Il est en outre capable de coder des tests conditionnels.</p>
 <p>En outre, le processeur VK 1020 aura besoin d’un certain nombre de <strong>registres</strong>, c’est-à-dire des mémoires les plus proches des circuits logiques et arithmétiques.</p>
 <p>Il en existe 4 :</p>
@@ -1796,7 +959,7 @@ title="Print to PDF"
 <p>Finalement, le processeur VK 1020 est connecté à une mémoire haute <em>suffisamment grande</em>, accessible par son adresse.</p>
 </section>
 <section id="compilons">
-<h2>Compilons !<a class="headerlink" href="#compilons" title="Permalink to this headline">#</a></h2>
+<h2>Compilons !<a class="headerlink" href="#compilons" title="Link to this heading">#</a></h2>
 <p>Admettons que nous n’avons pas de compilateur de Python vers l’architecture VK 1020. Il nous faut donc “compiler” à la main. Par simplification, nous passerons par l’assembleur du processeur VK 1020.</p>
 <p>Le code à “compiler” (traduire) est donc le suivant :</p>
 <div class="cell docutils container">
@@ -1859,7 +1022,7 @@ title="Print to PDF"
 <p>Le résultat final se trouve stocké dans <code class="docutils literal notranslate"><span class="pre">R2</span></code></p>
 </section>
 <section id="de-l-assembleur-au-langage-machine">
-<h2>De l’assembleur au langage machine<a class="headerlink" href="#de-l-assembleur-au-langage-machine" title="Permalink to this headline">#</a></h2>
+<h2>De l’assembleur au langage machine<a class="headerlink" href="#de-l-assembleur-au-langage-machine" title="Link to this heading">#</a></h2>
 <p>On sait comment coder l’instruction du VK 1020 en utilisant l’Opcode. Il ne manque plus qu’à savoir traduire les arguments du <code class="docutils literal notranslate"><span class="pre">MOV</span></code> ou du <code class="docutils literal notranslate"><span class="pre">ADD</span></code> puisqu’ils sont de nature différentes : un <strong>registre</strong> ou une <strong>valeur</strong>.</p>
 <p>Admettons que les arguments sont codés sur 8 bits (un octet). On admet encore que le *<strong>bit de poids le plus fort</strong> indique s’il s’agit d’un registre ou d’une valeur :</p>
 <ul class="simple">
@@ -1886,7 +1049,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
 <p>Ecrivez le programme Python suivant en langage machine sur l’architecture VK 1020 :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1899,13 +1062,13 @@ title="Print to PDF"
 </div>
 </section>
 <section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
 <p>Ajoutez l’instruction (ets son Opcode) à l’architecture VK 1020 ayant les caractéristiques suivantes :</p>
 <p><code class="docutils literal notranslate"><span class="pre">MUL</span> <span class="pre">dest</span> <span class="pre">source</span></code></p>
 <p>qui permet de multiplier la valeur stockée en <code class="docutils literal notranslate"><span class="pre">dest</span></code> avec la valeur stockée en <code class="docutils literal notranslate"><span class="pre">source</span></code>. Le résultat est stocké en <code class="docutils literal notranslate"><span class="pre">dest</span></code> et la valeur précédente est perdue</p>
 </section>
 <section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
 <p>Avec le nouveau <em>instruction set</em> étendu du VK 1020, écrivez le code assembleur et le code en langage machine du code Python suivant :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1932,7 +1095,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./2M/architecture/cours"
         },
         predefinedOutput: true
@@ -1940,50 +1103,138 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Architecture et réseaux</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Architecture et réseaux</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="C2-ARCH-02.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="C2-ARCH-02.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">C2-ARCH-02 : Architecture de Von Neumann</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propos-liminaires">PROPOS LIMINAIRES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compilation-kezako">Compilation, kézako ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-ordinateur-comprend-une-langue-formee-de-0-et-de-1-le-langage-machine">L’ordinateur comprend une langue formée de <code class="docutils literal notranslate"><span class="pre">0</span></code> et de <code class="docutils literal notranslate"><span class="pre">1</span></code> : <strong>le langage machine</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-utilisateur-le-programmeur-comprend-une-autre-langue-le-langage-de-programmation">L’utilisateur (le programmeur) comprend une autre langue : <strong>le langage de programmation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-compilateur-permet-de-traduire-un-langage-l3g-vers-l1g">Un compilateur permet de traduire un langage L3G vers L1G</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analogie-traduire-du-francais-vers-l-anglais">Analogie : traduire du français vers l’anglais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-les-lettres">Reconnaître les lettres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-les-mots">Reconnaître les mots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaitre-le-sens-des-phrases">Reconnaître le sens des phrases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-british-english">Version British English</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-american-english">Version American English</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-australian-english">Version Australian English</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-compilation">Etapes de compilation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-intructions-logiques-du-processeur">Les intructions logiques du processeur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-exemple-demi-additionneur">Un exemple : demi-additionneur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-second-exemple-une-memoire-de-1-bit">Un second exemple : une mémoire de 1 bit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-des-instructions-d-un-processeur">Ensemble des instructions d’un processeur</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#besoin-d-un-langage-not-l3g-and-not-l1g-l2g-l-assembleur">Besoin d’un langage <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">L3G</span> <span class="pre">AND</span> <span class="pre">NOT</span> <span class="pre">L1G</span></code> L2G : l’assembleur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-addition-du-processeur-en-assembleur">Instruction <em>addition</em> du processeur en assembleur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-pour-transferer-une-valeur-d-un-emplacement-a-l-autre">instruction pour transférer une valeur d’un emplacement à l’autre</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-du-processeur-vk-1020">Design du processeur VK 1020</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compilons">Compilons !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-assembleur-au-langage-machine">De l’assembleur au langage machine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Vincent Keller<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Vincent Keller
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
