@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -557,6 +557,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-la-boucle-while">Exercice 3 : la boucle while</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-le-boucle-for">Exercice 4 : le boucle for</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-les-fonctions">Exercice 5 : les fonctions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrections">Corrections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -637,6 +645,195 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="corrections">
+<h2>Corrections<a class="headerlink" href="#corrections" title="Link to this heading">#</a></h2>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="c1"># Correction exercice 1</span>
+<span class="c1">#</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="n">prenom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre âge : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">annee</span> <span class="o">=</span> <span class="mi">2025</span> <span class="o">-</span> <span class="n">age</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span><span class="n">prenom</span><span class="p">,</span><span class="s2">&quot;vous êtes né en&quot;</span><span class="p">,</span><span class="n">annee</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ---------------------------------------------------</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Correction exercice 1</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">#</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># ---------------------------------------------------</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">prenom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom : &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre âge : &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="c1"># Correction exercice 2</span>
+<span class="c1">#</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="n">prenom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre âge : &quot;</span><span class="p">)</span>
+<span class="n">genre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre genre (f/m) : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">annee</span> <span class="o">=</span> <span class="mi">2025</span> <span class="o">-</span> <span class="n">age</span>
+<span class="n">ne</span> <span class="o">=</span> <span class="s2">&quot;né&quot;</span>
+<span class="k">if</span> <span class="n">genre</span> <span class="o">==</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span>
+    <span class="n">ne</span> <span class="o">=</span> <span class="n">ne</span><span class="o">+</span><span class="s2">&quot;e&quot;</span>
+<span class="k">elif</span> <span class="n">genre</span> <span class="o">==</span> <span class="s2">&quot;m&quot;</span> <span class="p">:</span>
+    <span class="n">ne</span> <span class="o">=</span> <span class="n">ne</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ne</span> <span class="o">=</span> <span class="n">ne</span><span class="o">+</span><span class="s2">&quot;.e.x&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span><span class="n">prenom</span><span class="p">,</span><span class="s2">&quot;vous êtes&quot;</span><span class="p">,</span><span class="n">ne</span><span class="p">,</span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="n">annee</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour Caroline vous êtes né.e.x en 2007
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="c1"># Correction exercice 3</span>
+<span class="c1">#</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="n">trouve</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">tentative</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un nombre : &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">tentative</span> <span class="o">==</span> <span class="n">nombre</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bravo ! Vous avez trouvé&quot;</span><span class="p">,</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non... recommencez !&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Non... recommencez !
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Non... recommencez !
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bravo ! Vous avez trouvé 10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="c1"># Correction exercice 4</span>
+<span class="c1">#</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="c1"># ---------------------------------------------------</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">nbr</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="n">nbr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---------------------------------------------------</span>
+<span class="c1"># Passerelle 3C-&gt;2M</span>
+<span class="c1"># Correction exercice 5</span>
+<span class="c1">#</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, Lausanne, 2025</span>
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="c1"># Fonction qui affiche la phrase &quot;Bonjour prénom, vous êtes né en année&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">afficher</span><span class="p">(</span><span class="n">prenom</span><span class="p">,</span> <span class="n">annee</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span><span class="n">prenom</span><span class="p">,</span><span class="s2">&quot;vous êtes né en&quot;</span><span class="p">,</span><span class="n">annee</span><span class="p">)</span>    
+
+<span class="c1"># Fonction qui calcule l&#39;année de naissance en fonction de l&#39;âge</span>
+<span class="c1"># retourne l&#39;année de naissance depuis l&#39;année 2025</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculeAnnee</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+    <span class="n">annee</span> <span class="o">=</span> <span class="mi">2025</span> <span class="o">-</span> <span class="n">age</span>
+    <span class="k">return</span> <span class="n">annee</span>
+
+<span class="n">prenom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est votre âge : &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">afficher</span><span class="p">(</span><span class="n">prenom</span><span class="p">,</span><span class="n">calculeAnnee</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour Jean-Pierre vous êtes né en 2006
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -709,6 +906,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-la-boucle-while">Exercice 3 : la boucle while</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-le-boucle-for">Exercice 4 : le boucle for</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-les-fonctions">Exercice 5 : les fonctions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrections">Corrections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
