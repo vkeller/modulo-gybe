@@ -1340,11 +1340,19 @@ document.write(`
 <h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-z" title="Link to this heading">#</a></h3>
 <p>Que vaut le résultat de l’opération suivante ?</p>
 <p><span class="math notranslate nohighlight">\(00001000_{2} - 00010000_{2}\)</span></p>
-<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Il en existe plusieurs, mais le plus intuitif est de choisir un bit (généralement celui de poids le plus fort) et de définir si il représente le signe <span class="math notranslate nohighlight">\(+\)</span> ou le signe <span class="math notranslate nohighlight">\(-\)</span>. Ce faisant, il ne reste plus que <span class="math notranslate nohighlight">\(n-1\)</span> bits pour coder les entiers relatifs, donc une puissance de deux en moins. Sur un Octet, on code ainsi toujours 255 entiers relatifs qui vont de <span class="math notranslate nohighlight">\(-127_{10}\)</span> à <span class="math notranslate nohighlight">\(127_{10}\)</span> puisqu’il ne reste que <span class="math notranslate nohighlight">\(7\)</span> bits.</p>
-<p>Si <span class="math notranslate nohighlight">\(0\)</span> représente le signe <span class="math notranslate nohighlight">\(+\)</span> et <span class="math notranslate nohighlight">\(1\)</span> le signe <span class="math notranslate nohighlight">\(-\)</span> alors :</p>
+<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Le plus communément utilisé est <strong>le complément à 2</strong></p>
+<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(-5_{10}\)</span> s’écrit en binaire :</p>
+<ol class="arabic simple">
+<li><p>Valeur absolue <span class="math notranslate nohighlight">\(5_{10} = 00000101_{2}\)</span></p></li>
+<li><p>Inversion des bits : <span class="math notranslate nohighlight">\(11111010_{2}\)</span></p></li>
+<li><p>Ajouter <span class="math notranslate nohighlight">\(1_{10}\)</span> : <span class="math notranslate nohighlight">\(11111011_{2}\)</span></p></li>
+</ol>
+<p>Donc <span class="math notranslate nohighlight">\(-5_{10}\)</span> en complément à 2 sur un octet vaut <span class="math notranslate nohighlight">\(11111011_{2}\)</span>.</p>
+<p>Trois propriétés importantes de cette notation :</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(00001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(9_{10}\)</span> alors que <span class="math notranslate nohighlight">\(10001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(-9_{10}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(00000000_{2}\)</span> et <span class="math notranslate nohighlight">\(10000000_{2}\)</span> représentent tous les deux <span class="math notranslate nohighlight">\(0_{10}\)</span>. Et c’est un problème !</p></li>
+<li><p>le <strong>bit de poids le plus fort</strong> (celui qui se trouve le plus à gauche) donne le signe : <span class="math notranslate nohighlight">\(0\)</span> alors c’est un nombre positif, <span class="math notranslate nohighlight">\(1\)</span> c’est un nobre négatif</p></li>
+<li><p>L’intervalle des nombres représentables sur <span class="math notranslate nohighlight">\(n\)</span> bits en complément à 2 est de <span class="math notranslate nohighlight">\([-2^{n-1}, ..., 2^{n-1} -1\)</span></p></li>
+<li><p>L’addition fonctionne sans modification</p></li>
 </ul>
 </section>
 <section id="de-mathbb-n-vers-mathbb-q">
