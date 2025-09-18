@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-REDO-04 : Opérations en binaire et en hexadécimal &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-REDO-04 : Opérations en binaire &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-REDO-02.html">C1-REDO-02 binaire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-REDO-04 : Opérations en binaire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-REDO-01.html">R1-REDO-01 Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
@@ -543,7 +543,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-REDO-04 : Opérations en binaire et en hexadécimal</h1>
+    <h1>C1-REDO-04 : Opérations en binaire</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -555,24 +555,27 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-les-bases-en-indices">Convention : les bases en indices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-conversion-binaire-decimal-hexadecimal">Exercice 1 : Conversion binaire - décimal - héxadécimal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-operations">Exercice 2 : opérations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-addition-en-binaire">Exercice 1 : Addition en binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction-avec-complement-a-2">Soustraction avec complément à 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-soustraction-binaire">Exercice 2 : Soustraction binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-conversion-binaire-decimal-hexadecimal">Exercice 5 : Conversion binaire - décimal - héxadécimal</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -587,8 +590,8 @@ document.write(`
                 <article class="bd-article">
                   
   <p><img alt="calcul" src="../../../_images/convertir.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-redo-04-operations-en-binaire-et-en-hexadecimal">
-<h1>C1-REDO-04 : Opérations en binaire et en hexadécimal<a class="headerlink" href="#c1-redo-04-operations-en-binaire-et-en-hexadecimal" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-redo-04-operations-en-binaire">
+<h1>C1-REDO-04 : Opérations en binaire<a class="headerlink" href="#c1-redo-04-operations-en-binaire" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -634,6 +637,652 @@ document.write(`
 </tbody>
 </table>
 </div>
+</section>
+<section id="operations-algebriques-en-binaire">
+<h2>Opérations algébriques en binaire<a class="headerlink" href="#operations-algebriques-en-binaire" title="Link to this heading">#</a></h2>
+<p>Les 4 opérations de base en algèbre sont :</p>
+<ul class="simple">
+<li><p>l’addition (signe <span class="math notranslate nohighlight">\(+\)</span>)</p></li>
+<li><p>la soustration (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
+<li><p>la multiplication (signe <span class="math notranslate nohighlight">\(*\)</span>)</p></li>
+<li><p>la division (signe <span class="math notranslate nohighlight">\(/\)</span>)</p></li>
+</ul>
+</section>
+<section id="addition">
+<h2>Addition<a class="headerlink" href="#addition" title="Link to this heading">#</a></h2>
+<p>Tout comme l’addition décimale, l’addition en binaire se fait en colonne et en utilisant les retenues (binaires !).</p>
+<p>Il existe quatre possibilités d’additionner deux bits (ce sont les <strong>4 règles de base de l’addition binaire</strong> :</p>
+<p><span class="math notranslate nohighlight">\(0_{2} + 0_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>+</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(0_{2} + 1_{2} = 1_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>+</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} + 0_{2} = 1_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>+</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} + 1_{2} = 10_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>+</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tout comme en décimal, on utilise la retenue pour ajouter un <span class="math notranslate nohighlight">\(1_{2}\)</span> sur la colonne suivante</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} + 0011_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exercice-1-addition-en-binaire">
+<h2>Exercice 1 : Addition en binaire<a class="headerlink" href="#exercice-1-addition-en-binaire" title="Link to this heading">#</a></h2>
+<p>Sur une feuille de papier, calculez les additions binaires suivantes :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1011_{2} + 1011_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(11110_{2} + 10011_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(101_{2} + 11_{2}\)</span></p></li>
+</ol>
+</section>
+<section id="soustraction">
+<h2>Soustraction<a class="headerlink" href="#soustraction" title="Link to this heading">#</a></h2>
+<p>Dans la soustraction binaire, on procède comme en décimal. Lorsque la quantité à soustraire est supérieure à la quantité dont on soustrait, on emprunte 1 au voisin de gauche.</p>
+<p>Il existe quatre possibilités de soustraire 2 bits (ce sont les <strong>4 règles de base de la soustraction binaire</strong>)</p>
+<p><span class="math notranslate nohighlight">\(0_{2} - 0_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} - 0_{2} = 1_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} - 1_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tout comme en décimal, on utilise la retenue pour ajouter un <span class="math notranslate nohighlight">\(1_{2}\)</span> sur la colonne suivante</p>
+<p><span class="math notranslate nohighlight">\(0_{2} - 1_{2} = 1_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attention, il y a un emprunt dans la colonne de gauche</strong></p>
+<p>Exemple : <span class="math notranslate nohighlight">\(11011_{2} - 1101_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>0</p></th>
+<th class="head text-right"><p>0</p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On peut vérifier en décimal : <span class="math notranslate nohighlight">\(27_{10} - 13_{10} = 14_{10}\)</span></p>
+</section>
+<section id="soustraction-avec-complement-a-2">
+<h2>Soustraction avec complément à 2<a class="headerlink" href="#soustraction-avec-complement-a-2" title="Link to this heading">#</a></h2>
+<p>L’électronique de l’ordinateur (voir cours + TP d’architecture des ordinateurs) peut additionner très simplement. La méthode de la soustraction binaire avec complément à 2 utilise ce principe. L’algorithme se décline en 5 étapes :</p>
+<ol class="arabic simple">
+<li><p>Aligner les deux nombres à soustraire sur le même nombre de bits</p></li>
+<li><p>Prendre le <strong>complément à 2</strong> du diviseur : inverser tous les bits (le <span class="math notranslate nohighlight">\(0\)</span> devient un <span class="math notranslate nohighlight">\(1\)</span> et vice-versa)</p></li>
+<li><p>Ajouter <span class="math notranslate nohighlight">\(1\)</span> à ce nombre binaire (en utlisant l’addition binaire)</p></li>
+<li><p>Additionner les deux nombres. Si le bit de poids le plus fort (la <strong>retenue</strong>) dépasse la longueur du nombre de bits, alors il est ignoré</p></li>
+</ol>
+<p>Exemple : <span class="math notranslate nohighlight">\(11011_{2} - 1101_{2}\)</span></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(11011_{2} - 01101_{2}\)</span></p></li>
+<li><p>Calculer le complément à 2 de <span class="math notranslate nohighlight">\(01101_{2}\)</span> : <span class="math notranslate nohighlight">\(10010_{2}\)</span></p></li>
+<li><p>Ajouter 1 au complément : <span class="math notranslate nohighlight">\(10010_{2} + 00001_{2} = 10011_{2}\)</span></p></li>
+<li><p>Additionner les deux nombres</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>+</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Le bit de poids le plus fort (<span class="math notranslate nohighlight">\(1\)</span> tout à gauche) est laissé de côté puisqu’il se trouve en 6ème position. Résultat : <span class="math notranslate nohighlight">\(01110_{2}\)</span></p>
+</section>
+<section id="exercice-2-soustraction-binaire">
+<h2>Exercice 2 : Soustraction binaire<a class="headerlink" href="#exercice-2-soustraction-binaire" title="Link to this heading">#</a></h2>
+<p>A l’aide de l’une des deux méthodes (méthode standard ou méthode du complément à 2), calculer les opérations suivantes :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1101_{2} - 0110_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(101101_{2} - 10110_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(10110_{2} - 1110_{2}\)</span></p></li>
+</ol>
+</section>
+<section id="multiplication">
+<h2>Multiplication<a class="headerlink" href="#multiplication" title="Link to this heading">#</a></h2>
+<p>La multiplication binaire n’est rien d’autre qu’une addition binaire.</p>
+<p>Il existe quatre possibilités de multiplier 2 bits (ce sont les <strong>4 règles de base de la multiplication binaire</strong>)</p>
+<p><span class="math notranslate nohighlight">\(0_{2} * 0_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>*</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} * 0_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>*</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(0_{2} * 1_{2} = 0_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>*</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(1_{2} * 1_{2} = 1_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>*</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On procède exactement de la même manière que lors d’une multiplication décimale avec les retenues.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} * 101_{2}\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p></p></th>
+<th class="head text-right"><p>1</p></th>
+<th class="head text-right"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>*</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>+</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+<td class="text-right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Vérification en décimal : <span class="math notranslate nohighlight">\(10_{10} * 5_{10} = 50_{10}\)</span></p>
+</section>
+<section id="exercice-3-multiplication-binaire">
+<h2>Exercice 3 : Multiplication binaire<a class="headerlink" href="#exercice-3-multiplication-binaire" title="Link to this heading">#</a></h2>
+<p>Calculer les opérations suivantes :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1011_{2} * 111_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1111_{2} * 1101_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(101_{2} * 1100_{2}\)</span></p></li>
+</ol>
+</section>
+<section id="division">
+<h2>Division<a class="headerlink" href="#division" title="Link to this heading">#</a></h2>
+<p>Tout comme la multiplication, la division binaire peut devenir complexe. Nous nous concentrons sur la division par 2 qui ne requiert qu’un déplacement (<em>shift</em> en anglais) à gauche en direction du bit de poids le plus faible. Cela ne fonctionne qu’avec les nombres pair.</p>
+<p>Exemple : <span class="math notranslate nohighlight">\(0100_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(0010_{2}\)</span></p>
+<p>Pour aller plus loin : Exécuter l’opération division avec un diviseur autre que <span class="math notranslate nohighlight">\(10_{2}\)</span> se résoud de la même façon qu’en décimal. La seule différence est que l’on indique si oui ou non le diviseur peut se trouver dans le dividende.</p>
+</section>
+<section id="au-dela-des-entiers-pour-aller-plus-loin">
+<h2>Au-delà des entiers (pour aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
+<section id="de-mathbb-n-vers-mathbb-z">
+<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-z" title="Link to this heading">#</a></h3>
+<p>Que vaut le résultat de l’opération suivante ?</p>
+<p><span class="math notranslate nohighlight">\(00001000_{2} - 00010000_{2}\)</span></p>
+<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Il en existe plusieurs, mais le plus intuitif est de choisir un bit (généralement celui de poids le plus fort) et de définir si il représente le signe <span class="math notranslate nohighlight">\(+\)</span> ou le signe <span class="math notranslate nohighlight">\(-\)</span>. Ce faisant, il ne reste plus que <span class="math notranslate nohighlight">\(n-1\)</span> bits pour coder les entiers relatifs, donc une puissance de deux en moins. Sur un Octet, on code ainsi toujours 255 entiers relatifs qui vont de <span class="math notranslate nohighlight">\(-127_{10}\)</span> à <span class="math notranslate nohighlight">\(127_{10}\)</span> puisqu’il ne reste que <span class="math notranslate nohighlight">\(7\)</span> bits.</p>
+<p>Si <span class="math notranslate nohighlight">\(0\)</span> représente le signe <span class="math notranslate nohighlight">\(+\)</span> et <span class="math notranslate nohighlight">\(1\)</span> le signe <span class="math notranslate nohighlight">\(-\)</span> alors :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(00001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(9_{10}\)</span> alors que <span class="math notranslate nohighlight">\(10001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(-9_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(00000000_{2}\)</span> et <span class="math notranslate nohighlight">\(10000000_{2}\)</span> représentent tous les deux <span class="math notranslate nohighlight">\(0_{10}\)</span>. Et c’est un problème !</p></li>
+</ul>
+</section>
+<section id="de-mathbb-n-vers-mathbb-q">
+<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-q" title="Link to this heading">#</a></h3>
+<p>Que vaut le résultat de l’opération suivante ?</p>
+<p><span class="math notranslate nohighlight">\(00000101 / 00000010\)</span></p>
+<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être rationnel. Le résultat de l’opération est <span class="math notranslate nohighlight">\(2.5_{10}\)</span> et c’est un nombre rationnel (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>). Il s’agit de trouver une <strong>représentation pour les nombres rationnels</strong> (ou nombres <strong>à virgule</strong>). Il en existe deux:</p>
+<ol class="arabic simple">
+<li><p>La représentation à virgule <strong>fixe</strong></p></li>
+<li><p>La représentation à virgule <strong>flottante</strong></p></li>
+</ol>
+<p>Ces représentations vont au-delà du cadre de ce cours et seront abordé en 2ème année de l’école de maturité.</p>
+</section>
 </section>
 <section id="rappel-notation-de-droite-a-gauche">
 <h2>Rappel : Notation de droite à gauche<a class="headerlink" href="#rappel-notation-de-droite-a-gauche" title="Link to this heading">#</a></h2>
@@ -812,10 +1461,8 @@ document.write(`
 </tbody>
 </table>
 </div>
-</section>
-</section>
-<section id="exercice-1-conversion-binaire-decimal-hexadecimal">
-<h2>Exercice 1 : Conversion binaire - décimal - héxadécimal<a class="headerlink" href="#exercice-1-conversion-binaire-decimal-hexadecimal" title="Link to this heading">#</a></h2>
+<section id="exercice-5-conversion-binaire-decimal-hexadecimal">
+<h4>Exercice 5 : Conversion binaire - décimal - héxadécimal<a class="headerlink" href="#exercice-5-conversion-binaire-decimal-hexadecimal" title="Link to this heading">#</a></h4>
 <p>Complétez le tableau suivant. Lorsque le nombre de bits n’est pas divisible par 4 en binaire, ajoutez des <span class="math notranslate nohighlight">\(0\)</span> sur les bits de poids le plus fort (à gauche) pour complèter au multiple.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -849,103 +1496,6 @@ document.write(`
 </table>
 </div>
 </section>
-<section id="operations-algebriques-en-binaire">
-<h2>Opérations algébriques en binaire<a class="headerlink" href="#operations-algebriques-en-binaire" title="Link to this heading">#</a></h2>
-<p>Les 4 opérations de base en algèbre sont :</p>
-<ul class="simple">
-<li><p>l’addition (signe <span class="math notranslate nohighlight">\(+\)</span>)</p></li>
-<li><p>la soustration (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
-<li><p>la multiplication (signe <span class="math notranslate nohighlight">\(*\)</span>)</p></li>
-<li><p>la division (signe <span class="math notranslate nohighlight">\(/\)</span>)</p></li>
-</ul>
-<section id="addition">
-<h3>Addition<a class="headerlink" href="#addition" title="Link to this heading">#</a></h3>
-<p>Tout comme l’addition décimale, l’addition en binaire se fait en colonne et en utilisant les retenues (binaires !).</p>
-<p>En binaire : <span class="math notranslate nohighlight">\(01_{2} + 01_{2} = 10_{2}\)</span>. Si la retenue requiert un bit de poid plus fort (à gauche), alors il faut en ajouter un.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} + 0011_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="soustraction">
-<h3>Soustraction<a class="headerlink" href="#soustraction" title="Link to this heading">#</a></h3>
-<p>Dans la soustraction binaire, on procède comme en décimal. Lorsque la quantité à soustraire est supérieure à la quantité dont on soustrait, on emprunte 1 au voisin de gauche.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(0_{2} - 0_{2} = 0_{2}\)</span>, <span class="math notranslate nohighlight">\(1_{2} - 0_{2}  = 1_{2}\)</span>, <span class="math notranslate nohighlight">\(1_{2} - 1_{2} = 0_{2}\)</span> et <span class="math notranslate nohighlight">\(10_{2} - 1_{2} = 1_{2}\)</span></p>
-</section>
-<section id="multiplication">
-<h3>Multiplication<a class="headerlink" href="#multiplication" title="Link to this heading">#</a></h3>
-<p>La multiplication en binaire peut rapidement devenir complexe et dépasse le cadre de ce cours. Nous nous concentrons sur la multiplication par 2 puiqu’elle ne requiert qu’un déplacement (<em>shift</em> en anglais) à droite en direction du bit de poid le plus fort.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(1011_{2}\)</span> multiplié par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(10110_{2}\)</span></p>
-</section>
-<section id="division">
-<h3>Division<a class="headerlink" href="#division" title="Link to this heading">#</a></h3>
-<p>Tout comme la multiplication, la division binaire peut devenir complexe. Nous nous concentrons sur la division par 2 qui ne requiert qu’un déplacement (<em>shift</em> en anglais) à gauche en direction du bit de poids le plus faible. Cela ne fonctionne qu’avec les nombres pair.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(0100_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(0010_{2}\)</span></p>
-<p>Pour aller plus loin : Exécuter l’opération division avec un diviseur autre que <span class="math notranslate nohighlight">\(10_{2}\)</span> se résoud de la même façon qu’en décimal. La seule différence est que l’on indique si oui ou non le diviseur peut se trouver dans le dividende.</p>
-</section>
-</section>
-<section id="exercice-2-operations">
-<h2>Exercice 2 : opérations<a class="headerlink" href="#exercice-2-operations" title="Link to this heading">#</a></h2>
-<p>Résolvez les calculs binaires suivants :</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(11010101_{2}\)</span> + <span class="math notranslate nohighlight">\(00001111_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(01101010_{2}\)</span> - <span class="math notranslate nohighlight">\(00011010_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(11010010_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(01011110_{2}\)</span> multiplié par <span class="math notranslate nohighlight">\(10_{2}\)</span></p></li>
-</ul>
-</section>
-<section id="au-dela-des-entiers-pour-aller-plus-loin">
-<h2>Au-delà des entiers (pour aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
-<section id="de-mathbb-n-vers-mathbb-z">
-<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-z" title="Link to this heading">#</a></h3>
-<p>Que vaut le résultat de l’opération suivante ?</p>
-<p><span class="math notranslate nohighlight">\(00001000_{2} - 00010000_{2}\)</span></p>
-<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Il en existe plusieurs, mais le plus intuitif est de choisir un bit (généralement celui de poids le plus fort) et de définir si il représente le signe <span class="math notranslate nohighlight">\(+\)</span> ou le signe <span class="math notranslate nohighlight">\(-\)</span>. Ce faisant, il ne reste plus que <span class="math notranslate nohighlight">\(n-1\)</span> bits pour coder les entiers relatifs, donc une puissance de deux en moins. Sur un Octet, on code ainsi toujours 255 entiers relatifs qui vont de <span class="math notranslate nohighlight">\(-127_{10}\)</span> à <span class="math notranslate nohighlight">\(127_{10}\)</span> puisqu’il ne reste que <span class="math notranslate nohighlight">\(7\)</span> bits.</p>
-<p>Si <span class="math notranslate nohighlight">\(0\)</span> représente le signe <span class="math notranslate nohighlight">\(+\)</span> et <span class="math notranslate nohighlight">\(1\)</span> le signe <span class="math notranslate nohighlight">\(-\)</span> alors :</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(00001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(9_{10}\)</span> alors que <span class="math notranslate nohighlight">\(10001001_{2}\)</span> représente <span class="math notranslate nohighlight">\(-9_{10}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(00000000_{2}\)</span> et <span class="math notranslate nohighlight">\(10000000_{2}\)</span> représentent tous les deux <span class="math notranslate nohighlight">\(0_{10}\)</span>. Et c’est un problème !</p></li>
-</ul>
-</section>
-<section id="de-mathbb-n-vers-mathbb-q">
-<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-q" title="Link to this heading">#</a></h3>
-<p>Que vaut le résultat de l’opération suivante ?</p>
-<p><span class="math notranslate nohighlight">\(00000101 / 00000010\)</span></p>
-<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être rationnel. Le résultat de l’opération est <span class="math notranslate nohighlight">\(2.5_{10}\)</span> et c’est un nombre rationnel (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>). Il s’agit de trouver une <strong>représentation pour les nombres rationnels</strong> (ou nombres <strong>à virgule</strong>). Il en existe deux:</p>
-<ol class="arabic simple">
-<li><p>La représentation à virgule <strong>fixe</strong></p></li>
-<li><p>La représentation à virgule <strong>flottante</strong></p></li>
-</ol>
-<p>Ces représentations vont au-delà du cadre de ce cours et seront abordé en 2ème année de l’école de maturité.</p>
 </section>
 </section>
 </section>
@@ -1016,24 +1566,27 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-les-bases-en-indices">Convention : les bases en indices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-conversion-binaire-decimal-hexadecimal">Exercice 1 : Conversion binaire - décimal - héxadécimal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-operations">Exercice 2 : opérations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-addition-en-binaire">Exercice 1 : Addition en binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction-avec-complement-a-2">Soustraction avec complément à 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-soustraction-binaire">Exercice 2 : Soustraction binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-conversion-binaire-decimal-hexadecimal">Exercice 5 : Conversion binaire - décimal - héxadécimal</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
