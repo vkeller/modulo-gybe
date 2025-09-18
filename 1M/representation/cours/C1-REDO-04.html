@@ -1255,9 +1255,41 @@ document.write(`
 </section>
 <section id="division">
 <h2>Division<a class="headerlink" href="#division" title="Link to this heading">#</a></h2>
-<p>Tout comme la multiplication, la division binaire peut devenir complexe. Nous nous concentrons sur la division par 2 qui ne requiert qu’un déplacement (<em>shift</em> en anglais) à gauche en direction du bit de poids le plus faible. Cela ne fonctionne qu’avec les nombres pair.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(0100_{2}\)</span> divisé par <span class="math notranslate nohighlight">\(10_{2}\)</span> (<span class="math notranslate nohighlight">\(= 2_{10}\)</span>) vaut <span class="math notranslate nohighlight">\(0010_{2}\)</span></p>
-<p>Pour aller plus loin : Exécuter l’opération division avec un diviseur autre que <span class="math notranslate nohighlight">\(10_{2}\)</span> se résoud de la même façon qu’en décimal. La seule différence est que l’on indique si oui ou non le diviseur peut se trouver dans le dividende.</p>
+<p>Tout comme la multiplication, la division binaire est une suite de soustractions (et donc d’additions au complément à 2 si l’on utilise cette méthode).</p>
+<p>La division binaire se fait exactement comme la division décimale aprise à l’école primaire : avec la méthode dite <strong>de la potence</strong></p>
+<p>Prenons l’exemple décimal <span class="math notranslate nohighlight">\(4356_{10} / 20_{10} = 217_{10}\)</span> avec un reste de <span class="math notranslate nohighlight">\(16_{10}\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  4356   │ 20
+- 40     ├───────
+────     │ 217
+   35    │
+ - 20    │
+ ────    │
+   156   │
+ - 140   │   
+  ────   │   
+    16   │   
+</pre></div>
+</div>
+<p>En division binaire, on procède de la même façon : analyse des chiffres et voir <em>combien de fois on peut mettre le diviseur</em>. Seule différence :</p>
+<ol class="arabic simple">
+<li><p>Si on peut diviser (division entière) le nombre, alors on met 1 au quotient,</p></li>
+<li><p>sinon 0</p></li>
+</ol>
+<p>Prenons un exemple : <span class="math notranslate nohighlight">\(10111_{2} / 11_{2}\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 10111   │ 11
+  11     ├───────
+────     │ 0111
+ 010     │
+- 11     │
+ ────    │
+ 0101    │
+ - 11    │   
+  ────   │   
+   010   │   
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(10111_{2} / 11_{2} = 0111_{2}\)</span> avec un reste de <span class="math notranslate nohighlight">\(010_{2}\)</span> (c’est la division binaire de l’exemple décimal ci-dessus).</p>
+<p><strong>Remarque</strong> : il est tout à fait possible d’effectuer la soustraction en utilisant la méthode de l’addition du complément à 2.</p>
 </section>
 <section id="au-dela-des-entiers-pour-aller-plus-loin">
 <h2>Au-delà des entiers (pour aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
