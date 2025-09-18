@@ -613,7 +613,7 @@ document.write(`
 <p>Par convention, nous plaçons la base du nombre entier en <strong>indice</strong> de celui-ci :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(100_{10}\)</span> signifie le nombre 100 en base 10</p></li>
-<li><p><span class="math notranslate nohighlight">\(100_{2}\)</span> signfie le nombre 100 en base 2</p></li>
+<li><p><span class="math notranslate nohighlight">\(100_{2}\)</span> signifie le nombre 100 en base 2</p></li>
 <li><p><span class="math notranslate nohighlight">\(100_{16}\)</span> signifie le nombre 100 en base 16</p></li>
 </ul>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -645,7 +645,7 @@ document.write(`
 <p>Les 4 opérations de base en algèbre sont :</p>
 <ul class="simple">
 <li><p>l’addition (signe <span class="math notranslate nohighlight">\(+\)</span>)</p></li>
-<li><p>la soustration (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
+<li><p>la soustraction (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
 <li><p>la multiplication (signe <span class="math notranslate nohighlight">\(*\)</span>)</p></li>
 <li><p>la division (signe <span class="math notranslate nohighlight">\(/\)</span>)</p></li>
 </ul>
@@ -978,7 +978,7 @@ document.write(`
 <p>L’électronique de l’ordinateur (voir cours + TP d’architecture des ordinateurs) peut additionner très simplement. La méthode de la soustraction binaire avec complément à 2 utilise ce principe. L’algorithme se décline en 5 étapes :</p>
 <ol class="arabic simple">
 <li><p>Aligner les deux nombres à soustraire sur le même nombre de bits</p></li>
-<li><p>Prendre le <strong>complément à 2</strong> du diviseur : inverser tous les bits (le <span class="math notranslate nohighlight">\(0\)</span> devient un <span class="math notranslate nohighlight">\(1\)</span> et vice-versa)</p></li>
+<li><p>Prendre le <strong>complément à 2</strong> du soustracteur : inverser tous les bits (le <span class="math notranslate nohighlight">\(0\)</span> devient un <span class="math notranslate nohighlight">\(1\)</span> et vice-versa)</p></li>
 <li><p>Ajouter <span class="math notranslate nohighlight">\(1\)</span> à ce nombre binaire (en utlisant l’addition binaire)</p></li>
 <li><p>Additionner les deux nombres. Si le bit de poids le plus fort (la <strong>retenue</strong>) dépasse la longueur du nombre de bits, alors il est ignoré</p></li>
 </ol>
@@ -1327,7 +1327,7 @@ document.write(`
 </tr>
 <tr class="row-odd"><td class="text-left"><p>Division</p></td>
 <td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p>En fait une soustraction qui se remplace par l’addidition avec le complément à 2</p></td>
+<td class="text-left"><p>En fait une soustraction qui se remplace par l’addition avec le complément à 2</p></td>
 </tr>
 </tbody>
 </table>
@@ -1350,8 +1350,8 @@ document.write(`
 <p>Donc <span class="math notranslate nohighlight">\(-5_{10}\)</span> en complément à 2 sur un octet vaut <span class="math notranslate nohighlight">\(11111011_{2}\)</span>.</p>
 <p>Trois propriétés importantes de cette notation :</p>
 <ul class="simple">
-<li><p>le <strong>bit de poids le plus fort</strong> (celui qui se trouve le plus à gauche) donne le signe : <span class="math notranslate nohighlight">\(0\)</span> alors c’est un nombre positif, <span class="math notranslate nohighlight">\(1\)</span> c’est un nobre négatif</p></li>
-<li><p>L’intervalle des nombres représentables sur <span class="math notranslate nohighlight">\(n\)</span> bits en complément à 2 est de <span class="math notranslate nohighlight">\([-2^{n-1}, ..., 2^{n-1} -1\)</span></p></li>
+<li><p>le <strong>bit de poids le plus fort</strong> (celui qui se trouve le plus à gauche) donne le signe : <span class="math notranslate nohighlight">\(0\)</span> alors c’est un nombre positif, <span class="math notranslate nohighlight">\(1\)</span> c’est un nombre négatif</p></li>
+<li><p>L’intervalle des nombres représentables sur <span class="math notranslate nohighlight">\(n\)</span> bits en complément à 2 est de <span class="math notranslate nohighlight">\([-2^{n-1}, ..., 2^{n-1} -1}\)</span></p></li>
 <li><p>L’addition fonctionne sans modification</p></li>
 </ul>
 </section>
@@ -1414,7 +1414,7 @@ document.write(`
 </section>
 <section id="base-2-binaire">
 <h3>Base 2 (binaire)<a class="headerlink" href="#base-2-binaire" title="Link to this heading">#</a></h3>
-<p>En décimal, il existe 2 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
+<p>En binaire, il existe 2 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>position</p></th>
