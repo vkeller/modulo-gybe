@@ -564,6 +564,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-division-binaire">Exercice 4 : Division binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
@@ -801,7 +803,7 @@ document.write(`
 </section>
 <section id="exercice-1-addition-en-binaire">
 <h2>Exercice 1 : Addition en binaire<a class="headerlink" href="#exercice-1-addition-en-binaire" title="Link to this heading">#</a></h2>
-<p>Sur une feuille de papier, calculez les additions binaires suivantes :</p>
+<p>Sur une feuille de papier, calculez le résultat des additions binaires suivantes :</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(1011_{2} + 1011_{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(11110_{2} + 10011_{2}\)</span></p></li>
@@ -1038,7 +1040,7 @@ document.write(`
 </section>
 <section id="exercice-2-soustraction-binaire">
 <h2>Exercice 2 : Soustraction binaire<a class="headerlink" href="#exercice-2-soustraction-binaire" title="Link to this heading">#</a></h2>
-<p>A l’aide de l’une des deux méthodes (méthode standard ou méthode du complément à 2), calculer les opérations suivantes :</p>
+<p>A l’aide de l’une des deux méthodes (méthode standard ou méthode du complément à 2), faites les calculs suivants :</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(1101_{2} - 0110_{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(101101_{2} - 10110_{2}\)</span></p></li>
@@ -1246,7 +1248,7 @@ document.write(`
 </section>
 <section id="exercice-3-multiplication-binaire">
 <h2>Exercice 3 : Multiplication binaire<a class="headerlink" href="#exercice-3-multiplication-binaire" title="Link to this heading">#</a></h2>
-<p>Calculer les opérations suivantes :</p>
+<p>Faites les calculs suivants en utilisant la méthode de la multiplication binaire (les additions) :</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(1011_{2} * 111_{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(1111_{2} * 1101_{2}\)</span></p></li>
@@ -1290,6 +1292,47 @@ document.write(`
 </div>
 <p><span class="math notranslate nohighlight">\(10111_{2} / 11_{2} = 0111_{2}\)</span> avec un reste de <span class="math notranslate nohighlight">\(010_{2}\)</span> (On a bien que <span class="math notranslate nohighlight">\(23_{10} / 3_{10} = 7_{10}\)</span> avec un reste de <span class="math notranslate nohighlight">\(2_{10}\)</span>).</p>
 <p><strong>Remarque</strong> : il est tout à fait possible d’effectuer la soustraction en utilisant la méthode de l’addition du complément à 2.</p>
+</section>
+<section id="exercice-4-division-binaire">
+<h2>Exercice 4 : Division binaire<a class="headerlink" href="#exercice-4-division-binaire" title="Link to this heading">#</a></h2>
+<p>Faites les calculs suivants en utilisant la méthode de la potence :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1011010 / 10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(111010 / 101\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(111111 / 11\)</span></p></li>
+</ol>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>En binaire, toutes les opérations se résument à l’addition et quelques opérations sur les bits (comme dans le complément à 2 pour la soustraction). On peut essayer de résumer dans un tableau :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Opération</p></th>
+<th class="head text-left"><p>en binaire, remplacée par</p></th>
+<th class="head text-left"><p>remarques</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Soustraction</p></td>
+<td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p>inversion des bits et addition de 1 (complément à 2)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Multiplication</p></td>
+<td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Division</p></td>
+<td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p>En fait une soustraction qui se remplace par l’addidition avec le complément à 2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Electroniquement, cela signifie que l’on peut construire une calculatrice à l’aide d’<strong>un circuit qui ne sait faire que les additions</strong>.</p>
 </section>
 <section id="au-dela-des-entiers-pour-aller-plus-loin">
 <h2>Au-delà des entiers (pour aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
@@ -1607,6 +1650,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-division-binaire">Exercice 4 : Division binaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
