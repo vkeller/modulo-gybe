@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-REDO-04 : Opérations en binaire &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-REDO-04 : codage de caractères &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="R1-REDO-01 Révision" href="R1-REDO-01.html" />
-    <link rel="prev" title="C1-REDO-03 : codage de caractères" href="C1-REDO-03.html" />
+    <link rel="prev" title="C1-REDO-03 : Opérations en binaire" href="C1-REDO-03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,8 +197,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Représentation des données</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-REDO-02.html">C1-REDO-02 binaire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-REDO-04 : Opérations en binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-REDO-03.html">C1-REDO-03 : Opérations en binaire</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-REDO-04 : codage de caractères</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-REDO-01.html">R1-REDO-01 Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
@@ -543,7 +543,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-REDO-04 : Opérations en binaire</h1>
+    <h1>C1-REDO-04 : codage de caractères</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -553,33 +553,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-les-bases-en-indices">Convention : les bases en indices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-addition-en-binaire">Exercice 1 : Addition en binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction-avec-complement-a-2">Soustraction avec complément à 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-soustraction-binaire">Exercice 2 : Soustraction binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-division-binaire">Exercice 4 : Division binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-introductif-alphabet-de-l-aviation">Exemple introductif : alphabet de l’aviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation">Utilisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-transmettre-un-message">Exercice : transmettre un message</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-transmettre-un-message-partiellement">Exercice : transmettre un message partiellement</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-conversion-binaire-decimal-hexadecimal">Exercice 5 : Conversion binaire - décimal - héxadécimal</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-entre-ordinateurs">Communication entre ordinateurs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-ascii">Le codage ASCII</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-nombre-entier-hexadecimal">Définition : nombre entier hexadécimal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-entier-binaire-en-hexadecimal-base-2-a-base-16">Conversion d’un nombre entier binaire en hexadécimal (base 2 à base 16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ascii-art">ASCII Art</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-pour-aller-plus-loin">Exercice 3 (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-unicode">Le codage Unicode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-externes">Outils externes</a></li>
 </ul>
             </nav>
         </div>
@@ -591,995 +583,168 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="calcul" src="../../../_images/convertir.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-redo-04-operations-en-binaire">
-<h1>C1-REDO-04 : Opérations en binaire<a class="headerlink" href="#c1-redo-04-operations-en-binaire" title="Link to this heading">#</a></h1>
+  <p><img alt="ascii art" src="../../../_images/zebra.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-redo-04-codage-de-caracteres">
+<h1>C1-REDO-04 : codage de caractères<a class="headerlink" href="#c1-redo-04-codage-de-caracteres" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+<h2>Objectifs pédagogiques:<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Comprendre la représentation numérique des caractères</p></li>
+<li><p>Comprendre qu’il faut se mettre d’accord sur un alphabet commun</p></li>
+<li><p>Appliquer sur une communication réussie dans l’aviation</p></li>
+<li><p>Comprendre et appliquer le codage ASCII</p></li>
+<li><p>Déduire l’alphabet UniCODE de l’alphabet ASCII</p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Un fichier informatique n’est finalement rien d’autre qu’une suite d’octets. Historiquement, il a fallu trouver une convention afin que les différents ordinateurs qui ont commencé à communiquer puissent s’entendre.</p>
 <ul class="simple">
-<li><p>réviser les conversion de bases 2, 10 et 16</p></li>
-<li><p>être capable d’exécuter les opérations suivantes en binaire et en héxadécimal:</p>
-<ul>
-<li><p>addition</p></li>
-<li><p>soustraction</p></li>
-<li><p>multiplication</p></li>
-<li><p>division</p></li>
-</ul>
-</li>
+<li><p><a class="reference external" href="https://www.liveatc.net/hlisten.php?mount=lsgg_afdt&amp;amp;icao=lsgg" title="ATC live LSGG">ATC Live LSGG</a></p></li>
+<li><p><a class="reference external" href="https://www.flightradar24.com/46.25,5.99/10" title="LSGG Live radar">Flightradar24 around LSGG</a></p></li>
 </ul>
 </section>
-<section id="convention-les-bases-en-indices">
-<h2>Convention : les bases en indices<a class="headerlink" href="#convention-les-bases-en-indices" title="Link to this heading">#</a></h2>
-<p>Par convention, nous plaçons la base du nombre entier en <strong>indice</strong> de celui-ci :</p>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Link to this heading">#</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Questions🔌</p>
+<p>1 - qu’est-ce qu’on écoute ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Il s’agit des communications en direct entre les contrôleurs aériens de l’aéroport international de Genève (LSGG) et les pilotes des avions en approche et au départ.</p>
+</div>
+</details></div>
+<p>2 - Que disent-ils ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Les contrôleurs indiquent aux pilotes où ils doivent aller, comment ils doivent le faire (à quelle altitude, quelle vitesse), etc..</p>
+</div>
+</details></div>
+<p>3 - Y a-t-il des mots qui arrivent souvent ?</p>
+<div class="admonition-reponse admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">On entend les indicatifs des aéronefs, et des mots tels que <em>Alpha</em>, <em>Bravo</em>, <em>Charlie</em>. Les chiffres sont donnés en noeuds (*knots”) et en pieds (<em>feet</em>).</p>
+</div>
+</details></div>
+<p>4 - Comment les intervenants se comprennent-ils ?</p>
+<div class="admonition-reponse admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Ils se sont mis d’accord sur un alphabet commun et une façon de communiquer commune.</p>
+</div>
+</details></div>
+</div>
+<p>Il y a un indicatif de l’émetteur, un indicatif du récepteur, un alphabet commun, des métriques communes</p>
+</section>
+<section id="exemple-introductif-alphabet-de-l-aviation">
+<h2>Exemple introductif : alphabet de l’aviation<a class="headerlink" href="#exemple-introductif-alphabet-de-l-aviation" title="Link to this heading">#</a></h2>
+<p>L’alphabet radiophonique international est utilisé pour transmettre des messages quelque soit les possibles interférences, incompréhensions entre locuteurs ou mode de transmission.</p>
+<p>Il consiste à transmettre un mot <em>acrophonique</em>, c’est-à-dire dont la première lettre représente la lettre transmise.</p>
+<p>Voici le code de l’OACI (Organisation de l’Aviation Civile Internationale) :</p>
+<p><img alt="AlphabetOTAN" src="../../../_images/otan_alphabet.png" /></p>
+<p>Chaque code a été réfléchi afin que si une partie seulement de celui-ci est transmise, il soit possible de comprendre l’entier du message.</p>
+<section id="utilisation">
+<h3>Utilisation<a class="headerlink" href="#utilisation" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Indicatif de l’émetteur</p></li>
+<li><p>Indicatif du récepteur</p></li>
+<li><p>Message</p></li>
+<li><p>Fin</p></li>
+</ol>
+<p><strong>Exemples</strong></p>
+<p>L’avion long-courrier immatriculé PT-FSB est autorisé au décollage</p>
+<p><em>…Fox-trot Sierra Bravo, heavy, runway two-two, clearance allowed, wind three-ten-zero, eight knots</em></p>
+<p>Il existe des situations où toute communication est levée : <strong>l’urgence absolue</strong>. Exemple, l’avion immatriculé HB-CDF demande l’urgence absolue :</p>
+<p><em>… Mayday, mayday, mayday, Hotel, Bravo, Charlie, Delta, Fox, mayday, mayday, mayday. Fire on board. Request to land immediately</em></p>
+</section>
+<section id="exercice-transmettre-un-message">
+<h3>Exercice : transmettre un message<a class="headerlink" href="#exercice-transmettre-un-message" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(100_{10}\)</span> signifie le nombre 100 en base 10</p></li>
-<li><p><span class="math notranslate nohighlight">\(100_{2}\)</span> signifie le nombre 100 en base 2</p></li>
-<li><p><span class="math notranslate nohighlight">\(100_{16}\)</span> signifie le nombre 100 en base 16</p></li>
+<li><p>Transmettez par oral votre prénom en utilisant l’alphabet de l’OACI</p></li>
 </ul>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Valeur décimale</p></th>
-<th class="head"><p>Valeur binaire</p></th>
-<th class="head"><p>valeur héxadécimale</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(100_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1100100_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(64_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(100_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(4_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(256_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(100000000_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(100_{16}\)</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
-<section id="operations-algebriques-en-binaire">
-<h2>Opérations algébriques en binaire<a class="headerlink" href="#operations-algebriques-en-binaire" title="Link to this heading">#</a></h2>
-<p>Les 4 opérations de base en algèbre sont :</p>
+<section id="exercice-transmettre-un-message-partiellement">
+<h3>Exercice : transmettre un message partiellement<a class="headerlink" href="#exercice-transmettre-un-message-partiellement" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>l’addition (signe <span class="math notranslate nohighlight">\(+\)</span>)</p></li>
-<li><p>la soustraction (signe <span class="math notranslate nohighlight">\(-\)</span>)</p></li>
-<li><p>la multiplication (signe <span class="math notranslate nohighlight">\(*\)</span>)</p></li>
-<li><p>la division (signe <span class="math notranslate nohighlight">\(/\)</span>)</p></li>
+<li><p>Simulez un problème de communication et transmettez votre prénom par oral en utilisant que la moitié du mot de l’alphabet de l’OACI</p></li>
 </ul>
 </section>
-<section id="addition">
-<h2>Addition<a class="headerlink" href="#addition" title="Link to this heading">#</a></h2>
-<p>Tout comme l’addition décimale, l’addition en binaire se fait en colonne et en utilisant les retenues (binaires !).</p>
-<p>Il existe quatre possibilités d’additionner deux bits (ce sont les <strong>4 règles de base de l’addition binaire</strong> :</p>
-<p><span class="math notranslate nohighlight">\(0_{2} + 0_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>+</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(0_{2} + 1_{2} = 1_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>+</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} + 0_{2} = 1_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>+</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} + 1_{2} = 10_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>+</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Tout comme en décimal, on utilise la retenue pour ajouter un <span class="math notranslate nohighlight">\(1_{2}\)</span> sur la colonne suivante</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} + 0011_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
-<section id="exercice-1-addition-en-binaire">
-<h2>Exercice 1 : Addition en binaire<a class="headerlink" href="#exercice-1-addition-en-binaire" title="Link to this heading">#</a></h2>
-<p>Sur une feuille de papier, calculez le résultat des additions binaires suivantes :</p>
+<section id="communication-entre-ordinateurs">
+<h2>Communication entre ordinateurs<a class="headerlink" href="#communication-entre-ordinateurs" title="Link to this heading">#</a></h2>
+<p>Dans un réseau, comme Internet, deux ordinateurs doivent aussi “se mettre d’accord” pour communiquer dans de bonnes conditions.</p>
+<p>Historiquement, c’est <strong>du texte qui a été transmis entre deux ordinateurs</strong> pour la première fois.</p>
+<p>Il s’agit notamment d’établir un code pour qu’une lettre envoyée soit décodée correctement par le récepteur.</p>
+</section>
+<section id="le-codage-ascii">
+<h2>Le codage ASCII<a class="headerlink" href="#le-codage-ascii" title="Link to this heading">#</a></h2>
+<p>Le code ASCII pour <strong>American Standard Code for Information Interchange</strong> est né dans les années 1960 aux USA. La table est basée sur un encodage sur 7 bits.</p>
+<p><img alt="table codage ASCII" src="../../../_images/ASCII.png" /></p>
+</section>
+<section id="definition-nombre-entier-hexadecimal">
+<h2>Définition : nombre entier hexadécimal<a class="headerlink" href="#definition-nombre-entier-hexadecimal" title="Link to this heading">#</a></h2>
+<p>Un nombre entier hexadécimal est un nombre entier qui s’écrit uniquement avec les <strong>seize</strong> symboles <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E</strong> et <strong>F</strong></p>
+</section>
+<section id="conversion-d-un-nombre-entier-binaire-en-hexadecimal-base-2-a-base-16">
+<h2>Conversion d’un nombre entier binaire en hexadécimal (base 2 à base 16)<a class="headerlink" href="#conversion-d-un-nombre-entier-binaire-en-hexadecimal-base-2-a-base-16" title="Link to this heading">#</a></h2>
+<p>Il suffit de regrouper les bits par paquets de 4, quitte à rajouter des 0 sur les bits de poids fort (à gauche)</p>
+<p>Exemple :</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(1011_{2} + 1011_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(11110_{2} + 10011_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(101_{2} + 11_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(101001000011_{2}\)</span> en base 2</p></li>
+<li><p><span class="math notranslate nohighlight">\(1010_{2} , 0100_{2}, 0011_{2}\)</span> toujours en base 2</p></li>
+<li><p><span class="math notranslate nohighlight">\(1010_{2} = A_{16}\)</span>, <span class="math notranslate nohighlight">\(0100_{2} = 4_{16}\)</span>, <span class="math notranslate nohighlight">\(0011_{2} = 3_{16}\)</span></p></li>
+<li><p>En base 16 : A43</p></li>
 </ol>
 </section>
-<section id="soustraction">
-<h2>Soustraction<a class="headerlink" href="#soustraction" title="Link to this heading">#</a></h2>
-<p>Dans la soustraction binaire, on procède comme en décimal. Lorsque la quantité à soustraire est supérieure à la quantité dont on soustrait, on emprunte 1 au voisin de gauche.</p>
-<p>Il existe quatre possibilités de soustraire 2 bits (ce sont les <strong>4 règles de base de la soustraction binaire</strong>)</p>
-<p><span class="math notranslate nohighlight">\(0_{2} - 0_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>-</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} - 0_{2} = 1_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>-</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} - 1_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>-</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Tout comme en décimal, on utilise la retenue pour ajouter un <span class="math notranslate nohighlight">\(1_{2}\)</span> sur la colonne suivante</p>
-<p><span class="math notranslate nohighlight">\(0_{2} - 1_{2} = 1_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>-</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Attention, il y a un emprunt dans la colonne de gauche</strong></p>
-<p>Exemple : <span class="math notranslate nohighlight">\(11011_{2} - 1101_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p>0</p></th>
-<th class="head text-right"><p>0</p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>-</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>On peut vérifier en décimal : <span class="math notranslate nohighlight">\(27_{10} - 13_{10} = 14_{10}\)</span></p>
-</section>
-<section id="soustraction-avec-complement-a-2">
-<h2>Soustraction avec complément à 2<a class="headerlink" href="#soustraction-avec-complement-a-2" title="Link to this heading">#</a></h2>
-<p>L’électronique de l’ordinateur (voir cours + TP d’architecture des ordinateurs) peut additionner très simplement. La méthode de la soustraction binaire avec complément à 2 utilise ce principe. L’algorithme se décline en 5 étapes :</p>
-<ol class="arabic simple">
-<li><p>Aligner les deux nombres à soustraire sur le même nombre de bits</p></li>
-<li><p>Prendre le <strong>complément à 2</strong> du soustracteur : inverser tous les bits (le <span class="math notranslate nohighlight">\(0\)</span> devient un <span class="math notranslate nohighlight">\(1\)</span> et vice-versa)</p></li>
-<li><p>Ajouter <span class="math notranslate nohighlight">\(1\)</span> à ce nombre binaire (en utlisant l’addition binaire)</p></li>
-<li><p>Additionner les deux nombres. Si le bit de poids le plus fort (la <strong>retenue</strong>) dépasse la longueur du nombre de bits, alors il est ignoré</p></li>
-</ol>
-<p>Exemple : <span class="math notranslate nohighlight">\(11011_{2} - 1101_{2}\)</span></p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(11011_{2} - 01101_{2}\)</span></p></li>
-<li><p>Calculer le complément à 2 de <span class="math notranslate nohighlight">\(01101_{2}\)</span> : <span class="math notranslate nohighlight">\(10010_{2}\)</span></p></li>
-<li><p>Ajouter 1 au complément : <span class="math notranslate nohighlight">\(10010_{2} + 00001_{2} = 10011_{2}\)</span></p></li>
-<li><p>Additionner les deux nombres</p></li>
-</ol>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>+</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Le bit de poids le plus fort (<span class="math notranslate nohighlight">\(1\)</span> tout à gauche) est laissé de côté puisqu’il se trouve en 6ème position. Résultat : <span class="math notranslate nohighlight">\(01110_{2}\)</span></p>
-</section>
-<section id="exercice-2-soustraction-binaire">
-<h2>Exercice 2 : Soustraction binaire<a class="headerlink" href="#exercice-2-soustraction-binaire" title="Link to this heading">#</a></h2>
-<p>A l’aide de l’une des deux méthodes (méthode standard ou méthode du complément à 2), faites les calculs suivants :</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(1101_{2} - 0110_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(101101_{2} - 10110_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(10110_{2} - 1110_{2}\)</span></p></li>
-</ol>
-</section>
-<section id="multiplication">
-<h2>Multiplication<a class="headerlink" href="#multiplication" title="Link to this heading">#</a></h2>
-<p>La multiplication binaire n’est rien d’autre qu’une addition binaire.</p>
-<p>Il existe quatre possibilités de multiplier 2 bits (ce sont les <strong>4 règles de base de la multiplication binaire</strong>)</p>
-<p><span class="math notranslate nohighlight">\(0_{2} * 0_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>*</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} * 0_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>*</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(0_{2} * 1_{2} = 0_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>*</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span class="math notranslate nohighlight">\(1_{2} * 1_{2} = 1_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>*</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>On procède exactement de la même manière que lors d’une multiplication décimale avec les retenues.</p>
-<p>Exemple : <span class="math notranslate nohighlight">\(1010_{2} * 101_{2}\)</span></p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p></p></th>
-<th class="head text-right"><p>1</p></th>
-<th class="head text-right"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>*</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p>+</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p></p></td>
-<td class="text-right"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-<td class="text-right"><p>—</p></td>
-</tr>
-<tr class="row-odd"><td class="text-right"><p></p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>0</p></td>
-<td class="text-right"><p>1</p></td>
-<td class="text-right"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Vérification en décimal : <span class="math notranslate nohighlight">\(10_{10} * 5_{10} = 50_{10}\)</span></p>
-</section>
-<section id="exercice-3-multiplication-binaire">
-<h2>Exercice 3 : Multiplication binaire<a class="headerlink" href="#exercice-3-multiplication-binaire" title="Link to this heading">#</a></h2>
-<p>Faites les calculs suivants en utilisant la méthode de la multiplication binaire (les additions) :</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(1011_{2} * 111_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1111_{2} * 1101_{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(101_{2} * 1100_{2}\)</span></p></li>
-</ol>
-</section>
-<section id="division">
-<h2>Division<a class="headerlink" href="#division" title="Link to this heading">#</a></h2>
-<p>Tout comme la multiplication, la division binaire est une suite de soustractions (et donc d’additions au complément à 2 si l’on utilise cette méthode).</p>
-<p>La division binaire se fait exactement comme la division décimale aprise à l’école primaire : avec la méthode dite <strong>de la potence</strong></p>
-<p>Prenons l’exemple décimal <span class="math notranslate nohighlight">\(4356_{10} / 20_{10} = 217_{10}\)</span> avec un reste de <span class="math notranslate nohighlight">\(16_{10}\)</span></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  4356   │ 20
-- 40     ├───────
-────     │ 217
-   35    │
- - 20    │
- ────    │
-   156   │
- - 140   │   
-  ────   │   
-    16   │   
-</pre></div>
-</div>
-<p>En division binaire, on procède de la même façon : analyse des chiffres et voir <em>combien de fois on peut mettre le diviseur</em>. Seule différence :</p>
-<ol class="arabic simple">
-<li><p>Si on peut diviser (division entière) le nombre, alors on met 1 au quotient,</p></li>
-<li><p>sinon 0</p></li>
-</ol>
-<p>Prenons un exemple : <span class="math notranslate nohighlight">\(10111_{2} / 11_{2}\)</span></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 10111   │ 11
-  11     ├───────
-────     │ 0111
- 010     │
-- 11     │
- ────    │
- 0101    │
- - 11    │   
-  ────   │   
-   010   │   
-</pre></div>
-</div>
-<p><span class="math notranslate nohighlight">\(10111_{2} / 11_{2} = 0111_{2}\)</span> avec un reste de <span class="math notranslate nohighlight">\(010_{2}\)</span> (On a bien que <span class="math notranslate nohighlight">\(23_{10} / 3_{10} = 7_{10}\)</span> avec un reste de <span class="math notranslate nohighlight">\(2_{10}\)</span>).</p>
-<p><strong>Remarque</strong> : il est tout à fait possible d’effectuer la soustraction en utilisant la méthode de l’addition du complément à 2.</p>
-</section>
-<section id="exercice-4-division-binaire">
-<h2>Exercice 4 : Division binaire<a class="headerlink" href="#exercice-4-division-binaire" title="Link to this heading">#</a></h2>
-<p>Faites les calculs suivants en utilisant la méthode de la potence :</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(1011010 / 10\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(111010 / 101\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(111111 / 11\)</span></p></li>
-</ol>
-</section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
-<p>En binaire, toutes les opérations se résument à l’addition et quelques opérations sur les bits (comme dans le complément à 2 pour la soustraction). On peut essayer de résumer dans un tableau :</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Opération</p></th>
-<th class="head text-left"><p>en binaire, remplacée par</p></th>
-<th class="head text-left"><p>remarques</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>Soustraction</p></td>
-<td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p>inversion des bits et addition de 1 (complément à 2)</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>Multiplication</p></td>
-<td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>Division</p></td>
-<td class="text-left"><p>Addition</p></td>
-<td class="text-left"><p>En fait une soustraction qui se remplace par l’addition avec le complément à 2</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Electroniquement, cela signifie que l’on peut construire une calculatrice à l’aide d’<strong>un circuit qui ne sait faire que les additions</strong>.</p>
-</section>
-<section id="au-dela-des-entiers-pour-aller-plus-loin">
-<h2>Au-delà des entiers (pour aller plus loin)<a class="headerlink" href="#au-dela-des-entiers-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
-<section id="de-mathbb-n-vers-mathbb-z">
-<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-z" title="Link to this heading">#</a></h3>
-<p>Que vaut le résultat de l’opération suivante ?</p>
-<p><span class="math notranslate nohighlight">\(00001000_{2} - 00010000_{2}\)</span></p>
-<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être négatif. Le résultat de l’opération est <span class="math notranslate nohighlight">\(-8_{10}\)</span> et c’est un nombre relatif (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) . Il s’agit donc de trouver un système pour <strong>représenter les nombres négatifs</strong>. Le plus communément utilisé est <strong>le complément à 2</strong></p>
-<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(-5_{10}\)</span> s’écrit en binaire :</p>
-<ol class="arabic simple">
-<li><p>Valeur absolue <span class="math notranslate nohighlight">\(5_{10} = 00000101_{2}\)</span></p></li>
-<li><p>Inversion des bits : <span class="math notranslate nohighlight">\(11111010_{2}\)</span></p></li>
-<li><p>Ajouter <span class="math notranslate nohighlight">\(1_{10}\)</span> : <span class="math notranslate nohighlight">\(11111011_{2}\)</span></p></li>
-</ol>
-<p>Donc <span class="math notranslate nohighlight">\(-5_{10}\)</span> en complément à 2 sur un octet vaut <span class="math notranslate nohighlight">\(11111011_{2}\)</span>.</p>
-<p>Trois propriétés importantes de cette notation :</p>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<p>Ecrivez le code binaire pour les caractères suivants :</p>
 <ul class="simple">
-<li><p>le <strong>bit de poids le plus fort</strong> (celui qui se trouve le plus à gauche) donne le signe : <span class="math notranslate nohighlight">\(0\)</span> alors c’est un nombre positif, <span class="math notranslate nohighlight">\(1\)</span> c’est un nombre négatif</p></li>
-<li><p>L’intervalle des nombres représentables sur <span class="math notranslate nohighlight">\(n\)</span> bits en complément à 2 est de <span class="math notranslate nohighlight">\([-2^{n-1}, ..., 2^{n-1} -1]\)</span></p></li>
-<li><p>L’addition fonctionne sans modification</p></li>
+<li><p>A</p></li>
+<li><p>a</p></li>
+<li><p>0</p></li>
 </ul>
 </section>
-<section id="de-mathbb-n-vers-mathbb-q">
-<h3>De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span><a class="headerlink" href="#de-mathbb-n-vers-mathbb-q" title="Link to this heading">#</a></h3>
-<p>Que vaut le résultat de l’opération suivante ?</p>
-<p><span class="math notranslate nohighlight">\(00000101 / 00000010\)</span></p>
-<p>Un nombre <strong>entier</strong> (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>) ne peut pas être rationnel. Le résultat de l’opération est <span class="math notranslate nohighlight">\(2.5_{10}\)</span> et c’est un nombre rationnel (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>). Il s’agit de trouver une <strong>représentation pour les nombres rationnels</strong> (ou nombres <strong>à virgule</strong>). Il en existe deux:</p>
-<ol class="arabic simple">
-<li><p>La représentation à virgule <strong>fixe</strong></p></li>
-<li><p>La représentation à virgule <strong>flottante</strong></p></li>
-</ol>
-<p>Ces représentations vont au-delà du cadre de ce cours et seront abordé en 2ème année de l’école de maturité.</p>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<p>Quel est le texte encodé par les caractères suivants :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(42_{16}, 6F_{16}, 6E_{16}, 6A_{16}, 6F_{16}, 75_{16}, 72_{16}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1000010_{2}, 1001001_{2}, 1100101_{2}, 1101110_{2}, 1110110_{2}, 1100101_{2}, 1101110_{2}, 1110101_{2}, 1100101_{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(49_{10}, 57_{10}, 55_{10}, 53_{10}\)</span></p></li>
+</ul>
 </section>
+<section id="ascii-art">
+<h2>ASCII Art<a class="headerlink" href="#ascii-art" title="Link to this heading">#</a></h2>
+<p>Dans les jeunes années de l’informatique, il a été trouvé des moyens de communiquer des images sous la forme d’arrangements des symboles de l’alphabet ASCII. C’est ce que on appelle <strong>ASCII Art</strong></p>
+<p><a class="reference external" href="https://www.asciiart.eu/" title="ASCII art">Voir quelques exemples d’ASCII art</a></p>
 </section>
-<section id="rappel-notation-de-droite-a-gauche">
-<h2>Rappel : Notation de droite à gauche<a class="headerlink" href="#rappel-notation-de-droite-a-gauche" title="Link to this heading">#</a></h2>
-<p>La position du chiffre correspond à la <strong>puissance de la base</strong>.</p>
-<section id="base-10-decimal">
-<h3>Base 10 (décimal)<a class="headerlink" href="#base-10-decimal" title="Link to this heading">#</a></h3>
-<p>En décimal, il existe 10 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1,2,3,4,5,6,7,8,9]\)</span>. Ainsi :</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>position</p></th>
-<th class="head text-center"><p>7</p></th>
-<th class="head text-center"><p>6</p></th>
-<th class="head text-center"><p>5</p></th>
-<th class="head text-center"><p>4</p></th>
-<th class="head text-center"><p>3</p></th>
-<th class="head text-center"><p>2</p></th>
-<th class="head text-center"><p>1</p></th>
-<th class="head text-center"><p>0</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>puissance</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^7\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^6\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^5\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^4\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^3\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^2\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^1\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10^0\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>décimal</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10000000_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1000000_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(100000_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10000_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1000_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(100_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1_{10}\)</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(2017\)</span> lu de droite à gauche se calcule : <span class="math notranslate nohighlight">\(7*10^{0} + 1*10^{1} + 0*10^{2} + 2*10^{3} = 7 + 10 + 0 + 2000 = 2017\)</span></p>
+<section id="exercice-3-pour-aller-plus-loin">
+<h2>Exercice 3 (pour aller plus loin)<a class="headerlink" href="#exercice-3-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
+<p>Comment faire la différence entre un octet qui représente un nombre entier et un octet qui représente un encodage en ASCII (pour autant que le bit de poid le plus fort soit mis à 0) ?</p>
 </section>
-<section id="base-2-binaire">
-<h3>Base 2 (binaire)<a class="headerlink" href="#base-2-binaire" title="Link to this heading">#</a></h3>
-<p>En binaire, il existe 2 symboles pour écrire les nombres entiers : <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>position</p></th>
-<th class="head text-center"><p>7</p></th>
-<th class="head text-center"><p>6</p></th>
-<th class="head text-center"><p>5</p></th>
-<th class="head text-center"><p>4</p></th>
-<th class="head text-center"><p>3</p></th>
-<th class="head text-center"><p>2</p></th>
-<th class="head text-center"><p>1</p></th>
-<th class="head text-center"><p>0</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>puissance</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^7\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^6\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^5\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^4\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^3\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^2\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^1\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2^0\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>binaire</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10000000_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1000000_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(100000_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10000_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1000_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(100_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(10_{2}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1_{2}\)</span></p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>décimal</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(128_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(64_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(32_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(16_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(8_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(4_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2_{10}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1_{10}\)</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Ainsi, le nombre <span class="math notranslate nohighlight">\(10101101\)</span> lu de droite à gauche se calcule en base 10 : <span class="math notranslate nohighlight">\(1_{2}*2_{10}^{0} + 0_{2}*2_{10}^{1} + 1_{2}*2_{10}^{2} + 1_{2}*2_{10}^{3} + 0_{2}*2_{10}^{4} + 1_{2}*2_{10}^{5} + 0_{2}*2_{10}^{6} + 1_{2}*2_{10}^{7} = 1_{10} + 0_{10} + 4_{10} + 8_{10} + 0_{10} + 32_{10} + 0_{10} + 128_{10} = 173_{10}\)</span></p>
-<p>Le bit <strong>le plus à droite</strong> s’appelle <strong>bit de poids faible</strong></p>
-<p>Le bit <strong>le plus à gauche</strong> s’appelle <strong>bit de poids fort</strong></p>
+<section id="le-codage-unicode">
+<h2>Le codage Unicode<a class="headerlink" href="#le-codage-unicode" title="Link to this heading">#</a></h2>
+<p>Le codage ASCII ne permet pas d’écrire des caractères accentués ou des symboles provenant d’autres langues. C’est par exemple le cas du chinois, de l’arabe ou du grec mais aussi les hiéroglyphes égyptiens ou les émojis par exemple.</p>
+<p>Pour ce faire, il a fallu étendre le codage à plus de bits. Unicode est le standard le plus accepté. Il est possible de coder des caractères en utilisant 32 bits au maximum.</p>
+<p>Cela signifie qu’il est possible de coder <span class="math notranslate nohighlight">\(2^{32}\)</span> caractères différents, soit plus de 4 milliards (4’294’967’296) ce qui devrait suffir pour les besoins actuels et futurs de l’ensemble des codages de la planète.</p>
 </section>
-<section id="base-16-hexadecimal">
-<h3>Base 16 (hexadécimal)<a class="headerlink" href="#base-16-hexadecimal" title="Link to this heading">#</a></h3>
-<p>En héxadécimal, il existe 16 symboles pour écrires les nombres entiers : <span class="math notranslate nohighlight">\([0,1,2,3,4,5,6,7,8,9, A, B, C, D, E, F]\)</span>. Puisque <span class="math notranslate nohighlight">\(16_{10} = 2_{10}^{4}\)</span> il faut <strong>quatre</strong> bits pour convertir un nombre héxadécimal en binaire.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Valeur décimale</p></th>
-<th class="head"><p>Valeur binaire</p></th>
-<th class="head"><p>valeur héxadécimale</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0000_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0001_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0010_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(2_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(3_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0011_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(3_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(4_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0100_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(4_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0101_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(5_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(6_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0110_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(6_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(7_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(0111_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(7_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(8_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1000_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(8_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(9_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1001_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(9_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1010_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(A_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(11_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1011_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(B_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(12_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1100_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(C_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(13_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1101_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(D_{16}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(14_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1110_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(E_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(15_{10}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1111_{2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(F_{16}\)</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<section id="exercice-5-conversion-binaire-decimal-hexadecimal">
-<h4>Exercice 5 : Conversion binaire - décimal - héxadécimal<a class="headerlink" href="#exercice-5-conversion-binaire-decimal-hexadecimal" title="Link to this heading">#</a></h4>
-<p>Complétez le tableau suivant. Lorsque le nombre de bits n’est pas divisible par 4 en binaire, ajoutez des <span class="math notranslate nohighlight">\(0\)</span> sur les bits de poids le plus fort (à gauche) pour complèter au multiple.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>Valeur binaire</p></th>
-<th class="head text-center"><p>Valeur décimale</p></th>
-<th class="head text-center"><p>valeur héxadécimale</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(11010101_{2}\)</span></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1984_{10}\)</span></p></td>
-<td class="text-center"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(BEEF_{16}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(51966_{10}\)</span></p></td>
-<td class="text-center"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(100101110_{2}\)</span></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
+<section id="outils-externes">
+<h2>Outils externes<a class="headerlink" href="#outils-externes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.rapidtables.org/fr/convert/number/hex-to-binary.html">convertisseur base 2, 10 et 16 online</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -1619,7 +784,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C1-REDO-03 : codage de caractères</p>
+        <p class="prev-next-title">C1-REDO-03 : Opérations en binaire</p>
       </div>
     </a>
     <a class="right-next"
@@ -1647,33 +812,25 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-les-bases-en-indices">Convention : les bases en indices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-algebriques-en-binaire">Opérations algébriques en binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-addition-en-binaire">Exercice 1 : Addition en binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction">Soustraction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustraction-avec-complement-a-2">Soustraction avec complément à 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-soustraction-binaire">Exercice 2 : Soustraction binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">Multiplication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-multiplication-binaire">Exercice 3 : Multiplication binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">Division</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-division-binaire">Exercice 4 : Division binaire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#au-dela-des-entiers-pour-aller-plus-loin">Au-delà des entiers (pour aller plus loin)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-z">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mathbb-n-vers-mathbb-q">De <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> vers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-introductif-alphabet-de-l-aviation">Exemple introductif : alphabet de l’aviation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation">Utilisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-transmettre-un-message">Exercice : transmettre un message</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-transmettre-un-message-partiellement">Exercice : transmettre un message partiellement</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappel-notation-de-droite-a-gauche">Rappel : Notation de droite à gauche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-10-decimal">Base 10 (décimal)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-2-binaire">Base 2 (binaire)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-16-hexadecimal">Base 16 (hexadécimal)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-conversion-binaire-decimal-hexadecimal">Exercice 5 : Conversion binaire - décimal - héxadécimal</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-entre-ordinateurs">Communication entre ordinateurs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-ascii">Le codage ASCII</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-nombre-entier-hexadecimal">Définition : nombre entier hexadécimal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-entier-binaire-en-hexadecimal-base-2-a-base-16">Conversion d’un nombre entier binaire en hexadécimal (base 2 à base 16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ascii-art">ASCII Art</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-pour-aller-plus-loin">Exercice 3 (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-unicode">Le codage Unicode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-externes">Outils externes</a></li>
 </ul>
   </nav></div>
 
