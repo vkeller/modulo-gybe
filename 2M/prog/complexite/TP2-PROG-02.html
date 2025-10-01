@@ -557,10 +557,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-pile-ou-face">Exercice 2 : Pile ou face ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-mesurer-le-nombre-d-operations">Exercice 3 : Mesurer le nombre d’opérations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-pile-ou-face-plusieurs-fois">Exercice 3 : Pile ou face plusieurs fois</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-mesurer-le-nombre-d-operations">Exercice 4 : Mesurer le nombre d’opérations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-du-temps-dans-un-code">Mesure du temps dans un code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-mesurer-le-temps">Exercice 4: Mesurer le temps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-complexite-de-pile-ou-face">Exercice 5 : Complexité de Pile ou Face</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-mesurer-le-temps">Exercice 5: Mesurer le temps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-complexite-de-pile-ou-face">Exercice 6 : Complexité de Pile ou Face</a></li>
 </ul>
             </nav>
         </div>
@@ -609,7 +610,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
 </pre></div>
 </div>
 </div>
@@ -624,14 +625,21 @@ document.write(`
 <p>Lorsqu’on lance une pièce de monnaie en l’air, elle a une chance sur deux de retomber sur face, une chance sur deux sur pile.</p>
 <p>Vérifions que la bibliothèque <code class="docutils literal notranslate"><span class="pre">random</span></code> nous donne bien les bonnes valeurs.</p>
 <ul class="simple">
-<li><p>Ecrivez un programme qui tire 10000, 100000, 10000000 un nombre aléatoire entier entre 0 (pile) et 1 (face) à l’aide d’une boucle</p></li>
+<li><p>Ecrivez un programme qui tire un nombre aléatoire entier entre 0 (pile) et 1 (face)</p></li>
+</ul>
+<p>Exécutez votre programme plusieurs fois. Est-ce que l’ordinateur tire bien des nombres aléatoires ?</p>
+</section>
+<section id="exercice-3-pile-ou-face-plusieurs-fois">
+<h2>Exercice 3 : Pile ou face plusieurs fois<a class="headerlink" href="#exercice-3-pile-ou-face-plusieurs-fois" title="Link to this heading">#</a></h2>
+<p>Modifiez votre programme de pile ou face pour qu’il tire <code class="docutils literal notranslate"><span class="pre">nbrTirs</span></code> fois la pièce.</p>
+<ul class="simple">
 <li><p>comptez le nombre de piles et de face (en stockant la valeur intermédiaire dans deux variables <code class="docutils literal notranslate"><span class="pre">nbrPile</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrFace</span></code></p></li>
-<li><p>Vérifiez que le résultat est le bon</p></li>
+<li><p>Vérifiez que le résultat est le bon en calculant la <em>probabilité</em> d’un tir pile (<code class="docutils literal notranslate"><span class="pre">probPile</span> <span class="pre">=</span> <span class="pre">nbrPile/nbrTirs</span></code>) et la <em>probabilité</em> d’un tir face (<code class="docutils literal notranslate"><span class="pre">probFace</span> <span class="pre">=</span> <span class="pre">nbrFace/nbrTirs</span></code>)</p></li>
 </ul>
 </section>
-<section id="exercice-3-mesurer-le-nombre-d-operations">
-<h2>Exercice 3 : Mesurer le nombre d’opérations<a class="headerlink" href="#exercice-3-mesurer-le-nombre-d-operations" title="Link to this heading">#</a></h2>
-<p>Observez votre code et comptez le nombre d’opérations (instructions) par itération de la boucle. Modifiez ensuite votre code pour que le nombre d’opérations ou d’instructions soit comptabilisés.</p>
+<section id="exercice-4-mesurer-le-nombre-d-operations">
+<h2>Exercice 4 : Mesurer le nombre d’opérations<a class="headerlink" href="#exercice-4-mesurer-le-nombre-d-operations" title="Link to this heading">#</a></h2>
+<p>Observez votre code et comptez le nombre d’opérations (instructions) par itération de la boucle. Modifiez ensuite votre code pour que le nombre d’opérations ou d’instructions soit comptabilisés. Stockez cette valeur dans une variable <code class="docutils literal notranslate"><span class="pre">N</span></code></p>
 </section>
 <section id="mesure-du-temps-dans-un-code">
 <h2>Mesure du temps dans un code<a class="headerlink" href="#mesure-du-temps-dans-un-code" title="Link to this heading">#</a></h2>
@@ -649,12 +657,12 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="exercice-4-mesurer-le-temps">
-<h2>Exercice 4: Mesurer le temps<a class="headerlink" href="#exercice-4-mesurer-le-temps" title="Link to this heading">#</a></h2>
-<p>Modifiez votre code de pile ou face pour qu’il mesure le temps entre le début et la fin du code. Ce temps permettra d’être utilisé pour la mesure de la complexité</p>
+<section id="exercice-5-mesurer-le-temps">
+<h2>Exercice 5: Mesurer le temps<a class="headerlink" href="#exercice-5-mesurer-le-temps" title="Link to this heading">#</a></h2>
+<p>Modifiez votre code de pile ou face pour qu’il mesure le temps entre le début et la fin du code. Stockez cette valeur dans une variable <code class="docutils literal notranslate"><span class="pre">t</span></code></p>
 </section>
-<section id="exercice-5-complexite-de-pile-ou-face">
-<h2>Exercice 5 : Complexité de Pile ou Face<a class="headerlink" href="#exercice-5-complexite-de-pile-ou-face" title="Link to this heading">#</a></h2>
+<section id="exercice-6-complexite-de-pile-ou-face">
+<h2>Exercice 6 : Complexité de Pile ou Face<a class="headerlink" href="#exercice-6-complexite-de-pile-ou-face" title="Link to this heading">#</a></h2>
 <p>Dans un tableau Excel, placez les valeurs de <span class="math notranslate nohighlight">\(N\)</span> (<strong>nombre de tirs</strong>), le <strong>nombre d’opérations (instructions) mesurées</strong> <span class="math notranslate nohighlight">\(NbrOps\)</span> et le <strong>temps</strong> (<span class="math notranslate nohighlight">\(f(N)\)</span>). Quelle est la classe de complexité de cet algorithme ?</p>
 <p>La console de Thonny ne permet pas de copier-coller plus de <code class="docutils literal notranslate"><span class="pre">1000</span></code> lignes de sortie (print). Afin de pouvoir créer des graphiques dans Excel, il est nécessaire d’enregistrer les valeurs <code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">Nbrops</span></code> et <code class="docutils literal notranslate"><span class="pre">temps</span></code> dans un fichier de type <strong>CSV</strong>. Voici un code permettant de créer un tel fichier, d’enregistrer des données par ligne (sous la forme d’une liste), et de refermer le fichier. Le fichier final <code class="docutils literal notranslate"><span class="pre">nom_de_fichier.csv</span></code> se trouvera dans le même dossier que le fichier source Python.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
@@ -745,10 +753,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-pile-ou-face">Exercice 2 : Pile ou face ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-mesurer-le-nombre-d-operations">Exercice 3 : Mesurer le nombre d’opérations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-pile-ou-face-plusieurs-fois">Exercice 3 : Pile ou face plusieurs fois</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-mesurer-le-nombre-d-operations">Exercice 4 : Mesurer le nombre d’opérations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-du-temps-dans-un-code">Mesure du temps dans un code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-mesurer-le-temps">Exercice 4: Mesurer le temps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-complexite-de-pile-ou-face">Exercice 5 : Complexité de Pile ou Face</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-mesurer-le-temps">Exercice 5: Mesurer le temps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-complexite-de-pile-ou-face">Exercice 6 : Complexité de Pile ou Face</a></li>
 </ul>
   </nav></div>
 
