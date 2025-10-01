@@ -554,7 +554,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-produire-une-suite-de-nombre-aleatoires">Comment produire une suite de nombre aléatoires ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-nombres-pseudo-aleatoires-en-python">Générateur de nombres pseudo-aléatoires en Python</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-pile-ou-face">Exercice 2 : Pile ou face ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-probabilites-de-pile-probabilite-de-face">Exercice 3 : Probabilités de pile, probabilité de face</a></li>
@@ -587,7 +591,19 @@ document.write(`
 <section id="les-nombres-aleatoires">
 <h2>Les nombres aléatoires<a class="headerlink" href="#les-nombres-aleatoires" title="Link to this heading">#</a></h2>
 <p>Un <strong>nombre aléatoire</strong> est un nombre quelconque tiré au hasard entre deux bornes.</p>
-<p>Il est difficile pour un ordinateur de produire des nombres aléatoires. Il existe toutefois une bibliothèque de fonctions dans Python qui nous permet de le faire. Cette bibliothèque s’appelle <code class="docutils literal notranslate"><span class="pre">random</span></code>. Elle contient notamment une fonction qui permet de tirer un <strong>nombre aléatoire entier</strong> entre deux bornes :</p>
+<p><strong>Remarque</strong> : il est mathématiquement hors du cadre d’études gymnasiales de définir exactement ce qu’est une suite de nombres aléatoires. Je vous renvoie à <a class="reference external" href="https://www.random.org">random.org</a></p>
+<p>Ce que l’on sait, c’est qu’il est impossible pour un ordinateur de produire une suite de nombres aléatoires puisque par définition, un ordinateur suit des algorithmes.</p>
+<section id="comment-produire-une-suite-de-nombre-aleatoires">
+<h3>Comment produire une suite de nombre aléatoires ?<a class="headerlink" href="#comment-produire-une-suite-de-nombre-aleatoires" title="Link to this heading">#</a></h3>
+<p>En utilisant deux concepts :</p>
+<ol class="arabic simple">
+<li><p>Le fait qu’aujourd’hui, il est impossible pour une machine de prédire un phénomène physique suffisamment complexe</p></li>
+<li><p>Utiliser des mesures de ce phénomène physique. Par exemple : le bruit d’un carrefour, un film live d’un arbre au vent, la position des nuages, etc..</p></li>
+</ol>
+</section>
+<section id="generateur-de-nombres-pseudo-aleatoires-en-python">
+<h3>Générateur de nombres pseudo-aléatoires en Python<a class="headerlink" href="#generateur-de-nombres-pseudo-aleatoires-en-python" title="Link to this heading">#</a></h3>
+<p>Un ordinateur produit des <strong>nombres pseudo-aléatoires</strong>. Il existe une bibliothèque de fonctions dans Python qui nous permet de le faire. Cette bibliothèque s’appelle <code class="docutils literal notranslate"><span class="pre">random</span></code>. Elle contient notamment une fonction qui permet de tirer un <strong>nombre aléatoire entier</strong> entre deux bornes :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
@@ -595,6 +611,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Ce programme tirera à chaque exécution un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+</section>
 </section>
 <section id="exercice-1-nombres-aleatoires">
 <h2>Exercice 1 : Nombres aléatoires<a class="headerlink" href="#exercice-1-nombres-aleatoires" title="Link to this heading">#</a></h2>
@@ -750,7 +767,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-produire-une-suite-de-nombre-aleatoires">Comment produire une suite de nombre aléatoires ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-nombres-pseudo-aleatoires-en-python">Générateur de nombres pseudo-aléatoires en Python</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-pile-ou-face">Exercice 2 : Pile ou face ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-probabilites-de-pile-probabilite-de-face">Exercice 3 : Probabilités de pile, probabilité de face</a></li>
