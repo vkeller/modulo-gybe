@@ -557,6 +557,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-produire-une-suite-de-nombre-aleatoires">Comment produire une suite de nombre aléatoires ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-nombres-pseudo-aleatoires-en-python">Générateur de nombres pseudo-aléatoires en Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graine-de-depart-du-generateur"><em>Graine</em> de départ du générateur</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
@@ -612,6 +613,50 @@ document.write(`
 </div>
 <p>Ce programme tirera à chaque exécution un nombre aléatoire compris entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
 </section>
+<section id="graine-de-depart-du-generateur">
+<h3><em>Graine</em> de départ du générateur<a class="headerlink" href="#graine-de-depart-du-generateur" title="Link to this heading">#</a></h3>
+<p>Informatiquement, le générateur de nombres aléatoires est un algorithme. Cet algorithme a besoin d’un <em>point de départ</em> pour pouvoir commencer à générer des nombres aléatoires. Ce point de départ est appelé <strong>graine</strong> (ou <em>seed</em> en anglais). Il est rare que l’on veuille préciser une graine spécifique : on prend généralement le <em>temps</em> (soit le nombre de secondes qui se sont écoulées depuis le 1 janvier 1970 (une date nommée <em>ère</em>). Mais il se peut que l’on veuille toujours réutiliser la même suite de nombres aléatoires. Dans ce cas, on en précisera la graine.</p>
+<p>Le code suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">graine</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">graine</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>produira systématiquement les mêmes nombres aléatoires</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">graine</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">graine</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span> <span class="n">borneSup</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+10
+1
+6
+5
+1
+7
+2
+8
+6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="exercice-1-nombres-aleatoires">
 <h2>Exercice 1 : Nombres aléatoires<a class="headerlink" href="#exercice-1-nombres-aleatoires" title="Link to this heading">#</a></h2>
@@ -627,7 +672,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -770,6 +815,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-nombres-aleatoires">Les nombres aléatoires</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-produire-une-suite-de-nombre-aleatoires">Comment produire une suite de nombre aléatoires ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-nombres-pseudo-aleatoires-en-python">Générateur de nombres pseudo-aléatoires en Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graine-de-depart-du-generateur"><em>Graine</em> de départ du générateur</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-nombres-aleatoires">Exercice 1 : Nombres aléatoires</a></li>
