@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -197,8 +197,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : Opérations en binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : codage de caractères</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
@@ -566,8 +566,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-cas-moyen">Le cas moyen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-de-complexite">Classes de complexité</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-classes-de-complexite-pour-certains-algorithmes">Exemples de classes de complexité pour certains algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">Complexité</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-complexite-pour-certains-algorithmes">Exemples de complexité pour certains algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-de-complexite">Classes de complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-p">Classe <code class="docutils literal notranslate"><span class="pre">P</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-np">Classe <code class="docutils literal notranslate"><span class="pre">NP</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correction-des-exercices">Correction des exercices</a></li>
 </ul>
@@ -643,11 +648,11 @@ document.write(`
 <p><strong>Exemple :</strong> Dans le cas de la recherche linéaire dans une liste triée, le cas moyen sera celui où l’élément recherché se trouvera à la moitié de la liste.</p>
 </section>
 </section>
-<section id="classes-de-complexite">
-<h2>Classes de complexité<a class="headerlink" href="#classes-de-complexite" title="Link to this heading">#</a></h2>
+<section id="complexite">
+<h2>Complexité<a class="headerlink" href="#complexite" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>Classe de complexité <span class="math notranslate nohighlight">\(\mathcal O\)</span></p></th>
+<tr class="row-odd"><th class="head text-center"><p>Complexité <span class="math notranslate nohighlight">\(\mathcal O\)</span></p></th>
 <th class="head text-center"><p>Type</p></th>
 </tr>
 </thead>
@@ -680,8 +685,8 @@ document.write(`
 </table>
 </div>
 </section>
-<section id="exemples-de-classes-de-complexite-pour-certains-algorithmes">
-<h2>Exemples de classes de complexité pour certains algorithmes<a class="headerlink" href="#exemples-de-classes-de-complexite-pour-certains-algorithmes" title="Link to this heading">#</a></h2>
+<section id="exemples-de-complexite-pour-certains-algorithmes">
+<h2>Exemples de complexité pour certains algorithmes<a class="headerlink" href="#exemples-de-complexite-pour-certains-algorithmes" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Algorithme</p></th>
@@ -719,6 +724,19 @@ document.write(`
 </tbody>
 </table>
 </div>
+</section>
+<section id="classes-de-complexite">
+<h2>Classes de complexité<a class="headerlink" href="#classes-de-complexite" title="Link to this heading">#</a></h2>
+<p>Une <strong>classe de complexité</strong> est un ensemble qui regroupe tous les programmes de même complexité. Les plus connues sont les classes <code class="docutils literal notranslate"><span class="pre">P</span></code> et <code class="docutils literal notranslate"><span class="pre">NP</span></code></p>
+<p>La grande différence réside dans la dualité : <strong>résolution</strong> (résoudre le problème avec l’algorithme) et <strong>vérification</strong> (vérifier qu’une solution est correcte).</p>
+<section id="classe-p">
+<h3>Classe <code class="docutils literal notranslate"><span class="pre">P</span></code><a class="headerlink" href="#classe-p" title="Link to this heading">#</a></h3>
+<p>Un problème se trouve dans la classe <code class="docutils literal notranslate"><span class="pre">P</span></code> s’il existe un algorithme de complexité <em>polynomial</em> par rapport à la taille de l’entrée <code class="docutils literal notranslate"><span class="pre">N</span></code> et qu’il est facile de vérifier qu’une solution en est une.</p>
+</section>
+<section id="classe-np">
+<h3>Classe <code class="docutils literal notranslate"><span class="pre">NP</span></code><a class="headerlink" href="#classe-np" title="Link to this heading">#</a></h3>
+<p>Un problème se trouve dans la classe <code class="docutils literal notranslate"><span class="pre">NP</span></code> s’il existe un algorithme de complexité <em>polynomial</em> par rapport à la taille de l’entrée <code class="docutils literal notranslate"><span class="pre">N</span></code> et qu’il est difficile de vérifier qu’une solution en est une.</p>
+</section>
 </section>
 <section id="exercices">
 <h2>Exercices<a class="headerlink" href="#exercices" title="Link to this heading">#</a></h2>
@@ -856,8 +874,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-cas-moyen">Le cas moyen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-de-complexite">Classes de complexité</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-classes-de-complexite-pour-certains-algorithmes">Exemples de classes de complexité pour certains algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">Complexité</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-complexite-pour-certains-algorithmes">Exemples de complexité pour certains algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-de-complexite">Classes de complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-p">Classe <code class="docutils literal notranslate"><span class="pre">P</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-np">Classe <code class="docutils literal notranslate"><span class="pre">NP</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correction-des-exercices">Correction des exercices</a></li>
 </ul>
