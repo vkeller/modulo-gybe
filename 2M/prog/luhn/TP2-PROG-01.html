@@ -326,6 +326,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-03.html">C2-STRAT-03 : Du langage naturel à l’algorithme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
 </ul>
@@ -557,9 +558,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#somme-de-controle-checksum">Somme de contrôle (checksum)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-d-une-carte-de-credit">Numéro d’une carte de crédit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-code-de-controle">Calcul du code de contrôle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorigramme">Exercice 1 (algorigramme)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-verificateur-de-cartes-de-credit">Exercice 2 (vérificateur de cartes de crédit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-generateur-de-cartes-de-credit">Exercice 3 (générateur de cartes de crédit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-avs">Exercice 4 (pour aller plus loin) : AVS</a></li>
 </ul>
             </nav>
         </div>
@@ -631,13 +633,13 @@ document.write(`
 <li><p>Si le résultat modulo 10 est égal à zéro, alors le numéro de carte de crédit est valide.</p></li>
 </ol>
 </section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<section id="exercice-1-algorigramme">
+<h2>Exercice 1 (algorigramme)<a class="headerlink" href="#exercice-1-algorigramme" title="Link to this heading">#</a></h2>
 <p>Dessinez l’algorigramme d’un algorithme permettant la vérification de la validité d’un numéro de carte de crédit</p>
 <p>Vous pouvez vous aider de la <a class="reference download internal" download="" href="../../../_downloads/936b7696e302de071f5ac878197c43f0/CheatSheet.pdf"><span class="xref download myst">feuille de triche</span></a></p>
 </section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<section id="exercice-2-verificateur-de-cartes-de-credit">
+<h2>Exercice 2 (vérificateur de cartes de crédit)<a class="headerlink" href="#exercice-2-verificateur-de-cartes-de-credit" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Ecrire un programme qui implémente l’algorithme de Luhn et vérifie la validité d’un numéro de carte de crédit donné</p></li>
 <li><p>Traduisez votre algorigramme en Python !</p></li>
@@ -650,9 +652,19 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
-<p>Sur la base de ce programme, écrire un nouveau programme qui génère un numéro de carte de crédit valide quelconque</p>
+<section id="exercice-3-generateur-de-cartes-de-credit">
+<h2>Exercice 3 (générateur de cartes de crédit)<a class="headerlink" href="#exercice-3-generateur-de-cartes-de-credit" title="Link to this heading">#</a></h2>
+<p>Sur la base de ce programme, écrire un nouveau programme qui génère un numéro de carte de crédit valide quelconque. Votre programme devra demander quel MII aura émis la carte: AmEx, Visa ou Master</p>
+</section>
+<section id="exercice-4-pour-aller-plus-loin-avs">
+<h2>Exercice 4 (pour aller plus loin) : AVS<a class="headerlink" href="#exercice-4-pour-aller-plus-loin-avs" title="Link to this heading">#</a></h2>
+<p>Le numéro AVS se compose des éléments suivants :</p>
+<ul class="simple">
+<li><p>Positions 1 à 3 : préfixe « 756 », codification du pays émetteur du numéro (Suisse) dans la norme ISO 3166-numeric. Ce préfixe est immuable, tous les numéros AVS émis débutent par « 756 » sans exception.</p></li>
+<li><p>Positions 4 à 12 : partie identificatrice du numéro : nombre entier sélectionné aléatoirement parmi ceux encore disponibles, dans l’intervalle entre 0 et 999’999’999</p></li>
+<li><p>Position 13 : chiffre de contrôle calculé sur les 12 premières positions selon la prescription en vigueur dans la norme EAN-13. Pour plus d’information : <a class="reference external" href="https://sozialversicherungen.admin.ch/fr/d/6938/download">Directives concernant le certificat d’assurance et le compte individuel</a> (D CA/CI), annexe 7 en page 95</p></li>
+</ul>
+<p>Implémentez l’algorithme de vérification d’un numéro AVS en Python. Votre numéro AVS se trouve sur votre carte d’assurance maladie</p>
 </section>
 </section>
 
@@ -724,9 +736,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#somme-de-controle-checksum">Somme de contrôle (checksum)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-d-une-carte-de-credit">Numéro d’une carte de crédit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-code-de-controle">Calcul du code de contrôle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorigramme">Exercice 1 (algorigramme)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-verificateur-de-cartes-de-credit">Exercice 2 (vérificateur de cartes de crédit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-generateur-de-cartes-de-credit">Exercice 3 (générateur de cartes de crédit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-pour-aller-plus-loin-avs">Exercice 4 (pour aller plus loin) : AVS</a></li>
 </ul>
   </nav></div>
 
