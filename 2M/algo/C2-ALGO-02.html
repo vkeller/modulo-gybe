@@ -326,6 +326,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../strategies/C2-STRAT-03.html">C2-STRAT-03 : Du langage naturel à l’algorithme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
 </ul>
@@ -620,7 +621,37 @@ document.write(`
 <section id="exemple">
 <h3>Exemple<a class="headerlink" href="#exemple" title="Link to this heading">#</a></h3>
 <p>Le graphique suivant décrit la fonction <span class="math notranslate nohighlight">\(f(x) = 1 + \frac{4 (x^2 -1)}{x^4}\)</span> (courbe rouge) et la droite asymptotique <span class="math notranslate nohighlight">\(g(x) = 1\)</span> (droite verte). On peut montrer avec l’analyse mathématique que lorsque <span class="math notranslate nohighlight">\(n \to \infty\)</span> alors la fonction <span class="math notranslate nohighlight">\(f(x)\)</span> tend vers <span class="math notranslate nohighlight">\(1\)</span>, On l’écrit par la formule : <span class="math notranslate nohighlight">\(\lim_{x \to \infty} f(x) = 1\)</span></p>
-<p><img alt="asymptote" src="../../_images/asymptote1.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">sig</span> <span class="o">=</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$f(x) = 1 + \frac{4 * x^</span><span class="si">{2}</span><span class="s2"> - 1}{x^</span><span class="si">{4}</span><span class="s2">}$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="approches-classiques">
