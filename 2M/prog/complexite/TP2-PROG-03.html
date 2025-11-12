@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -197,8 +197,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : codage de caractères</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : Opérations en binaire et en hexadécimal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : Opérations en binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : codage de caractères</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
@@ -240,6 +240,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> approfondissement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05-Turtle.html">TP1-PROG-05-Turtle - Les tests conditionnels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">TP1-PROG-05 - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-06.html">TP1-PROG-06: Les entrées-sorties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">TP1-PROG-07 - Les variables en Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">TP1-PROG-08 - Les listes (tableaux)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/files/TP1-PROG-09.html">TP1-PROG-09 - Les Files</a></li>
@@ -326,6 +327,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-03.html">C2-STRAT-03 : Du langage naturel à l’algorithme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
 </ul>
@@ -556,8 +558,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-de-recherche">Algorithmes de recherche</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-lineaire">Recherche linéaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">Recherche aléatoire avec remise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">Recherche aléatoire sans remise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique">Recherche dichotomique</a></li>
 </ul>
 </li>
@@ -565,7 +565,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-complexite-d-un-algorithme">Exercice 2 : Complexité d’un algorithme</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">Exercice 3 : Moyenne caractéristique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-comparaison-des-algorithmes">Exercice 4 : Comparaison des algorithmes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-4-algorithmes">Exercice 5 : Comportement asymptotique de la complexité des 4 algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-algorithmes">Exercice 5 : Comportement asymptotique de la complexité des algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin-2-nouveaux-algorithmes">Exercice 6 (pour aller plus loin) : 2 nouveaux algorithmes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">Recherche aléatoire avec remise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">Recherche aléatoire sans remise</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -583,11 +588,9 @@ document.write(`
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>être capable de comprendre plusieurs algorithmes différents pour le problème de la recherche d’un élément dans une liste triée</p>
+<li><p>être capable de comprendre plusieurs algorithmes différents pour le problème de la recherche d’un élément dans une liste triée comme :</p>
 <ul>
 <li><p>recherche linéaire</p></li>
-<li><p>recherche aléatoire sans remise</p></li>
-<li><p>recherche aléatoire avec remise</p></li>
 <li><p>recherche dichotomique</p></li>
 </ul>
 </li>
@@ -648,129 +651,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 17 : 18
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="recherche-aleatoire-avec-remise">
-<h3>Recherche aléatoire avec remise<a class="headerlink" href="#recherche-aleatoire-avec-remise" title="Link to this heading">#</a></h3>
-<p>L’algorithme est le suivant :</p>
-<ol class="arabic simple">
-<li><p>On choisi un nombre aléatoire qu’il faut rechercher: <code class="docutils literal notranslate"><span class="pre">atrouve</span></code></p></li>
-<li><p>On choisi un nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
-<li><p>tant que <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">!=</span> <span class="pre">atrouve</span></code> :</p>
-<ul class="simple">
-<li><p>si <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">==</span> <span class="pre">atrouve</span></code>, alors on arrête</p></li>
-<li><p>sinon, choisi un nouveau nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
-</ul>
-</li>
-</ol>
-<p>On note que cet algorithme peut faire ressortir plusieurs fois le même nombre aléatoire. C’est pourqoi il s’appelle <strong>recherche aléatoire avec remise</strong>.</p>
-<p>L’algorigramme est le suivant :</p>
-<p><img alt="RechercheAleatoireAvecRemise" src="../../../_images/RechercheAleatoireAvecRemise.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche aléatoire avec remise dans une liste triée commentée </span>
-<span class="c1"># Vincent Keller, 2023</span>
-<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-<span class="c1"># Input borneInf</span>
-<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># Input borneSup</span>
-<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
-<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># trouve est une variable de type booléen.</span>
-<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="c1"># On tire un nombre que l&#39;on assigne à la variable aleatoire</span>
-    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-    <span class="c1"># Si le nombre à trouver est égal au nombre aléatoire tiré, alors on sort de la boucle</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
-    <span class="c1"># On incrémente le nombre de comparaisons</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 71 : 223
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="recherche-aleatoire-sans-remise">
-<h3>Recherche aléatoire sans remise<a class="headerlink" href="#recherche-aleatoire-sans-remise" title="Link to this heading">#</a></h3>
-<p>L’algorithme est proche du précédent mais l’algorithme ne tire pas deux fois le même nombre</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche aléatoire sans remise commentée</span>
-<span class="c1"># On ne tire jamais le même nombre aléatoire à chaque itération</span>
-<span class="c1"># Vincent Keller, 2023</span>
-
-<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-
-<span class="c1"># Définition d&#39;une fonction qui retourne un nombre aléatoire qui n&#39;a jamais été tiré</span>
-<span class="c1"># Argument 1 : already : liste qui contient tous les nombres aléatoires déjà tirés</span>
-<span class="c1"># Argument 2 : bmin : borne inférieure pour la fonction randint</span>
-<span class="c1"># Argument 3 : bmax : borne supérieure pour la fonction randint</span>
-<span class="c1"># Return     : un nombre aléatoire jamais tiré auparavant</span>
-<span class="c1"># ATTENTION : CETTE FONCTION EST PARTICULIEREMENT COMPLEXE, VOUS N&#39;AVEZ PAS BESOIN D&#39;EN COMPRENDRE</span>
-<span class="c1"># TOUTES LES SUBTILITES</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">random_non_tire</span><span class="p">(</span><span class="n">already</span><span class="p">,</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">):</span>
-    <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">nontire</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="n">nontire</span> <span class="o">!=</span> <span class="kc">True</span> <span class="p">:</span>
-        <span class="n">aleat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">)</span>
-        <span class="n">tire</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">already</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="n">already</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">aleat</span> <span class="p">:</span>
-                <span class="n">tire</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">tire</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-            <span class="n">nontire</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="n">aleat</span>
-
-
-<span class="c1"># Input borneInf</span>
-<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># Input borneSup</span>
-<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
-<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># trouve est une variable de type booléen.</span>
-<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="c1"># deja_tire est une liste qui contient tous les nombres aléatoires déjà tirés</span>
-<span class="c1"># Initialisation à une liste vide</span>
-<span class="n">deja_tire</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>    
-    <span class="c1"># On tire un nombre jamais tiré que l&#39;on assigne à la variable aleatoire</span>
-    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random_non_tire</span><span class="p">(</span><span class="n">deja_tire</span><span class="p">,</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
-    <span class="c1"># Si le nombre à trouver est égal au nombre aléatoire tiré, alors on sort de la boucle</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
-    <span class="c1"># On incrémente le nombre de comparaisons</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="c1"># on ajoute le nombre à la liste des aléatoires déjà tirés</span>
-    <span class="n">deja_tire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
-<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 33 : 23
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 90 : 91
 </pre></div>
 </div>
 </div>
@@ -841,7 +722,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 34 : 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 96 : 5
 </pre></div>
 </div>
 </div>
@@ -856,8 +737,6 @@ document.write(`
 <p>Vous devriez vous retrouver avec 4 fichiers :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">recherche_lineaire.py</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recherche_aleatoire_sans_remise.py</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recherche_aleatoire_avec_remise.py</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recherche_dichotomique.py</span></code></p></li>
 </ul>
 </section>
@@ -885,7 +764,7 @@ document.write(`
 <p>Afin d’obtenir des grandeurs caractéristiques, il est utile d’obtenir différentes valeurs dont on prendra la moyenne.</p>
 <ul class="simple">
 <li><p>Pour chaque algorithme, écrivez une boucle qui calcule une moyenne de 10 nombres aléatoires à trouver</p></li>
-<li><p>Testez pour chacun des 4 algorithmes</p></li>
+<li><p>Testez pour chacun des 2 algorithmes</p></li>
 </ul>
 <p>Par exemple :</p>
 <div class="cell docutils container">
@@ -894,7 +773,10 @@ document.write(`
 <span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="c1"># initialiser l&#39;itérateur i à 0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Exécuter 10 fois le même algorithme de recherche</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
     <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -905,12 +787,14 @@ document.write(`
         <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">N</span>
+    <span class="c1"># Ajouter l&#39;incrémentation de l&#39;itérateur i !</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre moyen pour la recherche linéaire : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">somme</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 37.8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre moyen pour la recherche linéaire : 41.5
 </pre></div>
 </div>
 </div>
@@ -928,15 +812,13 @@ document.write(`
 <li><p>Dans un graphique Excel, notez toutes les valeurs sur 5 colonnes : <code class="docutils literal notranslate"><span class="pre">borneSup</span></code>, et les 4 <code class="docutils literal notranslate"><span class="pre">N</span></code> retournés pour chaque algorithme</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">N_lin</span></code> est la variable contenant le nombre de comparaisons pour la recherche linéaire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">N_ala</span></code> est la variable contenant le nombre de comparaisons pour la recherche aléatoire avec remise</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">N_als</span></code> est la variable contenant le nombre de comparaisons pour la recherche aléatoire sans remise</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">N_dic</span></code> est la variable contenant le nombre de comparaisons pour la recherche dichotomique</p></li>
 </ul>
 </li>
 </ul>
 </section>
-<section id="exercice-5-comportement-asymptotique-de-la-complexite-des-4-algorithmes">
-<h2>Exercice 5 : Comportement asymptotique de la complexité des 4 algorithmes<a class="headerlink" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-4-algorithmes" title="Link to this heading">#</a></h2>
+<section id="exercice-5-comportement-asymptotique-de-la-complexite-des-algorithmes">
+<h2>Exercice 5 : Comportement asymptotique de la complexité des algorithmes<a class="headerlink" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-algorithmes" title="Link to this heading">#</a></h2>
 <p>Le <strong>comportement asymptotique</strong> représente le comportement de la fonction mathématique décrivant la complexité d’un algorithme. Dans le pire des cas, c’est celui qui est décrit par la notation <em>Big O</em> ou <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>.</p>
 <p>Par exemple : <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> est un comportement linéaire, <span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span> est quadratique, <span class="math notranslate nohighlight">\(\mathcal{O}(n\log{}n)\)</span> est linéarithmique, etc..</p>
 <ul class="simple">
@@ -944,6 +826,137 @@ document.write(`
 <li><p>Si oui, lesquelles ?</p></li>
 <li><p>Sinon pourquoi ?</p></li>
 </ul>
+</section>
+<section id="exercice-6-pour-aller-plus-loin-2-nouveaux-algorithmes">
+<h2>Exercice 6 (pour aller plus loin) : 2 nouveaux algorithmes<a class="headerlink" href="#exercice-6-pour-aller-plus-loin-2-nouveaux-algorithmes" title="Link to this heading">#</a></h2>
+<p>Il existe deux autres algorithmes pour le problème de la recherche d’un élément dans une liste :</p>
+<ol class="arabic simple">
+<li><p>La recherche aléatoire avec remise</p></li>
+<li><p>La recherche aléatoire sans remise</p></li>
+</ol>
+<p>Suivez le même processus avec ces deux nouveaux algorithmes</p>
+<section id="recherche-aleatoire-avec-remise">
+<h3>Recherche aléatoire avec remise<a class="headerlink" href="#recherche-aleatoire-avec-remise" title="Link to this heading">#</a></h3>
+<p>L’algorithme est le suivant :</p>
+<ol class="arabic simple">
+<li><p>On choisi un nombre aléatoire qu’il faut rechercher: <code class="docutils literal notranslate"><span class="pre">atrouve</span></code></p></li>
+<li><p>On choisi un nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
+<li><p>tant que <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">!=</span> <span class="pre">atrouve</span></code> :</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">==</span> <span class="pre">atrouve</span></code>, alors on arrête</p></li>
+<li><p>sinon, choisi un nouveau nombre aléatoire : <code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>On note que cet algorithme peut faire ressortir plusieurs fois le même nombre aléatoire. C’est pourqoi il s’appelle <strong>recherche aléatoire avec remise</strong>.</p>
+<p>L’algorigramme est le suivant :</p>
+<p><img alt="RechercheAleatoireAvecRemise" src="../../../_images/RechercheAleatoireAvecRemise.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche aléatoire avec remise dans une liste triée commentée </span>
+<span class="c1"># Vincent Keller, 2023</span>
+<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="c1"># Input borneInf</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Input borneSup</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
+<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># trouve est une variable de type booléen.</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># On tire un nombre que l&#39;on assigne à la variable aleatoire</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="c1"># Si le nombre à trouver est égal au nombre aléatoire tiré, alors on sort de la boucle</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># On incrémente le nombre de comparaisons</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 85 : 34
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="recherche-aleatoire-sans-remise">
+<h3>Recherche aléatoire sans remise<a class="headerlink" href="#recherche-aleatoire-sans-remise" title="Link to this heading">#</a></h3>
+<p>L’algorithme est proche du précédent mais l’algorithme ne tire pas deux fois le même nombre</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recherche aléatoire sans remise commentée</span>
+<span class="c1"># On ne tire jamais le même nombre aléatoire à chaque itération</span>
+<span class="c1"># Vincent Keller, 2023</span>
+
+<span class="c1"># Importation de la bibliothèque random (nombres aléatoires)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Définition d&#39;une fonction qui retourne un nombre aléatoire qui n&#39;a jamais été tiré</span>
+<span class="c1"># Argument 1 : already : liste qui contient tous les nombres aléatoires déjà tirés</span>
+<span class="c1"># Argument 2 : bmin : borne inférieure pour la fonction randint</span>
+<span class="c1"># Argument 3 : bmax : borne supérieure pour la fonction randint</span>
+<span class="c1"># Return     : un nombre aléatoire jamais tiré auparavant</span>
+<span class="c1"># ATTENTION : CETTE FONCTION EST PARTICULIEREMENT COMPLEXE, VOUS N&#39;AVEZ PAS BESOIN D&#39;EN COMPRENDRE</span>
+<span class="c1"># TOUTES LES SUBTILITES</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">random_non_tire</span><span class="p">(</span><span class="n">already</span><span class="p">,</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nontire</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">nontire</span> <span class="o">!=</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">aleat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">bmin</span><span class="p">,</span><span class="n">bmax</span><span class="p">)</span>
+        <span class="n">tire</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">already</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">already</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">aleat</span> <span class="p">:</span>
+                <span class="n">tire</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">tire</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">nontire</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">aleat</span>
+
+
+<span class="c1"># Input borneInf</span>
+<span class="n">borneInf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Input borneSup</span>
+<span class="n">borneSup</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># variable atrouver : nombre aléatoire de type entier compris entre borneInf et borneSup (compris)</span>
+<span class="n">atrouver</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+<span class="c1"># N est la variable qui contiendra le nombre de comparaisons</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># trouve est une variable de type booléen.</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># deja_tire est une liste qui contient tous les nombres aléatoires déjà tirés</span>
+<span class="c1"># Initialisation à une liste vide</span>
+<span class="n">deja_tire</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Boucle &quot;tant que la variable trouve n&#39;est pas égale à True)</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">trouve</span><span class="o">!=</span><span class="kc">True</span><span class="p">):</span>    
+    <span class="c1"># On tire un nombre jamais tiré que l&#39;on assigne à la variable aleatoire</span>
+    <span class="n">aleatoire</span> <span class="o">=</span> <span class="n">random_non_tire</span><span class="p">(</span><span class="n">deja_tire</span><span class="p">,</span><span class="n">borneInf</span><span class="p">,</span><span class="n">borneSup</span><span class="p">)</span>
+    <span class="c1"># Si le nombre à trouver est égal au nombre aléatoire tiré, alors on sort de la boucle</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">aleatoire</span> <span class="o">==</span> <span class="n">atrouver</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">trouve</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># On incrémente le nombre de comparaisons</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># on ajoute le nombre à la liste des aléatoires déjà tirés</span>
+    <span class="n">deja_tire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleatoire</span><span class="p">)</span>
+<span class="c1"># Output : affichage du nombre à trouver et du nombre de comparaisons</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;opérations pour trouver &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">atrouver</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nombre d&#39;opérations pour trouver 82 : 72
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1014,8 +1027,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-de-recherche">Algorithmes de recherche</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-lineaire">Recherche linéaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">Recherche aléatoire avec remise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">Recherche aléatoire sans remise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique">Recherche dichotomique</a></li>
 </ul>
 </li>
@@ -1023,7 +1034,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-complexite-d-un-algorithme">Exercice 2 : Complexité d’un algorithme</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-moyenne-caracteristique">Exercice 3 : Moyenne caractéristique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-comparaison-des-algorithmes">Exercice 4 : Comparaison des algorithmes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-4-algorithmes">Exercice 5 : Comportement asymptotique de la complexité des 4 algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-comportement-asymptotique-de-la-complexite-des-algorithmes">Exercice 5 : Comportement asymptotique de la complexité des algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin-2-nouveaux-algorithmes">Exercice 6 (pour aller plus loin) : 2 nouveaux algorithmes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-avec-remise">Recherche aléatoire avec remise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-aleatoire-sans-remise">Recherche aléatoire sans remise</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
