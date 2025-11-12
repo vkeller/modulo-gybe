@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.linspace(0.8, 10, 100)
-sig =1 + 2*(x**(1/2) - x) / x**5
+#sig =1 + 2*(x**(1/2) - x) / x**5
+sig =np.cos(x)*np.cos(x)
 
 fig, ax = plt.subplots()
 ax.axhline(y=1.0, color="green", linestyle="--")
