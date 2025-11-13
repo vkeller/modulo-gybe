@@ -8,3 +8,4 @@ for i in range(taille):
         else:
             ligne = ligne+"O"
     print(ligne)
+    
