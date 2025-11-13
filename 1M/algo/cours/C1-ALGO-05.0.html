@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-ALGO-04 : Traces algorithmiques &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-ALGO-05.00 : Algorithmes classiques &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-04';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-05.0';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C1-ALGO-05 : L’horloge de la gare de St-Gallen" href="C1-ALGO-05.html" />
-    <link rel="prev" title="C1-ALGO-03 : Les jeux de Nim" href="C1-ALGO-03.html" />
+    <link rel="next" title="C1-ALGO-05.01 Algorithmes classiques (Recherche)" href="C1-ALGO-05.1.html" />
+    <link rel="prev" title="C1-ALGO-05 : L’horloge de la gare de St-Gallen" href="C1-ALGO-05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,9 +207,9 @@
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-02.html">C1-ALGO-02 : Des problèmes aux algorigrammes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-04 : Traces algorithmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-04.html">C1-ALGO-04 : Traces algorithmiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.html">C1-ALGO-05 : L’horloge de la gare de St-Gallen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.0.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-05.00 : Algorithmes classiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-06.html">C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
@@ -430,7 +430,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-04.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-05.0.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -460,7 +460,7 @@
       
       
       
-      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-04.ipynb" target="_blank"
+      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-05.0.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -544,7 +544,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-ALGO-04 : Traces algorithmiques</h1>
+    <h1>C1-ALGO-05.00 : Algorithmes classiques</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -555,18 +555,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traces-definition">Traces Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-pour-construire-une-trace">Méthodologie pour construire une trace</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-variables">1 : Identifier les variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-le-tableau">2 : construire le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remplir-le-tableau">4 : Remplir le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-boucles">5. Gérer les boucles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-de-la-coherence-globale">6. Vérification de la cohérence globale</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-algorithme-d-euclide">Exemple 1 : Algorithme d’Euclide</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres">Exercice 1 : Algorithme de la somme de deux nombres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-classiques-c-est-quoi">Algorithmes classiques : c’est quoi ?</a></li>
 </ul>
             </nav>
         </div>
@@ -578,246 +568,77 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="traces" src="../../../_images/traces.png" /></p>
-<p>(source : image générée par IA)</p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-04-traces-algorithmiques">
-<h1>C1-ALGO-04 : Traces algorithmiques<a class="headerlink" href="#c1-algo-04-traces-algorithmiques" title="Link to this heading">#</a></h1>
+  <p><img alt="BCU" src="../../../_images/BCU.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-05-00-algorithmes-classiques">
+<h1>C1-ALGO-05.00 : Algorithmes classiques<a class="headerlink" href="#c1-algo-05-00-algorithmes-classiques" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>comprendre les différentes étapes d’un algorithme avec un exemple d’entrée</p></li>
-<li><p>vérifier l’évolution des variables en suivant un algorigramme ou un programme informatique</p></li>
-<li><p>appliquer sur un exemple</p></li>
+<li><p>connaître quelques classes d’algorithmes classiques:</p>
+<ul>
+<li><p>algorithmes de tri</p></li>
+<li><p>algorithmes de recherche</p></li>
+</ul>
+</li>
 </ul>
 </section>
-<section id="traces-definition">
-<h2>Traces Définition<a class="headerlink" href="#traces-definition" title="Link to this heading">#</a></h2>
-<p>Une <strong>trace algorithmique</strong> (on parle aussi de <strong>trace d’exécution</strong>) est un tableau qui permet de suivre l’évolution des variables et les différentes étapes de l’exécution d’un algorithme, symbole après symbole pour un algorigramme, ligne par ligne pour un programme (ou un algorithme écrit en français).</p>
-<p>La trace permet de :</p>
-<ul class="simple">
-<li><p>comprendre l’algorithme en utilisant un exemple d’entrée(s)</p></li>
-<li><p>identifier d’éventuelles erreurs (bugs)</p></li>
-</ul>
-</section>
-<section id="methodologie-pour-construire-une-trace">
-<h2>Méthodologie pour construire une trace<a class="headerlink" href="#methodologie-pour-construire-une-trace" title="Link to this heading">#</a></h2>
-<p>La création d’une trace d’un algorithme se déroule en étapes.</p>
-<section id="identifier-les-variables">
-<h3>1 : Identifier les variables<a class="headerlink" href="#identifier-les-variables" title="Link to this heading">#</a></h3>
-<p>Repérer et identifier toutes les variables : entrées, sorties et variables internes à l’algorithme</p>
-</section>
-<section id="construire-le-tableau">
-<h3>2 : construire le tableau<a class="headerlink" href="#construire-le-tableau" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>la première colonne contient le numéro de chaque étape de l’algorithme</p></li>
-<li><p>la seconde colonne contient l’instruction (opération, action, etc..)</p></li>
-<li><p>ensuite, on ajoute une colonne par variable. Cela nous permettra de placer la valeur de chaque variable à chaque étape</p></li>
-</ul>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>variable1</p></th>
-<th class="head text-left"><p>variable2</p></th>
-<th class="head text-left"><p>variable3</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">
-<h3>3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)<a class="headerlink" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne" title="Link to this heading">#</a></h3>
-<p>Il s’agit d’exécuter <strong>mentalement</strong> chaque instruction <strong>dans l’ordre</strong> de la même façon que l’ordinateur.</p>
-<p>Pour chaque symbole ou ligne :</p>
-<ul class="simple">
-<li><p>si c’est une affectation (signe <code class="docutils literal notranslate"><span class="pre">=</span></code>) : changer la valeur de la variable correspondante</p></li>
-<li><p>si c’est un test/condition ou une boucle : tester la condition avec les valeurs actuelle (celles de la ligne précédente)</p></li>
-<li><p>si c’est une sortie, alors afficher la valeur actuelle</p></li>
-<li><p>si la valeur d’une variable est <strong>inconnue</strong>, alors on place <code class="docutils literal notranslate"><span class="pre">?</span></code></p></li>
-</ul>
-</section>
-<section id="remplir-le-tableau">
-<h3>4 : Remplir le tableau<a class="headerlink" href="#remplir-le-tableau" title="Link to this heading">#</a></h3>
-<p>Ajouter une ligne pour chaque symbole ou chaque instruction exécutée.</p>
-<ul class="simple">
-<li><p><strong>une instruction = une ligne</strong></p></li>
-<li><p>si une instruction est répétée (dans une boucle), alors elle représente plusieurs lignes dans la trace (autant que la boucle est répétée)</p></li>
-<li><p>après chaque affectation, mettre à jour <strong>immédiatement</strong> la valeur de la variable concernée.</p></li>
-</ul>
-</section>
-<section id="gerer-les-boucles">
-<h3>5. Gérer les boucles<a class="headerlink" href="#gerer-les-boucles" title="Link to this heading">#</a></h3>
-<p>C’est la seule exception : il faut vérifier <strong>avant d’entrer dans la boucle</strong> si la condition de sortie est remplie. Si la condition de sortie est <code class="docutils literal notranslate"><span class="pre">True</span></code>, alors il ne faut pas exécuter le bloc d’instruction de la boucle, si c’est <code class="docutils literal notranslate"><span class="pre">True</span></code>, alors on les exécute. A chaque tour de la boucle :</p>
-<ul class="simple">
-<li><p>exécuter le bloc d’instructions (une ligne par instruction)</p></li>
-<li><p>mettre à jour les variables</p></li>
-<li><p><strong>re-vérifier</strong> la condition de sortie à chaque exécution du bloc d’instructions</p></li>
-</ul>
-</section>
-<section id="verification-de-la-coherence-globale">
-<h3>6. Vérification de la cohérence globale<a class="headerlink" href="#verification-de-la-coherence-globale" title="Link to this heading">#</a></h3>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Être capable de programmer un ordinateur requiert deux éléments importants :</p>
 <ol class="arabic simple">
-<li><p>Toutes les instructions ont-elles été exécutée (l’une n’a-t-elle pas été oubliée ?)</p></li>
-<li><p>y a-t-il une seule instruction par ligne</p></li>
-<li><p>toutes les variables ont-elles été définies ?</p></li>
-<li><p>la condition de sortie des boucles sont-elles atteintes ?</p></li>
-<li><p>la sortie est-elle cohérente ?</p></li>
+<li><p>Maîtriser un langage de programmation (par exemple Python)</p></li>
+<li><p>Avoir une connaissance des algorithmes classiques</p></li>
 </ol>
+<p>Par <strong>algorithme classique</strong> on entend des classes d’algorithmes qui ont été décrit il y a longtemps (parfois plusieurs siècles) et qui sont reconnus comme étant <strong>la meilleure solution pour un problème donné</strong> (voir <a class="reference internal" href="C1-ALGO-04.html"><span class="std std-doc">C1-ALGO-04</span></a>)</p>
+<p>La <strong>meilleure solution</strong> peut signifier celle qui prendra <em>le moins de temps</em> ou celle qui utilisera <em>le moins de mémoire de l’ordinateur</em> (ou toute autre métrique). On parle alors de <strong>complexité des algorithmes</strong>.</p>
 </section>
-</section>
-<section id="exemple-1-algorithme-d-euclide">
-<h2>Exemple 1 : Algorithme d’Euclide<a class="headerlink" href="#exemple-1-algorithme-d-euclide" title="Link to this heading">#</a></h2>
-<p>Construisons la trace de l’algorithme de recherche du <code class="docutils literal notranslate"><span class="pre">PGDC</span></code> de deux nombres entiers <code class="docutils literal notranslate"><span class="pre">m</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span></code> d’Euclide.</p>
-<p><img alt="Euclide" src="../../../_images/euclide.png" /></p>
-<p>En suivant la méthodologie :</p>
+<section id="algorithmes-classiques-c-est-quoi">
+<h2>Algorithmes classiques : c’est quoi ?<a class="headerlink" href="#algorithmes-classiques-c-est-quoi" title="Link to this heading">#</a></h2>
+<p>Un algorithme <strong>classique</strong> est un algorithme qui peut être écrit dans un langage de programmation et exécuté sur un ordinateur classique. Il possède les caractéristiques suivantes :</p>
 <ol class="arabic simple">
-<li><p>Les variables sont : <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, et <code class="docutils literal notranslate"><span class="pre">PGDC</span></code></p></li>
-<li><p>Le tableau à remplir est le suivant :</p></li>
+<li><p>il doit toujours se terminer après un nombre fini d’étapes</p></li>
+<li><p>chaque étape d’un algorithme doit être définie précisément, les actions à mener doivent être spécifiées rigoureusement et sans ambigüité pour chaque cas</p></li>
+<li><p>un algorithme a des entrées, zéro ou plus, quantités qui lui sont données avant ou pendant son exécution</p></li>
+<li><p>un algorithme a une ou plusieurs sorties, quantités qui ont une relation spécifiée avec les entrées</p></li>
+<li><p>les instructions doivent être suffisament basiques pour pouvoir être en principe exécutées de manière exacte, en un temps fini par une personne utilisant un papier et un crayon.</p></li>
 </ol>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>m</p></th>
-<th class="head text-left"><p>n</p></th>
-<th class="head text-left"><p>r</p></th>
-<th class="head text-left"><p>PGDC</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>l’algorigramme est lu en choisissant un exemple d’entrée.</p></li>
-<li><p>Remplissons le tableau avec - par exemple - les entrées : <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">30</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">21</span></code> :</p></li>
+<p>On peut donner une liste d’algorithmes classiques :</p>
+<ol class="arabic simple">
+<li><p>Algorithmes de recherche</p>
+<ul class="simple">
+<li><p>recherche dichotomique</p></li>
+</ul>
+</li>
+<li><p>Algorithmes de tri</p>
+<ul class="simple">
+<li><p>tri par sélection</p></li>
+<li><p>tri à bulle</p></li>
+<li><p>tri rapide</p></li>
+<li><p>etc…</p></li>
+</ul>
+</li>
+<li><p>Algorithmes de graphes (sur des structures de graphes)</p>
+<ul class="simple">
+<li><p>Problème du voyageur de commerce</p></li>
+<li><p>Plus court chemin</p></li>
+</ul>
+</li>
+<li><p>Algorithmes mathématiques</p>
+<ul class="simple">
+<li><p>suite de Fibonacci</p></li>
+<li><p>Euclide</p></li>
+</ul>
+</li>
+<li><p>Algorithmes dans le domaine de l’informatique pure</p>
+<ul class="simple">
+<li><p>cryptographie</p></li>
+<li><p>musique électronique</p></li>
+<li><p>génétiques</p></li>
+<li><p>analyse léxicale, syntaxique, sémantique</p></li>
+</ul>
+</li>
 </ol>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>m</p></th>
-<th class="head text-left"><p>n</p></th>
-<th class="head text-left"><p>r</p></th>
-<th class="head text-left"><p>PGDC</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p>(input) <code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>2</p></td>
-<td class="text-left"><p>(input) <code class="docutils literal notranslate"><span class="pre">n</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>4</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>5</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>6</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">r</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>7</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>8</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>10</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">r</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>11</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>12</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>13</p></td>
-<td class="text-left"><p>(output) <code class="docutils literal notranslate"><span class="pre">PGDC</span> <span class="pre">==</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p>3</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="exercice-1-algorithme-de-la-somme-de-deux-nombres">
-<h2>Exercice 1 : Algorithme de la somme de deux nombres<a class="headerlink" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres" title="Link to this heading">#</a></h2>
-<p>Etablissez la trace de l’algorithme suivant avec les entrées <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">4</span></code> :</p>
-<p><img alt="somme" src="../../../_images/somme.png" /></p>
-<p><strong>Question :</strong> Que contient la variable A ?</p>
+<p>Nous allons concentrer notre survol des algorithmes classiques sur les deux premiers : <strong>algorithmes de recherche</strong> et <strong>algorithmes de tri</strong></p>
 </section>
 </section>
 
@@ -852,20 +673,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C1-ALGO-03.html"
+       href="C1-ALGO-05.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C1-ALGO-03 : Les jeux de Nim</p>
+        <p class="prev-next-title">C1-ALGO-05 : L’horloge de la gare de St-Gallen</p>
       </div>
     </a>
     <a class="right-next"
-       href="C1-ALGO-05.html"
+       href="C1-ALGO-05.1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-ALGO-05 : L’horloge de la gare de St-Gallen</p>
+        <p class="prev-next-title">C1-ALGO-05.01 Algorithmes classiques (Recherche)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -886,18 +707,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traces-definition">Traces Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-pour-construire-une-trace">Méthodologie pour construire une trace</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-variables">1 : Identifier les variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-le-tableau">2 : construire le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remplir-le-tableau">4 : Remplir le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-boucles">5. Gérer les boucles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-de-la-coherence-globale">6. Vérification de la cohérence globale</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-algorithme-d-euclide">Exemple 1 : Algorithme d’Euclide</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres">Exercice 1 : Algorithme de la somme de deux nombres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-classiques-c-est-quoi">Algorithmes classiques : c’est quoi ?</a></li>
 </ul>
   </nav></div>
 

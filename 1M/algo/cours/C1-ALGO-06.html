@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-ALGO-06 : Algorithmes évolutionnistes &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm) &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -205,20 +205,21 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Algorithmique</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-02.html">C1-ALGO-02 : Des algorithmes aux algorigrammes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-02.html">C1-ALGO-02 : Des problèmes aux algorigrammes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-04.html">C1-ALGO-04 : Caractéristiques des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-04.html">C1-ALGO-04 : Traces algorithmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.html">C1-ALGO-05 : L’horloge de la gare de St-Gallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.0.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-06 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-07.html">C1-ALGO-07 : Des algorigrammes à leur programmation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-08.html">C1-ALGO-08 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-09.html">C1-ALGO-09 : L’horloge de la gare de St-Gallen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-14.html">C1-ALGO-14 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-15.html">C1-ALGO-15 : Caractéristiques des algorithmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
 
@@ -543,7 +544,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-ALGO-06 : Algorithmes évolutionnistes</h1>
+    <h1>C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -554,16 +555,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-evolutionnistes">Algorithmes évolutionnistes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-genetiques">Algorithmes génétiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialisation">Initialisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Sélection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historique">Historique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-du-jour-du-jugement-dernier">Algorithme du Jour du Jugement dernier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-determiner-la-balise-du-siecle">Etape 1 : Déterminer la balise du siècle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-calculer-le-jour-cle-de-l-annee">Etape 2 : Calculer le jour-clé de l’année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">Etape 3 : Choisir un jour-pivot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-annee-bisextile">Algorithme : année bisextile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#janvier-1967">18 janvier 1967</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemein">Résoudre le problème du plus cours chemein</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
             </nav>
         </div>
@@ -575,72 +576,213 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="darwin" src="../../../_images/darwin.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-06-algorithmes-evolutionnistes">
-<h1>C1-ALGO-06 : Algorithmes évolutionnistes<a class="headerlink" href="#c1-algo-06-algorithmes-evolutionnistes" title="Link to this heading">#</a></h1>
+  <p><img alt="doomsday" src="../../../_images/doomsday.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-06-algorithme-du-jugement-dernier-doomsday-algorithm">
+<h1>C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)<a class="headerlink" href="#c1-algo-06-algorithme-du-jugement-dernier-doomsday-algorithm" title="Link to this heading">#</a></h1>
 <section id="objectifs-pedagogiques">
 <h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Appliquer un algorithme décrit par un algorigramme</p></li>
+<li><p>Dessiner un algorigramme sur la base d’un algorithme écrit en français</p></li>
+</ol>
+</section>
+<section id="historique">
+<h2>Historique<a class="headerlink" href="#historique" title="Link to this heading">#</a></h2>
+<p>L’algorithme du jour du Jugement dernier, ou méthode des jours-pivots, ou méthode du clavedi, ou méthode de Conway (en anglais : Doomsday rule ou Doomsday algorithm), est une méthode de calcul du jour de la semaine correspondant à une date précise. Cet algorithme fut élaboré à l’origine par John Horton Conway (1937-2020), célèbre mathématicien britannique connu notamment pour être l’inventeur du Jeu de la vie.</p>
+</section>
+<section id="algorithme-du-jour-du-jugement-dernier">
+<h2>Algorithme du Jour du Jugement dernier<a class="headerlink" href="#algorithme-du-jour-du-jugement-dernier" title="Link to this heading">#</a></h2>
+<p>Il se déroule en trois étapes :</p>
+<ol class="arabic simple">
+<li><p><strong>Etape 1 :</strong> Déterminer la balise du siècle</p></li>
+<li><p><strong>Etape 2 :</strong> Calculer le jour-clé de l’année</p></li>
+<li><p><strong>Etape 3 :</strong> Choisir le jour-pivot</p></li>
+</ol>
+<p>Pour la troisième étape, il s’agit d’avoir un sous-algorithme qui renvoie <strong>Vrai</strong> si l’année considérée est <strong>bisextile</strong></p>
+</section>
+<section id="etape-1-determiner-la-balise-du-siecle">
+<h2>Etape 1 : Déterminer la balise du siècle<a class="headerlink" href="#etape-1-determiner-la-balise-du-siecle" title="Link to this heading">#</a></h2>
+<p>Le cycle des dates et des jours de semaine du calendrier grégorien se reproduit à l’identique tous les 4 siècles</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Siècles</p></th>
+<th class="head text-center"><p>1600<br>2000<br>2400<br>…<br></p></th>
+<th class="head text-center"><p>1700<br>2100<br>2500<br>…<br></p></th>
+<th class="head text-center"><p>1800<br>2200<br>2600<br>…<br></p></th>
+<th class="head text-center"><p>1900<br>2300<br>2700<br>…<br></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>Balise du siècle</strong></p></td>
+<td class="text-center"><p><strong>2</strong></p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p><strong>5</strong></p></td>
+<td class="text-center"><p><strong>3</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="etape-2-calculer-le-jour-cle-de-l-annee">
+<h2>Etape 2 : Calculer le jour-clé de l’année<a class="headerlink" href="#etape-2-calculer-le-jour-cle-de-l-annee" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Appréhender certains algorithmes évolutionnistes</p></li>
-<li><p>Appliquer un algorithme génétique à un problème</p></li>
+<li><p>l’année est donnée par ses deux derniers chiffres</p></li>
+<li><p>le calcul se fait selon l’algorithme décrit par l’algorigramme suivant</p></li>
+</ul>
+<p><img alt="doomsday" src="../../../_images/doomsday_2.png" /></p>
+<p>Le chiffre obtenu à la fin de l’algorithme est un jour de semaine</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Chiffre</p></th>
+<th class="head text-left"><p>Jour</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Dimanche</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Lundi</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Mardi</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>3</p></td>
+<td class="text-left"><p>Mercredi</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>4</p></td>
+<td class="text-left"><p>Jeudi</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5</p></td>
+<td class="text-left"><p>Vendredi</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>6</p></td>
+<td class="text-left"><p>Samedi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="etape-3-choisir-un-jour-pivot">
+<h2>Etape 3 : Choisir un jour-pivot<a class="headerlink" href="#etape-3-choisir-un-jour-pivot" title="Link to this heading">#</a></h2>
+<p>Avant de choisir le jour-pivot, il s’agit de déterminer si l’année considérée est ordinaire ou bisextile</p>
+</section>
+<section id="algorithme-annee-bisextile">
+<h2>Algorithme : année bisextile<a class="headerlink" href="#algorithme-annee-bisextile" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>SI l’année est un multiple de 4 alors elle est bisextile</p>
+<ul>
+<li><p>SAUF si l’année est divisible par 100 MAIS pas par 400</p></li>
+</ul>
+</li>
+<li><p>SINON elle n’est pas bisextile</p></li>
+</ul>
+<p><img alt="bisextile" src="../../../_images/annee-bissextile.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annee</span> <span class="o">=</span> <span class="mi">1964</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">4</span> != 0) :
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">100</span> != 0) :
+        <span class="k">if</span> <span class="p">(</span><span class="n">annee</span><span class="o">%</span><span class="k">400</span> != 0) :
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; n&#39;est pas une année bisextile&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; est une année bisextile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1964 est une année bisextile
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une fois le jour-clé déterminé, on choisit un jour proche de celui recherché selon le tableau suivant. Il permettra de calculer facilement le jour de la semaine correspondant à la date recherchée.</p>
+<p><em>Remarque</em> Si le jour-clé est un mardi, toutes les dates du tableau pour l’année considérée sont aussi un mardi.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p></p></th>
+<th class="head text-center"><p>Janvier</p></th>
+<th class="head text-center"><p>Février</p></th>
+<th class="head text-center"><p>Mars</p></th>
+<th class="head text-center"><p>Avril</p></th>
+<th class="head text-center"><p>Mai</p></th>
+<th class="head text-center"><p>Juin</p></th>
+<th class="head text-center"><p>Juillet</p></th>
+<th class="head text-center"><p>Août</p></th>
+<th class="head text-center"><p>Septembre</p></th>
+<th class="head text-center"><p>Octobre</p></th>
+<th class="head text-center"><p>Novembre</p></th>
+<th class="head text-center"><p>Décembre</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>Ordinaire</strong></p></td>
+<td class="text-center"><p><strong>10</strong></p></td>
+<td class="text-center"><p><strong>28</strong></p></td>
+<td class="text-center"><p><strong>14</strong></p></td>
+<td class="text-center"><p><strong>4</strong></p></td>
+<td class="text-center"><p><strong>9</strong></p></td>
+<td class="text-center"><p><strong>6</strong></p></td>
+<td class="text-center"><p><strong>11</strong></p></td>
+<td class="text-center"><p><strong>8</strong></p></td>
+<td class="text-center"><p><strong>5</strong></p></td>
+<td class="text-center"><p><strong>10</strong></p></td>
+<td class="text-center"><p><strong>7</strong></p></td>
+<td class="text-center"><p><strong>12</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>Bisextile</strong></p></td>
+<td class="text-center"><p><strong>11</strong></p></td>
+<td class="text-center"><p><strong>29</strong></p></td>
+<td class="text-center"><p><strong>14</strong></p></td>
+<td class="text-center"><p><strong>4</strong></p></td>
+<td class="text-center"><p><strong>9</strong></p></td>
+<td class="text-center"><p><strong>6</strong></p></td>
+<td class="text-center"><p><strong>11</strong></p></td>
+<td class="text-center"><p><strong>8</strong></p></td>
+<td class="text-center"><p><strong>5</strong></p></td>
+<td class="text-center"><p><strong>10</strong></p></td>
+<td class="text-center"><p><strong>7</strong></p></td>
+<td class="text-center"><p><strong>12</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Link to this heading">#</a></h2>
+<section id="janvier-1967">
+<h3>18 janvier 1967<a class="headerlink" href="#janvier-1967" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Etape 1</strong></p>
+<ul>
+<li><p>1900 correspond à la balise du siècle <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Etape 2</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">67</span></code> est impair, donc <code class="docutils literal notranslate"><span class="pre">67</span> <span class="pre">+</span> <span class="pre">11</span> <span class="pre">=</span> <span class="pre">78</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">78</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">39</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">39</span></code> est impair donc <code class="docutils literal notranslate"><span class="pre">39</span> <span class="pre">+</span> <span class="pre">11</span> <span class="pre">=</span> <span class="pre">50</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">6</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(6+3)</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">9</span> <span class="pre">modulo</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> le jour-clé de l’année est un mardi</p></li>
+</ul>
+</li>
+<li><p><strong>Etape 3</strong></p>
+<ul>
+<li><p>1967 est une année ordinaire</p></li>
+<li><p>le 10 janvier (jour-pivot) est un mardi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">+</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">17</span></code> est aussi un mardi. Le <code class="docutils literal notranslate"><span class="pre">18</span></code> est donc un mercredi</p></li>
+</ul>
+</li>
 </ul>
 </section>
-<section id="definition">
-<h2>Définition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
-<p>Les algorithmes évolutionnistes sont une classe d’algorithmes qui s’inspirent de la <strong>théorie de l’évolution</strong> de Charles Darwin. Cette classe d’algorithmes utilisent des processus qui imitent <strong>le vivant</strong>, notamment les trois grands mécanismes des êtres vivants :</p>
-<ol class="arabic simple">
-<li><p>la reproduction</p></li>
-<li><p>la mutation</p></li>
-<li><p>la recombinaison</p></li>
-</ol>
-<p>Selon la théorie de l’évolution, sur une population donnée d’individus tous différents, ceux qui ont unt chance de transmettre leurs caractéristiques sont ceux qui sont les mieux adaptés à leur environnement.</p>
-<p>En algorithmique évolutionniste, un <em>individu</em> est une <strong>solution possible</strong>.</p>
-<p>La très grande difficulté de ces algorithmes est la capacité que doit avoir le processus pour <strong>évaluer la qualité</strong> d’une solution. Cela se fait grâce à une <strong>fonction d’objectif</strong> (<em>fitness function</em> en anglais)</p>
-</section>
-<section id="algorithmes-evolutionnistes">
-<h2>Algorithmes évolutionnistes<a class="headerlink" href="#algorithmes-evolutionnistes" title="Link to this heading">#</a></h2>
-<p>il existe plusieurs classes d’algorithmes évolutionnistes</p>
-<ol class="arabic simple">
-<li><p>les stratégies d’évolution</p></li>
-<li><p>les algorithmes génétiques</p></li>
-</ol>
-</section>
-<section id="algorithmes-genetiques">
-<h2>Algorithmes génétiques<a class="headerlink" href="#algorithmes-genetiques" title="Link to this heading">#</a></h2>
-<p>Les algorithmes génétiques s’inspirent des mécanismes de la <strong>génétique</strong> et particulièrement ceux liés à l’Acide désoxyribonucléique (<strong>ADN</strong>). La théorie de l’évolution considère que la majorité des caractéristiques d’un être vivant est contenue dans la double hélice de l’ADN.</p>
-<p><img alt="ADN" src="../../../_images/ADN.png" /></p>
-<p>Voici un algorigramme d’un algorithme génétique :</p>
-<p><img alt="algogen" src="../../../_images/algorigramme_genetique.png" /></p>
-<section id="initialisation">
-<h3>Initialisation<a class="headerlink" href="#initialisation" title="Link to this heading">#</a></h3>
-<p>Création de la population initiale. Chaque élément est un critère</p>
-</section>
-<section id="selection">
-<h3>Sélection<a class="headerlink" href="#selection" title="Link to this heading">#</a></h3>
-<p>Ici on sélectionne les différents individus. Il existe plusieurs méthodes pour sélectionner un individu parmi deux :</p>
-<ol class="arabic simple">
-<li><p>la roulette (le hasard pur)</p></li>
-<li><p>la roulette biaisée</p></li>
-<li><p>Un tournoi entre les deux</p></li>
-<li><p>l’élitisme (on sélectionne que le meilleur)</p></li>
-<li><p>Un mixe</p></li>
-</ol>
-</section>
-</section>
-<section id="algorithme-genetique-simple">
-<h2>Algorithme génétique simple<a class="headerlink" href="#algorithme-genetique-simple" title="Link to this heading">#</a></h2>
-<p>Dans cet exemple, nous souhaitons trouver la chaîne de bits ayant le plus de <code class="docutils literal notranslate"><span class="pre">1</span></code> pour une longueur fixe donnée.</p>
-</section>
-<section id="resoudre-le-probleme-du-plus-cours-chemein">
-<h2>Résoudre le problème du plus cours chemein<a class="headerlink" href="#resoudre-le-probleme-du-plus-cours-chemein" title="Link to this heading">#</a></h2>
-</section>
-<section id="references">
-<h2>Références<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Charles Darwin, <em>On the Origin of Species by Means of Natural Selection}</em>, 1859 : <span id="id1">[<a class="reference internal" href="../../../biblio.html#id8" title="Charles Darwin. On the Origin of Species by Means of Natural Selection. Murray, London, 1859. or the Preservation of Favored Races in the Struggle for Life.">Darwin, 1859</a>]</span></p></li>
-<li><p>David Goldberg, <em>Genetic Algorithms in Search, Optimization, and Machine Learning</em> , 1989 : <span id="id2">[<a class="reference internal" href="../../../biblio.html#id9" title="David E. Goldberg. Genetic Algorithms in Search, Optimization, and Machine Learning. Addison-Wesley, New York, 1989.">Goldberg, 1989</a>]</span></p></li>
-<li><p>homas Vallée, Murat Yildizoglu, <em>Présentation des algorithmes génétiques et de leurs applications en économie</em>, 2004, <span id="id3">[<a class="reference internal" href="../../../biblio.html#id10" title="Murat Yildizoglu Thomas Vallée. Présentation des algorithmes génétiques et de leurs applications en économie. Revue d’économie politique, 114:711-745, 2004.">Thomas Vallée, 2004</a>]</span></p></li>
-</ul>
 </section>
 </section>
 
@@ -709,16 +851,16 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-evolutionnistes">Algorithmes évolutionnistes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-genetiques">Algorithmes génétiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialisation">Initialisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Sélection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historique">Historique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-du-jour-du-jugement-dernier">Algorithme du Jour du Jugement dernier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-determiner-la-balise-du-siecle">Etape 1 : Déterminer la balise du siècle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-calculer-le-jour-cle-de-l-annee">Etape 2 : Calculer le jour-clé de l’année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-choisir-un-jour-pivot">Etape 3 : Choisir un jour-pivot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-annee-bisextile">Algorithme : année bisextile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#janvier-1967">18 janvier 1967</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemein">Résoudre le problème du plus cours chemein</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
   </nav></div>
 

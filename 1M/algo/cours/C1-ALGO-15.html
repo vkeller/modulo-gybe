@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-ALGO-04 : Traces algorithmiques &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-ALGO-15 : Caractéristiques des algorithmes &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -57,11 +57,13 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-04';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-15';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C1-ALGO-05 : L’horloge de la gare de St-Gallen" href="C1-ALGO-05.html" />
-    <link rel="prev" title="C1-ALGO-03 : Les jeux de Nim" href="C1-ALGO-03.html" />
+    <link rel="next" title="R1-ALGO-01 - révision" href="R1-ALGO-01.html" />
+    <link rel="prev" title="C1-ALGO-14 : Algorithmes évolutionnistes" href="C1-ALGO-14.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,7 +209,7 @@
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-02.html">C1-ALGO-02 : Des problèmes aux algorigrammes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-04 : Traces algorithmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-04.html">C1-ALGO-04 : Traces algorithmiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.html">C1-ALGO-05 : L’horloge de la gare de St-Gallen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.0.html">C1-ALGO-05.00 : Algorithmes classiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
@@ -219,7 +221,7 @@
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-14.html">C1-ALGO-14 : Algorithmes évolutionnistes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-15.html">C1-ALGO-15 : Caractéristiques des algorithmes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-15 : Caractéristiques des algorithmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
 
@@ -430,7 +432,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-04.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-15.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -460,7 +462,7 @@
       
       
       
-      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-04.ipynb" target="_blank"
+      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-15.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -544,7 +546,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-ALGO-04 : Traces algorithmiques</h1>
+    <h1>C1-ALGO-15 : Caractéristiques des algorithmes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -554,19 +556,31 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traces-definition">Traces Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-pour-construire-une-trace">Méthodologie pour construire une trace</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-variables">1 : Identifier les variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-le-tableau">2 : construire le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remplir-le-tableau">4 : Remplir le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-boucles">5. Gérer les boucles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-de-la-coherence-globale">6. Vérification de la cohérence globale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-introductif-algorithme-de-recherche-trouver-un-nombre-entre-1-et-128">Exemple introductif (algorithme de recherche) : trouver un nombre entre 1 et 128</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-joue">On joue ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dichotomie">Dichotomie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heuristique">Heuristique ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">Remarques</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordres-de-grandeur">Ordres de grandeur</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-algorithme-d-euclide">Exemple 1 : Algorithme d’Euclide</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres">Exercice 1 : Algorithme de la somme de deux nombres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-du-plus-grand-nombre-dans-une-liste-non-triee">Recherche du plus grand nombre dans une liste non triée</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-exemple-introductif-algorithmes-de-tri">Second exemple introductif : Algorithmes de tri</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plus-grand-nombre-dans-la-liste-non-triee">Plus grand nombre dans la liste non-triée ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plus-grand-nombre-dans-la-liste-triee">Plus grand nombre dans la liste triée ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-off-trier-ou-ne-pas-trier-telle-est-la-question">Trade-off : trier ou ne pas trier, telle est la question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-algorithmique">Convergence algorithmique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-complexite-en-temps-et-en-espace-d-un-algorithme">Définitions : Complexité en temps et en espace d’un algorithme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-temporelle">Complexité temporelle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-spatiale">Complexité spatiale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meilleur-et-pire-des-cas-ordre-de-grandeur-asymptotique">Meilleur et pire des cas : ordre de grandeur asymptotique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-de-complexite-des-algorithmes">Classe de complexité des algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ressources-supplementaires">Ressources supplémentaires</a></li>
 </ul>
             </nav>
         </div>
@@ -578,246 +592,189 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="traces" src="../../../_images/traces.png" /></p>
-<p>(source : image générée par IA)</p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-04-traces-algorithmiques">
-<h1>C1-ALGO-04 : Traces algorithmiques<a class="headerlink" href="#c1-algo-04-traces-algorithmiques" title="Link to this heading">#</a></h1>
-<section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+  <p><img alt="complexite" src="../../../_images/complexite.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-15-caracteristiques-des-algorithmes">
+<h1>C1-ALGO-15 : Caractéristiques des algorithmes<a class="headerlink" href="#c1-algo-15-caracteristiques-des-algorithmes" title="Link to this heading">#</a></h1>
+<p>Dans ce cours, nous utilisons des exemples introductifs des deux grandes classes d’algorithmes classiques : recherche et tri pour dériver les concepts de complexité, de convergence et de condition d’arrêt</p>
+<section id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>comprendre les différentes étapes d’un algorithme avec un exemple d’entrée</p></li>
-<li><p>vérifier l’évolution des variables en suivant un algorigramme ou un programme informatique</p></li>
-<li><p>appliquer sur un exemple</p></li>
+<li><p>les élèves abordent les principales caractéristiques des algorithmes avec des exemples simples:</p>
+<ul>
+<li><p>convergence</p></li>
+<li><p>condition d’arrêt</p></li>
+<li><p>complexité temporelle (et la notation “Big O”)</p></li>
+<li><p>complexité spatiale</p></li>
+<li><p>adéquation d’un algorithme avec le problème à résoudre</p></li>
+</ul>
+</li>
 </ul>
 </section>
-<section id="traces-definition">
-<h2>Traces Définition<a class="headerlink" href="#traces-definition" title="Link to this heading">#</a></h2>
-<p>Une <strong>trace algorithmique</strong> (on parle aussi de <strong>trace d’exécution</strong>) est un tableau qui permet de suivre l’évolution des variables et les différentes étapes de l’exécution d’un algorithme, symbole après symbole pour un algorigramme, ligne par ligne pour un programme (ou un algorithme écrit en français).</p>
-<p>La trace permet de :</p>
+<section id="exemple-introductif-algorithme-de-recherche-trouver-un-nombre-entre-1-et-128">
+<h2>Exemple introductif (algorithme de recherche) : trouver un nombre entre 1 et 128<a class="headerlink" href="#exemple-introductif-algorithme-de-recherche-trouver-un-nombre-entre-1-et-128" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>comprendre l’algorithme en utilisant un exemple d’entrée(s)</p></li>
-<li><p>identifier d’éventuelles erreurs (bugs)</p></li>
+<li><p>liste triée</p></li>
+<li><p>comment trouver un nombre ?</p></li>
+</ul>
+<section id="on-joue">
+<h3>On joue ?<a class="headerlink" href="#on-joue" title="Link to this heading">#</a></h3>
+</section>
+<section id="dichotomie">
+<h3>Dichotomie<a class="headerlink" href="#dichotomie" title="Link to this heading">#</a></h3>
+<p><img alt="dicho" src="../../../_images/dicho.png" /></p>
+</section>
+<section id="heuristique">
+<h3>Heuristique ?<a class="headerlink" href="#heuristique" title="Link to this heading">#</a></h3>
+<p>Une <strong>heuristique</strong> est un élément qui permet d’aider à la découverte. De manière générale, il s’agit de la partie de la science qui a pour objet les procédures de recherche et de découverte</p>
+<p>Si on a une connaissance <strong>en amont</strong>, on peut l’utiliser pour accélérer la recherche. Par exemple :</p>
+<ul class="simple">
+<li><p><em>Le nombre à trouver est le plus grand</em></p></li>
+<li><p><em>le nombre à trouver se trouve entre 65 et 78</em></p></li>
 </ul>
 </section>
-<section id="methodologie-pour-construire-une-trace">
-<h2>Méthodologie pour construire une trace<a class="headerlink" href="#methodologie-pour-construire-une-trace" title="Link to this heading">#</a></h2>
-<p>La création d’une trace d’un algorithme se déroule en étapes.</p>
-<section id="identifier-les-variables">
-<h3>1 : Identifier les variables<a class="headerlink" href="#identifier-les-variables" title="Link to this heading">#</a></h3>
-<p>Repérer et identifier toutes les variables : entrées, sorties et variables internes à l’algorithme</p>
-</section>
-<section id="construire-le-tableau">
-<h3>2 : construire le tableau<a class="headerlink" href="#construire-le-tableau" title="Link to this heading">#</a></h3>
+<section id="remarques">
+<h3>Remarques<a class="headerlink" href="#remarques" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>la première colonne contient le numéro de chaque étape de l’algorithme</p></li>
-<li><p>la seconde colonne contient l’instruction (opération, action, etc..)</p></li>
-<li><p>ensuite, on ajoute une colonne par variable. Cela nous permettra de placer la valeur de chaque variable à chaque étape</p></li>
+<li><p>La liste <strong>doit</strong> être triée</p></li>
+<li><p>Deux algorithmes différents amènent au <strong>même résultat</strong> mais avec des temps pour trouver la solution <strong>différents</strong></p></li>
+<li><p>Il s’agit-là d’une première approche de la <strong>complexité d’un algorithme</strong></p></li>
 </ul>
+</section>
+<section id="ordres-de-grandeur">
+<h3>Ordres de grandeur<a class="headerlink" href="#ordres-de-grandeur" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>variable1</p></th>
-<th class="head text-left"><p>variable2</p></th>
-<th class="head text-left"><p>variable3</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Tri</p></th>
+<th class="head text-left"><p>temps</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
+<tr class="row-even"><td class="text-left"><p>Méthode naïve</p></td>
+<td class="text-left"><p>linéaire : si on double la taille de la liste, alors on double le temps</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Dichotomie</p></td>
+<td class="text-left"><p>logarithmique : à chaque étape, on divise par deux le nombre d’élèments</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">
-<h3>3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)<a class="headerlink" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne" title="Link to this heading">#</a></h3>
-<p>Il s’agit d’exécuter <strong>mentalement</strong> chaque instruction <strong>dans l’ordre</strong> de la même façon que l’ordinateur.</p>
-<p>Pour chaque symbole ou ligne :</p>
+</section>
+<section id="recherche-du-plus-grand-nombre-dans-une-liste-non-triee">
+<h2>Recherche du plus grand nombre dans une liste non triée<a class="headerlink" href="#recherche-du-plus-grand-nombre-dans-une-liste-non-triee" title="Link to this heading">#</a></h2>
+<p>Que se passe-t-il si la liste n’est pas triée ?</p>
 <ul class="simple">
-<li><p>si c’est une affectation (signe <code class="docutils literal notranslate"><span class="pre">=</span></code>) : changer la valeur de la variable correspondante</p></li>
-<li><p>si c’est un test/condition ou une boucle : tester la condition avec les valeurs actuelle (celles de la ligne précédente)</p></li>
-<li><p>si c’est une sortie, alors afficher la valeur actuelle</p></li>
-<li><p>si la valeur d’une variable est <strong>inconnue</strong>, alors on place <code class="docutils literal notranslate"><span class="pre">?</span></code></p></li>
+<li><p>doit-on la trier ? Comment la trier ?</p></li>
+<li><p>autre méthode ?</p></li>
 </ul>
 </section>
-<section id="remplir-le-tableau">
-<h3>4 : Remplir le tableau<a class="headerlink" href="#remplir-le-tableau" title="Link to this heading">#</a></h3>
-<p>Ajouter une ligne pour chaque symbole ou chaque instruction exécutée.</p>
-<ul class="simple">
-<li><p><strong>une instruction = une ligne</strong></p></li>
-<li><p>si une instruction est répétée (dans une boucle), alors elle représente plusieurs lignes dans la trace (autant que la boucle est répétée)</p></li>
-<li><p>après chaque affectation, mettre à jour <strong>immédiatement</strong> la valeur de la variable concernée.</p></li>
-</ul>
+<section id="second-exemple-introductif-algorithmes-de-tri">
+<h2>Second exemple introductif : Algorithmes de tri<a class="headerlink" href="#second-exemple-introductif-algorithmes-de-tri" title="Link to this heading">#</a></h2>
+<p>Soit une liste <strong>non triée</strong>, comment la trier pour effectuer dans un second temps une recherche sur celle-ci ?</p>
+<p><code class="docutils literal notranslate"><span class="pre">6609;9449;3597;1345;1349;5898;8298;3427;4014;2967;4167;2244;8035;</span></code>
+<code class="docutils literal notranslate"><span class="pre">7232;4382;5799;2977;5882;2534;2052;78;7679;1258;8717;3227;5960;315;</span></code>
+<code class="docutils literal notranslate"><span class="pre">1334;7320;2659;5503;7275;4699;9926;4621;120;8939;3876;4322;3671;611;</span></code>
+<code class="docutils literal notranslate"><span class="pre">5947;6181;30;7634;5884;2208;7626;5954;5949;2543;5388;457;221;6649;3129;</span></code>
+<code class="docutils literal notranslate"><span class="pre">8879;8022;3065;1072;8738;9586;9171;4423;3921;1774;2140;9150;5636;1207;</span></code>
+<code class="docutils literal notranslate"><span class="pre">3082;7159;7897;9707;1758;524;7789;81121;1281;1373;1131;3883;8550;5890;</span></code>
+<code class="docutils literal notranslate"><span class="pre">3569;3301;9334 ;934;9488;9014;9939;6133</span></code></p>
+<section id="plus-grand-nombre-dans-la-liste-non-triee">
+<h3>Plus grand nombre dans la liste non-triée ?<a class="headerlink" href="#plus-grand-nombre-dans-la-liste-non-triee" title="Link to this heading">#</a></h3>
+<p>Il est obligatoire de parcourir l’ensemble des éléments de la liste et de les comparer. On utilise deux <strong>variables</strong> : l’élément à comparer et le plus grand au moment de la comparaison</p>
 </section>
-<section id="gerer-les-boucles">
-<h3>5. Gérer les boucles<a class="headerlink" href="#gerer-les-boucles" title="Link to this heading">#</a></h3>
-<p>C’est la seule exception : il faut vérifier <strong>avant d’entrer dans la boucle</strong> si la condition de sortie est remplie. Si la condition de sortie est <code class="docutils literal notranslate"><span class="pre">True</span></code>, alors il ne faut pas exécuter le bloc d’instruction de la boucle, si c’est <code class="docutils literal notranslate"><span class="pre">True</span></code>, alors on les exécute. A chaque tour de la boucle :</p>
-<ul class="simple">
-<li><p>exécuter le bloc d’instructions (une ligne par instruction)</p></li>
-<li><p>mettre à jour les variables</p></li>
-<li><p><strong>re-vérifier</strong> la condition de sortie à chaque exécution du bloc d’instructions</p></li>
-</ul>
-</section>
-<section id="verification-de-la-coherence-globale">
-<h3>6. Vérification de la cohérence globale<a class="headerlink" href="#verification-de-la-coherence-globale" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Toutes les instructions ont-elles été exécutée (l’une n’a-t-elle pas été oubliée ?)</p></li>
-<li><p>y a-t-il une seule instruction par ligne</p></li>
-<li><p>toutes les variables ont-elles été définies ?</p></li>
-<li><p>la condition de sortie des boucles sont-elles atteintes ?</p></li>
-<li><p>la sortie est-elle cohérente ?</p></li>
-</ol>
+<section id="plus-grand-nombre-dans-la-liste-triee">
+<h3>Plus grand nombre dans la liste triée ?<a class="headerlink" href="#plus-grand-nombre-dans-la-liste-triee" title="Link to this heading">#</a></h3>
+<p>Il suffit de prendre le dernier, quelque soit la taille de la liste.</p>
 </section>
 </section>
-<section id="exemple-1-algorithme-d-euclide">
-<h2>Exemple 1 : Algorithme d’Euclide<a class="headerlink" href="#exemple-1-algorithme-d-euclide" title="Link to this heading">#</a></h2>
-<p>Construisons la trace de l’algorithme de recherche du <code class="docutils literal notranslate"><span class="pre">PGDC</span></code> de deux nombres entiers <code class="docutils literal notranslate"><span class="pre">m</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span></code> d’Euclide.</p>
-<p><img alt="Euclide" src="../../../_images/euclide.png" /></p>
-<p>En suivant la méthodologie :</p>
-<ol class="arabic simple">
-<li><p>Les variables sont : <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, et <code class="docutils literal notranslate"><span class="pre">PGDC</span></code></p></li>
-<li><p>Le tableau à remplir est le suivant :</p></li>
-</ol>
+<section id="trade-off-trier-ou-ne-pas-trier-telle-est-la-question">
+<h2>Trade-off : trier ou ne pas trier, telle est la question<a class="headerlink" href="#trade-off-trier-ou-ne-pas-trier-telle-est-la-question" title="Link to this heading">#</a></h2>
+<p>Est-il possible de trouver un compromis entre la recherche dans une liste non-triée ou le tri puis la recherche dans la liste triée en termes de temps de calcul et de quantité de mémoire nécessaires ?</p>
+</section>
+<section id="convergence-algorithmique">
+<h2>Convergence algorithmique<a class="headerlink" href="#convergence-algorithmique" title="Link to this heading">#</a></h2>
+<p>Un algorithme devrait toujours arriver à une solution. On dit alors qu’il <strong>converge</strong> lorsqu’une métrique spécifique ne varie plus.</p>
+</section>
+<section id="definitions-complexite-en-temps-et-en-espace-d-un-algorithme">
+<h2>Définitions : Complexité en temps et en espace d’un algorithme<a class="headerlink" href="#definitions-complexite-en-temps-et-en-espace-d-un-algorithme" title="Link to this heading">#</a></h2>
+<p>La <strong>complexité</strong> d’un algorithme représente la quantité de <strong>ressources nécessaires</strong> pour exécuter l’ensemble des instructions en fonction de l’entrée fournie (en fonction de la <strong>TAILLE</strong> du problème). Cette <strong>complexité</strong> se donne en <strong>temps</strong> ou en <strong>espace</strong> (quantité de mémoire nécessaire).</p>
+<p>Par convention, on exprime la taille du problème avec la lettre <code class="docutils literal notranslate"><span class="pre">n</span></code> et on donne l’ordre de grandeur asymptotique de la fonction.</p>
+<section id="complexite-temporelle">
+<h3>Complexité temporelle<a class="headerlink" href="#complexite-temporelle" title="Link to this heading">#</a></h3>
+<p>La <strong>complexité temporelle</strong> d’un algorithme est une fonction de la taille de l’entrée et qui exprime le temps d’exécution d’un algorithme. Exemple : si on a un élément à rechercher dans une liste de 1000, combien de temps cela prendra pour une liste de 2000.</p>
+</section>
+<section id="complexite-spatiale">
+<h3>Complexité spatiale<a class="headerlink" href="#complexite-spatiale" title="Link to this heading">#</a></h3>
+<p>La <strong>complexité spatiale</strong> d’un algorithme est une fonction de la taille de l’entrée et qui exprime la quantité de mémoire nécessaire à l’exécution d’un algorithme.</p>
+</section>
+<section id="meilleur-et-pire-des-cas-ordre-de-grandeur-asymptotique">
+<h3>Meilleur et pire des cas : ordre de grandeur asymptotique<a class="headerlink" href="#meilleur-et-pire-des-cas-ordre-de-grandeur-asymptotique" title="Link to this heading">#</a></h3>
+<p>Le comportement de la complexité (temporelle et spatiale) peut s’analyser dans le pire des cas.</p>
+<p><strong>L’asymptote</strong> est une courbe qui approche une autre sans jamais l’atteindre (du grec <code class="docutils literal notranslate"><span class="pre">a</span></code> exclusif et <code class="docutils literal notranslate"><span class="pre">symptote</span></code> rencontre).</p>
+<p><img alt="asymptote" src="../../../_images/asymptote.png" /></p>
+<p><strong>L’ordre de grandeur asymptotique</strong> de la complexité d’un algorithme est donc le pire des cas et celui qui ne sera jamais atteint.</p>
+</section>
+</section>
+<section id="classe-de-complexite-des-algorithmes">
+<h2>Classe de complexité des algorithmes<a class="headerlink" href="#classe-de-complexite-des-algorithmes" title="Link to this heading">#</a></h2>
+<p>L’ordre de grandeur asymptotique s’écrit avec la notation dites <strong>Grand O</strong> (<strong>Big O</strong> en anglais).</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>m</p></th>
-<th class="head text-left"><p>n</p></th>
-<th class="head text-left"><p>r</p></th>
-<th class="head text-left"><p>PGDC</p></th>
+<tr class="row-odd"><th class="head text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}{()}\)</span></p></th>
+<th class="head text-center"><p>classe</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span></p></td>
+<td class="text-center"><p>constante</p></td>
 </tr>
-</tbody>
-</table>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>l’algorigramme est lu en choisissant un exemple d’entrée.</p></li>
-<li><p>Remplissons le tableau avec - par exemple - les entrées : <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">30</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">21</span></code> :</p></li>
-</ol>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p><strong>N°</strong></p></th>
-<th class="head text-left"><p>instruction</p></th>
-<th class="head text-left"><p>m</p></th>
-<th class="head text-left"><p>n</p></th>
-<th class="head text-left"><p>r</p></th>
-<th class="head text-left"><p>PGDC</p></th>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(log(n))\)</span></p></td>
+<td class="text-center"><p>logarithmique</p></td>
 </tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p>(input) <code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span></p></td>
+<td class="text-center"><p>linéaire</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>2</p></td>
-<td class="text-left"><p>(input) <code class="docutils literal notranslate"><span class="pre">n</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot log(n))\)</span></p></td>
+<td class="text-center"><p>quasi-linéaire</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span></p></td>
+<td class="text-center"><p>quadratique</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>4</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
-<td class="text-left"><p>30</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(n^3)\)</span></p></td>
+<td class="text-center"><p>cubique</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>5</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(2^n)\)</span></p></td>
+<td class="text-center"><p>exponentielle</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>6</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">r</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>7</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>8</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
-<td class="text-left"><p>21</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>9</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>10</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">r</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>11</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">%</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>12</p></td>
-<td class="text-left"><p>condition <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">==</span> <span class="pre">0</span></code> : <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>13</p></td>
-<td class="text-left"><p>(output) <code class="docutils literal notranslate"><span class="pre">PGDC</span> <span class="pre">==</span> <span class="pre">n</span></code></p></td>
-<td class="text-left"><p>9</p></td>
-<td class="text-left"><p>3</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p>3</p></td>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\mathcal{O}(n!)\)</span></p></td>
+<td class="text-center"><p>factorielle</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="exercice-1-algorithme-de-la-somme-de-deux-nombres">
-<h2>Exercice 1 : Algorithme de la somme de deux nombres<a class="headerlink" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres" title="Link to this heading">#</a></h2>
-<p>Etablissez la trace de l’algorithme suivant avec les entrées <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">5</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">4</span></code> :</p>
-<p><img alt="somme" src="../../../_images/somme.png" /></p>
-<p><strong>Question :</strong> Que contient la variable A ?</p>
+<section id="ressources-supplementaires">
+<h2>Ressources supplémentaires<a class="headerlink" href="#ressources-supplementaires" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;kPRA0W1kECg&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="960"
+            height="540"
+            src="https://www.youtube.com/embed/kPRA0W1kECg"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
 </section>
 
@@ -852,20 +809,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C1-ALGO-03.html"
+       href="C1-ALGO-14.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C1-ALGO-03 : Les jeux de Nim</p>
+        <p class="prev-next-title">C1-ALGO-14 : Algorithmes évolutionnistes</p>
       </div>
     </a>
     <a class="right-next"
-       href="C1-ALGO-05.html"
+       href="R1-ALGO-01.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-ALGO-05 : L’horloge de la gare de St-Gallen</p>
+        <p class="prev-next-title">R1-ALGO-01 - révision</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -885,19 +842,31 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traces-definition">Traces Définition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-pour-construire-une-trace">Méthodologie pour construire une trace</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-variables">1 : Identifier les variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-le-tableau">2 : construire le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-l-algorithme-symbole-par-symbole-ou-ligne-par-ligne">3 : Lire l’algorithme symbole par symbole (ou ligne par ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remplir-le-tableau">4 : Remplir le tableau</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-boucles">5. Gérer les boucles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-de-la-coherence-globale">6. Vérification de la cohérence globale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-introductif-algorithme-de-recherche-trouver-un-nombre-entre-1-et-128">Exemple introductif (algorithme de recherche) : trouver un nombre entre 1 et 128</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-joue">On joue ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dichotomie">Dichotomie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heuristique">Heuristique ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">Remarques</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordres-de-grandeur">Ordres de grandeur</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-algorithme-d-euclide">Exemple 1 : Algorithme d’Euclide</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-algorithme-de-la-somme-de-deux-nombres">Exercice 1 : Algorithme de la somme de deux nombres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-du-plus-grand-nombre-dans-une-liste-non-triee">Recherche du plus grand nombre dans une liste non triée</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-exemple-introductif-algorithmes-de-tri">Second exemple introductif : Algorithmes de tri</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plus-grand-nombre-dans-la-liste-non-triee">Plus grand nombre dans la liste non-triée ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plus-grand-nombre-dans-la-liste-triee">Plus grand nombre dans la liste triée ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-off-trier-ou-ne-pas-trier-telle-est-la-question">Trade-off : trier ou ne pas trier, telle est la question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-algorithmique">Convergence algorithmique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-complexite-en-temps-et-en-espace-d-un-algorithme">Définitions : Complexité en temps et en espace d’un algorithme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-temporelle">Complexité temporelle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-spatiale">Complexité spatiale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meilleur-et-pire-des-cas-ordre-de-grandeur-asymptotique">Meilleur et pire des cas : ordre de grandeur asymptotique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-de-complexite-des-algorithmes">Classe de complexité des algorithmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ressources-supplementaires">Ressources supplémentaires</a></li>
 </ul>
   </nav></div>
 
