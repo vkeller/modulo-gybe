@@ -31,16 +31,18 @@ parts:
       - file: 1M/algo/cours/C1-ALGO-03
       - file: 1M/algo/cours/C1-ALGO-04
       - file: 1M/algo/cours/C1-ALGO-05
+      - file: 1M/algo/cours/C1-ALGO-05.0
       - file: 1M/algo/cours/C1-ALGO-05.1
       - file: 1M/algo/cours/C1-ALGO-05.2
       - file: 1M/algo/cours/C1-ALGO-06
       - file: 1M/algo/cours/C1-ALGO-07
       - file: 1M/algo/cours/C1-ALGO-08
-      - file: 1M/algo/cours/C1-ALGO-09
       - file: 1M/algo/cours/C1-ALGO-10
       - file: 1M/algo/cours/C1-ALGO-11
       - file: 1M/algo/cours/C1-ALGO-12
       - file: 1M/algo/cours/C1-ALGO-13
+      - file: 1M/algo/cours/C1-ALGO-14
+      - file: 1M/algo/cours/C1-ALGO-15
       - file: 1M/algo/cours/R1-ALGO-01
       - file: 1M/algo/cours/R1-ALGO-02
       - file: 1M/algo/cours/R1-ALGO-03
