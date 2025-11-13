@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>C1-ALGO-10 - Introduction à la cryptologie &#8212; Education Numérique Ecole de maturité</title>
+    <title>C1-ALGO-07.01 Algorithmes classiques (Recherche) &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -57,13 +57,11 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-10';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-07.1';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="C1-ALGO-11 : Les tests conditionnels" href="C1-ALGO-11.html" />
-    <link rel="prev" title="C1-ALGO-05.02 Algorithmes classiques (Tri)" href="C1-ALGO-07.2.html" />
+    <link rel="next" title="C1-ALGO-05.02 Algorithmes classiques (Tri)" href="C1-ALGO-07.2.html" />
+    <link rel="prev" title="C1-ALGO-07.00 : Algorithmes classiques" href="C1-ALGO-07.0.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -213,9 +211,9 @@
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-05.html">C1-ALGO-05 : L’horloge de la gare de St-Gallen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-06.html">C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-07.0.html">C1-ALGO-07.00 : Algorithmes classiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-07.1.html">C1-ALGO-05.01 Algorithmes classiques (Recherche)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-07.01 Algorithmes classiques (Recherche)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-07.2.html">C1-ALGO-05.02 Algorithmes classiques (Tri)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">C1-ALGO-10 - Introduction à la cryptologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
@@ -431,7 +429,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-10.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/algo/cours/C1-ALGO-07.1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -461,7 +459,7 @@
       
       
       
-      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-10.ipynb" target="_blank"
+      <li><a href="../../../_sources/1M/algo/cours/C1-ALGO-07.1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -545,7 +543,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>C1-ALGO-10 - Introduction à la cryptologie</h1>
+    <h1>C1-ALGO-07.01 Algorithmes classiques (Recherche)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -555,44 +553,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-cryptographie-c-est-quoi">La cryptographie c’est quoi ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-cryptanalyse-c-est-quoi">La cryptanalyse c’est quoi ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quelques-reperes-historiques">Quelques repères historiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dans-l-antiquite">Dans l’Antiquité</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#du-moyen-age-a-la-premiere-guerre-mondiale">Du Moyen-Âge à la première guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-guerre-mondiale">Première guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seconde-guerre-mondiale">Seconde guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#periode-moderne">Période moderne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-de-recherche">Algorithmes de recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-sequentielle">Recherche séquentielle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique">Recherche dichotomique</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-de-la-cryptographie">Caractéristiques de la cryptographie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographie-symetrique">Cryptographie symétrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-clef-secrete">La clef secrète</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-kerckhoffs">Principe de Kerckhoffs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-symetriques-modernes">Principaux algorithmes symétriques modernes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographie-asymetrique">Cryptographie asymétrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-analogie-du-coffre-fort">L’analogie du coffre-fort</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-base-comment-cela-peut-fonctionner">Principe de base : comment cela peut fonctionner ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chiffrement-et-dechiffrement">Chiffrement et déchiffrement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisations-majeures">Utilisations majeures</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-algorithmes-asymetriques">Exemples d’algorithmes asymétriques</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-mots-de-passe-fonction-de-hachage-cryptographique">Les mots de passe : fonction de hachage cryptographique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-algorithmes-de-hachage">Exemples d’algorithmes de hachage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptanalyse">Cryptanalyse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-brute">Force brute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attaque-par-dictionnaire">Attaque par dictionnaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-frequentielle">Analyse fréquentielle</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-pour-aller-plus-loin">Références pour aller plus loin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-retenir">A retenir</a></li>
 </ul>
             </nav>
         </div>
@@ -604,236 +570,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="colossus" src="../../../_images/colossus.jpg" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-10-introduction-a-la-cryptologie">
-<h1>C1-ALGO-10 - Introduction à la cryptologie<a class="headerlink" href="#c1-algo-10-introduction-a-la-cryptologie" title="Link to this heading">#</a></h1>
-<p><strong>Cryptologie = cryptographie + cryptanalyse</strong></p>
-<section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>connaître le contexte historique et l’émergence de l’informatique</p></li>
-<li><p>connaître les deux axes de la cryptologie:</p>
+  <p><img alt="search" src="../../../_images/aiguille.jpg" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="c1-algo-07-01-algorithmes-classiques-recherche">
+<h1>C1-ALGO-07.01 Algorithmes classiques (Recherche)<a class="headerlink" href="#c1-algo-07-01-algorithmes-classiques-recherche" title="Link to this heading">#</a></h1>
+<section id="algorithmes-de-recherche">
+<h2>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Link to this heading">#</a></h2>
+<p>Un <strong>algorithme de recherche</strong> consiste à trouver une <strong>cible</strong> parmi une liste d’éléments. Par exemple : la liste est : <code class="docutils literal notranslate"><span class="pre">[1,4,67,34,109,69,23]</span></code> et la cible <code class="docutils literal notranslate"><span class="pre">69</span></code>.</p>
+<p>Les algorithmes de recherche peuvent se classer en deux catégories:</p>
 <ol class="arabic simple">
-<li><p>la cryptographie</p></li>
-<li><p>la cryptanalyse</p></li>
+<li><p>Recherche dans des problèmes classiques</p></li>
+<li><p>Recherche dans des problèmes complexes</p></li>
 </ol>
-</li>
-<li><p>comprendre les deux types de cryptographie:</p>
-<ul>
-<li><p>symétrique</p></li>
-<li><p>assymétrique</p></li>
-</ul>
-</li>
-<li><p>appliquer les concepts sur un exercice de cryptographie symétrique</p></li>
-<li><p>déduire les enjeux sociaux de la cryptologie</p></li>
-</ul>
-<p><strong>Durée : 2 périodes</strong></p>
+<p>S’agissant des <strong>problèmes complexes</strong>, les solutions dépassent le cadre de ce cours</p>
+<section id="recherche-sequentielle">
+<h3>Recherche séquentielle<a class="headerlink" href="#recherche-sequentielle" title="Link to this heading">#</a></h3>
+<p>La recherche linéaire consiste à parcourir chaque élément de la liste et le comparer à la cible.</p>
 </section>
-<section id="la-cryptographie-c-est-quoi">
-<h2>La cryptographie c’est quoi ?<a class="headerlink" href="#la-cryptographie-c-est-quoi" title="Link to this heading">#</a></h2>
-<p>La cryptographie est l’une des deux branches de la <strong>cryptologie</strong> (l’autre étant la cryptanalyse), la <em>science du secret</em>. La cryprographie s’attache aux techniques permettant de protéger des messages en les rendant illisibles à un éventuel attaquant qui ne connaîtrait pas le <strong>secret</strong>.</p>
-<p>Le terme <strong>cryptographie</strong> a pour origine deux mots du Grec ancien : <em>crypto</em> qui signifie <strong>caché</strong> et <em>graphein</em> qui signifie <strong>écrire</strong>. C’est donc la science des écritures cachées.</p>
-<p>Le but de la cryptographie est donc d’assurer la sécurité des communications transmises sur un canal <strong>public</strong> en présence d’adversaires.</p>
-<p><img alt="crypto" src="../../../_images/crypto.jpg" /></p>
-<p>Dans le monde de la cryptographie, on utilise souvent des personnages fictifs :</p>
-<ol class="arabic simple">
-<li><p><strong>Alice</strong> qui souhaite envoyer un message à</p></li>
-<li><p><strong>Bob</strong> pendant que</p></li>
-<li><p><strong>Mallaury</strong>, le méchant, essaie de le décrypter</p></li>
-</ol>
-<p><img alt="Alice" src="../../../_images/alice.jpg" /></p>
-<p>On a donc trois briques de base dans la cryptographie :</p>
+<section id="recherche-dichotomique">
+<h3>Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Link to this heading">#</a></h3>
+<p>La recherche dichotomique consiste à rechercher la cible dans la liste <strong>triée</strong> en divisant la liste par deux et en comparant la cible avec les deux éléments bornes des sous-listes. Si la cible est égale, l’algorithme s’arrête, sinon la recherche continue sur les moitiés de sous-listes.</p>
+</section>
+</section>
+<section id="a-retenir">
+<h2>A retenir<a class="headerlink" href="#a-retenir" title="Link to this heading">#</a></h2>
+<p>Le <strong>meilleur algorithme</strong> pour rechercher une cible :</p>
 <ul class="simple">
-<li><p>un <strong>texte clair</strong></p></li>
-<li><p>un <strong>texte chiffré</strong> (ou <strong>texte caché</strong>)</p></li>
-<li><p>un <strong>secret</strong> qui permet de passer de l’un à l’autre</p></li>
-</ul>
-</section>
-<section id="la-cryptanalyse-c-est-quoi">
-<h2>La cryptanalyse c’est quoi ?<a class="headerlink" href="#la-cryptanalyse-c-est-quoi" title="Link to this heading">#</a></h2>
-<p>La <strong>cryptanalyse</strong> est l’ensemble des techniques, méthodes et algorithmes qui permettent de retrouver le texte clair à partir du texte chiffré sans connaissance du <strong>secret</strong></p>
-</section>
-<section id="quelques-reperes-historiques">
-<h2>Quelques repères historiques<a class="headerlink" href="#quelques-reperes-historiques" title="Link to this heading">#</a></h2>
-<p>Depuis l’Antiquité, les humains ont cherché à protéger leurs communications. Les raisons étaients militaires, sociales ou même économiques.</p>
-<section id="dans-l-antiquite">
-<h3>Dans l’Antiquité<a class="headerlink" href="#dans-l-antiquite" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>~XVIème siècle avant JC</strong> : premier document chiffré : une tablette d’argile retrouvée en Irak sur laquelle un potier avait inscrit sa recette secrète en supprimant les consonnes et en modifiant l’orthographe de certains mots</p></li>
-<li><p><strong>~VIIème siècle avant JC</strong> : la technique dite <strong>Grecque</strong>. Les Grecs utilisaient une <em>scytale</em> (ou bâton de Plutarque), soit un morceau de bois sur lequel s’enroule une bandelette de cuir ou de papier et sur lequel on écrit un texte. En le déroulant, le message devient incompréhensible
-<img alt="scytale" src="../../../_images/scytale.png" /></p></li>
-<li><p><strong>~Vème siècle avant JC</strong> : les Hébreux utilisent une cryptographie par <strong>substitution</strong> : elle consiste à remplacer chaque lettre du texte clair par une autre lettre de l’alphabet : A devient Z, B devient Y, etc..</p></li>
-<li><p><strong>Ier siècle avant JC</strong> : Le code de César. Chaque lettre du texte clair est remplacée par une lettre décalée sur l’alphabet. Cette méthode est facilement cassable par une <strong>analyse de fréquence</strong>, mais les Romains comptaient sur le <strong>faible taux d’alphabétisation</strong> de l’Empire (ou de la République) pour garder les secrets.</p></li>
-</ul>
-</section>
-<section id="du-moyen-age-a-la-premiere-guerre-mondiale">
-<h3>Du Moyen-Âge à la première guerre mondiale<a class="headerlink" href="#du-moyen-age-a-la-premiere-guerre-mondiale" title="Link to this heading">#</a></h3>
-<p>Durant cette longue période, le taux d’alphabétisation augmente et les techniques de chiffrement se perfectionnent. On citera</p>
-<ul class="simple">
-<li><p><strong>IXème siècle</strong> : le savant arabe Al-Kindi décrit pour la première fois la technique de <strong>l’analyse de fréquence</strong> comme méthode de cassage</p></li>
-<li><p><strong>1467</strong> : le savant Italien Leon Battista Alberti expose pour la première fois le chiffrement polyalphabétique : chaque lettre du texte clair est remplacée par une autre de l’alphabet  et changer plusieurs fois l’alphabet de substitution à l’aide d’un disque à chiffrer. Cette méthode rend caduque l’analyse de fréquence</p></li>
-<li><p><strong>1586</strong> : le <strong>chiffre de Vigenère</strong> du nom d’un diplomate français est une technique qui permet de chiffrer un texte clair à l’aide d’une clef (un secret sous la forme d’un mot) par substitution polyalphabétique (un tableau 2D des lettres de l’alphabet) qui peut produire la même lettre chiffrée à partir de deux lettres claires distinctes</p></li>
-<li><p><strong>XIXème siècle</strong> : l’arrivée du télégraphe (d’abord optique dit <em>de Chappe</em> puis à impulsions électriques) ont rendu la cryptographie au premier plan.</p></li>
-<li><p><strong>1883</strong> : le Hollandais Auguste Kerckhoffs publie un ouvrage resté célèbre <strong>La cryptographie militaire</strong> avec la règle toujours en vigueur aujourd’hui : <em>la sécurité d’un système ne doit pas reposer sur le secret de la méthode de chiffrement</em></p></li>
-</ul>
-</section>
-<section id="premiere-guerre-mondiale">
-<h3>Première guerre mondiale<a class="headerlink" href="#premiere-guerre-mondiale" title="Link to this heading">#</a></h3>
-<p>La première guerre mondiale est la victoire de la <strong>cryptanalyse</strong> sur la cryptographie. Les techniques de chiffrement étaient en place et les méthodes mathématiques permettant de les déchiffrer ont été améliorées. Les communications sont instantanées (radio) mais le déchiffrement, effectué à la main, est extrêmement lent.</p>
-<ul class="simple">
-<li><p><strong>Le Télégramme Zimmermann</strong> : Envoyé par l’Allemagne à son ambassade au Mexique et lui demandant de se mettre en contact avec le gouvernement mexicain en vue d’une alliance contre les USA. C’est ce télégramme qui a accéléré l’entrée en guerre des Etats-Uniens. Il était chiffré à l’aide d’une clef privée et par substitution.</p></li>
-</ul>
-<p><img alt="Zimmermann" src="../../../_images/Zimmermann.jpg" /></p>
-</section>
-<section id="seconde-guerre-mondiale">
-<h3>Seconde guerre mondiale<a class="headerlink" href="#seconde-guerre-mondiale" title="Link to this heading">#</a></h3>
-<p>La seconde guerre mondiale voit arriver les machines de cryptographie évoluées, mécanique ou électromécaniques comme la célèbre machine <strong>Enigma</strong>. Elle voit surtout arriver des <strong>machines qui permettent d’effectuer de la cryptanalyse</strong> : ce sont les premiers <strong>ORDINATEURS</strong>.</p>
-<ul class="simple">
-<li><p><strong>La machine Enigma</strong> : Chaque lettre est remplacée par une autre mais la substitution change d’une lettre à l’autre. Lorsqu’on appuie sur une touche de la machine, un circuit électrique est formé en passant dans des rotors. Le système est à la fois simple et complexe. Avec un même secret (une <strong>clef</strong>), on peut chiffrer et déchiffrer un message. La clef de chiffrement est transmise en début de message et est valable 24 heures. Il faut donc 24 heures pour déchiffrer un message, sinon celui-ci devient caduque.</p></li>
-</ul>
-<p><img alt="Enigma" src="../../../_images/enigma.jpg" /></p>
-<ul class="simple">
-<li><p><strong>La bombe</strong> : afin de tester un maximum de combinaisons possibles, les Polonais ont mis en place une machine électromécanique en 1938 : la <em>bomba kryptologiczna</em> conçue par Marian Rejewski. Six bombes ont été construites et étaient capables de tester des milliers de combinaisons par minute ainsi que sélectionner des solutions viables. Les Polonais étaient capables de déchiffrer des messages des premières machines Enigma (avec 3 rotors). Mais dès la guerre déclarée (invasion de la Pologne), l’Allemagne nazie avait modifié ses procédures de cryptographie (en envoyant plus la clef en préambule).</p></li>
-<li><p><strong>La bombe de Turing</strong> : Construite par les Britanniques dans le complexe ultra-secret de <strong>Bletchley Park</strong> au Nord de Londres, elle fonctionnait sur le même principe que la machine polonaise mais avec une performance bien plus élevée. C’est le nom d’<strong>Alan Turing</strong> qui est resté mais il n’était pas le seul. Le groupe secret - le <strong>Government Code and Cypher School</strong> - était composé de centaines d’employés : des analystes, des interpréteurs, des traducteurs, des mathématiciens. On estime que les travaux de déchiffrement d’Enigma ont raccourci la seconde guerre mondiale de 2 ans.</p></li>
-</ul>
-<p><img alt="bombe" src="../../../_images/bombe.jpg" /></p>
-</section>
-<section id="periode-moderne">
-<h3>Période moderne<a class="headerlink" href="#periode-moderne" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>1949</strong> : débuts de la <strong>cryptographie à clef publique</strong> par le mathématicien Claude Shannon</p></li>
-<li><p><strong>Années 1970</strong>: les ordinateurs permettent des avancées dans le domaine avec le Standard de Chiffrement Public (DES et AES), l’échange de clefs publiques, le chiffrement assymétrique.</p></li>
-<li><p><strong>1980</strong> arrivée des <strong>fonctions de hachage</strong> (comme MD5) qui associent à n’importe quel texte une suite de données de taille arbitraire et dont la propriété principale est qu’elle n’est pas réversible. Ces fonctions de hachages permettent notamment de vérifier l’intégrité d’un message (à savoir qu’il  n’a pas été modifié durant sa transmission), ou de vérifier la validité d’un mot de passe.</p></li>
-</ul>
-</section>
-</section>
-<section id="caracteristiques-de-la-cryptographie">
-<h2>Caractéristiques de la cryptographie<a class="headerlink" href="#caracteristiques-de-la-cryptographie" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Confidentialité : garantir qu’un message n’est pas accessible par un tiers</p></li>
-<li><p>Intégrité : garantir que le contenu n’a pas été modifié</p></li>
-<li><p>Authentification : garantir l’identité à l’origine d’un message</p></li>
-</ol>
-</section>
-<section id="cryptographie-symetrique">
-<h2>Cryptographie symétrique<a class="headerlink" href="#cryptographie-symetrique" title="Link to this heading">#</a></h2>
-<section id="definition">
-<h3>Définition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
-<p>La cryptographie <strong>symétrique</strong> (ou cryptographie <strong>à clef secrète</strong>) permet de <strong>chiffrer</strong> et de <strong>déchiffrer</strong> un message avec le <strong>même secret</strong>.</p>
-</section>
-<section id="la-clef-secrete">
-<h3>La clef secrète<a class="headerlink" href="#la-clef-secrete" title="Link to this heading">#</a></h3>
-<p>La <strong>clef secrète</strong> est l’élément principal de la cryptographie symétrique. Il s’agit d’une donnée qui est traitée par un algorithme et qui ne doit être connue que par l’émetteur et le destinataire d’un message.</p>
-</section>
-<section id="principe-de-kerckhoffs">
-<h3>Principe de Kerckhoffs<a class="headerlink" href="#principe-de-kerckhoffs" title="Link to this heading">#</a></h3>
-<p><img alt="Kerckhoffs" src="../../../_images/Kerckhoffs.jpg" /></p>
-<p>Auguste Kirckhoffs est un cryptologue militaire des Pays-Bas. En 1883, il publie un livre intitulé <em>la cryptographie militaire</em> qui fait toujours référence aujourd’hui. Ce livre traite des caractéristiques que devrait avoir un système sûr de niveau militaire. Dans le chapitre II (page 8 de la traduction, voir Références), il cite ainsi les 6 caractéristiques :</p>
-<ol class="arabic simple">
-<li><p>Le système doit être matériellement, sinon mathématiquement indéchiffrable</p></li>
-<li><p>Il faut qu’il n’exige pas le secret, et qu’il puisse sans inconvénient tomber dans les mains de l’ennemi</p></li>
-<li><p>La clef doit pouvoir en être communiquée et retenue sans le secours de notes écrites, et être échangée ou modifiée au gré des correspondants</p></li>
-<li><p>Il faut qu’il soit applicable à la correspondance télégraphique</p></li>
-<li><p>Il faut qu’il soit portatif, et que son maniement ou son fonctionnement n’exige pas le concours de plusieurs personnes</p></li>
-<li><p>Enfin, il est nécessaire, vu les circonstances qui en commande l’application, que le système soit d’un usage facile, ne demandant ni tension de l’esprit, ni la connaissance d’une longue série de règles à observer</p></li>
-</ol>
-<p>L’algorithme qui régit la cryptographie symétrique doit respecter l’ensemble des caractéristiques du principe de Kirckhoffs.</p>
-</section>
-<section id="principaux-algorithmes-symetriques-modernes">
-<h3>Principaux algorithmes symétriques modernes<a class="headerlink" href="#principaux-algorithmes-symetriques-modernes" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>AES (Advanced Encryption Standard)</p></li>
-<li><p>DES (Data Encryption Standard) démontré depuis les années 1990 cassable.</p></li>
-</ul>
-</section>
-</section>
-<section id="cryptographie-asymetrique">
-<h2>Cryptographie asymétrique<a class="headerlink" href="#cryptographie-asymetrique" title="Link to this heading">#</a></h2>
-<p><img alt="asymetrique" src="../../../_images/asymetrique.png" /></p>
-<p>La cryptographie <strong>asymétrique</strong> permet de chiffrer et de déchiffrer un message avec <strong>deux clefs distinctes</strong>.</p>
-<ul class="simple">
-<li><p>La première : la clef publique permet le <strong>chiffrement</strong></p></li>
-<li><p>La seconde : la clef privée qui permet le <strong>déchiffrement</strong></p></li>
-</ul>
-<p>Les deux clefs sont créées par le destinataire.</p>
-<section id="l-analogie-du-coffre-fort">
-<h3>L’analogie du coffre-fort<a class="headerlink" href="#l-analogie-du-coffre-fort" title="Link to this heading">#</a></h3>
-<p>Cette analogie, bien que simpliste, permet de comprendre le concept de cryptographie asymétrique.</p>
-<ul class="simple">
-<li><p>Alice a choisi un coffre-fort dont elle seule possède la clef</p></li>
-<li><p>Alice envoie le coffre-fort ouvert à Bob</p></li>
-<li><p>Bob le reçoit et y place son message</p></li>
-<li><p>Bob ferme le coffre-fort</p></li>
-<li><p>Bob envoie le coffre-fort fermé à Alice</p></li>
-<li><p>Alice le reçoit et ouvre son coffre-fort pour lire le message</p></li>
-</ul>
-</section>
-<section id="principe-de-base-comment-cela-peut-fonctionner">
-<h3>Principe de base : comment cela peut fonctionner ?<a class="headerlink" href="#principe-de-base-comment-cela-peut-fonctionner" title="Link to this heading">#</a></h3>
-<p>La cryptographie asymétrique fonctionne sur le principe mathématique des <strong>fonctions à sens unique</strong> et des <strong>trappes secrètes</strong>. Les premières sont des fonctions telles qu’une fois appliquées, il est très <em>difficile</em> de retrouver le point de départ (le message clair). Les secondes permettent à ceux qui ont conçu la fonction à sens unique de déchiffrer le message grâce à un élément qu’il possède (la clef privée).</p>
-<p>L’une des principales fonctions à sens unique utilisée dans les algorithmes asymétriques est celle de la <strong>factorisation d’un nombre entier</strong> : étant donné deux nombres premiers (très grands) <span class="math notranslate nohighlight">\(p\)</span> et <span class="math notranslate nohighlight">\(q\)</span>, il est extrêmement facile de calculer <span class="math notranslate nohighlight">\(z = p \cdot q\)</span>. Connaissant <span class="math notranslate nohighlight">\(z\)</span>, il est extrêmement difficile de retrouver <span class="math notranslate nohighlight">\(p\)</span> et <span class="math notranslate nohighlight">\(q\)</span>. Le célèbre <strong>algorithme RSA</strong> est construit sur cette fonction.</p>
-</section>
-<section id="chiffrement-et-dechiffrement">
-<h3>Chiffrement et déchiffrement<a class="headerlink" href="#chiffrement-et-dechiffrement" title="Link to this heading">#</a></h3>
-<p>Le système de clefs publique et privée permet de coder des chiffres. Mais il est relativement facile de créer un système de conversion de lettres en chiffres et qui permet de chiffrer n’importe quel caractère.</p>
-</section>
-<section id="utilisations-majeures">
-<h3>Utilisations majeures<a class="headerlink" href="#utilisations-majeures" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>La <strong>confidentialité</strong> des messages reçus. L’expéditeur est certain que seul le récepteur du message peut le déchiffrer avec sa clef publique</p></li>
-<li><p>Dans l’autre sens, on peut utiliser la clef privée pour chiffrer un message. Le récepteur peut utiliser la clef publique pour vérifier l’autenticité du message. Il s’agit de <strong>l’authentification</strong></p></li>
-</ol>
-</section>
-<section id="exemples-d-algorithmes-asymetriques">
-<h3>Exemples d’algorithmes asymétriques<a class="headerlink" href="#exemples-d-algorithmes-asymetriques" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>RSA (Rivest, Shamir et Adelman du nom de leurs concepteurs)</p></li>
-<li><p>DSA (Digital Signature Algorithm)</p></li>
-</ol>
-</section>
-</section>
-<section id="les-mots-de-passe-fonction-de-hachage-cryptographique">
-<h2>Les mots de passe : fonction de hachage cryptographique<a class="headerlink" href="#les-mots-de-passe-fonction-de-hachage-cryptographique" title="Link to this heading">#</a></h2>
-<p>Lorsqu’on utilise un <strong>mot de passe</strong>, celui-ci est par définition secret. Même si le système sur lequel on se connecte (par exemple <a class="reference external" href="https://www.outlook.com">eduvaud.ch</a> ) peut être de très grande confiance, il ne doit jamais stocker l’ensemble de ces mots de passe dans un fichier. C’est un point de faiblesse majeur si ce fichier est divulgué.</p>
-<p>Pour éviter ce problème, on recourt aux <strong>fonctions de hachage cryptographique</strong>. Une telle fonction associe à une donnée de taille arbitraire (par exemple un mot de passe), une <em>image</em> (une suite de caractères ou de bits) de taille fixe et dont la propriété essentielle est qu’il est pratiquement impossible à inverser; c’est-à-dire de retrouver la donnée initiale en fonction de l’image. La fonction de hachage possède les caractéristiques suivantes :</p>
-<ul class="simple">
-<li><p>elle est déterministe (la même donnée initiale donnera toujours la même image),</p></li>
-<li><p>l’image se calcule facilement,</p></li>
-<li><p>il est impossible de retrouver la donnée à partir de l’image et</p></li>
-<li><p>il est impossible de trouver deux messages différents ayant la même image</p></li>
-</ul>
-<section id="exemples-d-algorithmes-de-hachage">
-<h3>Exemples d’algorithmes de hachage<a class="headerlink" href="#exemples-d-algorithmes-de-hachage" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>MD5</p></li>
-<li><p>Md5sum</p></li>
-<li><p>SHA</p></li>
-</ul>
-</section>
-</section>
-<section id="cryptanalyse">
-<h2>Cryptanalyse<a class="headerlink" href="#cryptanalyse" title="Link to this heading">#</a></h2>
-<p>La cryptanalyse est la science du <strong>cassage de secret</strong>. Il s’agit de l’ensemble des méthodes et techniques qui consistent à retrouver un texte clair à partir du texte chiffré. Les principales méthodes de cassage sont les suivantes :</p>
-<section id="force-brute">
-<h3>Force brute<a class="headerlink" href="#force-brute" title="Link to this heading">#</a></h3>
-<p>La <strong>force brute</strong> consiste à tester l’ensemble des combinaisons, une à une. C’est l’attaque la plus simple en terme algorithmique, mais la plus coûteuse en terme de complexité.</p>
-</section>
-<section id="attaque-par-dictionnaire">
-<h3>Attaque par dictionnaire<a class="headerlink" href="#attaque-par-dictionnaire" title="Link to this heading">#</a></h3>
-<p>L’attaque <strong>par dictionnaire</strong> consiste à tester la validité d’une clef sur la base d’un dictionnaire, c’est-à-dire d’un ensemble de clefs potentielles.</p>
-<p>Le logiciel à sources ouvertes <a class="reference external" href="https://github.com/openwall/john">John The Ripper</a> est un logiciel de cassage de mots de passes qui utilise l’attaque par dictionnaire.</p>
-</section>
-<section id="analyse-frequentielle">
-<h3>Analyse fréquentielle<a class="headerlink" href="#analyse-frequentielle" title="Link to this heading">#</a></h3>
-<p>L’attaque par analyse fréquentielle examine la fréquence d’apparition de lettres employées dans un texte chiffré et à la comparer avec les fréquences d’apparition des lettres dans une langue donnée.</p>
-</section>
-</section>
-<section id="references-pour-aller-plus-loin">
-<h2>Références pour aller plus loin<a class="headerlink" href="#references-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>National Security Agency, <em>The Zimmermann Telegram</em>, Cryptology Quarterly, <a class="reference external" href="https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-quarterly/the_zimmermann_telegram.pdf">online sur le site de la NSA</a></p></li>
-<li><p>Auguste Kerckhoffs (1835-1903). <em>La cryptographie militaire</em>, Journal des sciences militaires, vol. IX, p. 5-38, janvier 1883. Une version est disponible sur la <a class="reference external" href="https://books.google.ch/books?hl=fr&amp;amp;lr=&amp;amp;id=VbQBAAAAYAAJ&amp;amp;oi=fnd&amp;amp;pg=PA1&amp;amp;dq=Kerckhoffs+Cryptographie+militaire+1883&amp;amp;ots=per75JvmC0&amp;amp;sig=omV5TQ8WIfxiZujqnxkY9O27QYw#v=onepage&amp;amp;q&amp;amp;f=false">bibliothèque de Google</a></p></li>
-<li><p>Jean-Philippe Javet, cours de mathématiques pour le gymnase de Morges, <a class="reference external" href="http://www.gymomath.ch/javmath/polycopie/OC%20Crypto.pdf">chapitre sur la cryptographie</a></p></li>
+<li><p>dans une liste <strong>non triée</strong> est d’ordre linéaire (il faut parcourir tous les éléments pour trouver la cible)</p></li>
+<li><p>dans une liste <strong>triée</strong> est d’ordre logarithmique (on divise chaque fois par deux le nombre d’éléments pour trouver la cible)</p></li>
 </ul>
 </section>
 </section>
@@ -869,20 +632,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C1-ALGO-07.2.html"
+       href="C1-ALGO-07.0.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C1-ALGO-05.02 Algorithmes classiques (Tri)</p>
+        <p class="prev-next-title">C1-ALGO-07.00 : Algorithmes classiques</p>
       </div>
     </a>
     <a class="right-next"
-       href="C1-ALGO-11.html"
+       href="C1-ALGO-07.2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-ALGO-11 : Les tests conditionnels</p>
+        <p class="prev-next-title">C1-ALGO-05.02 Algorithmes classiques (Tri)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -902,44 +665,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-cryptographie-c-est-quoi">La cryptographie c’est quoi ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-cryptanalyse-c-est-quoi">La cryptanalyse c’est quoi ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quelques-reperes-historiques">Quelques repères historiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dans-l-antiquite">Dans l’Antiquité</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#du-moyen-age-a-la-premiere-guerre-mondiale">Du Moyen-Âge à la première guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-guerre-mondiale">Première guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seconde-guerre-mondiale">Seconde guerre mondiale</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#periode-moderne">Période moderne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-de-recherche">Algorithmes de recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-sequentielle">Recherche séquentielle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique">Recherche dichotomique</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-de-la-cryptographie">Caractéristiques de la cryptographie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographie-symetrique">Cryptographie symétrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-clef-secrete">La clef secrète</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-kerckhoffs">Principe de Kerckhoffs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-symetriques-modernes">Principaux algorithmes symétriques modernes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographie-asymetrique">Cryptographie asymétrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-analogie-du-coffre-fort">L’analogie du coffre-fort</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-base-comment-cela-peut-fonctionner">Principe de base : comment cela peut fonctionner ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chiffrement-et-dechiffrement">Chiffrement et déchiffrement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisations-majeures">Utilisations majeures</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-algorithmes-asymetriques">Exemples d’algorithmes asymétriques</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-mots-de-passe-fonction-de-hachage-cryptographique">Les mots de passe : fonction de hachage cryptographique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-algorithmes-de-hachage">Exemples d’algorithmes de hachage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptanalyse">Cryptanalyse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-brute">Force brute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attaque-par-dictionnaire">Attaque par dictionnaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-frequentielle">Analyse fréquentielle</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-pour-aller-plus-loin">Références pour aller plus loin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-retenir">A retenir</a></li>
 </ul>
   </nav></div>
 

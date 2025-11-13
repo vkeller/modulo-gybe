@@ -25,24 +25,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-h    = int(input("heure    : "))
-p = 4
-while p >= 0 :
-    if h - 2**p >= 0:
-        print("Lumière",p,"ON")
-        h = h - 2**p
-    else:
-        print("Lumière",p,"OFF")
-    p = p - 1
+nom = input('Bonjour, Quel est votre nom :')
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mStdinNotImplementedError[39m                  Traceback (most recent call last)
 [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m h    = [38;5;28mint[39m([38;5;28;43minput[39;49m[43m([49m[33;43m"[39;49m[33;43mheure    : [39;49m[33;43m"[39;49m[43m)[49m)
-[32m      2[39m p = [32m4[39m
-[32m      3[39m [38;5;28;01mwhile[39;00m p >= [32m0[39m :
+[32m----> [39m[32m1[39m nom = [38;5;28;43minput[39;49m[43m([49m[33;43m'[39;49m[33;43mBonjour, Quel est votre nom :[39;49m[33;43m'[39;49m[43m)[49m
 
 [36mFile [39m[32m~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274[39m, in [36mKernel.raw_input[39m[34m(self, prompt)[39m
 [32m   1272[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._allow_stdin:
