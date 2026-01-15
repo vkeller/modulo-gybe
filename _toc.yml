@@ -132,6 +132,7 @@ parts:
       - file: 2M/architecture/raspberry/TP2-ARCH-NOTE2
       - file: 2M/architecture/raspberry/TP2-ARCH-05
       - file: 2M/architecture/raspberry/TP2-ARCH-06
+      - file: 2M/architecture/raspberry/TP2-ARCH-07
       - file: 2M/architecture/logidules/TP2-LOGI-01
     - file: 2M/strategies/index
       sections:
