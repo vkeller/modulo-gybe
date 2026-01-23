@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2M/architecture/TP/TP2-ARCH-01';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -313,7 +315,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cours/C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-03.html">C2-RESO-03 : Le Dark Net… bien ou mal ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-03.html">C2-RESO-03 : Le Darket… bien ou mal ?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">TP2-ARCH-01 : Les portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
@@ -322,6 +324,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry/TP2-ARCH-07.html">TP2-ARCH-07 : Anonymat sur Internet.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
 </ul>
 </details></li>
@@ -608,6 +611,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-electronique-d-une-porte-nand-exemple">Schéma électronique d’une porte NAND (exemple)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-prise-en-main-de-l-outil">Exercice 1 : Prise en main de l’outil</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-un-selecteur-de-chiens">Exercice 2 : Un sélecteur de chiens</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex-2-1-petit-et-gentil">Ex 2.1 : Petit et gentil</a></li>
@@ -624,10 +628,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indices">Indices</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin">Exercice 6 (pour aller plus loin)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-comparateur">Exercice 7 : comparateur</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-verificateur-qualite-de-gateaux">Exercice 8 : vérificateur qualité de gâteaux</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-aller-encore-plus-loin-portes-logiques-universelles">(Pour aller encore plus loin) Portes logiques universelles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin">Exercice 6 : Un demi-additionneur (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-additionneur-complet-sur-1-bit">Exercice 7 : Un additionneur complet sur 1 bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-8-bits">Exercice 8 : Un additionneur complet sur 8 bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-comparateur">Exercice 9 : comparateur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-verificateur-qualite-de-gateaux">Exercice 9 : vérificateur qualité de gâteaux</a></li>
 </ul>
             </nav>
         </div>
@@ -983,6 +988,12 @@ document.write(`
 </section>
 </section>
 </section>
+<section id="schema-electronique-d-une-porte-nand-exemple">
+<h2>Schéma électronique d’une porte NAND (exemple)<a class="headerlink" href="#schema-electronique-d-une-porte-nand-exemple" title="Link to this heading">#</a></h2>
+<p>Chaque porte logique peut être construite à l’aide de composants électroniques simples. Ici une porte NAND construite à l’aide de deux transistors et de quatre résistances</p>
+<p><img alt="nand-transistor" src="../../../_images/nand-transistors.png" /></p>
+<p>Source : <a class="reference external" href="https://electro-robot.com/les-activites/travaux-diriges-la-porte-logique-nand">https://electro-robot.com/les-activites/travaux-diriges-la-porte-logique-nand</a></p>
+</section>
 <section id="exercice-1-prise-en-main-de-l-outil">
 <h2>Exercice 1 : Prise en main de l’outil<a class="headerlink" href="#exercice-1-prise-en-main-de-l-outil" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -1115,19 +1126,111 @@ document.write(`
 </ol>
 </section>
 </section>
-<section id="exercice-6-pour-aller-plus-loin">
-<h2>Exercice 6 (pour aller plus loin)<a class="headerlink" href="#exercice-6-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
-<p>En reprenant le schéma des différents secteurs du refuge SPA, ajoutez :</p>
-<ul class="simple">
-<li><p>un afficheur à 7 segments qui affiche le numéro du secteur sélectionné</p></li>
-</ul>
-<p>En reprenant le schéma électronique de la famille Dupont, ajoutez :</p>
-<ul class="simple">
-<li><p>un afficheur à 16 segments qui affiche <code class="docutils literal notranslate"><span class="pre">OK</span></code> ou rien si le chien est sélectionnable.</p></li>
-</ul>
+<section id="exercice-6-un-demi-additionneur-pour-aller-plus-loin">
+<h2>Exercice 6 : Un demi-additionneur (pour aller plus loin)<a class="headerlink" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
+<p>Un <strong>additionneur</strong> est un circuit logique permettant de réaliser une addition. En binaire, une addition sur <strong>un bit</strong> respecte la table de vérité suivante :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><strong>a</strong></p></th>
+<th class="head text-center"><p><strong>b</strong></p></th>
+<th class="head text-center"><p><strong>a <span class="math notranslate nohighlight">\(\oplus\)</span> b = s</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La valeur <strong>s</strong> représente la somme des deux bits. A l’aide de portes logiques, construisez un circuit permettant l’addition de deux bits. On appelle ce circuit un <strong>demi-additionneur</strong> puisque la retenue <strong>r</strong> n’est pas calculée.</p>
 </section>
-<section id="exercice-7-comparateur">
-<h2>Exercice 7 : comparateur<a class="headerlink" href="#exercice-7-comparateur" title="Link to this heading">#</a></h2>
+<section id="exercice-7-un-additionneur-complet-sur-1-bit">
+<h2>Exercice 7 : Un additionneur complet sur 1 bit<a class="headerlink" href="#exercice-7-un-additionneur-complet-sur-1-bit" title="Link to this heading">#</a></h2>
+<p>Un <strong>additionneur complet</strong> nécessite une entrée supplémentaire : la <strong>retenur</strong> de l’addition précédente. Tout l’intérêt ici est de pouvoir chaîner plusieurs additionneurs complets à la suite.</p>
+<p>La table de vérité d’un additionneur complet respecte la table de vérité suivante :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><strong>a</strong></p></th>
+<th class="head text-center"><p><strong>b</strong></p></th>
+<th class="head text-center"><p><strong><span class="math notranslate nohighlight">\(c_{in}\)</span></strong></p></th>
+<th class="head text-center"><p><strong>a <span class="math notranslate nohighlight">\(\oplus\)</span> b = s</strong></p></th>
+<th class="head text-center"><p><strong><span class="math notranslate nohighlight">\(c_{out}\)</span></strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Construisez un circuit logique permettant l’addition de deux bits avec <strong>retenue entrante</strong> (<strong><span class="math notranslate nohighlight">\(c_{in}\)</span></strong>) et <strong>retenue sortante</strong> (<strong><span class="math notranslate nohighlight">\(c_{out}\)</span></strong>). C’est l’additionneur complet sur 8 bits</p>
+</section>
+<section id="exercice-8-un-additionneur-complet-sur-8-bits">
+<h2>Exercice 8 : Un additionneur complet sur 8 bits<a class="headerlink" href="#exercice-8-un-additionneur-complet-sur-8-bits" title="Link to this heading">#</a></h2>
+<p>Chaînez 4 additionneurs complets pour effectuer des additions de nombres de 4 bits. Vous pouvez utiliser un <strong>Afficheur</strong> (dans les entrées sorties) qui permet d’afficher la valeur sur 4 bits en binaire et en décimal</p>
+</section>
+<section id="exercice-9-comparateur">
+<h2>Exercice 9 : comparateur<a class="headerlink" href="#exercice-9-comparateur" title="Link to this heading">#</a></h2>
 <p>Construisez un schéma avec les portes logiques qui doit :</p>
 <ol class="arabic simple">
 <li><p>avoir deux entrées (deux bits)</p></li>
@@ -1135,8 +1238,8 @@ document.write(`
 </ol>
 <p>Le circuit doit comparer les deux bits d’entrée</p>
 </section>
-<section id="exercice-8-verificateur-qualite-de-gateaux">
-<h2>Exercice 8 : vérificateur qualité de gâteaux<a class="headerlink" href="#exercice-8-verificateur-qualite-de-gateaux" title="Link to this heading">#</a></h2>
+<section id="exercice-9-verificateur-qualite-de-gateaux">
+<h2>Exercice 9 : vérificateur qualité de gâteaux<a class="headerlink" href="#exercice-9-verificateur-qualite-de-gateaux" title="Link to this heading">#</a></h2>
 <p>Dans une chaîne de production de pâtisserie, les ingrédients sont mélangés, cuisinés et utilisés pour créer des gâteaux qui sont ensuite cuits automatiquement.</p>
 <p>Il existe un vérificateur de qualité des gâteaux qui sortent de la chaîne de production. Quatre paramètres sont analysés en temps réel et automatiquement :</p>
 <ol class="arabic simple">
@@ -1152,11 +1255,6 @@ document.write(`
 <li><p><strong>Qualité médiocre</strong> : le poids est incorrect ainsi qu’au minimum 2 autres paramètres sont incorrects</p></li>
 </ul>
 <p>Construire le circuit</p>
-</section>
-<section id="pour-aller-encore-plus-loin-portes-logiques-universelles">
-<h2>(Pour aller encore plus loin) Portes logiques universelles<a class="headerlink" href="#pour-aller-encore-plus-loin-portes-logiques-universelles" title="Link to this heading">#</a></h2>
-<p>On peut montrer qu’en utilisant <strong>uniquement</strong> des portes logiques <code class="docutils literal notranslate"><span class="pre">NAND</span></code> (donc <code class="docutils literal notranslate"><span class="pre">AND</span></code> et <code class="docutils literal notranslate"><span class="pre">NOT</span></code>) on peut construire l’entier des portes logiques existantes :</p>
-<p><img alt="universalgates" src="../../../_images/universalgate.png" /></p>
 </section>
 </section>
 
@@ -1276,6 +1374,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-electronique-d-une-porte-nand-exemple">Schéma électronique d’une porte NAND (exemple)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-prise-en-main-de-l-outil">Exercice 1 : Prise en main de l’outil</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-un-selecteur-de-chiens">Exercice 2 : Un sélecteur de chiens</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex-2-1-petit-et-gentil">Ex 2.1 : Petit et gentil</a></li>
@@ -1292,10 +1391,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indices">Indices</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-pour-aller-plus-loin">Exercice 6 (pour aller plus loin)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-comparateur">Exercice 7 : comparateur</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-verificateur-qualite-de-gateaux">Exercice 8 : vérificateur qualité de gâteaux</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-aller-encore-plus-loin-portes-logiques-universelles">(Pour aller encore plus loin) Portes logiques universelles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin">Exercice 6 : Un demi-additionneur (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-additionneur-complet-sur-1-bit">Exercice 7 : Un additionneur complet sur 1 bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-8-bits">Exercice 8 : Un additionneur complet sur 8 bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-comparateur">Exercice 9 : comparateur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-verificateur-qualite-de-gateaux">Exercice 9 : vérificateur qualité de gâteaux</a></li>
 </ul>
   </nav></div>
 
