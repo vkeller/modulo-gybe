@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1M/algo/cours/C1-ALGO-14';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -313,7 +315,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/cours/C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-03.html">C2-RESO-03 : Le Dark Net… bien ou mal ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/reseau/C2-RESO-03.html">C2-RESO-03 : Le Darket… bien ou mal ?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/TP/TP2-ARCH-01.html">TP2-ARCH-01 : Les portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
@@ -322,6 +324,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/raspberry/TP2-ARCH-07.html">TP2-ARCH-07 : Anonymat sur Internet.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/architecture/logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
 </ul>
 </details></li>
@@ -558,14 +561,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peut-on-faire-evoluer-un-programme-vers-une-solution">Peut-on faire “évoluer” un programme vers une solution ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-evolutionnistes">Algorithmes évolutionnistes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-genetiques">Algorithmes génétiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialisation">Initialisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#population-de-base-initiale">Population de base (initiale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Sélection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#croisements-et-mutations">Croisements et mutations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemein">Résoudre le problème du plus cours chemein</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemin">Résoudre le problème du plus cours chemin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
             </nav>
@@ -592,13 +598,26 @@ document.write(`
 <h2>Définition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
 <p>Les algorithmes évolutionnistes sont une classe d’algorithmes qui s’inspirent de la <strong>théorie de l’évolution</strong> de Charles Darwin. Cette classe d’algorithmes utilisent des processus qui imitent <strong>le vivant</strong>, notamment les trois grands mécanismes des êtres vivants :</p>
 <ol class="arabic simple">
-<li><p>la reproduction</p></li>
-<li><p>la mutation</p></li>
-<li><p>la recombinaison</p></li>
+<li><p>la <strong>reproduction</strong> : <em>on mélange des caractéristiques</em></p></li>
+<li><p>la <strong>mutation</strong> : <em>certaines caractéristiques changent aléatoirement</em></p></li>
+<li><p>la <strong>sélection</strong> : <em>les meilleurs individus survivent</em> (il faut définir <em>meilleur</em>)</p></li>
 </ol>
 <p>Selon la théorie de l’évolution, sur une population donnée d’individus tous différents, ceux qui ont unt chance de transmettre leurs caractéristiques sont ceux qui sont les mieux adaptés à leur environnement.</p>
 <p>En algorithmique évolutionniste, un <em>individu</em> est une <strong>solution possible</strong>.</p>
 <p>La très grande difficulté de ces algorithmes est la capacité que doit avoir le processus pour <strong>évaluer la qualité</strong> d’une solution. Cela se fait grâce à une <strong>fonction d’objectif</strong> (<em>fitness function</em> en anglais)</p>
+</section>
+<section id="peut-on-faire-evoluer-un-programme-vers-une-solution">
+<h2>Peut-on faire “évoluer” un programme vers une solution ?<a class="headerlink" href="#peut-on-faire-evoluer-un-programme-vers-une-solution" title="Link to this heading">#</a></h2>
+<p>Voici un exemple introductif. Nous souhaitons qu’un programme retrouve un mot choisi. Par exemple <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code>. Mais le programme:</p>
+<ol class="arabic simple">
+<li><p>n’est pas une IA</p></li>
+<li><p>n’a accès à aucune base de donnée (dictionnaire ou autre)</p></li>
+<li><p>n’a aucune connaissance <em>a prior</em> de la grammaire française</p></li>
+<li><p>doit pouvoir être écrit par un gymnasien de première année</p></li>
+</ol>
+<p>Quelle stratégie ?</p>
+<p><strong>Tout tester au hasard ?</strong> En utilisant seulement les lettres majuscules. Le mot <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code> contient 7 lettres, le nombre total de possibilités atteint <span class="math notranslate nohighlight">\(7^26 = 9387480337647754305649\)</span> soit environ <span class="math notranslate nohighlight">\(10^22\)</span>. Si un ordinateur peut tester un milliard de solutions par secondes, cela équivaut à y passer plus de 3000 siècles.</p>
+<p><strong>Utiliser une approche évolutionniste</strong>. A chaque essai, on garde les morceaux de phrases qui ressemblent le plus à la cible, puis on les mélange, puis on les combine. Exactement comme fait la nature.</p>
 </section>
 <section id="algorithmes-evolutionnistes">
 <h2>Algorithmes évolutionnistes<a class="headerlink" href="#algorithmes-evolutionnistes" title="Link to this heading">#</a></h2>
@@ -614,12 +633,41 @@ document.write(`
 <p><img alt="ADN" src="../../../_images/ADN.png" /></p>
 <p>Voici un algorigramme d’un algorithme génétique :</p>
 <p><img alt="algogen" src="../../../_images/algorigramme_genetique.png" /></p>
-<section id="initialisation">
-<h3>Initialisation<a class="headerlink" href="#initialisation" title="Link to this heading">#</a></h3>
-<p>Création de la population initiale. Chaque élément est un critère</p>
+<section id="population-de-base-initiale">
+<h3>Population de base (initiale)<a class="headerlink" href="#population-de-base-initiale" title="Link to this heading">#</a></h3>
+<p>Création de la population initiale. Chaque individu de cette population est une solution possible.</p>
+<p>La génération de cette population initiale peut se faire par différentes techniques :</p>
+<ol class="arabic simple">
+<li><p>Aléatoirement</p>
+<ul class="simple">
+<li><p>avantage : grande diversité</p></li>
+<li><p>inconvénient : risque de lenteur au démarrage de l’algorithme</p></li>
+</ul>
+</li>
+<li><p>Aléatoirement mais avec des contraintes sur les individus (par exemple, les individus doivent respecter des règles de base)</p>
+<ul class="simple">
+<li><p>avantage : élimine les solutions invalides dès le départ</p></li>
+</ul>
+</li>
+<li><p>Semi-aléatoirement. A l’aide d’un autre algorithme, on génère des individus de bonne qualité</p>
+<ul class="simple">
+<li><p>avantage : démarrage plus rapide de l’algorithme</p></li>
+<li><p>inconvénient : risque de réduction de la diversité</p></li>
+</ul>
+</li>
+<li><p>Solution hybride. Une partie de la population initiale est faite avec les méthodes (1), (2) ou (3)</p></li>
+</ol>
+<p>De manière générale, la <strong>taille</strong> de la population initiale doit être suffisamment grande pour assurer de la diversité dans les solutions possibles, mais pas trop pour conserver une certaine efficacité.</p>
+</section>
+<section id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Link to this heading">#</a></h3>
+<p>Pour <strong>évaluer</strong> une solution, on s’intéresse à la qualité de cette solution par rapport à la cible recherchée.</p>
+<p>En algorithmique génétique, on dit que l’on calcule la <strong>fonction de fitness</strong> de la solution. C’est-à-dire une valeur numérique représentant la qualité de la solution.</p>
+<p><strong>Exemple</strong> : un test d’informatique est passé par une classe. Chaque élève propose une solution (les exercices du test). La fonction de fitness est alors la note reçue par l’élève.</p>
 </section>
 <section id="selection">
 <h3>Sélection<a class="headerlink" href="#selection" title="Link to this heading">#</a></h3>
+<p>Une fois l’évaluation faite sur tous les individus, il s’agit de sélectionner quels sont ceux qui feront partie des <strong>parents de la prochaine génération</strong>. L’idée ici n’est pas de garder <strong>uniquement les meilleurs</strong>, mais de leur donner plus de chances d’être choisis. Cela permet de garder de la diversité mais de favoriser les bonnes solutions.</p>
 <p>Ici on sélectionne les différents individus. Il existe plusieurs méthodes pour sélectionner un individu parmi deux :</p>
 <ol class="arabic simple">
 <li><p>la roulette (le hasard pur)</p></li>
@@ -629,13 +677,21 @@ document.write(`
 <li><p>Un mixe</p></li>
 </ol>
 </section>
+<section id="croisements-et-mutations">
+<h3>Croisements et mutations<a class="headerlink" href="#croisements-et-mutations" title="Link to this heading">#</a></h3>
+<p>Une fois les parents sélectionnés, on peut <strong>créer la génération suivante</strong>. Pour faire cela, on s’inspire de la nature. Deux parents <em>font des enfants</em> en associant leurs gènes et parfois, cette opération est modifiée par une mutation.</p>
+<ul class="simple">
+<li><p><strong>croisement</strong> : il s’agit de combiner les <em>bonnes</em> caractéristiques des deux <strong>parents</strong> pour créer un ou plusieurs <strong>enfants</strong>. Une partie du gène de l’individu 1 est combiné à la seconde partie de l’individu 2. La limite est appelée <strong>point de coupure</strong>. Il en résulte deux individus.</p></li>
+<li><p><strong>mutation</strong> : introduction de modification du gène de l’enfant. Au hasard</p></li>
+</ul>
+</section>
 </section>
 <section id="algorithme-genetique-simple">
 <h2>Algorithme génétique simple<a class="headerlink" href="#algorithme-genetique-simple" title="Link to this heading">#</a></h2>
 <p>Dans cet exemple, nous souhaitons trouver la chaîne de bits ayant le plus de <code class="docutils literal notranslate"><span class="pre">1</span></code> pour une longueur fixe donnée.</p>
 </section>
-<section id="resoudre-le-probleme-du-plus-cours-chemein">
-<h2>Résoudre le problème du plus cours chemein<a class="headerlink" href="#resoudre-le-probleme-du-plus-cours-chemein" title="Link to this heading">#</a></h2>
+<section id="resoudre-le-probleme-du-plus-cours-chemin">
+<h2>Résoudre le problème du plus cours chemin<a class="headerlink" href="#resoudre-le-probleme-du-plus-cours-chemin" title="Link to this heading">#</a></h2>
 </section>
 <section id="references">
 <h2>Références<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
@@ -713,14 +769,17 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peut-on-faire-evoluer-un-programme-vers-une-solution">Peut-on faire “évoluer” un programme vers une solution ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-evolutionnistes">Algorithmes évolutionnistes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-genetiques">Algorithmes génétiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialisation">Initialisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#population-de-base-initiale">Population de base (initiale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Sélection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#croisements-et-mutations">Croisements et mutations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemein">Résoudre le problème du plus cours chemein</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemin">Résoudre le problème du plus cours chemin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
   </nav></div>
