@@ -625,11 +625,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-et-la-famille-rochat">Exercice 4 : Et la famille Rochat ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin">Exercice 6 : Un demi-additionneur (pour aller plus loin)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-additionneur-complet-sur-1-bit">Exercice 7 : Un additionneur complet sur 1 bit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-4-bits">Exercice 8 : Un additionneur complet sur 4 bits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-comparateur">Exercice 9 : comparateur</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-verificateur-qualite-de-gateaux">Exercice 10 : vérificateur qualité de gâteaux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-le-coffre-fort">Exercice 5 : Le coffre-fort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-la-banque">Exercice 6 : La banque</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-demi-additionneur-pour-aller-plus-loin">Exercice 7 : Un demi-additionneur (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-1-bit">Exercice 8 : Un additionneur complet sur 1 bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-un-additionneur-complet-sur-4-bits">Exercice 9 : Un additionneur complet sur 4 bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-comparateur">Exercice 10 : comparateur</a></li>
 </ul>
             </nav>
         </div>
@@ -1118,8 +1119,38 @@ document.write(`
 </ul>
 <p>Dessinez la table de vérité du circuit</p>
 </section>
-<section id="exercice-6-un-demi-additionneur-pour-aller-plus-loin">
-<h2>Exercice 6 : Un demi-additionneur (pour aller plus loin)<a class="headerlink" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
+<section id="exercice-5-le-coffre-fort">
+<h2>Exercice 5 : Le coffre-fort<a class="headerlink" href="#exercice-5-le-coffre-fort" title="Link to this heading">#</a></h2>
+<p><img alt="safe" src="../../../_images/safe.jpg" /></p>
+<p>Pour des raisons de sécurité, ce coffre-fort ne s’ouvre que si deux conditions sont remplies simultanément :</p>
+<ul class="simple">
+<li><p>La clé physique est insérée (entrée K)</p></li>
+<li><p>L’empreinte digitale est reconnue comme valide (entrée E)</p></li>
+</ul>
+<p>Si la clé est présente mais que l’empreinte est refusée → une alarme se déclenche (tentative d’intrusion).
+Si la clé n’est pas présente → rien ne se passe (ni ouverture, ni alarme).</p>
+<p><strong>Consigne</strong> : Ecrire la table de vérité et construire le circuit logique</p>
+</section>
+<section id="exercice-6-la-banque">
+<h2>Exercice 6 : La banque<a class="headerlink" href="#exercice-6-la-banque" title="Link to this heading">#</a></h2>
+<p><img alt="banque" src="../../../_images/bank.jpg" /></p>
+<p>Une banque sécurise son coffre avec trois responsables :</p>
+<ul class="simple">
+<li><p><strong>Alice</strong> : cheffe de caisse</p></li>
+<li><p><strong>Bernard</strong> : directeur adjoint</p></li>
+<li><p><strong>Carole</strong> : directrice</p></li>
+</ul>
+<p>Règles de sécurité :</p>
+<ul class="simple">
+<li><p>Le coffre s’ouvre si au moins deux responsables sont présents (principe de collégialité).</p></li>
+<li><p>Une alarme silencieuse se déclenche si seul Bernard est présent (tentative suspecte : il n’a pas l’habitude d’agir seul).</p></li>
+<li><p>Un verrouillage temporaire s’active si Alice seule est présente (mesure anti-usurpation : elle ne peut pas agir sans supervision).</p></li>
+<li><p>Carole seule peut ouvrir le coffre (privilège hiérarchique).</p></li>
+</ul>
+<p><strong>Consigne :</strong> Ecrire la table de vérité et construire le circuit logique</p>
+</section>
+<section id="exercice-7-un-demi-additionneur-pour-aller-plus-loin">
+<h2>Exercice 7 : Un demi-additionneur (pour aller plus loin)<a class="headerlink" href="#exercice-7-un-demi-additionneur-pour-aller-plus-loin" title="Link to this heading">#</a></h2>
 <p>Un <strong>additionneur</strong> est un circuit logique permettant de réaliser une addition. En binaire, une addition sur <strong>un bit</strong> respecte la table de vérité suivante :</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1150,8 +1181,8 @@ document.write(`
 </div>
 <p>La valeur <strong>s</strong> représente la somme des deux bits. A l’aide de portes logiques, construisez un circuit permettant l’addition de deux bits. On appelle ce circuit un <strong>demi-additionneur</strong> puisque la retenue <strong>r</strong> n’est pas calculée.</p>
 </section>
-<section id="exercice-7-un-additionneur-complet-sur-1-bit">
-<h2>Exercice 7 : Un additionneur complet sur 1 bit<a class="headerlink" href="#exercice-7-un-additionneur-complet-sur-1-bit" title="Link to this heading">#</a></h2>
+<section id="exercice-8-un-additionneur-complet-sur-1-bit">
+<h2>Exercice 8 : Un additionneur complet sur 1 bit<a class="headerlink" href="#exercice-8-un-additionneur-complet-sur-1-bit" title="Link to this heading">#</a></h2>
 <p>Un <strong>additionneur complet</strong> nécessite une entrée supplémentaire : la <strong>retenur</strong> de l’addition précédente. Tout l’intérêt ici est de pouvoir chaîner plusieurs additionneurs complets à la suite.</p>
 <p>La table de vérité d’un additionneur complet respecte la table de vérité suivante :</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1217,36 +1248,18 @@ document.write(`
 </div>
 <p>Construisez un circuit logique permettant l’addition de deux bits avec <strong>retenue entrante</strong> (<strong><span class="math notranslate nohighlight">\(c_{in}\)</span></strong>) et <strong>retenue sortante</strong> (<strong><span class="math notranslate nohighlight">\(c_{out}\)</span></strong>). C’est l’additionneur complet sur 1 bit</p>
 </section>
-<section id="exercice-8-un-additionneur-complet-sur-4-bits">
-<h2>Exercice 8 : Un additionneur complet sur 4 bits<a class="headerlink" href="#exercice-8-un-additionneur-complet-sur-4-bits" title="Link to this heading">#</a></h2>
+<section id="exercice-9-un-additionneur-complet-sur-4-bits">
+<h2>Exercice 9 : Un additionneur complet sur 4 bits<a class="headerlink" href="#exercice-9-un-additionneur-complet-sur-4-bits" title="Link to this heading">#</a></h2>
 <p>Chaînez 4 additionneurs complets pour effectuer des additions de nombres de 4 bits. Vous pouvez utiliser un <strong>Afficheur</strong> (dans les entrées sorties) qui permet d’afficher la valeur sur 4 bits en binaire et en décimal</p>
 </section>
-<section id="exercice-9-comparateur">
-<h2>Exercice 9 : comparateur<a class="headerlink" href="#exercice-9-comparateur" title="Link to this heading">#</a></h2>
+<section id="exercice-10-comparateur">
+<h2>Exercice 10 : comparateur<a class="headerlink" href="#exercice-10-comparateur" title="Link to this heading">#</a></h2>
 <p>Construisez un schéma avec les portes logiques qui doit :</p>
 <ol class="arabic simple">
 <li><p>avoir deux entrées (deux bits)</p></li>
 <li><p>avoir trois sorties : I, E et S pour Inférieur, Egal et Supérieur</p></li>
 </ol>
 <p>Le circuit doit comparer les deux bits d’entrée</p>
-</section>
-<section id="exercice-10-verificateur-qualite-de-gateaux">
-<h2>Exercice 10 : vérificateur qualité de gâteaux<a class="headerlink" href="#exercice-10-verificateur-qualite-de-gateaux" title="Link to this heading">#</a></h2>
-<p>Dans une chaîne de production de pâtisserie, les ingrédients sont mélangés, cuisinés et utilisés pour créer des gâteaux qui sont ensuite cuits automatiquement.</p>
-<p>Il existe un vérificateur de qualité des gâteaux qui sortent de la chaîne de production. Quatre paramètres sont analysés en temps réel et automatiquement :</p>
-<ol class="arabic simple">
-<li><p>le poids du gâteau</p></li>
-<li><p>sa couleur après cuisson</p></li>
-<li><p>sa forme</p></li>
-<li><p>son taux de sucre</p></li>
-</ol>
-<p>Cela permet de définir le type de qualité de gâteau :</p>
-<ul class="simple">
-<li><p><strong>Première qualité</strong> : le poids et 2 autres paramètres sont corrects</p></li>
-<li><p><strong>Deuxième qualité</strong> : le poids est incorrect ou le poids et 2 autres paramètres sont corrects</p></li>
-<li><p><strong>Qualité médiocre</strong> : le poids est incorrect ainsi qu’au minimum 2 autres paramètres sont incorrects</p></li>
-</ul>
-<p>Construire le circuit</p>
 </section>
 </section>
 
@@ -1380,11 +1393,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-et-la-famille-rochat">Exercice 4 : Et la famille Rochat ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-un-demi-additionneur-pour-aller-plus-loin">Exercice 6 : Un demi-additionneur (pour aller plus loin)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-additionneur-complet-sur-1-bit">Exercice 7 : Un additionneur complet sur 1 bit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-4-bits">Exercice 8 : Un additionneur complet sur 4 bits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-comparateur">Exercice 9 : comparateur</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-verificateur-qualite-de-gateaux">Exercice 10 : vérificateur qualité de gâteaux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-le-coffre-fort">Exercice 5 : Le coffre-fort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-la-banque">Exercice 6 : La banque</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-un-demi-additionneur-pour-aller-plus-loin">Exercice 7 : Un demi-additionneur (pour aller plus loin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8-un-additionneur-complet-sur-1-bit">Exercice 8 : Un additionneur complet sur 1 bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9-un-additionneur-complet-sur-4-bits">Exercice 9 : Un additionneur complet sur 4 bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10-comparateur">Exercice 10 : comparateur</a></li>
 </ul>
   </nav></div>
 
