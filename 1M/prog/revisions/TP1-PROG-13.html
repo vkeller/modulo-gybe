@@ -651,7 +651,8 @@ document.write(`
 <span class="n">negatifs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">neutres</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nombres</span><span class="p">)):</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">nombres</span><span class="p">):</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">positifs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
@@ -659,7 +660,8 @@ document.write(`
         <span class="n">negatifs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="n">neutres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
-
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il y a&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">negatifs</span><span class="p">),</span><span class="s2">&quot;nombres négatifs&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il y a&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">neutres</span><span class="p">),</span><span class="s2">&quot;zéros&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il y a&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">positifs</span><span class="p">),</span><span class="s2">&quot;nombres positifs&quot;</span><span class="p">)</span>
@@ -710,7 +712,7 @@ Il y a 5 nombres positifs
 <p><strong>Consigne</strong></p>
 <ul class="simple">
 <li><p>Dessiner l’algorigramme correspondant</p></li>
-<li><p>Programmer en Python</p></li>
+<li><p>Ecrire un programme Python implémentant l’algorithme</p></li>
 </ul>
 </section>
 </section>
