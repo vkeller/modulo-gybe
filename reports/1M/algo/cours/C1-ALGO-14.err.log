@@ -32,7 +32,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 import random
 
 longueur = 7
-taille_population = 4000 # Doit être pair !
+taille_population = 100 # Doit être pair !
 generations = 30
 taux_mutation = 1 # Compris entre 1 et 6 (dé à jouer)
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -112,6 +112,9 @@ while i < taille_population:
 secret = input("Quel mot à rechercher : ")
 secret = secret.upper()
 
+#variable permettant de savoir si l'algorithme a convergé
+trouve = False
+
 ## GENERATIONS
 g = 0
 while g < generations:
@@ -138,11 +141,13 @@ while g < generations:
     i = 0
     while i < taille_population:
         fit = fitness(sel[i], secret)
-#        print(sel[i],fit)
+        #print(sel[i],fit)
         if fit == longueur:
             print("Mot secret trouvé : ",sel[i],"à la génération",g)
             # permet de sortir de la boucle
+            trouve = True
             g = generations + 1
+            i = taille_population + 1
         i = i + 1
     ## RECOPIE DE LA POP SEL VERS LA POPULATION
     population.clear()
@@ -150,6 +155,8 @@ while g < generations:
     sel.clear()
     g = g + 1
 
+if trouve == False:
+    print("L'algorithme n'a pas trouvé de solution")
 
 ------------------
 
@@ -161,7 +168,7 @@ while g < generations:
 [32m     83[39m     i = i + [32m1[39m
 [32m---> [39m[32m85[39m secret = [38;5;28;43minput[39;49m[43m([49m[33;43m"[39;49m[33;43mQuel mot à rechercher : [39;49m[33;43m"[39;49m[43m)[49m
 [32m     86[39m secret = secret.upper()
-[32m     88[39m [38;5;66;03m## GENERATIONS[39;00m
+[32m     88[39m [38;5;66;03m#variable permettant de savoir si l'algorithme a convergé[39;00m
 
 [36mFile [39m[32m~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274[39m, in [36mKernel.raw_input[39m[34m(self, prompt)[39m
 [32m   1272[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._allow_stdin:

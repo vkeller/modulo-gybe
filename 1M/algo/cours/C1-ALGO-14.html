@@ -877,16 +877,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODPQKJU
-IEACOCE
-SOWMYAY
-WVACLAI
-EYMGJGC
-QMDBIFY
-GBSLPWY
-ELEGIPK
-GLVHXJY
-KADJGTM
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JZYRHBW
+FBHAUIR
+WQAXTUY
+AJMCTUK
+NFDWYER
+QHDHUME
+VKCWUCP
+MNBMNKG
+LJPMBTL
+WNEHNHU
 </pre></div>
 </div>
 </div>
@@ -904,7 +904,7 @@ KADJGTM
 <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">longueur</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">taille_population</span> <span class="o">=</span> <span class="mi">4000</span> <span class="c1"># Doit être pair !</span>
+<span class="n">taille_population</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Doit être pair !</span>
 <span class="n">generations</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="n">taux_mutation</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Compris entre 1 et 6 (dé à jouer)</span>
 <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
@@ -984,6 +984,9 @@ KADJGTM
 <span class="n">secret</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel mot à rechercher : &quot;</span><span class="p">)</span>
 <span class="n">secret</span> <span class="o">=</span> <span class="n">secret</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 
+<span class="c1">#variable permettant de savoir si l&#39;algorithme a convergé</span>
+<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+
 <span class="c1">## GENERATIONS</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">g</span> <span class="o">&lt;</span> <span class="n">generations</span><span class="p">:</span>
@@ -1010,17 +1013,22 @@ KADJGTM
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">taille_population</span><span class="p">:</span>
         <span class="n">fit</span> <span class="o">=</span> <span class="n">fitness</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">secret</span><span class="p">)</span>
-<span class="c1">#        print(sel[i],fit)</span>
+        <span class="c1">#print(sel[i],fit)</span>
         <span class="k">if</span> <span class="n">fit</span> <span class="o">==</span> <span class="n">longueur</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mot secret trouvé : &quot;</span><span class="p">,</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s2">&quot;à la génération&quot;</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
             <span class="c1"># permet de sortir de la boucle</span>
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">g</span> <span class="o">=</span> <span class="n">generations</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">taille_population</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="c1">## RECOPIE DE LA POP SEL VERS LA POPULATION</span>
     <span class="n">population</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">population</span> <span class="o">=</span> <span class="n">sel</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">sel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">trouve</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;algorithme n&#39;a pas trouvé de solution&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1032,7 +1040,7 @@ KADJGTM
 <span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="ne">---&gt; </span><span class="mi">85</span> <span class="n">secret</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel mot à rechercher : &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="n">secret</span> <span class="o">=</span> <span class="n">secret</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="c1">## GENERATIONS</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="c1">#variable permettant de savoir si l&#39;algorithme a convergé</span>
 
 <span class="nn">File ~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1272</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
