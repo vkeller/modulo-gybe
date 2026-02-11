@@ -5,7 +5,7 @@
 import random
 
 longueur = 7
-taille_population = 4000 # Doit être pair !
+taille_population = 100 # Doit être pair !
 generations = 30
 taux_mutation = 1 # Compris entre 1 et 6 (dé à jouer)
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -85,6 +85,9 @@ while i < taille_population:
 secret = input("Quel mot à rechercher : ")
 secret = secret.upper()
 
+#variable permettant de savoir si l'algorithme a convergé
+trouve = False
+
 ## GENERATIONS
 g = 0
 while g < generations:
@@ -111,14 +114,19 @@ while g < generations:
     i = 0
     while i < taille_population:
         fit = fitness(sel[i], secret)
-#        print(sel[i],fit)
+        print(sel[i],fit)
         if fit == longueur:
             print("Mot secret trouvé : ",sel[i],"à la génération",g)
             # permet de sortir de la boucle
+            trouve = True
             g = generations + 1
+            i = taille_population + 1
         i = i + 1
     ## RECOPIE DE LA POP SEL VERS LA POPULATION
     population.clear()
     population = sel.copy()
     sel.clear()
     g = g + 1
+
+if trouve == False:
+    print("L'algorithme n'a pas trouvé de solution")
