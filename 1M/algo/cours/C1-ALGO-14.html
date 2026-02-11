@@ -250,7 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../prog/cryptographie/TP1-PROG-11.html">TP1-PROG-11 : Introduction à la cryptographie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../prog/boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../prog/boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : TP supplémentaire prog 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : Révision prog + algo 1M</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -287,6 +287,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/algo/R2-ALGO-04.html">R1-ALGO-04 : Révision</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -573,8 +574,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#croisements-et-mutations">Croisements et mutations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemin">Résoudre le problème du plus cours chemin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple-le-mot-secret">Algorithme génétique simple : le mot secret</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe :</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annexes-codes-informatiques">Annexes : codes informatiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-mots-de-7-lettres-aleatoires">Générateur de mots de 7 lettres aléatoires</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
             </nav>
@@ -643,7 +650,7 @@ document.write(`
 <li><p>doit pouvoir être écrit par un gymnasien de première année</p></li>
 </ol>
 <p>Quelle stratégie ?</p>
-<p><strong>Tout tester au hasard ?</strong> En utilisant seulement les lettres majuscules. Le mot <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code> contient 7 lettres, le nombre total de possibilités atteint <span class="math notranslate nohighlight">\(7^26 = 9387480337647754305649\)</span> soit environ <span class="math notranslate nohighlight">\(10^22\)</span>. Si un ordinateur peut tester un milliard de solutions par secondes, cela équivaut à y passer plus de 3000 siècles.</p>
+<p><strong>Tout tester au hasard ?</strong> En utilisant seulement les lettres majuscules. Le mot <code class="docutils literal notranslate"><span class="pre">BONJOUR</span></code> contient 7 lettres, le nombre total de possibilités atteint <span class="math notranslate nohighlight">\(7^{26} = 9387480337647754305649\)</span> soit environ <span class="math notranslate nohighlight">\(10^22\)</span>. Si un ordinateur peut tester un milliard de solutions par secondes, cela équivaut à y passer plus de 3000 siècles.</p>
 <p><strong>Utiliser une approche évolutionniste</strong>. A chaque essai, on garde les morceaux de phrases qui ressemblent le plus à la cible, puis on les mélange, puis on les combine. Exactement comme fait la nature.</p>
 </section>
 <section id="algorithmes-evolutionnistes">
@@ -713,12 +720,63 @@ document.write(`
 </ul>
 </section>
 </section>
-<section id="algorithme-genetique-simple">
-<h2>Algorithme génétique simple<a class="headerlink" href="#algorithme-genetique-simple" title="Link to this heading">#</a></h2>
-<p>Dans cet exemple, nous souhaitons trouver la chaîne de bits ayant le plus de <code class="docutils literal notranslate"><span class="pre">1</span></code> pour une longueur fixe donnée.</p>
+<section id="algorithme-genetique-simple-le-mot-secret">
+<h2>Algorithme génétique simple : le mot secret<a class="headerlink" href="#algorithme-genetique-simple-le-mot-secret" title="Link to this heading">#</a></h2>
+<p>A l’aide d’un algorithme génétique, nous allons retrouver un mot secret. Le mot secret est un mot de 7 lettres en majuscules et il est connu que du seul prof.</p>
+<section id="principe">
+<h3>Principe :<a class="headerlink" href="#principe" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Chaque élève reçoit deux mots de 7 lettres au hasard. C’est la <strong>population initiale</strong> (ou <strong>génération 0</strong>)</p></li>
+<li><p>Chaque élève va évaluer le <strong>fitness</strong> de ses mots. Seuls deux seront conservés. Avec la population initiale, les deux sont choisi automatiquement. C’est la phase de <strong>sélection naturelle</strong>. Seuls les meilleurs sont choisis.</p></li>
+<li><p>Chaque élève va croiser ses deux mots. C’est la <strong>phase de reproduction</strong>. Le point de coupure (<em>crossover point</em>) est choisi au hasard avec un dé à jouer</p></li>
+<li><p>Chaque élève va faire muter un gène des deux enfants. C’est la <strong>phase de mutation</strong>. Le point de mutation et la nouvelle valeur de lettre seront choisis au hasard avec un dé</p></li>
+<li><p>L’algorithme reprend au point 2.</p></li>
+</ol>
+<p>Faire évoluer votre population jusqu’à la <strong>génération 4</strong></p>
 </section>
-<section id="resoudre-le-probleme-du-plus-cours-chemin">
-<h2>Résoudre le problème du plus cours chemin<a class="headerlink" href="#resoudre-le-probleme-du-plus-cours-chemin" title="Link to this heading">#</a></h2>
+</section>
+<section id="annexes-codes-informatiques">
+<h2>Annexes : codes informatiques<a class="headerlink" href="#annexes-codes-informatiques" title="Link to this heading">#</a></h2>
+<section id="generateur-de-mots-de-7-lettres-aleatoires">
+<h3>Générateur de mots de 7 lettres aléatoires<a class="headerlink" href="#generateur-de-mots-de-7-lettres-aleatoires" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------------------------------------------------------</span>
+<span class="c1"># Générateur de mots aléatoires de 7 lettres</span>
+<span class="c1"># Vincent Keller (c) 2026</span>
+<span class="c1"># -------------------------------------------------------------</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nombre</span><span class="p">:</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WDHMMKP
+BQFFASS
+ZAVMEMC
+OYCVIXL
+OSLLALX
+AYSTHJP
+YLYJTQX
+DVIHAOL
+QLZRQLX
+QYOHZRV
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="references">
 <h2>Références<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
@@ -808,8 +866,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#croisements-et-mutations">Croisements et mutations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple">Algorithme génétique simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resoudre-le-probleme-du-plus-cours-chemin">Résoudre le problème du plus cours chemin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-genetique-simple-le-mot-secret">Algorithme génétique simple : le mot secret</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe :</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annexes-codes-informatiques">Annexes : codes informatiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-mots-de-7-lettres-aleatoires">Générateur de mots de 7 lettres aléatoires</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
 </ul>
   </nav></div>
