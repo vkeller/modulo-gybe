@@ -580,6 +580,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annexes">Annexes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codage-des-lettres-codons-avec-deux-de-a-jouer">Codage des lettres (codons) avec deux dé à jouer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-mots-aleatoires-de-7-lettres-majuscules">Générateur de mots aléatoires de 7 lettres majuscules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-python-complet">Code python complet</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
@@ -876,16 +877,175 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DLBZDSD
-IAGVCOO
-NOKHSRJ
-DDMVBZZ
-CRDWJUR
-PUFLFSB
-SKFEGEL
-XASPEGS
-SFPVIUB
-JQHSLBB
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODPQKJU
+IEACOCE
+SOWMYAY
+WVACLAI
+EYMGJGC
+QMDBIFY
+GBSLPWY
+ELEGIPK
+GLVHXJY
+KADJGTM
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-python-complet">
+<h3>Code python complet<a class="headerlink" href="#code-python-complet" title="Link to this heading">#</a></h3>
+<p>Attention, ce code n’est pas le plus optimal dans son écriture. Il mobilise les concepts de programmation vus au cours (boucles, tests conditionnels, variables, listes, etc..)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------------------------------------------------------</span>
+<span class="c1"># Générateur de mots aléatoires de X lettres (x est la longueur)</span>
+<span class="c1"># Vincent Keller, Gymnase de Beaulieu, (c) 2026</span>
+<span class="c1"># -------------------------------------------------------------</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">longueur</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">taille_population</span> <span class="o">=</span> <span class="mi">4000</span> <span class="c1"># Doit être pair !</span>
+<span class="n">generations</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">taux_mutation</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Compris entre 1 et 6 (dé à jouer)</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">init_individu</span><span class="p">():</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">longueur</span><span class="p">:</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">mot</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fitness</span><span class="p">(</span><span class="n">individu</span><span class="p">,</span><span class="n">cible</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fit</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">individu</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">individu</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">cible</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">fit</span> <span class="o">=</span> <span class="n">fit</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fit</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">selection</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span><span class="n">cible</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fit_pop</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">sel_pop</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">):</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="p">[</span><span class="n">pop</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">fitness</span><span class="p">(</span><span class="n">pop</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">cible</span><span class="p">)]</span>
+        <span class="n">fit_pop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Tri de la liste en fonction des fitness</span>
+    <span class="n">fit_pop</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fit_pop</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">taille_population</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sel_pop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fit_pop</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="c1"># Renvoi d&#39;une liste de taille taille_population (les taille_population plus forts)</span>
+    <span class="k">return</span> <span class="n">sel_pop</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">crossover</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span><span class="n">ind2</span><span class="p">):</span>
+    <span class="n">new_ind1</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">new_ind2</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Point de mutation (pour le jeu, 1 à 6 fonctionne)</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">longueur</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">point</span><span class="p">:</span>
+            <span class="n">new_ind1</span> <span class="o">=</span> <span class="n">new_ind1</span> <span class="o">+</span> <span class="n">ind1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">new_ind2</span> <span class="o">=</span> <span class="n">new_ind2</span> <span class="o">+</span> <span class="n">ind2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_ind1</span> <span class="o">=</span> <span class="n">new_ind1</span> <span class="o">+</span> <span class="n">ind2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">new_ind2</span> <span class="o">=</span> <span class="n">new_ind2</span> <span class="o">+</span> <span class="n">ind1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">new_ind1</span><span class="p">,</span> <span class="n">new_ind2</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mutation</span><span class="p">(</span><span class="n">ind</span><span class="p">):</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">longueur</span><span class="p">)</span>
+    <span class="n">new_ind</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">longueur</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">point</span><span class="p">:</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+            <span class="n">new_ind</span> <span class="o">=</span> <span class="n">new_ind</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_ind</span> <span class="o">=</span> <span class="n">new_ind</span> <span class="o">+</span> <span class="n">ind</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">new_ind</span>
+
+<span class="c1">## INITIALISATION</span>
+<span class="n">population</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">taille_population</span><span class="p">:</span>
+    <span class="n">population</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">init_individu</span><span class="p">())</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">secret</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel mot à rechercher : &quot;</span><span class="p">)</span>
+<span class="n">secret</span> <span class="o">=</span> <span class="n">secret</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1">## GENERATIONS</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">g</span> <span class="o">&lt;</span> <span class="n">generations</span><span class="p">:</span>
+    <span class="c1">## SELECTION</span>
+    <span class="n">sel</span> <span class="o">=</span> <span class="n">selection</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
+    <span class="n">fit_max</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1">## CROSSOVER</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">taille_population</span><span class="p">:</span>
+        <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span> <span class="o">=</span> <span class="n">crossover</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind1</span>
+        <span class="n">sel</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind2</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
+        
+    <span class="c1">## MUTATION</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">taille_population</span><span class="p">:</span>
+        <span class="n">mut</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mut</span> <span class="o">&lt;</span> <span class="n">taux_mutation</span> <span class="p">:</span>
+            <span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mutation</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># A-T-ON TROUVE LE SECRET ?</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">taille_population</span><span class="p">:</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">fitness</span><span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">secret</span><span class="p">)</span>
+<span class="c1">#        print(sel[i],fit)</span>
+        <span class="k">if</span> <span class="n">fit</span> <span class="o">==</span> <span class="n">longueur</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mot secret trouvé : &quot;</span><span class="p">,</span><span class="n">sel</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s2">&quot;à la génération&quot;</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+            <span class="c1"># permet de sortir de la boucle</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">generations</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1">## RECOPIE DE LA POP SEL VERS LA POPULATION</span>
+    <span class="n">population</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="n">sel</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">sel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">85</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="n">population</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">init_individu</span><span class="p">())</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="ne">---&gt; </span><span class="mi">85</span> <span class="n">secret</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel mot à rechercher : &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="n">secret</span> <span class="o">=</span> <span class="n">secret</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="c1">## GENERATIONS</span>
+
+<span class="nn">File ~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
 </div>
 </div>
@@ -986,6 +1146,7 @@ JQHSLBB
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annexes">Annexes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codage-des-lettres-codons-avec-deux-de-a-jouer">Codage des lettres (codons) avec deux dé à jouer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generateur-de-mots-aleatoires-de-7-lettres-majuscules">Générateur de mots aléatoires de 7 lettres majuscules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-python-complet">Code python complet</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">Références</a></li>
