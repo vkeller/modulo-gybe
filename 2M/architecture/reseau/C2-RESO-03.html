@@ -229,6 +229,7 @@
 
 
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-03.html">R1-ALGO-03 : Rappels algorigrammes - Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-04.html">R1-ALGO-04 : Révision Algorigrammes</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../1M/installation/installation.html">Environnement de développement</a></li>
@@ -248,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/cryptographie/TP1-PROG-11.html">TP1-PROG-11 : Introduction à la cryptographie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : TP supplémentaire prog 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : Révision prog + algo 1M</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -285,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-04.html">R1-ALGO-04 : Révision</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -565,7 +567,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-reseau-tor">Le réseau Tor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quoi-ca-sert-le-darket">A quoi ça sert le darket ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quels-sont-les-services-que-l-on-trouve-sur-le-darket">Quels sont les services que l’on trouve sur le darket ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexation-sur-le-clearnet-et-le-darknet">Indexation sur le clearnet, et le darknet ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens">Liens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#termes-a-definir">Termes à définir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-cas-alphabay">Le cas Alphabay</a></li>
@@ -652,8 +654,12 @@ document.write(`
 <li><p><strong>Propagation de désinformation ou théories du complot extrêmes</strong> : l’anonymat et l’absence de modération favorisent la diffusion de contenus haineux, racistes ou conspirationnistes sans contrôle.</p></li>
 </ol>
 </section>
-<section id="quels-sont-les-services-que-l-on-trouve-sur-le-darket">
-<h2>Quels sont les services que l’on trouve sur le darket ?<a class="headerlink" href="#quels-sont-les-services-que-l-on-trouve-sur-le-darket" title="Link to this heading">#</a></h2>
+<section id="indexation-sur-le-clearnet-et-le-darknet">
+<h2>Indexation sur le clearnet, et le darknet ?<a class="headerlink" href="#indexation-sur-le-clearnet-et-le-darknet" title="Link to this heading">#</a></h2>
+<p>L’<strong>indexation</strong> des sites internet (services web mais pas seulement) consiste à parcourir l’entier du clearnet en suivant les liens un à un et de les répertorier dans une gigantesque <strong>base de donnéés</strong>. Ce travail est fait par des <strong>bots</strong> (exemple : <em>Googlebots</em>).</p>
+<p>Dans un réseau darknet, cele n’est pas possible. Par définition, les sites et services du réseau darknet ne sont pas indexés et non indexables.</p>
+<p>On utilise alors des <strong>bots</strong> locaux (installé sur la machine client) couplés à une intelligence artificielle pour trier les résultats.</p>
+<p>Services utilisables en OSINT : <strong>Robin</strong>, <strong>DarkGPT</strong>.</p>
 </section>
 <section id="liens">
 <h2>Liens<a class="headerlink" href="#liens" title="Link to this heading">#</a></h2>
@@ -749,7 +755,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-reseau-tor">Le réseau Tor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quoi-ca-sert-le-darket">A quoi ça sert le darket ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quels-sont-les-services-que-l-on-trouve-sur-le-darket">Quels sont les services que l’on trouve sur le darket ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexation-sur-le-clearnet-et-le-darknet">Indexation sur le clearnet, et le darknet ?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens">Liens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#termes-a-definir">Termes à définir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-cas-alphabay">Le cas Alphabay</a></li>
