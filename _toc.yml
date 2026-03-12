@@ -77,6 +77,7 @@ parts:
       - file: 1M/esdn/cours/C1-ESDN-05
       - file: 1M/esdn/presentations/TP1-ESDN-00
       - file: 1M/esdn/cours/TP1-ESDN-01
+      - file: 1M/esdn/sources/TP1-ESDN-02
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
