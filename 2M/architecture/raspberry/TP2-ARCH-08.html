@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>TP2-ARCH-08 : Redteam, blueteam et chapeaux &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP2-ARCH-08 : Anonymat sur Internet. &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2M/architecture/raspberry/TP2-ARCH-06';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2M/architecture/raspberry/TP2-ARCH-08';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP2-ARCH-07 : RPi pour aller plus loin" href="TP2-ARCH-07.html" />
-    <link rel="prev" title="TP2-ARCH-05 : Décoder le ciel" href="TP2-ARCH-05.html" />
+    <link rel="next" title="TP2-LOGI-01 : Les logidules" href="../logidules/TP2-LOGI-01.html" />
+    <link rel="prev" title="TP2-ARCH-07 : RPi pour aller plus loin" href="TP2-ARCH-07.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -324,9 +324,9 @@
 <li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">TP2-ARCH-08 : Redteam, blueteam et chapeaux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-06.html">TP2-ARCH-08 : Redteam, blueteam et chapeaux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-07.html">TP2-ARCH-07 : RPi pour aller plus loin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-08.html">TP2-ARCH-08 : Anonymat sur Internet.</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">TP2-ARCH-08 : Anonymat sur Internet.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
 </ul>
 </details></li>
@@ -437,7 +437,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/raspberry/TP2-ARCH-06.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/raspberry/TP2-ARCH-08.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -467,7 +467,7 @@
       
       
       
-      <li><a href="../../../_sources/2M/architecture/raspberry/TP2-ARCH-06.ipynb" target="_blank"
+      <li><a href="../../../_sources/2M/architecture/raspberry/TP2-ARCH-08.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -551,7 +551,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>TP2-ARCH-08 : Redteam, blueteam et chapeaux</h1>
+    <h1>TP2-ARCH-08 : Anonymat sur Internet.</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -561,37 +561,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cadre-legal-et-ethique">Cadre légal et éthique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-concepts-expliques-simplement">Les Concepts expliqués simplement</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chapeaux-une-question-d-ethique">Les “Chapeaux” : une question d’éthique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#red-team-vs-blue-team-le-jeu-du-chat-et-de-la-souris">Red Team vs Blue Team : le jeu du chat et de la souris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-pentest-test-d-intrusion-en-5-etapes">Le Pentest (Test d’Intrusion) en 5 étapes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-cartographie-du-reseau-niveau-debutant">Exercice 1 : “Cartographie du réseau” (Niveau Débutant)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-le-mot-de-passe-fort-niveau-intermediaire">Exercice 2 : “Le mot de passe fort” (Niveau Intermédiaire)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-catch-the-flag-niveau-avance">Exercice 3 : Catch the flag (Niveau avancé)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-du-reseau-de-tp">1. Schéma du Réseau de TP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-de-la-machine-cible-pi-cible">2. Préparation de la Machine CIBLE (Pi-Cible)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-a-jour-et-installation-du-serveur-web">2.1 : Mise à jour et installation du serveur web</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-du-drapeau-flag-et-de-la-faille">2.2 : Création du drapeau (Flag) et de la faille</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-pour-la-blue-team-acces-aux-logs">2.3 : Préparation pour la Blue Team (Accès aux logs)</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actions-de-la-red-team-pi-attaquant">3. Actions de la RED TEAM (Pi-Attaquant)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaissance-scanning">3.1 : Reconnaissance (Scanning)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exfiltration-vol-du-drapeau">3.3 : Exfiltration (Vol du drapeau)</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actions-de-la-blue-team-pi-defense">4. Actions de la BLUE TEAM (Pi-Defense)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connexion-a-la-cible-pour-analyse">4.1 : Connexion à la cible pour analyse</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-des-logs-d-acces-apache">4.2 : Analyse des logs d’accès (Apache)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rapport-d-incident">4.3 : Rapport d’incident</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario">Scenario</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-identifier-un-utilisateur">Exercice 1 : Identifier un utilisateur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-installer-tor-sur-le-rpi">Exercice 2 : Installer Tor sur le RPi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plusexercice-3-disparition-avec-tor">plusExercice 3 : Disparition avec Tor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-interessants">Liens intéressants</a></li>
 </ul>
             </nav>
         </div>
@@ -603,354 +578,136 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><img alt="pentest" src="../../../_images/pentest.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-08-redteam-blueteam-et-chapeaux">
-<h1>TP2-ARCH-08 : Redteam, blueteam et chapeaux<a class="headerlink" href="#tp2-arch-08-redteam-blueteam-et-chapeaux" title="Link to this heading">#</a></h1>
-<section id="objectifs-pedagogiques">
-<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tp2-arch-08-anonymat-sur-internet">
+<h1>TP2-ARCH-08 : Anonymat sur Internet.<a class="headerlink" href="#tp2-arch-08-anonymat-sur-internet" title="Link to this heading">#</a></h1>
+<section id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>comprendre les différences dans la sécurité informatique des réseaux</p></li>
-<li><p>tester différentes attaques sur le LAN RPi et les moyens de s’en protéger</p></li>
+<li><p>Peut-on vraiment disparaître d’Internet ?</p></li>
+<li><p>connaître le routage en onions</p></li>
+<li><p>construire un réseau tor privé</p></li>
+<li><p>connaître les risques du darknet</p></li>
 </ul>
 </section>
-<section id="cadre-legal-et-ethique">
-<h2>Cadre légal et éthique<a class="headerlink" href="#cadre-legal-et-ethique" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>✅ AUTORISÉ dans notre labo :</p>
-<ul>
-<li><p>Tester uniquement les machines du réseau isolé</p></li>
-<li><p>Utiliser les comptes de test fournis</p></li>
-<li><p>Documenter toutes les actions dans le cahier de TP</p></li>
-</ul>
-</li>
-<li><p>❌ INTERDIT (et puni par la loi) :</p>
-<ul>
-<li><p>Scanner ou tester des machines hors du labo</p></li>
-<li><p>Utiliser les compétences apprises sur des systèmes réels sans autorisation</p></li>
-<li><p>Partager des outils d’attaque en dehors du cadre pédagogique</p></li>
-</ul>
-</li>
-<li><p>Référence : <a class="reference external" href="https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr">Code Pénal Suisse</a></p></li>
-</ul>
+<section id="scenario">
+<h2>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
+<p>Un journaliste affirme pouvoir enquêter anonymement grâce à Tor.</p>
+<p><strong>Votre équipe est chargée de vérifier si c’est vrai techniquement et dans quels cas ça échoue.</strong></p>
 </section>
-<section id="les-concepts-expliques-simplement">
-<h2>Les Concepts expliqués simplement<a class="headerlink" href="#les-concepts-expliques-simplement" title="Link to this heading">#</a></h2>
-<section id="les-chapeaux-une-question-d-ethique">
-<h3>Les “Chapeaux” : une question d’éthique<a class="headerlink" href="#les-chapeaux-une-question-d-ethique" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Chapeau</p></th>
-<th class="head"><p>Couleur</p></th>
-<th class="head"><p>Rôle</p></th>
-<th class="head"><p>Analogie pour comprendre</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>⚪ <strong>White Hat</strong></p></td>
-<td><p>Blanc</p></td>
-<td><p><strong>Gentil hacker</strong> : teste les systèmes <em>avec autorisation</em> pour les renforcer</p></td>
-<td><p>🔐 Le serrurier qui vérifie votre porte pour vous dire comment mieux la fermer</p></td>
-</tr>
-<tr class="row-odd"><td><p>⚫ <strong>Black Hat</strong></p></td>
-<td><p>Noir</p></td>
-<td><p><strong>Pirate malveillant</strong> : attaque pour voler, détruire ou nuire <em>sans autorisation</em></p></td>
-<td><p>🦹 Le cambrioleur qui force votre serrure pour voler vos affaires</p></td>
-</tr>
-<tr class="row-even"><td><p>🔘 <strong>Gray Hat</strong></p></td>
-<td><p>Gris</p></td>
-<td><p><strong>Entre les deux</strong> : teste sans autorisation mais signale les failles (sans malveillance)</p></td>
-<td><p>🤷 Quelqu’un qui teste votre porte, trouve la faille, et vous laisse un mot… sans avoir demandé la permission</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<div><p>⚖️ <strong>Rappel légal essentiel</strong> : En Suisse, accéder sans autorisation à un système informatique est un délit pénal (article 143bis du Code pénal). <em>Toujours avoir une autorisation écrite avant de tester !</em></p>
-</div></blockquote>
-</section>
-<section id="red-team-vs-blue-team-le-jeu-du-chat-et-de-la-souris">
-<h3>Red Team vs Blue Team : le jeu du chat et de la souris<a class="headerlink" href="#red-team-vs-blue-team-le-jeu-du-chat-et-de-la-souris" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>🔴 RED TEAM = <strong>Les Attaquants</strong> (en entraînement)</p>
-<ul>
-<li><p>Objectif : Trouver les failles comme le ferait un vrai pirate</p></li>
-<li><p>Méthodes : Tests d’intrusion, ingénierie sociale, exploitation de vulnérabilités</p></li>
-<li><p>Mentalité : “Comment entrer sans se faire repérer ?”</p></li>
-</ul>
-</li>
-<li><p>🔵 BLUE TEAM = <strong>Les Défenseurs</strong></p>
-<ul>
-<li><p>Objectif : Détecter, bloquer et réparer les attaques</p></li>
-<li><p>Méthodes : Surveillance, pare-feu, analyse de logs, réponse aux incidents</p></li>
-<li><p>Mentalité : “Comment protéger et réagir vite ?”</p></li>
-</ul>
-</li>
-<li><p>🟣 PURPLE TEAM = <strong>La collaboration</strong></p>
-<ul>
-<li><p>Red + Blue travaillent ensemble pour améliorer la sécurité globale</p></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><p><strong>Analogie sportive</strong> : C’est comme un match d’entraînement au football. La Red Team attaque le but, la Blue Team défend. À la fin, on analyse ensemble pour s’améliorer !</p>
-</div></blockquote>
-</section>
-<section id="le-pentest-test-d-intrusion-en-5-etapes">
-<h3>Le Pentest (Test d’Intrusion) en 5 étapes<a class="headerlink" href="#le-pentest-test-d-intrusion-en-5-etapes" title="Link to this heading">#</a></h3>
+<section id="exercice-1-identifier-un-utilisateur">
+<h2>Exercice 1 : Identifier un utilisateur<a class="headerlink" href="#exercice-1-identifier-un-utilisateur" title="Link to this heading">#</a></h2>
+<p>Dans un navigateur normal, visitez les sites suivants :</p>
 <ol class="arabic simple">
-<li><p>RECONNAISSANCE → “Qui est ma cible ?”</p>
-<ul class="simple">
-<li><p>Collecte d’infos publiques (site web, réseaux sociaux…)</p></li>
-</ul>
-</li>
-<li><p>SCANNING → “Quelles sont les portes d’entrée ?”</p>
-<ul class="simple">
-<li><p>Recherche des ports ouverts, services actifs, versions logicielles</p></li>
-</ul>
-</li>
-<li><p>EXPLOITATION → “J’essaie d’entrer !”</p>
-<ul class="simple">
-<li><p>Utilisation contrôlée d’une faille découverte</p></li>
-</ul>
-</li>
-<li><p>MAINTIEN D’ACCÈS → “Est-ce que je peux rester ?”</p>
-<ul class="simple">
-<li><p>Test de persistance (uniquement en environnement autorisé !)</p></li>
-</ul>
-</li>
-<li><p>RAPPORT → “Voici ce que j’ai trouvé et comment corriger”</p>
-<ul class="simple">
-<li><p>Document professionnel avec recommandations</p></li>
-</ul>
-</li>
+<li><p><a class="reference external" href="https://whatismyipaddress.com/">https://whatismyipaddress.com/</a></p></li>
+<li><p><a class="reference external" href="https://amiunique.org/fingerprint">https://amiunique.org/fingerprint</a></p></li>
 </ol>
-</section>
-</section>
-<section id="exercice-1-cartographie-du-reseau-niveau-debutant">
-<h2>Exercice 1 : “Cartographie du réseau” (Niveau Débutant)<a class="headerlink" href="#exercice-1-cartographie-du-reseau-niveau-debutant" title="Link to this heading">#</a></h2>
-<p><strong>Objectif</strong> : Comprendre comment on découvre les machines sur un réseau</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sur le Raspberry &quot;attaquant&quot; (Kali Lite ou Pi OS + outils)</span>
-<span class="c1"># Commande simple pour scanner le réseau local</span>
-nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">    </span><span class="c1"># Découverte des hôtes actifs</span>
-nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w">      </span><span class="c1"># Analyse des services sur une machine cible</span>
-</pre></div>
-</div>
+<p>Relevez les éléments suivants :</p>
 <ul class="simple">
-<li><p>Dessiner le schéma du réseau avant/après scan</p></li>
-<li><p>Identifier les services ouverts (SSH, HTTP…)</p></li>
-<li><p>Rédiger une fiche “profil de cible”</p></li>
+<li><p>IP</p></li>
+<li><p>Pays</p></li>
+<li><p>Fournisseur d’accès internet</p></li>
+<li><p>Informations du navigateur</p></li>
+<li><p>Taux d’unicité</p></li>
 </ul>
+<p>Répondez aux questions suivantes :</p>
+<div class="note admonition">
+<p class="admonition-title">Questions🔌</p>
+<p>1 - Comment un site identifie-t-il un internaute sans compte ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Par l’adresse IP + l’empreinte du navigateur (fingerprinting)</p>
+</div>
+</details></div>
+<p>2 - Qu’est-ce qui identifie le plus : IP ou fingerprint ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Le fingerprint permet une identification très précise même sans IP fixe</p>
+</div>
+</details></div>
+<p>3 - Est-on anonyme par défaut sur Internet ?</p>
+<div class="admonition-reponse admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Non. Par défaut, on est hautement traçable</p>
+</div>
+</details></div>
+</div>
 </section>
-<section id="exercice-2-le-mot-de-passe-fort-niveau-intermediaire">
-<h2>Exercice 2 : “Le mot de passe fort” (Niveau Intermédiaire)<a class="headerlink" href="#exercice-2-le-mot-de-passe-fort-niveau-intermediaire" title="Link to this heading">#</a></h2>
-<p><strong>Prérequis</strong> : installer john the ripper</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mettre à jour les paquets</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>update
-<span class="c1"># installer snapd (gestionnaire de paquets)</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
-<span class="c1"># installer l&#39;outil</span>
-sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>snapd
-<span class="c1"># installer john the ripper</span>
-sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>john-the-ripper
-</pre></div>
-</div>
-<p>Une fois les prérequis techniques installé, nous pouvons passer à l’exercice 2</p>
-<p><strong>Exercice</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un fichier test avec des hashs MD5 simples</span>
-<span class="c1"># (uniquement sur comptes de test créés pour l&#39;exercice !)</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;testuser:</span><span class="k">$(</span>openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span>faiblesse<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/test_hashes
-
-<span class="c1"># Utilisation de john the ripper en mode éducatif</span>
-john<span class="w"> </span>--wordlist<span class="o">=</span>/usr/share/wordlists/rockyou.txt<span class="w"> </span>/tmp/test_hashes
-</pre></div>
-</div>
+<section id="exercice-2-installer-tor-sur-le-rpi">
+<h2>Exercice 2 : Installer Tor sur le RPi<a class="headerlink" href="#exercice-2-installer-tor-sur-le-rpi" title="Link to this heading">#</a></h2>
+<p>Par défaut, le nom de domaine <strong><a class="reference external" href="http://tor-project.org">tor-project.org</a></strong> est bloqué par les firewalls de l’Etat de Vaud.</p>
+<p>Quelle solution pouvez-vous trouver pour contourner ce blocage et installer le navigateur Tor sur votre RPi ?</p>
+</section>
+<section id="plusexercice-3-disparition-avec-tor">
+<h2>plusExercice 3 : Disparition avec Tor<a class="headerlink" href="#plusexercice-3-disparition-avec-tor" title="Link to this heading">#</a></h2>
+<p>Lancer le navigateur Tor.</p>
+<ol class="arabic simple">
+<li><p>Aller sur le site <a class="reference external" href="https://check.torproject.org/">https://check.torproject.org/</a> et vérifier que tout fonctionne</p></li>
+<li><p>Retourner sur les deux site de l’exercice 1</p></li>
+</ol>
+<p>Relever les éléments suivants :</p>
 <ul class="simple">
-<li><p>Tester 5 mots de passe de complexité variable</p></li>
-<li><p>Chronométrer le temps de “craquage”</p></li>
-<li><p>Établir une charte “mot de passe robuste” pour l’établissement</p></li>
+<li><p>IP</p></li>
+<li><p>Pays</p></li>
+<li><p>Fournisseur d’accès internet</p></li>
+<li><p>Informations du navigateur</p></li>
+<li><p>Taux d’unicité</p></li>
 </ul>
-</section>
-<section id="exercice-3-catch-the-flag-niveau-avance">
-<h2>Exercice 3 : Catch the flag (Niveau avancé)<a class="headerlink" href="#exercice-3-catch-the-flag-niveau-avance" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p>⚠️ <strong>AVERTISSEMENT IMPORTANT</strong><br />
-Ces commandes sont à exécuter <strong>UNIQUEMENT</strong> dans un réseau isolé (bac à sable) avec des machines dont vous êtes propriétaire ou administrateur (ici, les Raspberry Pi du laboratoire).<br />
-<strong>Toute utilisation sur des systèmes tiers sans autorisation est illégale.</strong></p>
-</div></blockquote>
-<section id="schema-du-reseau-de-tp">
-<h3>1. Schéma du Réseau de TP<a class="headerlink" href="#schema-du-reseau-de-tp" title="Link to this heading">#</a></h3>
-<p>Pour ce TP, nous utilisons au minimum 3 Raspberry Pi connectés au même switch (réseau local isolé). S’il y a plus de groupes, alors on ajoute des attaquants.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Rôle</p></th>
-<th class="head"><p>Nom de la machine</p></th>
-<th class="head"><p>Adresse IP (Exemple)</p></th>
-<th class="head"><p>Système</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>🔴 <strong>Red Team</strong> (Attaquant)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Pi-Attaquant</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">192.168.200.10</span></code></p></td>
-<td><p>Raspberry Pi OS</p></td>
-</tr>
-<tr class="row-odd"><td><p>🎯 <strong>Cible</strong> (Victime)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Pi-Cible</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">192.168.200.20</span></code></p></td>
-<td><p>Raspberry Pi OS + Apache</p></td>
-</tr>
-<tr class="row-even"><td><p>🔵 <strong>Blue Team</strong> (Défenseur)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Pi-Defense</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">192.168.200.30</span></code></p></td>
-<td><p>Raspberry Pi OS</p></td>
-</tr>
-</tbody>
-</table>
+<p>Répondez aux questions suivantes :</p>
+<div class="note admonition">
+<p class="admonition-title">Questions🔌</p>
+<p>1 - L’IP a-t-elle changé ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Oui, l’IP est totalement différente</p>
+</div>
+</details></div>
+<p>2 - Le pays est-il toujours correct ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">La plupart du temps, il ne correspond pas à la Suisse.</p>
+</div>
+</details></div>
+<p>3 - Le fingerprint a-t-il disparu ?</p>
+<div class="admonition-reponse admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Non, mais il est beaucoup plus standardisé</p>
+</div>
+</details></div>
+<p>4 - Qui “voit” le site web ?</p>
+<div class="admonition-reponse admonition">
+<p class="admonition-title">Réponse</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span style="color:grey">Cliquer ici pour voir la réponse</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Le site voit le <strong>noeud de sortie</strong> mais pas l’utilisateur. Tor masque l’origine réseau, mais pas l’existence de l’utilisateur.</p>
+</div>
+</details></div>
 </div>
 </section>
-<section id="preparation-de-la-machine-cible-pi-cible">
-<h3>2. Préparation de la Machine CIBLE (Pi-Cible)<a class="headerlink" href="#preparation-de-la-machine-cible-pi-cible" title="Link to this heading">#</a></h3>
-<p><em>Cette machine héberge le “secret” à protéger.</em></p>
-<section id="mise-a-jour-et-installation-du-serveur-web">
-<h4>2.1 : Mise à jour et installation du serveur web<a class="headerlink" href="#mise-a-jour-et-installation-du-serveur-web" title="Link to this heading">#</a></h4>
-<p>Connectez-vous au <code class="docutils literal notranslate"><span class="pre">Pi-Cible</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mise à jour des paquets</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
-
-<span class="c1"># Installation du serveur web Apache</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>-y
-
-<span class="c1"># Démarrage et activation du service</span>
-sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
-sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>apache2
-</pre></div>
-</div>
-</section>
-<section id="creation-du-drapeau-flag-et-de-la-faille">
-<h4>2.2 : Création du drapeau (Flag) et de la faille<a class="headerlink" href="#creation-du-drapeau-flag-et-de-la-faille" title="Link to this heading">#</a></h4>
-<p>Nous allons créer un fichier secret dans un dossier peu visible.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création du dossier secret</span>
-sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/html/confidentiel
-
-<span class="c1"># Création du fichier drapeau (le but du jeu)</span>
-<span class="c1"># Remplacez &quot;FLAG{SECURITE_POUR_TOUS}&quot; par votre propre texte</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;FLAG{SECURITE_POUR_TOUS}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/html/confidentiel/flag.txt
-
-<span class="c1"># Configuration des droits (Lire pour tous, écrire seulement pour root)</span>
-sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/confidentiel
-sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/var/www/html/confidentiel/flag.txt
-
-<span class="c1"># Vérification que le fichier est accessible localement</span>
-curl<span class="w"> </span>http://localhost/confidentiel/flag.txt
-</pre></div>
-</div>
-</section>
-<section id="preparation-pour-la-blue-team-acces-aux-logs">
-<h4>2.3 : Préparation pour la Blue Team (Accès aux logs)<a class="headerlink" href="#preparation-pour-la-blue-team-acces-aux-logs" title="Link to this heading">#</a></h4>
-<p>La Blue Team devra consulter les logs à distance. Nous créons un utilisateur spécifique pour eux.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un utilisateur &#39;auditeur&#39;</span>
-sudo<span class="w"> </span>adduser<span class="w"> </span>auditeur
-<span class="c1"># (Suivez les instructions pour le mot de passe, ex: &#39;cyber2024&#39;)</span>
-
-<span class="c1"># Autoriser cet utilisateur à lire les logs Apache sans être root</span>
-<span class="c1"># On l&#39;ajoute au groupe adm qui a souvent accès aux logs</span>
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>adm<span class="w"> </span>auditeur
-
-<span class="c1"># Vérification du chemin des logs</span>
-ls<span class="w"> </span>-l<span class="w"> </span>/var/log/apache2/
-</pre></div>
-</div>
-</section>
-</section>
-<section id="actions-de-la-red-team-pi-attaquant">
-<h3>3. Actions de la RED TEAM (Pi-Attaquant)<a class="headerlink" href="#actions-de-la-red-team-pi-attaquant" title="Link to this heading">#</a></h3>
-<p>L’objectif est de trouver et récupérer le fichier <code class="docutils literal notranslate"><span class="pre">flag.txt</span></code> sans connaître son emplacement à l’avance.</p>
-<section id="reconnaissance-scanning">
-<h4>3.1 : Reconnaissance (Scanning)<a class="headerlink" href="#reconnaissance-scanning" title="Link to this heading">#</a></h4>
-<p>La Red Team commence par découvrir la cible.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Installation de l&#39;outil de scan (si pas déjà fait)</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap<span class="w"> </span>-y
-
-<span class="c1"># 1. Découverte de la machine cible sur le réseau</span>
-<span class="c1"># Remplacez 192.168.10.0/24 par votre plage réseau</span>
-nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.10.0/24
-
-<span class="c1"># 2. Scan des ports ouverts sur la cible (192.168.10.20)</span>
-nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span>.168.10.20
-</pre></div>
-</div>
-<p><strong>Attendu : Le port 80 (http) doit apparaître comme ouvert.</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Installation de curl pour interroger le web</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>-y
-
-<span class="c1"># 1. Voir la page d&#39;accueil (souvent vide ou par défaut)</span>
-curl<span class="w"> </span>http://192.168.10.20/
-
-<span class="c1"># 2. Tester des noms de dossiers courants (Brute-force manuel)</span>
-curl<span class="w"> </span>http://192.168.10.20/admin/
-curl<span class="w"> </span>http://192.168.10.20/secret/
-curl<span class="w"> </span>http://192.168.10.20/confidentiel/
-</pre></div>
-</div>
-<p>Si le dossier existe, le contenu s’affiche.</p>
-</section>
-<section id="exfiltration-vol-du-drapeau">
-<h4>3.3 : Exfiltration (Vol du drapeau)<a class="headerlink" href="#exfiltration-vol-du-drapeau" title="Link to this heading">#</a></h4>
-<p>Une fois le fichier trouvé, la Red Team le récupère.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Téléchargement du drapeau sur la machine attaquante</span>
-curl<span class="w"> </span>http://192.168.10.20/confidentiel/flag.txt<span class="w"> </span>-o<span class="w"> </span>flag_vole.txt
-
-<span class="c1"># Vérification du contenu</span>
-cat<span class="w"> </span>flag_vole.txt
-</pre></div>
-</div>
-<p><strong>Mission Red Team Accomplie : Vous avez le drapeau. Notez l’heure exacte de l’attaque pour le debrief.</strong></p>
-</section>
-</section>
-<section id="actions-de-la-blue-team-pi-defense">
-<h3>4. Actions de la BLUE TEAM (Pi-Defense)<a class="headerlink" href="#actions-de-la-blue-team-pi-defense" title="Link to this heading">#</a></h3>
-<p>L’objectif est de détecter l’attaque, identifier l’attaquant et comprendre ce qu’il a fait.</p>
-<section id="connexion-a-la-cible-pour-analyse">
-<h4>4.1 : Connexion à la cible pour analyse<a class="headerlink" href="#connexion-a-la-cible-pour-analyse" title="Link to this heading">#</a></h4>
-<p>La Blue Team ne travaille pas sur la cible directement, elle s’y connecte pour analyser.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Depuis le Pi-Defense, connexion SSH au Pi-Cible</span>
-<span class="c1"># Remplacez &#39;auditeur&#39; et l&#39;IP par les vôtres</span>
-ssh<span class="w"> </span>auditeur@192.168.10.20
-<span class="c1"># (Entrez le mot de passe défini à l&#39;étape 2.3)</span>
-</pre></div>
-</div>
-</section>
-<section id="analyse-des-logs-d-acces-apache">
-<h4>4.2 : Analyse des logs d’accès (Apache)<a class="headerlink" href="#analyse-des-logs-d-acces-apache" title="Link to this heading">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Une fois connecté en SSH sur la Cible :</span>
-
-<span class="c1"># 1. Voir les dernières lignes du log d&#39;accès</span>
-tail<span class="w"> </span>-n<span class="w"> </span><span class="m">20</span><span class="w"> </span>/var/log/apache2/access.log
-
-<span class="c1"># 2. Chercher spécifiquement l&#39;adresse IP de l&#39;attaquant (192.168.10.10)</span>
-grep<span class="w"> </span><span class="s2">&quot;192.168.10.10&quot;</span><span class="w"> </span>/var/log/apache2/access.log
-
-<span class="c1"># 3. Chercher les tentatives d&#39;accès au fichier flag</span>
-grep<span class="w"> </span><span class="s2">&quot;flag.txt&quot;</span><span class="w"> </span>/var/log/apache2/access.log
-</pre></div>
-</div>
-</section>
-<section id="rapport-d-incident">
-<h4>4.3 : Rapport d’incident<a class="headerlink" href="#rapport-d-incident" title="Link to this heading">#</a></h4>
-<p>La Blue Team doit rédiger un rapport basé sur ces commandes.</p>
-<p><strong>Exemple de ce qu’ils doivent trouver dans les logs :</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">192.168.10.10</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">12</span><span class="o">/</span><span class="n">Oct</span><span class="o">/</span><span class="mi">2023</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">30</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /confidentiel/flag.txt HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">245</span> <span class="s2">&quot;-&quot;</span> <span class="s2">&quot;curl/7.68.0&quot;</span>
-</pre></div>
-</div>
-<p><strong>Analyse :</strong></p>
+<section id="liens-interessants">
+<h2>Liens intéressants<a class="headerlink" href="#liens-interessants" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Qui ? <code class="docutils literal notranslate"><span class="pre">IP</span> <span class="pre">192.168.10.10</span></code> (Pi-Attaquant)</p></li>
-<li><p>Quoi ? Accès au fichier <code class="docutils literal notranslate"><span class="pre">flag.txt</span></code></p></li>
-<li><p>Comment ? Outil <code class="docutils literal notranslate"><span class="pre">curl</span></code></p></li>
-<li><p>Résultat ? <code class="docutils literal notranslate"><span class="pre">Code</span> <span class="pre">200</span></code> (Succès, le fichier a été livré)</p></li>
+<li><p><strong>CIA</strong> : <a class="reference external" href="http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/">http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/</a></p></li>
+<li><p><strong>DEFCON</strong> : <a class="reference external" href="http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/">http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/</a></p></li>
 </ul>
-</section>
-</section>
 </section>
 </section>
 
@@ -985,20 +742,20 @@ grep<span class="w"> </span><span class="s2">&quot;flag.txt&quot;</span><span cl
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="TP2-ARCH-05.html"
+       href="TP2-ARCH-07.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TP2-ARCH-05 : Décoder le ciel</p>
+        <p class="prev-next-title">TP2-ARCH-07 : RPi pour aller plus loin</p>
       </div>
     </a>
     <a class="right-next"
-       href="TP2-ARCH-07.html"
+       href="../logidules/TP2-LOGI-01.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP2-ARCH-07 : RPi pour aller plus loin</p>
+        <p class="prev-next-title">TP2-LOGI-01 : Les logidules</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1018,37 +775,12 @@ grep<span class="w"> </span><span class="s2">&quot;flag.txt&quot;</span><span cl
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cadre-legal-et-ethique">Cadre légal et éthique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-concepts-expliques-simplement">Les Concepts expliqués simplement</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chapeaux-une-question-d-ethique">Les “Chapeaux” : une question d’éthique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#red-team-vs-blue-team-le-jeu-du-chat-et-de-la-souris">Red Team vs Blue Team : le jeu du chat et de la souris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-pentest-test-d-intrusion-en-5-etapes">Le Pentest (Test d’Intrusion) en 5 étapes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-cartographie-du-reseau-niveau-debutant">Exercice 1 : “Cartographie du réseau” (Niveau Débutant)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-le-mot-de-passe-fort-niveau-intermediaire">Exercice 2 : “Le mot de passe fort” (Niveau Intermédiaire)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-catch-the-flag-niveau-avance">Exercice 3 : Catch the flag (Niveau avancé)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-du-reseau-de-tp">1. Schéma du Réseau de TP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-de-la-machine-cible-pi-cible">2. Préparation de la Machine CIBLE (Pi-Cible)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-a-jour-et-installation-du-serveur-web">2.1 : Mise à jour et installation du serveur web</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-du-drapeau-flag-et-de-la-faille">2.2 : Création du drapeau (Flag) et de la faille</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-pour-la-blue-team-acces-aux-logs">2.3 : Préparation pour la Blue Team (Accès aux logs)</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actions-de-la-red-team-pi-attaquant">3. Actions de la RED TEAM (Pi-Attaquant)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reconnaissance-scanning">3.1 : Reconnaissance (Scanning)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exfiltration-vol-du-drapeau">3.3 : Exfiltration (Vol du drapeau)</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actions-de-la-blue-team-pi-defense">4. Actions de la BLUE TEAM (Pi-Defense)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connexion-a-la-cible-pour-analyse">4.1 : Connexion à la cible pour analyse</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-des-logs-d-acces-apache">4.2 : Analyse des logs d’accès (Apache)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rapport-d-incident">4.3 : Rapport d’incident</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario">Scenario</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-identifier-un-utilisateur">Exercice 1 : Identifier un utilisateur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-installer-tor-sur-le-rpi">Exercice 2 : Installer Tor sur le RPi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plusexercice-3-disparition-avec-tor">plusExercice 3 : Disparition avec Tor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-interessants">Liens intéressants</a></li>
 </ul>
   </nav></div>
 
