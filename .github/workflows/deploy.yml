@@ -4,44 +4,65 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  
+
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
     steps:
-      # ✅ checkout@v5 ou @v6 utilise node24 nativement
       - name: Checkout repository
-        uses: actions/checkout@v6  # ou @v5
+        uses: actions/checkout@v4
 
-      # ✅ setup-python@v5 est compatible
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
           pip install jupyter-book ghp-import
+          # Ajoutez ici vos dépendances si nécessaire :
+          # pip install pandas matplotlib numpy
 
+      # ✅ Étape 1 : Construire le livre
       - name: Build the Jupyter Book
         run: |
           jupyter-book build .
+          echo "Build terminé. Contenu du dossier _build :"
+          ls -la _build/
 
+      # ✅ Étape 2 : Vérifier que le dossier html existe
+      - name: Verify build output
+        run: |
+          if [ ! -d "_build/html" ]; then
+            echo "❌ ERREUR: Le dossier _build/html n'existe pas !"
+            echo "Contenu de _build/ :"
+            ls -la _build/
+            echo "Contenu de la racine :"
+            ls -la
+            exit 1
+          fi
+          echo "✅ Dossier _build/html trouvé"
+
+      # ✅ Étape 3 : Créer le CNAME (avec mkdir -p pour être sûr)
       - name: Create CNAME file
         run: |
+          mkdir -p _build/html
           echo "cours.vkeller.info" > _build/html/CNAME
+          echo "✅ Fichier CNAME créé avec le contenu :"
+          cat _build/html/CNAME
 
-      # ✅ peaceiris/actions-gh-pages@v4 est compatible
+      # ✅ Étape 4 : Déployer
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
-
+          verbose: true
