@@ -14,11 +14,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true    
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
+      # ✅ checkout@v5 ou @v6 utilise node24 nativement
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6  # ou @v5
 
+      # ✅ setup-python@v5 est compatible
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -32,16 +34,14 @@ jobs:
         run: |
           jupyter-book build .
 
-      # --- ÉTAPE CRUCIALE POUR LE CNAME ---
       - name: Create CNAME file
         run: |
           echo "cours.vkeller.info" > _build/html/CNAME
-      # ------------------------------------
 
+      # ✅ peaceiris/actions-gh-pages@v4 est compatible
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
-          # Optionnel : garder l'historique de la branche gh-pages
-          keep_files: false 
+
