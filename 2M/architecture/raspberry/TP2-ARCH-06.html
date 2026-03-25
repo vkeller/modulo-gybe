@@ -753,11 +753,15 @@ nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mettre à jour les paquets</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>update
 <span class="c1"># installer snapd (gestionnaire de paquets)</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
-<span class="c1"># installer l&#39;outil</span>
-sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>snapd
-<span class="c1"># installer john the ripper</span>
-sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>john-the-ripper
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>john
+<span class="c1"># installer la base de données de mots de passes</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dw0rsec/rockyou.txt
+<span class="c1"># extraction</span>
+<span class="nb">cd</span><span class="w"> </span>rockyou.txt
+unzip<span class="w"> </span>rockyou.txt.zip
+<span class="c1"># copie de la base</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>/usr/share/wordlists
+sudo<span class="w"> </span>cp<span class="w"> </span>rockyou.txt<span class="w"> </span>/usr/share/wordlists
 </pre></div>
 </div>
 <p>Une fois les prérequis techniques installé, nous pouvons passer à l’exercice 2</p>
