@@ -735,10 +735,11 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </pre></div>
 </div>
 <p>Et commencer la cartographie :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sur le Raspberry &quot;attaquant&quot; (Kali Lite ou Pi OS + outils)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sur le Raspberry &quot;attaquant&quot;</span>
 <span class="c1"># Commande simple pour scanner le réseau local</span>
-nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">    </span><span class="c1"># Découverte des hôtes actifs</span>
-nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w">      </span><span class="c1"># Analyse des services sur une machine cible</span>
+nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.200.0/24
+<span class="c1"># Commande simple pour scanner les services ouverts de la machine 192.168.200.XXX</span>
+nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span>.168.200.XXX
 </pre></div>
 </div>
 <ul class="simple">
@@ -759,9 +760,6 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dw0rs
 <span class="c1"># extraction</span>
 <span class="nb">cd</span><span class="w"> </span>rockyou.txt
 unzip<span class="w"> </span>rockyou.txt.zip
-<span class="c1"># copie de la base</span>
-sudo<span class="w"> </span>mkdir<span class="w"> </span>/usr/share/wordlists
-sudo<span class="w"> </span>cp<span class="w"> </span>rockyou.txt<span class="w"> </span>/usr/share/wordlists
 </pre></div>
 </div>
 <p>Une fois les prérequis techniques installé, nous pouvons passer à l’exercice 2</p>
@@ -771,11 +769,11 @@ sudo<span class="w"> </span>cp<span class="w"> </span>rockyou.txt<span class="w"
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;testuser:</span><span class="k">$(</span>openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span><span class="m">1234</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/test_hashes
 
 <span class="c1"># Utilisation de john the ripper en mode éducatif</span>
-john<span class="w"> </span>--wordlist<span class="o">=</span>/usr/share/wordlists/rockyou.txt<span class="w"> </span>/tmp/test_hashes
+john<span class="w"> </span>--wordlist<span class="o">=</span>./rockyou.txt<span class="w"> </span>/tmp/test_hashes
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Tester 5 mots de passe de complexité variable</p></li>
+<li><p>Tester 5 mots de passe de complexité variable : dans l’exemple ci-dessus, le mot de passe est <code class="docutils literal notranslate"><span class="pre">1234</span></code>, modifiez-le</p></li>
 <li><p>Chronométrer le temps de “craquage”</p></li>
 <li><p>Établir une charte “mot de passe robuste” pour l’établissement</p></li>
 </ul>
@@ -825,7 +823,7 @@ Ces commandes sont à exécuter <strong>UNIQUEMENT</strong> dans un réseau isol
 <h4>2.1 : Mise à jour et installation du serveur web<a class="headerlink" href="#mise-a-jour-et-installation-du-serveur-web" title="Link to this heading">#</a></h4>
 <p>Connectez-vous au <code class="docutils literal notranslate"><span class="pre">Pi-Cible</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mise à jour des paquets</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>update
 
 <span class="c1"># Installation du serveur web Apache</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>-y
