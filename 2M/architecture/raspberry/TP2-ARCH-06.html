@@ -729,6 +729,12 @@ document.write(`
 <section id="exercice-1-cartographie-du-reseau-niveau-debutant">
 <h2>Exercice 1 : “Cartographie du réseau” (Niveau Débutant)<a class="headerlink" href="#exercice-1-cartographie-du-reseau-niveau-debutant" title="Link to this heading">#</a></h2>
 <p><strong>Objectif</strong> : Comprendre comment on découvre les machines sur un réseau</p>
+<p>Il y a un prérequis : installer l’outil de cartographie du réseau :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
+</pre></div>
+</div>
+<p>Et commencer la cartographie :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sur le Raspberry &quot;attaquant&quot; (Kali Lite ou Pi OS + outils)</span>
 <span class="c1"># Commande simple pour scanner le réseau local</span>
 nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">    </span><span class="c1"># Découverte des hôtes actifs</span>
