@@ -768,7 +768,7 @@ sudo<span class="w"> </span>cp<span class="w"> </span>rockyou.txt<span class="w"
 <p><strong>Exercice</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un fichier test avec des hashs MD5 simples</span>
 <span class="c1"># (uniquement sur comptes de test créés pour l&#39;exercice !)</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;testuser:</span><span class="k">$(</span>openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span>faiblesse<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/test_hashes
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;testuser:</span><span class="k">$(</span>openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span><span class="m">1234</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/test_hashes
 
 <span class="c1"># Utilisation de john the ripper en mode éducatif</span>
 john<span class="w"> </span>--wordlist<span class="o">=</span>/usr/share/wordlists/rockyou.txt<span class="w"> </span>/tmp/test_hashes
