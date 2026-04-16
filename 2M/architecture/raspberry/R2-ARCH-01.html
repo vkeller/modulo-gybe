@@ -1,0 +1,860 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>R2-ARCH-01 : Retour sur la séquence RPi/réseau &#8212; Education Numérique Ecole de maturité</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2M/architecture/raspberry/R2-ARCH-01';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TP2-ARCH-05 : Décoder le ciel" href="TP2-ARCH-05.html" />
+    <link rel="prev" title="TP2-ARCH-NOTE : Journal de bord" href="TP2-ARCH-NOTE2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo-beaulieu.png" class="logo__image only-light" alt="Education Numérique Ecole de maturité - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-beaulieu.png" class="logo__image only-dark" alt="Education Numérique Ecole de maturité - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Bienvenue
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Généralités</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../general/quisuisje.html">Qui suis-je ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/generalites.html">Esprit critique, fraude, plagiat et ChatGPT</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../general/outils.html">Outils utiles pour le cours d’informatique</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">1ère année</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../1M/index.html">DO Informatique 1M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/representation/index.html">Représentation des données</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-01.html">C1-REDO-01 : Du monde physique au monde numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-02.html">C1-REDO-02 binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-03.html">C1-REDO-03 : Opérations en binaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : codage de caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/representation/tp/TP1-REDO-03.html">TP1-REDO-03 : Types de fichiers et compression</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/algo/index.html">Algorithmique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-01.html">C1-ALGO-01 : Introduction à l’algorithmique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-02.html">C1-ALGO-02 : Des problèmes aux algorigrammes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-03.html">C1-ALGO-03 : Les jeux de Nim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-04.html">C1-ALGO-04 : Traces algorithmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-05.html">C1-ALGO-05 : L’horloge de la gare de St-Gallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-06.html">C1-ALGO-06 : algorithme du jugement dernier (Doomsday algorithm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.0.html">C1-ALGO-07.00 : Algorithmes classiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.1.html">C1-ALGO-07.01 Algorithmes classiques (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-07.2.html">C1-ALGO-07.02 Algorithmes classiques (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-09.html">C1-ALGO-09 : Des algorigrammes à leur programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-10.html">C1-ALGO-10 - Introduction à la cryptologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-11.html">C1-ALGO-11 : Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-12.html">C1-ALGO-12 : Les boucles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-13.html">C1-ALGO-13 : Les algorithmes gloutons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-14.html">C1-ALGO-14 : Algorithmes évolutionnistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/C1-ALGO-15.html">C1-ALGO-15 : Caractéristiques des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-01.html">R1-ALGO-01 - révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-02.html">R1-ALGO-02 : Révision Algorigramme + programmation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-03.html">R1-ALGO-03 : Rappels algorigrammes - Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/algo/cours/R1-ALGO-04.html">R1-ALGO-04 : Révision Algorigrammes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1M/installation/installation.html">Environnement de développement</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/prog/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/intro1/TP1-PROG-01.html">TP1-PROG-01 - Introduction à la programmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/intro2/TP1-PROG-02.html">TP1-PROG-02 - Introduction : les fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-03.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-04.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05-Turtle.html">TP1-PROG-05-Turtle - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/conditions/TP1-PROG-05.html">TP1-PROG-05 - Les tests conditionnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/dessinsanimes/TP1-PROG-12.html">TP1-PROG-12 - Les dessins animés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/IO/TP1-PROG-06.html">TP1-PROG-06: Les entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/types/TP1-PROG-07.html">TP1-PROG-07 - Les variables en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/tableaux/TP1-PROG-08.html">TP1-PROG-08 - Les listes (tableaux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/files/TP1-PROG-09.html">TP1-PROG-09 - Les Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/piles/TP1-PROG-10.html">TP1-PROG-10 - Les Piles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/cryptographie/TP1-PROG-11.html">TP1-PROG-11 : Introduction à la cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-14.html">TP1-PROG-03 - La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/boucles/TP1-PROG-15.html">TP1-PROG-04 - Boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> approfondissement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/prog/revisions/TP1-PROG-13.html">TP1-PROG-13 : Révision prog + algo 1M</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/architecture/index.html">Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/architecture/fichiers/SystemeDeFichiers.html">TP1-ARCH-01 : Le système de fichiers</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/esdn/index.html">Enjeux sociaux</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-01.html">C1-ESDN-01 : Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-02.html">C1-ESDN-02 : Le mouvement Cypherpunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-03.html">C1-ESDN-03 : Le capitalisme de surveillance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-04.html">C1-ESDN-04 : Edward Snowden et la surveillance de masse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-05.html">C1-ESDN-05 : Profilage numérique : l’affaire Burrill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/presentations/TP1-ESDN-00.html">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/TP1-ESDN-01.html">TP1-ESDN-01 : Les réseaux informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/sources/TP1-ESDN-02.html">TP1-ESDN-02 : Remonter à la source…</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../1M/jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2ème année</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DO Informatique 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo/index.html">Algorithmique avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02-A.html">R2-ALGO-02-A : Révision algorithmes (Recherche)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02-B.html">R2-ALGO-02-B : Révision (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-01.html">C2-ALGO-01 : Taille du problème</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-02.html">C2-ALGO-02 : Complexité des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-03.html">C2-ALGO-03 : Complexité des algorithmes (suite)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-04-A.html">C2-ALGO-04-A : Introduction à la théorie des graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-04-B.html">C2-ALGO-04-B : Parcours de graphes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-04.html">R1-ALGO-04 : Révision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/R2-PROG-01.html">R2-PROG-01 : Rappels programmation 1M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/revisions/R2-PROG-02.html">R2-PROG-02 : Rappels 1M - mini-projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/luhn/TP2-PROG-01.html">TP2-PROG-01 : Algorithme de Luhn (carte de crédit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/complexite/TP2-PROG-02.html">TP2-PROG-02 : Approche pratique de la complexité : Pile ou face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/complexite/TP2-PROG-03.html">TP2-PROG-03 : Approche pratique de la complexité : Recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/syracuse/TP2-PROG-05.html">TP2-PROG-05 : Conjecture de Collatz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/dictionnaires/Dictionnaires2.html">TP2-PROG-06 : Dictionnaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/motdepasse/MotsDePasse.html">TP2-PROG-07 : Les mots de passe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/hacking/TP2-PROG-08.html">TP2-PROG-08: Coder et décoder comme les Romains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/arbres/LesArbres.html">TP2-PROG-09 : Les arbres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog/st-gall/TP2-PROG-10.html">TP2-PROG-10 : Simuler l’horloge de la gare de St-Gall</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../histoire/index.html">Histoire de l’informatique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-01.html">C2-HIST-01 : Préhistoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-02.html">C2-HIST-02 : Histoire de l’informatique : le matériel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-03.html">C2-HIST-03 : Histoire des logiciels (les systèmes d’exploitation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../histoire/C2-HIST-04.html">C2-HIST-04 : Histoire des logiciels (la couche applicative)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Architecture et réseaux</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../cours/C2-ARCH-01.html">C2-ARCH-01 : Compilation : du Python au langage machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cours/C2-ARCH-02.html">C2-ARCH-02 : Architecture de Von Neumann</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-01.html">C2-RESO-01 : Introduction aux réseaux informatiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-02.html">C2-RESO-02 : L’adresse IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reseau/C2-RESO-03.html">C2-RESO-03 : Le DarkNet… bien ou mal ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-00.html">TP2-ARCH-00 : Introduction avec un micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TP/TP2-ARCH-01.html">TP2-ARCH-01 : Les portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-02.html">TP2-ARCH-02 : Le nano-ordinateur RPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-03.html">TP2-ARCH-03 : Mise en réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">R2-ARCH-01 : Retour sur la séquence RPi/réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-06.html">TP2-ARCH-06 : Redteam, blueteam et chapeaux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-07.html">TP2-ARCH-07 : RPi pour aller plus loin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ARCH-08.html">TP2-ARCH-08 : Anonymat sur Internet.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logidules/TP2-LOGI-01.html">TP2-LOGI-01 : Les logidules</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../strategies/index.html">Stratégie de résolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-01.html">C2-STRAT-01 : Stratégies de résolution de problèmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-02.html">C2-STRAT-02 : Gestion des erreurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/C2-STRAT-03.html">C2-STRAT-03 : Du langage naturel à l’algorithme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-01.html">TP2-STRAT-01 : Gestion des erreurs et Monte-Carlo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../strategies/TP2-STRAT-02.html">TP2-STRAT-02 : Implémentation de l’algorithme du Doomsday</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../machine-learning/index.html">Intelligence artificielle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-00.html">C2-IA-00 : Introduction à l’intelligence artificielle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-01.html">C2-IA-01 : d’Allan Turing à ChatGPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-02.html">C2-IA-02 : Automates cellulaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-03.html">C2-IA-03 : Apprentissage automatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-04.html">C2-IA-04 : Réseau de neurones artificiels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/cours/C2-IA-05.html">La boucle d’apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">TP-IA-01 : Le jeu de la vie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../esdn/index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3C2M</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../3C2M/index.html">MAN 3C &gt; 2M</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../3C2M/programmation/index.html">Programmation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../3C2M/programmation/J1/3C2M-PROG-00.html">3C2M-PROG-00 : Introduction</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../biblio.html">Livres et sources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/architecture/raspberry/R2-ARCH-01.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/2M/architecture/raspberry/R2-ARCH-01.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>R2-ARCH-01 : Retour sur la séquence RPi/réseau</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l-anatomie-du-nano-ordinateur">I. L’Anatomie du Nano-Ordinateur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-architecture-de-von-neumann">L’Architecture de Von Neumann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-match-ram-vs-stockage">2. Le match : RAM vs Stockage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-le-langage-du-systeme-bash">II. Le Langage du Système : BASH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-sudo">Pourquoi “Sudo” ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomie-d-une-commande">Anatomie d’une commande</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-reseau-internet-la-logistique-des-paquets">III. Réseau &amp; Internet : La Logistique des Paquets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-adresse-ip-et-le-masque-de-sous-reseau">L’Adresse IP et le Masque de sous-réseau</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-dns-l-annuaire-et-le-filtrage">Le DNS : L’Annuaire et le filtrage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-le-world-wide-web-servir-et-recevoir">IV. Le World Wide Web : Servir et Recevoir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#http-vs-html">HTTP vs HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-serveur-web-apache">Le Serveur Web (Apache)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v-quiz-final-de-validation-15-questions">V. Quiz Final de Validation (15 Questions)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reponses">Réponses</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="r2-arch-01-retour-sur-la-sequence-rpi-reseau">
+<h1>R2-ARCH-01 : Retour sur la séquence RPi/réseau<a class="headerlink" href="#r2-arch-01-retour-sur-la-sequence-rpi-reseau" title="Link to this heading">#</a></h1>
+<p>Ce cours a pour but de transformer vos manipulations pratiques en concepts théoriques solides. Nous allons déconstruire les erreurs fréquentes pour comprendre comment fonctionne réellement l’informatique moderne.</p>
+<section id="i-l-anatomie-du-nano-ordinateur">
+<h2>I. L’Anatomie du Nano-Ordinateur<a class="headerlink" href="#i-l-anatomie-du-nano-ordinateur" title="Link to this heading">#</a></h2>
+<section id="l-architecture-de-von-neumann">
+<h3>L’Architecture de Von Neumann<a class="headerlink" href="#l-architecture-de-von-neumann" title="Link to this heading">#</a></h3>
+<p>Presque tous les ordinateurs (PC, Mac, Smartphone, Raspberry Pi) suivent le modèle de Von Neumann. Il sépare la machine en quatre blocs :</p>
+<ul class="simple">
+<li><p>L’Unité Arithmétique et Logique (ALU) : La calculatrice géante.</p></li>
+<li><p>L’Unité de Contrôle : Le chef d’orchestre qui lit les instructions.</p></li>
+<li><p>La Mémoire : Pour stocker les données et les programmes.</p></li>
+<li><p>Les Entrées/Sorties (I/O) : Clavier, écran, ports USB.</p></li>
+</ul>
+</section>
+<section id="le-match-ram-vs-stockage">
+<h3>2. Le match : RAM vs Stockage<a class="headerlink" href="#le-match-ram-vs-stockage" title="Link to this heading">#</a></h3>
+<p>C’est la confusion n°1 dans vos rapports.</p>
+<ul class="simple">
+<li><p>La RAM (Mémoire Vive) : C’est un composant électronique ultra-rapide. Elle ne stocke les données que lorsque l’électricité circule. Si vous débranchez le RPi, la RAM s’efface instantanément (volatilité).</p></li>
+<li><p>La Carte SD (Stockage) : Elle remplace le disque dur. Elle est beaucoup plus lente que la RAM, mais elle garde les informations même sans courant (mémoire non-volatile).</p></li>
+</ul>
+<p><strong>Analogie</strong> : La RAM est votre mémoire de travail (ce que vous avez en tête maintenant), la Carte SD est votre bibliothèque (tout ce que vous savez mais que vous n’utilisez pas à l’instant T).</p>
+</section>
+</section>
+<section id="ii-le-langage-du-systeme-bash">
+<h2>II. Le Langage du Système : BASH<a class="headerlink" href="#ii-le-langage-du-systeme-bash" title="Link to this heading">#</a></h2>
+<p>Le terminal n’est pas qu’une interface pour “hacker”. C’est l’outil le plus puissant pour administrer un serveur.</p>
+<section id="pourquoi-sudo">
+<h3>Pourquoi “Sudo” ?<a class="headerlink" href="#pourquoi-sudo" title="Link to this heading">#</a></h3>
+<p>Dans Linux, l’utilisateur standard n’a pas le droit de modifier le système pour éviter les catastrophes. sudo (Substitute User Do) permet de prendre l’identité de l’administrateur (Root).</p>
+</section>
+<section id="anatomie-d-une-commande">
+<h3>Anatomie d’une commande<a class="headerlink" href="#anatomie-d-une-commande" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-options</span> <span class="pre">arguments</span></code></p>
+<p>Exemple : <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span> <span class="pre">/home/pi</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> : La commande (list).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-la</span></code> : Les options (l=long, a=all/cachés).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/pi</span></code> : L’argument (où regarder).</p></li>
+</ul>
+</section>
+</section>
+<section id="iii-reseau-internet-la-logistique-des-paquets">
+<h2>III. Réseau &amp; Internet : La Logistique des Paquets<a class="headerlink" href="#iii-reseau-internet-la-logistique-des-paquets" title="Link to this heading">#</a></h2>
+<p>Le réseau n’est pas un fluide magique, c’est une suite de décisions logiques.</p>
+<section id="l-adresse-ip-et-le-masque-de-sous-reseau">
+<h3>L’Adresse IP et le Masque de sous-réseau<a class="headerlink" href="#l-adresse-ip-et-le-masque-de-sous-reseau" title="Link to this heading">#</a></h3>
+<p>Une adresse IP (ex: <code class="docutils literal notranslate"><span class="pre">192.168.200.15</span></code>) se compose toujours de deux parties : Le Réseau et L’Hôte.</p>
+<ul class="simple">
+<li><p>Le Masque (<code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code>) indique où s’arrête le réseau. Ici, les trois premiers nombres sont le “nom du quartier”.</p></li>
+<li><p>Si vous voulez parler à <code class="docutils literal notranslate"><span class="pre">192.168.200.20</span></code>, le switch gère car c’est le même quartier.</p></li>
+<li><p>Si vous voulez parler à <code class="docutils literal notranslate"><span class="pre">8.8.8.8</span></code> (Google), c’est un autre quartier. Vous envoyez le paquet à la Passerelle (Gateway).</p></li>
+</ul>
+</section>
+<section id="le-dns-l-annuaire-et-le-filtrage">
+<h3>Le DNS : L’Annuaire et le filtrage<a class="headerlink" href="#le-dns-l-annuaire-et-le-filtrage" title="Link to this heading">#</a></h3>
+<p>Le DNS (Domain Name System) traduit <code class="docutils literal notranslate"><span class="pre">www.cern.ch</span></code> en <code class="docutils literal notranslate"><span class="pre">188.184.21.108</span></code>.</p>
+<p>Le filtrage publicitaire : En configurant un serveur DNS spécifique (comme nous l’avons fait), on peut lui demander de renvoyer une adresse inexistante (<code class="docutils literal notranslate"><span class="pre">0.0.0.0</span></code>) pour tous les serveurs de publicité connus. L’ordinateur cherche la pub, ne la trouve pas, et ne l’affiche donc pas.</p>
+</section>
+</section>
+<section id="iv-le-world-wide-web-servir-et-recevoir">
+<h2>IV. Le World Wide Web : Servir et Recevoir<a class="headerlink" href="#iv-le-world-wide-web-servir-et-recevoir" title="Link to this heading">#</a></h2>
+<section id="http-vs-html">
+<h3>HTTP vs HTML<a class="headerlink" href="#http-vs-html" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>HTTP (HyperText Transfer Protocol) : C’est le camion de livraison. Il transporte les données entre le serveur et votre navigateur.</p></li>
+<li><p>HTML (HyperText Markup Language) : C’est le contenu du colis. Un fichier texte avec des balises (<code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>).</p></li>
+</ul>
+</section>
+<section id="le-serveur-web-apache">
+<h3>Le Serveur Web (Apache)<a class="headerlink" href="#le-serveur-web-apache" title="Link to this heading">#</a></h3>
+<p>Apache est un programme qui “écoute” sur le Port 80. Quand il reçoit une requête, il va chercher le fichier <code class="docutils literal notranslate"><span class="pre">index.html</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">/var/www/html/</span></code> et l’envoie au demandeur.</p>
+</section>
+</section>
+<section id="v-quiz-final-de-validation-15-questions">
+<h2>V. Quiz Final de Validation (15 Questions)<a class="headerlink" href="#v-quiz-final-de-validation-15-questions" title="Link to this heading">#</a></h2>
+<p>Testez vos connaissances avant la validation finale.</p>
+<ol class="arabic simple">
+<li><p>Quelle est la fonction principale de l’Unité Arithmétique et Logique (ALU) ?</p></li>
+<li><p>Si j’éteins mon Raspberry Pi, le contenu de la RAM est-il sauvegardé ?</p></li>
+<li><p>Que signifie l’acronyme OS (ex: Linux, Windows) ?</p></li>
+<li><p>À quoi sert la commande pwd dans le terminal ?</p></li>
+<li><p>Pourquoi la commande <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/</span></code> est-elle appelée “commande suicide” ?</p></li>
+<li><p>Quelle est la différence entre un Switch et un Routeur (Passerelle) ?</p></li>
+<li><p>Que signifie le chiffre <code class="docutils literal notranslate"><span class="pre">0</span></code> à la fin du masque <code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code> ?</p></li>
+<li><p>Quel protocole attribue automatiquement une adresse IP à un appareil qui se connecte ? (DHCP, DNS ou HTTP ?)</p></li>
+<li><p>Le DNS sert-il à transporter des fichiers ou à traduire des noms de domaines ?</p></li>
+<li><p>Quelle commande permet d’obtenir les privilèges d’administrateur ?</p></li>
+<li><p>Que signifie l’adresse IP <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> (Localhost) ?</p></li>
+<li><p>Dans quel dossier Linux se trouve généralement la page d’accueil d’un serveur web ?</p></li>
+<li><p>Le HTML est-il un langage de programmation ou un langage de balisage ?</p></li>
+<li><p>À quoi sert la commande ping ?</p></li>
+<li><p>Pourquoi n’aviez-vous pas de publicité sur le site “Blick” via le Raspberry Pi ?</p></li>
+</ol>
+<section id="reponses">
+<h3>Réponses<a class="headerlink" href="#reponses" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Effectuer les calculs et opérations logiques.</p></li>
+<li><p>Non (volatilité).</p></li>
+<li><p>Operating System (Système d’Exploitation).</p></li>
+<li><p>Afficher le dossier courant.</p></li>
+<li><p>Elle supprime tout le système depuis la racine.</p></li>
+<li><p>Switch = local / Routeur = sortie vers extérieur.</p></li>
+<li><p>Il réserve le dernier octet pour les hôtes (254 machines).</p></li>
+<li><p>DHCP.</p></li>
+<li><p>Traduire des noms de domaines.</p></li>
+<li><p>sudo.</p></li>
+<li><p>Ma propre machine (boucle locale).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/var/www/html/</span></code>.</p></li>
+<li><p>Balisage (Markup).</p></li>
+<li><p>Tester la connectivité entre deux machines.</p></li>
+<li><p>Grâce au filtrage DNS qui bloquait les adresses des serveurs de pub.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./2M/architecture/raspberry"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="TP2-ARCH-NOTE2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TP2-ARCH-NOTE : Journal de bord</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="TP2-ARCH-05.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP2-ARCH-05 : Décoder le ciel</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l-anatomie-du-nano-ordinateur">I. L’Anatomie du Nano-Ordinateur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-architecture-de-von-neumann">L’Architecture de Von Neumann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-match-ram-vs-stockage">2. Le match : RAM vs Stockage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-le-langage-du-systeme-bash">II. Le Langage du Système : BASH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-sudo">Pourquoi “Sudo” ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomie-d-une-commande">Anatomie d’une commande</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-reseau-internet-la-logistique-des-paquets">III. Réseau &amp; Internet : La Logistique des Paquets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-adresse-ip-et-le-masque-de-sous-reseau">L’Adresse IP et le Masque de sous-réseau</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-dns-l-annuaire-et-le-filtrage">Le DNS : L’Annuaire et le filtrage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-le-world-wide-web-servir-et-recevoir">IV. Le World Wide Web : Servir et Recevoir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#http-vs-html">HTTP vs HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-serveur-web-apache">Le Serveur Web (Apache)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v-quiz-final-de-validation-15-questions">V. Quiz Final de Validation (15 Questions)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reponses">Réponses</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vincent Keller
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
