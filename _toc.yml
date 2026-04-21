@@ -159,6 +159,7 @@ parts:
       sections:
       - file: 2M/esdn/environnement/TP2-ESDN-01
       - file: 2M/esdn/generative-art/TP2-ESDN-02
+      - file: 2M/esdn/2026/TP2-ESDN-2026B
       - file: 2M/esdn/women/P2-ESDN-02
       
   - caption: 3C2M
