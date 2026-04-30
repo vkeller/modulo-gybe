@@ -264,6 +264,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-03.html">C1-ESDN-03 : Le capitalisme de surveillance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-04.html">C1-ESDN-04 : Edward Snowden et la surveillance de masse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-05.html">C1-ESDN-05 : Profilage numérique : l’affaire Burrill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/C1-ESDN-06.html">C1-ESDN-06 :</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/presentations/TP1-ESDN-00.html">TP1-ESDN-00 : Présentations Enjeux sociaux du Numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/cours/TP1-ESDN-01.html">TP1-ESDN-01 : Les réseaux informatique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../1M/esdn/sources/TP1-ESDN-02.html">TP1-ESDN-02 : Remonter à la source…</a></li>
@@ -325,6 +326,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-03.html">TP2-ARCH-03 : Mise en réseau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-04.html">TP2-ARCH-04 : Services réseau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-NOTE2.html">TP2-ARCH-NOTE : Journal de bord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/R2-ARCH-01.html">R2-ARCH-01 : Retour sur la séquence RPi/réseau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-05.html">TP2-ARCH-05 : Décoder le ciel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-06.html">TP2-ARCH-06 : Redteam, blueteam et chapeaux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../architecture/raspberry/TP2-ARCH-07.html">TP2-ARCH-07 : RPi pour aller plus loin</a></li>
@@ -353,6 +355,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../esdn/index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../esdn/environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../esdn/2026/TP2-ESDN-2026B.html">TP2-ESDN-2026 : Enjeux sociaux du numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
 </ul>
 </details></li>
@@ -566,6 +569,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neurone-biologique">Neurone biologique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modele-de-neurone-biologique">Modèle de neurone biologique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perceptron">Perceptron</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-ca-marche">Comment ça marche ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regle-d-apprentissage">Règle d’apprentissage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-de-neurones-artificiels">Réseau de neurones artificiels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apprentissage-profond">Apprentissage profond</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-visuel-nn-nwolff">Exemple visuel : nn.nwolff</a></li>
@@ -624,6 +633,234 @@ document.write(`
 <p>Les mathématiques nécessaires pour expliquer l’entier du neurone dépassent largement le cadre de ce cours d’informatique.</p>
 <p><img alt="neuroneformel" src="../../../_images/neuroneformel.png" /></p>
 <p>C’est ce modèle que l’on appelle <strong>neurone artificiel</strong> qui est utilisé dans les algorithmes d’apprentissage automatique.</p>
+</section>
+<section id="perceptron">
+<h2>Perceptron<a class="headerlink" href="#perceptron" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>“La semaine dernière, on a créé un neurone artificiel qui décide si on sort ce soir. On a choisi nous-même ce qui était important : les amis comptent plus que la météo ou le jour de sortie. Mais comment ont les vrais systèmes d’IA pour apprendre tout seuls ?</p>
+</div></blockquote>
+<p><strong>Question</strong>: si je vous donne 3 exemples de mes dernières soirées passées (météo, jours, amis, décision), pouvez-vous deviner quels sont mes critères ?</p>
+<ul class="simple">
+<li><p>Soirée 1 : Pas beau + jeudi + Pas d’amis → Je reste (0)</p></li>
+<li><p>Soirée 2 : Beau + mercredi + Amis → Je sors (1)</p></li>
+<li><p>Soirée 3 : Pas beau + samedi + Amis → Je sors (1)</p></li>
+</ul>
+<p><strong>OUI</strong> : Grâce à un <strong>Perceptron</strong> : un algorithme d’apprentissage supervisé de classifieurs binaires (c’est-à-dire séparant deux classes).</p>
+<section id="comment-ca-marche">
+<h3>Comment ça marche ?<a class="headerlink" href="#comment-ca-marche" title="Link to this heading">#</a></h3>
+<p><strong>PERCEPTRON</strong> est un neurone artificiel qui apprend ses poids tout seul</p>
+<ul class="simple">
+<li><p><strong>Entrées</strong> : critères binaires (0 ou 1)</p></li>
+<li><p><strong>Sortie</strong> : décision (0 = NON, 1 = OUI)</p></li>
+<li><p><strong>Poids</strong> : s’ajustent automatiquement quand il se trompe</p></li>
+</ul>
+</section>
+<section id="regle-d-apprentissage">
+<h3>Règle d’apprentissage<a class="headerlink" href="#regle-d-apprentissage" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. Calculer la prédiction : prédiction = neurone(x, poids_actuels)
+
+2. Calculer l&#39;erreur : erreur = cible - prédiction
+   • erreur = 0 → pas d&#39;erreur, on ne fait rien
+   • erreur = 1 → le neurone a dit 0 mais il fallait 1
+   • erreur = -1 → le neurone a dit 1 mais il fallait 0
+
+3. Mettre à jour les poids :
+   Pour chaque poids wᵢ :
+      wᵢ ← wᵢ + η × erreur × xᵢ
+      
+   où η (êta) est le &quot;taux d&#39;apprentissage&quot; (ex: η = 1)
+</pre></div>
+</div>
+<p>En simplifié :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Situation</p></th>
+<th class="head"><p>Action sur les poids</p></th>
+<th class="head"><p>Analogie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Prédit 0, fallait 1</p></td>
+<td><p>↑ Augmenter les w des x=1</p></td>
+<td><p>“J’aurais dû sortir → je valorise plus ces critères”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prédit 1, fallait 0</p></td>
+<td><p>↓ Diminuer les w des x=1</p></td>
+<td><p>“J’aurais pas dû sortir → je réduis l’importance”</p></td>
+</tr>
+<tr class="row-even"><td><p>Prédit = Cible</p></td>
+<td><p>Rien ne change</p></td>
+<td><p>“J’ai eu raison → je garde”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Link to this heading">#</a></h3>
+<p>On a le tableau suivant qui représente l’ensemble d’apprentissage</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>n°</p></th>
+<th class="head text-center"><p>Beau (x₁)</p></th>
+<th class="head text-center"><p>Week-end (x₂)</p></th>
+<th class="head text-center"><p>Amis (x₃)</p></th>
+<th class="head text-center"><p><strong>Décision (cible)</strong></p></th>
+<th class="head"><p>Commentaire</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td><p>je reste à la maison</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td><p>je sors</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td><p>je reste à la maison</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td><p>je sors</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td><p>je reste à la maison</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td><p>je reste à la maison</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On part des poids initialisés à <code class="docutils literal notranslate"><span class="pre">[0,0,0]</span></code>, <span class="math notranslate nohighlight">\(\eta = 1\)</span> et on calcule la boucle d’apprentissage :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>#</p></th>
+<th class="head text-center"><p>Entrées (x₁,x₂,x₃)</p></th>
+<th class="head text-center"><p>Cible</p></th>
+<th class="head text-center"><p>Calcul de la somme Σ(wᵢ×xᵢ)</p></th>
+<th class="head text-center"><p>Prédiction (≥θ?)</p></th>
+<th class="head text-center"><p>Erreur (cible−pred)</p></th>
+<th class="head text-left"><p>Détail mise à jour des poids</p></th>
+<th class="head text-center"><p>Nouveaux poids [w₁, w₂, w₃]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>0</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">−</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×1</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>0</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">−</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">+1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×(+1)×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×(+1)×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×(+1)×1</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×1</span> <span class="pre">+</span> <span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">1×0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>0</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">−</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×1</span> <span class="pre">+</span> <span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">1×1</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>1</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">−</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></code></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×1</span> <span class="pre">+</span> <span class="pre">1×0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>0</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">−</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">0×0</span> <span class="pre">+</span> <span class="pre">0×1</span> <span class="pre">+</span> <span class="pre">1×1</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">≥</span> <span class="pre">1</span> <span class="pre">?</span></code> → <strong>1</strong></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">−</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">w₁</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×0</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₂</span> <span class="pre">←</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">0</span></code><br><code class="docutils literal notranslate"><span class="pre">w₃</span> <span class="pre">←</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1×0×1</span> <span class="pre">=</span> <span class="pre">1</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Résultat final :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Poids</p></th>
+<th class="head"><p>Valeur</p></th>
+<th class="head"><p>Interprétation pédagogique</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>w₁</strong> (Beau)</p></td>
+<td><p>0</p></td>
+<td><p>❌ “Le beau temps n’a aucune influence sur la décision”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>w₂</strong> (Week-end)</p></td>
+<td><p>0</p></td>
+<td><p>❌ “Le week-end seul ne change rien”</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>w₃</strong> (Amis)</p></td>
+<td><p>1</p></td>
+<td><p>✅ <strong>“Seul critère actif” : si amis=1 → je sors</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>θ</strong> (Seuil)</p></td>
+<td><p>1</p></td>
+<td><p>“Il suffit que x₃=1 pour atteindre le seuil et sortir”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Et donc finalement, mes critères sont les suivants :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Sortie = 1  ⇔  0×meteo + 0×week-ends + 1×amis ≥ 1
+         ⇔  x₃ = 1
+         ⇔  &quot;Je sors SI ET SEULEMENT SI mes amis sont disponibles&quot;
+</pre></div>
+</div>
+</section>
 </section>
 <section id="reseau-de-neurones-artificiels">
 <h2>Réseau de neurones artificiels<a class="headerlink" href="#reseau-de-neurones-artificiels" title="Link to this heading">#</a></h2>
@@ -722,6 +959,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neurone-biologique">Neurone biologique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modele-de-neurone-biologique">Modèle de neurone biologique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perceptron">Perceptron</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-ca-marche">Comment ça marche ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regle-d-apprentissage">Règle d’apprentissage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-de-neurones-artificiels">Réseau de neurones artificiels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apprentissage-profond">Apprentissage profond</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-visuel-nn-nwolff">Exemple visuel : nn.nwolff</a></li>
