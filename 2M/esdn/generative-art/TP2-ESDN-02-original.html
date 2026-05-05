@@ -57,11 +57,9 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2M/esdn/generative-art/TP2-ESDN-02';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2M/esdn/generative-art/TP2-ESDN-02-original';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TP2-ESDN-2026 : Enjeux sociaux du numérique" href="../2026/TP2-ESDN-2026B.html" />
-    <link rel="prev" title="TP2-ESDN-01 : L’environnement et le numérique" href="../environnement/TP2-ESDN-01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +121,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -274,7 +274,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">2ème année</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">DO Informatique 2M</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../algo/index.html">Algorithmique avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../algo/R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
@@ -350,9 +350,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../machine-learning/tp/JeudelavieTP.html">TP-IA-01 : Le jeu de la vie</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Enjeux sociaux du numérique</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Enjeux sociaux du numérique</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../environnement/TP2-ESDN-01.html">TP2-ESDN-01 : L’environnement et le numérique</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">TP2-ESDN-02 : L’Art et le Numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2026/TP2-ESDN-2026B.html">TP2-ESDN-2026 : Enjeux sociaux du numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
 </ul>
@@ -440,7 +440,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/esdn/generative-art/TP2-ESDN-02.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F2M/esdn/generative-art/TP2-ESDN-02-original.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -470,7 +470,7 @@
       
       
       
-      <li><a href="../../../_sources/2M/esdn/generative-art/TP2-ESDN-02.ipynb" target="_blank"
+      <li><a href="../../../_sources/2M/esdn/generative-art/TP2-ESDN-02-original.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -593,12 +593,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-2015-ia-apprentissage-automatique-et-art-generatif">Dès 2015 : IA, apprentissage automatique et art génératif</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-de-creer">A vous de créer !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-de-creer-diffusionbee">A vous de créer : Diffusionbee</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-image-to-image">Mode <em>Image To Image</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-taylor-swift-en-version-cubiste">Exemple : Taylor Swift en version cubiste</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-text-to-image">Mode <em>Text To Image</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-modeles">Les modèles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-prompt">Le prompt</a><ul class="nav section-nav flex-column">
@@ -802,38 +803,64 @@ document.write(`
 <p><img alt="person3" src="../../../_images/thisperson2.png" /></p>
 <p>Pour créer des oeuvres d’art avec de l’IA générative, on utilise un logiciel dit <em>text-to-image</em> qui produit une image à partir d’un texte (<em>prompt</em>)</p>
 </section>
-<section id="a-vous-de-creer">
-<h2>A vous de créer !<a class="headerlink" href="#a-vous-de-creer" title="Link to this heading">#</a></h2>
-<p>Il existe quantité d’intelligences artificielles capables de créer des médias (images, sons et vidéos). Certaines sont <strong>propriétaires</strong> (appartenant à une entreprise) et d’autres <strong>open-source</strong> (dont le code source du modèle de langage est public). C’est le cas notamment de l’IAg <strong>Stable Diffusion</strong> dont il existe plusieurs déclinaisons applicatives (comme <strong>Diffusionbee</strong>).</p>
-<p>Choisissez une IAg</p>
+<section id="a-vous-de-creer-diffusionbee">
+<h2>A vous de créer : Diffusionbee<a class="headerlink" href="#a-vous-de-creer-diffusionbee" title="Link to this heading">#</a></h2>
+<p>Nous allons utiliser le logiciel open-source <strong>Diffusionbee</strong> qui est lui-même basé sur le moteur d’IA générative <strong>Stable Diffusion</strong>. C’est une application en outre totalement gratuite.</p>
 <section id="mode-image-to-image">
 <h3>Mode <em>Image To Image</em><a class="headerlink" href="#mode-image-to-image" title="Link to this heading">#</a></h3>
 <p>Ce mode de création propose de créer une oeuvre d’art à l’aide d’une image que l’on propose à l’IA. A l’aide d’un prompt, il est possible de proposer à l’IA de créer une nouvelle image. Deux difficultés se présentent :</p>
 <ol class="arabic simple">
 <li><p>Le prompt : plus on donne de précisions, plus l’IA produira une image proche de ce que l’on avait imaginé.</p></li>
-<li><p>Les options de création de l’image à donner dans le prompt</p></li>
+<li><p>Les options de création de l’image.</p></li>
 </ol>
 <section id="exemple-taylor-swift-en-version-cubiste">
 <h4>Exemple : Taylor Swift en version cubiste<a class="headerlink" href="#exemple-taylor-swift-en-version-cubiste" title="Link to this heading">#</a></h4>
 <p>Voici l’image d’origine :</p>
 <p><img alt="taylorswift" src="../../../_images/taylorswift.png" /></p>
-<p>A l’aide du prompt <code class="docutils literal notranslate"><span class="pre">Pablo</span> <span class="pre">Picasso</span> <span class="pre">cubist</span> <span class="pre">remove</span> <span class="pre">background</span></code> et quelques options <em>keep the size and proportions of the original image</em> (sous StableDiffusion) on obtient l’image suivante :</p>
+<p>A l’aide du prompt <code class="docutils literal notranslate"><span class="pre">Pablo</span> <span class="pre">Picasso</span> <span class="pre">cubist</span> <span class="pre">remove</span> <span class="pre">background</span></code> et les options suivantes :</p>
+<p><img alt="options" src="../../../_images/options.png" /></p>
+<p>On obtient l’image suivante :</p>
 <p><img alt="taylorswift_cubist" src="../../../_images/taylorswift_cubist.png" /></p>
 </section>
 </section>
 <section id="mode-text-to-image">
 <h3>Mode <em>Text To Image</em><a class="headerlink" href="#mode-text-to-image" title="Link to this heading">#</a></h3>
-<p>Ce mode de création propose de créer une oeuvre d’art à l’aide d’un prompt. C’est ce mode que l’on va utiliser dans ce TP.</p>
-<p>Les <strong>options à donner au prompt sont importantes</strong> et peuvent modifier grandement le résultat final. Il faut notamment choisir :</p>
+<p>Ce mode de création propose de créer une oeuvre d’art à l’aide d’un prompt. C’est ce mode que l’on va utiliser dans ce TP. La création d’une image prend environ 1 minute.</p>
+<p>Les <strong>options sont importantes</strong> et peuvent modifier grandement le résultat final. Il faut notamment choisir :</p>
 <ul class="simple">
 <li><p>le <strong>style</strong> de l’image (dessin, photo, type de camera, type d’éclairage, etc..)</p></li>
-<li><p>la <strong>taille</strong> de l’image. Pour les premiers tests, vous pouvez ramener ce chiffre à <code class="docutils literal notranslate"><span class="pre">300</span> <span class="pre">x</span> <span class="pre">300</span></code>pixels par exemple. La production de l’image sera plus rapide</p></li>
+<li><p>la <strong>taille</strong> de l’image. Par défaut celle-ci est de <code class="docutils literal notranslate"><span class="pre">512</span> <span class="pre">x</span> <span class="pre">512</span></code> pixels. Pour les premiers tests, vous pouvez ramener ce chiffre à <code class="docutils literal notranslate"><span class="pre">256</span> <span class="pre">x</span> <span class="pre">256</span></code>pixels. La production de l’image sera 4 fois plus rapide</p></li>
+<li><p>le <strong>modèle</strong> (réseau de neurones artificielles pré-entraîné) que vous utiliserez</p></li>
 </ul>
+<p>Ce que vous précisez dans le <strong>Le prompt</strong> est fondamental pour la qualité de l’image finale.</p>
+</section>
+<section id="les-modeles">
+<h3>Les modèles<a class="headerlink" href="#les-modeles" title="Link to this heading">#</a></h3>
+<p>Une IA générative a besoin d’un réseau de neurones artificielles pré-entraîné. C’est ce que l’on appelle un <strong>modèle</strong> dans le monde de Diffusionbee. On les appelle aussi <strong>checkpoints</strong>.</p>
+<p>L’installation de base de Diffusionbee comporte qu’un seul modèle par défaut.</p>
+<p>Il est possible d’installer des <strong>modèles pré-entraînés</strong>. Il faut d’abord les télécharger depuis l’un des deux sites principaux :</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a></p></li>
+<li><p><a class="reference external" href="https://civitai.com/">https://civitai.com/</a></p></li>
+</ol>
+<p>Une fois téléchargés, il s’agit de les importer dans Diffusionbee (<code class="docutils literal notranslate"><span class="pre">menu-&gt;Settings-&gt;Add</span> <span class="pre">new</span> <span class="pre">models</span></code>). On peut ensuite les utiliser en précisant dans les options de création de l’image quel modèle on souhaite utiliser.</p>
+<p><img alt="astronaut" src="../../../_images/astronaut.png" /></p>
+<p>Prompt : <code class="docutils literal notranslate"><span class="pre">Astronaut</span> <span class="pre">riding</span> <span class="pre">a</span> <span class="pre">unicorn,</span> <span class="pre">best</span> <span class="pre">quality,</span> <span class="pre">masterpiece,</span> <span class="pre">ulta-high</span> <span class="pre">res,</span> <span class="pre">photorealistic</span></code>, modèle : <code class="docutils literal notranslate"><span class="pre">PicxReal_1</span></code>. Observez la patte avant droite de la licorne. En utilisant l’outil GIMP (<code class="docutils literal notranslate"><span class="pre">Outils</span> <span class="pre">-&gt;</span> <span class="pre">Amélioration</span> <span class="pre">-&gt;</span> <span class="pre">Heal</span> <span class="pre">Selection</span></code> sur une sélection à main levée), on peut supprimer ce problème :</p>
+<p><img alt="astronaut2" src="../../../_images/astronaut2.png" /></p>
+<p>Exemple d’un modèle spécifique à l’architecture :</p>
+<p><img alt="maison" src="../../../_images/maison1.png" /></p>
+<p>Prompt : <code class="docutils literal notranslate"><span class="pre">Entire</span> <span class="pre">private</span> <span class="pre">house,</span> <span class="pre">ocean</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">distance,</span> <span class="pre">palm</span> <span class="pre">trees,</span> <span class="pre">photorealistic,</span> <span class="pre">dvArchModern</span></code>, modèle : <code class="docutils literal notranslate"><span class="pre">dvArch</span></code></p>
+<p>Exemple d’un modèle spécifique à la mode :</p>
+<p><img alt="robe" src="../../../_images/fashion.png" /></p>
+<p>Prompt : <code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">body</span> <span class="pre">shot</span> <span class="pre">of</span> <span class="pre">center</span> <span class="pre">of</span> <span class="pre">view</span> <span class="pre">for</span> <span class="pre">a</span> <span class="pre">female</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">colored</span> <span class="pre">dress,</span> <span class="pre">shirt,</span> <span class="pre">shoes</span></code>, modèle : <code class="docutils literal notranslate"><span class="pre">FashionModel_v10</span></code></p>
+<p>Exemple d’un modèle spécifique à l’univers des mangas (observez les biais du résultat) :</p>
+<p><img alt="manga" src="../../../_images/manga.png" /></p>
+<p>Prompt : <code class="docutils literal notranslate"><span class="pre">gamer</span> <span class="pre">girl</span> <span class="pre">sitting</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">dark</span> <span class="pre">gamer</span> <span class="pre">room</span> <span class="pre">in</span> <span class="pre">front</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">intricate</span> <span class="pre">desk,</span> <span class="pre">contrast,</span> <span class="pre">camera,</span> <span class="pre">light</span> <span class="pre">particles,</span> <span class="pre">light</span> <span class="pre">rays,</span> <span class="pre">tech</span> <span class="pre">happy,</span> <span class="pre">sporty,</span> <span class="pre">tea</span> <span class="pre">cup,</span> <span class="pre">desk</span> <span class="pre">accessories,</span> <span class="pre">best</span> <span class="pre">quality</span> <span class="pre">masterpiece,</span> <span class="pre">photorealistic,</span> <span class="pre">detailed,</span> <span class="pre">HDR,</span> <span class="pre">shallow</span> <span class="pre">depth</span> <span class="pre">of</span> <span class="pre">field,</span> <span class="pre">hisgh</span> <span class="pre">contrast,</span> <span class="pre">backlighting,</span> <span class="pre">chromatic</span> <span class="pre">aberration,</span> <span class="pre">sharp</span> <span class="pre">focus,</span> <span class="pre">RAW</span> <span class="pre">color</span> <span class="pre">photo</span></code>, modèle : <code class="docutils literal notranslate"><span class="pre">makeItAnime_miaF8Vaev1</span></code></p>
 </section>
 </section>
 <section id="le-prompt">
 <h2>Le prompt<a class="headerlink" href="#le-prompt" title="Link to this heading">#</a></h2>
-<p>Aujourd’hui, le prompt peut s’écrire dans n’importe quelle langue, l’IA se chargeant de la traduction et de l’interprétation. Toutefois, un prompt en anglais donne généralement des résultats plus proches de ce que l’on a en tête.</p>
+<p><strong>Attention : le prompt est toujours en anglais</strong> (vous avez le droit d’utiliser un traducteur en ligne.</p>
 <section id="le-positive-prompt">
 <h3>Le <em>positive prompt</em><a class="headerlink" href="#le-positive-prompt" title="Link to this heading">#</a></h3>
 <p>Toute la difficulté dans une IA générative est <strong>le prompt</strong> c’est-à-dire les éléments que vous allez donner à l’IA pour créer votre oeuvre.</p>
@@ -845,6 +872,7 @@ document.write(`
 <li><p><strong>Quoi ?</strong> (par exemple : <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">private</span> <span class="pre">house</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">see</span></code>)</p></li>
 <li><p><strong>Détails ?</strong> (par exemple : <code class="docutils literal notranslate"><span class="pre">black</span> <span class="pre">man</span> <span class="pre">wearing</span> <span class="pre">a</span> <span class="pre">hat</span></code>)</p></li>
 <li><p><strong>Comment ?</strong> (par exemple : <code class="docutils literal notranslate"><span class="pre">Children's</span> <span class="pre">draw</span></code>, <code class="docutils literal notranslate"><span class="pre">Photorealistic</span></code>, <code class="docutils literal notranslate"><span class="pre">Using</span> <span class="pre">a</span> <span class="pre">Canon</span> <span class="pre">EOS</span> <span class="pre">90D</span></code>)</p></li>
+<li><p><strong>Flags du modèle</strong> (par exemple : <code class="docutils literal notranslate"><span class="pre">dvArchGothic</span></code>)</p></li>
 </ol>
 </li>
 </ul>
@@ -856,7 +884,7 @@ document.write(`
 </section>
 <section id="exercice-1-prompt-battle">
 <h2>Exercice 1 : Prompt battle !<a class="headerlink" href="#exercice-1-prompt-battle" title="Link to this heading">#</a></h2>
-<p>Pour prendre en main l’outil, suivez la consigne : trouvez le prompt (positif et négatif) pour s’approcher le plus possible de l’image suivante, la reproduire.</p>
+<p>Pour prendre en main l’outil, suivez la consigne : trouvez le prompt (positif et négatif) pour s’approcher le plus possible de l’image suivante, la reproduire. Nous utiliserons le modèle par défaut.</p>
 <p><img alt="tigers" src="../../../_images/tigers.png" /></p>
 </section>
 <section id="exercice-2-creer-une-oeuvre-d-art">
@@ -1011,24 +1039,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../environnement/TP2-ESDN-01.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TP2-ESDN-01 : L’environnement et le numérique</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../2026/TP2-ESDN-2026B.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TP2-ESDN-2026 : Enjeux sociaux du numérique</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1074,12 +1084,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-2015-ia-apprentissage-automatique-et-art-generatif">Dès 2015 : IA, apprentissage automatique et art génératif</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-de-creer">A vous de créer !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-de-creer-diffusionbee">A vous de créer : Diffusionbee</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-image-to-image">Mode <em>Image To Image</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-taylor-swift-en-version-cubiste">Exemple : Taylor Swift en version cubiste</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-text-to-image">Mode <em>Text To Image</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-modeles">Les modèles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-prompt">Le prompt</a><ul class="nav section-nav flex-column">
