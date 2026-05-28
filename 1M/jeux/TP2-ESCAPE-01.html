@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Jeux informatiques et logiques &#8212; Education Numérique Ecole de maturité</title>
+    <title>TP1-ESCAPE-01 : Escape game ! &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1M/jeux/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1M/jeux/TP2-ESCAPE-01';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="C1-JEUX-01 : Quizz de logique" href="logique.html" />
-    <link rel="prev" title="TP1-ESDN-02 : Remonter à la source…" href="../esdn/sources/TP1-ESDN-02.html" />
+    <link rel="next" title="DO Informatique 2M" href="../../2M/index.html" />
+    <link rel="prev" title="C1-JEUX-01 : Quizz de logique" href="logique.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -268,9 +268,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../esdn/sources/TP1-ESDN-02.html">TP1-ESDN-02 : Remonter à la source…</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Jeux informatiques et logiques</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Jeux informatiques et logiques</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="logique.html">C1-JEUX-01 : Quizz de logique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TP2-ESCAPE-01.html">TP1-ESCAPE-01 : Escape game !</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">TP1-ESCAPE-01 : Escape game !</a></li>
 </ul>
 </details></li>
 </ul>
@@ -445,7 +445,7 @@
       
       
       
-      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/jeux/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://vkeller.github.io/modulo-gybe/intro.html/issues/new?title=Issue%20on%20page%20%2F1M/jeux/TP2-ESCAPE-01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -475,7 +475,7 @@
       
       
       
-      <li><a href="../../_sources/1M/jeux/index.md" target="_blank"
+      <li><a href="../../_sources/1M/jeux/TP2-ESCAPE-01.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -485,7 +485,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -546,7 +546,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -557,11 +559,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Jeux informatiques et logiques</h1>
+    <h1>TP1-ESCAPE-01 : Escape game !</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mission">Mission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1">Enigme 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-fichier-corrompu-steganographie-linux">Énigme 2 : Le Fichier Corrompu (Stéganographie / Linux)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-3-le-nettoyeur-de-donnees-python-boucle-test">Énigme 3 : Le Nettoyeur de Données (Python - Boucle &amp; Test)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-calcul-de-complexite-algorithmique">Énigme 4 : Le Calcul de Complexité (Algorithmique)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-5-l-impact-ecologique-le-choix-final">Énigme 5 : L’Impact Écologique (Le Choix Final)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -571,10 +587,174 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="jeux-informatiques-et-logiques">
-<h1>Jeux informatiques et logiques<a class="headerlink" href="#jeux-informatiques-et-logiques" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="tp1-escape-01-escape-game">
+<h1>TP1-ESCAPE-01 : Escape game !<a class="headerlink" href="#tp1-escape-01-escape-game" title="Link to this heading">#</a></h1>
+<section id="objectifs-pedagogiques">
+<h2>Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Mobiliser tous les savoirs vus en première année pour résoudre l’énigme</p>
+<ul>
+<li><p>représentation de l’information</p></li>
+<li><p>algorithmique</p></li>
+<li><p>programmation</p></li>
+<li><p>enjeux sociaux du numérique</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="mission">
+<h2>Mission<a class="headerlink" href="#mission" title="Link to this heading">#</a></h2>
+<p><em>Un lanceur d’alerte a verrouillé son ordinateur avant d’être arrêté. Vous devez bypasser les 5 couches de sécurité du système pour extraire le fichier confidentiel.</em></p>
+</section>
+<section id="enigme-1">
+<h2>Enigme 1<a class="headerlink" href="#enigme-1" title="Link to this heading">#</a></h2>
+<p>Énigme 1 : Le Code d’Authentification (Logique &amp; Listes)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Objectif : Trouver la Clé n°1 (un nombre) pour ouvrir le premier script Python.
+</pre></div>
 </div>
+<p>Consigne aux élèves :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Le système demande un code PIN à 4 chiffres. Le lanceur d&#39;alerte a laissé cet indice basé sur une liste d&#39;entiers :
+ma_liste = [12, 45, 7, 19, 32, 8, 60, 23]
+Le code PIN est composé de 4 chiffres collés les uns aux autres :
+
+    Le nombre d&#39;éléments dans la liste.
+
+    La valeur du troisième élément (index 2).
+
+    L&#39;index de la valeur 32.
+
+    Le reste de la division entière (modulo %) du premier élément par 10.
+</pre></div>
+</div>
+</section>
+<section id="enigme-2-le-fichier-corrompu-steganographie-linux">
+<h2>Énigme 2 : Le Fichier Corrompu (Stéganographie / Linux)<a class="headerlink" href="#enigme-2-le-fichier-corrompu-steganographie-linux" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Format : Une image carte_mere.png sur la clé USB.
+
+Objectif : Trouver le mot de passe de l&#39;énigme 3.
+</pre></div>
+</div>
+<p>Consigne aux élèves :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>L&#39;image du système semble normale, mais sa fin de fichier a été modifiée sous Linux. Ouvrez cette image avec votre éditeur Python (ou le Bloc-notes) et allez tout en bas pour lire le message caché.
+</pre></div>
+</div>
+<p>Action des élèves :
+Ils forcent l’ouverture de l’image en mode texte. À la toute fin, après les caractères bizarres, ils lisent :
+MOT_DE_PASSE_ALGO = “OSMANTHUS”</p>
+</section>
+<section id="enigme-3-le-nettoyeur-de-donnees-python-boucle-test">
+<h2>Énigme 3 : Le Nettoyeur de Données (Python - Boucle &amp; Test)<a class="headerlink" href="#enigme-3-le-nettoyeur-de-donnees-python-boucle-test" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Format : Un fichier Python nommé analyse_fichiers.py.
+
+Objectif : Corriger une condition pour filtrer correctement une liste et obtenir un mot clé.
+</pre></div>
+</div>
+<p>Le Code Python à fournir :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =====================================================================</span>
+<span class="c1"># ÉNIGME 3 : LE FILTRAGE DES LOGS</span>
+<span class="c1"># =====================================================================</span>
+
+<span class="n">pin</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le code PIN de l&#39;énigme 1 : &quot;</span><span class="p">)</span>
+<span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le mot de passe de l&#39;énigme 2 : &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">pin</span> <span class="o">!=</span> <span class="s2">&quot;8742&quot;</span> <span class="ow">or</span> <span class="n">mdp</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;OSMANTHUS&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accès refusé.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- ACCÈS ACCORDÉ ---&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Liste de scores de sécurité. On ne veut garder QUE les scores strictement supérieurs à 50.</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+    <span class="n">lettres</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">]</span>
+    
+    <span class="c1"># ATTENTION : Il y a une erreur dans le test ci-dessous !</span>
+    <span class="c1"># Le programme garde les mauvais scores. Modifiez la condition (ligne 22).</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">scores</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>  <span class="c1"># &lt;- L&#39;ERREUR EST ICI</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="o">+</span> <span class="n">lettres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le mot clé décodé est :&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># =====================================================================</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># ÉNIGME 3 : LE FILTRAGE DES LOGS</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># =====================================================================</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">pin</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le code PIN de l&#39;énigme 1 : &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">mdp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le mot de passe de l&#39;énigme 2 : &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">if</span> <span class="n">pin</span> <span class="o">!=</span> <span class="s2">&quot;8742&quot;</span> <span class="ow">or</span> <span class="n">mdp</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;OSMANTHUS&quot;</span><span class="p">:</span>
+
+<span class="nn">File ~/.local/pipx/venvs/jupyter-book/lib/python3.11/site-packages/ipykernel/kernelbase.py:1274,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="enigme-4-le-calcul-de-complexite-algorithmique">
+<h2>Énigme 4 : Le Calcul de Complexité (Algorithmique)<a class="headerlink" href="#enigme-4-le-calcul-de-complexite-algorithmique" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Format : Un fichier texte complexite.txt ou une feuille papier.
+
+Objectif : Trouver l&#39;indice multiplicateur pour la fin.
+</pre></div>
+</div>
+<p>Consigne aux élèves :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Pour valider la sécurité de notre script de chiffrement, déterminez le nombre de passages précis dans la boucle suivante :
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Quelle est la valeur finale de la variable compteur ? C’est votre Indice n°4.</p>
+</section>
+<section id="enigme-5-l-impact-ecologique-le-choix-final">
+<h2>Énigme 5 : L’Impact Écologique (Le Choix Final)<a class="headerlink" href="#enigme-5-l-impact-ecologique-le-choix-final" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Format : Fichier texte final.txt.
+
+Objectif : Résoudre l&#39;équation finale grâce à une question sur les enjeux environnementaux du numérique.
+</pre></div>
+</div>
+<p>Consigne aux élèves :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Le serveur de secours est alimenté par une IA de surveillance très énergivore. Pour couper le système proprement sans saturer le réseau électrique du lycée, calculez le code de délestage &quot;X&quot;.
+
+Formule :
+X = (Indice 4) x (Nombre de lettres du mot de l&#39;énigme 3) + Bonus Environnement
+
+Pour trouver le &quot;Bonus Environnement&quot; :
+Quelle pratique numérique individuelle a le plus d&#39;impact sur l&#39;épuisement des ressources naturelles (métaux rares, eau) ?
+
+    Envoyer 500 emails sans pièce jointe : le bonus vaut 5
+
+    Regarder une vidéo en 4K pendant 1 heure : le bonus vaut 20
+
+    Acheter un smartphone neuf chaque année : le bonus vaut 150
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -608,20 +788,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../esdn/sources/TP1-ESDN-02.html"
+       href="logique.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TP1-ESDN-02 : Remonter à la source…</p>
+        <p class="prev-next-title">C1-JEUX-01 : Quizz de logique</p>
       </div>
     </a>
     <a class="right-next"
-       href="logique.html"
+       href="../../2M/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C1-JEUX-01 : Quizz de logique</p>
+        <p class="prev-next-title">DO Informatique 2M</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -631,6 +811,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs pédagogiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mission">Mission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1">Enigme 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-fichier-corrompu-steganographie-linux">Énigme 2 : Le Fichier Corrompu (Stéganographie / Linux)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-3-le-nettoyeur-de-donnees-python-boucle-test">Énigme 3 : Le Nettoyeur de Données (Python - Boucle &amp; Test)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-calcul-de-complexite-algorithmique">Énigme 4 : Le Calcul de Complexité (Algorithmique)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-5-l-impact-ecologique-le-choix-final">Énigme 5 : L’Impact Écologique (Le Choix Final)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
