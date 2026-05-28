@@ -571,10 +571,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-pedagogique">Objectif pédagogique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1-l-interception-reseau-sur-papier">Énigme 1 : L’Interception Réseau (Sur Papier)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-message-cache-sur-l-ordinateur">Énigme 2 : Le Message Caché (Sur l’ordinateur)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1-l-interception-reseau">Énigme 1 : L’Interception Réseau</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-message-cache">Énigme 2 : Le Message Caché</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-3-le-briseur-de-code">Énigme 3 : Le Briseur de Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-choix-ethique-calcul-final">Énigme 4 : Le Choix Éthique (Calcul final)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-choix-ethique">Énigme 4 : Le Choix Éthique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
             </nav>
@@ -605,33 +605,25 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="enigme-1-l-interception-reseau-sur-papier">
-<h2>Énigme 1 : L’Interception Réseau (Sur Papier)<a class="headerlink" href="#enigme-1-l-interception-reseau-sur-papier" title="Link to this heading">#</a></h2>
-<p><strong>MISSION 1 : Traquer le paquet réseau</strong></p>
-<p>Un message d’alerte a transité dans l’ancien réseau de Raspberry Pi du lycée. Retrouvez la machine finale pour obtenir la Clé Réseau.</p>
+<section id="enigme-1-l-interception-reseau">
+<h2>Énigme 1 : L’Interception Réseau<a class="headerlink" href="#enigme-1-l-interception-reseau" title="Link to this heading">#</a></h2>
+<p>Un message d’alerte a transité dans l’ancien réseau de Raspberry Pi. Retrouvez la machine finale pour obtenir la Clé Réseau.</p>
 <p>Le message part de la machine de départ et suit aveuglément ces règles de routage :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Départ</span> <span class="p">:</span> <span class="n">IP</span> <span class="mf">192.168.1.10</span> <span class="o">-&gt;</span> <span class="n">Règle</span> <span class="p">:</span> <span class="n">Envoyer</span> <span class="n">le</span> <span class="n">paquet</span> <span class="n">à</span> <span class="n">la</span> <span class="n">machine</span> <span class="n">qui</span> <span class="n">a</span> <span class="n">le</span> <span class="n">plus</span> <span class="n">petit</span> <span class="n">dernier</span> <span class="n">octet</span> <span class="n">pair</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Départ</span> <span class="p">:</span> <span class="n">IP</span> <span class="mf">192.168.1.10</span> 
+    <span class="o">-&gt;</span> <span class="n">Règle</span> <span class="p">:</span> <span class="n">Envoyer</span> <span class="n">le</span> <span class="n">paquet</span> <span class="n">à</span> <span class="n">la</span> <span class="n">machine</span> <span class="n">qui</span> <span class="n">a</span> <span class="n">le</span> <span class="n">plus</span> <span class="n">petit</span> <span class="n">dernier</span> <span class="n">octet</span> <span class="n">pair</span><span class="o">.</span>
 
-<span class="n">Choix</span> <span class="n">possibles</span> <span class="p">:</span>
-
-    <span class="n">Machine</span> <span class="n">B</span> <span class="p">:</span> <span class="mf">192.168.1.15</span>
-    <span class="n">Machine</span> <span class="n">C</span> <span class="p">:</span> <span class="mf">192.168.1.2</span>
-    <span class="n">Machine</span> <span class="n">D</span> <span class="p">:</span> <span class="mf">192.168.1.14</span>
-    <span class="n">Machine</span> <span class="n">E</span> <span class="p">:</span> <span class="mf">192.168.1.21</span>
-
-    <span class="n">Une</span> <span class="n">fois</span> <span class="n">sur</span> <span class="n">cette</span> <span class="n">deuxième</span> <span class="n">machine</span><span class="p">,</span> <span class="n">appliquez</span> <span class="n">sa</span> <span class="n">règle</span> <span class="p">:</span>
-    <span class="n">Règle</span> <span class="n">de</span> <span class="n">cette</span> <span class="n">machine</span> <span class="o">-&gt;</span> <span class="n">Envoyer</span> <span class="n">à</span> <span class="n">la</span> <span class="n">machine</span> <span class="n">dont</span> <span class="n">le</span> <span class="n">dernier</span> <span class="n">octet</span> <span class="n">est</span> <span class="n">un</span> <span class="n">multiple</span> <span class="n">de</span> <span class="mf">7.</span>
+<span class="n">Suite</span> <span class="p">:</span> <span class="n">IP</span> <span class="mf">192.168.1</span><span class="o">.</span><span class="n">XXX</span>
+    <span class="o">-&gt;</span> <span class="n">Règle</span> <span class="p">:</span> <span class="n">Toujours</span> <span class="n">envoyer</span> <span class="n">le</span> <span class="n">paquet</span> <span class="n">à</span> <span class="n">la</span> <span class="n">machine</span> <span class="n">dont</span> <span class="n">le</span> <span class="n">dernier</span> <span class="n">octet</span> <span class="n">est</span> <span class="n">un</span> <span class="n">multiple</span> <span class="n">de</span> <span class="mf">7.</span>
 </pre></div>
 </div>
-<p>Votre objectif : Trouvez l’IP de la machine finale (Le serveur de la NSA). Voici le schéma du réseau</p>
 <p><img alt="reseau" src="../../_images/reseau.png" /></p>
 <p>La Clé Réseau est égale à : (Dernier octet de la deuxième machine) + (Dernier octet de la machine finale).</p>
 </section>
-<section id="enigme-2-le-message-cache-sur-l-ordinateur">
-<h2>Énigme 2 : Le Message Caché (Sur l’ordinateur)<a class="headerlink" href="#enigme-2-le-message-cache-sur-l-ordinateur" title="Link to this heading">#</a></h2>
+<section id="enigme-2-le-message-cache">
+<h2>Énigme 2 : Le Message Caché<a class="headerlink" href="#enigme-2-le-message-cache" title="Link to this heading">#</a></h2>
 <p>Voici une image :</p>
 <p><img alt="cius" src="../../_images/empereur_romain.png" /></p>
-<p>Le lanceur d’alerte a caché le mot de passe de l’archive dans le code même de l’image. Utilisez votre éditeur de texte ou votre outil Python pour inspecter les entrailles du fichier.</p>
+<p>Le lanceur d’alerte a caché le mot de passe de l’archive dans l’image.</p>
 </section>
 <section id="enigme-3-le-briseur-de-code">
 <h2>Énigme 3 : Le Briseur de Code<a class="headerlink" href="#enigme-3-le-briseur-de-code" title="Link to this heading">#</a></h2>
@@ -737,8 +729,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="enigme-4-le-choix-ethique-calcul-final">
-<h2>Énigme 4 : Le Choix Éthique (Calcul final)<a class="headerlink" href="#enigme-4-le-choix-ethique-calcul-final" title="Link to this heading">#</a></h2>
+<section id="enigme-4-le-choix-ethique">
+<h2>Énigme 4 : Le Choix Éthique<a class="headerlink" href="#enigme-4-le-choix-ethique" title="Link to this heading">#</a></h2>
 <p>Pour terminer le jeu, voici un fichier texte brut. A vous de résoudre l’énigme</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=====================================================================
 ULTIME ÉTAPE : TRANSMISSION DU CODE DE DÉSACTIVATION
@@ -751,9 +743,9 @@ S = (Clé Réseau de l&#39;énigme 1) x (Nombre de lettres du mot décodé en é
 
 Pour trouver le &quot;Bonus Environnement&quot;, répondez à la question suivante :
 Quelle est la cause majeure de l&#39;empreinte carbone de la surveillance de masse et du numérique aujourd&#39;hui ?
-- Si c&#39;est la fabrication des câbles réseau : le bonus vaut 10
-- Si c&#39;est la consommation électrique des Data Centers (serveurs) : le bonus vaut 100
-- Si c&#39;est l&#39;envoi de SMS : le bonus vaut 500
+- Si c&#39;est la fabrication des millions de kilomètres de câbles réseau sous marin : le bonus vaut 10
+- Si c&#39;est la consommation électrique des Data Centers : le bonus vaut 100
+- Si c&#39;est l&#39;utilisation des smartphones : le bonus vaut 500
 </pre></div>
 </div>
 </section>
@@ -828,10 +820,10 @@ Quelle est la cause majeure de l&#39;empreinte carbone de la surveillance de mas
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-pedagogique">Objectif pédagogique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1-l-interception-reseau-sur-papier">Énigme 1 : L’Interception Réseau (Sur Papier)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-message-cache-sur-l-ordinateur">Énigme 2 : Le Message Caché (Sur l’ordinateur)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-1-l-interception-reseau">Énigme 1 : L’Interception Réseau</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-2-le-message-cache">Énigme 2 : Le Message Caché</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-3-le-briseur-de-code">Énigme 3 : Le Briseur de Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-choix-ethique-calcul-final">Énigme 4 : Le Choix Éthique (Calcul final)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enigme-4-le-choix-ethique">Énigme 4 : Le Choix Éthique</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
   </nav></div>
