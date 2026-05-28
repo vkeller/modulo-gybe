@@ -82,6 +82,7 @@ parts:
     - file: 1M/jeux/index
       sections:
       - file: 1M/jeux/logique
+      - file: 1M/jeux/TP2-ESCAPE-01
  
 
   - caption: 2ème année
@@ -162,6 +163,9 @@ parts:
       - file: 2M/esdn/generative-art/TP2-ESDN-02
       - file: 2M/esdn/2026/TP2-ESDN-2026B
       - file: 2M/esdn/women/P2-ESDN-02
+    - file: 2M/jeux/index
+      sections:
+      - file: 2M/jeux/TP2-ESCAPE-01
       
   - caption: 3C2M
     chapters:

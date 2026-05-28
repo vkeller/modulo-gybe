@@ -1,0 +1,43 @@
+Enigme 1
+
+Résolution prof :
+Départ : 10. Les octets pairs restants sont 2 (Machine C) et 14 (Machine D). 
+Le plus petit est 2. 
+Le paquet va sur la Machine C.Depuis la Machine C (2), 
+on cherche un multiple de 7. C'est 21 (Machine E). 
+Le paquet arrive sur la Machine E.
+
+Calcul de la Clé Réseau : $2 + 21 = 23$.
+
+
+Enigme 2
+
+Action des élèves : Ils doivent faire un clic droit sur l'image -> Ouvrir avec -> Bloc-notes (ou l'ouvrir directement depuis l'éditeur Python en faisant "Fichier > Ouvrir" et en sélectionnant "Tous les fichiers").
+En faisant défiler le texte bizarre (le code binaire de l'image traduit en texte) tout en bas, ils découvrent cette ligne écrite en clair par vos soins :
+MOT_DE_PASSE_SERVEUR = "VERDURE"
+
+
+ENIGME 3
+
+Ce que l'élève doit faire pour résoudre Python :
+
+    Il tape VERDURE.
+
+    Il répond N^2.
+
+    Le programme s'exécute mais affiche ETRLAA (le tri est inversé : 6, 5, 4, 3, 2, 1).
+
+    L'élève inspecte le code et modifie le test de la ligne 42 : il change if positions[j] < positions[j+1]: par if positions[j] > positions[j+1]:.
+
+    Il relance le script, et magiquement, les listes se trient dans l'ordre (1, 2, 3, 4, 5, 6) et le terminal affiche : ALERTE.
+    
+    
+ENIGME 4
+
+Le calcul final que les élèves doivent faire :
+Clé Réseau (Énigme 1) = 23
+Mot décodé (Énigme 3) = "ALERTE" -> contient 6 lettres.
+Bonus Environnement = Data Centers -> 100.
+Calcul : S = 23 x 6 + 100 = 138 + 100 = 238.
+
+Le premier groupe qui court vers vous en criant "Le code est 238 !" a gagné la mission !

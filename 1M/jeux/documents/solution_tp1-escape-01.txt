@@ -1,0 +1,32 @@
+ENIGME 1
+
+    Nombre d'éléments : 8
+
+    Élément à l'index 2 (le 3e) : 7
+
+    Index de 32 : 4 (car 12 est à l'index 0, 45 à l'index 1...)
+
+    12 % 10 = 2
+
+    Le code PIN (Clé 1) est : 8742
+    
+    
+    
+ENIGME 2
+
+
+ENIGME 3
+
+Résolution par les élèves :
+Le script de base affiche XYZW. Ils doivent changer < 50 par > 50 à la ligne 22. Le script affiche alors le vrai mot clé : CACT (les lettres correspondantes à 65, 80, 99 et 51).
+
+
+ENIGME 4
+Résolution par les élèves :Il s'agit d'une complexité quadratique $O(N^2)$. Avec $N = 10$, la boucle interne tourne 10 fois pour chacun des 10 tours de la boucle externe.L'indice n'4 est : 100 (10 x 10).
+
+ENIGME 5
+
+
+SOLUTION
+
+Résolution par les élèves :Ils identifient que c'est la fabrication du matériel (le smartphone neuf) qui détruit le plus les ressources (notion vue en cours sur l'environnement). Le bonus vaut donc 150.Indice 4 = 100Mot énigme 3 = "CACT" $\rightarrow$ 4 lettres.Calcul final : $X = (100 \times 4) + 150 = 400 + 150 = \mathbf{550}$.L'équipe gagnante est celle qui vient vous donner le code 550 !
