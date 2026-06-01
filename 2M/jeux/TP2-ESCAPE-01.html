@@ -272,6 +272,7 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../1M/jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/jeux/TP2-ESCAPE-01.html">TP1-ESCAPE-01 : Escape game !</a></li>
 </ul>
 </details></li>
 </ul>
@@ -668,17 +669,13 @@ document.write(`
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Début du processus de tri des données...&quot;</span><span class="p">)</span>
         
         <span class="c1"># Deux listes simples (les positions et les lettres correspondantes)</span>
-        <span class="c1"># Le message d&#39;origine est &quot;ALERTE&quot; mais il est complètement mélangé.</span>
         <span class="n">positions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
         <span class="n">lettres</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">]</span>
         
         <span class="c1"># Algorithme de tri à bulles pour remettre les positions dans l&#39;ordre (1, 2, 3...)</span>
-        <span class="c1"># ATTENTION : Il y a une erreur de logique ci-dessous ! Le tri se fait à l&#39;envers.</span>
-        <span class="c1"># Trouvez le symbole à changer pour trier du plus petit au plus grand.</span>
         <span class="n">taille</span> <span class="o">=</span> <span class="mi">6</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">taille</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">taille</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-                <span class="c1"># L&#39;erreur est sur la ligne juste en dessous :</span>
                 <span class="k">if</span> <span class="n">positions</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">positions</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
                     <span class="c1"># On échange les positions</span>
                     <span class="n">temporaire_pos</span> <span class="o">=</span> <span class="n">positions</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>

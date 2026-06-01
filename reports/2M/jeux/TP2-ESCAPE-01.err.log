@@ -57,17 +57,13 @@ else:
         print("Début du processus de tri des données...")
         
         # Deux listes simples (les positions et les lettres correspondantes)
-        # Le message d'origine est "ALERTE" mais il est complètement mélangé.
         positions = [5, 2, 6, 1, 4, 3]
         lettres = ["T", "L", "E", "A", "R", "E"]
         
         # Algorithme de tri à bulles pour remettre les positions dans l'ordre (1, 2, 3...)
-        # ATTENTION : Il y a une erreur de logique ci-dessous ! Le tri se fait à l'envers.
-        # Trouvez le symbole à changer pour trier du plus petit au plus grand.
         taille = 6
         for i in range(taille):
             for j in range(0, taille - i - 1):
-                # L'erreur est sur la ligne juste en dessous :
                 if positions[j] < positions[j+1]:
                     # On échange les positions
                     temporaire_pos = positions[j]
