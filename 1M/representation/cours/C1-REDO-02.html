@@ -584,6 +584,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-octet-en-anglais-un-byte">Définition : un octet (en anglais un byte)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-poids-des-bits">Définition : poids des bits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian">Définition : little et big endian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signification-d-un-nombre-binaire">Signification d’un nombre binaire</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-d-ecriture">Convention d’écriture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-decimal-en-binaire">Conversion d’un nombre décimal en binaire</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-division">Par division</a></li>
@@ -689,7 +690,7 @@ document.write(`
 <h2>Définition : un octet (en anglais un byte)<a class="headerlink" href="#definition-un-octet-en-anglais-un-byte" title="Link to this heading">#</a></h2>
 <p>un <strong>octet</strong> (en anglais un byte) est formé de <strong>huit</strong> bits.</p>
 <p>Attention : il est d’usage d’utiliser l’abbréviation <strong>B</strong> (majuscule) pour noter un byte pour éviter la confusion avec le b (minuscule) du bit</p>
-<p>*Exemple : 00111010 est un byte (qui représente la valeur 58 en décimal)</p>
+<p><em>Exemple</em> : 00111010 est un byte (qui représente la valeur 58 en décimal)</p>
 </section>
 <section id="definition-poids-des-bits">
 <h2>Définition : poids des bits<a class="headerlink" href="#definition-poids-des-bits" title="Link to this heading">#</a></h2>
@@ -710,8 +711,83 @@ document.write(`
 </ul>
 <p><strong>NOUS UTILISERONS TOUJOURS LA NOTATION LITTLE ENDIAN DANS CE COURS</strong></p>
 </section>
+<section id="signification-d-un-nombre-binaire">
+<h2>Signification d’un nombre binaire<a class="headerlink" href="#signification-d-un-nombre-binaire" title="Link to this heading">#</a></h2>
+<p>Un nombre écrit en binaire est un nombre uniquement écrit avec une suite de <span class="math notranslate nohighlight">\(1\)</span> et de <span class="math notranslate nohighlight">\(0\)</span>. Chaque position en notation <strong>little endian</strong> (donc en lisant de <strong>droite à gauche</strong> représente une puissance de <span class="math notranslate nohighlight">\(2\)</span> :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>position 7</p></th>
+<th class="head text-center"><p>position 6</p></th>
+<th class="head text-center"><p>position 5</p></th>
+<th class="head text-center"><p>position 4</p></th>
+<th class="head text-center"><p>position 3</p></th>
+<th class="head text-center"><p>position 2</p></th>
+<th class="head text-center"><p>position 1</p></th>
+<th class="head text-center"><p>position 0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>128</p></td>
+<td class="text-center"><p>64</p></td>
+<td class="text-center"><p>32</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>8</p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2<sup>7</p></td>
+<td class="text-center"><p>2<sup>6</p></td>
+<td class="text-center"><p>2<sup>5</p></td>
+<td class="text-center"><p>2<sup>4</p></td>
+<td class="text-center"><p>2<sup>3</p></td>
+<td class="text-center"><p>2<sup>2</p></td>
+<td class="text-center"><p>2<sup>1</p></td>
+<td class="text-center"><p>2<sup>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ainsi, si l’on prend le nombre binaire <span class="math notranslate nohighlight">\(10110101\)</span> que l’on place chaque 1 et 0 à sa position puis que l’on additionne la valeur de la puissance de deux correspondant à sa position (<span class="math notranslate nohighlight">\(1\)</span> : on prend, <span class="math notranslate nohighlight">\(0\)</span> on ne prend pas :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>position 7</p></th>
+<th class="head text-center"><p>position 6</p></th>
+<th class="head text-center"><p>position 5</p></th>
+<th class="head text-center"><p>position 4</p></th>
+<th class="head text-center"><p>position 3</p></th>
+<th class="head text-center"><p>position 2</p></th>
+<th class="head text-center"><p>position 1</p></th>
+<th class="head text-center"><p>position 0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>128</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>32</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(10110101\)</span> en binaire donne donc <span class="math notranslate nohighlight">\(128 + 32 + 16 + 4 + 1 = 181\)</span></p>
+</section>
 <section id="convention-d-ecriture">
 <h2>Convention d’écriture<a class="headerlink" href="#convention-d-ecriture" title="Link to this heading">#</a></h2>
+<p>Il y a un problème lorsqu’on compare ou que l’on converti des nombres entre la base <span class="math notranslate nohighlight">\(2\)</span> (binaire) et la base <span class="math notranslate nohighlight">\(10\)</span> (décimale). Il nous faut donc une manière de les distinguer.</p>
 <p>Dans ce cours, nous utiliserons toujours la notation <span class="math notranslate nohighlight">\(_{base}\)</span> (indice) pour décrire la <strong>base du nombre</strong>.</p>
 <ul class="simple">
 <li><p>Le nombre <em>cent</em> en base <span class="math notranslate nohighlight">\(10\)</span> s’écrit <span class="math notranslate nohighlight">\(100_{10}\)</span></p></li>
@@ -960,6 +1036,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-octet-en-anglais-un-byte">Définition : un octet (en anglais un byte)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-poids-des-bits">Définition : poids des bits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian">Définition : little et big endian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signification-d-un-nombre-binaire">Signification d’un nombre binaire</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-d-ecriture">Convention d’écriture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-decimal-en-binaire">Conversion d’un nombre décimal en binaire</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-division">Par division</a></li>
