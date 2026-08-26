@@ -272,6 +272,7 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../jeux/index.html">Jeux informatiques et logiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../jeux/logique.html">C1-JEUX-01 : Quizz de logique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jeux/TP2-ESCAPE-01.html">TP1-ESCAPE-01 : Escape game !</a></li>
 </ul>
 </details></li>
 </ul>
@@ -357,6 +358,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/generative-art/TP2-ESDN-02.html">TP2-ESDN-02 : L’Art et le Numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/2026/TP2-ESDN-2026B.html">TP2-ESDN-2026 : Enjeux sociaux du numérique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../2M/esdn/women/P2-ESDN-02.html">P2-ESDN-02 : Femmes dans l’informatique</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../2M/jeux/index.html">Jeux informatiques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../2M/jeux/TP2-ESCAPE-01.html">TP2-ESCAPE-01 : Escape Game !</a></li>
 </ul>
 </details></li>
 </ul>
@@ -577,7 +582,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-nombre-entier-decimal">Définition : nombre entier décimal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-bit">Définition : un bit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-octet-en-anglais-un-byte">Définition : un octet (en anglais un byte)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian-poids-des-bits">Définition : little et big endian, poids des bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-poids-des-bits">Définition : poids des bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian">Définition : little et big endian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-d-ecriture">Convention d’écriture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-decimal-en-binaire">Conversion d’un nombre décimal en binaire</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-division">Par division</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-soustraction">Par soustraction</a></li>
@@ -684,18 +691,36 @@ document.write(`
 <p>Attention : il est d’usage d’utiliser l’abbréviation <strong>B</strong> (majuscule) pour noter un byte pour éviter la confusion avec le b (minuscule) du bit</p>
 <p>*Exemple : 00111010 est un byte (qui représente la valeur 58 en décimal)</p>
 </section>
-<section id="definition-little-et-big-endian-poids-des-bits">
-<h2>Définition : little et big endian, poids des bits<a class="headerlink" href="#definition-little-et-big-endian-poids-des-bits" title="Link to this heading">#</a></h2>
-<p>Lorsqu’on écrit un nombre en binaire, il s’agit de savoir comment le lire.</p>
+<section id="definition-poids-des-bits">
+<h2>Définition : poids des bits<a class="headerlink" href="#definition-poids-des-bits" title="Link to this heading">#</a></h2>
+<p>Une suite de bits (par exemple <code class="docutils literal notranslate"><span class="pre">1010</span></code>) peut se lire de gauche à droite ou de droite à gauche. C’est une <strong>convention</strong> (un choix). Il s’agit simplement de savoir où placer le bit qui représente la puissance de <span class="math notranslate nohighlight">\(2\)</span> <strong>la plus faible</strong>, soit <span class="math notranslate nohighlight">\(2^0\)</span>.</p>
+<p>Ainsi dans l’exemple, <code class="docutils literal notranslate"><span class="pre">1010</span></code>, si l’on lit</p>
 <ul class="simple">
-<li><p>Si on lit de droite à gauche (notation dite <strong>little endian</strong>), alors le bit de poids le plus faible (celui qui représente la puissance la plus faible donc <span class="math notranslate nohighlight">\(2^0\)</span> se trouve à <strong>droite</strong></p></li>
-<li><p>Si on lit de gauche à droite (notation dite <strong>big endian</strong>), alors le bit de poids le plus faible (celui qui représente la puissance la plus faible donc <span class="math notranslate nohighlight">\(2^0\)</span> se trouve à <strong>gauche</strong></p></li>
+<li><p>de gauche à droite, le bit de poids le plus fort est <code class="docutils literal notranslate"><span class="pre">0</span></code> et : <span class="math notranslate nohighlight">\(101\underline{0}_2 = 5_{10}\)</span></p></li>
+<li><p>de droite à gauche, le bit de poids le plus fort est <code class="docutils literal notranslate"><span class="pre">1</span></code> et : <span class="math notranslate nohighlight">\(\underline{1}010_2 = 10_{10}\)</span></p></li>
+</ul>
+<p><strong>DANS CE COURS, NOUS LISONS DE DROITE A GAUCHE</strong></p>
+</section>
+<section id="definition-little-et-big-endian">
+<h2>Définition : little et big endian<a class="headerlink" href="#definition-little-et-big-endian" title="Link to this heading">#</a></h2>
+<p>Le terme pour savoir si on lit une suite de bit de <strong>droite à gauche</strong> ou de <strong>gauche à droite</strong> est l’<strong>endianess</strong> :</p>
+<ul class="simple">
+<li><p>Si on lit de droite à gauche (notation dite <strong>little endian</strong>), alors le bit de poids le plus faible se trouve à <strong>droite</strong></p></li>
+<li><p>Si on lit de gauche à droite (notation dite <strong>big endian</strong>), alors le bit de poids le plus faiblese trouve à <strong>gauche</strong></p></li>
 </ul>
 <p><strong>NOUS UTILISERONS TOUJOURS LA NOTATION LITTLE ENDIAN DANS CE COURS</strong></p>
 </section>
+<section id="convention-d-ecriture">
+<h2>Convention d’écriture<a class="headerlink" href="#convention-d-ecriture" title="Link to this heading">#</a></h2>
+<p>Dans ce cours, nous utiliserons toujours la notation <span class="math notranslate nohighlight">\(_{base}\)</span> (indice) pour décrire la <strong>base du nombre</strong>.</p>
+<ul class="simple">
+<li><p>Le nombre <em>cent</em> en base <span class="math notranslate nohighlight">\(10\)</span> s’écrit <span class="math notranslate nohighlight">\(100_{10}\)</span></p></li>
+<li><p>Le nombre <em>quatre</em> en base <span class="math notranslate nohighlight">\(2\)</span> s’écrit <span class="math notranslate nohighlight">\(100_2\)</span></p></li>
+</ul>
+</section>
 <section id="conversion-d-un-nombre-decimal-en-binaire">
 <h2>Conversion d’un nombre décimal en binaire<a class="headerlink" href="#conversion-d-un-nombre-decimal-en-binaire" title="Link to this heading">#</a></h2>
-<p>Il existe deux algorithmes (techniques) pour convertir un nombre entier de la base 10 à la base 2. Par souci de simplification, on adopte la nommenclature <span class="math notranslate nohighlight">\(_{10}\)</span> pour un entier en base 10 et <span class="math notranslate nohighlight">\(_{2}\)</span> pour un entier en binaire.</p>
+<p>Il existe deux algorithmes (techniques) pour convertir un nombre entier de la base 10 à la base 2.</p>
 <section id="par-division">
 <h3>Par division<a class="headerlink" href="#par-division" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -703,16 +728,16 @@ document.write(`
 <li><p>En conservant les restes, on obtient le résultat en lisant de gauche à droite</p></li>
 </ol>
 <p><strong>Exemple</strong></p>
-<p>58 en base 10</p>
+<p><span class="math notranslate nohighlight">\(58_{10}\)</span></p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{58}{2} = 29\)</span>, reste <span class="math notranslate nohighlight">\(0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{29}{2} = 14\)</span>, reste <span class="math notranslate nohighlight">\(1\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{14}{2} = 7\)</span>, reste <span class="math notranslate nohighlight">\(0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{7}{2} = 3\)</span>, reste <span class="math notranslate nohighlight">\(1\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{3}{2} = 1\)</span>, reste <span class="math notranslate nohighlight">\(1\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{1}{2} = 0\)</span>, reste <span class="math notranslate nohighlight">\(1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{58_{10}}{2_{10}} = 29_{10}\)</span>, reste <span class="math notranslate nohighlight">\(0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{29_{10}}{2_{10}} = 14_{10}\)</span>, reste <span class="math notranslate nohighlight">\(1_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{14_{10}}{2_{10}} = 7_{10}\)</span>, reste <span class="math notranslate nohighlight">\(0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{7_{10}}{2_{10}} = 3_{10}\)</span>, reste <span class="math notranslate nohighlight">\(1_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{3_{10}}{2_{10}} = 1_{10}\)</span>, reste <span class="math notranslate nohighlight">\(1_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{1_{10}}{2_{10}} = 0_{10}\)</span>, reste <span class="math notranslate nohighlight">\(1_{10}\)</span></p></li>
 </ol>
-<p>le nombre 58 s’écrit donc en binaire en lisant de bas en haut les restes : <strong>111010</strong></p>
+<p>le nombre <span class="math notranslate nohighlight">\(58_{10}\)</span> s’écrit donc en binaire en lisant de bas en haut les restes : <span class="math notranslate nohighlight">\(111010_{2}\)</span></p>
 </section>
 <section id="par-soustraction">
 <h3>Par soustraction<a class="headerlink" href="#par-soustraction" title="Link to this heading">#</a></h3>
@@ -728,7 +753,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(2_{10} - 1 \times 2^1 = 0_{10}\)</span> donc <strong>1</strong></p></li>
 <li><p><span class="math notranslate nohighlight">\(0_{10} - 0 \times 2^0 = 0_{10}\)</span> donc <strong>0</strong></p></li>
 </ol>
-<p>Le nombre 58 s’écrit donc en binaire en lisant de haut en bas : <strong>111010</strong></p>
+<p>Le nombre <span class="math notranslate nohighlight">\(58_{10}\)</span> s’écrit donc en binaire en lisant de haut en bas : <span class="math notranslate nohighlight">\(111010_{2}\)</span></p>
 </section>
 </section>
 <section id="exercice-1">
@@ -757,18 +782,18 @@ document.write(`
 <li><p>Additionner les différentes puissances de deux pour obtenir le nombre en base 10</p></li>
 </ul>
 <p>Exemple :</p>
-<p>11010010 donne :</p>
+<p><span class="math notranslate nohighlight">\(11010010_{2}\)</span> donne :</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(0 \times 2^0 = 0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1 \times 2^1 = 2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \times 2^2 = 0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \times 2^3 = 0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1 \times 2^4 = 16\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \times 2^5 = 0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1 \times 2^6 = 64\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1 \times 2^7 = 128\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \times 2^0 = 0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \times 2^1 = 2_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \times 2^2 = 0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \times 2^3 = 0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \times 2^4 = 16_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \times 2^5 = 0_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \times 2^6 = 64_{10}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \times 2^7 = 128_{10}\)</span></p></li>
 </ol>
-<p>donc <span class="math notranslate nohighlight">\(11010010_{2}\)</span> vaut <span class="math notranslate nohighlight">\(2+16+64+128\)</span> donc <span class="math notranslate nohighlight">\(210_{10}\)</span></p>
+<p>donc <span class="math notranslate nohighlight">\(11010010_{2}\)</span> vaut <span class="math notranslate nohighlight">\(2_{10}+16_{10}+64_{10}+128_{10}\)</span> donc <span class="math notranslate nohighlight">\(210_{10}\)</span></p>
 <p><em>Remarque : c’est l’explication algorithmique du tour de magie</em></p>
 </section>
 <section id="exercice-4">
@@ -933,7 +958,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-nombre-entier-decimal">Définition : nombre entier décimal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-bit">Définition : un bit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-un-octet-en-anglais-un-byte">Définition : un octet (en anglais un byte)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian-poids-des-bits">Définition : little et big endian, poids des bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-poids-des-bits">Définition : poids des bits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-little-et-big-endian">Définition : little et big endian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-d-ecriture">Convention d’écriture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-d-un-nombre-decimal-en-binaire">Conversion d’un nombre décimal en binaire</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-division">Par division</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#par-soustraction">Par soustraction</a></li>
