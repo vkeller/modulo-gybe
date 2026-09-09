@@ -22,7 +22,8 @@ parts:
       - file: 1M/representation/cours/C1-REDO-04
       - file: 1M/representation/cours/R1-REDO-01
       - file: 1M/representation/tp/TP1-REDO-01
-      - file: 1M/representation/tp/TP1-REDO-02
+#      - file: 1M/representation/tp/TP1-REDO-02
+      - file: 1M/representation/tp/TP1-REDO-02b
       - file: 1M/representation/tp/TP1-REDO-03
     - file: 1M/algo/index
       sections:
