@@ -574,14 +574,14 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs Pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalisation">2. Formalisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstration-formelle-chercher-directement-vs-trier-puis-chercher">3. DÉMONSTRATION FORMELLE : Chercher directement vs Trier puis Chercher</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pose-du-probleme-algebrique">Pose du problème algébrique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite-k">Inéquation du Seuil de Rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-numerique-au-tableau-n-1000-avec-c-text-tri-approx-1">Application Numérique au Tableau (<span class="math notranslate nohighlight">\(n = 1000\)</span>, avec <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">3. Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-algebrique">Problème algébrique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite">Inéquation du Seuil de Rentabilité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-avec-n-1000-et-c-text-tri-approx-1">Exemple avec <span class="math notranslate nohighlight">\(n = 1000\)</span>, et <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensibilite-a-l-ordre-initial-des-donnees">4. Sensibilité à l’Ordre Initial des Données</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-au-tableau">Analyse au Tableau :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse">Analyse :</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstration-borne-inferieure-des-tris-par-comparaison">5. Démonstration : Borne Inférieure des Tris par Comparaison</a><ul class="nav section-nav flex-column">
@@ -608,10 +608,9 @@ document.write(`
 <h2>Objectifs Pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Ancrage &amp; Formalisation du nombre de comparaisons à partir de l’expérience manipulatoire.</p></li>
-<li><p>Le Dilemme Mathématique : Recherche directe vs Tri + Recherche dichotomique (calcul du seuil <span class="math notranslate nohighlight">\(k^*\)</span>).</p></li>
-<li><p>Sensibilité à l’état initial des données (Tri à bulles, Tri Cocktail vs Tri Fusion).</p></li>
-<li><p>Démonstration formelle : Arbre de décision et preuve de la borne inférieure <span class="math notranslate nohighlight">\(\Omega(n \log n)\)</span>.</p></li>
-<li><p>Bilan &amp; Synthèse au tableau.</p></li>
+<li><p>Le dilemme : recherche versus tri + Recherche dichotomique (calcul du seuil <span class="math notranslate nohighlight">\(k^*\)</span>).</p></li>
+<li><p>Sensibilité à l’état initial des données.</p></li>
+<li><p>Arbre de décision et preuve de la borne inférieure <span class="math notranslate nohighlight">\(\Omega(n \log n)\)</span>.</p></li>
 </ul>
 </section>
 <section id="formalisation">
@@ -629,45 +628,40 @@ Analyse élément par élément, de gauche à droite.</p>
 <li><p><strong>Recherche Dichotomique :</strong><br />
 Requiert un tableau <strong>strictement trié</strong>. À chaque étape, l’espace de recherche est divisé par 2.</p>
 <ul>
-<li><p>Pire des cas : <span class="math notranslate nohighlight">\(\lceil\log_2(n)\rceil\)</span> comparaisons.</p></li>
+<li><p>Pire des cas : <span class="math notranslate nohighlight">\(\log_2(n)\)</span> comparaisons.</p></li>
 <li><p>Complexité : <span class="math notranslate nohighlight">\(\mathcal{O}(\log n)\)</span>.</p></li>
 </ul>
 </li>
 </ul>
 </section>
-<section id="demonstration-formelle-chercher-directement-vs-trier-puis-chercher">
-<h2>3. DÉMONSTRATION FORMELLE : Chercher directement vs Trier puis Chercher<a class="headerlink" href="#demonstration-formelle-chercher-directement-vs-trier-puis-chercher" title="Link to this heading">#</a></h2>
-<section id="pose-du-probleme-algebrique">
-<h3>Pose du problème algébrique<a class="headerlink" href="#pose-du-probleme-algebrique" title="Link to this heading">#</a></h3>
+<section id="recherche-versus-tri-recherche">
+<h2>3. Recherche versus tri + recherche<a class="headerlink" href="#recherche-versus-tri-recherche" title="Link to this heading">#</a></h2>
+<section id="probleme-algebrique">
+<h3>Problème algébrique<a class="headerlink" href="#probleme-algebrique" title="Link to this heading">#</a></h3>
 <p>Soit un ensemble de <span class="math notranslate nohighlight">\(n\)</span> données non triées sur lequel un système doit effectuer <strong><span class="math notranslate nohighlight">\(k\)</span> recherches</strong>.</p>
 <ul class="simple">
 <li><p><strong>Option A : <span class="math notranslate nohighlight">\(k\)</span> recherches linéaires sans tri préalable</strong>
-$<span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total A}}(n, k) = k \cdot n\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total A}}(n, k) = k \cdot n\)</span></p></li>
 <li><p><strong>Option B : Tri préalable du tableau (<span class="math notranslate nohighlight">\(\mathcal{O}(n \log n)\)</span>) puis <span class="math notranslate nohighlight">\(k\)</span> recherches dichotomiques (<span class="math notranslate nohighlight">\(\mathcal{O}(\log n)\)</span>)</strong>
-$<span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total B}}(n, k) = C_{\text{tri}} \cdot n \log_2(n) + k \cdot \log_2(n)\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total B}}(n, k) = C_{\text{tri}} \cdot n \log_2(n) + k \cdot \log_2(n)\)</span></p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="inequation-du-seuil-de-rentabilite-k">
-<h3>Inéquation du Seuil de Rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)<a class="headerlink" href="#inequation-du-seuil-de-rentabilite-k" title="Link to this heading">#</a></h3>
-<p>Cherchons la valeur critique de <span class="math notranslate nohighlight">\(k\)</span> à partir de laquelle <strong>l’Option B devient plus performante que l’Option A</strong> :</p>
-<div class="math notranslate nohighlight">
-\[\text{Coût}_{\text{Total A}} &gt; \text{Coût}_{\text{Total B}}\]</div>
-<div class="math notranslate nohighlight">
-\[k \cdot n &gt; C_{\text{tri}} \cdot n \log_2(n) + k \cdot \log_2(n)\]</div>
-<div class="math notranslate nohighlight">
-\[k \cdot n - k \cdot \log_2(n) &gt; C_{\text{tri}} \cdot n \log_2(n)\]</div>
-<div class="math notranslate nohighlight">
-\[k \cdot (n - \log_2(n)) &gt; C_{\text{tri}} \cdot n \log_2(n)\]</div>
-<div class="math notranslate nohighlight">
-\[k^* &gt; \frac{C_{\text{tri}} \cdot n \log_2(n)}{n - \log_2(n)}\]</div>
+<section id="inequation-du-seuil-de-rentabilite">
+<h3>Inéquation du Seuil de Rentabilité<a class="headerlink" href="#inequation-du-seuil-de-rentabilite" title="Link to this heading">#</a></h3>
+<p><strong>Définition :</strong> le <strong>seuil de rentabilité</strong> noté <span class="math notranslate nohighlight">\(k^*\)</span> est la valeur de <span class="math notranslate nohighlight">\(k\)</span> lorsqu’une option (ici <em>recherche</em>) devient plus performante en terme d’ordre de complexité qu’une autre option (ici <em>tri + recherche</em>)</p>
+<p>Calculons le seuil de rentabilité <span class="math notranslate nohighlight">\(k^*\)</span> pour les deux options A et B :</p>
+<p><span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total A}} &gt; \text{Coût}_{\text{Total B}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(k \cdot n &gt; C_{\text{tri}} \cdot n \log_2(n) + k \cdot \log_2(n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(k \cdot n - k \cdot \log_2(n) &gt; C_{\text{tri}} \cdot n \log_2(n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(k \cdot (n - \log_2(n)) &gt; C_{\text{tri}} \cdot n \log_2(n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(k^* &gt; \frac{C_{\text{tri}} \cdot n \log_2(n)}{n - \log_2(n)}\)</span></p>
 <p>Pour de grandes valeurs de <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n - \log_2(n) \approx n\)</span>, ce qui donne l’approximation :</p>
-<div class="math notranslate nohighlight">
-\[k^* \approx C_{\text{tri}} \cdot \log_2(n)\]</div>
+<p><span class="math notranslate nohighlight">\(k^* \approx C_{\text{tri}} \cdot \log_2(n)\)</span></p>
 </section>
 <hr class="docutils" />
-<section id="application-numerique-au-tableau-n-1000-avec-c-text-tri-approx-1">
-<h3>Application Numérique au Tableau (<span class="math notranslate nohighlight">\(n = 1000\)</span>, avec <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span>)<a class="headerlink" href="#application-numerique-au-tableau-n-1000-avec-c-text-tri-approx-1" title="Link to this heading">#</a></h3>
+<section id="exemple-avec-n-1000-et-c-text-tri-approx-1">
+<h3>Exemple avec <span class="math notranslate nohighlight">\(n = 1000\)</span>, et <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span><a class="headerlink" href="#exemple-avec-n-1000-et-c-text-tri-approx-1" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>1 seule recherche (<span class="math notranslate nohighlight">\(k = 1\)</span>) :</strong></p>
 <ul>
@@ -677,7 +671,7 @@ $<span class="math notranslate nohighlight">\(\text{Coût}_{\text{Total B}}(n, k
 </ul>
 </li>
 <li><p><strong>Seuil d’amortissement (<span class="math notranslate nohighlight">\(k^*\)</span>) :</strong>
-$<span class="math notranslate nohighlight">\(k^* \approx \log_2(1000) \approx 10\text{ recherches}\)</span>$</p>
+<span class="math notranslate nohighlight">\(k^* \approx \log_2(1000) \approx 10\text{ recherches}\)</span></p>
 <ul>
 <li><p><em>Conclusion :</em> Dès la <strong>11ᵉ recherche</strong>, l’investissement du tri est amorti et l’Option B devient exponentiellement plus efficace.</p></li>
 </ul>
@@ -731,8 +725,8 @@ $<span class="math notranslate nohighlight">\(k^* \approx \log_2(1000) \approx 1
 </tbody>
 </table>
 </div>
-<section id="analyse-au-tableau">
-<h3>Analyse au Tableau :<a class="headerlink" href="#analyse-au-tableau" title="Link to this heading">#</a></h3>
+<section id="analyse">
+<h3>Analyse :<a class="headerlink" href="#analyse" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Tri à bulles optimisé :</strong> Si la séquence est déjà triée, l’absence d’échange à la première passe permet d’interrompre l’algorithme après <span class="math notranslate nohighlight">\(n-1\)</span> comparaisons (<span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span>).</p></li>
 <li><p><strong>Tri Fusion :</strong> La stratégie <em>Diviser pour Régner</em> effectue <span class="math notranslate nohighlight">\(\log_2(n)\)</span> niveaux de découpage et <span class="math notranslate nohighlight">\(n\)</span> opérations de fusion à chaque niveau, <strong>quelle que soit la disposition initiale</strong>. Il est insensible au désordre.</p></li>
@@ -838,14 +832,14 @@ $<span class="math notranslate nohighlight">\(h \in \Omega(n \log n)\)</span>$</
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs Pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalisation">2. Formalisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstration-formelle-chercher-directement-vs-trier-puis-chercher">3. DÉMONSTRATION FORMELLE : Chercher directement vs Trier puis Chercher</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pose-du-probleme-algebrique">Pose du problème algébrique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite-k">Inéquation du Seuil de Rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-numerique-au-tableau-n-1000-avec-c-text-tri-approx-1">Application Numérique au Tableau (<span class="math notranslate nohighlight">\(n = 1000\)</span>, avec <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">3. Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-algebrique">Problème algébrique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite">Inéquation du Seuil de Rentabilité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-avec-n-1000-et-c-text-tri-approx-1">Exemple avec <span class="math notranslate nohighlight">\(n = 1000\)</span>, et <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensibilite-a-l-ordre-initial-des-donnees">4. Sensibilité à l’Ordre Initial des Données</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-au-tableau">Analyse au Tableau :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse">Analyse :</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstration-borne-inferieure-des-tris-par-comparaison">5. Démonstration : Borne Inférieure des Tris par Comparaison</a><ul class="nav section-nav flex-column">
