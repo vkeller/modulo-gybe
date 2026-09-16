@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>R1-ALGO-04 : Révision &#8212; Education Numérique Ecole de maturité</title>
+    <title>R2-ALGO-04: Révision &#8212; Education Numérique Ecole de maturité</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2M/algo/R2-ALGO-04';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Programmation avancée" href="../prog/index.html" />
-    <link rel="prev" title="R1-ALGO-03 : Révision" href="R2-ALGO-03.html" />
+    <link rel="next" title="R2-ALGO-05 : Révision" href="R2-ALGO-05.html" />
+    <link rel="prev" title="R1-ALGO-02 : Révision" href="R2-ALGO-02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,7 +199,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/C1-REDO-04.html">C1-REDO-04 : codage de caractères</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/cours/R1-REDO-01.html">R1-REDO-01 Révision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-01.html">TP1-REDO-01 : les images matricielles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02.html">TP1-REDO-02 : Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-02b.html">TP1-REDO-02 : Le son</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1M/representation/tp/TP1-REDO-03.html">TP1-REDO-03 : Types de fichiers et compression</a></li>
 </ul>
 </details></li>
@@ -281,6 +281,7 @@
 <li class="toctree-l2"><a class="reference internal" href="R2-ALGO-01.html">R2-ALGO-01 : Révision Algorithmes 1M</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R2-ALGO-02-A.html">R2-ALGO-02-A : Révision algorithmes (Recherche)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R2-ALGO-02-B.html">R2-ALGO-02-B : Révision (Tri)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R2-ALGO-03.html">R2-ALGO-03 : Aalgorithmes de tri et de recherche : arbitrages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C2-ALGO-01.html">C2-ALGO-01 : Taille du problème</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C2-ALGO-02.html">C2-ALGO-02 : Complexité des algorithmes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C2-ALGO-03.html">C2-ALGO-03 : Complexité des algorithmes (suite)</a></li>
@@ -288,8 +289,8 @@
 <li class="toctree-l2"><a class="reference internal" href="C2-ALGO-04-B.html">C2-ALGO-04-B : Parcours de graphes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C2-ALGO-05.html">C2-ALGO-05 : Théorie des graphes, le voyageur de commerce</a></li>
 <li class="toctree-l2"><a class="reference internal" href="R2-ALGO-02.html">R1-ALGO-02 : Révision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="R2-ALGO-03.html">R1-ALGO-03 : Révision</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">R1-ALGO-04 : Révision</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">R2-ALGO-04: Révision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R2-ALGO-05.html">R2-ALGO-05 : Révision</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog/index.html">Programmation avancée</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -559,7 +560,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>R1-ALGO-04 : Révision</h1>
+    <h1>R2-ALGO-04: Révision</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -574,14 +575,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-fait-cet-algorithme">Que fait cet algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quelles-sont-les-entrees-de-l-algorithme">Quelles sont les entrées de l’algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quelle-est-la-classe-de-complexite-de-l-algorithme">Quelle est la classe de complexité de l’algorithme ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trace-algorithmique">Trace algorithmique</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-programme-python">Complexité (programme Python)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-calcule-ce-programme">Que calcule ce programme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Quelles sont les entrées de l’algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Quelle est la classe de complexité de l’algorithme ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Trace algorithmique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphes">Graphes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculez-la-matrice-d-adjacence">Calculez la matrice d’adjacence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculez-l-arbre-couvrant-depuis-le-sommet-2-et-celui-du-sommet-4">Calculez l’arbre couvrant depuis le sommet 2 et celui du sommet 4</a></li>
 </ul>
 </li>
 </ul>
@@ -595,23 +599,22 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="r1-algo-04-revision">
-<h1>R1-ALGO-04 : Révision<a class="headerlink" href="#r1-algo-04-revision" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="r2-algo-04-revision">
+<h1>R2-ALGO-04: Révision<a class="headerlink" href="#r2-algo-04-revision" title="Link to this heading">#</a></h1>
 <section id="objectifs-du-test">
 <h2>Objectifs du test<a class="headerlink" href="#objectifs-du-test" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Algorithmique</p>
+<li><p>Complexité</p>
 <ul>
 <li><p>Taille du problème</p></li>
-<li><p>Classes de complexité d’algorithmes (notation de Landau)</p></li>
-<li><p>traces algorithmiques</p></li>
+<li><p>Classes de complexité d’algorithmes</p></li>
 </ul>
 </li>
-<li><p>Programmation</p>
+<li><p>Graphes</p>
 <ul>
-<li><p>entrées, sorties</p></li>
-<li><p>variables, types, casting</p></li>
-<li><p>boucles while</p></li>
+<li><p>Algorithme de Dijkstra</p></li>
+<li><p>Algorithme glouton sur le voyageur de commerce</p></li>
+<li><p>Matrice d’adjacence</p></li>
 </ul>
 </li>
 </ul>
@@ -632,10 +635,6 @@ document.write(`
 <h3>Quelle est la classe de complexité de l’algorithme ?<a class="headerlink" href="#quelle-est-la-classe-de-complexite-de-l-algorithme" title="Link to this heading">#</a></h3>
 <p>Quelle est la classe de complexité de l’algorithme en notation <em>Big O</em>. Si <code class="docutils literal notranslate"><span class="pre">nbrLignes</span> <span class="pre">=</span> <span class="pre">100</span></code>, <code class="docutils literal notranslate"><span class="pre">nbrColonnes</span> <span class="pre">=</span> <span class="pre">200</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrBitsParPixel</span> <span class="pre">=</span> <span class="pre">24</span></code>, quelle sera la valeur de sortie de l’algorithme ?</p>
 </section>
-<section id="trace-algorithmique">
-<h3>Trace algorithmique<a class="headerlink" href="#trace-algorithmique" title="Link to this heading">#</a></h3>
-<p>Ecrivez la tabale contenant la trace de l’algorithme pour les valeurs <code class="docutils literal notranslate"><span class="pre">nbrLignes</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">nbrColonnes</span> <span class="pre">=</span> <span class="pre">2</span></code> et <code class="docutils literal notranslate"><span class="pre">nbrBitsParPixel</span> <span class="pre">=</span> <span class="pre">24</span></code></p>
-</section>
 </section>
 <section id="complexite-programme-python">
 <h2>Complexité (programme Python)<a class="headerlink" href="#complexite-programme-python" title="Link to this heading">#</a></h2>
@@ -644,17 +643,11 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Limite supérieure pour a, b, c</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-    <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">:</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">b</span>
-        <span class="k">while</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">:</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># b &gt;= a pour éviter les doublons</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># c &gt;= b</span>
             <span class="k">if</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="s2">&quot;respectent la règle&quot;</span><span class="p">)</span>
-            <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -680,9 +673,18 @@ document.write(`
 <h3>Quelle est la classe de complexité de l’algorithme ?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Quelle est la classe de complexité de l’algorithme en notation <em>Big O</em>. Si <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">100</span></code>, quelle sera la valeur de sortie de l’algorithme ?</p>
 </section>
-<section id="id3">
-<h3>Trace algorithmique<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p>Ecrivez la trace pour <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">3</span></code></p>
+</section>
+<section id="graphes">
+<h2>Graphes<a class="headerlink" href="#graphes" title="Link to this heading">#</a></h2>
+<p>Voici un graphe :</p>
+<p><img alt="graphe" src="../../_images/graphe.png" /></p>
+<section id="calculez-la-matrice-d-adjacence">
+<h3>Calculez la matrice d’adjacence<a class="headerlink" href="#calculez-la-matrice-d-adjacence" title="Link to this heading">#</a></h3>
+<p>Donnez la matrice d’adjacence du graphe</p>
+</section>
+<section id="calculez-l-arbre-couvrant-depuis-le-sommet-2-et-celui-du-sommet-4">
+<h3>Calculez l’arbre couvrant depuis le sommet 2 et celui du sommet 4<a class="headerlink" href="#calculez-l-arbre-couvrant-depuis-le-sommet-2-et-celui-du-sommet-4" title="Link to this heading">#</a></h3>
+<p>A l’aide d’un stylo gras, dessinez les abres couvrants</p>
 </section>
 </section>
 </section>
@@ -718,20 +720,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="R2-ALGO-03.html"
+       href="R2-ALGO-02.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">R1-ALGO-03 : Révision</p>
+        <p class="prev-next-title">R1-ALGO-02 : Révision</p>
       </div>
     </a>
     <a class="right-next"
-       href="../prog/index.html"
+       href="R2-ALGO-05.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Programmation avancée</p>
+        <p class="prev-next-title">R2-ALGO-05 : Révision</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -756,14 +758,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-fait-cet-algorithme">Que fait cet algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quelles-sont-les-entrees-de-l-algorithme">Quelles sont les entrées de l’algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quelle-est-la-classe-de-complexite-de-l-algorithme">Quelle est la classe de complexité de l’algorithme ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trace-algorithmique">Trace algorithmique</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-programme-python">Complexité (programme Python)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-calcule-ce-programme">Que calcule ce programme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Quelles sont les entrées de l’algorithme ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Quelle est la classe de complexité de l’algorithme ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Trace algorithmique</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphes">Graphes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculez-la-matrice-d-adjacence">Calculez la matrice d’adjacence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculez-l-arbre-couvrant-depuis-le-sommet-2-et-celui-du-sommet-4">Calculez l’arbre couvrant depuis le sommet 2 et celui du sommet 4</a></li>
 </ul>
 </li>
 </ul>
