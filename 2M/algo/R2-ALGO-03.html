@@ -574,7 +574,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs Pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalisation">2. Formalisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">3. Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Définitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-text-tri"><span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-comparatif-des-algorithmes-de-tri">Tableau comparatif des algorithmes de tri</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-au-calcul-du-point-de-rentabilite-k">Application au calcul du point de rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-algebrique">Problème algébrique</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite">Inéquation du Seuil de Rentabilité</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-avec-n-1000-et-c-text-tri-approx-1">Exemple avec <span class="math notranslate nohighlight">\(n = 1000\)</span>, et <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span></a></li>
@@ -634,8 +640,70 @@ Requiert un tableau <strong>strictement trié</strong>. À chaque étape, l’es
 </li>
 </ul>
 </section>
+<section id="definitions">
+<h2>Définitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
+<section id="c-text-tri">
+<h3><span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span><a class="headerlink" href="#c-text-tri" title="Link to this heading">#</a></h3>
+<p>Dans l’analyse théorique de la complexité des algorithmes, la notation Grand <span class="math notranslate nohighlight">\(O\)</span> (par exemple <span class="math notranslate nohighlight">\(O(n \log_2 n)\)</span> ou <span class="math notranslate nohighlight">\(O(n^2)\)</span>) décrit le comportement asymptotique lorsque la taille des données <span class="math notranslate nohighlight">\(n\)</span> tend vers l’infini, en masquant les constantes multiplicatives.</p>
+<p>Dans l’expression du coût réel ou du temps d’exécution :</p>
+<p><span class="math notranslate nohighlight">\(T(n) \approx C_{\text{tri}} \cdot f(n)\)</span></p>
+<p><strong><span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span> est la constante cachée (ou constante de multiplicité / de structure)</strong> de l’algorithme de tri. Elle quantifie le coût moyen des opérations élémentaires exécutées à chaque étape du traitement (comparaisons, affectations, gestion de la pile d’appels récursifs, allocations mémoire temporaires, accès au cache CPU).</p>
+</section>
+<section id="tableau-comparatif-des-algorithmes-de-tri">
+<h3>Tableau comparatif des algorithmes de tri<a class="headerlink" href="#tableau-comparatif-des-algorithmes-de-tri" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Algorithme</p></th>
+<th class="head text-left"><p>Complexité <span class="math notranslate nohighlight">\(f(n)\)</span></p></th>
+<th class="head text-left"><p>Valeur typique de <span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span></p></th>
+<th class="head text-left"><p>Caractéristiques et impact sur <span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Tri Rapide</strong> (<em>QuickSort</em>)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(O(n \log_2 n)\)</span> <em>(cas moyen)</em></p></td>
+<td class="text-left"><p><strong><span class="math notranslate nohighlight">\(0.7\)</span> – <span class="math notranslate nohighlight">\(1.3\)</span></strong></p></td>
+<td class="text-left"><p><strong>Très faible :</strong> Tri sur place (<em>in-place</em>), excellente localité spatiale pour le cache CPU, pas d’allocations auxiliaires.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Tri Fusion</strong> (<em>Merge Sort</em>)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(O(n \log_2 n)\)</span> <em>(pire cas)</em></p></td>
+<td class="text-left"><p><strong><span class="math notranslate nohighlight">\(1.0\)</span> – <span class="math notranslate nohighlight">\(2.0\)</span></strong></p></td>
+<td class="text-left"><p><strong>Moyen :</strong> Garantit le pire cas, mais nécessite des allocations et des copies répétées dans un tableau auxiliaire.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Tri par Tas</strong> (<em>HeapSort</em>)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(O(n \log_2 n)\)</span> <em>(pire cas)</em></p></td>
+<td class="text-left"><p><strong><span class="math notranslate nohighlight">\(1.5\)</span> – <span class="math notranslate nohighlight">\(2.5\)</span></strong></p></td>
+<td class="text-left"><p><strong>Élevé :</strong> Tri sur place, mais les accès mémoire dans l’arbre/tableau sautent d’un indice à l’autre, dégradant les performances du cache CPU.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Tri par Insertion</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(O(n^2)\)</span></p></td>
+<td class="text-left"><p><strong><span class="math notranslate nohighlight">\(0.1\)</span> – <span class="math notranslate nohighlight">\(0.3\)</span></strong></p></td>
+<td class="text-left"><p><strong>Extrêmement faible :</strong> Instructions très simples dans la boucle interne. Idéal et souvent utilisé comme cas de base pour de très petits tableaux (<span class="math notranslate nohighlight">\(n &lt; 15\)</span>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Tri à Bulles</strong> (<em>Bubble Sort</em>)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(O(n^2)\)</span></p></td>
+<td class="text-left"><p><strong><span class="math notranslate nohighlight">\(0.25\)</span> – <span class="math notranslate nohighlight">\(0.5\)</span></strong></p></td>
+<td class="text-left"><p><strong>Faible :</strong> Simple en théorie, mais effectue un grand nombre d’échanges d’éléments adjacents.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="application-au-calcul-du-point-de-rentabilite-k">
+<h3>Application au calcul du point de rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)<a class="headerlink" href="#application-au-calcul-du-point-de-rentabilite-k" title="Link to this heading">#</a></h3>
+<p>Dans le dilemme entre effectuer <span class="math notranslate nohighlight">\(k\)</span> recherches linéaires simples versus trier une fois le tableau puis effectuer <span class="math notranslate nohighlight">\(k\)</span> recherches dichotomiques :</p>
+<ul class="simple">
+<li><p><strong>Coût Option A (Linéaire) :</strong> <span class="math notranslate nohighlight">\(C_A = k \cdot n\)</span></p></li>
+<li><p><strong>Coût Option B (Tri + Dichotomies) :</strong> <span class="math notranslate nohighlight">\(C_B = C_{\text{tri}} \cdot n \log_2(n) + k \cdot \log_2(n)\)</span></p></li>
+</ul>
+<p>Le point d’équilibre <span class="math notranslate nohighlight">\(k^*\)</span> (seuil à partir duquel le tri est amorti) s’obtient lorsque <span class="math notranslate nohighlight">\(C_A = C_B\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[k^* \approx \frac{C_{\text{tri}} \cdot n \log_2(n)}{n - \log_2(n)} \approx C_{\text{tri}} \cdot \log_2(n) \quad (\text{pour } n \gg \log_2(n))\]</div>
+<p>Plus la valeur de <span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span> est faible, plus le surcoût initial du tri est réduit, et plus le seuil <span class="math notranslate nohighlight">\(k^*\)</span> est bas (le tri devient rentable plus rapidement).</p>
+</section>
+</section>
 <section id="recherche-versus-tri-recherche">
-<h2>3. Recherche versus tri + recherche<a class="headerlink" href="#recherche-versus-tri-recherche" title="Link to this heading">#</a></h2>
+<h2>Recherche versus tri + recherche<a class="headerlink" href="#recherche-versus-tri-recherche" title="Link to this heading">#</a></h2>
 <section id="probleme-algebrique">
 <h3>Problème algébrique<a class="headerlink" href="#probleme-algebrique" title="Link to this heading">#</a></h3>
 <p>Soit un ensemble de <span class="math notranslate nohighlight">\(n\)</span> données non triées sur lequel un système doit effectuer <strong><span class="math notranslate nohighlight">\(k\)</span> recherches</strong>.</p>
@@ -832,7 +900,13 @@ $<span class="math notranslate nohighlight">\(h \in \Omega(n \log n)\)</span>$</
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs-pedagogiques">Objectifs Pédagogiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalisation">2. Formalisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">3. Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Définitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-text-tri"><span class="math notranslate nohighlight">\(C_{\text{tri}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-comparatif-des-algorithmes-de-tri">Tableau comparatif des algorithmes de tri</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-au-calcul-du-point-de-rentabilite-k">Application au calcul du point de rentabilité (<span class="math notranslate nohighlight">\(k^*\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-versus-tri-recherche">Recherche versus tri + recherche</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-algebrique">Problème algébrique</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inequation-du-seuil-de-rentabilite">Inéquation du Seuil de Rentabilité</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-avec-n-1000-et-c-text-tri-approx-1">Exemple avec <span class="math notranslate nohighlight">\(n = 1000\)</span>, et <span class="math notranslate nohighlight">\(C_{\text{tri}} \approx 1\)</span></a></li>
