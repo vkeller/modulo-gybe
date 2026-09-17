@@ -824,13 +824,13 @@ Requiert un tableau <strong>strictement trié</strong>. À chaque étape, l’es
 <li><p>Soit un ensemble de <span class="math notranslate nohighlight">\(n\)</span> éléments distincts. Il existe <span class="math notranslate nohighlight">\(n!\)</span> (factorielle <span class="math notranslate nohighlight">\(n\)</span>) permutations possibles.</p></li>
 <li><p>Chaque comparaison entre deux éléments représente un nœud binaire dans un arbre de décision.</p></li>
 <li><p>Pour trier correctement toute séquence, l’arbre doit posséder au moins autant de feuilles <span class="math notranslate nohighlight">\(L\)</span> que de permutations :
-$<span class="math notranslate nohighlight">\(L \ge n!\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(L \ge n!\)</span></p></li>
 <li><p>La hauteur <span class="math notranslate nohighlight">\(h\)</span> de l’arbre binaire correspond au nombre maximal de comparaisons exécutées (pire des cas) :
-$<span class="math notranslate nohighlight">\(2^h \ge L \ge n! \implies h \ge \log_2(n!)\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(2^h \ge L \ge n! \implies h \ge \log_2(n!)\)</span></p></li>
 <li><p>Minoration de <span class="math notranslate nohighlight">\(\log_2(n!)\)</span> :
-$<span class="math notranslate nohighlight">\(\log_2(n!) = \sum_{i=1}^{n} \log_2(i) \ge \sum_{i=\lfloor n/2 \rfloor}^{n} \log_2\left(\frac{n}{2}\right) \ge \frac{n}{2} \cdot \log_2\left(\frac{n}{2}\right)\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(\log_2(n!) = \sum_{i=1}^{n} \log_2(i) \ge \sum_{i=\lfloor n/2 \rfloor}^{n} \log_2\left(\frac{n}{2}\right) \ge \frac{n}{2} \cdot \log_2\left(\frac{n}{2}\right)\)</span></p></li>
 <li><p>Conclusion :
-$<span class="math notranslate nohighlight">\(h \in \Omega(n \log n)\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(h \in \Omega(n \log n)\)</span></p></li>
 </ol>
 </section>
 </section>
