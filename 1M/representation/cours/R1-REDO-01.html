@@ -582,35 +582,39 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-de-decimal-vers-binaire">Conversion de décimal vers binaire</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-de-binaire-en-hexadecimal">Conversion de binaire en hexadécimal</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-hexadecimal-en-binaire">Conversion héxadécimal en binaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-en-binaire">Opérations en binaire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-additions">Exercices sur les additions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-soustractions">Exercices sur les soustractions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-multiplications">Exercices sur les multiplications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-la-division">Exercices sur la division</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-1-additions-binaires">Exercice 2.1 : additions binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-2-soustractions-binaires">Exercice 2.2 : soustractions binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-3-multiplications-binaires">Exercice 2.3 : multiplications binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-4-division-binaire">Exercice 2.4 : division binaire</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation-des-caracteres">Représentation des caractères</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-ascii">Le codage ASCII</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-images-matricielles">Les images matricielles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-son">Le son</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-images-matricielles">Les images matricielles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-son">Le son</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalites">Généralités</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reponses-aux-exercices">Réponses aux Exercices</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercice 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercice 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercice 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-1">Exercice 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-2">Exercice 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-3">Exercice 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-4">Exercice 2.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercice 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercice 5</a></li>
 </ul>
 </li>
 </ul>
@@ -804,9 +808,8 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(3B_{16}\)</span> s’écrit <span class="math notranslate nohighlight">\(00111011_{2}\)</span> donc <span class="math notranslate nohighlight">\(111011_{2}\)</span></p></li>
 </ul>
 </section>
-</section>
 <section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h3>
 <p>Complétez le tableau suivant</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -836,6 +839,7 @@ document.write(`
 </table>
 </div>
 </section>
+</section>
 <section id="operations-en-binaire">
 <h2>Opérations en binaire<a class="headerlink" href="#operations-en-binaire" title="Link to this heading">#</a></h2>
 <p>Les 4 opérations binaires sont :</p>
@@ -846,8 +850,8 @@ document.write(`
 <li><p>La division</p></li>
 </ol>
 <p>Elles se résument toutes par des additions.</p>
-<section id="exercices-sur-les-additions">
-<h3>Exercices sur les additions<a class="headerlink" href="#exercices-sur-les-additions" title="Link to this heading">#</a></h3>
+<section id="exercice-2-1-additions-binaires">
+<h3>Exercice 2.1 : additions binaires<a class="headerlink" href="#exercice-2-1-additions-binaires" title="Link to this heading">#</a></h3>
 <p>Calculez les résultats suivants :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1001 + 011\)</span></p></li>
@@ -856,8 +860,8 @@ document.write(`
 </ul>
 <p>Vérifiez les résultats avec la conversion en décimal</p>
 </section>
-<section id="exercices-sur-les-soustractions">
-<h3>Exercices sur les soustractions<a class="headerlink" href="#exercices-sur-les-soustractions" title="Link to this heading">#</a></h3>
+<section id="exercice-2-2-soustractions-binaires">
+<h3>Exercice 2.2 : soustractions binaires<a class="headerlink" href="#exercice-2-2-soustractions-binaires" title="Link to this heading">#</a></h3>
 <p>Calculez les résultats suivants en utilisant la méthode du <strong>complément à deux</strong>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1001 - 11\)</span></p></li>
@@ -866,8 +870,8 @@ document.write(`
 </ul>
 <p>Vérifiez les résultats avec la conversion en décimal</p>
 </section>
-<section id="exercices-sur-les-multiplications">
-<h3>Exercices sur les multiplications<a class="headerlink" href="#exercices-sur-les-multiplications" title="Link to this heading">#</a></h3>
+<section id="exercice-2-3-multiplications-binaires">
+<h3>Exercice 2.3 : multiplications binaires<a class="headerlink" href="#exercice-2-3-multiplications-binaires" title="Link to this heading">#</a></h3>
 <p>Calculez les résultats suivants :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1001 * 11\)</span></p></li>
@@ -876,8 +880,8 @@ document.write(`
 </ul>
 <p>Vérifiez les résultats avec la conversion en décimal</p>
 </section>
-<section id="exercices-sur-la-division">
-<h3>Exercices sur la division<a class="headerlink" href="#exercices-sur-la-division" title="Link to this heading">#</a></h3>
+<section id="exercice-2-4-division-binaire">
+<h3>Exercice 2.4 : division binaire<a class="headerlink" href="#exercice-2-4-division-binaire" title="Link to this heading">#</a></h3>
 <p>Calculez les résultats suivants en utilisant la méthode de la potence :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1001 / 11\)</span></p></li>
@@ -895,8 +899,8 @@ document.write(`
 <p>La table de conversion décimal (colonne violette) - hexadécimal (colonne rouge) - caractère (colonne turquoise) se décline ainsi :</p>
 <p><img alt="ASCIITable" src="https://vkeller.github.io/modulo-gybe/_images/ASCII.png" /></p>
 </section>
-<section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h3>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Quelle est la valeur en ASCII de la suite <span class="math notranslate nohighlight">\(71_{10}, 121_{10}, 109_{10}, 110_{10}, 97_{10}, 115_{10}, 101_{10}\)</span> ?</p></li>
 <li><p>Quelle est la valeur en ASCII de la suite <span class="math notranslate nohighlight">\(1000010_2, 1100101_2, 1100001_2, 1110101_2, 1101100_2, 1101001_2, 1100101_2, 1110101_2\)</span> ?</p></li>
@@ -958,8 +962,8 @@ document.write(`
 </table>
 </div>
 <p>La valeur décimale (par exemple <span class="math notranslate nohighlight">\(255\)</span>) peut se convertir en hexadécimal avec ce qui a été vu plus haut</p>
-<section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h3>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Quel est le nombre maximum de niveaux de gris peut-on coder avec le système RGB ?</p></li>
 <li><p>Sans utiliser de logiciel externe, quelle est la couleur composante dominante de la couleur <span class="math notranslate nohighlight">\((100_{10},240_{10},10_{10})\)</span> ?</p></li>
@@ -976,8 +980,8 @@ document.write(`
 <li><p>Quantification</p></li>
 <li><p>Encodage</p></li>
 </ol>
-<section id="exercice-4">
-<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h3>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Quelle est la plage de fréquences par l’oreille humaine ?</p></li>
 <li><p>Si la fréquence maximum audible est de <span class="math notranslate nohighlight">\(20\)</span> KHz, quelle est la fréquence d’échantillonnage idéale ?</p></li>
@@ -1021,8 +1025,40 @@ document.write(`
 </table>
 </div>
 </section>
+<section id="exercice-2-1">
+<h3>Exercice 2.1<a class="headerlink" href="#exercice-2-1" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1001 + 011 = 1100\)</span> (<span class="math notranslate nohighlight">\(9 + 3 = 12\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(11111 + 11111 = 111110\)</span> (<span class="math notranslate nohighlight">\(31 + 31 = 62\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(1001010 + 111001 = 10000011\)</span> (<span class="math notranslate nohighlight">\(74 + 57 = 131\)</span>)</p></li>
+</ol>
+</section>
+<section id="exercice-2-2">
+<h3>Exercice 2.2<a class="headerlink" href="#exercice-2-2" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1001 - 011 = 0110\)</span> (<span class="math notranslate nohighlight">\(9 - 3 = 6\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(101010 - 1111 = 11011\)</span> (<span class="math notranslate nohighlight">\(42 - 15 = 27\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(1111101 - 11110 = 1011111\)</span> (<span class="math notranslate nohighlight">\(125 - 30 = 95\)</span>)</p></li>
+</ol>
+</section>
+<section id="exercice-2-3">
+<h3>Exercice 2.3<a class="headerlink" href="#exercice-2-3" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1001 * 11 = 11011\)</span> (<span class="math notranslate nohighlight">\(9 * 3 = 27\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(101010 * 1111 = \)</span> (<span class="math notranslate nohighlight">\(42 * 15 = 630\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(1111101 * 11110 = 111010100110\)</span> (<span class="math notranslate nohighlight">\(125 * 30 = 3750\)</span>)</p></li>
+</ol>
+</section>
+<section id="exercice-2-4">
+<h3>Exercice 2.4<a class="headerlink" href="#exercice-2-4" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(1001 / 11 = 11\)</span> (<span class="math notranslate nohighlight">\(9 / 3 = 3\)</span> et reste <span class="math notranslate nohighlight">\(0\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(101010 / 1111 = 10\)</span> (<span class="math notranslate nohighlight">\(42 / 15 = 2\)</span> reste <span class="math notranslate nohighlight">\(12\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(1111101 / 11110 = 100\)</span> (<span class="math notranslate nohighlight">\(125 / 30 = 4\)</span> et reste <span class="math notranslate nohighlight">\(5\)</span>)</p></li>
+</ol>
+</section>
 <section id="id2">
-<h3>Exercice 2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h3>Exercice 3<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>G y m n a s e</p></li>
 <li><p>B e a u l i e u</p></li>
@@ -1030,7 +1066,7 @@ document.write(`
 </ol>
 </section>
 <section id="id3">
-<h3>Exercice 3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Exercice 4<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>256</p></li>
 <li><p>Verte</p></li>
@@ -1039,7 +1075,7 @@ document.write(`
 </ol>
 </section>
 <section id="id4">
-<h3>Exercice 4<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>Exercice 5<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>20 Hz - 20 KHz</p></li>
 <li><p>40 KHz ou plus (attention au sur-échantillonnage</p></li>
@@ -1123,35 +1159,39 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-de-decimal-vers-binaire">Conversion de décimal vers binaire</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-de-binaire-en-hexadecimal">Conversion de binaire en hexadécimal</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-hexadecimal-en-binaire">Conversion héxadécimal en binaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-en-binaire">Opérations en binaire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-additions">Exercices sur les additions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-soustractions">Exercices sur les soustractions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-les-multiplications">Exercices sur les multiplications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-sur-la-division">Exercices sur la division</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-1-additions-binaires">Exercice 2.1 : additions binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-2-soustractions-binaires">Exercice 2.2 : soustractions binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-3-multiplications-binaires">Exercice 2.3 : multiplications binaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-4-division-binaire">Exercice 2.4 : division binaire</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation-des-caracteres">Représentation des caractères</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-codage-ascii">Le codage ASCII</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-images-matricielles">Les images matricielles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-son">Le son</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-images-matricielles">Les images matricielles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-son">Le son</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalites">Généralités</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reponses-aux-exercices">Réponses aux Exercices</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercice 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercice 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercice 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-1">Exercice 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-2">Exercice 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-3">Exercice 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-4">Exercice 2.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercice 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercice 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercice 5</a></li>
 </ul>
 </li>
 </ul>
