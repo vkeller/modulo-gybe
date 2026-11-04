@@ -573,13 +573,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-dessiner-un-triangle-equilateral">Exemple : dessiner un triangle équilatéral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-premieres-boucles">Exercice 1 : premières boucles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observation">Observation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-une-etoile-a-5-branches">Exercice 4 : une étoile à 5 branches</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-4-etoiles">Exercice 5 : 4 étoiles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-une-variable-de-plus">Exercice 2 : une variable de plus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-et-les-courbes-dans-tout-ca">Exercice 3 : et les courbes dans tout ça ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-les-boucles-imbriquees">Exercice 4 : les boucles imbriquées</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-une-etoile-a-5-branches">Exercice 5 : une étoile à 5 branches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-4-etoiles-inscrites-dans-un-carre">Exercice 6 : 4 étoiles inscrites dans un carré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-defi-le-drapeau-des-usa">Exercice 7 (défi) Le drapeau des USA</a></li>
 </ul>
             </nav>
         </div>
@@ -643,14 +644,14 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<section id="exercice-1-premieres-boucles">
+<h2>Exercice 1 : premières boucles<a class="headerlink" href="#exercice-1-premieres-boucles" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Ecrivez des programmes qui utilisent une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
 <ul>
-<li><p>dessiner un carré de côté 100 et</p></li>
-<li><p>dessiner un pentagone de côté 100</p></li>
-<li><p>dessiner un losange de côté 100</p></li>
+<li><p>dessiner un carré de côté 100 : <code class="docutils literal notranslate"><span class="pre">exercice1.1.py</span></code></p></li>
+<li><p>dessiner un pentagone de côté 100 : <code class="docutils literal notranslate"><span class="pre">exercice1.2.py</span></code></p></li>
+<li><p>dessiner un losange de côté 100 : <code class="docutils literal notranslate"><span class="pre">exercice1.3.py</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -664,27 +665,31 @@ document.write(`
 </ul>
 <p>Est-il possible de généraliser et dessiner n’importe quel polygone de côté 100 avec une boucle ?</p>
 </section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<section id="exercice-2-une-variable-de-plus">
+<h2>Exercice 2 : une variable de plus<a class="headerlink" href="#exercice-2-une-variable-de-plus" title="Link to this heading">#</a></h2>
 <p>Ecrivez un programme qui fixe le nombre de côté du polygone <code class="docutils literal notranslate"><span class="pre">cotes</span></code> et qui le dessine..</p>
 <p><strong>Hint</strong> : utiliser une nouvelle <strong>variable</strong> qui contient le nombre de côtés du polygone. Par exemple : <code class="docutils literal notranslate"><span class="pre">cotes</span> <span class="pre">=</span> <span class="pre">5</span></code> pour un pentagone, <code class="docutils literal notranslate"><span class="pre">cotes</span> <span class="pre">=</span> <span class="pre">8</span></code>pour un octogone</p>
 </section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
+<section id="exercice-3-et-les-courbes-dans-tout-ca">
+<h2>Exercice 3 : et les courbes dans tout ça ?<a class="headerlink" href="#exercice-3-et-les-courbes-dans-tout-ca" title="Link to this heading">#</a></h2>
+<p>Quelle est la forme géométrique de votre programme si <code class="docutils literal notranslate"><span class="pre">cotes</span> <span class="pre">=</span> <span class="pre">360</span></code> (en réduisant la taille du côté du polygone à <code class="docutils literal notranslate"><span class="pre">1</span></code>) ? Testez !</p>
+</section>
+<section id="exercice-4-les-boucles-imbriquees">
+<h2>Exercice 4 : les boucles imbriquées<a class="headerlink" href="#exercice-4-les-boucles-imbriquees" title="Link to this heading">#</a></h2>
 <p>Utilisez votre programme <code class="docutils literal notranslate"><span class="pre">polygone.py</span></code> pour dessiner les polygones de 3 (triangle) à 12 (dodécagone) côtés.</p>
 <p><strong>Hint</strong> : observez les instructions qui se répètent et placez-les dans une boucle.</p>
 </section>
-<section id="exercice-4-une-etoile-a-5-branches">
-<h2>Exercice 4 : une étoile à 5 branches<a class="headerlink" href="#exercice-4-une-etoile-a-5-branches" title="Link to this heading">#</a></h2>
+<section id="exercice-5-une-etoile-a-5-branches">
+<h2>Exercice 5 : une étoile à 5 branches<a class="headerlink" href="#exercice-5-une-etoile-a-5-branches" title="Link to this heading">#</a></h2>
 <p>Écrivez un programme qui dessine une étoile régulière à 5 branches avec turtle et une boucle while.</p>
 </section>
-<section id="exercice-5-4-etoiles">
-<h2>Exercice 5 : 4 étoiles<a class="headerlink" href="#exercice-5-4-etoiles" title="Link to this heading">#</a></h2>
+<section id="exercice-6-4-etoiles-inscrites-dans-un-carre">
+<h2>Exercice 6 : 4 étoiles inscrites dans un carré<a class="headerlink" href="#exercice-6-4-etoiles-inscrites-dans-un-carre" title="Link to this heading">#</a></h2>
 <p>A l’aide du code de l’exercice 5, écrivez un programme qui dessine 4 étoiles à 5 branches aux sommets d’un carré de côté 150</p>
 </section>
-<section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Link to this heading">#</a></h2>
-<p>Quelle est la forme géométrique de votre programme si le nombre de côtés est <code class="docutils literal notranslate"><span class="pre">100</span></code> (en réduisant la taille du côté du polygone à <code class="docutils literal notranslate"><span class="pre">2</span></code>) ? Testez !</p>
+<section id="exercice-7-defi-le-drapeau-des-usa">
+<h2>Exercice 7 (défi) Le drapeau des USA<a class="headerlink" href="#exercice-7-defi-le-drapeau-des-usa" title="Link to this heading">#</a></h2>
+<p>Modifier le programme de l’exercice 6 pour qu’il dessine les 51 étoiles du drapeau des USA, puis les lignes alternées blanches et rouge</p>
 </section>
 </section>
 
@@ -755,13 +760,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Définition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-dessiner-un-triangle-equilateral">Exemple : dessiner un triangle équilatéral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-premieres-boucles">Exercice 1 : premières boucles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observation">Observation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-une-etoile-a-5-branches">Exercice 4 : une étoile à 5 branches</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-4-etoiles">Exercice 5 : 4 étoiles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-une-variable-de-plus">Exercice 2 : une variable de plus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3-et-les-courbes-dans-tout-ca">Exercice 3 : et les courbes dans tout ça ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4-les-boucles-imbriquees">Exercice 4 : les boucles imbriquées</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5-une-etoile-a-5-branches">Exercice 5 : une étoile à 5 branches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6-4-etoiles-inscrites-dans-un-carre">Exercice 6 : 4 étoiles inscrites dans un carré</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7-defi-le-drapeau-des-usa">Exercice 7 (défi) Le drapeau des USA</a></li>
 </ul>
   </nav></div>
 
